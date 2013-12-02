@@ -1,0 +1,111 @@
+          CODING FOR TRANSLITERATION OF HEBREW, GREEK, COPTIC  
+                     FOR CCAT/CATSS/TLG MATERIALS 
+
+Hebrew                   Greek        (Greek=Coptic)   Coptic 
+ alef      )              alfa               A          = 
+ bet       B              beta               B          = 
+ gimel     G              gamma              G          = 
+ dalet     D              delta              D          = 
+ he        H              epsilon            E          = 
+ waw       W              digamma or vau = 6 V 
+ zayin     Z              zeta               Z          = 
+ het       X              eta                H          = 
+ tet       +              theta              Q          = 
+ yod       Y              iota               I          = 
+ kaf       K              kappa              K          = 
+ lamed     L              lamda              L          = 
+ mem       M              mu                 M          = 
+ nun       N              nu                 N          = 
+ samek     S              ksi                C          = 
+ ayin      (              omicron            O          = 
+ pe        P              pi                 P          = 
+ zade      C              koppa (=90)       #3 
+ qof       Q              rho                R          = 
+ resh      R              sigma (both)       S          = 
+ sin/shin  #              sigma final        J 
+ sin       &              tau                T          = 
+ shin      $              upsilon            U          = 
+ taw       T              phi                F          = 
+                          chi                X          = 
+                          psi                Y          = 
+                          omega              W          = 
+ patah          A         sampi(=900)       #5 
+ qametz         F 
+ hireq          I 
+ segol          E 
+ tsere          "         smooth breathing   )         shai      s 
+ holam          O         rough breathing    (         fai       f 
+ qibbuts        U         iota subscript     |         chai(Bo) 
+ shureq         W. 
+ schwa          :         acute accent       /         hori      h 
+ holem waw      OW        grave accent       \         janjia    j 
+ hateph-pathah :A         circumflex acc.    =         gima      g 
+ hateph-qametz :F   
+ hateph-segol  :E 
+ maqqeph        -         diaeresis          +         ti        t 
+ dagesh         .         midpoint punct.    :         dash      - 
+ rape           , 
+ ketiv          *         capital letter     * (precedes) 
+ qere           ** 
+
+                       HEBREW ACCENTS/CANTILLATION CODING 
+
+[named and cross referenced as in the TABULA ACCENTUM insert-card in BHS;
+alternate coding used by the French and Belgian projects also noted]
+
+
+     Michigan-Claremont                   BHS      CATAB        CIB 
+
+
+   at end (to left) of word, above: 
+     00 ; --- sop pasuq [end of verse]               -           - 
+     01 .:--- segolta                     I.3       14           7 
+     02  )--- zarqa, sinnor             I.9,II.7    20           - 
+     03  \--- pashta, azla legarmeh    I.10,II.12   21           - 
+     04  &--- telisha parvum              I.25      47          30 
+     05  |--- paseq [separator]          "Nota"     11           - 
+      - |-,-- legarmeh (74 + 05)          I.18    40 + 11        - 
+
+
+   at start (to right) of word, below: 
+     10   ---< yetib (yetiv)              I.11      23        (42) 
+     13   ---\ dehi or tipha             II.9      (49)          - 
+
+
+   at start (to right) of word, above: 
+     11   ---/ (81 + ) mugrash           II.5        -           - 
+     14   ---% telisha magnum             I.17      27          31 
+
+
+   above word: 
+     24  -&-- telisha qetannah (med)       -         -           - 
+     33  --\- pashta (preceding 03)       1.10b     45=46        8 
+     44  -%-- telisha magnum (med)         -         -           - 
+     60  --<- ole or mahpakatum         (II.2)       -          43 
+     61  -/-- geresh or teres             I.13      25          81 
+     62  -"-- garshajim                   I.14      26          82 
+     63  -\-- azla, azla or qadma      I.24,II.19   45=46        8 
+     64  -,-- illuj                      II.15       -          44 
+     65  -#-- shalshelet (magn,parv) I.4,II.6+20    15          33 
+     80  -:-- zaqep parvum                I.5       16           6 
+     81  -.-- rebia (magnum=parvum)  I.7,II.4=8     19           5 (cf 80) 
+     82  --)- sinnorit                   II.21     (20)          9 
+     83  -+-- pazer                    I.15,II.10   28          90 
+     84 -&%-- pazer mag. or qarne para    I.16      29          32 
+     85 -|:-- zaqep magnum                I.6       17          60 
+
+
+   below word: 
+     35 -F|:-- meteg (med)                 -       (12)        (,) 
+     70  -<-- mahpak or mehuppak    I.20,II.11+18   43          42 
+     71  -/-- mereka                   I.21,II.14   41           1 
+     72 -//-- mereka kepulah (duplex)     I.22      42          11 
+     73  -\-- tipha, tarha              I.8,II.16   18           2 (munah) 
+      - --\-- majela [= 73]               I.27      49           - 
+     74  -,-- munah                 I.18-19,II.13   40      4 (dehi/tarha) 
+     75  -|-- silluq [meteg (left)]     I.1,II.1    12           , 
+     91 -./-- tebir                       I.12      22          10 
+     92  -^-- atnah                     I.2,II.3    13           3 
+     93  -v-- galgal or jerah          I.26,II.17   48          41 
+     94  -s-- darga                       I.23      44          40 
+     95  -|-- meteg (right) [cf 35,75]     -       (12)          - 
