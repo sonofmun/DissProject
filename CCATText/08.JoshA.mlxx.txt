@@ -1,0 +1,1064 @@
+<w id="JoshA.15.21.1" ana="N NS" lem="*KABSEHL">*KABSEHL</w>
+<w id="JoshA.15.21.2" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.21.3" ana="N NS" lem="*EDRAI">*EDRAI</w>
+<w id="JoshA.15.21.4" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.21.5" ana="N NS" lem="*IAGOUR">*IAGOUR</w>
+<w id="JoshA.15.22.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.22.2" ana="N NS" lem="*KINA">*KINA</w>
+<w id="JoshA.15.22.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.22.4" ana="N NS" lem="*DIMWNA">*DIMWNA</w>
+<w id="JoshA.15.22.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.22.6" ana="N NS" lem="*ADADA">*ADADA</w>
+<w id="JoshA.15.23.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.23.2" ana="N NS" lem="*KEDES">*KEDES</w>
+<w id="JoshA.15.23.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.23.4" ana="N NS" lem="*IQNAZIF">*IQNAZIF</w>
+<w id="JoshA.15.24.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.24.2" ana="N NS" lem="*TELEM">*TELEM</w>
+<w id="JoshA.15.24.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.24.4" ana="N NS" lem="*BALWQ">*BALWQ</w>
+<w id="JoshA.15.25.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.25.2" ana="N3I NSF" lem="PO/LIS">PO/LIS</w>
+<w id="JoshA.15.25.3" ana="N GS" lem="*ASERWN">*ASERWN</w>
+<w id="JoshA.15.25.4" ana="RD NSF" lem="OU(=TOS">AU(/TH</w>
+<w id="JoshA.15.25.5" ana="N NS" lem="*ASWR">*ASWR</w>
+<w id="JoshA.15.26.1" ana="N NS" lem="*AMAM">*AMAM</w>
+<w id="JoshA.15.26.2" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.26.3" ana="N NS" lem="*SAMAA">*SAMAA</w>
+<w id="JoshA.15.26.4" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.26.5" ana="N NS" lem="*MWLADA">*MWLADA</w>
+<w id="JoshA.15.27.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.27.2" ana="N NS" lem="*ASERGADDA">*ASERGADDA</w>
+<w id="JoshA.15.27.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.27.4" ana="N NS" lem="*BAIQFALEQ">*BAIQFALEQ</w>
+<w id="JoshA.15.28.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.28.2" ana="N NS" lem="*ASARSOULA">*ASARSOULA</w>
+<w id="JoshA.15.28.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.28.4" ana="N NS" lem="*BHRSABEE">*BHRSABEE</w>
+<w id="JoshA.15.28.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.28.6" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.28.7" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.15.28.8" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.15.28.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.28.10" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.28.11" ana="N3I NPF" lem="E)/PAULIS">E)PAU/LEIS</w>
+<w id="JoshA.15.28.12" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.15.29.1" ana="N NS" lem="*BAALA">*BAALA</w>
+<w id="JoshA.15.29.2" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.29.3" ana="N NS" lem="*AUIM">*AUIM</w>
+<w id="JoshA.15.29.4" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.29.5" ana="N NS" lem="*ASEM">*ASEM</w>
+<w id="JoshA.15.30.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.30.2" ana="N NS" lem="*ELQWDAD">*ELQWDAD</w>
+<w id="JoshA.15.30.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.30.4" ana="N NS" lem="*XASIL">*XASIL</w>
+<w id="JoshA.15.30.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.30.6" ana="N NS" lem="*ERMA">*ERMA</w>
+<w id="JoshA.15.31.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.31.2" ana="N NS" lem="*SIKELEG">*SIKELEG</w>
+<w id="JoshA.15.31.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.31.4" ana="N NS" lem="*MEDEBHNA">*MEDEBHNA</w>
+<w id="JoshA.15.31.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.31.6" ana="N NS" lem="*SANSANNA">*SANSANNA</w>
+<w id="JoshA.15.32.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.32.2" ana="N NS" lem="*LABWQ">*LABWQ</w>
+<w id="JoshA.15.32.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.32.4" ana="N NS" lem="*SELEI+M">*SELEI+M</w>
+<w id="JoshA.15.32.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.32.6" ana="N NS" lem="*REMMWN">*REMMWN</w>
+<w id="JoshA.15.32.7" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.15.32.8" ana="M" lem="EI)/KOSI">EI)/KOSI</w>
+<w id="JoshA.15.32.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.32.10" ana="M" lem="E)NNE/A">E)NNE/A</w>
+<w id="JoshA.15.32.11" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.32.12" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.32.13" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.15.32.14" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.15.33.1" ana="P" lem="E)N">E)N</w>
+<w id="JoshA.15.33.2" ana="RA DSF" lem="O(">TH=|</w>
+<w id="JoshA.15.33.3" ana="A1 DSF" lem="PEDEINO/S">PEDINH=|</w>
+<w id="JoshA.15.33.4" ana="N NS" lem="*ESQAOL">*ESQAOL</w>
+<w id="JoshA.15.33.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.33.6" ana="N NS" lem="*SARAA">*SARAA</w>
+<w id="JoshA.15.33.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.33.8" ana="N NS" lem="*ASNA">*ASNA</w>
+<w id="JoshA.15.34.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.34.2" ana="N NS" lem="*RAMEN">*RAMEN</w>
+<w id="JoshA.15.34.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.34.4" ana="N NS" lem="*ZANW">*ZANW</w>
+<w id="JoshA.15.34.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.34.6" ana="N NS" lem="*ADIAQAI+M">*ADIAQAI+M</w>
+<w id="JoshA.15.34.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.34.8" ana="N NS" lem="*HNAI+M">*HNAI+M</w>
+<w id="JoshA.15.35.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.35.2" ana="N NS" lem="*IERIMOUQ">*IERIMOUQ</w>
+<w id="JoshA.15.35.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.35.4" ana="N NS" lem="*ODOLLAM">*ODOLLAM</w>
+<w id="JoshA.15.35.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.35.6" ana="N NS" lem="*NEMRA">*NEMRA</w>
+<w id="JoshA.15.35.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.35.8" ana="N NS" lem="*SWXW">*SWXW</w>
+<w id="JoshA.15.35.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.35.10" ana="N NS" lem="*AZHKA">*AZHKA</w>
+<w id="JoshA.15.36.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.36.2" ana="N NS" lem="*SARGARIM">*SARGARIM</w>
+<w id="JoshA.15.36.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.36.4" ana="N NS" lem="*GADHRA">*GADHRA</w>
+<w id="JoshA.15.36.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.36.6" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.36.7" ana="N3I NPF" lem="E)/PAULIS">E)PAU/LEIS</w>
+<w id="JoshA.15.36.8" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="JoshA.15.36.9" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.15.36.10" ana="M" lem="DE/KA">DE/KA</w>
+<w id="JoshA.15.36.11" ana="A3 NPM" lem="TE/SSARES">TE/SSARES</w>
+<w id="JoshA.15.36.12" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.36.13" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.36.14" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.15.36.15" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.15.37.1" ana="N NS" lem="*SENNAN">*SENNAN</w>
+<w id="JoshA.15.37.2" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.37.3" ana="N NS" lem="*ADASA">*ADASA</w>
+<w id="JoshA.15.37.4" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.37.5" ana="N NS" lem="*MAGDALGAD">*MAGDALGAD</w>
+<w id="JoshA.15.38.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.38.2" ana="N NS" lem="*DALAAN">*DALAAN</w>
+<w id="JoshA.15.38.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.38.4" ana="N NS" lem="*MASFA">*MASFA</w>
+<w id="JoshA.15.38.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.38.6" ana="N NS" lem="*IEXQAHL">*IEXQAHL</w>
+<w id="JoshA.15.39.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.39.2" ana="N NS" lem="*LAXIS">*LAXIS</w>
+<w id="JoshA.15.39.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.39.4" ana="N NS" lem="*BAZKAQ">*BAZKAQ</w>
+<w id="JoshA.15.39.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.39.6" ana="N NS" lem="*AGLWN">*AGLWN</w>
+<w id="JoshA.15.40.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.40.2" ana="N NS" lem="*XABBA">*XABBA</w>
+<w id="JoshA.15.40.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.40.4" ana="N NS" lem="*LAMAS">*LAMAS</w>
+<w id="JoshA.15.40.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.40.6" ana="N NS" lem="*XAQLWS">*XAQLWS</w>
+<w id="JoshA.15.41.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.41.2" ana="N NS" lem="*GADHRWQ">*GADHRWQ</w>
+<w id="JoshA.15.41.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.41.4" ana="N NS" lem="*BHQDAGWN">*BHQDAGWN</w>
+<w id="JoshA.15.41.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.41.6" ana="N NS" lem="*NWMA">*NWMA</w>
+<w id="JoshA.15.41.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.41.8" ana="N NS" lem="*MAKHDA">*MAKHDA</w>
+<w id="JoshA.15.41.9" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.15.41.10" ana="M" lem="DE/KA+E(/C">DEKAE\C</w>
+<w id="JoshA.15.41.11" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.41.12" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.41.13" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.15.41.14" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.15.42.1" ana="N NS" lem="*LEBNA">*LEBNA</w>
+<w id="JoshA.15.42.2" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.42.3" ana="N NS" lem="*AQER">*AQER</w>
+<w id="JoshA.15.43.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.43.2" ana="N NS" lem="*IEFQA">*IEFQA</w>
+<w id="JoshA.15.43.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.43.4" ana="N NS" lem="*ASENNA">*ASENNA</w>
+<w id="JoshA.15.43.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.43.6" ana="N NS" lem="*NESIB">*NESIB</w>
+<w id="JoshA.15.44.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.44.2" ana="N NS" lem="*KEI+LA">*KEI+LA</w>
+<w id="JoshA.15.44.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.44.4" ana="N NS" lem="*AXZIB">*AXZIB</w>
+<w id="JoshA.15.44.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.44.6" ana="N NS" lem="*MARHSA">*MARHSA</w>
+<w id="JoshA.15.44.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.44.8" ana="N NSF" lem="*EDWM">*EDWM</w>
+<w id="JoshA.15.44.9" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.15.44.10" ana="M" lem="E)NNE/A">E)NNE/A</w>
+<w id="JoshA.15.44.11" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.44.12" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.44.13" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.15.44.14" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.15.45.1" ana="N NS" lem="*AKKARWN">*AKKARWN</w>
+<w id="JoshA.15.45.2" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.45.3" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.45.4" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.15.45.5" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="JoshA.15.45.6" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.45.7" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.45.8" ana="N3I NPF" lem="E)/PAULIS">E)PAU/LEIS</w>
+<w id="JoshA.15.45.9" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="JoshA.15.46.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.46.2" ana="P" lem="A)PO/">A)PO\</w>
+<w id="JoshA.15.46.3" ana="N GS" lem="*AKKARWN">*AKKARWN</w>
+<w id="JoshA.15.46.4" ana="N NS" lem="*IEMNAI">*IEMNAI</w>
+<w id="JoshA.15.46.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.46.6" ana="A1S NPF" lem="PA=S">PA=SAI</w>
+<w id="JoshA.15.46.7" ana="A1 NPF" lem="O(/SOS">O(/SAI</w>
+<w id="JoshA.15.46.8" ana="V9 PAI3P" lem="EI)MI/">EI)SI\N</w>
+<w id="JoshA.15.46.9" ana="D" lem="PLHSI/ON">PLHSI/ON</w>
+<w id="JoshA.15.46.10" ana="N GS" lem="*ASDWD">*ASDWD</w>
+<w id="JoshA.15.46.11" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.46.12" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.46.13" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.15.47.1" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="JoshA.15.47.2" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.47.3" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.47.4" ana="N3I NPF" lem="E)/PAULIS">E)PAU/LEIS</w>
+<w id="JoshA.15.47.5" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="JoshA.15.47.6" ana="N1A NSF" lem="*GA/ZA">*GA/ZA</w>
+<w id="JoshA.15.47.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.47.8" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.47.9" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.15.47.10" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="JoshA.15.47.11" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.47.12" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.47.13" ana="N3I NPF" lem="E)/PAULIS">E)PAU/LEIS</w>
+<w id="JoshA.15.47.14" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="JoshA.15.47.15" ana="P" lem="E(/WS">E(/WS</w>
+<w id="JoshA.15.47.16" ana="RA GSM" lem="O(">TOU=</w>
+<w id="JoshA.15.47.17" ana="N2 GSM" lem="XEIMA/RROUS">XEIMA/RROU</w>
+<w id="JoshA.15.47.18" ana="N2 GSF" lem="*AI)/GUPTOS">*AI)GU/PTOU</w>
+<w id="JoshA.15.47.19" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.47.20" ana="RA NSF" lem="O(">H(</w>
+<w id="JoshA.15.47.21" ana="N1S NSF" lem="QA/LASSA">QA/LASSA</w>
+<w id="JoshA.15.47.22" ana="RA NSF" lem="O(">H(</w>
+<w id="JoshA.15.47.23" ana="A1 NSF" lem="ME/GAS">MEGA/LH</w>
+<w id="JoshA.15.47.24" ana="V1 PAI3S" lem="DIA-O(RI/ZW">DIORI/ZEI</w>
+<w id="JoshA.15.48.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.48.2" ana="P" lem="E)N">E)N</w>
+<w id="JoshA.15.48.3" ana="RA DSF" lem="O(">TH=|</w>
+<w id="JoshA.15.48.4" ana="N1 DSF" lem="O)REINH/">O)REINH=|</w>
+<w id="JoshA.15.48.5" ana="N NS" lem="*SAFIR">*SAFIR</w>
+<w id="JoshA.15.48.6" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.48.7" ana="N NS" lem="*IEQER">*IEQER</w>
+<w id="JoshA.15.48.8" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.48.9" ana="N NS" lem="*SWXW">*SWXW</w>
+<w id="JoshA.15.49.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.49.2" ana="N NS" lem="*RENNA">*RENNA</w>
+<w id="JoshA.15.49.3" ana="N3I NSF" lem="PO/LIS">PO/LIS</w>
+<w id="JoshA.15.49.4" ana="N3M GPN" lem="GRA/MMA">GRAMMA/TWN</w>
+<w id="JoshA.15.49.5" ana="RD NSF" lem="OU(=TOS">AU(/TH</w>
+<w id="JoshA.15.49.6" ana="V9 PAI3S" lem="EI)MI/">E)STI\N</w>
+<w id="JoshA.15.49.7" ana="N NS" lem="*DABIR">*DABIR</w>
+<w id="JoshA.15.50.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.50.2" ana="N NS" lem="*ANWB">*ANWB</w>
+<w id="JoshA.15.50.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.50.4" ana="N NS" lem="*ESQEMW">*ESQEMW</w>
+<w id="JoshA.15.50.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.50.6" ana="N NS" lem="*ANIM">*ANIM</w>
+<w id="JoshA.15.51.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.51.2" ana="N NS" lem="*GOSOM">*GOSOM</w>
+<w id="JoshA.15.51.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.51.4" ana="N NS" lem="*XILOUWN">*XILOUWN</w>
+<w id="JoshA.15.51.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.51.6" ana="N NS" lem="*GHLWN">*GHLWN</w>
+<w id="JoshA.15.51.7" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.15.51.8" ana="M" lem="DE/KA">DE/KA</w>
+<w id="JoshA.15.51.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.51.10" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.51.11" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.15.51.12" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.15.52.1" ana="N NS" lem="*EREB">*EREB</w>
+<w id="JoshA.15.52.2" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.52.3" ana="N NS" lem="*ESAN">*ESAN</w>
+<w id="JoshA.15.52.4" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.52.5" ana="N NS" lem="*ROUMA">*ROUMA</w>
+<w id="JoshA.15.53.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.53.2" ana="N NS" lem="*IANOUM">*IANOUM</w>
+<w id="JoshA.15.53.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.53.4" ana="N NS" lem="*BAIQQAPFOUE">*BAIQQAPFOUE</w>
+<w id="JoshA.15.53.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.53.6" ana="N NS" lem="*AFAKA">*AFAKA</w>
+<w id="JoshA.15.54.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.54.2" ana="N NS" lem="*XAMMATA">*XAMMATA</w>
+<w id="JoshA.15.54.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.54.4" ana="N3I NSF" lem="PO/LIS">PO/LIS</w>
+<w id="JoshA.15.54.5" ana="N NS" lem="*ARBO">*ARBO</w>
+<w id="JoshA.15.54.6" ana="RD NSF" lem="OU(=TOS">AU(/TH</w>
+<w id="JoshA.15.54.7" ana="V9 PAI3S" lem="EI)MI/">E)STI\N</w>
+<w id="JoshA.15.54.8" ana="N NS" lem="*XEBRWN">*XEBRWN</w>
+<w id="JoshA.15.54.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.54.10" ana="N NS" lem="*SIWR">*SIWR</w>
+<w id="JoshA.15.54.11" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.15.54.12" ana="M" lem="E)NNE/A">E)NNE/A</w>
+<w id="JoshA.15.54.13" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.54.14" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.54.15" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.15.54.16" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.15.55.1" ana="N NS" lem="*MAWN">*MAWN</w>
+<w id="JoshA.15.55.2" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.55.3" ana="N NS" lem="*XERMEL">*XERMEL</w>
+<w id="JoshA.15.55.4" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.55.5" ana="N NS" lem="*ZIF">*ZIF</w>
+<w id="JoshA.15.55.6" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.55.7" ana="N NS" lem="*IETTA">*IETTA</w>
+<w id="JoshA.15.56.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.56.2" ana="N NS" lem="*IEZRAEL">*IEZRAEL</w>
+<w id="JoshA.15.56.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.56.4" ana="N NS" lem="*IEKDAAM">*IEKDAAM</w>
+<w id="JoshA.15.56.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.56.6" ana="N NS" lem="*ZANWAKIM">*ZANWAKIM</w>
+<w id="JoshA.15.57.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.57.2" ana="N NS" lem="*GABAA">*GABAA</w>
+<w id="JoshA.15.57.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.57.4" ana="N NS" lem="*QAMNA">*QAMNA</w>
+<w id="JoshA.15.57.5" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.15.57.6" ana="M" lem="E)NNE/A">E)NNE/A</w>
+<w id="JoshA.15.57.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.57.8" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.57.9" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.15.57.10" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.15.58.1" ana="N NS" lem="*ALOUL">*ALOUL</w>
+<w id="JoshA.15.58.2" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.58.3" ana="N NS" lem="*BAIQSOUR">*BAIQSOUR</w>
+<w id="JoshA.15.58.4" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.58.5" ana="N NS" lem="*GEDWR">*GEDWR</w>
+<w id="JoshA.15.59.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.59.2" ana="N NS" lem="*MARWQ">*MARWQ</w>
+<w id="JoshA.15.59.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.59.4" ana="N NS" lem="*BAIQANWQ">*BAIQANWQ</w>
+<w id="JoshA.15.59.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.59.6" ana="N NS" lem="*ELQEKEN">*ELQEKEN</w>
+<w id="JoshA.15.59.7" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.15.59.8" ana="M" lem="E(/C">E(\C</w>
+<w id="JoshA.15.59.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.59.10" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.59.11" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.15.59.12" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.15.59.1" ana="N NS" lem="*QEKW">*QEKW</w>
+<w id="JoshA.15.59.2" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.59.3" ana="N NS" lem="*EFRAQA">*EFRAQA</w>
+<w id="JoshA.15.59.4" ana="RD NSF" lem="OU(=TOS">AU(/TH</w>
+<w id="JoshA.15.59.5" ana="V9 PAI3S" lem="EI)MI/">E)STI\N</w>
+<w id="JoshA.15.59.6" ana="N NS" lem="*BHQLEEM">*BHQLEEM</w>
+<w id="JoshA.15.59.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.59.8" ana="N NS" lem="*FAGWR">*FAGWR</w>
+<w id="JoshA.15.59.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.59.10" ana="N NS" lem="*AITAM">*AITAM</w>
+<w id="JoshA.15.59.11" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.59.12" ana="N NS" lem="*KOULON">*KOULON</w>
+<w id="JoshA.15.59.13" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.59.14" ana="N NS" lem="*TATAMI">*TATAMI</w>
+<w id="JoshA.15.59.15" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.59.16" ana="N NS" lem="*SWRHS">*SWRHS</w>
+<w id="JoshA.15.59.17" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.59.18" ana="N NS" lem="*KAREM">*KAREM</w>
+<w id="JoshA.15.59.19" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.59.20" ana="N NS" lem="*GALLIM">*GALLIM</w>
+<w id="JoshA.15.59.21" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.59.22" ana="N NS" lem="*BAIQHR">*BAIQHR</w>
+<w id="JoshA.15.59.23" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.59.24" ana="N NS" lem="*MANOXW">*MANOXW</w>
+<w id="JoshA.15.59.25" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.15.59.26" ana="M" lem="E(/NDEKA">E(/NDEKA</w>
+<w id="JoshA.15.59.27" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.59.28" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.59.29" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.15.59.30" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.15.60.1" ana="N NS" lem="*KARIAQBAAL">*KARIAQBAAL</w>
+<w id="JoshA.15.60.2" ana="RD NSF" lem="OU(=TOS">AU(/TH</w>
+<w id="JoshA.15.60.3" ana="N3I NSF" lem="PO/LIS">PO/LIS</w>
+<w id="JoshA.15.60.4" ana="N GS" lem="*IARIM">*IARIM</w>
+<w id="JoshA.15.60.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.60.6" ana="N NS" lem="*AREBBA">*AREBBA</w>
+<w id="JoshA.15.60.7" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.15.60.8" ana="M" lem="DU/O">DU/O</w>
+<w id="JoshA.15.60.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.60.10" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.60.11" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.15.60.12" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.15.60.13" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.60.14" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.60.15" ana="N3I NPF" lem="E)/PAULIS">E)PAU/LEIS</w>
+<w id="JoshA.15.60.16" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.15.61.1" ana="N NS" lem="*BADDARGIS">*BADDARGIS</w>
+<w id="JoshA.15.61.2" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.61.3" ana="N NS" lem="*BHQARABA/">*BHQARABA</w>
+<w id="JoshA.15.61.4" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.61.5" ana="N NS" lem="*MADWN">*MADWN</w>
+<w id="JoshA.15.61.6" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.61.7" ana="N NS" lem="*SOXOXA">*SOXOXA</w>
+<w id="JoshA.15.62.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.62.2" ana="N NS" lem="*NEBSAN">*NEBSAN</w>
+<w id="JoshA.15.62.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.62.4" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.62.5" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.15.62.6" ana="N3 GPM" lem="A(/LS">A(LW=N</w>
+<w id="JoshA.15.62.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.62.8" ana="N NS" lem="*HNGADDI">*HNGADDI</w>
+<w id="JoshA.15.62.9" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.15.62.10" ana="M" lem="E(PTA/">E(PTA\</w>
+<w id="JoshA.15.62.11" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.15.62.12" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.15.62.13" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.15.62.14" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.18.21.1" ana="N NS" lem="*BHQAGLA">*BHQAGLA</w>
+<w id="JoshA.18.21.2" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.21.3" ana="N NS" lem="*AMEKKASIS">*AMEKKASIS</w>
+<w id="JoshA.18.22.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.22.2" ana="N NS" lem="*BAIQARABA/">*BAIQARABA</w>
+<w id="JoshA.18.22.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.22.4" ana="N NS" lem="*SEMRIM">*SEMRIM</w>
+<w id="JoshA.18.22.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.22.6" ana="N NS" lem="*BHQHL">*BHQHL</w>
+<w id="JoshA.18.23.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.23.2" ana="N NS" lem="*AUIM">*AUIM</w>
+<w id="JoshA.18.23.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.23.4" ana="N NS" lem="*AFAR">*AFAR</w>
+<w id="JoshA.18.23.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.23.6" ana="N NS" lem="*AFRA">*AFRA</w>
+<w id="JoshA.18.24.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.24.2" ana="N NS" lem="*AIKAREN">*AIKAREN</w>
+<w id="JoshA.18.24.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.24.4" ana="N NS" lem="*KAFHRAMMIN">*KAFHRAMMIN</w>
+<w id="JoshA.18.24.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.24.6" ana="N NSF" lem="*GABAA">*GABAA</w>
+<w id="JoshA.18.24.7" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.18.24.8" ana="M" lem="DW/DEKA">DW/DEKA</w>
+<w id="JoshA.18.24.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.24.10" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.18.24.11" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.18.24.12" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.18.25.1" ana="N NS" lem="*GABAWN">*GABAWN</w>
+<w id="JoshA.18.25.2" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.25.3" ana="N NS" lem="*RAMA">*RAMA</w>
+<w id="JoshA.18.25.4" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.25.5" ana="N NS" lem="*BHRWQ">*BHRWQ</w>
+<w id="JoshA.18.26.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.26.2" ana="N NS" lem="*MASFA">*MASFA</w>
+<w id="JoshA.18.26.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.26.4" ana="N NS" lem="*XEFIRA">*XEFIRA</w>
+<w id="JoshA.18.26.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.26.6" ana="N NS" lem="*AMWSA">*AMWSA</w>
+<w id="JoshA.18.27.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.27.2" ana="N NS" lem="*REKEM">*REKEM</w>
+<w id="JoshA.18.27.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.27.4" ana="N NS" lem="*IERFAHL">*IERFAHL</w>
+<w id="JoshA.18.27.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.27.6" ana="N NS" lem="*QARALA">*QARALA</w>
+<w id="JoshA.18.28.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.28.2" ana="N NS" lem="*SHLALEF">*SHLALEF</w>
+<w id="JoshA.18.28.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.28.4" ana="N NS" lem="*IEBOUS">*IEBOUS</w>
+<w id="JoshA.18.28.5" ana="RD NSF" lem="OU(=TOS">AU(/TH</w>
+<w id="JoshA.18.28.6" ana="V9 PAI3S" lem="EI)MI/">E)STI\N</w>
+<w id="JoshA.18.28.7" ana="N NSF" lem="*I)EROUSALH/M">*IEROUSALHM</w>
+<w id="JoshA.18.28.8" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.28.9" ana="N NS" lem="*GABAAQ">*GABAAQ</w>
+<w id="JoshA.18.28.10" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.28.11" ana="N3I NSF" lem="PO/LIS">PO/LIS</w>
+<w id="JoshA.18.28.12" ana="N NS" lem="*IARIM">*IARIM</w>
+<w id="JoshA.18.28.13" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.18.28.14" ana="M" lem="DE/KA">DE/KA</w>
+<w id="JoshA.18.28.15" ana="A3 NPM" lem="TREI=S">TREI=S</w>
+<w id="JoshA.18.28.16" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.18.28.17" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.18.28.18" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.18.28.19" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.18.28.20" ana="RD NSF" lem="OU(=TOS">AU(/TH</w>
+<w id="JoshA.18.28.21" ana="RA NSF" lem="O(">H(</w>
+<w id="JoshA.18.28.22" ana="N1A NSF" lem="KLHRONOMI/A">KLHRONOMI/A</w>
+<w id="JoshA.18.28.23" ana="N2 GPM" lem="UI(O/S">UI(W=N</w>
+<w id="JoshA.18.28.24" ana="N NSM" lem="*BENIAMI/N">*BENIAMIN</w>
+<w id="JoshA.18.28.25" ana="P" lem="KATA/">KATA\</w>
+<w id="JoshA.18.28.26" ana="N2 APM" lem="DH=MOS">DH/MOUS</w>
+<w id="JoshA.18.28.27" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.1.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.1.2" ana="VBI AAI3S" lem="E)K-E)/RXOMAI">E)CH=LQEN</w>
+<w id="JoshA.19.1.3" ana="RA NSM" lem="O(">O(</w>
+<w id="JoshA.19.1.4" ana="N2 NSM" lem="KLH=ROS">KLH=ROS</w>
+<w id="JoshA.19.1.5" ana="RA NSM" lem="O(">O(</w>
+<w id="JoshA.19.1.6" ana="A1A NSM" lem="DEU/TEROS">DEU/TEROS</w>
+<w id="JoshA.19.1.7" ana="RA DSM" lem="O(">TW=|</w>
+<w id="JoshA.19.1.8" ana="N DSM" lem="*SUMEWN">*SUMEWN</w>
+<w id="JoshA.19.1.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.1.10" ana="VCI API3S" lem="GI/GNOMAI">E)GENH/QH</w>
+<w id="JoshA.19.1.11" ana="RA NSF" lem="O(">H(</w>
+<w id="JoshA.19.1.12" ana="N1A NSF" lem="KLHRONOMI/A">KLHRONOMI/A</w>
+<w id="JoshA.19.1.13" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.1.14" ana="P" lem="A)NA/">A)NA\</w>
+<w id="JoshA.19.1.15" ana="A1 ASM" lem="ME/SOS">ME/SON</w>
+<w id="JoshA.19.1.16" ana="N2 GSM" lem="KLH=ROS">KLH/ROU</w>
+<w id="JoshA.19.1.17" ana="N2 GPM" lem="UI(O/S">UI(W=N</w>
+<w id="JoshA.19.1.18" ana="N GSM" lem="*IOUDA">*IOUDA</w>
+<w id="JoshA.19.2.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.2.2" ana="VCI API3S" lem="GI/GNOMAI">E)GENH/QH</w>
+<w id="JoshA.19.2.3" ana="RA NSM" lem="O(">O(</w>
+<w id="JoshA.19.2.4" ana="N2 NSM" lem="KLH=ROS">KLH=ROS</w>
+<w id="JoshA.19.2.5" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.2.6" ana="N NS" lem="*BHRSABEE">*BHRSABEE</w>
+<w id="JoshA.19.2.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.2.8" ana="N NS" lem="*SABEE">*SABEE</w>
+<w id="JoshA.19.2.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.2.10" ana="N NS" lem="*MWLADA">*MWLADA</w>
+<w id="JoshA.19.3.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.3.2" ana="N NS" lem="*ASERSOUAL">*ASERSOUAL</w>
+<w id="JoshA.19.3.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.3.4" ana="N NS" lem="*BAQOUL">*BAQOUL</w>
+<w id="JoshA.19.3.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.3.6" ana="N NS" lem="*BWLA">*BWLA</w>
+<w id="JoshA.19.3.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.3.8" ana="N NS" lem="*ASOM">*ASOM</w>
+<w id="JoshA.19.4.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.4.2" ana="N NS" lem="*ELQOULAD">*ELQOULAD</w>
+<w id="JoshA.19.4.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.4.4" ana="N NS" lem="*ERMA">*ERMA</w>
+<w id="JoshA.19.5.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.5.2" ana="N NS" lem="*SEKELA">*SEKELA</w>
+<w id="JoshA.19.5.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.5.4" ana="N NS" lem="*BAIQAMMARXABWQ">*BAIQAMMARXABWQ</w>
+<w id="JoshA.19.5.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.5.6" ana="N NS" lem="*ASERSOUSIM">*ASERSOUSIM</w>
+<w id="JoshA.19.6.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.6.2" ana="N NS" lem="*BAIQLABAQ">*BAIQLABAQ</w>
+<w id="JoshA.19.6.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.6.4" ana="RA NPM" lem="O(">OI(</w>
+<w id="JoshA.19.6.5" ana="N2 NPM" lem="A)GRO/S">A)GROI\</w>
+<w id="JoshA.19.6.6" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.6.7" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.19.6.8" ana="M" lem="DE/KA">DE/KA</w>
+<w id="JoshA.19.6.9" ana="A3 NPF" lem="TREI=S">TREI=S</w>
+<w id="JoshA.19.6.10" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.6.11" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.19.6.12" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.19.6.13" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.7.1" ana="N NS" lem="*AIN">*AIN</w>
+<w id="JoshA.19.7.2" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.7.3" ana="N NS" lem="*REMMWN">*REMMWN</w>
+<w id="JoshA.19.7.4" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.7.5" ana="N NS" lem="*EQER">*EQER</w>
+<w id="JoshA.19.7.6" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.7.7" ana="N NS" lem="*ASAN">*ASAN</w>
+<w id="JoshA.19.7.8" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.19.7.9" ana="A3 NPF" lem="TE/SSARES">TE/SSARES</w>
+<w id="JoshA.19.7.10" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.7.11" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.19.7.12" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.19.7.13" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.8.1" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.19.8.2" ana="D" lem="PERIKU/KLW|">PERIKU/KLW|</w>
+<w id="JoshA.19.8.3" ana="RA GPF" lem="O(">TW=N</w>
+<w id="JoshA.19.8.4" ana="N3I GPF" lem="PO/LIS">PO/LEWN</w>
+<w id="JoshA.19.8.5" ana="RD GPF" lem="OU(=TOS">TOU/TWN</w>
+<w id="JoshA.19.8.6" ana="P" lem="E(/WS">E(/WS</w>
+<w id="JoshA.19.8.7" ana="N GS" lem="*BAALEQBHRRAMWQ">*BAALEQBHRRAMWQ</w>
+<w id="JoshA.19.8.8" ana="V1 PMPGPM" lem="POREU/OMAI">POREUOME/NWN</w>
+<w id="JoshA.19.8.9" ana="N GS" lem="*IAMEQ">*IAMEQ</w>
+<w id="JoshA.19.8.10" ana="P" lem="KATA/">KATA\</w>
+<w id="JoshA.19.8.11" ana="N3 ASM" lem="LI/Y">LI/BA</w>
+<w id="JoshA.19.8.12" ana="RD NSF" lem="OU(=TOS">AU(/TH</w>
+<w id="JoshA.19.8.13" ana="RA NSF" lem="O(">H(</w>
+<w id="JoshA.19.8.14" ana="N1A NSF" lem="KLHRONOMI/A">KLHRONOMI/A</w>
+<w id="JoshA.19.8.15" ana="N1 GSF" lem="FULH/">FULH=S</w>
+<w id="JoshA.19.8.16" ana="N2 GPM" lem="UI(O/S">UI(W=N</w>
+<w id="JoshA.19.8.17" ana="N GSM" lem="*SUMEWN">*SUMEWN</w>
+<w id="JoshA.19.8.18" ana="P" lem="KATA/">KATA\</w>
+<w id="JoshA.19.8.19" ana="N2 APM" lem="DH=MOS">DH/MOUS</w>
+<w id="JoshA.19.8.20" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.9.1" ana="P" lem="A)PO/">A)PO\</w>
+<w id="JoshA.19.9.2" ana="RA GSM" lem="O(">TOU=</w>
+<w id="JoshA.19.9.3" ana="N2 GSM" lem="KLH=ROS">KLH/ROU</w>
+<w id="JoshA.19.9.4" ana="N GSM" lem="*IOUDA">*IOUDA</w>
+<w id="JoshA.19.9.5" ana="RA NSF" lem="O(">H(</w>
+<w id="JoshA.19.9.6" ana="N1A NSF" lem="KLHRONOMI/A">KLHRONOMI/A</w>
+<w id="JoshA.19.9.7" ana="N1 GSF" lem="FULH/">FULH=S</w>
+<w id="JoshA.19.9.8" ana="N2 GPM" lem="UI(O/S">UI(W=N</w>
+<w id="JoshA.19.9.9" ana="N GSM" lem="*SUMEWN">*SUMEWN</w>
+<w id="JoshA.19.9.10" ana="C" lem="O(/TI">O(/TI</w>
+<w id="JoshA.19.9.11" ana="VCI API3S" lem="GI/GNOMAI">E)GENH/QH</w>
+<w id="JoshA.19.9.12" ana="N3D NSF" lem="MERI/S">MERI\S</w>
+<w id="JoshA.19.9.13" ana="N2 GPM" lem="UI(O/S">UI(W=N</w>
+<w id="JoshA.19.9.14" ana="N GSM" lem="*IOUDA">*IOUDA</w>
+<w id="JoshA.19.9.15" ana="A3 NSMC" lem="ME/GAS">MEI/ZWN</w>
+<w id="JoshA.19.9.16" ana="RA GSF" lem="O(">TH=S</w>
+<w id="JoshA.19.9.17" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.9.18" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.9.19" ana="VAI AAI3P" lem="KLHRONOME/W">E)KLHRONO/MHSAN</w>
+<w id="JoshA.19.9.20" ana="RA NPM" lem="O(">OI(</w>
+<w id="JoshA.19.9.21" ana="N2 NPM" lem="UI(O/S">UI(OI\</w>
+<w id="JoshA.19.9.22" ana="N GSM" lem="*SUMEWN">*SUMEWN</w>
+<w id="JoshA.19.9.23" ana="P" lem="E)N">E)N</w>
+<w id="JoshA.19.9.24" ana="A1 DSM" lem="ME/SOS">ME/SW|</w>
+<w id="JoshA.19.9.25" ana="RA GSM" lem="O(">TOU=</w>
+<w id="JoshA.19.9.26" ana="N2 GSM" lem="KLH=ROS">KLH/ROU</w>
+<w id="JoshA.19.9.27" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.10.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.10.2" ana="VBI AAI3S" lem="E)K-E)/RXOMAI">E)CH=LQEN</w>
+<w id="JoshA.19.10.3" ana="RA NSM" lem="O(">O(</w>
+<w id="JoshA.19.10.4" ana="N2 NSM" lem="KLH=ROS">KLH=ROS</w>
+<w id="JoshA.19.10.5" ana="RA NSM" lem="O(">O(</w>
+<w id="JoshA.19.10.6" ana="A1 NSM" lem="TRI/TOS">TRI/TOS</w>
+<w id="JoshA.19.10.7" ana="RA DSM" lem="O(">TW=|</w>
+<w id="JoshA.19.10.8" ana="N DSM" lem="*ZABOULWN">*ZABOULWN</w>
+<w id="JoshA.19.10.9" ana="P" lem="KATA/">KATA\</w>
+<w id="JoshA.19.10.10" ana="N2 APM" lem="DH=MOS">DH/MOUS</w>
+<w id="JoshA.19.10.11" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.10.12" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.10.13" ana="VF FMI3S" lem="EI)MI/">E)/STAI</w>
+<w id="JoshA.19.10.14" ana="RA NPN" lem="O(">TA\</w>
+<w id="JoshA.19.10.15" ana="N2N NPN" lem="O(/RION">O(/RIA</w>
+<w id="JoshA.19.10.16" ana="RA GSF" lem="O(">TH=S</w>
+<w id="JoshA.19.10.17" ana="N1A GSF" lem="KLHRONOMI/A">KLHRONOMI/AS</w>
+<w id="JoshA.19.10.18" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.10.19" ana="P" lem="E(/WS">E(/WS</w>
+<w id="JoshA.19.10.20" ana="N GS" lem="*SARID">*SARID</w>
+<w id="JoshA.19.11.1" ana="RA NPN" lem="O(">TA\</w>
+<w id="JoshA.19.11.2" ana="N2N NPN" lem="O(/RION">O(/RIA</w>
+<w id="JoshA.19.11.3" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.11.4" ana="RA NSF" lem="O(">H(</w>
+<w id="JoshA.19.11.5" ana="N1S NSF" lem="QA/LASSA">QA/LASSA</w>
+<w id="JoshA.19.11.6" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.11.7" ana="N NS" lem="*MARALA">*MARALA</w>
+<w id="JoshA.19.11.8" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.11.9" ana="VF FAI3S" lem="SUN-A(/PTW">SUNA/YEI</w>
+<w id="JoshA.19.11.10" ana="P" lem="E)PI/">E)PI\</w>
+<w id="JoshA.19.11.11" ana="N AS" lem="*DABASQAI">*DABASQAI</w>
+<w id="JoshA.19.11.12" ana="P" lem="EI)S">EI)S</w>
+<w id="JoshA.19.11.13" ana="RA ASF" lem="O(">TH\N</w>
+<w id="JoshA.19.11.14" ana="N3G ASF" lem="FA/RAGC">FA/RAGGA</w>
+<w id="JoshA.19.11.15" ana="RR NSF" lem="O(/S">H(/</w>
+<w id="JoshA.19.11.16" ana="V9 PAI3S" lem="EI)MI/">E)STIN</w>
+<w id="JoshA.19.11.17" ana="P" lem="KATA/">KATA\</w>
+<w id="JoshA.19.11.18" ana="N2N ASN" lem="PRO/SWPON">PRO/SWPON</w>
+<w id="JoshA.19.11.19" ana="N GS" lem="*IEKNAM">*IEKNAM</w>
+<w id="JoshA.19.12.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.12.2" ana="VF FAI3S" lem="A)NA-STRE/FW">A)NASTRE/YEI</w>
+<w id="JoshA.19.12.3" ana="P" lem="A)PO/">A)PO\</w>
+<w id="JoshA.19.12.4" ana="N GS" lem="*SARID">*SARID</w>
+<w id="JoshA.19.12.5" ana="P" lem="E)K">E)C</w>
+<w id="JoshA.19.12.6" ana="A1A GSF" lem="E)NANTI/OS">E)NANTI/AS</w>
+<w id="JoshA.19.12.7" ana="P" lem="A)PO/">A)PO\</w>
+<w id="JoshA.19.12.8" ana="N1 GPF" lem="A)NATOLH/">A)NATOLW=N</w>
+<w id="JoshA.19.12.9" ana="N GS" lem="*SAMS">*SAMS</w>
+<w id="JoshA.19.12.10" ana="P" lem="E)PI/">E)PI\</w>
+<w id="JoshA.19.12.11" ana="RA APN" lem="O(">TA\</w>
+<w id="JoshA.19.12.12" ana="N2N APN" lem="O(/RION">O(/RIA</w>
+<w id="JoshA.19.12.13" ana="N GS" lem="*XASALWQ">*XASALWQ</w>
+<w id="JoshA.19.12.14" ana="N GS" lem="*QABWR">*QABWR</w>
+<w id="JoshA.19.12.15" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.12.16" ana="VF FMI3S" lem="DIA-E)/RXOMAI">DIELEU/SETAI</w>
+<w id="JoshA.19.12.17" ana="P" lem="E)PI/">E)PI\</w>
+<w id="JoshA.19.12.18" ana="N AS" lem="*DABRAQ">*DABRAQ</w>
+<w id="JoshA.19.12.19" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.12.20" ana="VF FMI3S" lem="PROS  A)NA-BAI/NW">PROSANABH/SETAI</w>
+<w id="JoshA.19.12.21" ana="P" lem="E)PI/">E)PI\</w>
+<w id="JoshA.19.12.22" ana="N AS" lem="*IAFAGAI">*IAFAGAI</w>
+<w id="JoshA.19.13.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.13.2" ana="D" lem="E)KEI=QEN">E)KEI=QEN</w>
+<w id="JoshA.19.13.3" ana="VF FMI3S" lem="PERI-E)/RXOMAI">PERIELEU/SETAI</w>
+<w id="JoshA.19.13.4" ana="P" lem="E)K">E)C</w>
+<w id="JoshA.19.13.5" ana="A1A GSF" lem="E)NANTI/OS">E)NANTI/AS</w>
+<w id="JoshA.19.13.6" ana="P" lem="E)PI/">E)P'</w>
+<w id="JoshA.19.13.7" ana="N1 APF" lem="A)NATOLH/">A)NATOLA\S</w>
+<w id="JoshA.19.13.8" ana="P" lem="E)PI/">E)PI\</w>
+<w id="JoshA.19.13.9" ana="N AS" lem="*GEQQA">*GEQQA</w>
+<w id="JoshA.19.13.10" ana="P" lem="E)PI/">E)PI\</w>
+<w id="JoshA.19.13.11" ana="N3I ASF" lem="PO/LIS">PO/LIN</w>
+<w id="JoshA.19.13.12" ana="N AS" lem="*KASIM">*KASIM</w>
+<w id="JoshA.19.13.13" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.13.14" ana="VF FMI3S" lem="DIA-E)/RXOMAI">DIELEU/SETAI</w>
+<w id="JoshA.19.13.15" ana="P" lem="E)PI/">E)PI\</w>
+<w id="JoshA.19.13.16" ana="N AS" lem="*REMMWN">*REMMWN</w>
+<w id="JoshA.19.13.17" ana="N AS" lem="*AMMAQARIM">*AMMAQARIM</w>
+<w id="JoshA.19.13.18" ana="N AS" lem="*ANNOUA">*ANNOUA</w>
+<w id="JoshA.19.14.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.14.2" ana="VF FMI3S" lem="PERI-E)/RXOMAI">PERIELEU/SETAI</w>
+<w id="JoshA.19.14.3" ana="P" lem="E)PI/">E)PI\</w>
+<w id="JoshA.19.14.4" ana="RA APN" lem="O(">TA\</w>
+<w id="JoshA.19.14.5" ana="N2N APN" lem="O(/RION">O(/RIA</w>
+<w id="JoshA.19.14.6" ana="N1T GSM" lem="BORE/AS">BORRA=</w>
+<w id="JoshA.19.14.7" ana="P" lem="E)PI/">E)PI\</w>
+<w id="JoshA.19.14.8" ana="N AS" lem="*ENNAQWQ">*ENNAQWQ</w>
+<w id="JoshA.19.14.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.14.10" ana="VF FMI3S" lem="EI)MI/">E)/STAI</w>
+<w id="JoshA.19.14.11" ana="RA NSF" lem="O(">H(</w>
+<w id="JoshA.19.14.12" ana="N2 NSF" lem="DIE/CODOS">DIE/CODOS</w>
+<w id="JoshA.19.14.13" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.14.14" ana="P" lem="E)PI/">E)PI\</w>
+<w id="JoshA.19.14.15" ana="N AS" lem="*GAIIEFQAHL">*GAIIEFQAHL</w>
+<w id="JoshA.19.15.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.15.2" ana="N AS" lem="*KATTAQ">*KATTAQ</w>
+<w id="JoshA.19.15.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.15.4" ana="N AS" lem="*NAALWL">*NAALWL</w>
+<w id="JoshA.19.15.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.15.6" ana="N AS" lem="*SEMRWN">*SEMRWN</w>
+<w id="JoshA.19.15.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.15.8" ana="N AS" lem="*IADHLA">*IADHLA</w>
+<w id="JoshA.19.15.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.15.10" ana="N AS" lem="*BAIQLEEM">*BAIQLEEM</w>
+<w id="JoshA.19.16.1" ana="RD NSF" lem="OU(=TOS">AU(/TH</w>
+<w id="JoshA.19.16.2" ana="RA NSF" lem="O(">H(</w>
+<w id="JoshA.19.16.3" ana="N1A NSF" lem="KLHRONOMI/A">KLHRONOMI/A</w>
+<w id="JoshA.19.16.4" ana="RA GSF" lem="O(">TH=S</w>
+<w id="JoshA.19.16.5" ana="N1 GSF" lem="FULH/">FULH=S</w>
+<w id="JoshA.19.16.6" ana="N2 GPM" lem="UI(O/S">UI(W=N</w>
+<w id="JoshA.19.16.7" ana="N GSM" lem="*ZABOULWN">*ZABOULWN</w>
+<w id="JoshA.19.16.8" ana="P" lem="KATA/">KATA\</w>
+<w id="JoshA.19.16.9" ana="N2 APM" lem="DH=MOS">DH/MOUS</w>
+<w id="JoshA.19.16.10" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.16.11" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.19.16.12" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.19.16.13" ana="RD NPF" lem="OU(=TOS">AU(=TAI</w>
+<w id="JoshA.19.16.14" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.16.15" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.19.16.16" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.19.16.17" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.17.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.17.2" ana="RA DSM" lem="O(">TW=|</w>
+<w id="JoshA.19.17.3" ana="N DSM" lem="*ISSAXAR">*ISSAXAR</w>
+<w id="JoshA.19.17.4" ana="VBI AAI3S" lem="E)K-E)/RXOMAI">E)CH=LQEN</w>
+<w id="JoshA.19.17.5" ana="RA NSM" lem="O(">O(</w>
+<w id="JoshA.19.17.6" ana="N2 NSM" lem="KLH=ROS">KLH=ROS</w>
+<w id="JoshA.19.17.7" ana="RA NSM" lem="O(">O(</w>
+<w id="JoshA.19.17.8" ana="A1 NSM" lem="TE/TARTOS">TE/TARTOS</w>
+<w id="JoshA.19.18.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.18.2" ana="VCI API3S" lem="GI/GNOMAI">E)GENH/QH</w>
+<w id="JoshA.19.18.3" ana="RA NPN" lem="O(">TA\</w>
+<w id="JoshA.19.18.4" ana="N2N NPN" lem="O(/RION">O(/RIA</w>
+<w id="JoshA.19.18.5" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.18.6" ana="N NS" lem="*IEZRAEL">*IEZRAEL</w>
+<w id="JoshA.19.18.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.18.8" ana="N NS" lem="*AXASELWQ">*AXASELWQ</w>
+<w id="JoshA.19.18.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.18.10" ana="N NS" lem="*SOUNAM">*SOUNAM</w>
+<w id="JoshA.19.19.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.19.2" ana="N NS" lem="*AFERAI+M">*AFERAI+M</w>
+<w id="JoshA.19.19.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.19.4" ana="N NS" lem="*SIAN">*SIAN</w>
+<w id="JoshA.19.19.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.19.6" ana="N NS" lem="*RENAQ">*RENAQ</w>
+<w id="JoshA.19.19.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.19.8" ana="N NS" lem="*ANAREQ">*ANAREQ</w>
+<w id="JoshA.19.20.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.20.2" ana="N NS" lem="*RABBWQ">*RABBWQ</w>
+<w id="JoshA.19.20.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.20.4" ana="N NS" lem="*KESIWN">*KESIWN</w>
+<w id="JoshA.19.20.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.20.6" ana="N NS" lem="*AEME">*AEME</w>
+<w id="JoshA.19.21.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.21.2" ana="N NS" lem="*RAMAQ">*RAMAQ</w>
+<w id="JoshA.19.21.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.21.4" ana="N NS" lem="*HNGANNIM">*HNGANNIM</w>
+<w id="JoshA.19.21.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.21.6" ana="N NS" lem="*HNADDA">*HNADDA</w>
+<w id="JoshA.19.21.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.21.8" ana="N NS" lem="*BAIQFASHS">*BAIQFASHS</w>
+<w id="JoshA.19.22.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.22.2" ana="VF FAI3S" lem="SUN-A(/PTW">SUNA/YEI</w>
+<w id="JoshA.19.22.3" ana="RA APN" lem="O(">TA\</w>
+<w id="JoshA.19.22.4" ana="N2N APN" lem="O(/RION">O(/RIA</w>
+<w id="JoshA.19.22.5" ana="P" lem="E)PI/">E)PI\</w>
+<w id="JoshA.19.22.6" ana="N AS" lem="*QABWQ">*QABWQ</w>
+<w id="JoshA.19.22.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.22.8" ana="P" lem="E)PI/">E)PI\</w>
+<w id="JoshA.19.22.9" ana="N AS" lem="*SASIMA">*SASIMA</w>
+<w id="JoshA.19.22.10" ana="P" lem="KATA/">KATA\</w>
+<w id="JoshA.19.22.11" ana="N1S ASF" lem="QA/LASSA">QA/LASSAN</w>
+<w id="JoshA.19.22.12" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.22.13" ana="N AS" lem="*BAIQSMAS">*BAIQSMAS</w>
+<w id="JoshA.19.22.14" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.22.15" ana="VF FMI3S" lem="EI)MI/">E)/STAI</w>
+<w id="JoshA.19.22.16" ana="RA NSF" lem="O(">H(</w>
+<w id="JoshA.19.22.17" ana="N2 NSF" lem="DIE/CODOS">DIE/CODOS</w>
+<w id="JoshA.19.22.18" ana="RA GPN" lem="O(">TW=N</w>
+<w id="JoshA.19.22.19" ana="N2N GPN" lem="O(/RION">O(RI/WN</w>
+<w id="JoshA.19.22.20" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.22.21" ana="RA NSM" lem="O(">O(</w>
+<w id="JoshA.19.22.22" ana="N1M NSM" lem="*I)ORDA/NHS">*IORDA/NHS</w>
+<w id="JoshA.19.23.1" ana="RD NSF" lem="OU(=TOS">AU(/TH</w>
+<w id="JoshA.19.23.2" ana="RA NSF" lem="O(">H(</w>
+<w id="JoshA.19.23.3" ana="N1A NSF" lem="KLHRONOMI/A">KLHRONOMI/A</w>
+<w id="JoshA.19.23.4" ana="N1 GSF" lem="FULH/">FULH=S</w>
+<w id="JoshA.19.23.5" ana="N2 GPM" lem="UI(O/S">UI(W=N</w>
+<w id="JoshA.19.23.6" ana="N GSM" lem="*ISSAXAR">*ISSAXAR</w>
+<w id="JoshA.19.23.7" ana="P" lem="KATA/">KATA\</w>
+<w id="JoshA.19.23.8" ana="N2 APM" lem="DH=MOS">DH/MOUS</w>
+<w id="JoshA.19.23.9" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.23.10" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.19.23.11" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.19.23.12" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.23.13" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.19.23.14" ana="N3I NPF" lem="E)/PAULIS">E)PAU/LEIS</w>
+<w id="JoshA.19.23.15" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.24.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.24.2" ana="VBI AAI3S" lem="E)K-E)/RXOMAI">E)CH=LQEN</w>
+<w id="JoshA.19.24.3" ana="RA NSM" lem="O(">O(</w>
+<w id="JoshA.19.24.4" ana="N2 NSM" lem="KLH=ROS">KLH=ROS</w>
+<w id="JoshA.19.24.5" ana="RA NSM" lem="O(">O(</w>
+<w id="JoshA.19.24.6" ana="A1 NSM" lem="PE/MPTOS">PE/MPTOS</w>
+<w id="JoshA.19.24.7" ana="N GSM" lem="*ASHR">*ASHR</w>
+<w id="JoshA.19.24.8" ana="P" lem="KATA/">KATA\</w>
+<w id="JoshA.19.24.9" ana="N2 APM" lem="DH=MOS">DH/MOUS</w>
+<w id="JoshA.19.24.10" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.25.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.25.2" ana="VCI API3S" lem="GI/GNOMAI">E)GENH/QH</w>
+<w id="JoshA.19.25.3" ana="RA NPN" lem="O(">TA\</w>
+<w id="JoshA.19.25.4" ana="N2N NPN" lem="O(/RION">O(/RIA</w>
+<w id="JoshA.19.25.5" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.25.6" ana="N NS" lem="*XELKAQ">*XELKAQ</w>
+<w id="JoshA.19.25.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.25.8" ana="N NS" lem="*OOLI">*OOLI</w>
+<w id="JoshA.19.25.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.25.10" ana="N NS" lem="*BATNE">*BATNE</w>
+<w id="JoshA.19.25.11" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.25.12" ana="N NS" lem="*AXSAF">*AXSAF</w>
+<w id="JoshA.19.26.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.26.2" ana="N NS" lem="*AMAD">*AMAD</w>
+<w id="JoshA.19.26.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.26.4" ana="N NS" lem="*MASAL">*MASAL</w>
+<w id="JoshA.19.26.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.26.6" ana="VF FAI3S" lem="SUN-A(/PTW">SUNA/YEI</w>
+<w id="JoshA.19.26.7" ana="RA DS" lem="O(">TW=|</w>
+<w id="JoshA.19.26.8" ana="N2 DS" lem="*KA/RMHLOS">*KARMH/LW|</w>
+<w id="JoshA.19.26.9" ana="P" lem="KATA/">KATA\</w>
+<w id="JoshA.19.26.10" ana="N1S ASF" lem="QA/LASSA">QA/LASSAN</w>
+<w id="JoshA.19.26.11" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.26.12" ana="RA DSM" lem="O(">TW=|</w>
+<w id="JoshA.19.26.13" ana="N DSM" lem="*SIWR">*SIWR</w>
+<w id="JoshA.19.26.14" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.26.15" ana="N DS" lem="*LABANAQ">*LABANAQ</w>
+<w id="JoshA.19.27.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.27.2" ana="VF FAI3S" lem="E)PI-STRE/FW">E)PISTRE/YEI</w>
+<w id="JoshA.19.27.3" ana="P" lem="A)PO/">A)P'</w>
+<w id="JoshA.19.27.4" ana="N1 GPF" lem="A)NATOLH/">A)NATOLW=N</w>
+<w id="JoshA.19.27.5" ana="N2 GSM" lem="H(/LIOS">H(LI/OU</w>
+<w id="JoshA.19.27.6" ana="N DS" lem="*BHQDAGWN">*BHQDAGWN</w>
+<w id="JoshA.19.27.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.27.8" ana="VF FAI3S" lem="SUN-A(/PTW">SUNA/YEI</w>
+<w id="JoshA.19.27.9" ana="RA DSM" lem="O(">TW=|</w>
+<w id="JoshA.19.27.10" ana="N DSM" lem="*ZABOULWN">*ZABOULWN</w>
+<w id="JoshA.19.27.11" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.27.12" ana="P" lem="E)N">E)N</w>
+<w id="JoshA.19.27.13" ana="N DS" lem="*GAI">*GAI</w>
+<w id="JoshA.19.27.14" ana="N GSM" lem="*IEFQAHL">*IEFQAHL</w>
+<w id="JoshA.19.27.15" ana="P" lem="KATA/">KATA\</w>
+<w id="JoshA.19.27.16" ana="N1T ASM" lem="BORE/AS">BORRA=N</w>
+<w id="JoshA.19.27.17" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.27.18" ana="VF FMI3S" lem="EI)S-E)/RXOMAI">EI)SELEU/SETAI</w>
+<w id="JoshA.19.27.19" ana="RA APN" lem="O(">TA\</w>
+<w id="JoshA.19.27.20" ana="N2N APN" lem="O(/RION">O(/RIA</w>
+<w id="JoshA.19.27.21" ana="N GS" lem="*SAFQABHQAEMEK">*SAFQABHQAEMEK</w>
+<w id="JoshA.19.27.22" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.27.23" ana="VF FMI3S" lem="POREU/OMAI">POREU/SETAI</w>
+<w id="JoshA.19.27.24" ana="RA NSN" lem="O(">TO\</w>
+<w id="JoshA.19.27.25" ana="N2N NSN" lem="MEQO/RION">MEQO/RION</w>
+<w id="JoshA.19.27.26" ana="N GS" lem="*ANIHL">*ANIHL</w>
+<w id="JoshA.19.27.27" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.27.28" ana="VF FMI3S" lem="DIA-E)/RXOMAI">DIELEU/SETAI</w>
+<w id="JoshA.19.27.29" ana="P" lem="EI)S">EI)S</w>
+<w id="JoshA.19.27.30" ana="N AS" lem="*XABWL">*XABWL</w>
+<w id="JoshA.19.27.31" ana="P" lem="A)PO/">A)PO\</w>
+<w id="JoshA.19.27.32" ana="A1A GPM" lem="A)RISTERO/S">A)RISTERW=N</w>
+<w id="JoshA.19.28.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.28.2" ana="N NS" lem="*AXRAN">*AXRAN</w>
+<w id="JoshA.19.28.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.28.4" ana="N NS" lem="*ROWB">*ROWB</w>
+<w id="JoshA.19.28.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.28.6" ana="N NS" lem="*AMWN">*AMWN</w>
+<w id="JoshA.19.28.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.28.8" ana="N NS" lem="*KANA">*KANA</w>
+<w id="JoshA.19.28.9" ana="P" lem="E(/WS">E(/WS</w>
+<w id="JoshA.19.28.10" ana="N3W GSF" lem="*SIDW/N">*SIDW=NOS</w>
+<w id="JoshA.19.28.11" ana="RA GSF" lem="O(">TH=S</w>
+<w id="JoshA.19.28.12" ana="A1 GSF" lem="ME/GAS">MEGA/LHS</w>
+<w id="JoshA.19.29.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.29.2" ana="VF FAI3S" lem="A)NA-STRE/FW">A)NASTRE/YEI</w>
+<w id="JoshA.19.29.3" ana="RA NPN" lem="O(">TA\</w>
+<w id="JoshA.19.29.4" ana="N2N NPN" lem="O(/RION">O(/RIA</w>
+<w id="JoshA.19.29.5" ana="P" lem="EI)S">EI)S</w>
+<w id="JoshA.19.29.6" ana="N AS" lem="*RAMA">*RAMA</w>
+<w id="JoshA.19.29.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.29.8" ana="P" lem="E(/WS">E(/WS</w>
+<w id="JoshA.19.29.9" ana="N3I GSF" lem="PO/LIS">PO/LEWS</w>
+<w id="JoshA.19.29.10" ana="N3M GSN" lem="O)XU/RWMA">O)XURW/MATOS</w>
+<w id="JoshA.19.29.11" ana="RA GPM" lem="O(">TW=N</w>
+<w id="JoshA.19.29.12" ana="N2 GPM" lem="*TU/RIOS">*TURI/WN</w>
+<w id="JoshA.19.29.13" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.29.14" ana="VF FAI3S" lem="A)NA-STRE/FW">A)NASTRE/YEI</w>
+<w id="JoshA.19.29.15" ana="RA NPN" lem="O(">TA\</w>
+<w id="JoshA.19.29.16" ana="N2N NPN" lem="O(/RION">O(/RIA</w>
+<w id="JoshA.19.29.17" ana="P" lem="E)PI/">E)PI\</w>
+<w id="JoshA.19.29.18" ana="N AS" lem="*WSA">*WSA</w>
+<w id="JoshA.19.29.19" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.29.20" ana="VF FMI3S" lem="EI)MI/">E)/STAI</w>
+<w id="JoshA.19.29.21" ana="RA NSF" lem="O(">H(</w>
+<w id="JoshA.19.29.22" ana="N2 NSF" lem="DIE/CODOS">DIE/CODOS</w>
+<w id="JoshA.19.29.23" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="JoshA.19.29.24" ana="RA NSF" lem="O(">H(</w>
+<w id="JoshA.19.29.25" ana="N1S NSF" lem="QA/LASSA">QA/LASSA</w>
+<w id="JoshA.19.29.26" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.29.27" ana="P" lem="A)PO/">A)PO\</w>
+<w id="JoshA.19.29.28" ana="RA GSN" lem="O(">TOU=</w>
+<w id="JoshA.19.29.29" ana="N3W GSN" lem="SXOI/NISMA">SXOINI/SMATOS</w>
+<w id="JoshA.19.29.30" ana="N NS" lem="*AXZIF">*AXZIF</w>
+<w id="JoshA.19.30.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.30.2" ana="N NS" lem="*AMMA">*AMMA</w>
+<w id="JoshA.19.30.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.30.4" ana="N NS" lem="*AFEK">*AFEK</w>
+<w id="JoshA.19.30.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.30.6" ana="N NS" lem="*RAWB">*RAWB</w>
+<w id="JoshA.19.30.7" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.19.30.8" ana="M" lem="EI)/KOSI">EI)/KOSI</w>
+<w id="JoshA.19.30.9" ana="M" lem="DU/O">DU/O</w>
+<w id="JoshA.19.31.1" ana="RD NSF" lem="OU(=TOS">AU(/TH</w>
+<w id="JoshA.19.31.2" ana="RA NSF" lem="O(">H(</w>
+<w id="JoshA.19.31.3" ana="N1A NSF" lem="KLHRONOMI/A">KLHRONOMI/A</w>
+<w id="JoshA.19.31.4" ana="N1 GSF" lem="FULH/">FULH=S</w>
+<w id="JoshA.19.31.5" ana="N2 GPM" lem="UI(O/S">UI(W=N</w>
+<w id="JoshA.19.31.6" ana="N GSM" lem="*ASHR">*ASHR</w>
+<w id="JoshA.19.31.7" ana="P" lem="KATA/">KATA\</w>
+<w id="JoshA.19.31.8" ana="N2 APM" lem="DH=MOS">DH/MOUS</w>
+<w id="JoshA.19.31.9" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.31.10" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.19.31.11" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.31.12" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.31.13" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.19.31.14" ana="N1 NPF" lem="KW/MH">KW=MAI</w>
+<w id="JoshA.19.31.15" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.32.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.32.2" ana="RA DSM" lem="O(">TW=|</w>
+<w id="JoshA.19.32.3" ana="N DSM" lem="*NEFQALI">*NEFQALI</w>
+<w id="JoshA.19.32.4" ana="VBI AAI3S" lem="E)K-E)/RXOMAI">E)CH=LQEN</w>
+<w id="JoshA.19.32.5" ana="RA NSM" lem="O(">O(</w>
+<w id="JoshA.19.32.6" ana="N2 NSM" lem="KLH=ROS">KLH=ROS</w>
+<w id="JoshA.19.32.7" ana="RA NSM" lem="O(">O(</w>
+<w id="JoshA.19.32.8" ana="A1 NSM" lem="E(/KTOS">E(/KTOS</w>
+<w id="JoshA.19.33.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.33.2" ana="VBI AMI3S" lem="GI/GNOMAI">E)GE/NETO</w>
+<w id="JoshA.19.33.3" ana="RA NPN" lem="O(">TA\</w>
+<w id="JoshA.19.33.4" ana="N2N NPN" lem="O(/RION">O(/RIA</w>
+<w id="JoshA.19.33.5" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.33.6" ana="N NS" lem="*MEELEF">*MEELEF</w>
+<w id="JoshA.19.33.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.33.8" ana="N NS" lem="*MAHLWN">*MAHLWN</w>
+<w id="JoshA.19.33.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.33.10" ana="N NS" lem="*BESENANIM">*BESENANIM</w>
+<w id="JoshA.19.33.11" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.33.12" ana="N NS" lem="*ARMAI">*ARMAI</w>
+<w id="JoshA.19.33.13" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.33.14" ana="N NS" lem="*NAKEB">*NAKEB</w>
+<w id="JoshA.19.33.15" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.33.16" ana="N NS" lem="*IABNHL">*IABNHL</w>
+<w id="JoshA.19.33.17" ana="P" lem="E(/WS">E(/WS</w>
+<w id="JoshA.19.33.18" ana="N2 GS" lem="*LAKOS">*LAKOU</w>
+<w id="JoshA.19.33.19" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.33.20" ana="VCI API3P" lem="GI/GNOMAI">E)GENH/QHSAN</w>
+<w id="JoshA.19.33.21" ana="RA NPF" lem="O(">AI(</w>
+<w id="JoshA.19.33.22" ana="N2 NPF" lem="DIE/CODOS">DIE/CODOI</w>
+<w id="JoshA.19.33.23" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="JoshA.19.33.24" ana="RA NSM" lem="O(">O(</w>
+<w id="JoshA.19.33.25" ana="N1M NSM" lem="*I)ORDA/NHS">*IORDA/NHS</w>
+<w id="JoshA.19.34.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.34.2" ana="VF FAI3S" lem="E)PI-STRE/FW">E)PISTRE/YEI</w>
+<w id="JoshA.19.34.3" ana="RA APN" lem="O(">TA\</w>
+<w id="JoshA.19.34.4" ana="N2N APN" lem="O(/RION">O(/RIA</w>
+<w id="JoshA.19.34.5" ana="P" lem="E)PI/">E)PI\</w>
+<w id="JoshA.19.34.6" ana="N1S ASF" lem="QA/LASSA">QA/LASSAN</w>
+<w id="JoshA.19.34.7" ana="N AS" lem="*AZANWQ">*AZANWQ</w>
+<w id="JoshA.19.34.8" ana="N AS" lem="*QABWR">*QABWR</w>
+<w id="JoshA.19.34.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.34.10" ana="VF FMI3S" lem="DIA-E)/RXOMAI">DIELEU/SETAI</w>
+<w id="JoshA.19.34.11" ana="D" lem="E)KEI=QEN">E)KEI=QEN</w>
+<w id="JoshA.19.34.12" ana="P" lem="EI)S">EI)S</w>
+<w id="JoshA.19.34.13" ana="N AS" lem="*IKWK">*IKWK</w>
+<w id="JoshA.19.34.14" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.34.15" ana="VF FAI3S" lem="SUN-A(/PTW">SUNA/YEI</w>
+<w id="JoshA.19.34.16" ana="RA DSM" lem="O(">TW=|</w>
+<w id="JoshA.19.34.17" ana="N DSM" lem="*ZABOULWN">*ZABOULWN</w>
+<w id="JoshA.19.34.18" ana="P" lem="A)PO/">A)PO\</w>
+<w id="JoshA.19.34.19" ana="N2 GSM" lem="NO/TOS">NO/TOU</w>
+<w id="JoshA.19.34.20" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.34.21" ana="RA DSM" lem="O(">TW=|</w>
+<w id="JoshA.19.34.22" ana="N DSM" lem="*ASHR">*ASHR</w>
+<w id="JoshA.19.34.23" ana="VF FAI3S" lem="SUN-A(/PTW">SUNA/YEI</w>
+<w id="JoshA.19.34.24" ana="P" lem="KATA/">KATA\</w>
+<w id="JoshA.19.34.25" ana="N1S ASF" lem="QA/LASSA">QA/LASSAN</w>
+<w id="JoshA.19.34.26" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.34.27" ana="RA NSM" lem="O(">O(</w>
+<w id="JoshA.19.34.28" ana="N1M NSM" lem="*I)ORDA/NHS">*IORDA/NHS</w>
+<w id="JoshA.19.34.29" ana="P" lem="A)PO/">A)P'</w>
+<w id="JoshA.19.34.30" ana="N1 GPF" lem="A)NATOLH/">A)NATOLW=N</w>
+<w id="JoshA.19.34.31" ana="N2 GSM" lem="H(/LIOS">H(LI/OU</w>
+<w id="JoshA.19.35.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.35.2" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.19.35.3" ana="A3H NPM" lem="TEIXH/RHS">TEIXH/REIS</w>
+<w id="JoshA.19.35.4" ana="RA GPM" lem="O(">TW=N</w>
+<w id="JoshA.19.35.5" ana="N2 GPM" lem="*TU/RIOS">*TURI/WN</w>
+<w id="JoshA.19.35.6" ana="N2 NSM" lem="*TU/ROS">*TU/ROS</w>
+<w id="JoshA.19.35.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.35.8" ana="N NS" lem="*AMAQ">*AMAQ</w>
+<w id="JoshA.19.35.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.35.10" ana="N NS" lem="*REKKAQ">*REKKAQ</w>
+<w id="JoshA.19.35.11" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.35.12" ana="N NS" lem="*XENEREQ">*XENEREQ</w>
+<w id="JoshA.19.36.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.36.2" ana="N NS" lem="*ADAMI">*ADAMI</w>
+<w id="JoshA.19.36.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.36.4" ana="N NS" lem="*RAMA">*RAMA</w>
+<w id="JoshA.19.36.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.36.6" ana="N NS" lem="*ASWR">*ASWR</w>
+<w id="JoshA.19.37.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.37.2" ana="N NS" lem="*KEDES">*KEDES</w>
+<w id="JoshA.19.37.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.37.4" ana="N NS" lem="*EDRAI+">*EDRAI+</w>
+<w id="JoshA.19.37.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.37.6" ana="N1 NSF" lem="PHGH/">PHGH\</w>
+<w id="JoshA.19.37.7" ana="N GS" lem="*ASOR">*ASOR</w>
+<w id="JoshA.19.38.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.38.2" ana="N NS" lem="*IARIWN">*IARIWN</w>
+<w id="JoshA.19.38.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.38.4" ana="N NS" lem="*MAGDALIHL">*MAGDALIHL</w>
+<w id="JoshA.19.38.5" ana="N NS" lem="*WRAM">*WRAM</w>
+<w id="JoshA.19.38.6" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.38.7" ana="N NS" lem="*BAIQANAQ">*BAIQANAQ</w>
+<w id="JoshA.19.38.8" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.38.9" ana="N NS" lem="*QASMOUS">*QASMOUS</w>
+<w id="JoshA.19.38.10" ana="N3I NPF" lem="PO/LIS">PO/LEIS</w>
+<w id="JoshA.19.38.11" ana="M" lem="DE/KA">DE/KA</w>
+<w id="JoshA.19.38.12" ana="M" lem="E)NNE/A">E)NNE/A</w>
+<w id="JoshA.19.39.1" ana="RD NSF" lem="OU(=TOS">AU(/TH</w>
+<w id="JoshA.19.39.2" ana="RA NSF" lem="O(">H(</w>
+<w id="JoshA.19.39.3" ana="N1A NSF" lem="KLHRONOMI/A">KLHRONOMI/A</w>
+<w id="JoshA.19.39.4" ana="N1 GSF" lem="FULH/">FULH=S</w>
+<w id="JoshA.19.39.5" ana="N2 GPM" lem="UI(O/S">UI(W=N</w>
+<w id="JoshA.19.39.6" ana="N GSM" lem="*NEFQALI">*NEFQALI</w>
+<w id="JoshA.19.40.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.40.2" ana="RA DSM" lem="O(">TW=|</w>
+<w id="JoshA.19.40.3" ana="N DSM" lem="*DAN">*DAN</w>
+<w id="JoshA.19.40.4" ana="VBI AAI3S" lem="E)K-E)/RXOMAI">E)CH=LQEN</w>
+<w id="JoshA.19.40.5" ana="RA NSM" lem="O(">O(</w>
+<w id="JoshA.19.40.6" ana="N2 NSM" lem="KLH=ROS">KLH=ROS</w>
+<w id="JoshA.19.40.7" ana="RA NSM" lem="O(">O(</w>
+<w id="JoshA.19.40.8" ana="A1 NSM" lem="E(/BDOMOS">E(/BDOMOS</w>
+<w id="JoshA.19.41.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.41.2" ana="VCI API3S" lem="GI/GNOMAI">E)GENH/QH</w>
+<w id="JoshA.19.41.3" ana="RA NPN" lem="O(">TA\</w>
+<w id="JoshA.19.41.4" ana="N2N NPN" lem="O(/RION">O(/RIA</w>
+<w id="JoshA.19.41.5" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="JoshA.19.41.6" ana="N NS" lem="*SARAA">*SARAA</w>
+<w id="JoshA.19.41.7" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.41.8" ana="N NS" lem="*ESQAOL">*ESQAOL</w>
+<w id="JoshA.19.41.9" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.41.10" ana="N3I NSF" lem="PO/LIS">PO/LIS</w>
+<w id="JoshA.19.41.11" ana="N GS" lem="*SAMES">*SAMES</w>
+<w id="JoshA.19.42.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.42.2" ana="N NS" lem="*SALABIN">*SALABIN</w>
+<w id="JoshA.19.42.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.42.4" ana="N NS" lem="*IAALWN">*IAALWN</w>
+<w id="JoshA.19.42.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.42.6" ana="N NS" lem="*IEQLA">*IEQLA</w>
+<w id="JoshA.19.43.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.43.2" ana="N NS" lem="*AILWN">*AILWN</w>
+<w id="JoshA.19.43.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.43.4" ana="N NS" lem="*QAMNA">*QAMNA</w>
+<w id="JoshA.19.43.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.43.6" ana="N NS" lem="*AKKARWN">*AKKARWN</w>
+<w id="JoshA.19.44.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.44.2" ana="N NS" lem="*ELQEKW">*ELQEKW</w>
+<w id="JoshA.19.44.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.44.4" ana="N NS" lem="*GABAQWN">*GABAQWN</w>
+<w id="JoshA.19.44.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.44.6" ana="N NS" lem="*BAALWN">*BAALWN</w>
+<w id="JoshA.19.45.1" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.45.2" ana="N NS" lem="*IOUQ">*IOUQ</w>
+<w id="JoshA.19.45.3" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.45.4" ana="N NS" lem="*BANHBARAK">*BANHBARAK</w>
+<w id="JoshA.19.45.5" ana="C" lem="KAI/">KAI\</w>
+<w id="JoshA.19.45.6" ana="N NS" lem="*GEQREMMWN">*GEQREMMWN</w>

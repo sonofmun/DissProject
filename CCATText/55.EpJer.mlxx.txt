@@ -1,0 +1,1285 @@
+<w id="EpJer...1" ana="N2N NSN" lem="A)NTI/GRAFON">A)NTI/GRAFON</w>
+<w id="EpJer...2" ana="N1 GSF" lem="E)PISTOLH/">E)PISTOLH=S</w>
+<w id="EpJer...3" ana="RR GSF" lem="O(/S">H(=S</w>
+<w id="EpJer...4" ana="VAI AAI3S" lem="A)PO-STE/LLW">A)PE/STEILEN</w>
+<w id="EpJer...5" ana="N NSM" lem="*I)EREMI/AS">*IEREMIAS</w>
+<w id="EpJer...6" ana="P" lem="PRO/S">PRO\S</w>
+<w id="EpJer...7" ana="RA APM" lem="O(">TOU\S</w>
+<w id="EpJer...8" ana="VQ FPPAPM" lem="A)/GW">A)XQHSOME/NOUS</w>
+<w id="EpJer...9" ana="A1B APM" lem="AI)XMA/LWTOS">AI)XMALW/TOUS</w>
+<w id="EpJer...10" ana="P" lem="EI)S">EI)S</w>
+<w id="EpJer...11" ana="N3W ASF" lem="*BABULW/N">*BABULW=NA</w>
+<w id="EpJer...12" ana="P" lem="U(PO/">U(PO\</w>
+<w id="EpJer...13" ana="RA GSM" lem="O(">TOU=</w>
+<w id="EpJer...14" ana="N3V GSM" lem="BASILEU/S">BASILE/WS</w>
+<w id="EpJer...15" ana="RA GPM" lem="O(">TW=N</w>
+<w id="EpJer...16" ana="N GPM" lem="*BABULW/NIOS">*BABULWNI/WN</w>
+<w id="EpJer...17" ana="VA AAN" lem="A)NA-A)GGE/LLW">A)NAGGEI=LAI</w>
+<w id="EpJer...18" ana="RD DPM" lem="AU)TO/S">AU)TOI=S</w>
+<w id="EpJer...19" ana="C" lem="KAQO/TI">KAQO/TI</w>
+<w id="EpJer...20" ana="VDI API3S" lem="E)PI-TA/SSW">E)PETA/GH</w>
+<w id="EpJer...21" ana="RD DSM" lem="AU)TO/S">AU)TW=|</w>
+<w id="EpJer...22" ana="P" lem="U(PO/">U(PO\</w>
+<w id="EpJer...23" ana="RA GSM" lem="O(">TOU=</w>
+<w id="EpJer...24" ana="N2 GSM" lem="QEO/S">QEOU=</w>
+<w id="EpJer.1..1" ana="P" lem="DIA/">DIA\</w>
+<w id="EpJer.1..2" ana="RA APF" lem="O(">TA\S</w>
+<w id="EpJer.1..3" ana="N1A APF" lem="A(MARTI/A">A(MARTI/AS</w>
+<w id="EpJer.1..4" ana="RR APF" lem="O(/S">A(\S</w>
+<w id="EpJer.1..5" ana="VX XAI2P" lem="A(MARTA/NW">H(MARTH/KATE</w>
+<w id="EpJer.1..6" ana="P" lem="E)NANTI/ON">E)NANTI/ON</w>
+<w id="EpJer.1..7" ana="RA GSM" lem="O(">TOU=</w>
+<w id="EpJer.1..8" ana="N2 GSM" lem="QEO/S">QEOU=</w>
+<w id="EpJer.1..9" ana="VQ FPI2P" lem="A)/GW">A)XQH/SESQE</w>
+<w id="EpJer.1..10" ana="P" lem="EI)S">EI)S</w>
+<w id="EpJer.1..11" ana="N3W ASF" lem="*BABULW/N">*BABULW=NA</w>
+<w id="EpJer.1..12" ana="A1B NPM" lem="AI)XMA/LWTOS">AI)XMA/LWTOI</w>
+<w id="EpJer.1..13" ana="P" lem="U(PO/">U(PO\</w>
+<w id="EpJer.1..14" ana="N GSM" lem="*NABOUXODONOSOR">*NABOUXODONOSOR</w>
+<w id="EpJer.1..15" ana="N3V GSM" lem="BASILEU/S">BASILE/WS</w>
+<w id="EpJer.1..16" ana="RA GPM" lem="O(">TW=N</w>
+<w id="EpJer.1..17" ana="N GPM" lem="*BABULW/NIOS">*BABULWNI/WN</w>
+<w id="EpJer.2..1" ana="VB AAPNPM" lem="EI)S-E)/RXOMAI">EI)SELQO/NTES</w>
+<w id="EpJer.2..2" ana="X" lem="OU)=N">OU)=N</w>
+<w id="EpJer.2..3" ana="P" lem="EI)S">EI)S</w>
+<w id="EpJer.2..4" ana="N3W ASF" lem="*BABULW/N">*BABULW=NA</w>
+<w id="EpJer.2..5" ana="VF FMI2P" lem="EI)MI/">E)/SESQE</w>
+<w id="EpJer.2..6" ana="D" lem="E)KEI=">E)KEI=</w>
+<w id="EpJer.2..7" ana="N3E APN" lem="E)/TOS">E)/TH</w>
+<w id="EpJer.2..8" ana="A3C APN" lem="POLU/S">PLEI/ONA</w>
+<w id="EpJer.2..9" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.2..10" ana="N2 ASM" lem="XRO/NOS">XRO/NON</w>
+<w id="EpJer.2..11" ana="A1A ASM" lem="MAKRO/S">MAKRO\N</w>
+<w id="EpJer.2..12" ana="P" lem="E(/WS">E(/WS</w>
+<w id="EpJer.2..13" ana="N1A GPF" lem="GENEA/">GENEW=N</w>
+<w id="EpJer.2..14" ana="M" lem="E(PTA/">E(PTA/</w>
+<w id="EpJer.2..15" ana="P" lem="META/">META\</w>
+<w id="EpJer.2..16" ana="RD ASN" lem="OU(=TOS">TOU=TO</w>
+<w id="EpJer.2..17" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.2..18" ana="VF FAI1S" lem="E)K-A)/GW">E)CA/CW</w>
+<w id="EpJer.2..19" ana="RP AP" lem="SU/">U(MA=S</w>
+<w id="EpJer.2..20" ana="D" lem="E)KEI=QEN">E)KEI=QEN</w>
+<w id="EpJer.2..21" ana="P" lem="META/">MET'</w>
+<w id="EpJer.2..22" ana="N1 GSF" lem="EI)RH/NH">EI)RH/NHS</w>
+<w id="EpJer.3..1" ana="D" lem="NUNI/">NUNI\</w>
+<w id="EpJer.3..2" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.3..3" ana="VF FMI2P" lem="O(RA/W">O)/YESQE</w>
+<w id="EpJer.3..4" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.3..5" ana="N3W DSF" lem="*BABULW/N">*BABULW=NI</w>
+<w id="EpJer.3..6" ana="N2 APM" lem="QEO/S">QEOU\S</w>
+<w id="EpJer.3..7" ana="A1C APM" lem="A)RGUROU=S">A)RGUROU=S</w>
+<w id="EpJer.3..8" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.3..9" ana="A1C APM" lem="XRUSOU=S">XRUSOU=S</w>
+<w id="EpJer.3..10" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.3..11" ana="A1 APM" lem="CU/LINOS">CULI/NOUS</w>
+<w id="EpJer.3..12" ana="P" lem="E)PI/">E)P'</w>
+<w id="EpJer.3..13" ana="N2 DPM" lem="W)=MOS">W)/MOIS</w>
+<w id="EpJer.3..14" ana="V1 PPPAPM" lem="AI)/RW">AI)ROME/NOUS</w>
+<w id="EpJer.3..15" ana="V5 PAPAPM" lem="DEIKNU/W">DEIKNU/NTAS</w>
+<w id="EpJer.3..16" ana="N2 ASM" lem="FO/BOS">FO/BON</w>
+<w id="EpJer.3..17" ana="RA DPN" lem="O(">TOI=S</w>
+<w id="EpJer.3..18" ana="N3E DPN" lem="E)/QNOS">E)/QNESIN</w>
+<w id="EpJer.4..1" ana="VC APD2P" lem="EU)LABE/OMAI">EU)LABH/QHTE</w>
+<w id="EpJer.4..2" ana="X" lem="OU)=N">OU)=N</w>
+<w id="EpJer.4..3" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.4..4" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.4..5" ana="RP NP" lem="SU/">U(MEI=S</w>
+<w id="EpJer.4..6" ana="VC APPNPM" lem="A)PO-O(MOIO/W">A)FOMOIWQE/NTES</w>
+<w id="EpJer.4..7" ana="RA DPM" lem="O(">TOI=S</w>
+<w id="EpJer.4..8" ana="A1B DPM" lem="A)LLO/FULOS">A)LLOFU/LOIS</w>
+<w id="EpJer.4..9" ana="VC APS2P" lem="A)PO-O(MOIO/W">A)FOMOIWQH=TE</w>
+<w id="EpJer.4..10" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.4..11" ana="N2 NSM" lem="FO/BOS">FO/BOS</w>
+<w id="EpJer.4..12" ana="RP AP" lem="SU/">U(MA=S</w>
+<w id="EpJer.4..13" ana="VB AAS3S" lem="LAMBA/NW">LA/BH|</w>
+<w id="EpJer.4..14" ana="P" lem="E)PI/">E)P'</w>
+<w id="EpJer.4..15" ana="RD DPM" lem="AU)TO/S">AU)TOI=S</w>
+<w id="EpJer.5..1" ana="VB AAPAPM" lem="O(RA/W">I)DO/NTAS</w>
+<w id="EpJer.5..2" ana="N2 ASM" lem="O)/XLOS">O)/XLON</w>
+<w id="EpJer.5..3" ana="P" lem="E)/MPROSQEN">E)/MPROSQEN</w>
+<w id="EpJer.5..4" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.5..5" ana="P" lem="O)/PISQEN">O)/PISQEN</w>
+<w id="EpJer.5..6" ana="RD GPN" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.5..7" ana="V2 PAPAPM" lem="PROS-KUNE/W">PROSKUNOU=NTAS</w>
+<w id="EpJer.5..8" ana="RD APN" lem="AU)TO/S">AU)TA/</w>
+<w id="EpJer.5..9" ana="VAI AAD2P" lem="EI)=PON">EI)/PATE</w>
+<w id="EpJer.5..10" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.5..11" ana="RA DSF" lem="O(">TH=|</w>
+<w id="EpJer.5..12" ana="N1A DSF" lem="DIA/NOIA">DIANOI/A|</w>
+<w id="EpJer.5..13" ana="RP DS" lem="SU/">SOI\</w>
+<w id="EpJer.5..14" ana="V2 PAI3S" lem="DE/W">DEI=</w>
+<w id="EpJer.5..15" ana="V2 PAN" lem="PROS-KUNE/W">PROSKUNEI=N</w>
+<w id="EpJer.5..16" ana="N1M VSM" lem="DESPO/THS">DE/SPOTA</w>
+<w id="EpJer.6..1" ana="RA NSM" lem="O(">O(</w>
+<w id="EpJer.6..2" ana="X" lem="GA/R">GA\R</w>
+<w id="EpJer.6..3" ana="N2 NSM" lem="A)/GGELOS">A)/GGELO/S</w>
+<w id="EpJer.6..4" ana="RP GS" lem="E)GW/">MOU</w>
+<w id="EpJer.6..5" ana="P" lem="META/">MEQ'</w>
+<w id="EpJer.6..6" ana="RP GP" lem="SU/">U(MW=N</w>
+<w id="EpJer.6..7" ana="V9 PAI3S" lem="EI)MI/">E)STIN</w>
+<w id="EpJer.6..8" ana="RD NSM" lem="AU)TO/S">AU)TO/S</w>
+<w id="EpJer.6..9" ana="X" lem="TE">TE</w>
+<w id="EpJer.6..10" ana="V2 PAPNSM" lem="E)K-ZHTE/W">E)KZHTW=N</w>
+<w id="EpJer.6..11" ana="RA APF" lem="O(">TA\S</w>
+<w id="EpJer.6..12" ana="N1 APF" lem="YUXH/">YUXA\S</w>
+<w id="EpJer.6..13" ana="RP GP" lem="SU/">U(MW=N</w>
+<w id="EpJer.7..1" ana="N1S NSF" lem="GLW=SSA">GLW=SSA</w>
+<w id="EpJer.7..2" ana="X" lem="GA/R">GA\R</w>
+<w id="EpJer.7..3" ana="RD GPN" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.7..4" ana="V9 PAI3S" lem="EI)MI/">E)STIN</w>
+<w id="EpJer.7..5" ana="VM XPPNSF" lem="KATA-CU/W">KATECUSME/NH</w>
+<w id="EpJer.7..6" ana="P" lem="U(PO/">U(PO\</w>
+<w id="EpJer.7..7" ana="N3N GSM" lem="TE/KTWN">TE/KTONOS</w>
+<w id="EpJer.7..8" ana="RD NPN" lem="AU)TO/S">AU)TA/</w>
+<w id="EpJer.7..9" ana="X" lem="TE">TE</w>
+<w id="EpJer.7..10" ana="A1B NPN" lem="PERI/XRUSOS">PERI/XRUSA</w>
+<w id="EpJer.7..11" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.7..12" ana="A1B NPN" lem="PERIA/RGUROS">PERIA/RGURA</w>
+<w id="EpJer.7..13" ana="A3H NPN" lem="YEUDH/S">YEUDH=</w>
+<w id="EpJer.7..14" ana="X" lem="DE/">D'</w>
+<w id="EpJer.7..15" ana="V9 PAI3S" lem="EI)MI/">E)STI\N</w>
+<w id="EpJer.7..16" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.7..17" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.7..18" ana="V6 PMI3P" lem="DU/NAMAI">DU/NANTAI</w>
+<w id="EpJer.7..19" ana="V2 PAN" lem="LALE/W">LALEI=N</w>
+<w id="EpJer.8..1" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.8..2" ana="D" lem="W(/SPER">W(/SPER</w>
+<w id="EpJer.8..3" ana="N2 DSF" lem="PARQE/NOS">PARQE/NW|</w>
+<w id="EpJer.8..4" ana="A1B DSF" lem="FILO/KOSMOS">FILOKO/SMW|</w>
+<w id="EpJer.8..5" ana="V1 PAPNPM" lem="LAMBA/NW">LAMBA/NONTES</w>
+<w id="EpJer.8..6" ana="N2N ASN" lem="XRUSI/ON">XRUSI/ON</w>
+<w id="EpJer.8..7" ana="V1 PAI3P" lem="KATA-SKEUA/ZW">KATASKEUA/ZOUSIN</w>
+<w id="EpJer.8..8" ana="N2 APM" lem="STE/FANOS">STEFA/NOUS</w>
+<w id="EpJer.8..9" ana="P" lem="E)PI/">E)PI\</w>
+<w id="EpJer.8..10" ana="RA APF" lem="O(">TA\S</w>
+<w id="EpJer.8..11" ana="N1 APF" lem="KEFALH/">KEFALA\S</w>
+<w id="EpJer.8..12" ana="RA GPM" lem="O(">TW=N</w>
+<w id="EpJer.8..13" ana="N2 GPM" lem="QEO/S">QEW=N</w>
+<w id="EpJer.8..14" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.9..1" ana="V9 PAI3S" lem="EI)MI/">E)/STI</w>
+<w id="EpJer.9..2" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.9..3" ana="D" lem="KAI/">KAI\</w>
+<w id="EpJer.9..4" ana="D" lem="O(/TE">O(/TE</w>
+<w id="EpJer.9..5" ana="V2 PMPNPM" lem="U(PO-AI(RE/W">U(FAIROU/MENOI</w>
+<w id="EpJer.9..6" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.9..7" ana="N3V NPM" lem="I(EREU/S">I(EREI=S</w>
+<w id="EpJer.9..8" ana="P" lem="A)PO/">A)PO\</w>
+<w id="EpJer.9..9" ana="RA GPM" lem="O(">TW=N</w>
+<w id="EpJer.9..10" ana="N2 GPM" lem="QEO/S">QEW=N</w>
+<w id="EpJer.9..11" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.9..12" ana="N2N ASN" lem="XRUSI/ON">XRUSI/ON</w>
+<w id="EpJer.9..13" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.9..14" ana="N2N ASN" lem="A)RGU/RION">A)RGU/RION</w>
+<w id="EpJer.9..15" ana="P" lem="EI)S">EI)S</w>
+<w id="EpJer.9..16" ana="RD APM" lem="E(AUTOU=">E(AUTOU\S</w>
+<w id="EpJer.9..17" ana="VF FAI3P" lem="KATA  A)NA-A(LI/SKW">KATANALW/SOUSIN</w>
+<w id="EpJer.9..18" ana="VF FAI3P" lem="DI/DWMI">DW/SOUSIN</w>
+<w id="EpJer.9..19" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.9..20" ana="P" lem="A)PO/">A)P'</w>
+<w id="EpJer.9..21" ana="RD GPN" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.9..22" ana="D" lem="KAI/">KAI\</w>
+<w id="EpJer.9..23" ana="RA DPF" lem="O(">TAI=S</w>
+<w id="EpJer.9..24" ana="P" lem="E)PI/">E)PI\</w>
+<w id="EpJer.9..25" ana="RA GSN" lem="O(">TOU=</w>
+<w id="EpJer.9..26" ana="N3E GSN" lem="TE/GOS">TE/GOUS</w>
+<w id="EpJer.9..27" ana="N1 DPF" lem="PO/RNH">PO/RNAIS</w>
+<w id="EpJer.10..1" ana="V2 PAI3P" lem="KOSME/W">KOSMOU=SI/</w>
+<w id="EpJer.10..2" ana="X" lem="TE">TE</w>
+<w id="EpJer.10..3" ana="RD APM" lem="AU)TO/S">AU)TOU\S</w>
+<w id="EpJer.10..4" ana="C" lem="W(S">W(S</w>
+<w id="EpJer.10..5" ana="N2 APM" lem="A)/NQRWPOS">A)NQRW/POUS</w>
+<w id="EpJer.10..6" ana="RA DPN" lem="O(">TOI=S</w>
+<w id="EpJer.10..7" ana="N3M DPN" lem="E)/NDUMA">E)NDU/MASIN</w>
+<w id="EpJer.10..8" ana="N2 APM" lem="QEO/S">QEOU\S</w>
+<w id="EpJer.10..9" ana="A1C APM" lem="A)RGUROU=S">A)RGUROU=S</w>
+<w id="EpJer.10..10" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.10..11" ana="A1C APM" lem="XRUSOU=S">XRUSOU=S</w>
+<w id="EpJer.10..12" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.10..13" ana="A1 APM" lem="CU/LINOS">CULI/NOUS</w>
+<w id="EpJer.10..14" ana="RD NPM" lem="OU(=TOS">OU(=TOI</w>
+<w id="EpJer.10..15" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.10..16" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.10..17" ana="V1 PMI3P" lem="DIA-SW/ZW">DIASW/|ZONTAI</w>
+<w id="EpJer.10..18" ana="P" lem="A)PO/">A)PO\</w>
+<w id="EpJer.10..19" ana="N2 GSM" lem="I)O/S">I)OU=</w>
+<w id="EpJer.10..20" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.10..21" ana="N3M GPN" lem="BRW=MA">BRWMA/TWN</w>
+<w id="EpJer.11..1" ana="VM XMPGPM" lem="PERI-BA/LLW">PERIBEBLHME/NWN</w>
+<w id="EpJer.11..2" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.11..3" ana="N2 ASM" lem="I(MATISMO/S">I(MATISMO\N</w>
+<w id="EpJer.11..4" ana="A1C ASM" lem="PORFUROU=S">PORFUROU=N</w>
+<w id="EpJer.11..5" ana="V1 PMI3P" lem="E)K-MA/SSW">E)KMA/SSONTAI</w>
+<w id="EpJer.11..6" ana="RA ASN" lem="O(">TO\</w>
+<w id="EpJer.11..7" ana="N2N ASN" lem="PRO/SWPON">PRO/SWPON</w>
+<w id="EpJer.11..8" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.11..9" ana="P" lem="DIA/">DIA\</w>
+<w id="EpJer.11..10" ana="RA ASM" lem="O(">TO\N</w>
+<w id="EpJer.11..11" ana="P" lem="E)K">E)K</w>
+<w id="EpJer.11..12" ana="RA GSF" lem="O(">TH=S</w>
+<w id="EpJer.11..13" ana="N1A GSF" lem="OI)KI/A">OI)KI/AS</w>
+<w id="EpJer.11..14" ana="N2 ASM" lem="KONIORTO/S">KONIORTO/N</w>
+<w id="EpJer.11..15" ana="RR NSM" lem="O(/S">O(/S</w>
+<w id="EpJer.11..16" ana="V9 PAI3S" lem="EI)MI/">E)STIN</w>
+<w id="EpJer.11..17" ana="A3C NSM" lem="POLU/S">PLEI/WN</w>
+<w id="EpJer.11..18" ana="P" lem="E)PI/">E)P'</w>
+<w id="EpJer.11..19" ana="RD DPM" lem="AU)TO/S">AU)TOI=S</w>
+<w id="EpJer.12..1" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.12..2" ana="N2N ASN" lem="SKH=PTRON">SKH=PTRON</w>
+<w id="EpJer.12..3" ana="V1 PAI3S" lem="E)/XW">E)/XEI</w>
+<w id="EpJer.12..4" ana="C" lem="W(S">W(S</w>
+<w id="EpJer.12..5" ana="N2 NSM" lem="A)/NQRWPOS">A)/NQRWPOS</w>
+<w id="EpJer.12..6" ana="N1M NSM" lem="KRITH/S">KRITH\S</w>
+<w id="EpJer.12..7" ana="N1A GSF" lem="XW/RA">XW/RAS</w>
+<w id="EpJer.12..8" ana="RR NSM" lem="O(/S">O(\S</w>
+<w id="EpJer.12..9" ana="RA ASM" lem="O(">TO\N</w>
+<w id="EpJer.12..10" ana="P" lem="EI)S">EI)S</w>
+<w id="EpJer.12..11" ana="RD ASM" lem="AU)TO/S">AU)TO\N</w>
+<w id="EpJer.12..12" ana="V1 PAPASM" lem="A(MARTA/NW">A(MARTA/NONTA</w>
+<w id="EpJer.12..13" ana="D" lem="OU)">OU)K</w>
+<w id="EpJer.12..14" ana="VF2 FAI3S" lem="A)NA-AI(RE/W">A)NELEI=</w>
+<w id="EpJer.13..1" ana="V1 PAI3S" lem="E)/XW">E)/XEI</w>
+<w id="EpJer.13..2" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.13..3" ana="N2N ASN" lem="E)GXEIRI/DION">E)GXEIRI/DION</w>
+<w id="EpJer.13..4" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.13..5" ana="A1A DSF" lem="DECIO/S">DECIA=|</w>
+<w id="EpJer.13..6" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.13..7" ana="N3 ASM" lem="PE/LEKUS">PE/LEKUN</w>
+<w id="EpJer.13..8" ana="RD ASM" lem="E(AUTOU=">E(AUTO\N</w>
+<w id="EpJer.13..9" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.13..10" ana="P" lem="E)K">E)K</w>
+<w id="EpJer.13..11" ana="N2 GSM" lem="PO/LEMOS">POLE/MOU</w>
+<w id="EpJer.13..12" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.13..13" ana="N1M GPM" lem="LH|STH/S">LH|STW=N</w>
+<w id="EpJer.13..14" ana="D" lem="OU)">OU)K</w>
+<w id="EpJer.13..15" ana="VF2 FMI3S" lem="E)K-AI(RE/W">E)CELEI=TAI</w>
+<w id="EpJer.14..1" ana="D" lem="O(/QEN">O(/QEN</w>
+<w id="EpJer.14..2" ana="A1B NPM" lem="GNW/RIMOS">GNW/RIMOI/</w>
+<w id="EpJer.14..3" ana="V9 PAI3P" lem="EI)MI/">EI)SIN</w>
+<w id="EpJer.14..4" ana="D" lem="OU)">OU)K</w>
+<w id="EpJer.14..5" ana="V9 PAPNPM" lem="EI)MI/">O)/NTES</w>
+<w id="EpJer.14..6" ana="N2 NPM" lem="QEO/S">QEOI/</w>
+<w id="EpJer.14..7" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.14..8" ana="X" lem="OU)=N">OU)=N</w>
+<w id="EpJer.14..9" ana="VC APS2P" lem="FOBE/W">FOBHQH=TE</w>
+<w id="EpJer.14..10" ana="RD APM" lem="AU)TO/S">AU)TOU/S</w>
+<w id="EpJer.15..1" ana="D" lem="W(/SPER">W(/SPER</w>
+<w id="EpJer.15..2" ana="X" lem="GA/R">GA\R</w>
+<w id="EpJer.15..3" ana="N3E NSN" lem="SKEU=OS">SKEU=OS</w>
+<w id="EpJer.15..4" ana="N2 GSM" lem="A)/NQRWPOS">A)NQRW/POU</w>
+<w id="EpJer.15..5" ana="VD APPNSN" lem="SUN-TRI/BW">SUNTRIBE\N</w>
+<w id="EpJer.15..6" ana="A1B NSN" lem="A)XREI=OS">A)XREI=ON</w>
+<w id="EpJer.15..7" ana="V1 PMI3S" lem="GI/GNOMAI">GI/NETAI</w>
+<w id="EpJer.15..8" ana="A1 NPM" lem="TOIOU=TOS">TOIOU=TOI</w>
+<w id="EpJer.15..9" ana="V1 PAI3P" lem="U(PO-A)/RXW">U(PA/RXOUSIN</w>
+<w id="EpJer.15..10" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.15..11" ana="N2 NPM" lem="QEO/S">QEOI\</w>
+<w id="EpJer.15..12" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.15..13" ana="VM XMPGPM" lem="KATA-I(DRU/W">KAQIDRUME/NWN</w>
+<w id="EpJer.15..14" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.15..15" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.15..16" ana="RA DPM" lem="O(">TOI=S</w>
+<w id="EpJer.15..17" ana="N2 DPM" lem="OI)=KOS">OI)/KOIS</w>
+<w id="EpJer.16..1" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.16..2" ana="N2 NPM" lem="O)FQALMO/S">O)FQALMOI\</w>
+<w id="EpJer.16..3" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.16..4" ana="A3H NPM" lem="PLH/RHS">PLH/REIS</w>
+<w id="EpJer.16..5" ana="V9 PAI3P" lem="EI)MI/">EI)SI\N</w>
+<w id="EpJer.16..6" ana="N2 GSM" lem="KONIORTO/S">KONIORTOU=</w>
+<w id="EpJer.16..7" ana="P" lem="A)PO/">A)PO\</w>
+<w id="EpJer.16..8" ana="RA GPM" lem="O(">TW=N</w>
+<w id="EpJer.16..9" ana="N3D GPM" lem="POU/S">PODW=N</w>
+<w id="EpJer.16..10" ana="RA GPM" lem="O(">TW=N</w>
+<w id="EpJer.16..11" ana="V1 PMPGPM" lem="EI)S-POREU/OMAI">EI)SPOREUOME/NWN</w>
+<w id="EpJer.17..1" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.17..2" ana="D" lem="W(/SPER">W(/SPER</w>
+<w id="EpJer.17..3" ana="RI DSM" lem="TIS">TINI\</w>
+<w id="EpJer.17..4" ana="VX XAPDSM" lem="A)DIKE/W">H)DIKHKO/TI</w>
+<w id="EpJer.17..5" ana="N3V ASM" lem="BASILEU/S">BASILE/A</w>
+<w id="EpJer.17..6" ana="VK XMPNPF" lem="PERI-FRA/SSW">PERIPEFRAGME/NAI</w>
+<w id="EpJer.17..7" ana="V9 PAI3P" lem="EI)MI/">EI)SI\N</w>
+<w id="EpJer.17..8" ana="RA NPF" lem="O(">AI(</w>
+<w id="EpJer.17..9" ana="N1 NPF" lem="AU)LH/">AU)LAI\</w>
+<w id="EpJer.17..10" ana="C" lem="W(S">W(S</w>
+<w id="EpJer.17..11" ana="P" lem="E)PI/">E)PI\</w>
+<w id="EpJer.17..12" ana="N2 DSM" lem="QA/NATOS">QANA/TW|</w>
+<w id="EpJer.17..13" ana="VK XMPDSM" lem="A)PO-A)/GW">A)PHGME/NW|</w>
+<w id="EpJer.17..14" ana="RA APM" lem="O(">TOU\S</w>
+<w id="EpJer.17..15" ana="N2 APM" lem="OI)=KOS">OI)/KOUS</w>
+<w id="EpJer.17..16" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.17..17" ana="V4 PAI3P" lem="O)XURO/W">O)XUROU=SIN</w>
+<w id="EpJer.17..18" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.17..19" ana="N3V NPM" lem="I(EREU/S">I(EREI=S</w>
+<w id="EpJer.17..20" ana="N3M DPN" lem="QU/RWMA">QURW/MASI/N</w>
+<w id="EpJer.17..21" ana="X" lem="TE">TE</w>
+<w id="EpJer.17..22" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.17..23" ana="N2N DPN" lem="KLEI=QRON">KLEI/QROIS</w>
+<w id="EpJer.17..24" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.17..25" ana="N2 DPM" lem="MOXLO/S">MOXLOI=S</w>
+<w id="EpJer.17..26" ana="C" lem="O(/PWS">O(/PWS</w>
+<w id="EpJer.17..27" ana="P" lem="U(PO/">U(PO\</w>
+<w id="EpJer.17..28" ana="RA GPM" lem="O(">TW=N</w>
+<w id="EpJer.17..29" ana="N1M GPM" lem="LH|STH/S">LH|STW=N</w>
+<w id="EpJer.17..30" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.17..31" ana="VC APS3P" lem="SULA/W">SULHQW=SI</w>
+<w id="EpJer.18..1" ana="N2 APM" lem="LU/XNOS">LU/XNOUS</w>
+<w id="EpJer.18..2" ana="V1 PAI3P" lem="KAI/W">KAI/OUSIN</w>
+<w id="EpJer.18..3" ana="D" lem="KAI/">KAI\</w>
+<w id="EpJer.18..4" ana="A3C APM" lem="POLU/S">PLEI/OUS</w>
+<w id="EpJer.18..5" ana="C" lem="H)/">H)\</w>
+<w id="EpJer.18..6" ana="RD DPM" lem="E(AUTOU=">E(AUTOI=S</w>
+<w id="EpJer.18..7" ana="RR GPM" lem="O(/S">W(=N</w>
+<w id="EpJer.18..8" ana="A3 ASM" lem="OU)DEI/S">OU)DE/NA</w>
+<w id="EpJer.18..9" ana="V6 PMI3P" lem="DU/NAMAI">DU/NANTAI</w>
+<w id="EpJer.18..10" ana="VB AAN" lem="O(RA/W">I)DEI=N</w>
+<w id="EpJer.19..1" ana="V9 PAI3S" lem="EI)MI/">E)/STIN</w>
+<w id="EpJer.19..2" ana="X" lem="ME/N">ME\N</w>
+<w id="EpJer.19..3" ana="D" lem="W(/SPER">W(/SPER</w>
+<w id="EpJer.19..4" ana="N2 NSF" lem="DOKO/S">DOKO\S</w>
+<w id="EpJer.19..5" ana="RA GPF" lem="O(">TW=N</w>
+<w id="EpJer.19..6" ana="P" lem="E)K">E)K</w>
+<w id="EpJer.19..7" ana="RA GSF" lem="O(">TH=S</w>
+<w id="EpJer.19..8" ana="N1A GSF" lem="OI)KI/A">OI)KI/AS</w>
+<w id="EpJer.19..9" ana="RA APF" lem="O(">TA\S</w>
+<w id="EpJer.19..10" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.19..11" ana="N1A APF" lem="KARDI/A">KARDI/AS</w>
+<w id="EpJer.19..12" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.19..13" ana="V6 PAI3P" lem="FHMI/">FASIN</w>
+<w id="EpJer.19..14" ana="V1 PPN" lem="E)K-LEI/XW">E)KLEI/XESQAI</w>
+<w id="EpJer.19..15" ana="RA GPN" lem="O(">TW=N</w>
+<w id="EpJer.19..16" ana="P" lem="A)PO/">A)PO\</w>
+<w id="EpJer.19..17" ana="RA GSF" lem="O(">TH=S</w>
+<w id="EpJer.19..18" ana="N1 GSF" lem="GH=">GH=S</w>
+<w id="EpJer.19..19" ana="N2N GPN" lem="E(RPETO/N">E(RPETW=N</w>
+<w id="EpJer.19..20" ana="V1 PAPGPN" lem="KATA-E)SQI/W">KATESQO/NTWN</w>
+<w id="EpJer.19..21" ana="RD APM" lem="AU)TO/S">AU)TOU/S</w>
+<w id="EpJer.19..22" ana="X" lem="TE">TE</w>
+<w id="EpJer.19..23" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.19..24" ana="RA ASM" lem="O(">TO\N</w>
+<w id="EpJer.19..25" ana="N2 ASM" lem="I(MATISMO/S">I(MATISMO\N</w>
+<w id="EpJer.19..26" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.19..27" ana="D" lem="OU)">OU)K</w>
+<w id="EpJer.19..28" ana="V1 PMI3P" lem="AI)SQA/NOMAI">AI)SQA/NONTAI</w>
+<w id="EpJer.20..1" ana="VM XMPNPM" lem="MELANO/OMAI">MEMELANWME/NOI</w>
+<w id="EpJer.20..2" ana="RA ASN" lem="O(">TO\</w>
+<w id="EpJer.20..3" ana="N2N ASN" lem="PRO/SWPON">PRO/SWPON</w>
+<w id="EpJer.20..4" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.20..5" ana="P" lem="A)PO/">A)PO\</w>
+<w id="EpJer.20..6" ana="RA GSM" lem="O(">TOU=</w>
+<w id="EpJer.20..7" ana="N2 GSM" lem="KAPNO/S">KAPNOU=</w>
+<w id="EpJer.20..8" ana="RA GSM" lem="O(">TOU=</w>
+<w id="EpJer.20..9" ana="P" lem="E)K">E)K</w>
+<w id="EpJer.20..10" ana="RA GSF" lem="O(">TH=S</w>
+<w id="EpJer.20..11" ana="N1A GSF" lem="OI)KI/A">OI)KI/AS</w>
+<w id="EpJer.21..1" ana="P" lem="E)PI/">E)PI\</w>
+<w id="EpJer.21..2" ana="RA ASN" lem="O(">TO\</w>
+<w id="EpJer.21..3" ana="N3M ASN" lem="SW=MA">SW=MA</w>
+<w id="EpJer.21..4" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.21..5" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.21..6" ana="P" lem="E)PI/">E)PI\</w>
+<w id="EpJer.21..7" ana="RA ASF" lem="O(">TH\N</w>
+<w id="EpJer.21..8" ana="N1 ASF" lem="KEFALH/">KEFALH\N</w>
+<w id="EpJer.21..9" ana="V6 PMI3P" lem="E)PI-I(/PTAMAI">E)FI/PTANTAI</w>
+<w id="EpJer.21..10" ana="N3D NPF" lem="NUKTERI/S">NUKTERI/DES</w>
+<w id="EpJer.21..11" ana="N3N NPF" lem="XELIDW/N">XELIDO/NES</w>
+<w id="EpJer.21..12" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.21..13" ana="RA NPN" lem="O(">TA\</w>
+<w id="EpJer.21..14" ana="N2N NPN" lem="O)/RNEON">O)/RNEA</w>
+<w id="EpJer.21..15" ana="D" lem="W(SAU/TWS">W(SAU/TWS</w>
+<w id="EpJer.21..16" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.21..17" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.21..18" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.21..19" ana="N2 NPM" lem="AI)/LOUROS">AI)/LOUROI</w>
+<w id="EpJer.22..1" ana="D" lem="O(/QEN">O(/QEN</w>
+<w id="EpJer.22..2" ana="VF FMI2P" lem="GIGNW/SKW">GNW/SESQE</w>
+<w id="EpJer.22..3" ana="C" lem="O(/TI">O(/TI</w>
+<w id="EpJer.22..4" ana="D" lem="OU)">OU)/K</w>
+<w id="EpJer.22..5" ana="V9 PAI3P" lem="EI)MI/">EI)SIN</w>
+<w id="EpJer.22..6" ana="N2 NPM" lem="QEO/S">QEOI/</w>
+<w id="EpJer.22..7" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.22..8" ana="X" lem="OU)=N">OU)=N</w>
+<w id="EpJer.22..9" ana="V2 PMD2P" lem="FOBE/W">FOBEI=SQE</w>
+<w id="EpJer.22..10" ana="RD APN" lem="AU)TO/S">AU)TA/</w>
+<w id="EpJer.23..1" ana="RA ASN" lem="O(">TO\</w>
+<w id="EpJer.23..2" ana="X" lem="GA/R">GA\R</w>
+<w id="EpJer.23..3" ana="N2N ASN" lem="XRUSI/ON">XRUSI/ON</w>
+<w id="EpJer.23..4" ana="RR ASN" lem="O(/S">O(\</w>
+<w id="EpJer.23..5" ana="V5 PMI3P" lem="PERI-KEI=MAI">PERI/KEINTAI</w>
+<w id="EpJer.23..6" ana="P" lem="EI)S">EI)S</w>
+<w id="EpJer.23..7" ana="N3E ASN" lem="KA/LLOS">KA/LLOS</w>
+<w id="EpJer.23..8" ana="C" lem="E)A/N">E)A\N</w>
+<w id="EpJer.23..9" ana="D" lem="MH/">MH/</w>
+<w id="EpJer.23..10" ana="RI NSM" lem="TIS">TIS</w>
+<w id="EpJer.23..11" ana="VA AAS3S" lem="E)K-MA/SSW">E)KMA/CH|</w>
+<w id="EpJer.23..12" ana="RA ASM" lem="O(">TO\N</w>
+<w id="EpJer.23..13" ana="N2 ASM" lem="I)O/S">I)O/N</w>
+<w id="EpJer.23..14" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.23..15" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.23..16" ana="VA AAS3P" lem="STI/LBW">STI/LYWSIN</w>
+<w id="EpJer.23..17" ana="C" lem="OU)DE/">OU)DE\</w>
+<w id="EpJer.23..18" ana="X" lem="GA/R">GA/R</w>
+<w id="EpJer.23..19" ana="D" lem="O(/TE">O(/TE</w>
+<w id="EpJer.23..20" ana="V1I IPI3P" lem="XWNEU/W">E)XWNEU/ONTO</w>
+<w id="EpJer.23..21" ana="V1I IMI3P" lem="AI)SQA/NOMAI">H)|SQA/NONTO</w>
+<w id="EpJer.24..1" ana="P" lem="E)K">E)K</w>
+<w id="EpJer.24..2" ana="A1S GSF" lem="PA=S">PA/SHS</w>
+<w id="EpJer.24..3" ana="N1 GSF" lem="TIMH/">TIMH=S</w>
+<w id="EpJer.24..4" ana="VT XPPNPN" lem="A)GORA/ZW">H)GORASME/NA</w>
+<w id="EpJer.24..5" ana="V9 PAI3S" lem="EI)MI/">E)STI/N</w>
+<w id="EpJer.24..6" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.24..7" ana="RR DPN" lem="O(/S">OI(=S</w>
+<w id="EpJer.24..8" ana="D" lem="OU)">OU)K</w>
+<w id="EpJer.24..9" ana="V9 PAI3S" lem="EI)MI/">E)/STIN</w>
+<w id="EpJer.24..10" ana="N3M NSN" lem="PNEU=MA">PNEU=MA</w>
+<w id="EpJer.25..1" ana="P" lem="A)/NEU">A)/NEU</w>
+<w id="EpJer.25..2" ana="N3D GPM" lem="POU/S">PODW=N</w>
+<w id="EpJer.25..3" ana="P" lem="E)PI/">E)P'</w>
+<w id="EpJer.25..4" ana="N2 DPM" lem="W)=MOS">W)/MOIS</w>
+<w id="EpJer.25..5" ana="V1 PPI3P" lem="FE/RW">FE/RONTAI</w>
+<w id="EpJer.25..6" ana="V5 PMPNPM" lem="E)N-DEIKNU/W">E)NDEIKNU/MENOI</w>
+<w id="EpJer.25..7" ana="RA ASF" lem="O(">TH\N</w>
+<w id="EpJer.25..8" ana="RD GPM" lem="E(AUTOU=">E(AUTW=N</w>
+<w id="EpJer.25..9" ana="N1A ASF" lem="A)TIMI/A">A)TIMI/AN</w>
+<w id="EpJer.25..10" ana="RA DPM" lem="O(">TOI=S</w>
+<w id="EpJer.25..11" ana="N2 DPM" lem="A)/NQRWPOS">A)NQRW/POIS</w>
+<w id="EpJer.25..12" ana="V1 PMI3P" lem="AI)SXU/NW">AI)SXU/NONTAI/</w>
+<w id="EpJer.25..13" ana="X" lem="TE">TE</w>
+<w id="EpJer.25..14" ana="D" lem="KAI/">KAI\</w>
+<w id="EpJer.25..15" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.25..16" ana="V1 PAPNPM" lem="QERAPEU/W">QERAPEU/ONTES</w>
+<w id="EpJer.25..17" ana="RD APN" lem="AU)TO/S">AU)TA\</w>
+<w id="EpJer.25..18" ana="P" lem="DIA/">DIA\</w>
+<w id="EpJer.25..19" ana="RA ASN" lem="O(">TO/</w>
+<w id="EpJer.25..20" ana="D" lem="MH/POTE">MH/POTE</w>
+<w id="EpJer.25..21" ana="P" lem="E)PI/">E)PI\</w>
+<w id="EpJer.25..22" ana="RA ASF" lem="O(">TH\N</w>
+<w id="EpJer.25..23" ana="N1 ASF" lem="GH=">GH=N</w>
+<w id="EpJer.25..24" ana="VA AAS3S" lem="PI/PTW">PE/SH|</w>
+<w id="EpJer.25..25" ana="P" lem="DIA/">DI'</w>
+<w id="EpJer.25..26" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.25..27" ana="V6 PMN" lem="A)NA-I(/STHMI">A)NI/STASQAI</w>
+<w id="EpJer.26..1" ana="C" lem="MH/TE">MH/TE</w>
+<w id="EpJer.26..2" ana="C" lem="E)A/N">E)A/N</w>
+<w id="EpJer.26..3" ana="RI NSM" lem="TIS">TIS</w>
+<w id="EpJer.26..4" ana="RD ASN" lem="AU)TO/S">AU)TO\</w>
+<w id="EpJer.26..5" ana="A1 ASN" lem="O)RQO/S">O)RQO\N</w>
+<w id="EpJer.26..6" ana="VA AAS3S" lem="I(/STHMI">STH/SH|</w>
+<w id="EpJer.26..7" ana="P" lem="DIA/">DI'</w>
+<w id="EpJer.26..8" ana="RD GSN" lem="E(AUTOU=">E(AUTOU=</w>
+<w id="EpJer.26..9" ana="VC FPI3S" lem="KINE/W">KINHQH/SETAI</w>
+<w id="EpJer.26..10" ana="C" lem="MH/TE">MH/TE</w>
+<w id="EpJer.26..11" ana="C" lem="E)A/N">E)A\N</w>
+<w id="EpJer.26..12" ana="VC APS3S" lem="KLI/NW">KLIQH=|</w>
+<w id="EpJer.26..13" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.26..14" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.26..15" ana="VC APS3S" lem="O)RQO/W">O)RQWQH=|</w>
+<w id="EpJer.26..16" ana="C" lem="A)LLA/">A)LL'</w>
+<w id="EpJer.26..17" ana="D" lem="W(/SPER">W(/SPER</w>
+<w id="EpJer.26..18" ana="N2 DPM" lem="NEKRO/S">NEKROI=S</w>
+<w id="EpJer.26..19" ana="RA NPN" lem="O(">TA\</w>
+<w id="EpJer.26..20" ana="N2N NPN" lem="DW=RON">DW=RA</w>
+<w id="EpJer.26..21" ana="RD DPN" lem="AU)TO/S">AU)TOI=S</w>
+<w id="EpJer.26..22" ana="V7 PPI3S" lem="PARA-TI/QHMI">PARATI/QETAI</w>
+<w id="EpJer.27..1" ana="RA APF" lem="O(">TA\S</w>
+<w id="EpJer.27..2" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.27..3" ana="N1A APF" lem="QUSI/A">QUSI/AS</w>
+<w id="EpJer.27..4" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.27..5" ana="VO AMPNPM" lem="A)PO-DI/DWMI">A)PODO/MENOI</w>
+<w id="EpJer.27..6" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.27..7" ana="N3V NPM" lem="I(EREU/S">I(EREI=S</w>
+<w id="EpJer.27..8" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.27..9" ana="V3 PMI3P" lem="KATA-XRA/OMAI">KATAXRW=NTAI</w>
+<w id="EpJer.27..10" ana="D" lem="W(SAU/TWS">W(SAU/TWS</w>
+<w id="EpJer.27..11" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.27..12" ana="D" lem="KAI/">KAI\</w>
+<w id="EpJer.27..13" ana="RA NPF" lem="O(">AI(</w>
+<w id="EpJer.27..14" ana="N3K NPF" lem="GUNH/">GUNAI=KES</w>
+<w id="EpJer.27..15" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.27..16" ana="P" lem="A)PO/">A)P'</w>
+<w id="EpJer.27..17" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.27..18" ana="V1 PAPNPF" lem="TARIXEU/W">TARIXEU/OUSAI</w>
+<w id="EpJer.27..19" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.27..20" ana="N2 DSM" lem="PTWXO/S">PTWXW=|</w>
+<w id="EpJer.27..21" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.27..22" ana="A1B DSM" lem="A)DU/NATOS">A)DUNA/TW|</w>
+<w id="EpJer.27..23" ana="V8 PAI3P" lem="META-DI/DWMI">METADIDO/ASIN</w>
+<w id="EpJer.27..24" ana="RA GPF" lem="O(">TW=N</w>
+<w id="EpJer.27..25" ana="N1A GPF" lem="QUSI/A">QUSIW=N</w>
+<w id="EpJer.27..26" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.27..27" ana="V5 PMPNSF" lem="A)PO  KATA-H(=MAI">A)POKAQHME/NH</w>
+<w id="EpJer.27..28" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.27..29" ana="N3 DSF" lem="LEXW/S">LEXW\</w>
+<w id="EpJer.27..30" ana="V1 PMI3P" lem="A(/PTOMAI">A(/PTONTAI</w>
+<w id="EpJer.28..1" ana="VZ AAPNPM" lem="GIGNW/SKW">GNO/NTES</w>
+<w id="EpJer.28..2" ana="X" lem="OU)=N">OU)=N</w>
+<w id="EpJer.28..3" ana="P" lem="A)PO/">A)PO\</w>
+<w id="EpJer.28..4" ana="RD GPN" lem="OU(=TOS">TOU/TWN</w>
+<w id="EpJer.28..5" ana="C" lem="O(/TI">O(/TI</w>
+<w id="EpJer.28..6" ana="D" lem="OU)">OU)/K</w>
+<w id="EpJer.28..7" ana="V9 PAI3P" lem="EI)MI/">EI)SIN</w>
+<w id="EpJer.28..8" ana="N2 NPM" lem="QEO/S">QEOI/</w>
+<w id="EpJer.28..9" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.28..10" ana="VC APS2P" lem="FOBE/W">FOBHQH=TE</w>
+<w id="EpJer.28..11" ana="RD APM" lem="AU)TO/S">AU)TOU/S</w>
+<w id="EpJer.29..1" ana="D" lem="PO/QEN">PO/QEN</w>
+<w id="EpJer.29..2" ana="X" lem="GA/R">GA\R</w>
+<w id="EpJer.29..3" ana="VC APO3P" lem="KALE/W">KLHQEI/HSAN</w>
+<w id="EpJer.29..4" ana="N2 NPM" lem="QEO/S">QEOI/</w>
+<w id="EpJer.29..5" ana="C" lem="O(/TI">O(/TI</w>
+<w id="EpJer.29..6" ana="N3K NPF" lem="GUNH/">GUNAI=KES</w>
+<w id="EpJer.29..7" ana="V7 PAI3P" lem="PARA-TI/QHMI">PARATIQE/ASIN</w>
+<w id="EpJer.29..8" ana="N2 DPM" lem="QEO/S">QEOI=S</w>
+<w id="EpJer.29..9" ana="A1C DPM" lem="A)RGUROU=S">A)RGUROI=S</w>
+<w id="EpJer.29..10" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.29..11" ana="A1C DPM" lem="XRUSOU=S">XRUSOI=S</w>
+<w id="EpJer.29..12" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.29..13" ana="A1 DPM" lem="CU/LINOS">CULI/NOIS</w>
+<w id="EpJer.30..1" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.30..2" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.30..3" ana="RA DPM" lem="O(">TOI=S</w>
+<w id="EpJer.30..4" ana="N2 DPM" lem="OI)=KOS">OI)/KOIS</w>
+<w id="EpJer.30..5" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.30..6" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.30..7" ana="N3V NPM" lem="I(EREU/S">I(EREI=S</w>
+<w id="EpJer.30..8" ana="V1 PAI3P" lem="DIFREU/W">DIFREU/OUSIN</w>
+<w id="EpJer.30..9" ana="V1 PAPNPM" lem="E)/XW">E)/XONTES</w>
+<w id="EpJer.30..10" ana="RA APM" lem="O(">TOU\S</w>
+<w id="EpJer.30..11" ana="N3W APM" lem="XITW/N">XITW=NAS</w>
+<w id="EpJer.30..12" ana="VXI XAPAPM" lem="DIA-R(H/GNUMI">DIERRWGO/TAS</w>
+<w id="EpJer.30..13" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.30..14" ana="RA APF" lem="O(">TA\S</w>
+<w id="EpJer.30..15" ana="N1 APF" lem="KEFALH/">KEFALA\S</w>
+<w id="EpJer.30..16" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.30..17" ana="RA APM" lem="O(">TOU\S</w>
+<w id="EpJer.30..18" ana="N3W APM" lem="PW/GWN">PW/GWNAS</w>
+<w id="EpJer.30..19" ana="VM XPPAPM" lem="CURA/W">E)CURHME/NOUS</w>
+<w id="EpJer.30..20" ana="RR GPM" lem="O(/S">W(=N</w>
+<w id="EpJer.30..21" ana="RA NPF" lem="O(">AI(</w>
+<w id="EpJer.30..22" ana="N1 NPF" lem="KEFALH/">KEFALAI\</w>
+<w id="EpJer.30..23" ana="A1B NPF" lem="A)KA/LUPTOS">A)KA/LUPTOI/</w>
+<w id="EpJer.30..24" ana="V9 PAI3P" lem="EI)MI/">EI)SIN</w>
+<w id="EpJer.31..1" ana="V1 PMI3P" lem="W)RU/OMAI">W)RU/ONTAI</w>
+<w id="EpJer.31..2" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.31..3" ana="V3 PAPNPM" lem="BOA/W">BOW=NTES</w>
+<w id="EpJer.31..4" ana="P" lem="E)NANTI/ON">E)NANTI/ON</w>
+<w id="EpJer.31..5" ana="RA GPM" lem="O(">TW=N</w>
+<w id="EpJer.31..6" ana="N2 GPM" lem="QEO/S">QEW=N</w>
+<w id="EpJer.31..7" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.31..8" ana="D" lem="W(/SPER">W(/SPER</w>
+<w id="EpJer.31..9" ana="RI NPM" lem="TIS">TINE\S</w>
+<w id="EpJer.31..10" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.31..11" ana="N2N DSN" lem="PERI/DEIPNON">PERIDEI/PNW|</w>
+<w id="EpJer.31..12" ana="N2 GSM" lem="NEKRO/S">NEKROU=</w>
+<w id="EpJer.32..1" ana="P" lem="A)PO/">A)PO\</w>
+<w id="EpJer.32..2" ana="RA GSM" lem="O(">TOU=</w>
+<w id="EpJer.32..3" ana="N2 GSM" lem="I(MATISMO/S">I(MATISMOU=</w>
+<w id="EpJer.32..4" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.32..5" ana="VB AMPNPM" lem="A)PO-AI(RE/W">A)FELO/MENOI</w>
+<w id="EpJer.32..6" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.32..7" ana="N3V NPM" lem="I(EREU/S">I(EREI=S</w>
+<w id="EpJer.32..8" ana="V1 PAI3P" lem="E)N-DU/W">E)NDU/OUSIN</w>
+<w id="EpJer.32..9" ana="RA APF" lem="O(">TA\S</w>
+<w id="EpJer.32..10" ana="N3K APF" lem="GUNH/">GUNAI=KAS</w>
+<w id="EpJer.32..11" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.32..12" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.32..13" ana="RA APN" lem="O(">TA\</w>
+<w id="EpJer.32..14" ana="N2N APN" lem="PAIDI/ON">PAIDI/A</w>
+<w id="EpJer.33..1" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.33..2" ana="C" lem="E)A/N">E)A\N</w>
+<w id="EpJer.33..3" ana="A1 ASN" lem="KAKO/S">KAKO\N</w>
+<w id="EpJer.33..4" ana="VB AAS3P" lem="PA/SXW">PA/QWSIN</w>
+<w id="EpJer.33..5" ana="P" lem="U(PO/">U(PO/</w>
+<w id="EpJer.33..6" ana="RI GSM" lem="TIS">TINOS</w>
+<w id="EpJer.33..7" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.33..8" ana="C" lem="E)A/N">E)A\N</w>
+<w id="EpJer.33..9" ana="A1 ASN" lem="A)GAQO/S">A)GAQO/N</w>
+<w id="EpJer.33..10" ana="VF FMI3P" lem="DU/NAMAI">DUNH/SONTAI</w>
+<w id="EpJer.33..11" ana="VO AAN" lem="A)NTI A)PO-DI/DWMI">A)NTAPODOU=NAI</w>
+<w id="EpJer.33..12" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.33..13" ana="VA AAN" lem="KATA-I(/STHMI">KATASTH=SAI</w>
+<w id="EpJer.33..14" ana="N3V ASM" lem="BASILEU/S">BASILE/A</w>
+<w id="EpJer.33..15" ana="V6 PMI3P" lem="DU/NAMAI">DU/NANTAI</w>
+<w id="EpJer.33..16" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.33..17" ana="VB AMN" lem="A)PO-AI(RE/W">A)FELE/SQAI</w>
+<w id="EpJer.34..1" ana="D" lem="W(SAU/TWS">W(SAU/TWS</w>
+<w id="EpJer.34..2" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.34..3" ana="N2 ASM" lem="PLOU=TOS">PLOU=TON</w>
+<w id="EpJer.34..4" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.34..5" ana="N2 ASM" lem="XALKO/S">XALKO\N</w>
+<w id="EpJer.34..6" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.34..7" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.34..8" ana="V6 PMS3P" lem="DU/NAMAI">DU/NWNTAI</w>
+<w id="EpJer.34..9" ana="V8 PAN" lem="DI/DWMI">DIDO/NAI</w>
+<w id="EpJer.34..10" ana="C" lem="E)A/N">E)A/N</w>
+<w id="EpJer.34..11" ana="RI NSM" lem="TIS">TIS</w>
+<w id="EpJer.34..12" ana="RD DPM" lem="AU)TO/S">AU)TOI=S</w>
+<w id="EpJer.34..13" ana="N1 ASF" lem="EU)XH/">EU)XH\N</w>
+<w id="EpJer.34..14" ana="VA AMPNSM" lem="EU)/XOMAI">EU)CA/MENOS</w>
+<w id="EpJer.34..15" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.34..16" ana="VO AAS3S" lem="A)PO-DI/DWMI">A)PODW=|</w>
+<w id="EpJer.34..17" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.34..18" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.34..19" ana="VA AAS3P" lem="E)PI-ZHTE/W">E)PIZHTH/SWSIN</w>
+<w id="EpJer.35..1" ana="P" lem="E)K">E)K</w>
+<w id="EpJer.35..2" ana="N2 GSM" lem="QA/NATOS">QANA/TOU</w>
+<w id="EpJer.35..3" ana="N2 ASM" lem="A)/NQRWPOS">A)/NQRWPON</w>
+<w id="EpJer.35..4" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.35..5" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.35..6" ana="VA AMS3P" lem="R(U/OMAI">R(U/SWNTAI</w>
+<w id="EpJer.35..7" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.35..8" ana="A3C ASM" lem="H(/SSWN">H(/TTONA</w>
+<w id="EpJer.35..9" ana="P" lem="A)PO/">A)PO\</w>
+<w id="EpJer.35..10" ana="A1A GSM" lem="I)SXURO/S">I)SXUROU=</w>
+<w id="EpJer.35..11" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.35..12" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.35..13" ana="VB AMS3P" lem="E)K-AI(RE/W">E)CE/LWNTAI</w>
+<w id="EpJer.36..1" ana="N2 ASM" lem="A)/NQRWPOS">A)/NQRWPON</w>
+<w id="EpJer.36..2" ana="A1 ASM" lem="TUFLO/S">TUFLO\N</w>
+<w id="EpJer.36..3" ana="P" lem="EI)S">EI)S</w>
+<w id="EpJer.36..4" ana="N3I ASF" lem="O(/RASIS">O(/RASIN</w>
+<w id="EpJer.36..5" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.36..6" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.36..7" ana="VA AAS3P" lem="PERI-I(/STHMI">PERISTH/SWSIN</w>
+<w id="EpJer.36..8" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.36..9" ana="N1 DSF" lem="A)NA/GKH">A)NA/GKH|</w>
+<w id="EpJer.36..10" ana="N2 ASM" lem="A)/NQRWPOS">A)/NQRWPON</w>
+<w id="EpJer.36..11" ana="V9 PAPASM" lem="EI)MI/">O)/NTA</w>
+<w id="EpJer.36..12" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.36..13" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.36..14" ana="VB AMS3P" lem="E)K-AI(RE/W">E)CE/LWNTAI</w>
+<w id="EpJer.37..1" ana="N1A ASF" lem="XH/RA">XH/RAN</w>
+<w id="EpJer.37..2" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.37..3" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.37..4" ana="VA AAS3P" lem="E)LEE/W">E)LEH/SWSIN</w>
+<w id="EpJer.37..5" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.37..6" ana="A1 ASM" lem="O)RFANO/S">O)RFANO\N</w>
+<w id="EpJer.37..7" ana="D" lem="EU)=">EU)=</w>
+<w id="EpJer.37..8" ana="VF FAI3P" lem="POIE/W">POIH/SOUSIN</w>
+<w id="EpJer.38..1" ana="RA DPM" lem="O(">TOI=S</w>
+<w id="EpJer.38..2" ana="P" lem="A)PO/">A)PO\</w>
+<w id="EpJer.38..3" ana="RA GSN" lem="O(">TOU=</w>
+<w id="EpJer.38..4" ana="N3E GSN" lem="O)/ROS">O)/ROUS</w>
+<w id="EpJer.38..5" ana="N2 DPM" lem="LI/QOS">LI/QOIS</w>
+<w id="EpJer.38..6" ana="VM XMPNPM" lem="O(MOIO/W">W(MOIWME/NOI</w>
+<w id="EpJer.38..7" ana="V9 PAI3P" lem="EI)MI/">EI)SI\N</w>
+<w id="EpJer.38..8" ana="RA NPN" lem="O(">TA\</w>
+<w id="EpJer.38..9" ana="A1 NPN" lem="CU/LINOS">CU/LINA</w>
+<w id="EpJer.38..10" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.38..11" ana="RA NPN" lem="O(">TA\</w>
+<w id="EpJer.38..12" ana="A1B NPN" lem="PERI/XRUSOS">PERI/XRUSA</w>
+<w id="EpJer.38..13" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.38..14" ana="RA NPN" lem="O(">TA\</w>
+<w id="EpJer.38..15" ana="A1B NPN" lem="PERIA/RGUROS">PERIA/RGURA</w>
+<w id="EpJer.38..16" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.38..17" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.38..18" ana="V1 PAPNPM" lem="QERAPEU/W">QERAPEU/ONTES</w>
+<w id="EpJer.38..19" ana="RD APN" lem="AU)TO/S">AU)TA\</w>
+<w id="EpJer.38..20" ana="VC FPI3P" lem="KATA-AI)SXU/NW">KATAISXUNQH/SONTAI</w>
+<w id="EpJer.39..1" ana="D" lem="PW=S">PW=S</w>
+<w id="EpJer.39..2" ana="X" lem="OU)=N">OU)=N</w>
+<w id="EpJer.39..3" ana="A1A NSN" lem="NOMISTE/ON">NOMISTE/ON</w>
+<w id="EpJer.39..4" ana="C" lem="H)/">H)\</w>
+<w id="EpJer.39..5" ana="A1A NSN" lem="KLHTE/OS">KLHTE/ON</w>
+<w id="EpJer.39..6" ana="RD APM" lem="AU)TO/S">AU)TOU\S</w>
+<w id="EpJer.39..7" ana="V1 PAN" lem="U(PO-A)/RXW">U(PA/RXEIN</w>
+<w id="EpJer.39..8" ana="N2 APM" lem="QEO/S">QEOU/S</w>
+<w id="EpJer.40..1" ana="D" lem="E)/TI">E)/TI</w>
+<w id="EpJer.40..2" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.40..3" ana="D" lem="KAI/">KAI\</w>
+<w id="EpJer.40..4" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.40..5" ana="RA GPM" lem="O(">TW=N</w>
+<w id="EpJer.40..6" ana="N2 GPM" lem="*XALDAI=OS">*XALDAI/WN</w>
+<w id="EpJer.40..7" ana="V1 PAPGPM" lem="A)TIMA/ZW">A)TIMAZO/NTWN</w>
+<w id="EpJer.40..8" ana="RD APN" lem="AU)TO/S">AU)TA/</w>
+<w id="EpJer.40..9" ana="RR NPM" lem="O(/S">OI(/</w>
+<w id="EpJer.40..10" ana="D" lem="O(/TAN">O(/TAN</w>
+<w id="EpJer.40..11" ana="VB AAS3P" lem="O(RA/W">I)/DWSIN</w>
+<w id="EpJer.40..12" ana="A1A ASM" lem="E)NEO/S">E)NEO\N</w>
+<w id="EpJer.40..13" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.40..14" ana="V6 PMPASM" lem="DU/NAMAI">DUNA/MENON</w>
+<w id="EpJer.40..15" ana="VA AAN" lem="LALE/W">LALH=SAI</w>
+<w id="EpJer.40..16" ana="VA AMPNPM" lem="PROS-FE/RW">PROSENEGKA/MENOI</w>
+<w id="EpJer.40..17" ana="RA ASM" lem="O(">TO\N</w>
+<w id="EpJer.40..18" ana="N2 ASM" lem="*BH=LOS">*BH=LON</w>
+<w id="EpJer.40..19" ana="V4 PAI3P" lem="A)CIO/W">A)CIOU=SIN</w>
+<w id="EpJer.40..20" ana="VA AAN" lem="FWNE/W">FWNH=SAI</w>
+<w id="EpJer.40..21" ana="C" lem="W(S">W(S</w>
+<w id="EpJer.40..22" ana="A1 GSM" lem="DUNATO/S">DUNATOU=</w>
+<w id="EpJer.40..23" ana="V9 PAPGSM" lem="EI)MI/">O)/NTOS</w>
+<w id="EpJer.40..24" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="EpJer.40..25" ana="VB AMN" lem="AI)SQA/NOMAI">AI)SQE/SQAI</w>
+<w id="EpJer.41..1" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.41..2" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.41..3" ana="V6 PMI3P" lem="DU/NAMAI">DU/NANTAI</w>
+<w id="EpJer.41..4" ana="RD NPM" lem="AU)TO/S">AU)TOI\</w>
+<w id="EpJer.41..5" ana="VA AAPNPM" lem="NOE/W">NOH/SANTES</w>
+<w id="EpJer.41..6" ana="VB AAN" lem="KATA-LEI/PW">KATALIPEI=N</w>
+<w id="EpJer.41..7" ana="RD APN" lem="AU)TO/S">AU)TA/</w>
+<w id="EpJer.41..8" ana="N3I ASF" lem="AI)/SQHSIS">AI)/SQHSIN</w>
+<w id="EpJer.41..9" ana="X" lem="GA/R">GA\R</w>
+<w id="EpJer.41..10" ana="D" lem="OU)">OU)K</w>
+<w id="EpJer.41..11" ana="V1 PAI3P" lem="E)/XW">E)/XOUSIN</w>
+<w id="EpJer.42..1" ana="RA NPF" lem="O(">AI(</w>
+<w id="EpJer.42..2" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.42..3" ana="N3K NPF" lem="GUNH/">GUNAI=KES</w>
+<w id="EpJer.42..4" ana="VE AMPNPF" lem="PERI-TI/QHMI">PERIQE/MENAI</w>
+<w id="EpJer.42..5" ana="N2N APN" lem="SXOINI/ON">SXOINI/A</w>
+<w id="EpJer.42..6" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.42..7" ana="RA DPF" lem="O(">TAI=S</w>
+<w id="EpJer.42..8" ana="N2 DPF" lem="O(DO/S">O(DOI=S</w>
+<w id="EpJer.42..9" ana="V5 PMI3P" lem="E)N   KATA-H(=MAI">E)GKA/QHNTAI</w>
+<w id="EpJer.42..10" ana="V3 PAPNPF" lem="QUMIA/W">QUMIW=SAI</w>
+<w id="EpJer.42..11" ana="RA APN" lem="O(">TA\</w>
+<w id="EpJer.42..12" ana="N2N APN" lem="PI/TURON">PI/TURA</w>
+<w id="EpJer.43..1" ana="D" lem="O(/TAN">O(/TAN</w>
+<w id="EpJer.43..2" ana="X" lem="DE/">DE/</w>
+<w id="EpJer.43..3" ana="RI NSF" lem="TIS">TIS</w>
+<w id="EpJer.43..4" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.43..5" ana="VS APPNSF" lem="E)PI-E(LKU/W">E)FELKUSQEI=SA</w>
+<w id="EpJer.43..6" ana="P" lem="U(PO/">U(PO/</w>
+<w id="EpJer.43..7" ana="RI GSM" lem="TIS">TINOS</w>
+<w id="EpJer.43..8" ana="RA GPM" lem="O(">TW=N</w>
+<w id="EpJer.43..9" ana="V1 PMPGPM" lem="PARA-POREU/OMAI">PARAPOREUOME/NWN</w>
+<w id="EpJer.43..10" ana="VC APS3S" lem="KOIMA/W">KOIMHQH=|</w>
+<w id="EpJer.43..11" ana="RA ASF" lem="O(">TH\N</w>
+<w id="EpJer.43..12" ana="D" lem="PLHSI/ON">PLHSI/ON</w>
+<w id="EpJer.43..13" ana="V1 PAI3S" lem="O)NEIDI/ZW">O)NEIDI/ZEI</w>
+<w id="EpJer.43..14" ana="C" lem="O(/TI">O(/TI</w>
+<w id="EpJer.43..15" ana="D" lem="OU)">OU)K</w>
+<w id="EpJer.43..16" ana="VM XMI3S" lem="A)CIO/W">H)CI/WTAI</w>
+<w id="EpJer.43..17" ana="D" lem="W(/SPER">W(/SPER</w>
+<w id="EpJer.43..18" ana="D" lem="KAI/">KAI\</w>
+<w id="EpJer.43..19" ana="RD NSF" lem="AU)TO/S">AU)TH\</w>
+<w id="EpJer.43..20" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.43..21" ana="RA NSN" lem="O(">TO\</w>
+<w id="EpJer.43..22" ana="N2 NSN" lem="SXOINI/ON">SXOINI/ON</w>
+<w id="EpJer.43..23" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="EpJer.43..24" ana="VDI API3S" lem="DIA-R(H/GNUMI">DIERRA/GH</w>
+<w id="EpJer.44..1" ana="A3 NPN" lem="PA=S">PA/NTA</w>
+<w id="EpJer.44..2" ana="RA NPN" lem="O(">TA\</w>
+<w id="EpJer.44..3" ana="V1 PMPNPN" lem="GI/GNOMAI">GINO/MENA</w>
+<w id="EpJer.44..4" ana="RD DPM" lem="AU)TO/S">AU)TOI=S</w>
+<w id="EpJer.44..5" ana="V9 PAI3S" lem="EI)MI/">E)STIN</w>
+<w id="EpJer.44..6" ana="A3H NPN" lem="YEUDH/S">YEUDH=</w>
+<w id="EpJer.44..7" ana="D" lem="PW=S">PW=S</w>
+<w id="EpJer.44..8" ana="X" lem="OU)=N">OU)=N</w>
+<w id="EpJer.44..9" ana="A1A NSN" lem="NOMISTE/ON">NOMISTE/ON</w>
+<w id="EpJer.44..10" ana="C" lem="H)/">H)\</w>
+<w id="EpJer.44..11" ana="A1A NSN" lem="KLHTE/OS">KLHTE/ON</w>
+<w id="EpJer.44..12" ana="C" lem="W(/STE">W(/STE</w>
+<w id="EpJer.44..13" ana="N2 APM" lem="QEO/S">QEOU\S</w>
+<w id="EpJer.44..14" ana="RD APM" lem="AU)TO/S">AU)TOU\S</w>
+<w id="EpJer.44..15" ana="V1 PAN" lem="U(PO-A)/RXW">U(PA/RXEIN</w>
+<w id="EpJer.45..1" ana="P" lem="U(PO/">U(PO\</w>
+<w id="EpJer.45..2" ana="N3N GPM" lem="TE/KTWN">TEKTO/NWN</w>
+<w id="EpJer.45..3" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.45..4" ana="N2 GPM" lem="XRUSOXO/OS">XRUSOXO/WN</w>
+<w id="EpJer.45..5" ana="VT XPPNPN" lem="KATA-SKEUA/ZW">KATESKEUASME/NA</w>
+<w id="EpJer.45..6" ana="V9 PAI3P" lem="EI)MI/">EI)SI/N</w>
+<w id="EpJer.45..7" ana="A3 ASN" lem="OU)DEI/S">OU)QE\N</w>
+<w id="EpJer.45..8" ana="RD ASN" lem="A)/LLOS">A)/LLO</w>
+<w id="EpJer.45..9" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.45..10" ana="VB AMS3P" lem="GI/GNOMAI">GE/NWNTAI</w>
+<w id="EpJer.45..11" ana="C" lem="H)/">H)\</w>
+<w id="EpJer.45..12" ana="RR ASN" lem="O(/S">O(\</w>
+<w id="EpJer.45..13" ana="V1 PMI3P" lem="BOU/LOMAI">BOU/LONTAI</w>
+<w id="EpJer.45..14" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.45..15" ana="N1M NPM" lem="TEXNI/THS">TEXNI=TAI</w>
+<w id="EpJer.45..16" ana="RD APN" lem="AU)TO/S">AU)TA\</w>
+<w id="EpJer.45..17" ana="VB AMN" lem="GI/GNOMAI">GENE/SQAI</w>
+<w id="EpJer.46..1" ana="RD NPM" lem="AU)TO/S">AU)TOI/</w>
+<w id="EpJer.46..2" ana="X" lem="TE">TE</w>
+<w id="EpJer.46..3" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.46..4" ana="V1 PAPNPM" lem="KATA-SKEUA/ZW">KATASKEUA/ZONTES</w>
+<w id="EpJer.46..5" ana="RD APN" lem="AU)TO/S">AU)TA\</w>
+<w id="EpJer.46..6" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.46..7" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.46..8" ana="VB AMS3P" lem="GI/GNOMAI">GE/NWNTAI</w>
+<w id="EpJer.46..9" ana="A1B NPM" lem="POLUXRO/NIOS">POLUXRO/NIOI</w>
+<w id="EpJer.46..10" ana="D" lem="PW=S">PW=S</w>
+<w id="EpJer.46..11" ana="X" lem="TE">TE</w>
+<w id="EpJer.46..12" ana="X" lem="DH/">DH\</w>
+<w id="EpJer.46..13" ana="V1 PAI3S" lem="ME/LLW">ME/LLEI</w>
+<w id="EpJer.46..14" ana="RA NPN" lem="O(">TA\</w>
+<w id="EpJer.46..15" ana="P" lem="U(PO/">U(P'</w>
+<w id="EpJer.46..16" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.46..17" ana="VS APPNPN" lem="KATA-SKEUA/ZW">KATASKEUASQE/NTA</w>
+<w id="EpJer.46..18" ana="V9 PAN" lem="EI)MI/">EI)=NAI</w>
+<w id="EpJer.46..19" ana="N2 NPM" lem="QEO/S">QEOI/</w>
+<w id="EpJer.47..1" ana="VBI AAI3P" lem="KATA-LEI/PW">KATE/LIPON</w>
+<w id="EpJer.47..2" ana="X" lem="GA/R">GA\R</w>
+<w id="EpJer.47..3" ana="A3H APN" lem="YEUDH/S">YEU/DH</w>
+<w id="EpJer.47..4" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.47..5" ana="N3E ASN" lem="O)/NEIDOS">O)/NEIDOS</w>
+<w id="EpJer.47..6" ana="RA DPM" lem="O(">TOI=S</w>
+<w id="EpJer.47..7" ana="V1 PMPDPM" lem="E)PI-GI/GNOMAI">E)PIGINOME/NOIS</w>
+<w id="EpJer.48..1" ana="D" lem="O(/TAN">O(/TAN</w>
+<w id="EpJer.48..2" ana="X" lem="GA/R">GA\R</w>
+<w id="EpJer.48..3" ana="VB AAS3S" lem="E)PI-E)/RXOMAI">E)PE/LQH|</w>
+<w id="EpJer.48..4" ana="P" lem="E)PI/">E)P'</w>
+<w id="EpJer.48..5" ana="RD APN" lem="AU)TO/S">AU)TA\</w>
+<w id="EpJer.48..6" ana="N2 NSM" lem="PO/LEMOS">PO/LEMOS</w>
+<w id="EpJer.48..7" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.48..8" ana="A1 NPN" lem="KAKO/S">KAKA/</w>
+<w id="EpJer.48..9" ana="V1 PMI3P" lem="BOULEU/W">BOULEU/ONTAI</w>
+<w id="EpJer.48..10" ana="P" lem="PRO/S">PRO\S</w>
+<w id="EpJer.48..11" ana="RD APM" lem="E(AUTOU=">E(AUTOU\S</w>
+<w id="EpJer.48..12" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.48..13" ana="N3V NPM" lem="I(EREU/S">I(EREI=S</w>
+<w id="EpJer.48..14" ana="D" lem="POU=">POU=</w>
+<w id="EpJer.48..15" ana="VD APS3P" lem="SUN   A)PO-KRU/PTW">SUNAPOKRUBW=SI</w>
+<w id="EpJer.48..16" ana="P" lem="META/">MET'</w>
+<w id="EpJer.48..17" ana="RD GPN" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.49..1" ana="D" lem="PW=S">PW=S</w>
+<w id="EpJer.49..2" ana="X" lem="OU)=N">OU)=N</w>
+<w id="EpJer.49..3" ana="D" lem="OU)">OU)K</w>
+<w id="EpJer.49..4" ana="V9 PAI3S" lem="EI)MI/">E)/STIN</w>
+<w id="EpJer.49..5" ana="VB AMN" lem="AI)SQA/NOMAI">AI)SQE/SQAI</w>
+<w id="EpJer.49..6" ana="C" lem="O(/TI">O(/TI</w>
+<w id="EpJer.49..7" ana="D" lem="OU)">OU)/K</w>
+<w id="EpJer.49..8" ana="V9 PAI3P" lem="EI)MI/">EI)SIN</w>
+<w id="EpJer.49..9" ana="N2 NPM" lem="QEO/S">QEOI/</w>
+<w id="EpJer.49..10" ana="RR NPM" lem="O(/S">OI(\</w>
+<w id="EpJer.49..11" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.49..12" ana="V1 PAI3P" lem="SW/ZW">SW/|ZOUSIN</w>
+<w id="EpJer.49..13" ana="RD APM" lem="E(AUTOU=">E(AUTOU\S</w>
+<w id="EpJer.49..14" ana="P" lem="E)K">E)K</w>
+<w id="EpJer.49..15" ana="N2 GSM" lem="PO/LEMOS">POLE/MOU</w>
+<w id="EpJer.49..16" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.49..17" ana="P" lem="E)K">E)K</w>
+<w id="EpJer.49..18" ana="A1 GPN" lem="KAKO/S">KAKW=N</w>
+<w id="EpJer.50..1" ana="V1 PAPNPN" lem="U(PO-A)/RXW">U(PA/RXONTA</w>
+<w id="EpJer.50..2" ana="X" lem="GA/R">GA\R</w>
+<w id="EpJer.50..3" ana="A1 NPN" lem="CU/LINOS">CU/LINA</w>
+<w id="EpJer.50..4" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.50..5" ana="A1B NPN" lem="PERI/XRUSOS">PERI/XRUSA</w>
+<w id="EpJer.50..6" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.50..7" ana="A1B NPN" lem="PERIA/RGUROS">PERIA/RGURA</w>
+<w id="EpJer.50..8" ana="VS FPI3S" lem="GIGNW/SKW">GNWSQH/SETAI</w>
+<w id="EpJer.50..9" ana="P" lem="META/">META\</w>
+<w id="EpJer.50..10" ana="RD APN" lem="OU(=TOS">TAU=TA</w>
+<w id="EpJer.50..11" ana="C" lem="O(/TI">O(/TI</w>
+<w id="EpJer.50..12" ana="V9 PAI3S" lem="EI)MI/">E)STI\N</w>
+<w id="EpJer.50..13" ana="A3H NPN" lem="YEUDH/S">YEUDH=</w>
+<w id="EpJer.50..14" ana="RA DPN" lem="O(">TOI=S</w>
+<w id="EpJer.50..15" ana="N3E DPN" lem="E)/QNOS">E)/QNESI</w>
+<w id="EpJer.50..16" ana="A3 DPN" lem="PA=S">PA=SI</w>
+<w id="EpJer.50..17" ana="RA DPM" lem="O(">TOI=S</w>
+<w id="EpJer.50..18" ana="X" lem="TE">TE</w>
+<w id="EpJer.50..19" ana="N3V DPM" lem="BASILEU/S">BASILEU=SI</w>
+<w id="EpJer.50..20" ana="A1A NSN" lem="FANERO/S">FANERO\N</w>
+<w id="EpJer.50..21" ana="VF FMI3S" lem="EI)MI/">E)/STAI</w>
+<w id="EpJer.50..22" ana="C" lem="O(/TI">O(/TI</w>
+<w id="EpJer.50..23" ana="D" lem="OU)">OU)/K</w>
+<w id="EpJer.50..24" ana="V9 PAI3P" lem="EI)MI/">EI)SI</w>
+<w id="EpJer.50..25" ana="N2 NPM" lem="QEO/S">QEOI\</w>
+<w id="EpJer.50..26" ana="C" lem="A)LLA/">A)LLA\</w>
+<w id="EpJer.50..27" ana="N2N NPN" lem="E)/RGON">E)/RGA</w>
+<w id="EpJer.50..28" ana="N3 GPF" lem="XEI/R">XEIRW=N</w>
+<w id="EpJer.50..29" ana="N2 GPM" lem="A)/NQRWPOS">A)NQRW/PWN</w>
+<w id="EpJer.50..30" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.50..31" ana="A3 NSN" lem="OU)DEI/S">OU)DE\N</w>
+<w id="EpJer.50..32" ana="N2 GSM" lem="QEO/S">QEOU=</w>
+<w id="EpJer.50..33" ana="N2N NSN" lem="E)/RGON">E)/RGON</w>
+<w id="EpJer.50..34" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.50..35" ana="RD DPN" lem="AU)TO/S">AU)TOI=S</w>
+<w id="EpJer.50..36" ana="V9 PAI3S" lem="EI)MI/">E)STIN</w>
+<w id="EpJer.51..1" ana="RI DSM" lem="TI/S">TI/NI</w>
+<w id="EpJer.51..2" ana="X" lem="OU)=N">OU)=N</w>
+<w id="EpJer.51..3" ana="A1A NSN" lem="GNWSTE/OS">GNWSTE/ON</w>
+<w id="EpJer.51..4" ana="V9 PAI3S" lem="EI)MI/">E)STI\N</w>
+<w id="EpJer.51..5" ana="C" lem="O(/TI">O(/TI</w>
+<w id="EpJer.51..6" ana="D" lem="OU)">OU)/K</w>
+<w id="EpJer.51..7" ana="V9 PAI3P" lem="EI)MI/">EI)SIN</w>
+<w id="EpJer.51..8" ana="N2 NPM" lem="QEO/S">QEOI/</w>
+<w id="EpJer.52..1" ana="N3V ASM" lem="BASILEU/S">BASILE/A</w>
+<w id="EpJer.52..2" ana="X" lem="GA/R">GA\R</w>
+<w id="EpJer.52..3" ana="N1A GSF" lem="XW/RA">XW/RAS</w>
+<w id="EpJer.52..4" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.52..5" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.52..6" ana="VA AAS3P" lem="A)NA-I(/STHMI">A)NASTH/SWSIN</w>
+<w id="EpJer.52..7" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.52..8" ana="N2 ASM" lem="U(ETO/S">U(ETO\N</w>
+<w id="EpJer.52..9" ana="N2 DPM" lem="A)/NQRWPOS">A)NQRW/POIS</w>
+<w id="EpJer.52..10" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.52..11" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.52..12" ana="VO AAS3P" lem="DI/DWMI">DW=SIN</w>
+<w id="EpJer.53..1" ana="N3I ASF" lem="KRI/SIS">KRI/SIN</w>
+<w id="EpJer.53..2" ana="X" lem="TE">TE</w>
+<w id="EpJer.53..3" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.53..4" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.53..5" ana="VA AAS3P" lem="DIA-KRI/NW">DIAKRI/NWSIN</w>
+<w id="EpJer.53..6" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.53..7" ana="C" lem="OU)DE/">OU)DE\</w>
+<w id="EpJer.53..8" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.53..9" ana="VA AMS3P" lem="R(U/OMAI">R(U/SWNTAI</w>
+<w id="EpJer.53..10" ana="V2 PPPASM" lem="A)DIKE/W">A)DIKOU/MENON</w>
+<w id="EpJer.53..11" ana="A1B NPM" lem="A)DU/NATOS">A)DU/NATOI</w>
+<w id="EpJer.53..12" ana="V9 PAPNPM" lem="EI)MI/">O)/NTES</w>
+<w id="EpJer.53..13" ana="D" lem="W(/SPER">W(/SPER</w>
+<w id="EpJer.53..14" ana="X" lem="GA/R">GA\R</w>
+<w id="EpJer.53..15" ana="N1 NPF" lem="KORW/NH">KORW=NAI</w>
+<w id="EpJer.53..16" ana="P" lem="A)NA/">A)NA\</w>
+<w id="EpJer.53..17" ana="A1 ASM" lem="ME/SOS">ME/SON</w>
+<w id="EpJer.53..18" ana="RA GSM" lem="O(">TOU=</w>
+<w id="EpJer.53..19" ana="N2 GSM" lem="OU)RANO/S">OU)RANOU=</w>
+<w id="EpJer.53..20" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.53..21" ana="RA GSF" lem="O(">TH=S</w>
+<w id="EpJer.53..22" ana="N1 GSF" lem="GH=">GH=S</w>
+<w id="EpJer.54..1" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.54..2" ana="X" lem="GA/R">GA\R</w>
+<w id="EpJer.54..3" ana="D" lem="O(/TAN">O(/TAN</w>
+<w id="EpJer.54..4" ana="VA AAS3S" lem="E)N-PI/PTW">E)MPE/SH|</w>
+<w id="EpJer.54..5" ana="P" lem="EI)S">EI)S</w>
+<w id="EpJer.54..6" ana="N1A ASF" lem="OI)KI/A">OI)KI/AN</w>
+<w id="EpJer.54..7" ana="N2 GPM" lem="QEO/S">QEW=N</w>
+<w id="EpJer.54..8" ana="A1 GPM" lem="CU/LINOS">CULI/NWN</w>
+<w id="EpJer.54..9" ana="C" lem="H)/">H)\</w>
+<w id="EpJer.54..10" ana="A1B GPM" lem="PERI/XRUSOS">PERIXRU/SWN</w>
+<w id="EpJer.54..11" ana="C" lem="H)/">H)\</w>
+<w id="EpJer.54..12" ana="A1B GPM" lem="PERIA/RGUROS">PERIARGU/RWN</w>
+<w id="EpJer.54..13" ana="N3 NSN" lem="PU=R">PU=R</w>
+<w id="EpJer.54..14" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.54..15" ana="X" lem="ME/N">ME\N</w>
+<w id="EpJer.54..16" ana="N3V NPM" lem="I(EREU/S">I(EREI=S</w>
+<w id="EpJer.54..17" ana="RD GPN" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.54..18" ana="VF FMI3P" lem="FEU/GW">FEU/CONTAI</w>
+<w id="EpJer.54..19" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.54..20" ana="VC FPI3P" lem="DIA-SW/ZW">DIASWQH/SONTAI</w>
+<w id="EpJer.54..21" ana="RD NPM" lem="AU)TO/S">AU)TOI\</w>
+<w id="EpJer.54..22" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.54..23" ana="D" lem="W(/SPER">W(/SPER</w>
+<w id="EpJer.54..24" ana="N2 NPF" lem="DOKO/S">DOKOI\</w>
+<w id="EpJer.54..25" ana="A1 NPM" lem="ME/SOS">ME/SOI</w>
+<w id="EpJer.54..26" ana="VC FPI3P" lem="KATA-KAI/W">KATAKAUQH/SONTAI</w>
+<w id="EpJer.55..1" ana="N3V DSM" lem="BASILEU/S">BASILEI=</w>
+<w id="EpJer.55..2" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.55..3" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.55..4" ana="A1A DPM" lem="POLE/MIOS">POLEMI/OIS</w>
+<w id="EpJer.55..5" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.55..6" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.55..7" ana="VH AAS3P" lem="A)NTI-I(/STHMI">A)NTISTW=SIN</w>
+<w id="EpJer.56..1" ana="D" lem="PW=S">PW=S</w>
+<w id="EpJer.56..2" ana="X" lem="OU)=N">OU)=N</w>
+<w id="EpJer.56..3" ana="A1A NSN" lem="E)KDEKTE/ON">E)KDEKTE/ON</w>
+<w id="EpJer.56..4" ana="C" lem="H)/">H)\</w>
+<w id="EpJer.56..5" ana="A1A NSN" lem="NOMISTE/ON">NOMISTE/ON</w>
+<w id="EpJer.56..6" ana="C" lem="O(/TI">O(/TI</w>
+<w id="EpJer.56..7" ana="V9 PAI3P" lem="EI)MI/">EI)SI\N</w>
+<w id="EpJer.56..8" ana="N2 NPM" lem="QEO/S">QEOI/</w>
+<w id="EpJer.57..1" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.57..2" ana="P" lem="A)PO/">A)PO\</w>
+<w id="EpJer.57..3" ana="N1M GPM" lem="KLE/PTHS">KLEPTW=N</w>
+<w id="EpJer.57..4" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.57..5" ana="P" lem="A)PO/">A)PO\</w>
+<w id="EpJer.57..6" ana="N1M GPM" lem="LH|STH/S">LH|STW=N</w>
+<w id="EpJer.57..7" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.57..8" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.57..9" ana="VC APS3P" lem="DIA-SW/ZW">DIASWQW=SIN</w>
+<w id="EpJer.57..10" ana="N2 NPM" lem="QEO/S">QEOI\</w>
+<w id="EpJer.57..11" ana="A1 NPM" lem="CU/LINOS">CU/LINOI</w>
+<w id="EpJer.57..12" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.57..13" ana="A1B NPM" lem="PERIA/RGUROS">PERIA/RGUROI</w>
+<w id="EpJer.57..14" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.57..15" ana="A1B NPM" lem="PERI/XRUSOS">PERI/XRUSOI</w>
+<w id="EpJer.57..16" ana="RR GPM" lem="O(/S">W(=N</w>
+<w id="EpJer.57..17" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.57..18" ana="V1 PAPNPM" lem="I)SXU/W">I)SXU/ONTES</w>
+<w id="EpJer.57..19" ana="VF2 FMI3P" lem="PERI-AI(RE/W">PERIELOU=NTAI</w>
+<w id="EpJer.57..20" ana="RA ASN" lem="O(">TO\</w>
+<w id="EpJer.57..21" ana="N2N ASN" lem="XRUSI/ON">XRUSI/ON</w>
+<w id="EpJer.57..22" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.57..23" ana="RA ASN" lem="O(">TO\</w>
+<w id="EpJer.57..24" ana="N2N ASN" lem="A)RGU/RION">A)RGU/RION</w>
+<w id="EpJer.57..25" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.57..26" ana="RA ASM" lem="O(">TO\N</w>
+<w id="EpJer.57..27" ana="N2 ASM" lem="I(MATISMO/S">I(MATISMO\N</w>
+<w id="EpJer.57..28" ana="RA ASM" lem="O(">TO\N</w>
+<w id="EpJer.57..29" ana="V5 PMPASM" lem="PERI-KEI=MAI">PERIKEI/MENON</w>
+<w id="EpJer.57..30" ana="RD DPM" lem="AU)TO/S">AU)TOI=S</w>
+<w id="EpJer.57..31" ana="VF FMI3P" lem="A)PO-E)/RXOMAI">A)PELEU/SONTAI</w>
+<w id="EpJer.57..32" ana="V1 PAPNPM" lem="E)/XW">E)/XONTES</w>
+<w id="EpJer.57..33" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.57..34" ana="RD DPM" lem="E(AUTOU=">E(AUTOI=S</w>
+<w id="EpJer.57..35" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.57..36" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.57..37" ana="VA AAS3P" lem="BOHQE/W">BOHQH/SWSIN</w>
+<w id="EpJer.58..1" ana="C" lem="W(/STE">W(/STE</w>
+<w id="EpJer.58..2" ana="A3C NSN" lem="KREI/SSWN">KREI=SSON</w>
+<w id="EpJer.58..3" ana="V9 PAN" lem="EI)MI/">EI)=NAI</w>
+<w id="EpJer.58..4" ana="N3V ASM" lem="BASILEU/S">BASILE/A</w>
+<w id="EpJer.58..5" ana="V5 PMPASM" lem="E)PI-DEIKNU/W">E)PIDEIKNU/MENON</w>
+<w id="EpJer.58..6" ana="RA ASF" lem="O(">TH\N</w>
+<w id="EpJer.58..7" ana="RD GSM" lem="E(AUTOU=">E(AUTOU=</w>
+<w id="EpJer.58..8" ana="N1A ASF" lem="A)NDREI/A">A)NDREI/AN</w>
+<w id="EpJer.58..9" ana="C" lem="H)/">H)\</w>
+<w id="EpJer.58..10" ana="N3E ASN" lem="SKEU=OS">SKEU=OS</w>
+<w id="EpJer.58..11" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.58..12" ana="N1A DSF" lem="OI)KI/A">OI)KI/A|</w>
+<w id="EpJer.58..13" ana="A1 ASN" lem="XRH/SIMOS">XRH/SIMON</w>
+<w id="EpJer.58..14" ana="P" lem="E)PI/">E)F'</w>
+<w id="EpJer.58..15" ana="RR DSN" lem="O(/S">W(=|</w>
+<w id="EpJer.58..16" ana="VF FMI3S" lem="XRA/W">XRH/SETAI</w>
+<w id="EpJer.58..17" ana="RA NSM" lem="O(">O(</w>
+<w id="EpJer.58..18" ana="VM XMPNSM" lem="KTA/OMAI">KEKTHME/NOS</w>
+<w id="EpJer.58..19" ana="C" lem="H)/">H)\</w>
+<w id="EpJer.58..20" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.58..21" ana="A3H NPM" lem="YEUDH/S">YEUDEI=S</w>
+<w id="EpJer.58..22" ana="N2 NPM" lem="QEO/S">QEOI/</w>
+<w id="EpJer.58..23" ana="C" lem="H)/">H)\</w>
+<w id="EpJer.58..24" ana="D" lem="KAI/">KAI\</w>
+<w id="EpJer.58..25" ana="N1A NSF" lem="QU/RA">QU/RA</w>
+<w id="EpJer.58..26" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.58..27" ana="N1A DSF" lem="OI)KI/A">OI)KI/A|</w>
+<w id="EpJer.58..28" ana="V1 PAPNSF" lem="DIA-SW/ZW">DIASW/|ZOUSA</w>
+<w id="EpJer.58..29" ana="RA APN" lem="O(">TA\</w>
+<w id="EpJer.58..30" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.58..31" ana="RD DSF" lem="AU)TO/S">AU)TH=|</w>
+<w id="EpJer.58..32" ana="V9 PAPAPN" lem="EI)MI/">O)/NTA</w>
+<w id="EpJer.58..33" ana="C" lem="H)/">H)\</w>
+<w id="EpJer.58..34" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.58..35" ana="A3H NPM" lem="YEUDH/S">YEUDEI=S</w>
+<w id="EpJer.58..36" ana="N2 NPM" lem="QEO/S">QEOI/</w>
+<w id="EpJer.58..37" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.58..38" ana="A1 NSM" lem="CU/LINOS">CU/LINOS</w>
+<w id="EpJer.58..39" ana="N2 NSM" lem="STU=LOS">STU=LOS</w>
+<w id="EpJer.58..40" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.58..41" ana="N2N DPN" lem="BASI/LEION">BASILEI/OIS</w>
+<w id="EpJer.58..42" ana="C" lem="H)/">H)\</w>
+<w id="EpJer.58..43" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.58..44" ana="A3H NPM" lem="YEUDH/S">YEUDEI=S</w>
+<w id="EpJer.58..45" ana="N2 NPM" lem="QEO/S">QEOI/</w>
+<w id="EpJer.59..1" ana="N2 NSM" lem="H(/LIOS">H(/LIOS</w>
+<w id="EpJer.59..2" ana="X" lem="ME/N">ME\N</w>
+<w id="EpJer.59..3" ana="X" lem="GA/R">GA\R</w>
+<w id="EpJer.59..4" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.59..5" ana="N1 NSF" lem="SELH/NH">SELH/NH</w>
+<w id="EpJer.59..6" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.59..7" ana="N2N NPN" lem="A)/STRON">A)/STRA</w>
+<w id="EpJer.59..8" ana="V9 PAPNPN" lem="EI)MI/">O)/NTA</w>
+<w id="EpJer.59..9" ana="A1A NPN" lem="LAMPRO/S">LAMPRA\</w>
+<w id="EpJer.59..10" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.59..11" ana="V1 PMPNPN" lem="A)PO-STE/LLW">A)POSTELLO/MENA</w>
+<w id="EpJer.59..12" ana="P" lem="E)PI/">E)PI\</w>
+<w id="EpJer.59..13" ana="N1A GSF" lem="XREI/A">XREI/AS</w>
+<w id="EpJer.59..14" ana="A1B NPN" lem="EU)H/KOOS">EU)H/KOA/</w>
+<w id="EpJer.59..15" ana="V9 PAI3P" lem="EI)MI/">EI)SIN</w>
+<w id="EpJer.60..1" ana="D" lem="W(SAU/TWS">W(SAU/TWS</w>
+<w id="EpJer.60..2" ana="D" lem="KAI/">KAI\</w>
+<w id="EpJer.60..3" ana="N1 NSF" lem="A)STRAPH/">A)STRAPH/</w>
+<w id="EpJer.60..4" ana="D" lem="O(/TAN">O(/TAN</w>
+<w id="EpJer.60..5" ana="VD APS3S" lem="E)PI-FAI/NW">E)PIFANH=|</w>
+<w id="EpJer.60..6" ana="A1B NSF" lem="EU)/OPTOS">EU)/OPTO/S</w>
+<w id="EpJer.60..7" ana="V9 PAI3S" lem="EI)MI/">E)STIN</w>
+<w id="EpJer.60..8" ana="RA ASN" lem="O(">TO\</w>
+<w id="EpJer.60..9" ana="X" lem="DE/">D'</w>
+<w id="EpJer.60..10" ana="RD ASN" lem="AU)TO/S">AU)TO\</w>
+<w id="EpJer.60..11" ana="D" lem="KAI/">KAI\</w>
+<w id="EpJer.60..12" ana="N3M NSN" lem="PNEU=MA">PNEU=MA</w>
+<w id="EpJer.60..13" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.60..14" ana="A1S DSF" lem="PA=S">PA/SH|</w>
+<w id="EpJer.60..15" ana="N1A DSF" lem="XW/RA">XW/RA|</w>
+<w id="EpJer.60..16" ana="V2 PAI3S" lem="PNE/W">PNEI=</w>
+<w id="EpJer.61..1" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.61..2" ana="N1 DPF" lem="NEFE/LH">NEFE/LAIS</w>
+<w id="EpJer.61..3" ana="D" lem="O(/TAN">O(/TAN</w>
+<w id="EpJer.61..4" ana="VD APS3S" lem="E)PI-TA/SSW">E)PITAGH=|</w>
+<w id="EpJer.61..5" ana="P" lem="U(PO/">U(PO\</w>
+<w id="EpJer.61..6" ana="RA GSM" lem="O(">TOU=</w>
+<w id="EpJer.61..7" ana="N2 GSM" lem="QEO/S">QEOU=</w>
+<w id="EpJer.61..8" ana="V1 PMN" lem="E)PI-POREU/OMAI">E)PIPOREU/ESQAI</w>
+<w id="EpJer.61..9" ana="P" lem="E)PI/">E)F'</w>
+<w id="EpJer.61..10" ana="A1 ASF" lem="O(/LOS">O(/LHN</w>
+<w id="EpJer.61..11" ana="RA ASF" lem="O(">TH\N</w>
+<w id="EpJer.61..12" ana="V2 PMPASF" lem="OI)KE/W">OI)KOUME/NHN</w>
+<w id="EpJer.61..13" ana="V2 PAI3P" lem="SUN-TELE/W">SUNTELOU=SI</w>
+<w id="EpJer.61..14" ana="RA ASN" lem="O(">TO\</w>
+<w id="EpJer.61..15" ana="VQ APPASN" lem="TA/SSW">TAXQE/N</w>
+<w id="EpJer.61..16" ana="RA NSN" lem="O(">TO/</w>
+<w id="EpJer.61..17" ana="X" lem="TE">TE</w>
+<w id="EpJer.61..18" ana="N3 NSN" lem="PU=R">PU=R</w>
+<w id="EpJer.61..19" ana="VD APPNSN" lem="E)K   A)PO-STE/LLW">E)CAPOSTALE\N</w>
+<w id="EpJer.61..20" ana="D" lem="A)/NWQEN">A)/NWQEN</w>
+<w id="EpJer.61..21" ana="VA AAN" lem="E)K   A)NA-A(LI/SKW">E)CANALW=SAI</w>
+<w id="EpJer.61..22" ana="N3E APN" lem="O)/ROS">O)/RH</w>
+<w id="EpJer.61..23" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.61..24" ana="N2 APM" lem="DRUMO/S">DRUMOU\S</w>
+<w id="EpJer.61..25" ana="V2 PAI3S" lem="POIE/W">POIEI=</w>
+<w id="EpJer.61..26" ana="RA ASN" lem="O(">TO\</w>
+<w id="EpJer.61..27" ana="VQ APPASN" lem="SUN-TA/SSW">SUNTAXQE/N</w>
+<w id="EpJer.62..1" ana="RD NPN" lem="OU(=TOS">TAU=TA</w>
+<w id="EpJer.62..2" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.62..3" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.62..4" ana="RA DPF" lem="O(">TAI=S</w>
+<w id="EpJer.62..5" ana="N1A DPF" lem="I)DE/A">I)DE/AIS</w>
+<w id="EpJer.62..6" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.62..7" ana="RA DPF" lem="O(">TAI=S</w>
+<w id="EpJer.62..8" ana="N3I DPF" lem="DU/NAMIS">DUNA/MESIN</w>
+<w id="EpJer.62..9" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.62..10" ana="VM XPPNPN" lem="A)PO-O(MOIO/W">A)FWMOIWME/NA</w>
+<w id="EpJer.62..11" ana="V9 PAI3S" lem="EI)MI/">E)STI/N</w>
+<w id="EpJer.63..1" ana="D" lem="O(/QEN">O(/QEN</w>
+<w id="EpJer.63..2" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.63..3" ana="A1A NSN" lem="NOMISTE/ON">NOMISTE/ON</w>
+<w id="EpJer.63..4" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.63..5" ana="A1A NSN" lem="KLHTE/OS">KLHTE/ON</w>
+<w id="EpJer.63..6" ana="V1 PAN" lem="U(PO-A)/RXW">U(PA/RXEIN</w>
+<w id="EpJer.63..7" ana="RD APM" lem="AU)TO/S">AU)TOU\S</w>
+<w id="EpJer.63..8" ana="N2 APM" lem="QEO/S">QEOU/S</w>
+<w id="EpJer.63..9" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.63..10" ana="A1 GPN" lem="DUNATO/S">DUNATW=N</w>
+<w id="EpJer.63..11" ana="V9 PAPGPN" lem="EI)MI/">O)/NTWN</w>
+<w id="EpJer.63..12" ana="RD GPN" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.63..13" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.63..14" ana="N3I ASF" lem="KRI/SIS">KRI/SIN</w>
+<w id="EpJer.63..15" ana="VA AAN" lem="KRI/NW">KRI=NAI</w>
+<w id="EpJer.63..16" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.63..17" ana="D" lem="EU)=">EU)=</w>
+<w id="EpJer.63..18" ana="V2 PAN" lem="POIE/W">POIEI=N</w>
+<w id="EpJer.63..19" ana="N2 DPM" lem="A)/NQRWPOS">A)NQRW/POIS</w>
+<w id="EpJer.64..1" ana="VZ AAPNPM" lem="GIGNW/SKW">GNO/NTES</w>
+<w id="EpJer.64..2" ana="X" lem="OU)=N">OU)=N</w>
+<w id="EpJer.64..3" ana="C" lem="O(/TI">O(/TI</w>
+<w id="EpJer.64..4" ana="D" lem="OU)">OU)/K</w>
+<w id="EpJer.64..5" ana="V9 PAI3P" lem="EI)MI/">EI)SIN</w>
+<w id="EpJer.64..6" ana="N2 NPM" lem="QEO/S">QEOI/</w>
+<w id="EpJer.64..7" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.64..8" ana="VC APS2P" lem="FOBE/W">FOBHQH=TE</w>
+<w id="EpJer.64..9" ana="RD APM" lem="AU)TO/S">AU)TOU/S</w>
+<w id="EpJer.65..1" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.65..2" ana="X" lem="GA/R">GA\R</w>
+<w id="EpJer.65..3" ana="N3V DPM" lem="BASILEU/S">BASILEU=SIN</w>
+<w id="EpJer.65..4" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.65..5" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.65..6" ana="VA AMS3P" lem="KATA-A)RA/OMAI">KATARA/SWNTAI</w>
+<w id="EpJer.65..7" ana="C" lem="OU)/TE">OU)/TE</w>
+<w id="EpJer.65..8" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.65..9" ana="VA AAS3P" lem="EU)LOGE/W">EU)LOGH/SWSI</w>
+<w id="EpJer.66..1" ana="N2N APN" lem="SHMEI=ON">SHMEI=A/</w>
+<w id="EpJer.66..2" ana="X" lem="TE">TE</w>
+<w id="EpJer.66..3" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.66..4" ana="N3E DPN" lem="E)/QNOS">E)/QNESIN</w>
+<w id="EpJer.66..5" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.66..6" ana="N2 DSM" lem="OU)RANO/S">OU)RANW=|</w>
+<w id="EpJer.66..7" ana="D" lem="OU)">OU)</w>
+<w id="EpJer.66..8" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.66..9" ana="VA AAS3P" lem="DEIKNU/W">DEI/CWSIN</w>
+<w id="EpJer.66..10" ana="C" lem="OU)DE/">OU)DE\</w>
+<w id="EpJer.66..11" ana="C" lem="W(S">W(S</w>
+<w id="EpJer.66..12" ana="RA NSM" lem="O(">O(</w>
+<w id="EpJer.66..13" ana="N2 NSM" lem="H(/LIOS">H(/LIOS</w>
+<w id="EpJer.66..14" ana="VF FAI3P" lem="LA/MPW">LA/MYOUSIN</w>
+<w id="EpJer.66..15" ana="C" lem="OU)DE/">OU)DE\</w>
+<w id="EpJer.66..16" ana="VF FAI3P" lem="FWTI/ZW">FWTI/SOUSIN</w>
+<w id="EpJer.66..17" ana="C" lem="W(S">W(S</w>
+<w id="EpJer.66..18" ana="N1 NSF" lem="SELH/NH">SELH/NH</w>
+<w id="EpJer.67..1" ana="RA NPN" lem="O(">TA\</w>
+<w id="EpJer.67..2" ana="N2N NPN" lem="QHRI/ON">QHRI/A</w>
+<w id="EpJer.67..3" ana="V9 PAI3S" lem="EI)MI/">E)STI\N</w>
+<w id="EpJer.67..4" ana="A3C NPN" lem="KREI/SSWN">KREI/TTW</w>
+<w id="EpJer.67..5" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.67..6" ana="RR NPN" lem="O(/S">A(\</w>
+<w id="EpJer.67..7" ana="V6 PMI3P" lem="DU/NAMAI">DU/NANTAI</w>
+<w id="EpJer.67..8" ana="VB AAPNPN" lem="E)K-FEU/GW">E)KFUGO/NTA</w>
+<w id="EpJer.67..9" ana="P" lem="EI)S">EI)S</w>
+<w id="EpJer.67..10" ana="N1 ASF" lem="SKE/PHS">SKE/PHN</w>
+<w id="EpJer.67..11" ana="RD APN" lem="E(AUTOU=">E(AUTA\</w>
+<w id="EpJer.67..12" ana="VA AAN" lem="W)FELE/W">W)FELH=SAI</w>
+<w id="EpJer.68..1" ana="P" lem="KATA/">KAT'</w>
+<w id="EpJer.68..2" ana="A3 ASM" lem="OU)DEI/S">OU)DE/NA</w>
+<w id="EpJer.68..3" ana="X" lem="OU)=N">OU)=N</w>
+<w id="EpJer.68..4" ana="N2 ASM" lem="TRO/POS">TRO/PON</w>
+<w id="EpJer.68..5" ana="V9 PAI3S" lem="EI)MI/">E)STI\N</w>
+<w id="EpJer.68..6" ana="RP DP" lem="E)GW/">H(MI=N</w>
+<w id="EpJer.68..7" ana="A1A NSN" lem="FANERO/S">FANERO\N</w>
+<w id="EpJer.68..8" ana="C" lem="O(/TI">O(/TI</w>
+<w id="EpJer.68..9" ana="V9 PAI3P" lem="EI)MI/">EI)SI\N</w>
+<w id="EpJer.68..10" ana="N2 NPM" lem="QEO/S">QEOI/</w>
+<w id="EpJer.68..11" ana="C" lem="DIO/">DIO\</w>
+<w id="EpJer.68..12" ana="D" lem="MH/">MH\</w>
+<w id="EpJer.68..13" ana="VC APS2P" lem="FOBE/W">FOBHQH=TE</w>
+<w id="EpJer.68..14" ana="RD APM" lem="AU)TO/S">AU)TOU/S</w>
+<w id="EpJer.69..1" ana="D" lem="W(/SPER">W(/SPER</w>
+<w id="EpJer.69..2" ana="X" lem="GA/R">GA\R</w>
+<w id="EpJer.69..3" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.69..4" ana="N2N DSN" lem="SIKUH/RATON">SIKUHRA/TW|</w>
+<w id="EpJer.69..5" ana="N2N NSN" lem="PROBASKA/NION">PROBASKA/NION</w>
+<w id="EpJer.69..6" ana="A3 ASN" lem="OU)DEI/S">OU)DE\N</w>
+<w id="EpJer.69..7" ana="V1 PAPNSN" lem="FULA/SSW">FULA/SSON</w>
+<w id="EpJer.69..8" ana="D" lem="OU(/TWS">OU(/TWS</w>
+<w id="EpJer.69..9" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.69..10" ana="N2 NPM" lem="QEO/S">QEOI\</w>
+<w id="EpJer.69..11" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.69..12" ana="V9 PAI3P" lem="EI)MI/">EI)SIN</w>
+<w id="EpJer.69..13" ana="A1 NPM" lem="CU/LINOS">CU/LINOI</w>
+<w id="EpJer.69..14" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.69..15" ana="A1B NPM" lem="PERI/XRUSOS">PERI/XRUSOI</w>
+<w id="EpJer.69..16" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.69..17" ana="A1B NPM" lem="PERIA/RGUROS">PERIA/RGUROI</w>
+<w id="EpJer.70..1" ana="RA ASM" lem="O(">TO\N</w>
+<w id="EpJer.70..2" ana="RD ASM" lem="AU)TO/S">AU)TO\N</w>
+<w id="EpJer.70..3" ana="N2 ASM" lem="TRO/POS">TRO/PON</w>
+<w id="EpJer.70..4" ana="D" lem="KAI/">KAI\</w>
+<w id="EpJer.70..5" ana="RA DSF" lem="O(">TH=|</w>
+<w id="EpJer.70..6" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.70..7" ana="N2 DSM" lem="KH=POS">KH/PW|</w>
+<w id="EpJer.70..8" ana="N2 DSF" lem="R(A/MNOS">R(A/MNW|</w>
+<w id="EpJer.70..9" ana="P" lem="E)PI/">E)F'</w>
+<w id="EpJer.70..10" ana="RR GSF" lem="O(/S">H(=S</w>
+<w id="EpJer.70..11" ana="A3 NSN" lem="PA=S">PA=N</w>
+<w id="EpJer.70..12" ana="N2N NSN" lem="O)/RNEON">O)/RNEON</w>
+<w id="EpJer.70..13" ana="V5 PMI3S" lem="E)PI  KATA-H(=MAI">E)PIKA/QHTAI</w>
+<w id="EpJer.70..14" ana="D" lem="W(SAU/TWS">W(SAU/TWS</w>
+<w id="EpJer.70..15" ana="X" lem="DE/">DE\</w>
+<w id="EpJer.70..16" ana="D" lem="KAI/">KAI\</w>
+<w id="EpJer.70..17" ana="N2 DSM" lem="NEKRO/S">NEKRW=|</w>
+<w id="EpJer.70..18" ana="VM XPPDSM" lem="R(I/PTW">E)RRIMME/NW|</w>
+<w id="EpJer.70..19" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.70..20" ana="N3E DSN" lem="SKO/TOS">SKO/TEI</w>
+<w id="EpJer.70..21" ana="VM XMI3P" lem="A)PO-O(MOIO/W">A)FWMOI/WNTAI</w>
+<w id="EpJer.70..22" ana="RA NPM" lem="O(">OI(</w>
+<w id="EpJer.70..23" ana="N2 NPM" lem="QEO/S">QEOI\</w>
+<w id="EpJer.70..24" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="EpJer.70..25" ana="A1 NPM" lem="CU/LINOS">CU/LINOI</w>
+<w id="EpJer.70..26" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.70..27" ana="A1B NPM" lem="PERI/XRUSOS">PERI/XRUSOI</w>
+<w id="EpJer.70..28" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.70..29" ana="A1B NPM" lem="PERIA/RGUROS">PERIA/RGUROI</w>
+<w id="EpJer.71..1" ana="P" lem="A)PO/">A)PO/</w>
+<w id="EpJer.71..2" ana="X" lem="TE">TE</w>
+<w id="EpJer.71..3" ana="RA GSF" lem="O(">TH=S</w>
+<w id="EpJer.71..4" ana="N1A GSF" lem="PORFU/RA">PORFU/RAS</w>
+<w id="EpJer.71..5" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.71..6" ana="RA GSF" lem="O(">TH=S</w>
+<w id="EpJer.71..7" ana="N2 GSF" lem="MA/RMAROS">MARMA/ROU</w>
+<w id="EpJer.71..8" ana="RA GSF" lem="O(">TH=S</w>
+<w id="EpJer.71..9" ana="P" lem="E)PI/">E)P'</w>
+<w id="EpJer.71..10" ana="RD DPM" lem="AU)TO/S">AU)TOI=S</w>
+<w id="EpJer.71..11" ana="V1 PMPGSF" lem="SH/PW">SHPOME/NHS</w>
+<w id="EpJer.71..12" ana="VF FMI2P" lem="GIGNW/SKW">GNW/SESQE</w>
+<w id="EpJer.71..13" ana="C" lem="O(/TI">O(/TI</w>
+<w id="EpJer.71..14" ana="D" lem="OU)">OU)/K</w>
+<w id="EpJer.71..15" ana="V9 PAI3P" lem="EI)MI/">EI)SIN</w>
+<w id="EpJer.71..16" ana="N2 NPM" lem="QEO/S">QEOI/</w>
+<w id="EpJer.71..17" ana="RD NPN" lem="AU)TO/S">AU)TA/</w>
+<w id="EpJer.71..18" ana="X" lem="TE">TE</w>
+<w id="EpJer.71..19" ana="P" lem="E)K">E)C</w>
+<w id="EpJer.71..20" ana="A1A GSNC" lem="U(/STEROS">U(STE/ROU</w>
+<w id="EpJer.71..21" ana="VC FPI3P" lem="BIBRW/SKW">BRWQH/SONTAI</w>
+<w id="EpJer.71..22" ana="C" lem="KAI/">KAI\</w>
+<w id="EpJer.71..23" ana="VF FMI3S" lem="EI)MI/">E)/STAI</w>
+<w id="EpJer.71..24" ana="N3E NSN" lem="O)/NEIDOS">O)/NEIDOS</w>
+<w id="EpJer.71..25" ana="P" lem="E)N">E)N</w>
+<w id="EpJer.71..26" ana="RA DSF" lem="O(">TH=|</w>
+<w id="EpJer.71..27" ana="N1A DSF" lem="XW/RA">XW/RA|</w>
+<w id="EpJer.72..1" ana="A3C NSM" lem="KREI/SSWN">KREI/SSWN</w>
+<w id="EpJer.72..2" ana="X" lem="OU)=N">OU)=N</w>
+<w id="EpJer.72..3" ana="N2 NSM" lem="A)/NQRWPOS">A)/NQRWPOS</w>
+<w id="EpJer.72..4" ana="A1A NSM" lem="DI/KAIOS">DI/KAIOS</w>
+<w id="EpJer.72..5" ana="D" lem="OU)">OU)K</w>
+<w id="EpJer.72..6" ana="V1 PAPNSM" lem="E)/XW">E)/XWN</w>
+<w id="EpJer.72..7" ana="N2N APN" lem="EI)/DWLON">EI)/DWLA</w>
+<w id="EpJer.72..8" ana="VF FMI3S" lem="EI)MI/">E)/STAI</w>
+<w id="EpJer.72..9" ana="X" lem="GA/R">GA\R</w>
+<w id="EpJer.72..10" ana="D" lem="MAKRA/N">MAKRA\N</w>
+<w id="EpJer.72..11" ana="P" lem="A)PO/">A)PO\</w>
+<w id="EpJer.72..12" ana="N2 GSM" lem="O)NEIDISMO/S">O)NEIDISMOU=</w>

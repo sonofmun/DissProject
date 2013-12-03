@@ -1,0 +1,937 @@
+<w id="Nah.1.1.1" ana="N3M NSN" lem="LH=MMA">LH=MMA</w>
+<w id="Nah.1.1.2" ana="N DSF" lem="*NINEUH">*NINEUH</w>
+<w id="Nah.1.1.3" ana="N2N NSN" lem="BIBLI/ON">BIBLI/ON</w>
+<w id="Nah.1.1.4" ana="N3I GSF" lem="O(/RASIS">O(RA/SEWS</w>
+<w id="Nah.1.1.5" ana="N GSM" lem="*NAOUM">*NAOUM</w>
+<w id="Nah.1.1.6" ana="RA GSM" lem="O(">TOU=</w>
+<w id="Nah.1.1.7" ana="N GSM" lem="*ELKESAI/OS">*ELKESAI/OU</w>
+<w id="Nah.1.2.1" ana="N2 NSM" lem="QEO/S">QEO\S</w>
+<w id="Nah.1.2.2" ana="N1M NSM" lem="ZHLWTH/S">ZHLWTH\S</w>
+<w id="Nah.1.2.3" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.2.4" ana="V2 PAPNSM" lem="E)K-DIKE/W">E)KDIKW=N</w>
+<w id="Nah.1.2.5" ana="N2 NSM" lem="KU/RIOS">KU/RIOS</w>
+<w id="Nah.1.2.6" ana="V2 PAPNSM" lem="E)K-DIKE/W">E)KDIKW=N</w>
+<w id="Nah.1.2.7" ana="N2 NSM" lem="KU/RIOS">KU/RIOS</w>
+<w id="Nah.1.2.8" ana="P" lem="META/">META\</w>
+<w id="Nah.1.2.9" ana="N2 GSM" lem="QUMO/S">QUMOU=</w>
+<w id="Nah.1.2.10" ana="V2 PAPNSM" lem="E)K-DIKE/W">E)KDIKW=N</w>
+<w id="Nah.1.2.11" ana="N2 NSM" lem="KU/RIOS">KU/RIOS</w>
+<w id="Nah.1.2.12" ana="RA APM" lem="O(">TOU\S</w>
+<w id="Nah.1.2.13" ana="A1A APM" lem="U(PENANTI/OS">U(PENANTI/OUS</w>
+<w id="Nah.1.2.14" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.1.2.15" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.2.16" ana="V1 PAPNSM" lem="E)K-AI)/RW">E)CAI/RWN</w>
+<w id="Nah.1.2.17" ana="RD NSM" lem="AU)TO/S">AU)TO\S</w>
+<w id="Nah.1.2.18" ana="RA APM" lem="O(">TOU\S</w>
+<w id="Nah.1.2.19" ana="N2 APM" lem="E)XQRO/S">E)XQROU\S</w>
+<w id="Nah.1.2.20" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.1.3.1" ana="N2 NSM" lem="KU/RIOS">KU/RIOS</w>
+<w id="Nah.1.3.2" ana="A1B NSM" lem="MAKRO/QUMOS">MAKRO/QUMOS</w>
+<w id="Nah.1.3.3" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.3.4" ana="A1 NSF" lem="ME/GAS">MEGA/LH</w>
+<w id="Nah.1.3.5" ana="RA NSF" lem="O(">H(</w>
+<w id="Nah.1.3.6" ana="N3 NSF" lem="I)SXU/S">I)SXU\S</w>
+<w id="Nah.1.3.7" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.1.3.8" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.3.9" ana="V4 PAPNSM" lem="A)QW|O/W">A)QW|W=N</w>
+<w id="Nah.1.3.10" ana="D" lem="OU)">OU)K</w>
+<w id="Nah.1.3.11" ana="V4 FAI3S" lem="A)QW|O/W">A)QW|W/SEI</w>
+<w id="Nah.1.3.12" ana="N2 NSM" lem="KU/RIOS">KU/RIOS</w>
+<w id="Nah.1.3.13" ana="P" lem="E)N">E)N</w>
+<w id="Nah.1.3.14" ana="N1A DSF" lem="SUNTE/LEIA">SUNTELEI/A|</w>
+<w id="Nah.1.3.15" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.3.16" ana="P" lem="E)N">E)N</w>
+<w id="Nah.1.3.17" ana="N2 DSM" lem="SUSSEISMO/S">SUSSEISMW=|</w>
+<w id="Nah.1.3.18" ana="RA NSF" lem="O(">H(</w>
+<w id="Nah.1.3.19" ana="N2 NSF" lem="O(DO/S">O(DO\S</w>
+<w id="Nah.1.3.20" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.1.3.21" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.3.22" ana="N1 NPF" lem="NEFE/LH">NEFE/LAI</w>
+<w id="Nah.1.3.23" ana="N2 NSM" lem="KONIORTO/S">KONIORTO\S</w>
+<w id="Nah.1.3.24" ana="N3D GPM" lem="POU/S">PODW=N</w>
+<w id="Nah.1.3.25" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.1.4.1" ana="V2 PAPNSM" lem="A)PO-EI)LE/W">A)PEILW=N</w>
+<w id="Nah.1.4.2" ana="N1S DSF" lem="QA/LASSA">QALA/SSH|</w>
+<w id="Nah.1.4.3" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.4.4" ana="V1 PAPNSM" lem="CHRAI/NW">CHRAI/NWN</w>
+<w id="Nah.1.4.5" ana="RD ASF" lem="AU)TO/S">AU)TH\N</w>
+<w id="Nah.1.4.6" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.4.7" ana="A1S APM" lem="PA=S">PA/NTAS</w>
+<w id="Nah.1.4.8" ana="RA APM" lem="O(">TOU\S</w>
+<w id="Nah.1.4.9" ana="N2 APM" lem="POTAMO/S">POTAMOU\S</w>
+<w id="Nah.1.4.10" ana="V4 PAPNSM" lem="E)K-E)RHMO/W">E)CERHMW=N</w>
+<w id="Nah.1.4.11" ana="VCI API3S" lem="O)LIGO/W">W)LIGW/QH</w>
+<w id="Nah.1.4.12" ana="RA NSF" lem="O(">H(</w>
+<w id="Nah.1.4.13" ana="N3D NSM" lem="*BASANI=TIS">*BASANI=TIS</w>
+<w id="Nah.1.4.14" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.4.15" ana="RA NSM" lem="O(">O(</w>
+<w id="Nah.1.4.16" ana="N2 NSM" lem="*KA/RMHLOS">*KA/RMHLOS</w>
+<w id="Nah.1.4.17" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.4.18" ana="RA NPN" lem="O(">TA\</w>
+<w id="Nah.1.4.19" ana="V2 PAPNSN" lem="E)K-A)NQE/W">E)CANQOU=NTA</w>
+<w id="Nah.1.4.20" ana="RA GSM" lem="O(">TOU=</w>
+<w id="Nah.1.4.21" ana="N2 GSM" lem="*LI/BANOS">*LIBA/NOU</w>
+<w id="Nah.1.4.22" ana="VBI AAI3S" lem="E)K-LEI/PW">E)CE/LIPEN</w>
+<w id="Nah.1.5.1" ana="RA NPN" lem="O(">TA\</w>
+<w id="Nah.1.5.2" ana="N3E NPN" lem="O)/ROS">O)/RH</w>
+<w id="Nah.1.5.3" ana="VSI API3P" lem="SEI/W">E)SEI/SQHSAN</w>
+<w id="Nah.1.5.4" ana="P" lem="A)PO/">A)P'</w>
+<w id="Nah.1.5.5" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.1.5.6" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.5.7" ana="RA NPM" lem="O(">OI(</w>
+<w id="Nah.1.5.8" ana="N2 NPM" lem="BOUNO/S">BOUNOI\</w>
+<w id="Nah.1.5.9" ana="VCI API3P" lem="SALEU/W">E)SALEU/QHSAN</w>
+<w id="Nah.1.5.10" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.5.11" ana="VDI API3S" lem="A)NA-STE/LLW">A)NESTA/LH</w>
+<w id="Nah.1.5.12" ana="RA NSF" lem="O(">H(</w>
+<w id="Nah.1.5.13" ana="N1 NSF" lem="GH=">GH=</w>
+<w id="Nah.1.5.14" ana="P" lem="A)PO/">A)PO\</w>
+<w id="Nah.1.5.15" ana="N2N GSN" lem="PRO/SWPON">PROSW/POU</w>
+<w id="Nah.1.5.16" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.1.5.17" ana="RA NSF" lem="O(">H(</w>
+<w id="Nah.1.5.18" ana="A1S NSF" lem="SU/MPAS">SU/MPASA</w>
+<w id="Nah.1.5.19" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.5.20" ana="A1S NPM" lem="PA=S">PA/NTES</w>
+<w id="Nah.1.5.21" ana="RA NPM" lem="O(">OI(</w>
+<w id="Nah.1.5.22" ana="V2 PAPNPM" lem="KATA-OI)KE/W">KATOIKOU=NTES</w>
+<w id="Nah.1.5.23" ana="P" lem="E)N">E)N</w>
+<w id="Nah.1.5.24" ana="RD DSF" lem="AU)TO/S">AU)TH=|</w>
+<w id="Nah.1.6.1" ana="P" lem="A)PO/">A)PO\</w>
+<w id="Nah.1.6.2" ana="N2N GSN" lem="PRO/SWPON">PROSW/POU</w>
+<w id="Nah.1.6.3" ana="N1 GSF" lem="O)RGH/">O)RGH=S</w>
+<w id="Nah.1.6.4" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.1.6.5" ana="RI NSM" lem="TI/S">TI/S</w>
+<w id="Nah.1.6.6" ana="VF FMI3S" lem="U(PO-I(/STHMI">U(POSTH/SETAI</w>
+<w id="Nah.1.6.7" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.6.8" ana="RI NSM" lem="TI/S">TI/S</w>
+<w id="Nah.1.6.9" ana="VF FMI3S" lem="A)NTI-I(/STHMI">A)NTISTH/SETAI</w>
+<w id="Nah.1.6.10" ana="P" lem="E)N">E)N</w>
+<w id="Nah.1.6.11" ana="N1 DSF" lem="O)RGH/">O)RGH=|</w>
+<w id="Nah.1.6.12" ana="N2 GSM" lem="QUMO/S">QUMOU=</w>
+<w id="Nah.1.6.13" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.1.6.14" ana="RA NSM" lem="O(">O(</w>
+<w id="Nah.1.6.15" ana="N2 NSM" lem="QUMO/S">QUMO\S</w>
+<w id="Nah.1.6.16" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.1.6.17" ana="V1 PAI3S" lem="TH/KW">TH/KEI</w>
+<w id="Nah.1.6.18" ana="N1 APF" lem="A)RXH/">A)RXA/S</w>
+<w id="Nah.1.6.19" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.6.20" ana="RA NPF" lem="O(">AI(</w>
+<w id="Nah.1.6.21" ana="N1A NPF" lem="PE/TRA">PE/TRAI</w>
+<w id="Nah.1.6.22" ana="VDI API3P" lem="DIA-QRU/PTW">DIEQRU/BHSAN</w>
+<w id="Nah.1.6.23" ana="P" lem="A)PO/">A)P'</w>
+<w id="Nah.1.6.24" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.1.7.1" ana="A1 NSM" lem="XRHSTO/S">XRHSTO\S</w>
+<w id="Nah.1.7.2" ana="N2 NSM" lem="KU/RIOS">KU/RIOS</w>
+<w id="Nah.1.7.3" ana="RA DPM" lem="O(">TOI=S</w>
+<w id="Nah.1.7.4" ana="V1 PAPDPM" lem="U(PO-ME/NW">U(POME/NOUSIN</w>
+<w id="Nah.1.7.5" ana="RD ASM" lem="AU)TO/S">AU)TO\N</w>
+<w id="Nah.1.7.6" ana="P" lem="E)N">E)N</w>
+<w id="Nah.1.7.7" ana="N1A DSF" lem="H(ME/RA">H(ME/RA|</w>
+<w id="Nah.1.7.8" ana="N3I GSF" lem="QLI=YIS">QLI/YEWS</w>
+<w id="Nah.1.7.9" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.7.10" ana="V1 PAPNSM" lem="GIGNW/SKW">GINW/SKWN</w>
+<w id="Nah.1.7.11" ana="RA APM" lem="O(">TOU\S</w>
+<w id="Nah.1.7.12" ana="V2 PMPAPM" lem="EU)LABE/OMAI">EU)LABOUME/NOUS</w>
+<w id="Nah.1.7.13" ana="RD ASM" lem="AU)TO/S">AU)TO/N</w>
+<w id="Nah.1.8.1" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.8.2" ana="P" lem="E)N">E)N</w>
+<w id="Nah.1.8.3" ana="N2 DSM" lem="KATAKLUSMO/S">KATAKLUSMW=|</w>
+<w id="Nah.1.8.4" ana="N1A GSF" lem="POREI/A">POREI/AS</w>
+<w id="Nah.1.8.5" ana="N1A ASF" lem="SUNTE/LEIA">SUNTE/LEIAN</w>
+<w id="Nah.1.8.6" ana="VF FMI3S" lem="POIE/W">POIH/SETAI</w>
+<w id="Nah.1.8.7" ana="RA APM" lem="O(">TOU\S</w>
+<w id="Nah.1.8.8" ana="V1 PMPAPM" lem="E)PI-E)GEI/RW">E)PEGEIROME/NOUS</w>
+<w id="Nah.1.8.9" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.8.10" ana="RA APM" lem="O(">TOU\S</w>
+<w id="Nah.1.8.11" ana="N2 APM" lem="E)XQRO/S">E)XQROU\S</w>
+<w id="Nah.1.8.12" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.1.8.13" ana="VF FMI3S" lem="DIW/KW">DIW/CETAI</w>
+<w id="Nah.1.8.14" ana="N3E NSN" lem="SKO/TOS">SKO/TOS</w>
+<w id="Nah.1.9.1" ana="RI ASN" lem="TI/S">TI/</w>
+<w id="Nah.1.9.2" ana="V1 PMI2P" lem="LOGI/ZOMAI">LOGI/ZESQE</w>
+<w id="Nah.1.9.3" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Nah.1.9.4" ana="RA ASM" lem="O(">TO\N</w>
+<w id="Nah.1.9.5" ana="N2 ASM" lem="KU/RIOS">KU/RION</w>
+<w id="Nah.1.9.6" ana="N1A ASF" lem="SUNTE/LEIA">SUNTE/LEIAN</w>
+<w id="Nah.1.9.7" ana="RD NSM" lem="AU)TO/S">AU)TO\S</w>
+<w id="Nah.1.9.8" ana="VF FMI3S" lem="POIE/W">POIH/SETAI</w>
+<w id="Nah.1.9.9" ana="D" lem="OU)">OU)K</w>
+<w id="Nah.1.9.10" ana="VF FAI3S" lem="E)K-DIKE/W">E)KDIKH/SEI</w>
+<w id="Nah.1.9.11" ana="D" lem="DI/S">DI\S</w>
+<w id="Nah.1.9.12" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Nah.1.9.13" ana="RA ASN" lem="O(">TO\</w>
+<w id="Nah.1.9.14" ana="RD ASN" lem="AU)TO/S">AU)TO\</w>
+<w id="Nah.1.9.15" ana="P" lem="E)N">E)N</w>
+<w id="Nah.1.9.16" ana="N3I DSF" lem="QLI=YIS">QLI/YEI</w>
+<w id="Nah.1.10.1" ana="C" lem="O(/TI">O(/TI</w>
+<w id="Nah.1.10.2" ana="P" lem="E(/WS">E(/WS</w>
+<w id="Nah.1.10.3" ana="N2N GSN" lem="QEME/LION">QEMELI/OU</w>
+<w id="Nah.1.10.4" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Nah.1.10.5" ana="VC FPI3S" lem="XERSO/W">XERSWQH/SETAI</w>
+<w id="Nah.1.10.6" ana="D" lem="KAI/">KAI\</w>
+<w id="Nah.1.10.7" ana="C" lem="W(S">W(S</w>
+<w id="Nah.1.10.8" ana="N3K NSF" lem="SMI=LAC">SMI=LAC</w>
+<w id="Nah.1.10.9" ana="V4 PAPNSF" lem="PERI-PLE/KW">PERIPLEKOME/NH</w>
+<w id="Nah.1.10.10" ana="VC FPI3S" lem="BIBRW/SKW">BRWQH/SETAI</w>
+<w id="Nah.1.10.11" ana="D" lem="KAI/">KAI\</w>
+<w id="Nah.1.10.12" ana="C" lem="W(S">W(S</w>
+<w id="Nah.1.10.13" ana="N1 NSF" lem="KALA/MH">KALA/MH</w>
+<w id="Nah.1.10.14" ana="N1A GSF" lem="CHRASI/A">CHRASI/AS</w>
+<w id="Nah.1.10.15" ana="A1 NSF" lem="MESTO/S">MESTH/</w>
+<w id="Nah.1.11.1" ana="P" lem="E)K">E)K</w>
+<w id="Nah.1.11.2" ana="RP GS" lem="SU/">SOU=</w>
+<w id="Nah.1.11.3" ana="VF FMI3S" lem="E)K-E)/RXOMAI">E)CELEU/SETAI</w>
+<w id="Nah.1.11.4" ana="N2 NSM" lem="LOGISMO/S">LOGISMO\S</w>
+<w id="Nah.1.11.5" ana="P" lem="KATA/">KATA\</w>
+<w id="Nah.1.11.6" ana="RA GSM" lem="O(">TOU=</w>
+<w id="Nah.1.11.7" ana="N2 GSM" lem="KU/RIOS">KURI/OU</w>
+<w id="Nah.1.11.8" ana="A1A APN" lem="PONHRO/S">PONHRA\</w>
+<w id="Nah.1.11.9" ana="V1 PMPNSM" lem="LOGI/ZOMAI">LOGIZO/MENOS</w>
+<w id="Nah.1.11.10" ana="A1A APN" lem="E)NANTI/OS">E)NANTI/A</w>
+<w id="Nah.1.12.1" ana="RD APN" lem="O(/DE">TA/DE</w>
+<w id="Nah.1.12.2" ana="V1 PAI3S" lem="LE/GW">LE/GEI</w>
+<w id="Nah.1.12.3" ana="N2 NSM" lem="KU/RIOS">KU/RIOS</w>
+<w id="Nah.1.12.4" ana="V1 PAPNSM" lem="KATA-A)/RXW">KATA/RXWN</w>
+<w id="Nah.1.12.5" ana="N3T GPN" lem="U(/DWR">U(DA/TWN</w>
+<w id="Nah.1.12.6" ana="A1 GPN" lem="POLU/S">POLLW=N</w>
+<w id="Nah.1.12.7" ana="D" lem="KAI/">KAI\</w>
+<w id="Nah.1.12.8" ana="D" lem="OU(/TWS">OU(/TWS</w>
+<w id="Nah.1.12.9" ana="VD FPI3P" lem="DIA-STE/LLW">DIASTALH/SONTAI</w>
+<w id="Nah.1.12.10" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.12.11" ana="RA NSF" lem="O(">H(</w>
+<w id="Nah.1.12.12" ana="N1 NSF" lem="A)KOH/">A)KOH/</w>
+<w id="Nah.1.12.13" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.1.12.14" ana="D" lem="OU)">OU)K</w>
+<w id="Nah.1.12.15" ana="VC FPI3S" lem="E)N-A)KOU/W">E)NAKOUSQH/SETAI</w>
+<w id="Nah.1.12.16" ana="D" lem="E)/TI">E)/TI</w>
+<w id="Nah.1.13.1" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.13.2" ana="D" lem="NU=N">NU=N</w>
+<w id="Nah.1.13.3" ana="VF FAI1S" lem="SUN-TRI/BW">SUNTRI/YW</w>
+<w id="Nah.1.13.4" ana="RA ASF" lem="O(">TH\N</w>
+<w id="Nah.1.13.5" ana="N2 ASF" lem="R(A/BDOS">R(A/BDON</w>
+<w id="Nah.1.13.6" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.1.13.7" ana="P" lem="A)PO/">A)PO\</w>
+<w id="Nah.1.13.8" ana="RP GS" lem="SU/">SOU=</w>
+<w id="Nah.1.13.9" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.13.10" ana="RA APM" lem="O(">TOU\S</w>
+<w id="Nah.1.13.11" ana="N2 APM" lem="DESMO/S">DESMOU/S</w>
+<w id="Nah.1.13.12" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.1.13.13" ana="VF FAI1S" lem="DIA-R(H/GNUMI">DIARRH/CW</w>
+<w id="Nah.1.14.1" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.14.2" ana="V2 PMI3S" lem="E)N-TELE/W">E)NTELEI=TAI</w>
+<w id="Nah.1.14.3" ana="P" lem="U(PE/R">U(PE\R</w>
+<w id="Nah.1.14.4" ana="RP GS" lem="SU/">SOU=</w>
+<w id="Nah.1.14.5" ana="N2 NSM" lem="KU/RIOS">KU/RIOS</w>
+<w id="Nah.1.14.6" ana="D" lem="OU)">OU)</w>
+<w id="Nah.1.14.7" ana="VD FPI3S" lem="SPEI/RW">SPARH/SETAI</w>
+<w id="Nah.1.14.8" ana="P" lem="E)K">E)K</w>
+<w id="Nah.1.14.9" ana="RA GSN" lem="O(">TOU=</w>
+<w id="Nah.1.14.10" ana="N3M GSN" lem="O)/NOMA">O)NO/MATO/S</w>
+<w id="Nah.1.14.11" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.1.14.12" ana="D" lem="E)/TI">E)/TI</w>
+<w id="Nah.1.14.13" ana="P" lem="E)K">E)C</w>
+<w id="Nah.1.14.14" ana="N2 GSM" lem="OI)=KOS">OI)/KOU</w>
+<w id="Nah.1.14.15" ana="N2 GSM" lem="QEO/S">QEOU=</w>
+<w id="Nah.1.14.16" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.1.14.17" ana="VF FAI1S" lem="E)K-O)LEQREU/W">E)COLEQREU/SW</w>
+<w id="Nah.1.14.18" ana="RA APN" lem="O(">TA\</w>
+<w id="Nah.1.14.19" ana="A1 APN" lem="GLUPTO/S">GLUPTA\</w>
+<w id="Nah.1.14.20" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.1.14.21" ana="A1 APN" lem="XWNEUTO/S">XWNEUTA/</w>
+<w id="Nah.1.14.22" ana="VF FMI1S" lem="TI/QHMI">QH/SOMAI</w>
+<w id="Nah.1.14.23" ana="N1A ASF" lem="TAFH/">TAFH/N</w>
+<w id="Nah.1.14.24" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.1.14.25" ana="C" lem="O(/TI">O(/TI</w>
+<w id="Nah.1.14.26" ana="A3U APN" lem="TAXU/S">TAXEI=S</w>
+<w id="Nah.2.1.1" ana="I" lem="I)DOU/">I)DOU\</w>
+<w id="Nah.2.1.2" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Nah.2.1.3" ana="RA APN" lem="O(">TA\</w>
+<w id="Nah.2.1.4" ana="N3E APN" lem="O)/ROS">O)/RH</w>
+<w id="Nah.2.1.5" ana="RA NPM" lem="O(">OI(</w>
+<w id="Nah.2.1.6" ana="N3D NPM" lem="POU/S">PO/DES</w>
+<w id="Nah.2.1.7" ana="V1 PMPGSM" lem="EU)AGGELI/ZW">EU)AGGELIZOME/NOU</w>
+<w id="Nah.2.1.8" ana="D" lem="KAI/">KAI\</w>
+<w id="Nah.2.1.9" ana="V1 PAPGSM" lem="A)PO-A)GGE/LLW">A)PAGGE/LLONTOS</w>
+<w id="Nah.2.1.10" ana="N1 ASF" lem="EI)RH/NH">EI)RH/NHN</w>
+<w id="Nah.2.1.11" ana="V1 PAD2S" lem="E(ORTA/ZW">E(O/RTAZE</w>
+<w id="Nah.2.1.12" ana="N VSM" lem="*IOUDA">*IOUDA</w>
+<w id="Nah.2.1.13" ana="RA APF" lem="O(">TA\S</w>
+<w id="Nah.2.1.14" ana="N1 APF" lem="E(ORTH/">E(ORTA/S</w>
+<w id="Nah.2.1.15" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.2.1.16" ana="VO AAD2S" lem="A)PO-DI/DWMI">A)PO/DOS</w>
+<w id="Nah.2.1.17" ana="RA APF" lem="O(">TA\S</w>
+<w id="Nah.2.1.18" ana="N1 APF" lem="EU)XH/">EU)XA/S</w>
+<w id="Nah.2.1.19" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.2.1.20" ana="C" lem="DIO/TI">DIO/TI</w>
+<w id="Nah.2.1.21" ana="D" lem="OU)">OU)</w>
+<w id="Nah.2.1.22" ana="D" lem="MH/">MH\</w>
+<w id="Nah.2.1.23" ana="VF FAI3P" lem="PROS-TI/QHMI">PROSQH/SWSIN</w>
+<w id="Nah.2.1.24" ana="D" lem="E)/TI">E)/TI</w>
+<w id="Nah.2.1.25" ana="RA GSN" lem="O(">TOU=</w>
+<w id="Nah.2.1.26" ana="VB AAN" lem="DIA-E)/RXOMAI">DIELQEI=N</w>
+<w id="Nah.2.1.27" ana="P" lem="DIA/">DIA\</w>
+<w id="Nah.2.1.28" ana="RP GS" lem="SU/">SOU=</w>
+<w id="Nah.2.1.29" ana="P" lem="EI)S">EI)S</w>
+<w id="Nah.2.1.30" ana="VB AAS3P" lem="PALAI/W">PALAI/WSIN</w>
+<w id="Nah.2.1.31" ana="VX XMI3S" lem="SUN-TELE/W">SUNTETE/LESTAI</w>
+<w id="Nah.2.1.32" ana="VX XMI3S" lem="E)K-AI)/RW">E)CH=RTAI</w>
+<w id="Nah.2.2.1" ana="VZI AAI3S" lem="A)NA-BAI/NW">A)NE/BH</w>
+<w id="Nah.2.2.2" ana="V3 PAPNSM" lem="E)N-FUSA/W">E)MFUSW=N</w>
+<w id="Nah.2.2.3" ana="P" lem="EI)S">EI)S</w>
+<w id="Nah.2.2.4" ana="N2N ASN" lem="PRO/SWPON">PRO/SWPO/N</w>
+<w id="Nah.2.2.5" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.2.2.6" ana="V2 PMPNSM" lem="E)K-AI(RE/W">E)CAIROU/MENOS</w>
+<w id="Nah.2.2.7" ana="P" lem="E)K">E)K</w>
+<w id="Nah.2.2.8" ana="N3I GSF" lem="QLI=YIS">QLI/YEWS</w>
+<w id="Nah.2.2.9" ana="VA AAD2S" lem="SKOPEU/W">SKO/PEUSON</w>
+<w id="Nah.2.2.10" ana="N2 ASF" lem="O(DO/S">O(DO/N</w>
+<w id="Nah.2.2.11" ana="VA AAD2S" lem="KRATE/W">KRA/THSON</w>
+<w id="Nah.2.2.12" ana="N3U GSF" lem="O)SFU/S">O)SFU/OS</w>
+<w id="Nah.2.2.13" ana="VA AAN" lem="A)NDRI/ZOMAI">A)/NDRISAI</w>
+<w id="Nah.2.2.14" ana="RA DSF" lem="O(">TH=|</w>
+<w id="Nah.2.2.15" ana="N3U DSF" lem="I)SXU/S">I)SXU/I</w>
+<w id="Nah.2.2.16" ana="D" lem="SFO/DRA">SFO/DRA</w>
+<w id="Nah.2.3.1" ana="C" lem="DIO/TI">DIO/TI</w>
+<w id="Nah.2.3.2" ana="VAI AAI3S" lem="A)PO-STRE/FW">A)PE/STREYEN</w>
+<w id="Nah.2.3.3" ana="N2 NSM" lem="KU/RIOS">KU/RIOS</w>
+<w id="Nah.2.3.4" ana="RA ASF" lem="O(">TH\N</w>
+<w id="Nah.2.3.5" ana="N3I ASF" lem="U(/BRIS">U(/BRIN</w>
+<w id="Nah.2.3.6" ana="N GSM" lem="*I)AKW/B">*IAKWB</w>
+<w id="Nah.2.3.7" ana="D" lem="KAQW/S">KAQW\S</w>
+<w id="Nah.2.3.8" ana="N3I ASF" lem="U(/BRIS">U(/BRIN</w>
+<w id="Nah.2.3.9" ana="RA GSM" lem="O(">TOU=</w>
+<w id="Nah.2.3.10" ana="N GSM" lem="*I)SRAH/L">*ISRAHL</w>
+<w id="Nah.2.3.11" ana="C" lem="DIO/TI">DIO/TI</w>
+<w id="Nah.2.3.12" ana="V1 PAPNPM" lem="E)K-TINA/SSW">E)KTINA/SSONTES</w>
+<w id="Nah.2.3.13" ana="VAI AAI3P" lem="E)K-TINA/SSW">E)CETI/NACAN</w>
+<w id="Nah.2.3.14" ana="RD APM" lem="AU)TO/S">AU)TOU\S</w>
+<w id="Nah.2.3.15" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.3.16" ana="RA APN" lem="O(">TA\</w>
+<w id="Nah.2.3.17" ana="N3M APN" lem="KLH=MA">KLH/MATA</w>
+<w id="Nah.2.3.18" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Nah.2.3.19" ana="VAI AAI3P" lem="DIA-FQEI/RW">DIE/FQEIRAN</w>
+<w id="Nah.2.4.1" ana="N2N APN" lem="O(/PLON">O(/PLA</w>
+<w id="Nah.2.4.2" ana="N1A GSF" lem="DUNASTEI/A">DUNASTEI/AS</w>
+<w id="Nah.2.4.3" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Nah.2.4.4" ana="P" lem="E)K">E)C</w>
+<w id="Nah.2.4.5" ana="N2 GPM" lem="A)/NQRWPOS">A)NQRW/PWN</w>
+<w id="Nah.2.4.6" ana="N3 APM" lem="A)NH/R">A)/NDRAS</w>
+<w id="Nah.2.4.7" ana="A1 APM" lem="DUNATO/S">DUNATOU\S</w>
+<w id="Nah.2.4.8" ana="V1 PAPAPM" lem="E)N-PAI/ZW">E)MPAI/ZONTAS</w>
+<w id="Nah.2.4.9" ana="P" lem="E)N">E)N</w>
+<w id="Nah.2.4.10" ana="N3 DSN" lem="PU=R">PURI/</w>
+<w id="Nah.2.4.11" ana="RA NPF" lem="O(">AI(</w>
+<w id="Nah.2.4.12" ana="N1A NPF" lem="H(NI/A">H(NI/AI</w>
+<w id="Nah.2.4.13" ana="RA GPN" lem="O(">TW=N</w>
+<w id="Nah.2.4.14" ana="N3M GPN" lem="A(/RMA">A(RMA/TWN</w>
+<w id="Nah.2.4.15" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Nah.2.4.16" ana="P" lem="E)N">E)N</w>
+<w id="Nah.2.4.17" ana="N1A DSF" lem="H(ME/RA">H(ME/RA|</w>
+<w id="Nah.2.4.18" ana="N1A GSF" lem="E(TOIMASI/A">E(TOIMASI/AS</w>
+<w id="Nah.2.4.19" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.2.4.20" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.4.21" ana="RA NPM" lem="O(">OI(</w>
+<w id="Nah.2.4.22" ana="N3V NPM" lem="I(PPEU/S">I(PPEI=S</w>
+<w id="Nah.2.4.23" ana="VF FPI3P" lem="QORUBE/W">QORUBHQH/SONTAI</w>
+<w id="Nah.2.5.1" ana="P" lem="E)N">E)N</w>
+<w id="Nah.2.5.2" ana="RA DPF" lem="O(">TAI=S</w>
+<w id="Nah.2.5.3" ana="N2 DPF" lem="O(DO/S">O(DOI=S</w>
+<w id="Nah.2.5.4" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.5.5" ana="VC FPI3P" lem="SUN-XE/W">SUGXUQH/SONTAI</w>
+<w id="Nah.2.5.6" ana="RA APN" lem="O(">TA\</w>
+<w id="Nah.2.5.7" ana="N3M APN" lem="A(/RMA">A(/RMATA</w>
+<w id="Nah.2.5.8" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.5.9" ana="VD FPI3P" lem="SUN-PLE/KW">SUMPLAKH/SONTAI</w>
+<w id="Nah.2.5.10" ana="P" lem="E)N">E)N</w>
+<w id="Nah.2.5.11" ana="RA DPF" lem="O(">TAI=S</w>
+<w id="Nah.2.5.12" ana="A3U DPF" lem="PLATU/S">PLATEI/AIS</w>
+<w id="Nah.2.5.13" ana="RA NSF" lem="O(">H(</w>
+<w id="Nah.2.5.14" ana="N3I NSF" lem="O(/RASIS">O(/RASIS</w>
+<w id="Nah.2.5.15" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Nah.2.5.16" ana="C" lem="W(S">W(S</w>
+<w id="Nah.2.5.17" ana="N3D NPF" lem="LAMPA/S">LAMPA/DES</w>
+<w id="Nah.2.5.18" ana="N3R GSN" lem="PU=R">PURO\S</w>
+<w id="Nah.2.5.19" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.5.20" ana="C" lem="W(S">W(S</w>
+<w id="Nah.2.5.21" ana="N1 NPF" lem="A)STRAPH/">A)STRAPAI\</w>
+<w id="Nah.2.5.22" ana="V1 PAPNPF" lem="DIA-TRE/XW">DIATRE/XOUSAI</w>
+<w id="Nah.2.6.1" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.6.2" ana="VS FPI3P" lem="MIMNH/SKW">MNHSQH/SONTAI</w>
+<w id="Nah.2.6.3" ana="RA NPM" lem="O(">OI(</w>
+<w id="Nah.2.6.4" ana="N3 NPM" lem="MEGISTA/N">MEGISTA=NES</w>
+<w id="Nah.2.6.5" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Nah.2.6.6" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.6.7" ana="VF FMI3P" lem="FEU/GW">FEU/CONTAI</w>
+<w id="Nah.2.6.8" ana="N1A APF" lem="H(ME/RA">H(ME/RAS</w>
+<w id="Nah.2.6.9" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.6.10" ana="VF FAI3P" lem="A)SQENE/W">A)SQENH/SOUSIN</w>
+<w id="Nah.2.6.11" ana="P" lem="E)N">E)N</w>
+<w id="Nah.2.6.12" ana="RA DSF" lem="O(">TH=|</w>
+<w id="Nah.2.6.13" ana="N1A DSF" lem="POREI/A">POREI/A|</w>
+<w id="Nah.2.6.14" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Nah.2.6.15" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.6.16" ana="VF FAI3P" lem="SPEU/DW">SPEU/SOUSIN</w>
+<w id="Nah.2.6.17" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Nah.2.6.18" ana="RA APN" lem="O(">TA\</w>
+<w id="Nah.2.6.19" ana="N3E APN" lem="TEI=XOS">TEI/XH</w>
+<w id="Nah.2.6.20" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.6.21" ana="VF FAI3P" lem="E(TOIMA/ZW">E(TOIMA/SOUSIN</w>
+<w id="Nah.2.6.22" ana="RA APF" lem="O(">TA\S</w>
+<w id="Nah.2.6.23" ana="N1 APF" lem="PROFULAKH/">PROFULAKA\S</w>
+<w id="Nah.2.6.24" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Nah.2.7.1" ana="N1 NPF" lem="PU/LH">PU/LAI</w>
+<w id="Nah.2.7.2" ana="RA GPM" lem="O(">TW=N</w>
+<w id="Nah.2.7.3" ana="N2 GPM" lem="POTAMO/S">POTAMW=N</w>
+<w id="Nah.2.7.4" ana="VQI API3P" lem="DIA   A)NA-OI)/GW">DIHNOI/XQHSAN</w>
+<w id="Nah.2.7.5" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.7.6" ana="RA NPN" lem="O(">TA\</w>
+<w id="Nah.2.7.7" ana="N2N NPN" lem="BASI/LEION">BASI/LEIA</w>
+<w id="Nah.2.7.8" ana="VAI AAI3S" lem="DIA-PI/PTW">DIE/PESEN</w>
+<w id="Nah.2.8.1" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.8.2" ana="RA NSF" lem="O(">H(</w>
+<w id="Nah.2.8.3" ana="N3I NSF" lem="U(PO/STASIS">U(PO/STASIS</w>
+<w id="Nah.2.8.4" ana="VV API3S" lem="A)PO-KALU/PTW">A)PEKALU/FQH</w>
+<w id="Nah.2.8.5" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.8.6" ana="RD NSF" lem="OU(=TOS">AU(/TH</w>
+<w id="Nah.2.8.7" ana="V1I IAI3S" lem="A)NA-BAI/NW">A)NE/BAINEN</w>
+<w id="Nah.2.8.8" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.8.9" ana="RA NPF" lem="O(">AI(</w>
+<w id="Nah.2.8.10" ana="N1 NPF" lem="DOU/LH">DOU=LAI</w>
+<w id="Nah.2.8.11" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="Nah.2.8.12" ana="V1I IMI3P" lem="A)/GW">H)/GONTO</w>
+<w id="Nah.2.8.13" ana="D" lem="KAQW/S">KAQW\S</w>
+<w id="Nah.2.8.14" ana="N1A NPF" lem="PERISTERA/">PERISTERAI\</w>
+<w id="Nah.2.8.15" ana="V1 PMPNPF" lem="FQE/GGOMAI">FQEGGO/MENAI</w>
+<w id="Nah.2.8.16" ana="P" lem="E)N">E)N</w>
+<w id="Nah.2.8.17" ana="N1A DPF" lem="KARDI/A">KARDI/AIS</w>
+<w id="Nah.2.8.18" ana="RD GPF" lem="AU)TO/S">AU)TW=N</w>
+<w id="Nah.2.9.1" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.9.2" ana="N NSF" lem="*NINEUH">*NINEUH</w>
+<w id="Nah.2.9.3" ana="C" lem="W(S">W(S</w>
+<w id="Nah.2.9.4" ana="N1A NSF" lem="KOLUMBH/QRA">KOLUMBH/QRA</w>
+<w id="Nah.2.9.5" ana="N3T GSN" lem="U(/DWR">U(/DATOS</w>
+<w id="Nah.2.9.6" ana="RA NPN" lem="O(">TA\</w>
+<w id="Nah.2.9.7" ana="N3T NPN" lem="U(/DWR">U(/DATA</w>
+<w id="Nah.2.9.8" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="Nah.2.9.9" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.9.10" ana="RD NPM" lem="AU)TO/S">AU)TOI\</w>
+<w id="Nah.2.9.11" ana="V1 PAPNPM" lem="FEU/GW">FEU/GONTES</w>
+<w id="Nah.2.9.12" ana="D" lem="OU)">OU)K</w>
+<w id="Nah.2.9.13" ana="VAI AAI3P" lem="I(/STHMI">E)/STHSAN</w>
+<w id="Nah.2.9.14" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.9.15" ana="D" lem="OU)">OU)K</w>
+<w id="Nah.2.9.16" ana="V9 IAI3S" lem="EI)MI/">H)=N</w>
+<w id="Nah.2.9.17" ana="RA NSM" lem="O(">O(</w>
+<w id="Nah.2.9.18" ana="V1 PAPNSM" lem="E)PI-BLE/PW">E)PIBLE/PWN</w>
+<w id="Nah.2.10.1" ana="V1I IAI3P" lem="DIA-A(RPA/ZW">DIH/RPAZON</w>
+<w id="Nah.2.10.2" ana="RA ASN" lem="O(">TO\</w>
+<w id="Nah.2.10.3" ana="N2N ASN" lem="A)RGU/RION">A)RGU/RION</w>
+<w id="Nah.2.10.4" ana="V1I IAI3P" lem="DIA-A(RPA/ZW">DIH/RPAZON</w>
+<w id="Nah.2.10.5" ana="RA ASN" lem="O(">TO\</w>
+<w id="Nah.2.10.6" ana="N2N ASN" lem="XRUSI/ON">XRUSI/ON</w>
+<w id="Nah.2.10.7" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.10.8" ana="D" lem="OU)">OU)K</w>
+<w id="Nah.2.10.9" ana="V9 IAI3S" lem="EI)MI/">H)=N</w>
+<w id="Nah.2.10.10" ana="N3T NSN" lem="PE/RAS">PE/RAS</w>
+<w id="Nah.2.10.11" ana="RA GSM" lem="O(">TOU=</w>
+<w id="Nah.2.10.12" ana="N2 GSM" lem="KO/SMOS">KO/SMOU</w>
+<w id="Nah.2.10.13" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="Nah.2.10.14" ana="VX XAI3P" lem="BARU/NW">BEBA/RUNTAI</w>
+<w id="Nah.2.10.15" ana="P" lem="U(PE/R">U(PE\R</w>
+<w id="Nah.2.10.16" ana="A1S ASN" lem="PA=S">PA/NTA</w>
+<w id="Nah.2.10.17" ana="RA APN" lem="O(">TA\</w>
+<w id="Nah.2.10.18" ana="N3E APN" lem="SKEU=OS">SKEU/H</w>
+<w id="Nah.2.10.19" ana="RA APN" lem="O(">TA\</w>
+<w id="Nah.2.10.20" ana="A1 APN" lem="E)PIQUMHTO/S">E)PIQUMHTA\</w>
+<w id="Nah.2.10.21" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="Nah.2.11.1" ana="N2 NSM" lem="E)KTINAGMO/S">E)KTINAGMO\S</w>
+<w id="Nah.2.11.2" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.11.3" ana="N2 NSM" lem="A)NATINAGMO/S">A)NATINAGMO\S</w>
+<w id="Nah.2.11.4" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.11.5" ana="N2 NSM" lem="E)KBRASMO/S">E)KBRASMO\S</w>
+<w id="Nah.2.11.6" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.11.7" ana="N1A GSF" lem="KARDI/A">KARDI/AS</w>
+<w id="Nah.2.11.8" ana="N2 NSM" lem="QRAUSMO/S">QRAUSMO\S</w>
+<w id="Nah.2.11.9" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.11.10" ana="N3I NSF" lem="U(PO/LUSIS">U(PO/LUSIS</w>
+<w id="Nah.2.11.11" ana="N3 GPN" lem="GO/NU">GONA/TWN</w>
+<w id="Nah.2.11.12" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.11.13" ana="N3 NPF" lem="W)DI/N">W)DI=NES</w>
+<w id="Nah.2.11.14" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Nah.2.11.15" ana="A1S ASF" lem="PA=S">PA=SAN</w>
+<w id="Nah.2.11.16" ana="N3U ASF" lem="O)SFU/S">O)SFU/N</w>
+<w id="Nah.2.11.17" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.11.18" ana="RA ASN" lem="O(">TO\</w>
+<w id="Nah.2.11.19" ana="N2N ASN" lem="PRO/SWPON">PRO/SWPON</w>
+<w id="Nah.2.11.20" ana="A1S GPM" lem="PA=S">PA/NTWN</w>
+<w id="Nah.2.11.21" ana="C" lem="W(S">W(S</w>
+<w id="Nah.2.11.22" ana="N3M NSN" lem="PRO/SKAUMA">PRO/SKAUMA</w>
+<w id="Nah.2.11.23" ana="N1A GSF" lem="XU/TRA">XU/TRAS</w>
+<w id="Nah.2.12.1" ana="D" lem="POU=">POU=</w>
+<w id="Nah.2.12.2" ana="V9 PAI3S" lem="EI)MI/">E)STIN</w>
+<w id="Nah.2.12.3" ana="RA NSN" lem="O(">TO\</w>
+<w id="Nah.2.12.4" ana="N2 NSN" lem="KATOIKHTH/RION">KATOIKHTH/RION</w>
+<w id="Nah.2.12.5" ana="RA GPM" lem="O(">TW=N</w>
+<w id="Nah.2.12.6" ana="N3 GPM" lem="LE/WN">LEO/NTWN</w>
+<w id="Nah.2.12.7" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.12.8" ana="RA NSF" lem="O(">H(</w>
+<w id="Nah.2.12.9" ana="N1 NSF" lem="NOMH/">NOMH\</w>
+<w id="Nah.2.12.10" ana="RA NSF" lem="O(">H(</w>
+<w id="Nah.2.12.11" ana="V9 PAPNSF" lem="EI)MI/">OU)=SA</w>
+<w id="Nah.2.12.12" ana="RA DPM" lem="O(">TOI=S</w>
+<w id="Nah.2.12.13" ana="N2 DPM" lem="SKU/MNOS">SKU/MNOIS</w>
+<w id="Nah.2.12.14" ana="RR GSM" lem="O(/S">OU(=</w>
+<w id="Nah.2.12.15" ana="VCI API3S" lem="POREU/OMAI">E)POREU/QH</w>
+<w id="Nah.2.12.16" ana="N3W NSM" lem="LE/WN">LE/WN</w>
+<w id="Nah.2.12.17" ana="RA GSN" lem="O(">TOU=</w>
+<w id="Nah.2.12.18" ana="VB AAN" lem="EI)S-E)/RXOMAI">EI)SELQEI=N</w>
+<w id="Nah.2.12.19" ana="D" lem="E)KEI=">E)KEI=</w>
+<w id="Nah.2.12.20" ana="N2 NSM" lem="SKU/MNOS">SKU/MNOS</w>
+<w id="Nah.2.12.21" ana="N3 GSM" lem="LE/WN">LE/ONTOS</w>
+<w id="Nah.2.12.22" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.12.23" ana="D" lem="OU)">OU)K</w>
+<w id="Nah.2.12.24" ana="V9 IAI3S" lem="EI)MI/">H)=N</w>
+<w id="Nah.2.12.25" ana="RA NSM" lem="O(">O(</w>
+<w id="Nah.2.12.26" ana="V2 PAPNSM" lem="E)K-FOBE/W">E)KFOBW=N</w>
+<w id="Nah.2.13.1" ana="N3W NSM" lem="LE/WN">LE/WN</w>
+<w id="Nah.2.13.2" ana="VAI AAI3S" lem="A(RPA/ZW">H(/RPASEN</w>
+<w id="Nah.2.13.3" ana="RA APN" lem="O(">TA\</w>
+<w id="Nah.2.13.4" ana="A1 APN" lem="I(KANO/S">I(KANA\</w>
+<w id="Nah.2.13.5" ana="RA DPM" lem="O(">TOI=S</w>
+<w id="Nah.2.13.6" ana="N2 DPM" lem="SKU/MNOS">SKU/MNOIS</w>
+<w id="Nah.2.13.7" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.2.13.8" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.13.9" ana="VAI AAI3S" lem="A)PO-PNI/GW">A)PE/PNICEN</w>
+<w id="Nah.2.13.10" ana="RA DPM" lem="O(">TOI=S</w>
+<w id="Nah.2.13.11" ana="N3 DPM" lem="LE/WN">LE/OUSIN</w>
+<w id="Nah.2.13.12" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.2.13.13" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.13.14" ana="VAI AAI3S" lem="PI/MPLHMI">E)/PLHSEN</w>
+<w id="Nah.2.13.15" ana="N1A GSF" lem="QH/RA">QH/RAS</w>
+<w id="Nah.2.13.16" ana="N1A ASF" lem="NOSSIA/">NOSSIA\N</w>
+<w id="Nah.2.13.17" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.2.13.18" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.13.19" ana="RA ASN" lem="O(">TO\</w>
+<w id="Nah.2.13.20" ana="N2 ASN" lem="KATOIKHTH/RION">KATOIKHTH/RION</w>
+<w id="Nah.2.13.21" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Nah.2.13.22" ana="N1 GSF" lem="A(RPAGH/">A(RPAGH=S</w>
+<w id="Nah.2.14.1" ana="I" lem="I)DOU/">I)DOU\</w>
+<w id="Nah.2.14.2" ana="RP NS" lem="E)GW/">E)GW\</w>
+<w id="Nah.2.14.3" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Nah.2.14.4" ana="RP AS" lem="SU/">SE/</w>
+<w id="Nah.2.14.5" ana="V1 PAI3S" lem="LE/GW">LE/GEI</w>
+<w id="Nah.2.14.6" ana="N2 NSM" lem="KU/RIOS">KU/RIOS</w>
+<w id="Nah.2.14.7" ana="N3R NSM" lem="PANTOKRA/TWR">PANTOKRA/TWR</w>
+<w id="Nah.2.14.8" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.14.9" ana="VF FAI1S" lem="E)K-KAI/W">E)KKAU/SW</w>
+<w id="Nah.2.14.10" ana="P" lem="E)N">E)N</w>
+<w id="Nah.2.14.11" ana="N2 DSM" lem="KAPNO/S">KAPNW=|</w>
+<w id="Nah.2.14.12" ana="N3E ASN" lem="PLH=QOS">PLH=QO/S</w>
+<w id="Nah.2.14.13" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.2.14.14" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.14.15" ana="RA APM" lem="O(">TOU\S</w>
+<w id="Nah.2.14.16" ana="N3 APM" lem="LE/WN">LE/ONTA/S</w>
+<w id="Nah.2.14.17" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.2.14.18" ana="VF FMI3S" lem="KATA-E)SQI/W">KATAFA/GETAI</w>
+<w id="Nah.2.14.19" ana="N1A NSF" lem="R(OMFAI/A">R(OMFAI/A</w>
+<w id="Nah.2.14.20" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.14.21" ana="VF FAI1S" lem="E)K-O)LEQREU/W">E)COLEQREU/SW</w>
+<w id="Nah.2.14.22" ana="P" lem="E)K">E)K</w>
+<w id="Nah.2.14.23" ana="RA GSF" lem="O(">TH=S</w>
+<w id="Nah.2.14.24" ana="N1 GSF" lem="GH=">GH=S</w>
+<w id="Nah.2.14.25" ana="RA ASF" lem="O(">TH\N</w>
+<w id="Nah.2.14.26" ana="N1A ASF" lem="QH/RA">QH/RAN</w>
+<w id="Nah.2.14.27" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.2.14.28" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.2.14.29" ana="D" lem="OU)">OU)</w>
+<w id="Nah.2.14.30" ana="D" lem="MH/">MH\</w>
+<w id="Nah.2.14.31" ana="VC APS3S" lem="A)KOU/W">A)KOUSQH=|</w>
+<w id="Nah.2.14.32" ana="D" lem="OU)KE/TI">OU)KE/TI</w>
+<w id="Nah.2.14.33" ana="RA NPN" lem="O(">TA\</w>
+<w id="Nah.2.14.34" ana="N2N NPN" lem="E)/RGON">E)/RGA</w>
+<w id="Nah.2.14.35" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.1.1" ana="I" lem="W)=">W)=</w>
+<w id="Nah.3.1.2" ana="N3I VSF" lem="PO/LIS">PO/LIS</w>
+<w id="Nah.3.1.3" ana="N3M GPN" lem="AI(=MA">AI(MA/TWN</w>
+<w id="Nah.3.1.4" ana="A1 NSF" lem="O(/LOS">O(/LH</w>
+<w id="Nah.3.1.5" ana="A3H NSF" lem="YEUDH/S">YEUDH\S</w>
+<w id="Nah.3.1.6" ana="N1A GSF" lem="A)DIKI/A">A)DIKI/AS</w>
+<w id="Nah.3.1.7" ana="A3H NSM" lem="PLH/RHS">PLH/RHS</w>
+<w id="Nah.3.1.8" ana="D" lem="OU)">OU)</w>
+<w id="Nah.3.1.9" ana="VC FPI3S" lem="YHLAFA/W">YHLAFHQH/SETAI</w>
+<w id="Nah.3.1.10" ana="N1A NSF" lem="QH/RA">QH/RA</w>
+<w id="Nah.3.2.1" ana="N1 NSF" lem="FWNH/">FWNH\</w>
+<w id="Nah.3.2.2" ana="N3G GPF" lem="MA/STIC">MASTI/GWN</w>
+<w id="Nah.3.2.3" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.2.4" ana="N1 NSF" lem="FWNH/">FWNH\</w>
+<w id="Nah.3.2.5" ana="N2 GSM" lem="SEISMO/S">SEISMOU=</w>
+<w id="Nah.3.2.6" ana="N2 GPM" lem="TROXO/S">TROXW=N</w>
+<w id="Nah.3.2.7" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.2.8" ana="N2 GSM" lem="I(/PPOS">I(/PPOU</w>
+<w id="Nah.3.2.9" ana="V1 PAPGSM" lem="DIW/KW">DIW/KONTOS</w>
+<w id="Nah.3.2.10" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.2.11" ana="N3M GSN" lem="A(/RMA">A(/RMATOS</w>
+<w id="Nah.3.2.12" ana="V1 PAPGSM" lem="A)NA-BRA/SSW">A)NABRA/SSONTOS</w>
+<w id="Nah.3.3.1" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.3.2" ana="N3V GSM" lem="I(PPEU/S">I(PPE/WS</w>
+<w id="Nah.3.3.3" ana="V1 PAPGSM" lem="A)NA-BAI/NW">A)NABAI/NONTOS</w>
+<w id="Nah.3.3.4" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.3.5" ana="V1 PAPGSF" lem="STI/LBW">STILBOU/SHS</w>
+<w id="Nah.3.3.6" ana="N1A GSF" lem="R(OMFAI/A">R(OMFAI/AS</w>
+<w id="Nah.3.3.7" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.3.8" ana="V1 PAPGPN" lem="E)K-ASTRA/PTW">E)CASTRAPTO/NTWN</w>
+<w id="Nah.3.3.9" ana="N2N GPN" lem="O(/PLON">O(/PLWN</w>
+<w id="Nah.3.3.10" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.3.11" ana="N3E GSN" lem="PLH=QOS">PLH/QOUS</w>
+<w id="Nah.3.3.12" ana="N1T GPM" lem="TRAUMATI/AS">TRAUMATIW=N</w>
+<w id="Nah.3.3.13" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.3.14" ana="A3U GSF" lem="BARU/S">BAREI/AS</w>
+<w id="Nah.3.3.15" ana="N3I GSF" lem="PTW=SIS">PTW/SEWS</w>
+<w id="Nah.3.3.16" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.3.17" ana="D" lem="OU)">OU)K</w>
+<w id="Nah.3.3.18" ana="V9 IAI3S" lem="EI)MI/">H)=N</w>
+<w id="Nah.3.3.19" ana="N3T NSN" lem="PE/RAS">PE/RAS</w>
+<w id="Nah.3.3.20" ana="RA DPN" lem="O(">TOI=S</w>
+<w id="Nah.3.3.21" ana="N3E DPN" lem="E)/QNOS">E)/QNESIN</w>
+<w id="Nah.3.3.22" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="Nah.3.3.23" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.3.24" ana="VF FAI3P" lem="A)SQENE/W">A)SQENH/SOUSIN</w>
+<w id="Nah.3.3.25" ana="P" lem="E)N">E)N</w>
+<w id="Nah.3.3.26" ana="RA DPN" lem="O(">TOI=S</w>
+<w id="Nah.3.3.27" ana="N3M DPN" lem="SW=MA">SW/MASIN</w>
+<w id="Nah.3.3.28" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Nah.3.4.1" ana="P" lem="A)PO/">A)PO\</w>
+<w id="Nah.3.4.2" ana="N3E GSN" lem="PLH=QOS">PLH/QOUS</w>
+<w id="Nah.3.4.3" ana="N1A GSF" lem="PORNEI/A">PORNEI/AS</w>
+<w id="Nah.3.4.4" ana="N1 NSF" lem="PO/RNH">PO/RNH</w>
+<w id="Nah.3.4.5" ana="A1 NSF" lem="KALO/S">KALH\</w>
+<w id="Nah.3.4.6" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.4.7" ana="A3 NSM" lem="E)PIXARH/S">E)PIXARH\S</w>
+<w id="Nah.3.4.8" ana="V2 PMPNSF" lem="H(GE/OMAI">H(GOUME/NH</w>
+<w id="Nah.3.4.9" ana="N2N GPN" lem="FA/RMAKON">FARMA/KWN</w>
+<w id="Nah.3.4.10" ana="RA NSF" lem="O(">H(</w>
+<w id="Nah.3.4.11" ana="V2 PAPNSF" lem="PWLE/W">PWLOU=SA</w>
+<w id="Nah.3.4.12" ana="N3E APN" lem="E)/QNOS">E)/QNH</w>
+<w id="Nah.3.4.13" ana="P" lem="E)N">E)N</w>
+<w id="Nah.3.4.14" ana="RA DSF" lem="O(">TH=|</w>
+<w id="Nah.3.4.15" ana="N1A DSF" lem="PORNEI/A">PORNEI/A|</w>
+<w id="Nah.3.4.16" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="Nah.3.4.17" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.4.18" ana="N1 APF" lem="FULH/">FULA\S</w>
+<w id="Nah.3.4.19" ana="P" lem="E)N">E)N</w>
+<w id="Nah.3.4.20" ana="RA DPM" lem="O(">TOI=S</w>
+<w id="Nah.3.4.21" ana="N2N DPN" lem="FA/RMAKON">FARMA/KOIS</w>
+<w id="Nah.3.4.22" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="Nah.3.5.1" ana="VB AMD2S" lem="O(RA/W">I)DOU=</w>
+<w id="Nah.3.5.2" ana="RP NS" lem="E)GW/">E)GW\</w>
+<w id="Nah.3.5.3" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Nah.3.5.4" ana="RP AS" lem="SU/">SE/</w>
+<w id="Nah.3.5.5" ana="V1 PAI3S" lem="LE/GW">LE/GEI</w>
+<w id="Nah.3.5.6" ana="N2 NSM" lem="KU/RIOS">KU/RIOS</w>
+<w id="Nah.3.5.7" ana="RA NSM" lem="O(">O(</w>
+<w id="Nah.3.5.8" ana="N2 NSM" lem="QEO/S">QEO\S</w>
+<w id="Nah.3.5.9" ana="RA NSM" lem="O(">O(</w>
+<w id="Nah.3.5.10" ana="N3R NSM" lem="PANTOKRA/TWR">PANTOKRA/TWR</w>
+<w id="Nah.3.5.11" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.5.12" ana="VF FAI1S" lem="A)PO-KALU/PTW">A)POKALU/YW</w>
+<w id="Nah.3.5.13" ana="RA APN" lem="O(">TA\</w>
+<w id="Nah.3.5.14" ana="P" lem="O)PI/SW">O)PI/SW</w>
+<w id="Nah.3.5.15" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.5.16" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Nah.3.5.17" ana="RA ASN" lem="O(">TO\</w>
+<w id="Nah.3.5.18" ana="N2N ASN" lem="PRO/SWPON">PRO/SWPO/N</w>
+<w id="Nah.3.5.19" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.5.20" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.5.21" ana="VF FAI1S" lem="DEIKNU/W">DEI/CW</w>
+<w id="Nah.3.5.22" ana="N3E DPN" lem="E)/QNOS">E)/QNESIN</w>
+<w id="Nah.3.5.23" ana="RA ASF" lem="O(">TH\N</w>
+<w id="Nah.3.5.24" ana="N1 ASF" lem="AI)SXU/NH">AI)SXU/NHN</w>
+<w id="Nah.3.5.25" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.5.26" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.5.27" ana="N1A DPF" lem="BASILEI/A">BASILEI/AIS</w>
+<w id="Nah.3.5.28" ana="RA ASF" lem="O(">TH\N</w>
+<w id="Nah.3.5.29" ana="N1A ASF" lem="A)TIMI/A">A)TIMI/AN</w>
+<w id="Nah.3.5.30" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.6.1" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.6.2" ana="VA AAS1S" lem="E)PI-R(I/PTW">E)PIRRI/YW</w>
+<w id="Nah.3.6.3" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Nah.3.6.4" ana="RP AS" lem="SU/">SE\</w>
+<w id="Nah.3.6.5" ana="N2 ASM" lem="BDELUGMO/S">BDELUGMO\N</w>
+<w id="Nah.3.6.6" ana="P" lem="KATA/">KATA\</w>
+<w id="Nah.3.6.7" ana="RA APF" lem="O(">TA\S</w>
+<w id="Nah.3.6.8" ana="N1A APF" lem="A)KAQARSI/A">A)KAQARSI/AS</w>
+<w id="Nah.3.6.9" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.6.10" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.6.11" ana="VF FMI1S" lem="TI/QHMI">QH/SOMAI/</w>
+<w id="Nah.3.6.12" ana="RP AS" lem="SU/">SE</w>
+<w id="Nah.3.6.13" ana="P" lem="EI)S">EI)S</w>
+<w id="Nah.3.6.14" ana="N3M ASN" lem="PARA/DEIGMA">PARA/DEIGMA</w>
+<w id="Nah.3.7.1" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.7.2" ana="V9 FMI3S" lem="EI)MI/">E)/STAI</w>
+<w id="Nah.3.7.3" ana="A1S NSM" lem="PA=S">PA=S</w>
+<w id="Nah.3.7.4" ana="RA NSM" lem="O(">O(</w>
+<w id="Nah.3.7.5" ana="V3 PAPNSM" lem="O(RA/W">O(RW=N</w>
+<w id="Nah.3.7.6" ana="RP AS" lem="SU/">SE</w>
+<w id="Nah.3.7.7" ana="VF FAI3S" lem="A)PO-PHDA/W">A)POPHDH/SETAI</w>
+<w id="Nah.3.7.8" ana="P" lem="A)PO/">A)PO\</w>
+<w id="Nah.3.7.9" ana="RP GS" lem="SU/">SOU=</w>
+<w id="Nah.3.7.10" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.7.11" ana="VF2 FAI3S" lem="EI)=PON">E)REI=</w>
+<w id="Nah.3.7.12" ana="A1A NSF" lem="DEI/LAIOS">*DEILAI/A</w>
+<w id="Nah.3.7.13" ana="N NSF" lem="*NINEUH">*NINEUH</w>
+<w id="Nah.3.7.14" ana="RI NSM" lem="TI/S">TI/S</w>
+<w id="Nah.3.7.15" ana="VF FAI3S" lem="STENA/XW">STENA/CEI</w>
+<w id="Nah.3.7.16" ana="RD ASF" lem="AU)TO/S">AU)TH/N</w>
+<w id="Nah.3.7.17" ana="D" lem="PO/QEN">PO/QEN</w>
+<w id="Nah.3.7.18" ana="VF FAI1S" lem="ZHTE/W">ZHTH/SW</w>
+<w id="Nah.3.7.19" ana="N3I ASF" lem="PARA/KLHSIS">PARA/KLHSIN</w>
+<w id="Nah.3.7.20" ana="RD DSF" lem="AU)TO/S">AU)TH=|</w>
+<w id="Nah.3.8.1" ana="VA AAN" lem="E(TOIMA/ZW">E(TOI/MASAI</w>
+<w id="Nah.3.8.2" ana="N3D ASF" lem="MERI/S">MERI/DA</w>
+<w id="Nah.3.8.3" ana="VA AAN" lem="A(RMO/ZW">A(/RMOSAI</w>
+<w id="Nah.3.8.4" ana="N1 ASF" lem="XORDH/">XORDH/N</w>
+<w id="Nah.3.8.5" ana="VA AAN" lem="E(TOIMA/ZW">E(TOI/MASAI</w>
+<w id="Nah.3.8.6" ana="N3D ASF" lem="MERI/S">MERI/DA</w>
+<w id="Nah.3.8.7" ana="N NSF" lem="*AMWN">*AMWN</w>
+<w id="Nah.3.8.8" ana="RA NSF" lem="O(">H(</w>
+<w id="Nah.3.8.9" ana="V2 PAPNSF" lem="KATA-OI)KE/W">KATOIKOU=SA</w>
+<w id="Nah.3.8.10" ana="P" lem="E)N">E)N</w>
+<w id="Nah.3.8.11" ana="N2 DPM" lem="POTAMO/S">POTAMOI=S</w>
+<w id="Nah.3.8.12" ana="N3 NSN" lem="U(/DWR">U(/DWR</w>
+<w id="Nah.3.8.13" ana="N2 DSM" lem="KU/KLOS">KU/KLW|</w>
+<w id="Nah.3.8.14" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="Nah.3.8.15" ana="RR GSF" lem="O(/S">H(=S</w>
+<w id="Nah.3.8.16" ana="RA NSF" lem="O(">H(</w>
+<w id="Nah.3.8.17" ana="N1 NSF" lem="A)RXH/">A)RXH\</w>
+<w id="Nah.3.8.18" ana="N1S NSF" lem="QA/LASSA">QA/LASSA</w>
+<w id="Nah.3.8.19" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.8.20" ana="N3 NSN" lem="U(/DWR">U(/DWR</w>
+<w id="Nah.3.8.21" ana="RA NPN" lem="O(">TA\</w>
+<w id="Nah.3.8.22" ana="N3E NPN" lem="TEI=XOS">TEI/XH</w>
+<w id="Nah.3.8.23" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="Nah.3.9.1" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.9.2" ana="N1A NSF" lem="*AI)QIOPI/A">*AI)QIOPI/A</w>
+<w id="Nah.3.9.3" ana="RA NSF" lem="O(">H(</w>
+<w id="Nah.3.9.4" ana="N3 NSF" lem="I)SXU/S">I)SXU\S</w>
+<w id="Nah.3.9.5" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="Nah.3.9.6" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.9.7" ana="N2 NSF" lem="*AI)/GUPTOS">*AI)/GUPTOS</w>
+<w id="Nah.3.9.8" ana="D" lem="KAI/">KAI\</w>
+<w id="Nah.3.9.9" ana="D" lem="OU)">OU)K</w>
+<w id="Nah.3.9.10" ana="V9 PAI3S" lem="EI)MI/">E)/STIN</w>
+<w id="Nah.3.9.11" ana="N3T NSN" lem="PE/RAS">PE/RAS</w>
+<w id="Nah.3.9.12" ana="RA GSF" lem="O(">TH=S</w>
+<w id="Nah.3.9.13" ana="N1 GSF" lem="FUGH/">FUGH=S</w>
+<w id="Nah.3.9.14" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.9.15" ana="N NPM" lem="*LI/BUES">*LI/BUES</w>
+<w id="Nah.3.9.16" ana="VBI AMI3P" lem="GI/GNOMAI">E)GE/NONTO</w>
+<w id="Nah.3.9.17" ana="N2 NPM" lem="BOHQO/S">BOHQOI\</w>
+<w id="Nah.3.9.18" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="Nah.3.10.1" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.10.2" ana="RD NSF" lem="AU)TO/S">AU)TH\</w>
+<w id="Nah.3.10.3" ana="P" lem="EI)S">EI)S</w>
+<w id="Nah.3.10.4" ana="N1A ASF" lem="METOIKESI/A">METOIKESI/AN</w>
+<w id="Nah.3.10.5" ana="VF FMI3S" lem="POREU/OMAI">POREU/SETAI</w>
+<w id="Nah.3.10.6" ana="A1B NSF" lem="AI)XMA/LWTOS">AI)XMA/LWTOS</w>
+<w id="Nah.3.10.7" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.10.8" ana="RA NPN" lem="O(">TA\</w>
+<w id="Nah.3.10.9" ana="A1A NPN" lem="NH/PIOS">NH/PIA</w>
+<w id="Nah.3.10.10" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="Nah.3.10.11" ana="VF2 FAI3P" lem="E)DAFI/ZW">E)DAFIOU=SIN</w>
+<w id="Nah.3.10.12" ana="P" lem="E)PI/">E)P'</w>
+<w id="Nah.3.10.13" ana="N1 APF" lem="A)RXH/">A)RXA\S</w>
+<w id="Nah.3.10.14" ana="A1S GPF" lem="PA=S">PASW=N</w>
+<w id="Nah.3.10.15" ana="RA GPF" lem="O(">TW=N</w>
+<w id="Nah.3.10.16" ana="N2 GPF" lem="O(DO/S">O(DW=N</w>
+<w id="Nah.3.10.17" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="Nah.3.10.18" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.10.19" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Nah.3.10.20" ana="A1S APN" lem="PA=S">PA/NTA</w>
+<w id="Nah.3.10.21" ana="RA APN" lem="O(">TA\</w>
+<w id="Nah.3.10.22" ana="A1B APN" lem="E)/NDOCOS">E)/NDOCA</w>
+<w id="Nah.3.10.23" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="Nah.3.10.24" ana="VF2 FAI3P" lem="BA/LLW">BALOU=SIN</w>
+<w id="Nah.3.10.25" ana="N2 APM" lem="KLH=ROS">KLH/ROUS</w>
+<w id="Nah.3.10.26" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.10.27" ana="A1S NPM" lem="PA=S">PA/NTES</w>
+<w id="Nah.3.10.28" ana="RA NPM" lem="O(">OI(</w>
+<w id="Nah.3.10.29" ana="N3 NPM" lem="MEGISTA/N">MEGISTA=NES</w>
+<w id="Nah.3.10.30" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="Nah.3.10.31" ana="VC FPI3P" lem="DE/W">DEQH/SONTAI</w>
+<w id="Nah.3.10.32" ana="N1 DPF" lem="XEIROPE/DH">XEIROPE/DAIS</w>
+<w id="Nah.3.11.1" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.11.2" ana="RP NS" lem="SU/">SU\</w>
+<w id="Nah.3.11.3" ana="VC FPI2S" lem="MEQU/W">MEQUSQH/SH|</w>
+<w id="Nah.3.11.4" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.11.5" ana="VF FMI2S" lem="EI)MI/">E)/SH|</w>
+<w id="Nah.3.11.6" ana="VM XMINFS" lem="U(PER-O(RA/W">U(PEREWRAME/NH</w>
+<w id="Nah.3.11.7" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.11.8" ana="RP NS" lem="SU/">SU\</w>
+<w id="Nah.3.11.9" ana="VF FAI2S" lem="ZHTE/W">ZHTH/SEIS</w>
+<w id="Nah.3.11.10" ana="RD DSF" lem="SEAUTOU=">SEAUTH=|</w>
+<w id="Nah.3.11.11" ana="N3I ASF" lem="STA/SIS">STA/SIN</w>
+<w id="Nah.3.11.12" ana="P" lem="E)K">E)C</w>
+<w id="Nah.3.11.13" ana="N2 GPM" lem="E)XQRO/S">E)XQRW=N</w>
+<w id="Nah.3.12.1" ana="A1S NPN" lem="PA=S">PA/NTA</w>
+<w id="Nah.3.12.2" ana="RA NPN" lem="O(">TA\</w>
+<w id="Nah.3.12.3" ana="N3M NPN" lem="O)XU/RWMA">O)XURW/MATA/</w>
+<w id="Nah.3.12.4" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.12.5" ana="N1 NPF" lem="SUKH=">SUKAI=</w>
+<w id="Nah.3.12.6" ana="N2 APM" lem="SKOPO/S">SKOPOU\S</w>
+<w id="Nah.3.12.7" ana="V1 PAPNPF" lem="E)/XW">E)/XOUSAI</w>
+<w id="Nah.3.12.8" ana="C" lem="E)A/N">E)A\N</w>
+<w id="Nah.3.12.9" ana="VC APS3P" lem="SALEU/W">SALEUQW=SIN</w>
+<w id="Nah.3.12.10" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.12.11" ana="VF2 FMI3P" lem="PI/PTW">PESOU=NTAI</w>
+<w id="Nah.3.12.12" ana="P" lem="EI)S">EI)S</w>
+<w id="Nah.3.12.13" ana="N3M ASN" lem="STO/MA">STO/MA</w>
+<w id="Nah.3.12.14" ana="V1 PAPGSM" lem="E)SQI/W">E)/SQONTOS</w>
+<w id="Nah.3.13.1" ana="I" lem="I)DOU/">I)DOU\</w>
+<w id="Nah.3.13.2" ana="RA NSM" lem="O(">O(</w>
+<w id="Nah.3.13.3" ana="N2 NSM" lem="LAO/S">LAO/S</w>
+<w id="Nah.3.13.4" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.13.5" ana="C" lem="W(S">W(S</w>
+<w id="Nah.3.13.6" ana="N3K NPF" lem="GUNH/">GUNAI=KES</w>
+<w id="Nah.3.13.7" ana="P" lem="E)N">E)N</w>
+<w id="Nah.3.13.8" ana="RP DS" lem="SU/">SOI/</w>
+<w id="Nah.3.13.9" ana="RA DPM" lem="O(">TOI=S</w>
+<w id="Nah.3.13.10" ana="N2 DPM" lem="E)XQRO/S">E)XQROI=S</w>
+<w id="Nah.3.13.11" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.13.12" ana="V1 PMPNPF" lem="A)NA-OI)/GW">A)NOIGO/MENAI</w>
+<w id="Nah.3.13.13" ana="VQ FPI3P" lem="A)NA-OI)/GW">A)NOIXQH/SONTAI</w>
+<w id="Nah.3.13.14" ana="N1 NPF" lem="PU/LH">PU/LAI</w>
+<w id="Nah.3.13.15" ana="RA GSF" lem="O(">TH=S</w>
+<w id="Nah.3.13.16" ana="N1 GSF" lem="GH=">GH=S</w>
+<w id="Nah.3.13.17" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.13.18" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.13.19" ana="VF FMI3S" lem="KATA-E)SQI/W">KATAFA/GETAI</w>
+<w id="Nah.3.13.20" ana="N3 ASN" lem="PU=R">PU=R</w>
+<w id="Nah.3.13.21" ana="RA APM" lem="O(">TOU\S</w>
+<w id="Nah.3.13.22" ana="N2 APM" lem="MOXLO/S">MOXLOU/S</w>
+<w id="Nah.3.13.23" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.14.1" ana="N3 NSN" lem="U(/DWR">U(/DWR</w>
+<w id="Nah.3.14.2" ana="N1 GSF" lem="PERIOXH/">PERIOXH=S</w>
+<w id="Nah.3.14.3" ana="VA AAN" lem="E)PI-SPA/W">E)PI/SPASAI</w>
+<w id="Nah.3.14.4" ana="RD DSF" lem="SEAUTOU=">SEAUTH=|</w>
+<w id="Nah.3.14.5" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.14.6" ana="VF FAPNSN" lem="KATA-KRATE/W">KATAKRA/THSON</w>
+<w id="Nah.3.14.7" ana="RA GPN" lem="O(">TW=N</w>
+<w id="Nah.3.14.8" ana="N3M GPN" lem="O)XU/RWMA">O)XURWMA/TWN</w>
+<w id="Nah.3.14.9" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.14.10" ana="VD APD2S" lem="E)N-BAI/NW">E)/MBHQI</w>
+<w id="Nah.3.14.11" ana="P" lem="EI)S">EI)S</w>
+<w id="Nah.3.14.12" ana="N2 ASM" lem="PHLO/S">PHLO\N</w>
+<w id="Nah.3.14.13" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.14.14" ana="VC APD2S" lem="SUN-PA/SXW">SUMPATH/QHTI</w>
+<w id="Nah.3.14.15" ana="P" lem="E)N">E)N</w>
+<w id="Nah.3.14.16" ana="N2N DPN" lem="A)/XURON">A)XU/ROIS</w>
+<w id="Nah.3.14.17" ana="VF FAPASN" lem="KATA-KRATE/W">KATAKRA/THSON</w>
+<w id="Nah.3.14.18" ana="P" lem="U(PE/R">U(PE\R</w>
+<w id="Nah.3.14.19" ana="N2 ASF" lem="PLI/NQOS">PLI/NQON</w>
+<w id="Nah.3.15.1" ana="D" lem="E)KEI=">E)KEI=</w>
+<w id="Nah.3.15.2" ana="VF FMI3S" lem="KATA-E)SQI/W">KATAFA/GETAI/</w>
+<w id="Nah.3.15.3" ana="RP AS" lem="SU/">SE</w>
+<w id="Nah.3.15.4" ana="N3 ASN" lem="PU=R">PU=R</w>
+<w id="Nah.3.15.5" ana="VF FAI3S" lem="E)K-O)LEQREU/W">E)COLEQREU/SEI</w>
+<w id="Nah.3.15.6" ana="RP AS" lem="SU/">SE</w>
+<w id="Nah.3.15.7" ana="N1A NSF" lem="R(OMFAI/A">R(OMFAI/A</w>
+<w id="Nah.3.15.8" ana="VF FMI3S" lem="KATA-E)SQI/W">KATAFA/GETAI/</w>
+<w id="Nah.3.15.9" ana="RP AS" lem="SU/">SE</w>
+<w id="Nah.3.15.10" ana="C" lem="W(S">W(S</w>
+<w id="Nah.3.15.11" ana="N3D NSF" lem="A)KRI/S">A)KRI/S</w>
+<w id="Nah.3.15.12" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.15.13" ana="VC FPI2S" lem="BARU/NW">BARUNQH/SH|</w>
+<w id="Nah.3.15.14" ana="C" lem="W(S">W(S</w>
+<w id="Nah.3.15.15" ana="N2 NSM" lem="BROU=XOS">BROU=XOS</w>
+<w id="Nah.3.16.1" ana="VAI AAI2S" lem="PLHQU/NW">E)PLH/QUNAS</w>
+<w id="Nah.3.16.2" ana="RA APF" lem="O(">TA\S</w>
+<w id="Nah.3.16.3" ana="N1A APF" lem="E)MPORI/A">E)MPORI/AS</w>
+<w id="Nah.3.16.4" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.16.5" ana="P" lem="U(PE/R">U(PE\R</w>
+<w id="Nah.3.16.6" ana="RA APN" lem="O(">TA\</w>
+<w id="Nah.3.16.7" ana="N2N APN" lem="A)/STRON">A)/STRA</w>
+<w id="Nah.3.16.8" ana="RA GSM" lem="O(">TOU=</w>
+<w id="Nah.3.16.9" ana="N2 GSM" lem="OU)RANO/S">OU)RANOU=</w>
+<w id="Nah.3.16.10" ana="N2 NSM" lem="BROU=XOS">BROU=XOS</w>
+<w id="Nah.3.16.11" ana="VAI AAI3S" lem="O(RMA/W">W(/RMHSEN</w>
+<w id="Nah.3.16.12" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.16.13" ana="VCI API3S" lem="E)K-PETA/ZW">E)CEPETA/SQH</w>
+<w id="Nah.3.17.1" ana="V3I IMI3S" lem="E)K-A)LA/OMAI">E)CH/LATO</w>
+<w id="Nah.3.17.2" ana="C" lem="W(S">W(S</w>
+<w id="Nah.3.17.3" ana="N2 NSM" lem="A)TTE/LEBOS">A)TTE/LEBOS</w>
+<w id="Nah.3.17.4" ana="RA NSM" lem="O(">O(</w>
+<w id="Nah.3.17.5" ana="A1 NSM" lem="SU/MMIKTO/S">SU/MMIKTO/S</w>
+<w id="Nah.3.17.6" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.17.7" ana="C" lem="W(S">W(S</w>
+<w id="Nah.3.17.8" ana="N3D NSF" lem="A)KRI/S">A)KRI\S</w>
+<w id="Nah.3.17.9" ana="VX XAPNSF" lem="E)PI-BAI/NW">E)PIBEBHKUI=A</w>
+<w id="Nah.3.17.10" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Nah.3.17.11" ana="N2 ASM" lem="FRAGMO/S">FRAGMO\N</w>
+<w id="Nah.3.17.12" ana="P" lem="E)N">E)N</w>
+<w id="Nah.3.17.13" ana="N1A DPF" lem="H(ME/RA">H(ME/RAIS</w>
+<w id="Nah.3.17.14" ana="N2 APM" lem="PA/GOS">PA/GOUS</w>
+<w id="Nah.3.17.15" ana="RA NSM" lem="O(">O(</w>
+<w id="Nah.3.17.16" ana="N2 NSM" lem="H(/LIOS">H(/LIOS</w>
+<w id="Nah.3.17.17" ana="VAI AAI3S" lem="A)NA-TE/LLW">A)NE/TEILEN</w>
+<w id="Nah.3.17.18" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.17.19" ana="VBI AMI3S" lem="A)PO-A(/LLOMAI">A)FH/LATO</w>
+<w id="Nah.3.17.20" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.17.21" ana="D" lem="OU)">OU)K</w>
+<w id="Nah.3.17.22" ana="VZI AAI3S" lem="GIGNW/SKW">E)/GNW</w>
+<w id="Nah.3.17.23" ana="RA ASM" lem="O(">TO\N</w>
+<w id="Nah.3.17.24" ana="N2 ASM" lem="TO/POS">TO/PON</w>
+<w id="Nah.3.17.25" ana="RD GSF" lem="AU)TO/S">AU)TH=S</w>
+<w id="Nah.3.17.26" ana="I" lem="OU)AI/">OU)AI\</w>
+<w id="Nah.3.17.27" ana="RD DPM" lem="AU)TO/S">AU)TOI=S</w>
+<w id="Nah.3.18.1" ana="VAI AAI3S" lem="NUSTA/ZW">E)NU/STACAN</w>
+<w id="Nah.3.18.2" ana="RA NPM" lem="O(">OI(</w>
+<w id="Nah.3.18.3" ana="N3 NPM" lem="POIMH/N">POIME/NES</w>
+<w id="Nah.3.18.4" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.18.5" ana="N3V NSM" lem="BASILEU/S">BASILEU\S</w>
+<w id="Nah.3.18.6" ana="N2 NSM" lem="*A)SSU/RIOS">*A)SSU/RIOS</w>
+<w id="Nah.3.18.7" ana="VAI AAI3S" lem="KOIMI/ZW">E)KOI/MISEN</w>
+<w id="Nah.3.18.8" ana="RA APM" lem="O(">TOU\S</w>
+<w id="Nah.3.18.9" ana="N1M APM" lem="DUNA/STHS">DUNA/STAS</w>
+<w id="Nah.3.18.10" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.18.11" ana="VAI AAI3S" lem="A)PO-AI)/RW">A)PH=REN</w>
+<w id="Nah.3.18.12" ana="RA NSM" lem="O(">O(</w>
+<w id="Nah.3.18.13" ana="N2 NSM" lem="LAO/S">LAO/S</w>
+<w id="Nah.3.18.14" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.18.15" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Nah.3.18.16" ana="RA APN" lem="O(">TA\</w>
+<w id="Nah.3.18.17" ana="N3E APN" lem="O)/ROS">O)/RH</w>
+<w id="Nah.3.18.18" ana="C" lem="KAI/">KAI\</w>
+<w id="Nah.3.18.19" ana="D" lem="OU)">OU)K</w>
+<w id="Nah.3.18.20" ana="V9 IAI3S" lem="EI)MI/">H)=N</w>
+<w id="Nah.3.18.21" ana="RA NSM" lem="O(">O(</w>
+<w id="Nah.3.18.22" ana="V1 PMPNSM" lem="E)K-DE/XOMAI">E)KDEXO/MENOS</w>
+<w id="Nah.3.19.1" ana="D" lem="OU)">OU)K</w>
+<w id="Nah.3.19.2" ana="V9 PAI3S" lem="EI)MI/">E)/STIN</w>
+<w id="Nah.3.19.3" ana="N3I NSF" lem="I)/ASIS">I)/ASIS</w>
+<w id="Nah.3.19.4" ana="RA DSF" lem="O(">TH=|</w>
+<w id="Nah.3.19.5" ana="N1 DSF" lem="SUNTRIBH/">SUNTRIBH=|</w>
+<w id="Nah.3.19.6" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.19.7" ana="VAI AAI3S" lem="FLEGMAI/NW">E)FLE/GMANEN</w>
+<w id="Nah.3.19.8" ana="RA NSF" lem="O(">H(</w>
+<w id="Nah.3.19.9" ana="N1 NSF" lem="PLHGH/">PLHGH/</w>
+<w id="Nah.3.19.10" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.19.11" ana="A1S NPM" lem="PA=S">PA/NTES</w>
+<w id="Nah.3.19.12" ana="RA NPM" lem="O(">OI(</w>
+<w id="Nah.3.19.13" ana="V1 PAPNPM" lem="A)KOU/W">A)KOU/ONTES</w>
+<w id="Nah.3.19.14" ana="RA ASF" lem="O(">TH\N</w>
+<w id="Nah.3.19.15" ana="N1A ASF" lem="A)GGELI/A">A)GGELI/AN</w>
+<w id="Nah.3.19.16" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.19.17" ana="VF FAI3P" lem="KROTE/W">KROTH/SOUSIN</w>
+<w id="Nah.3.19.18" ana="N3 APF" lem="XEI/R">XEI=RAS</w>
+<w id="Nah.3.19.19" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Nah.3.19.20" ana="RP AS" lem="SU/">SE/</w>
+<w id="Nah.3.19.21" ana="C" lem="DIO/TI">DIO/TI</w>
+<w id="Nah.3.19.22" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Nah.3.19.23" ana="RI ASM" lem="TI/S">TI/NA</w>
+<w id="Nah.3.19.24" ana="D" lem="OU)">OU)K</w>
+<w id="Nah.3.19.25" ana="VBI AAI3S" lem="E)PI-E)/RXOMAI">E)PH=LQEN</w>
+<w id="Nah.3.19.26" ana="RA NSF" lem="O(">H(</w>
+<w id="Nah.3.19.27" ana="N1A NSF" lem="KAKI/A">KAKI/A</w>
+<w id="Nah.3.19.28" ana="RP GS" lem="SU/">SOU</w>
+<w id="Nah.3.19.29" ana="P" lem="DIA/">DIA\</w>
+<w id="Nah.3.19.30" ana="A1S GSM" lem="PA=S">PANTO/S</w>

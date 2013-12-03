@@ -1,0 +1,472 @@
+<w id="Obad.1..1" ana="N3I NSF" lem="O(/RASIS">O(/RASIS</w>
+<w id="Obad.1..2" ana="N1T GSM" lem="*ABDIAS">*ABDIOU</w>
+<w id="Obad.1..3" ana="RD APN" lem="O(/DE">TA/DE</w>
+<w id="Obad.1..4" ana="V1 PAI3S" lem="LE/GW">LE/GEI</w>
+<w id="Obad.1..5" ana="N2 NSM" lem="KU/RIOS">KU/RIOS</w>
+<w id="Obad.1..6" ana="RA NSM" lem="O(">O(</w>
+<w id="Obad.1..7" ana="N2 NSM" lem="QEO/S">QEO\S</w>
+<w id="Obad.1..8" ana="RA DSF" lem="O(">TH=|</w>
+<w id="Obad.1..9" ana="N1A DSF" lem="*IDOUMAI/A">*IDOUMAI/A|</w>
+<w id="Obad.1..10" ana="N1 ASF" lem="A)KOH/">A)KOH\N</w>
+<w id="Obad.1..11" ana="VAI AAI1S" lem="A)KOU/W">H)/KOUSA</w>
+<w id="Obad.1..12" ana="P" lem="PARA/">PARA\</w>
+<w id="Obad.1..13" ana="N2 GSM" lem="KU/RIOS">KURI/OU</w>
+<w id="Obad.1..14" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.1..15" ana="N1 ASF" lem="PERIOXH/">PERIOXH\N</w>
+<w id="Obad.1..16" ana="P" lem="EI)S">EI)S</w>
+<w id="Obad.1..17" ana="RA APN" lem="O(">TA\</w>
+<w id="Obad.1..18" ana="N3E APN" lem="E)/QNOS">E)/QNH</w>
+<w id="Obad.1..19" ana="VAI AAI3S" lem="E)K   A)PO-STE/LLW">E)CAPE/STEILEN</w>
+<w id="Obad.1..20" ana="VH AAD2P" lem="A)NA-I(/STHMI">A)NA/STHTE</w>
+<w id="Obad.1..21" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.1..22" ana="VH AAS1P" lem="E)K   A)NA-I(/STHMI">E)CANASTW=MEN</w>
+<w id="Obad.1..23" ana="P" lem="E)PI/">E)P'</w>
+<w id="Obad.1..24" ana="RD ASF" lem="AU)TO/S">AU)TH\N</w>
+<w id="Obad.1..25" ana="P" lem="EI)S">EI)S</w>
+<w id="Obad.1..26" ana="N2 ASM" lem="PO/LEMOS">PO/LEMON</w>
+<w id="Obad.2..1" ana="I" lem="I)DOU/">I)DOU\</w>
+<w id="Obad.2..2" ana="A1 ASM" lem="O)LIGOSTO/S">O)LIGOSTO\N</w>
+<w id="Obad.2..3" ana="VX XAI1S" lem="DI/DWMI">DE/DWKA/</w>
+<w id="Obad.2..4" ana="RP AS" lem="SU/">SE</w>
+<w id="Obad.2..5" ana="P" lem="E)N">E)N</w>
+<w id="Obad.2..6" ana="RA DPN" lem="O(">TOI=S</w>
+<w id="Obad.2..7" ana="N3E DPN" lem="E)/QNOS">E)/QNESIN</w>
+<w id="Obad.2..8" ana="VM XPPNSM" lem="A)TIMO/W">H)TIMWME/NOS</w>
+<w id="Obad.2..9" ana="RP NS" lem="SU/">SU\</w>
+<w id="Obad.2..10" ana="V9 PAI2S" lem="EI)MI/">EI)=</w>
+<w id="Obad.2..11" ana="D" lem="SFO/DRA">SFO/DRA</w>
+<w id="Obad.3..1" ana="N1A NSF" lem="U(PERHFANI/A">U(PERHFANI/A</w>
+<w id="Obad.3..2" ana="RA GSF" lem="O(">TH=S</w>
+<w id="Obad.3..3" ana="N1A GSF" lem="KARDI/A">KARDI/AS</w>
+<w id="Obad.3..4" ana="RP GS" lem="SU/">SOU</w>
+<w id="Obad.3..5" ana="VAI AAI3S" lem="E)PI-AI)/RW">E)PH=RE/N</w>
+<w id="Obad.3..6" ana="RP AS" lem="SU/">SE</w>
+<w id="Obad.3..7" ana="V4 PAPASM" lem="KATA-SKHNO/W">KATASKHNOU=NTA</w>
+<w id="Obad.3..8" ana="P" lem="E)N">E)N</w>
+<w id="Obad.3..9" ana="RA DPF" lem="O(">TAI=S</w>
+<w id="Obad.3..10" ana="N1 DPF" lem="O)PH/">O)PAI=S</w>
+<w id="Obad.3..11" ana="RA GPM" lem="O(">TW=N</w>
+<w id="Obad.3..12" ana="N2 GPM" lem="PE/TROS">PETRW=N</w>
+<w id="Obad.3..13" ana="N3E GPN" lem="U(/YOS">U(YW=N</w>
+<w id="Obad.3..14" ana="N1A ASF" lem="KATOIKI/A">KATOIKI/AN</w>
+<w id="Obad.3..15" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Obad.3..16" ana="V1 PAPNSM" lem="LE/GW">LE/GWN</w>
+<w id="Obad.3..17" ana="P" lem="E)N">E)N</w>
+<w id="Obad.3..18" ana="N1A DSF" lem="KARDI/A">KARDI/A|</w>
+<w id="Obad.3..19" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Obad.3..20" ana="RI NSM" lem="TI/S">TI/S</w>
+<w id="Obad.3..21" ana="RP AS" lem="E)GW/">ME</w>
+<w id="Obad.3..22" ana="VF FAI3S" lem="KATA-A)/GW">KATA/CEI</w>
+<w id="Obad.3..23" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Obad.3..24" ana="RA ASF" lem="O(">TH\N</w>
+<w id="Obad.3..25" ana="N1 ASF" lem="GH=">GH=N</w>
+<w id="Obad.4..1" ana="C" lem="E)A/N">E)A\N</w>
+<w id="Obad.4..2" ana="VS APS2S" lem="METEWRI/ZW">METEWRISQH=|S</w>
+<w id="Obad.4..3" ana="C" lem="W(S">W(S</w>
+<w id="Obad.4..4" ana="N2 NSM" lem="A)ETO/S">A)ETO\S</w>
+<w id="Obad.4..5" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.4..6" ana="C" lem="E)A/N">E)A\N</w>
+<w id="Obad.4..7" ana="P" lem="A)NA/">A)NA\</w>
+<w id="Obad.4..8" ana="A1 ASN" lem="ME/SOS">ME/SON</w>
+<w id="Obad.4..9" ana="RA GPN" lem="O(">TW=N</w>
+<w id="Obad.4..10" ana="N2N GPN" lem="A)/STRON">A)/STRWN</w>
+<w id="Obad.4..11" ana="VE AAS2S" lem="TI/QHMI">QH=|S</w>
+<w id="Obad.4..12" ana="N1A ASF" lem="NOSSIA/">NOSSIA/N</w>
+<w id="Obad.4..13" ana="RP GS" lem="SU/">SOU</w>
+<w id="Obad.4..14" ana="D" lem="E)KEI=QEN">E)KEI=QEN</w>
+<w id="Obad.4..15" ana="VF FAI1S" lem="KATA-A)/GW">KATA/CW</w>
+<w id="Obad.4..16" ana="RP AS" lem="SU/">SE</w>
+<w id="Obad.4..17" ana="V1 PAI3S" lem="LE/GW">LE/GEI</w>
+<w id="Obad.4..18" ana="N2 NSM" lem="KU/RIOS">KU/RIOS</w>
+<w id="Obad.5..1" ana="C" lem="EI)">EI)</w>
+<w id="Obad.5..2" ana="N1M NPM" lem="KLE/PTHS">KLE/PTAI</w>
+<w id="Obad.5..3" ana="VBI AAI3P" lem="EI)S-E)/RXOMAI">EI)SH=LQON</w>
+<w id="Obad.5..4" ana="P" lem="PRO/S">PRO\S</w>
+<w id="Obad.5..5" ana="RP AS" lem="SU/">SE\</w>
+<w id="Obad.5..6" ana="C" lem="H)/">H)\</w>
+<w id="Obad.5..7" ana="N1M NPM" lem="LH|STH/S">LH|STAI\</w>
+<w id="Obad.5..8" ana="N3 GSF" lem="NU/C">NUKTO/S</w>
+<w id="Obad.5..9" ana="D" lem="POU=">POU=</w>
+<w id="Obad.5..10" ana="X" lem="A)/N">A)\N</w>
+<w id="Obad.5..11" ana="VVI API2S" lem="A)PO-R(I/PTW">A)PERRI/FHS</w>
+<w id="Obad.5..12" ana="D" lem="OU)">OU)K</w>
+<w id="Obad.5..13" ana="X" lem="A)/N">A)\N</w>
+<w id="Obad.5..14" ana="VAI AAI3P" lem="KLE/PTW">E)/KLEYAN</w>
+<w id="Obad.5..15" ana="RA APN" lem="O(">TA\</w>
+<w id="Obad.5..16" ana="A1 APN" lem="I(KANO/S">I(KANA\</w>
+<w id="Obad.5..17" ana="RD DPM" lem="E(AUTOU=">E(AUTOI=S</w>
+<w id="Obad.5..18" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.5..19" ana="C" lem="EI)">EI)</w>
+<w id="Obad.5..20" ana="N1M NPM" lem="TRUGHTH/S">TRUGHTAI\</w>
+<w id="Obad.5..21" ana="VBI AAI3P" lem="EI)S-E)/RXOMAI">EI)SH=LQON</w>
+<w id="Obad.5..22" ana="P" lem="PRO/S">PRO\S</w>
+<w id="Obad.5..23" ana="RP AS" lem="SU/">SE/</w>
+<w id="Obad.5..24" ana="D" lem="OU)">OU)K</w>
+<w id="Obad.5..25" ana="X" lem="A)/N">A)\N</w>
+<w id="Obad.5..26" ana="VBI AMI3P" lem="U(PO-LEI/PW">U(PELI/PONTO</w>
+<w id="Obad.5..27" ana="N3D ASF" lem="E)PIFULLI/S">E)PIFULLI/DA</w>
+<w id="Obad.6..1" ana="D" lem="PW=S">PW=S</w>
+<w id="Obad.6..2" ana="VCI API3S" lem="E)K-E)REUNA/W">E)CHREUNH/QH</w>
+<w id="Obad.6..3" ana="N NSM" lem="*HSAU">*HSAU</w>
+<w id="Obad.6..4" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.6..5" ana="VVI API3S" lem="KATA-LAMBA/NW">KATELH/MFQH</w>
+<w id="Obad.6..6" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Obad.6..7" ana="RA NPN" lem="O(">TA\</w>
+<w id="Obad.6..8" ana="VP XMPNPN" lem="KRU/PTW">KEKRUMME/NA</w>
+<w id="Obad.7..1" ana="P" lem="E(/WS">E(/WS</w>
+<w id="Obad.7..2" ana="RA GPN" lem="O(">TW=N</w>
+<w id="Obad.7..3" ana="N2N GPN" lem="O(/RION">O(RI/WN</w>
+<w id="Obad.7..4" ana="RP GS" lem="SU/">SOU</w>
+<w id="Obad.7..5" ana="VAI AAI3P" lem="E)K   A)PO-STE/LLW">E)CAPE/STEILA/N</w>
+<w id="Obad.7..6" ana="RP AS" lem="SU/">SE</w>
+<w id="Obad.7..7" ana="A3 NPM" lem="PA=S">PA/NTES</w>
+<w id="Obad.7..8" ana="RA NPM" lem="O(">OI(</w>
+<w id="Obad.7..9" ana="N3 NPM" lem="A)NH/R">A)/NDRES</w>
+<w id="Obad.7..10" ana="RA GSF" lem="O(">TH=S</w>
+<w id="Obad.7..11" ana="N1 GSF" lem="DIAQH/KH">DIAQH/KHS</w>
+<w id="Obad.7..12" ana="RP GS" lem="SU/">SOU</w>
+<w id="Obad.7..13" ana="VHI AAI3P" lem="A)NTI-I(/STHMI">A)NTE/STHSA/N</w>
+<w id="Obad.7..14" ana="RP DS" lem="SU/">SOI</w>
+<w id="Obad.7..15" ana="VSI API3P" lem="DU/NAMAI">H)DUNA/SQHSAN</w>
+<w id="Obad.7..16" ana="P" lem="PRO/S">PRO\S</w>
+<w id="Obad.7..17" ana="RP AS" lem="SU/">SE\</w>
+<w id="Obad.7..18" ana="N3 NPM" lem="A)NH/R">A)/NDRES</w>
+<w id="Obad.7..19" ana="A1 NPM" lem="EI)RHNIKO/S">EI)RHNIKOI/</w>
+<w id="Obad.7..20" ana="RP GS" lem="SU/">SOU</w>
+<w id="Obad.7..21" ana="VAI AAI3P" lem="TI/QHMI">E)/QHKAN</w>
+<w id="Obad.7..22" ana="N2N APN" lem="E)/NEDRON">E)/NEDRA</w>
+<w id="Obad.7..23" ana="P" lem="U(POKA/TW">U(POKA/TW</w>
+<w id="Obad.7..24" ana="RP GS" lem="SU/">SOU</w>
+<w id="Obad.7..25" ana="D" lem="OU)">OU)K</w>
+<w id="Obad.7..26" ana="V9 PAI3S" lem="EI)MI/">E)/STIN</w>
+<w id="Obad.7..27" ana="N3I NSF" lem="SU/NESIS">SU/NESIS</w>
+<w id="Obad.7..28" ana="RD DPM" lem="AU)TO/S">AU)TOI=S</w>
+<w id="Obad.8..1" ana="P" lem="E)N">E)N</w>
+<w id="Obad.8..2" ana="RD DSF" lem="E)KEI=NOS">E)KEI/NH|</w>
+<w id="Obad.8..3" ana="RA DSF" lem="O(">TH=|</w>
+<w id="Obad.8..4" ana="N1A DSF" lem="H(ME/RA">H(ME/RA|</w>
+<w id="Obad.8..5" ana="V1 PAI3S" lem="LE/GW">LE/GEI</w>
+<w id="Obad.8..6" ana="N2 NSM" lem="KU/RIOS">KU/RIOS</w>
+<w id="Obad.8..7" ana="VF2 FAI1S" lem="A)PO-O)LLU/W">A)POLW=</w>
+<w id="Obad.8..8" ana="A1 APM" lem="SOFO/S">SOFOU\S</w>
+<w id="Obad.8..9" ana="P" lem="E)K">E)K</w>
+<w id="Obad.8..10" ana="RA GSF" lem="O(">TH=S</w>
+<w id="Obad.8..11" ana="N1A GSF" lem="*IDOUMAI/A">*IDOUMAI/AS</w>
+<w id="Obad.8..12" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.8..13" ana="N3I ASF" lem="SU/NESIS">SU/NESIN</w>
+<w id="Obad.8..14" ana="P" lem="E)K">E)C</w>
+<w id="Obad.8..15" ana="N3E GSN" lem="O)/ROS">O)/ROUS</w>
+<w id="Obad.8..16" ana="N GSM" lem="*HSAU">*HSAU</w>
+<w id="Obad.9..1" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.9..2" ana="VC FPI3P" lem="PTOE/W">PTOHQH/SONTAI</w>
+<w id="Obad.9..3" ana="RA NPM" lem="O(">OI(</w>
+<w id="Obad.9..4" ana="N1M NPM" lem="MAXHTH/S">MAXHTAI/</w>
+<w id="Obad.9..5" ana="RP GS" lem="SU/">SOU</w>
+<w id="Obad.9..6" ana="RA NPM" lem="O(">OI(</w>
+<w id="Obad.9..7" ana="P" lem="E)K">E)K</w>
+<w id="Obad.9..8" ana="N GS" lem="*QAIMAN">*QAIMAN</w>
+<w id="Obad.9..9" ana="C" lem="O(/PWS">O(/PWS</w>
+<w id="Obad.9..10" ana="VC APS3S" lem="E)K-AI)/RW">E)CARQH=|</w>
+<w id="Obad.9..11" ana="N2 NSM" lem="A)/NQRWPOS">A)/NQRWPOS</w>
+<w id="Obad.9..12" ana="P" lem="E)K">E)C</w>
+<w id="Obad.9..13" ana="N3E GSN" lem="O)/ROS">O)/ROUS</w>
+<w id="Obad.9..14" ana="N GSM" lem="*HSAU">*HSAU</w>
+<w id="Obad.10..1" ana="P" lem="DIA/">DIA\</w>
+<w id="Obad.10..2" ana="RA ASF" lem="O(">TH\N</w>
+<w id="Obad.10..3" ana="N1 ASF" lem="SFAGH/">SFAGH\N</w>
+<w id="Obad.10..4" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.10..5" ana="RA ASF" lem="O(">TH\N</w>
+<w id="Obad.10..6" ana="N1A ASF" lem="A)SE/BEIA">A)SE/BEIAN</w>
+<w id="Obad.10..7" ana="RA ASF" lem="O(">TH\N</w>
+<w id="Obad.10..8" ana="P" lem="EI)S">EI)S</w>
+<w id="Obad.10..9" ana="RA ASM" lem="O(">TO\N</w>
+<w id="Obad.10..10" ana="N2 ASM" lem="A)DELFO/S">A)DELFO/N</w>
+<w id="Obad.10..11" ana="RP GS" lem="SU/">SOU</w>
+<w id="Obad.10..12" ana="N ASM" lem="*I)AKW/B">*IAKWB</w>
+<w id="Obad.10..13" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.10..14" ana="VF FAI3S" lem="KALU/PTW">KALU/YEI</w>
+<w id="Obad.10..15" ana="RP AS" lem="SU/">SE</w>
+<w id="Obad.10..16" ana="N1 NSF" lem="AI)SXU/NH">AI)SXU/NH</w>
+<w id="Obad.10..17" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.10..18" ana="VC FPI2S" lem="E)K-AI)/RW">E)CARQH/SH|</w>
+<w id="Obad.10..19" ana="P" lem="EI)S">EI)S</w>
+<w id="Obad.10..20" ana="RA ASM" lem="O(">TO\N</w>
+<w id="Obad.10..21" ana="N3W ASM" lem="AI)W/N">AI)W=NA</w>
+<w id="Obad.11..1" ana="P" lem="A)PO/">A)F'</w>
+<w id="Obad.11..2" ana="RR GSF" lem="O(/S">H(=S</w>
+<w id="Obad.11..3" ana="N1A GSF" lem="H(ME/RA">H(ME/RAS</w>
+<w id="Obad.11..4" ana="VHI AAI2S" lem="A)NTI-I(/STHMI">A)NTE/STHS</w>
+<w id="Obad.11..5" ana="P" lem="E)K">E)C</w>
+<w id="Obad.11..6" ana="A1A GSF" lem="E)NANTI/OS">E)NANTI/AS</w>
+<w id="Obad.11..7" ana="P" lem="E)N">E)N</w>
+<w id="Obad.11..8" ana="N1A DSF" lem="H(ME/RA">H(ME/RA|</w>
+<w id="Obad.11..9" ana="V1 PAPGPM" lem="AI)XMALWTEU/W">AI)XMALWTEUO/NTWN</w>
+<w id="Obad.11..10" ana="A3H GPM" lem="A)LLOGENH/S">A)LLOGENW=N</w>
+<w id="Obad.11..11" ana="N3I ASF" lem="DU/NAMIS">DU/NAMIN</w>
+<w id="Obad.11..12" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Obad.11..13" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.11..14" ana="A1A NPM" lem="A)LLO/TRIOS">A)LLO/TRIOI</w>
+<w id="Obad.11..15" ana="VBI AAI3P" lem="EI)S-E)/RXOMAI">EI)SH=LQON</w>
+<w id="Obad.11..16" ana="P" lem="EI)S">EI)S</w>
+<w id="Obad.11..17" ana="N1 APF" lem="PU/LH">PU/LAS</w>
+<w id="Obad.11..18" ana="RD GSM" lem="AU)TO/S">AU)TOU=</w>
+<w id="Obad.11..19" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.11..20" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Obad.11..21" ana="N ASF" lem="*I)EROUSALH/M">*IEROUSALHM</w>
+<w id="Obad.11..22" ana="VBI AAI3P" lem="BA/LLW">E)/BALON</w>
+<w id="Obad.11..23" ana="N2 APM" lem="KLH=ROS">KLH/ROUS</w>
+<w id="Obad.11..24" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.11..25" ana="RP NS" lem="SU/">SU\</w>
+<w id="Obad.11..26" ana="V9I IAI2S" lem="EI)MI/">H)=S</w>
+<w id="Obad.11..27" ana="C" lem="W(S">W(S</w>
+<w id="Obad.11..28" ana="A3 NSM" lem="EI(=S">EI(=S</w>
+<w id="Obad.11..29" ana="P" lem="E)K">E)C</w>
+<w id="Obad.11..30" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Obad.12..1" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.12..2" ana="D" lem="MH/">MH\</w>
+<w id="Obad.12..3" ana="V2 PAS2S" lem="E)PI-DE/W">E)PI/DH|S</w>
+<w id="Obad.12..4" ana="N1A ASF" lem="H(ME/RA">H(ME/RAN</w>
+<w id="Obad.12..5" ana="N2 GSM" lem="A)DELFO/S">A)DELFOU=</w>
+<w id="Obad.12..6" ana="RP GS" lem="SU/">SOU</w>
+<w id="Obad.12..7" ana="P" lem="E)N">E)N</w>
+<w id="Obad.12..8" ana="N1A DSF" lem="H(ME/RA">H(ME/RA|</w>
+<w id="Obad.12..9" ana="A1A GPM" lem="A)LLO/TRIOS">A)LLOTRI/WN</w>
+<w id="Obad.12..10" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.12..11" ana="D" lem="MH/">MH\</w>
+<w id="Obad.12..12" ana="VD APS2S" lem="E)PI-XAI/RW">E)PIXARH=|S</w>
+<w id="Obad.12..13" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Obad.12..14" ana="RA APM" lem="O(">TOU\S</w>
+<w id="Obad.12..15" ana="N2 APM" lem="UI(O/S">UI(OU\S</w>
+<w id="Obad.12..16" ana="N GSM" lem="*IOUDA">*IOUDA</w>
+<w id="Obad.12..17" ana="P" lem="E)N">E)N</w>
+<w id="Obad.12..18" ana="N1A DSF" lem="H(ME/RA">H(ME/RA|</w>
+<w id="Obad.12..19" ana="N1A GSF" lem="A)PW/LEIA">A)PWLEI/AS</w>
+<w id="Obad.12..20" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Obad.12..21" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.12..22" ana="D" lem="MH/">MH\</w>
+<w id="Obad.12..23" ana="VA AAS2S" lem="MEGALORRHMONE/W">MEGALORRHMONH/SH|S</w>
+<w id="Obad.12..24" ana="P" lem="E)N">E)N</w>
+<w id="Obad.12..25" ana="N1A DSF" lem="H(ME/RA">H(ME/RA|</w>
+<w id="Obad.12..26" ana="N3I GSF" lem="QLI=YIS">QLI/YEWS</w>
+<w id="Obad.13..1" ana="C" lem="MHDE/">MHDE\</w>
+<w id="Obad.13..2" ana="VB AAS2S" lem="EI)S-E)/RXOMAI">EI)SE/LQH|S</w>
+<w id="Obad.13..3" ana="P" lem="EI)S">EI)S</w>
+<w id="Obad.13..4" ana="N1 APF" lem="PU/LH">PU/LAS</w>
+<w id="Obad.13..5" ana="N2 GPM" lem="LAO/S">LAW=N</w>
+<w id="Obad.13..6" ana="P" lem="E)N">E)N</w>
+<w id="Obad.13..7" ana="N1A DSF" lem="H(ME/RA">H(ME/RA|</w>
+<w id="Obad.13..8" ana="N2 GPM" lem="PO/NOS">PO/NWN</w>
+<w id="Obad.13..9" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Obad.13..10" ana="C" lem="MHDE/">MHDE\</w>
+<w id="Obad.13..11" ana="V2 PAS2S" lem="E)PI-DE/W">E)PI/DH|S</w>
+<w id="Obad.13..12" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.13..13" ana="RP NS" lem="SU/">SU\</w>
+<w id="Obad.13..14" ana="RA ASF" lem="O(">TH\N</w>
+<w id="Obad.13..15" ana="N1 ASF" lem="SUNAGWGH/">SUNAGWGH\N</w>
+<w id="Obad.13..16" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Obad.13..17" ana="P" lem="E)N">E)N</w>
+<w id="Obad.13..18" ana="N1A DSF" lem="H(ME/RA">H(ME/RA|</w>
+<w id="Obad.13..19" ana="N2 GSM" lem="O)/LEQROS">O)LE/QROU</w>
+<w id="Obad.13..20" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Obad.13..21" ana="C" lem="MHDE/">MHDE\</w>
+<w id="Obad.13..22" ana="VE AAS3S" lem="SUN   E)PI-TI/QHMI">SUNEPIQH=|</w>
+<w id="Obad.13..23" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Obad.13..24" ana="RA ASF" lem="O(">TH\N</w>
+<w id="Obad.13..25" ana="N3I ASF" lem="DU/NAMIS">DU/NAMIN</w>
+<w id="Obad.13..26" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Obad.13..27" ana="P" lem="E)N">E)N</w>
+<w id="Obad.13..28" ana="N1A DSF" lem="H(ME/RA">H(ME/RA|</w>
+<w id="Obad.13..29" ana="N1A GSF" lem="A)PW/LEIA">A)PWLEI/AS</w>
+<w id="Obad.13..30" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Obad.14..1" ana="C" lem="MHDE/">MHDE\</w>
+<w id="Obad.14..2" ana="VH AAS2S" lem="E)PI-I(/STHMI">E)PISTH=|S</w>
+<w id="Obad.14..3" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Obad.14..4" ana="RA APF" lem="O(">TA\S</w>
+<w id="Obad.14..5" ana="N1 APF" lem="DIEKBOLH/">DIEKBOLA\S</w>
+<w id="Obad.14..6" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Obad.14..7" ana="RA GSN" lem="O(">TOU=</w>
+<w id="Obad.14..8" ana="VA AAN" lem="E)K-O)LEQREU/W">E)COLEQREU=SAI</w>
+<w id="Obad.14..9" ana="RA APM" lem="O(">TOU\S</w>
+<w id="Obad.14..10" ana="V1 PMPAPM" lem="A)NA-SW/ZW">A)NASW|ZOME/NOUS</w>
+<w id="Obad.14..11" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Obad.14..12" ana="C" lem="MHDE/">MHDE\</w>
+<w id="Obad.14..13" ana="VA AAS2S" lem="SUN-KLEI/W">SUGKLEI/SH|S</w>
+<w id="Obad.14..14" ana="RA APM" lem="O(">TOU\S</w>
+<w id="Obad.14..15" ana="V1 PAPAPM" lem="FEU/GW">FEU/GONTAS</w>
+<w id="Obad.14..16" ana="P" lem="E)K">E)C</w>
+<w id="Obad.14..17" ana="RD GPM" lem="AU)TO/S">AU)TW=N</w>
+<w id="Obad.14..18" ana="P" lem="E)N">E)N</w>
+<w id="Obad.14..19" ana="N1A DSF" lem="H(ME/RA">H(ME/RA|</w>
+<w id="Obad.14..20" ana="N3I GSF" lem="QLI=YIS">QLI/YEWS</w>
+<w id="Obad.15..1" ana="C" lem="DIO/TI">DIO/TI</w>
+<w id="Obad.15..2" ana="D" lem="E)GGU/S">E)GGU\S</w>
+<w id="Obad.15..3" ana="N1A NSF" lem="H(ME/RA">H(ME/RA</w>
+<w id="Obad.15..4" ana="N2 GSM" lem="KU/RIOS">KURI/OU</w>
+<w id="Obad.15..5" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Obad.15..6" ana="A3 APN" lem="PA=S">PA/NTA</w>
+<w id="Obad.15..7" ana="RA APN" lem="O(">TA\</w>
+<w id="Obad.15..8" ana="N3E APN" lem="E)/QNOS">E)/QNH</w>
+<w id="Obad.15..9" ana="RR ASM" lem="O(/S">O(\N</w>
+<w id="Obad.15..10" ana="N2 ASM" lem="TRO/POS">TRO/PON</w>
+<w id="Obad.15..11" ana="VAI AAI2S" lem="POIE/W">E)POI/HSAS</w>
+<w id="Obad.15..12" ana="D" lem="OU(/TWS">OU(/TWS</w>
+<w id="Obad.15..13" ana="V9 FMI3S" lem="EI)MI/">E)/STAI</w>
+<w id="Obad.15..14" ana="RP DS" lem="SU/">SOI</w>
+<w id="Obad.15..15" ana="RA NSN" lem="O(">TO\</w>
+<w id="Obad.15..16" ana="N3M NSN" lem="A)NTAPO/DOMA">A)NTAPO/DOMA/</w>
+<w id="Obad.15..17" ana="RP GS" lem="SU/">SOU</w>
+<w id="Obad.15..18" ana="VC FPI3S" lem="A)NTI A)PO-DI/DWMI">A)NTAPODOQH/SETAI</w>
+<w id="Obad.15..19" ana="P" lem="EI)S">EI)S</w>
+<w id="Obad.15..20" ana="N1 ASF" lem="KEFALH/">KEFALH/N</w>
+<w id="Obad.15..21" ana="RP GS" lem="SU/">SOU</w>
+<w id="Obad.16..1" ana="C" lem="DIO/TI">DIO/TI</w>
+<w id="Obad.16..2" ana="RR ASM" lem="O(/S">O(\N</w>
+<w id="Obad.16..3" ana="N2 ASM" lem="TRO/POS">TRO/PON</w>
+<w id="Obad.16..4" ana="VBI AAI2S" lem="PI/NW">E)/PIES</w>
+<w id="Obad.16..5" ana="P" lem="E)PI/">E)PI\</w>
+<w id="Obad.16..6" ana="RA ASN" lem="O(">TO\</w>
+<w id="Obad.16..7" ana="N3E ASN" lem="O)/ROS">O)/ROS</w>
+<w id="Obad.16..8" ana="RA ASN" lem="O(">TO\</w>
+<w id="Obad.16..9" ana="A1A ASN" lem="A(/GIOS">A(/GIO/N</w>
+<w id="Obad.16..10" ana="RP GS" lem="E)GW/">MOU</w>
+<w id="Obad.16..11" ana="VF FMI3P" lem="PI/NW">PI/ONTAI</w>
+<w id="Obad.16..12" ana="A3 NPN" lem="PA=S">PA/NTA</w>
+<w id="Obad.16..13" ana="RA NPN" lem="O(">TA\</w>
+<w id="Obad.16..14" ana="N3E NPN" lem="E)/QNOS">E)/QNH</w>
+<w id="Obad.16..15" ana="N2 ASM" lem="OI)=NOS">OI)=NON</w>
+<w id="Obad.16..16" ana="VF FMI3P" lem="PI/NW">PI/ONTAI</w>
+<w id="Obad.16..17" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.16..18" ana="VF FMI3P" lem="KATA-BAI/NW">KATABH/SONTAI</w>
+<w id="Obad.16..19" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.16..20" ana="VF FMI3P" lem="EI)MI/">E)/SONTAI</w>
+<w id="Obad.16..21" ana="D" lem="KAQW/S">KAQW\S</w>
+<w id="Obad.16..22" ana="D" lem="OU)">OU)X</w>
+<w id="Obad.16..23" ana="V1 PAPNPM" lem="U(PO-A)/RXW">U(PA/RXONTES</w>
+<w id="Obad.17..1" ana="P" lem="E)N">E)N</w>
+<w id="Obad.17..2" ana="X" lem="DE/">DE\</w>
+<w id="Obad.17..3" ana="RA DSN" lem="O(">TW=|</w>
+<w id="Obad.17..4" ana="N3E DSN" lem="O)/ROS">O)/REI</w>
+<w id="Obad.17..5" ana="N GS" lem="*SIWN">*SIWN</w>
+<w id="Obad.17..6" ana="V9 FMI3S" lem="EI)MI/">E)/STAI</w>
+<w id="Obad.17..7" ana="RA NSF" lem="O(">H(</w>
+<w id="Obad.17..8" ana="N1A NSF" lem="SWTHRI/A">SWTHRI/A</w>
+<w id="Obad.17..9" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.17..10" ana="V9 FMI3S" lem="EI)MI/">E)/STAI</w>
+<w id="Obad.17..11" ana="A1A NSN" lem="A(/GIOS">A(/GION</w>
+<w id="Obad.17..12" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.17..13" ana="VF FAI3P" lem="KATA-KLHRONOME/W">KATAKLHRONOMH/SOUSIN</w>
+<w id="Obad.17..14" ana="RA NSM" lem="O(">O(</w>
+<w id="Obad.17..15" ana="N2 NSM" lem="OI)=KOS">OI)=KOS</w>
+<w id="Obad.17..16" ana="N GSM" lem="*I)AKW/B">*IAKWB</w>
+<w id="Obad.17..17" ana="RA APM" lem="O(">TOU\S</w>
+<w id="Obad.17..18" ana="VA AAPAPM" lem="KATA-KLHRONOME/W">KATAKLHRONOMH/SANTAS</w>
+<w id="Obad.17..19" ana="RD APM" lem="AU)TO/S">AU)TOU/S</w>
+<w id="Obad.18..1" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.18..2" ana="V9 FMI3S" lem="EI)MI/">E)/STAI</w>
+<w id="Obad.18..3" ana="RA NSM" lem="O(">O(</w>
+<w id="Obad.18..4" ana="N2 NSM" lem="OI)=KOS">OI)=KOS</w>
+<w id="Obad.18..5" ana="N GSM" lem="*I)AKW/B">*IAKWB</w>
+<w id="Obad.18..6" ana="N3 NSN" lem="PU=R">PU=R</w>
+<w id="Obad.18..7" ana="RA NSM" lem="O(">O(</w>
+<w id="Obad.18..8" ana="X" lem="DE/">DE\</w>
+<w id="Obad.18..9" ana="N2 NSM" lem="OI)=KOS">OI)=KOS</w>
+<w id="Obad.18..10" ana="N GSM" lem="*IWSHF">*IWSHF</w>
+<w id="Obad.18..11" ana="N3G NSF" lem="FLO/C">FLO/C</w>
+<w id="Obad.18..12" ana="RA NSM" lem="O(">O(</w>
+<w id="Obad.18..13" ana="X" lem="DE/">DE\</w>
+<w id="Obad.18..14" ana="N2 NSM" lem="OI)=KOS">OI)=KOS</w>
+<w id="Obad.18..15" ana="N GSM" lem="*HSAU">*HSAU</w>
+<w id="Obad.18..16" ana="P" lem="EI)S">EI)S</w>
+<w id="Obad.18..17" ana="N1 ASF" lem="KALA/MH">KALA/MHN</w>
+<w id="Obad.18..18" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.18..19" ana="VC FPI3P" lem="E)K-KAI/W">E)KKAUQH/SONTAI</w>
+<w id="Obad.18..20" ana="P" lem="EI)S">EI)S</w>
+<w id="Obad.18..21" ana="RD APM" lem="AU)TO/S">AU)TOU\S</w>
+<w id="Obad.18..22" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.18..23" ana="VF FMI3P" lem="KATA-E)SQI/W">KATAFA/GONTAI</w>
+<w id="Obad.18..24" ana="RD APM" lem="AU)TO/S">AU)TOU/S</w>
+<w id="Obad.18..25" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.18..26" ana="D" lem="OU)">OU)K</w>
+<w id="Obad.18..27" ana="V9 FMI3S" lem="EI)MI/">E)/STAI</w>
+<w id="Obad.18..28" ana="A1B NSM" lem="PUROFO/ROS">PUROFO/ROS</w>
+<w id="Obad.18..29" ana="P" lem="E)N">E)N</w>
+<w id="Obad.18..30" ana="RA DSM" lem="O(">TW=|</w>
+<w id="Obad.18..31" ana="N2 DSM" lem="OI)=KOS">OI)/KW|</w>
+<w id="Obad.18..32" ana="N GSM" lem="*HSAU">*HSAU</w>
+<w id="Obad.18..33" ana="C" lem="DIO/TI">DIO/TI</w>
+<w id="Obad.18..34" ana="N2 NSM" lem="KU/RIOS">KU/RIOS</w>
+<w id="Obad.18..35" ana="VAI AAI3S" lem="LALE/W">E)LA/LHSEN</w>
+<w id="Obad.19..1" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.19..2" ana="VF FAI3P" lem="KATA-KLHRONOME/W">KATAKLHRONOMH/SOUSIN</w>
+<w id="Obad.19..3" ana="RA NPM" lem="O(">OI(</w>
+<w id="Obad.19..4" ana="P" lem="E)N">E)N</w>
+<w id="Obad.19..5" ana="N DS" lem="*NAGEB">*NAGEB</w>
+<w id="Obad.19..6" ana="RA ASN" lem="O(">TO\</w>
+<w id="Obad.19..7" ana="N3E ASN" lem="O)/ROS">O)/ROS</w>
+<w id="Obad.19..8" ana="RA ASN" lem="O(">TO\</w>
+<w id="Obad.19..9" ana="N ASN" lem="*HSAU">*HSAU</w>
+<w id="Obad.19..10" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.19..11" ana="RA NPM" lem="O(">OI(</w>
+<w id="Obad.19..12" ana="P" lem="E)N">E)N</w>
+<w id="Obad.19..13" ana="RA DSF" lem="O(">TH=|</w>
+<w id="Obad.19..14" ana="N DSF" lem="*SEFHLA">*SEFHLA</w>
+<w id="Obad.19..15" ana="RA APM" lem="O(">TOU\S</w>
+<w id="Obad.19..16" ana="A1B APM" lem="A)LLO/FULOS">A)LLOFU/LOUS</w>
+<w id="Obad.19..17" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.19..18" ana="VF FAI3P" lem="KATA-KLHRONOME/W">KATAKLHRONOMH/SOUSIN</w>
+<w id="Obad.19..19" ana="RA ASN" lem="O(">TO\</w>
+<w id="Obad.19..20" ana="N3E ASN" lem="O)/ROS">O)/ROS</w>
+<w id="Obad.19..21" ana="N GSM" lem="*E)FRA/IM">*EFRAIM</w>
+<w id="Obad.19..22" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.19..23" ana="RA ASN" lem="O(">TO\</w>
+<w id="Obad.19..24" ana="N2N ASN" lem="PEDI/ON">PEDI/ON</w>
+<w id="Obad.19..25" ana="N1A GSF" lem="*SAMAREI/A">*SAMAREI/AS</w>
+<w id="Obad.19..26" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.19..27" ana="N ASM" lem="*BENIAMI/N">*BENIAMIN</w>
+<w id="Obad.19..28" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.19..29" ana="RA ASF" lem="O(">TH\N</w>
+<w id="Obad.19..30" ana="N3 ASF" lem="*GALAADI=TIS">*GALAADI=TIN</w>
+<w id="Obad.20..1" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.20..2" ana="RA GSF" lem="O(">TH=S</w>
+<w id="Obad.20..3" ana="N1A GSF" lem="METOIKESI/A">METOIKESI/AS</w>
+<w id="Obad.20..4" ana="RA NSF" lem="O(">H(</w>
+<w id="Obad.20..5" ana="N1 NSF" lem="A)RXH/">A)RXH\</w>
+<w id="Obad.20..6" ana="RD NSF" lem="OU(=TOS">AU(/TH</w>
+<w id="Obad.20..7" ana="RA DPM" lem="O(">TOI=S</w>
+<w id="Obad.20..8" ana="N2 DPM" lem="UI(O/S">UI(OI=S</w>
+<w id="Obad.20..9" ana="N GSM" lem="*I)SRAH/L">*ISRAHL</w>
+<w id="Obad.20..10" ana="N1 NSF" lem="GH=">GH=</w>
+<w id="Obad.20..11" ana="RA GPM" lem="O(">TW=N</w>
+<w id="Obad.20..12" ana="N2 GPM" lem="*XANANAI=OS">*XANANAI/WN</w>
+<w id="Obad.20..13" ana="P" lem="E(/WS">E(/WS</w>
+<w id="Obad.20..14" ana="N1A GPF" lem="*SAREPTA">*SAREPTWN</w>
+<w id="Obad.20..15" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.20..16" ana="RA NSF" lem="O(">H(</w>
+<w id="Obad.20..17" ana="N1A NSF" lem="METOIKESI/A">METOIKESI/A</w>
+<w id="Obad.20..18" ana="N GSF" lem="*I)EROUSALH/M">*IEROUSALHM</w>
+<w id="Obad.20..19" ana="P" lem="E(/WS">E(/WS</w>
+<w id="Obad.20..20" ana="N GS" lem="*EFRAQA">*EFRAQA</w>
+<w id="Obad.20..21" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.20..22" ana="VF FAI3P" lem="KLHRONOME/W">KLHRONOMH/SOUSIN</w>
+<w id="Obad.20..23" ana="RA APF" lem="O(">TA\S</w>
+<w id="Obad.20..24" ana="N3I APF" lem="PO/LIS">PO/LEIS</w>
+<w id="Obad.20..25" ana="RA GSM" lem="O(">TOU=</w>
+<w id="Obad.20..26" ana="N GS" lem="*NAGEB">*NAGEB</w>
+<w id="Obad.21..1" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.21..2" ana="VF FMI3P" lem="A)NA-BAI/NW">A)NABH/SONTAI</w>
+<w id="Obad.21..3" ana="N3 NPM" lem="A)NH/R">A)/NDRES</w>
+<w id="Obad.21..4" ana="VT XPPNPM" lem="SW/ZW">SESW|SME/NOI</w>
+<w id="Obad.21..5" ana="P" lem="E)K">E)C</w>
+<w id="Obad.21..6" ana="N3E GSN" lem="O)/ROS">O)/ROUS</w>
+<w id="Obad.21..7" ana="N GS" lem="*SIWN">*SIWN</w>
+<w id="Obad.21..8" ana="RA GSN" lem="O(">TOU=</w>
+<w id="Obad.21..9" ana="VA AAN" lem="E)K-DIKE/W">E)KDIKH=SAI</w>
+<w id="Obad.21..10" ana="RA ASN" lem="O(">TO\</w>
+<w id="Obad.21..11" ana="N3E ASN" lem="O)/ROS">O)/ROS</w>
+<w id="Obad.21..12" ana="N GSM" lem="*HSAU">*HSAU</w>
+<w id="Obad.21..13" ana="C" lem="KAI/">KAI\</w>
+<w id="Obad.21..14" ana="V9 FMI3S" lem="EI)MI/">E)/STAI</w>
+<w id="Obad.21..15" ana="RA DSM" lem="O(">TW=|</w>
+<w id="Obad.21..16" ana="N2 DSM" lem="KU/RIOS">KURI/W|</w>
+<w id="Obad.21..17" ana="RA NSF" lem="O(">H(</w>
+<w id="Obad.21..18" ana="N1A NSF" lem="BASILEI/A">BASILEI/A</w>
