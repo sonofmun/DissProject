@@ -1,0 +1,3210 @@
+<w id="Amos.1.1.1" ana="N2 NPM" lem="λόγοσ">λόγοι</w>
+<w id="Amos.1.1.2" ana="N GSM" lem="Αμωσ">Αμωσ</w>
+<w id="Amos.1.1.3" ana="RR NPM" lem="ὅσ">οἳ</w>
+<w id="Amos.1.1.4" ana="VBI AMI3P" lem="γίγνομαι">ἐγένοντο</w>
+<w id="Amos.1.1.5" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.1.1.6" ana="N DPM" lem="νακκαριμ">νακκαριμ</w>
+<w id="Amos.1.1.7" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.1.1.8" ana="N GS" lem="Θεκουε">Θεκουε</w>
+<w id="Amos.1.1.9" ana="RR APM" lem="ὅσ">οὓσ</w>
+<w id="Amos.1.1.10" ana="VBI AAI3S" lem="ὁράω">εἶδεν</w>
+<w id="Amos.1.1.11" ana="P" lem="ὑπέρ">ὑπὲρ</w>
+<w id="Amos.1.1.12" ana="N ASF" lem="Ἰερουσαλήμ">Ιερουσαλημ</w>
+<w id="Amos.1.1.13" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.1.1.14" ana="N1A DPF" lem="ἡμέρα">ἡμέραισ</w>
+<w id="Amos.1.1.15" ana="N1T GSM" lem="Οζιασ">Οζιου</w>
+<w id="Amos.1.1.16" ana="N3V GSM" lem="βασιλεύσ">βασιλέωσ</w>
+<w id="Amos.1.1.17" ana="N GSM" lem="Ιουδα">Ιουδα</w>
+<w id="Amos.1.1.18" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.1.19" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.1.1.20" ana="N1A DPF" lem="ἡμέρα">ἡμέραισ</w>
+<w id="Amos.1.1.21" ana="N GSM" lem="Ιεροβοαμ">Ιεροβοαμ</w>
+<w id="Amos.1.1.22" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.1.1.23" ana="N GSM" lem="Ιωασ">Ιωασ</w>
+<w id="Amos.1.1.24" ana="N3V GSM" lem="βασιλεύσ">βασιλέωσ</w>
+<w id="Amos.1.1.25" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.1.1.26" ana="P" lem="πρό">πρὸ</w>
+<w id="Amos.1.1.27" ana="M" lem="δύο">δύο</w>
+<w id="Amos.1.1.28" ana="N3E GPN" lem="ἔτοσ">ἐτῶν</w>
+<w id="Amos.1.1.29" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.1.1.30" ana="N2 GSM" lem="σεισμόσ">σεισμοῦ</w>
+<w id="Amos.1.2.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.2.2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Amos.1.2.3" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.1.2.4" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.1.2.5" ana="N GS" lem="Σιων">Σιων</w>
+<w id="Amos.1.2.6" ana="VAI AMI3S" lem="φθέγγομαι">ἐφθέγξατο</w>
+<w id="Amos.1.2.7" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.2.8" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Amos.1.2.9" ana="N GSF" lem="Ἰερουσαλήμ">Ιερουσαλημ</w>
+<w id="Amos.1.2.10" ana="VAI AAI3S" lem="δίδωμι">ἔδωκεν</w>
+<w id="Amos.1.2.11" ana="N1 ASF" lem="φωνή">φωνὴν</w>
+<w id="Amos.1.2.12" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.1.2.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.2.14" ana="VAI AAI3P" lem="πενθέω">ἐπένθησαν</w>
+<w id="Amos.1.2.15" ana="RA NPF" lem="ὁ">αἱ</w>
+<w id="Amos.1.2.16" ana="N1 NPF" lem="νομή">νομαὶ</w>
+<w id="Amos.1.2.17" ana="RA GPM" lem="ὁ">τῶν</w>
+<w id="Amos.1.2.18" ana="N3 GPM" lem="ποιμήν">ποιμένων</w>
+<w id="Amos.1.2.19" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.2.20" ana="VCI API3S" lem="ξηραίνω">ἐξηράνθη</w>
+<w id="Amos.1.2.21" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Amos.1.2.22" ana="N1 NSF" lem="κορυφή">κορυφὴ</w>
+<w id="Amos.1.2.23" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.1.2.24" ana="N2 GSM" lem="Καρμήλοσ">Καρμήλου</w>
+<w id="Amos.1.3.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.3.2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Amos.1.3.3" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.1.3.4" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.1.3.5" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.1.3.6" ana="A3 DPF" lem="τρεῖσ">τρισὶν</w>
+<w id="Amos.1.3.7" ana="N1A DPF" lem="ἀσέβεια">ἀσεβείαισ</w>
+<w id="Amos.1.3.8" ana="N2 GS" lem="Δαμασκόσ">Δαμασκοῦ</w>
+<w id="Amos.1.3.9" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.3.10" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.1.3.11" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.1.3.12" ana="A3 DPF" lem="τέσσαρεσ">τέσσαρσιν</w>
+<w id="Amos.1.3.13" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.1.3.14" ana="VD FPI1S" lem="ἀπο-στρέφω">ἀποστραφήσομαι</w>
+<w id="Amos.1.3.15" ana="RD ASM" lem="αὐτόσ">αὐτόν</w>
+<w id="Amos.1.3.16" ana="P" lem="ἀντί">ἀνθ'</w>
+<w id="Amos.1.3.17" ana="RR GPM" lem="ὅσ">ὧν</w>
+<w id="Amos.1.3.18" ana="V1I IAI3P" lem="πρίζω">ἔπριζον</w>
+<w id="Amos.1.3.19" ana="N3N DPM" lem="πρίων">πρίοσιν</w>
+<w id="Amos.1.3.20" ana="A1C DPM" lem="σιδηροῦσ">σιδηροῖσ</w>
+<w id="Amos.1.3.21" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="Amos.1.3.22" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.1.3.23" ana="N3 DSF" lem="γαστήρ">γαστρὶ</w>
+<w id="Amos.1.3.24" ana="V1 PAPAPF" lem="ἔχω">ἐχούσασ</w>
+<w id="Amos.1.3.25" ana="RA GPM" lem="ὁ">τῶν</w>
+<w id="Amos.1.3.26" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.1.3.27" ana="N DS" lem="Γαλαάδ">Γαλααδ</w>
+<w id="Amos.1.4.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.4.2" ana="VF2 FAI1S" lem="ἐκ   ἀπο-στέλλω">ἐξαποστελῶ</w>
+<w id="Amos.1.4.3" ana="N3 ASN" lem="πῦρ">πῦρ</w>
+<w id="Amos.1.4.4" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.1.4.5" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.1.4.6" ana="N2 ASM" lem="οἶκοσ">οἶκον</w>
+<w id="Amos.1.4.7" ana="N GSM" lem="Αζαηλ">Αζαηλ</w>
+<w id="Amos.1.4.8" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.4.9" ana="VF FMI3S" lem="κατα-ἐσθίω">καταφάγεται</w>
+<w id="Amos.1.4.10" ana="N2N APN" lem="θεμέλιον">θεμέλια</w>
+<w id="Amos.1.4.11" ana="N2 GSM" lem="υἱόσ">υἱοῦ</w>
+<w id="Amos.1.4.12" ana="N GSM" lem="Αδερ">Αδερ</w>
+<w id="Amos.1.5.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.5.2" ana="VF FAI1S" lem="συν-τρίβω">συντρίψω</w>
+<w id="Amos.1.5.3" ana="N2 APM" lem="μοχλόσ">μοχλοὺσ</w>
+<w id="Amos.1.5.4" ana="N2 GS" lem="Δαμασκόσ">Δαμασκοῦ</w>
+<w id="Amos.1.5.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.5.6" ana="VF FAI1S" lem="ἐκ-ὀλεθρεύω">ἐξολεθρεύσω</w>
+<w id="Amos.1.5.7" ana="V2 PAPAPM" lem="κατα-οἰκέω">κατοικοῦντασ</w>
+<w id="Amos.1.5.8" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.1.5.9" ana="N2N GSN" lem="πεδίον">πεδίου</w>
+<w id="Amos.1.5.10" ana="N GS" lem="Ων">Ων</w>
+<w id="Amos.1.5.11" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.5.12" ana="VF FAI1S" lem="κατα-κόπτω">κατακόψω</w>
+<w id="Amos.1.5.13" ana="N1 ASF" lem="φυλή">φυλὴν</w>
+<w id="Amos.1.5.14" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Amos.1.5.15" ana="N3 GPM" lem="ἀνήρ">ἀνδρῶν</w>
+<w id="Amos.1.5.16" ana="N GS" lem="Χαρραν">Χαρραν</w>
+<w id="Amos.1.5.17" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.5.18" ana="VC FPI3S" lem="αἰχμαλωτεύω">αἰχμαλωτευθήσεται</w>
+<w id="Amos.1.5.19" ana="N2 NSM" lem="λαόσ">λαὸσ</w>
+<w id="Amos.1.5.20" ana="N1A GSF" lem="Συρία">Συρίασ</w>
+<w id="Amos.1.5.21" ana="A1B NSM" lem="ἐπίκλητοσ">ἐπίκλητοσ</w>
+<w id="Amos.1.5.22" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.1.5.23" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.1.6.1" ana="RD APN" lem="ὅδε">τάδε</w>
+<w id="Amos.1.6.2" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.1.6.3" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.1.6.4" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.1.6.5" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.1.6.6" ana="A3 DPF" lem="τρεῖσ">τρισὶν</w>
+<w id="Amos.1.6.7" ana="N1A DPF" lem="ἀσέβεια">ἀσεβείαισ</w>
+<w id="Amos.1.6.8" ana="N1S GSF" lem="Γάζα">Γάζησ</w>
+<w id="Amos.1.6.9" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.6.10" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.1.6.11" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.1.6.12" ana="A3 DPF" lem="τέσσαρεσ">τέσσαρσιν</w>
+<w id="Amos.1.6.13" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.1.6.14" ana="VD FPI1S" lem="ἀπο-στρέφω">ἀποστραφήσομαι</w>
+<w id="Amos.1.6.15" ana="RD APM" lem="αὐτόσ">αὐτούσ</w>
+<w id="Amos.1.6.16" ana="P" lem="ἕνεκεν">ἕνεκεν</w>
+<w id="Amos.1.6.17" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.1.6.18" ana="VA AAN" lem="αἰχμαλωτεύω">αἰχμαλωτεῦσαι</w>
+<w id="Amos.1.6.19" ana="RD APM" lem="αὐτόσ">αὐτοὺσ</w>
+<w id="Amos.1.6.20" ana="N1A ASF" lem="αἰχμαλωσία">αἰχμαλωσίαν</w>
+<w id="Amos.1.6.21" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.1.6.22" ana="N GSM" lem="Σαλωμών">Σαλωμων</w>
+<w id="Amos.1.6.23" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.1.6.24" ana="VA AAN" lem="συν-κλείω">συγκλεῖσαι</w>
+<w id="Amos.1.6.25" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.1.6.26" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.1.6.27" ana="N1A ASF" lem="Ιδουμαία">Ιδουμαίαν</w>
+<w id="Amos.1.7.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.7.2" ana="VF2 FAI1S" lem="ἐκ   ἀπο-στέλλω">ἐξαποστελῶ</w>
+<w id="Amos.1.7.3" ana="N3 ASN" lem="πῦρ">πῦρ</w>
+<w id="Amos.1.7.4" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.1.7.5" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.1.7.6" ana="N3E APN" lem="τεῖχοσ">τείχη</w>
+<w id="Amos.1.7.7" ana="N1S GSF" lem="Γάζα">Γάζησ</w>
+<w id="Amos.1.7.8" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.7.9" ana="VF FMI3S" lem="κατα-ἐσθίω">καταφάγεται</w>
+<w id="Amos.1.7.10" ana="N2N APN" lem="θεμέλιον">θεμέλια</w>
+<w id="Amos.1.7.11" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Amos.1.8.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.8.2" ana="VF FAI1S" lem="ἐκ-ὀλεθρεύω">ἐξολεθρεύσω</w>
+<w id="Amos.1.8.3" ana="V2 PAPAPM" lem="κατα-οἰκέω">κατοικοῦντασ</w>
+<w id="Amos.1.8.4" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Amos.1.8.5" ana="N2 GSM" lem="Ἄζωτοσ">Ἀζώτου</w>
+<w id="Amos.1.8.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.8.7" ana="VC FPI3S" lem="ἐκ-αἴρω">ἐξαρθήσεται</w>
+<w id="Amos.1.8.8" ana="N1 NSF" lem="φυλή">φυλὴ</w>
+<w id="Amos.1.8.9" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Amos.1.8.10" ana="N3W GSF" lem="Ἀσκαλών">Ἀσκαλῶνοσ</w>
+<w id="Amos.1.8.11" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.8.12" ana="VF FAI1S" lem="ἐπι-ἄγω">ἐπάξω</w>
+<w id="Amos.1.8.13" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.1.8.14" ana="N3 ASF" lem="χείρ">χεῖρά</w>
+<w id="Amos.1.8.15" ana="RP GS" lem="ἐγώ">μου</w>
+<w id="Amos.1.8.16" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.1.8.17" ana="N AS" lem="Ακκαρων">Ακκαρων</w>
+<w id="Amos.1.8.18" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.8.19" ana="VF2 FMI3P" lem="ἀπο-ὀλλύω">ἀπολοῦνται</w>
+<w id="Amos.1.8.20" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.1.8.21" ana="A1B NPM" lem="κατάλοιποσ">κατάλοιποι</w>
+<w id="Amos.1.8.22" ana="RA GPM" lem="ὁ">τῶν</w>
+<w id="Amos.1.8.23" ana="A1B GPM" lem="ἀλλόφυλοσ">ἀλλοφύλων</w>
+<w id="Amos.1.8.24" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.1.8.25" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.1.9.1" ana="RD APN" lem="ὅδε">τάδε</w>
+<w id="Amos.1.9.2" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.1.9.3" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.1.9.4" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.1.9.5" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.1.9.6" ana="A3 DPF" lem="τρεῖσ">τρισὶν</w>
+<w id="Amos.1.9.7" ana="N1A DPF" lem="ἀσέβεια">ἀσεβείαισ</w>
+<w id="Amos.1.9.8" ana="N2 GSF" lem="Τύροσ">Τύρου</w>
+<w id="Amos.1.9.9" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.9.10" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.1.9.11" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.1.9.12" ana="A3 DPF" lem="τέσσαρεσ">τέσσαρσιν</w>
+<w id="Amos.1.9.13" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.1.9.14" ana="VD FPI1S" lem="ἀπο-στρέφω">ἀποστραφήσομαι</w>
+<w id="Amos.1.9.15" ana="RD ASF" lem="αὐτόσ">αὐτήν</w>
+<w id="Amos.1.9.16" ana="P" lem="ἀντί">ἀνθ'</w>
+<w id="Amos.1.9.17" ana="RR GPM" lem="ὅσ">ὧν</w>
+<w id="Amos.1.9.18" ana="VAI AAI3P" lem="συν-κλείω">συνέκλεισαν</w>
+<w id="Amos.1.9.19" ana="N1A ASF" lem="αἰχμαλωσία">αἰχμαλωσίαν</w>
+<w id="Amos.1.9.20" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.1.9.21" ana="N GSM" lem="Σαλωμών">Σαλωμων</w>
+<w id="Amos.1.9.22" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.1.9.23" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.1.9.24" ana="N1A ASF" lem="Ιδουμαία">Ιδουμαίαν</w>
+<w id="Amos.1.9.25" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.9.26" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.1.9.27" ana="VSI API3P" lem="μιμνήσκω">ἐμνήσθησαν</w>
+<w id="Amos.1.9.28" ana="N1 GSF" lem="διαθήκη">διαθήκησ</w>
+<w id="Amos.1.9.29" ana="N2 GPM" lem="ἀδελφόσ">ἀδελφῶν</w>
+<w id="Amos.1.10.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.10.2" ana="VF2 FAI1S" lem="ἐκ   ἀπο-στέλλω">ἐξαποστελῶ</w>
+<w id="Amos.1.10.3" ana="N3 ASN" lem="πῦρ">πῦρ</w>
+<w id="Amos.1.10.4" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.1.10.5" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.1.10.6" ana="N3E APN" lem="τεῖχοσ">τείχη</w>
+<w id="Amos.1.10.7" ana="N2 GSF" lem="Τύροσ">Τύρου</w>
+<w id="Amos.1.10.8" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.10.9" ana="VF FMI3S" lem="κατα-ἐσθίω">καταφάγεται</w>
+<w id="Amos.1.10.10" ana="N2N APN" lem="θεμέλιον">θεμέλια</w>
+<w id="Amos.1.10.11" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Amos.1.11.1" ana="RD APN" lem="ὅδε">τάδε</w>
+<w id="Amos.1.11.2" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.1.11.3" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.1.11.4" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.1.11.5" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.1.11.6" ana="A3 DPF" lem="τρεῖσ">τρισὶν</w>
+<w id="Amos.1.11.7" ana="N1A DPF" lem="ἀσέβεια">ἀσεβείαισ</w>
+<w id="Amos.1.11.8" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.1.11.9" ana="N1A GSF" lem="Ιδουμαία">Ιδουμαίασ</w>
+<w id="Amos.1.11.10" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.11.11" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.1.11.12" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.1.11.13" ana="A3 DPF" lem="τέσσαρεσ">τέσσαρσιν</w>
+<w id="Amos.1.11.14" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.1.11.15" ana="VD FPI1S" lem="ἀπο-στρέφω">ἀποστραφήσομαι</w>
+<w id="Amos.1.11.16" ana="RD APM" lem="αὐτόσ">αὐτούσ</w>
+<w id="Amos.1.11.17" ana="P" lem="ἕνεκα">ἕνεκα</w>
+<w id="Amos.1.11.18" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.1.11.19" ana="VA AAN" lem="διώκω">διῶξαι</w>
+<w id="Amos.1.11.20" ana="RD APM" lem="αὐτόσ">αὐτοὺσ</w>
+<w id="Amos.1.11.21" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.1.11.22" ana="N1A DSF" lem="ῥομφαία">ῥομφαίᾳ</w>
+<w id="Amos.1.11.23" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.1.11.24" ana="N2 ASM" lem="ἀδελφόσ">ἀδελφὸν</w>
+<w id="Amos.1.11.25" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.1.11.26" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.11.27" ana="VAI AMI3S" lem="λυμαίνω">ἐλυμήνατο</w>
+<w id="Amos.1.11.28" ana="N1A ASF" lem="μήτρα">μήτραν</w>
+<w id="Amos.1.11.29" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.1.11.30" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.1.11.31" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.11.32" ana="VAI AAI3S" lem="ἁρπάζω">ἥρπασεν</w>
+<w id="Amos.1.11.33" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.1.11.34" ana="N2N ASN" lem="μαρτύριον">μαρτύριον</w>
+<w id="Amos.1.11.35" ana="N1 ASF" lem="φρίκη">φρίκην</w>
+<w id="Amos.1.11.36" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.1.11.37" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.11.38" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.1.11.39" ana="N3M ASN" lem="ὅρμημα">ὅρμημα</w>
+<w id="Amos.1.11.40" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.1.11.41" ana="VAI AAI3S" lem="φυλάσσω">ἐφύλαξεν</w>
+<w id="Amos.1.11.42" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.1.11.43" ana="N3E ASN" lem="νεῖκοσ">νεῖκοσ</w>
+<w id="Amos.1.12.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.12.2" ana="VF2 FAI1S" lem="ἐκ   ἀπο-στέλλω">ἐξαποστελῶ</w>
+<w id="Amos.1.12.3" ana="N3 ASN" lem="πῦρ">πῦρ</w>
+<w id="Amos.1.12.4" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.1.12.5" ana="N AS" lem="Θαιμαν">Θαιμαν</w>
+<w id="Amos.1.12.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.12.7" ana="VF FMI3S" lem="κατα-ἐσθίω">καταφάγεται</w>
+<w id="Amos.1.12.8" ana="N2N APN" lem="θεμέλιον">θεμέλια</w>
+<w id="Amos.1.12.9" ana="N3E GPN" lem="τεῖχοσ">τειχέων</w>
+<w id="Amos.1.12.10" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Amos.1.13.1" ana="RD APN" lem="ὅδε">τάδε</w>
+<w id="Amos.1.13.2" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.1.13.3" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.1.13.4" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.1.13.5" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.1.13.6" ana="A3 DPF" lem="τρεῖσ">τρισὶν</w>
+<w id="Amos.1.13.7" ana="N1A DPF" lem="ἀσέβεια">ἀσεβείαισ</w>
+<w id="Amos.1.13.8" ana="N2 GPM" lem="υἱόσ">υἱῶν</w>
+<w id="Amos.1.13.9" ana="N GSM" lem="Αμμων">Αμμων</w>
+<w id="Amos.1.13.10" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.13.11" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.1.13.12" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.1.13.13" ana="A3 DPF" lem="τέσσαρεσ">τέσσαρσιν</w>
+<w id="Amos.1.13.14" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.1.13.15" ana="VD FPI1S" lem="ἀπο-στρέφω">ἀποστραφήσομαι</w>
+<w id="Amos.1.13.16" ana="RD ASM" lem="αὐτόσ">αὐτόν</w>
+<w id="Amos.1.13.17" ana="P" lem="ἀντί">ἀνθ'</w>
+<w id="Amos.1.13.18" ana="RR GPM" lem="ὅσ">ὧν</w>
+<w id="Amos.1.13.19" ana="V1I IAI3P" lem="ἀνα-σχίζω">ἀνέσχιζον</w>
+<w id="Amos.1.13.20" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="Amos.1.13.21" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.1.13.22" ana="N3 DSF" lem="γαστήρ">γαστρὶ</w>
+<w id="Amos.1.13.23" ana="V1 PAPAPF" lem="ἔχω">ἐχούσασ</w>
+<w id="Amos.1.13.24" ana="RA GPM" lem="ὁ">τῶν</w>
+<w id="Amos.1.13.25" ana="N3 GPM" lem="Γαλααδῖτισ">Γαλααδιτῶν</w>
+<w id="Amos.1.13.26" ana="C" lem="ὅπωσ">ὅπωσ</w>
+<w id="Amos.1.13.27" ana="V1 PAS3P" lem="ἐν-πλατύνω">ἐμπλατύνωσιν</w>
+<w id="Amos.1.13.28" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.1.13.29" ana="N2N APN" lem="ὅριον">ὅρια</w>
+<w id="Amos.1.13.30" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.1.14.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.14.2" ana="VF FAI1S" lem="ἀνα-ἅπτω">ἀνάψω</w>
+<w id="Amos.1.14.3" ana="N3 ASN" lem="πῦρ">πῦρ</w>
+<w id="Amos.1.14.4" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.1.14.5" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.1.14.6" ana="N3E APN" lem="τεῖχοσ">τείχη</w>
+<w id="Amos.1.14.7" ana="N GS" lem="Ραββα">Ραββα</w>
+<w id="Amos.1.14.8" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.14.9" ana="VF FMI3S" lem="κατα-ἐσθίω">καταφάγεται</w>
+<w id="Amos.1.14.10" ana="N2N APN" lem="θεμέλιον">θεμέλια</w>
+<w id="Amos.1.14.11" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Amos.1.14.12" ana="P" lem="μετά">μετὰ</w>
+<w id="Amos.1.14.13" ana="N1 GSF" lem="κραυγή">κραυγῆσ</w>
+<w id="Amos.1.14.14" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.1.14.15" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Amos.1.14.16" ana="N2 GSM" lem="πόλεμοσ">πολέμου</w>
+<w id="Amos.1.14.17" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.14.18" ana="VC FPI3S" lem="σείω">σεισθήσεται</w>
+<w id="Amos.1.14.19" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.1.14.20" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Amos.1.14.21" ana="N1A GSF" lem="συντέλεια">συντελείασ</w>
+<w id="Amos.1.14.22" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Amos.1.15.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.15.2" ana="VF FMI3P" lem="πορεύομαι">πορεύσονται</w>
+<w id="Amos.1.15.3" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.1.15.4" ana="N3V NPM" lem="βασιλεύσ">βασιλεῖσ</w>
+<w id="Amos.1.15.5" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Amos.1.15.6" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.1.15.7" ana="N1A DSF" lem="αἰχμαλωσία">αἰχμαλωσίᾳ</w>
+<w id="Amos.1.15.8" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.1.15.9" ana="N3V NPM" lem="ἱερεύσ">ἱερεῖσ</w>
+<w id="Amos.1.15.10" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.1.15.11" ana="C" lem="καί">καὶ</w>
+<w id="Amos.1.15.12" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.1.15.13" ana="N3 NPM" lem="ἄρχων">ἄρχοντεσ</w>
+<w id="Amos.1.15.14" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.1.15.15" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.1.15.16" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.1.15.17" ana="RD ASN" lem="αὐτόσ">αὐτό</w>
+<w id="Amos.1.15.18" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.1.15.19" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.2.1.1" ana="RD APN" lem="ὅδε">τάδε</w>
+<w id="Amos.2.1.2" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.2.1.3" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.2.1.4" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.2.1.5" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.2.1.6" ana="A3 DPF" lem="τρεῖσ">τρισὶν</w>
+<w id="Amos.2.1.7" ana="N1A DPF" lem="ἀσέβεια">ἀσεβείαισ</w>
+<w id="Amos.2.1.8" ana="N GSF" lem="Μωαβ">Μωαβ</w>
+<w id="Amos.2.1.9" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.1.10" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.2.1.11" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.2.1.12" ana="A3 DPF" lem="τέσσαρεσ">τέσσαρσιν</w>
+<w id="Amos.2.1.13" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.2.1.14" ana="VD FPI1S" lem="ἀπο-στρέφω">ἀποστραφήσομαι</w>
+<w id="Amos.2.1.15" ana="RD ASM" lem="αὐτόσ">αὐτόν</w>
+<w id="Amos.2.1.16" ana="P" lem="ἀντί">ἀνθ'</w>
+<w id="Amos.2.1.17" ana="RR GPM" lem="ὅσ">ὧν</w>
+<w id="Amos.2.1.18" ana="VAI AAI3P" lem="κατα-καίω">κατέκαυσαν</w>
+<w id="Amos.2.1.19" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.2.1.20" ana="N2N APN" lem="ὀστέον">ὀστᾶ</w>
+<w id="Amos.2.1.21" ana="N3V GSM" lem="βασιλεύσ">βασιλέωσ</w>
+<w id="Amos.2.1.22" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.2.1.23" ana="N1A GSF" lem="Ιδουμαία">Ιδουμαίασ</w>
+<w id="Amos.2.1.24" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.2.1.25" ana="N1A ASF" lem="κονία">κονίαν</w>
+<w id="Amos.2.2.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.2.2" ana="VF2 FAI1S" lem="ἐκ   ἀπο-στέλλω">ἐξαποστελῶ</w>
+<w id="Amos.2.2.3" ana="N3 ASN" lem="πῦρ">πῦρ</w>
+<w id="Amos.2.2.4" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.2.2.5" ana="N ASF" lem="Μωαβ">Μωαβ</w>
+<w id="Amos.2.2.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.2.7" ana="VF FMI3S" lem="κατα-ἐσθίω">καταφάγεται</w>
+<w id="Amos.2.2.8" ana="N2N APN" lem="θεμέλιον">θεμέλια</w>
+<w id="Amos.2.2.9" ana="RA GPF" lem="ὁ">τῶν</w>
+<w id="Amos.2.2.10" ana="N3I GPF" lem="πόλισ">πόλεων</w>
+<w id="Amos.2.2.11" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Amos.2.2.12" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.2.13" ana="VF2 FMI3S" lem="ἀπο-θνήσκω">ἀποθανεῖται</w>
+<w id="Amos.2.2.14" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.2.2.15" ana="N1A DSF" lem="ἀδυναμία">ἀδυναμίᾳ</w>
+<w id="Amos.2.2.16" ana="N NSF" lem="Μωαβ">Μωαβ</w>
+<w id="Amos.2.2.17" ana="P" lem="μετά">μετὰ</w>
+<w id="Amos.2.2.18" ana="N1 GSF" lem="κραυγή">κραυγῆσ</w>
+<w id="Amos.2.2.19" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.2.20" ana="P" lem="μετά">μετὰ</w>
+<w id="Amos.2.2.21" ana="N1 GSF" lem="φωνή">φωνῆσ</w>
+<w id="Amos.2.2.22" ana="N3G GSF" lem="σάλπιγξ">σάλπιγγοσ</w>
+<w id="Amos.2.3.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.3.2" ana="VF FAI1S" lem="ἐκ-ὀλεθρεύω">ἐξολεθρεύσω</w>
+<w id="Amos.2.3.3" ana="N1M ASM" lem="κριτήσ">κριτὴν</w>
+<w id="Amos.2.3.4" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Amos.2.3.5" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Amos.2.3.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.3.7" ana="A3 APM" lem="πᾶσ">πάντασ</w>
+<w id="Amos.2.3.8" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Amos.2.3.9" ana="N3 APM" lem="ἄρχων">ἄρχοντασ</w>
+<w id="Amos.2.3.10" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Amos.2.3.11" ana="VF2 FAI1S" lem="ἀπο-κτείνω">ἀποκτενῶ</w>
+<w id="Amos.2.3.12" ana="P" lem="μετά">μετ'</w>
+<w id="Amos.2.3.13" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.2.3.14" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.2.3.15" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.2.4.1" ana="RD APN" lem="ὅδε">τάδε</w>
+<w id="Amos.2.4.2" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.2.4.3" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.2.4.4" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.2.4.5" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.2.4.6" ana="A3 DPF" lem="τρεῖσ">τρισὶν</w>
+<w id="Amos.2.4.7" ana="N1A DPF" lem="ἀσέβεια">ἀσεβείαισ</w>
+<w id="Amos.2.4.8" ana="N2 GPM" lem="υἱόσ">υἱῶν</w>
+<w id="Amos.2.4.9" ana="N GSM" lem="Ιουδα">Ιουδα</w>
+<w id="Amos.2.4.10" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.4.11" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.2.4.12" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.2.4.13" ana="A3 DPF" lem="τέσσαρεσ">τέσσαρσιν</w>
+<w id="Amos.2.4.14" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.2.4.15" ana="VD FPI1S" lem="ἀπο-στρέφω">ἀποστραφήσομαι</w>
+<w id="Amos.2.4.16" ana="RD ASM" lem="αὐτόσ">αὐτόν</w>
+<w id="Amos.2.4.17" ana="P" lem="ἕνεκα">ἕνεκα</w>
+<w id="Amos.2.4.18" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.2.4.19" ana="VA AMN" lem="ἀπο-ὠθέω">ἀπώσασθαι</w>
+<w id="Amos.2.4.20" ana="RD APM" lem="αὐτόσ">αὐτοὺσ</w>
+<w id="Amos.2.4.21" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.2.4.22" ana="N2 ASM" lem="νόμοσ">νόμον</w>
+<w id="Amos.2.4.23" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Amos.2.4.24" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.4.25" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.2.4.26" ana="N3M APN" lem="πρόσταγμα">προστάγματα</w>
+<w id="Amos.2.4.27" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.2.4.28" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.2.4.29" ana="VAI AMI3P" lem="φυλάσσω">ἐφυλάξαντο</w>
+<w id="Amos.2.4.30" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.4.31" ana="VAI AAI3S" lem="πλανάω">ἐπλάνησεν</w>
+<w id="Amos.2.4.32" ana="RD APM" lem="αὐτόσ">αὐτοὺσ</w>
+<w id="Amos.2.4.33" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.2.4.34" ana="A1A APN" lem="μάταιοσ">μάταια</w>
+<w id="Amos.2.4.35" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.2.4.36" ana="RR APN" lem="ὅσ">ἃ</w>
+<w id="Amos.2.4.37" ana="VAI AAI3P" lem="ποιέω">ἐποίησαν</w>
+<w id="Amos.2.4.38" ana="RR DPM" lem="ὅσ">οἷσ</w>
+<w id="Amos.2.4.39" ana="VAI AAI3P" lem="ἐκ-ἀκολουθέω">ἐξηκολούθησαν</w>
+<w id="Amos.2.4.40" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.2.4.41" ana="N3 NPM" lem="πατήρ">πατέρεσ</w>
+<w id="Amos.2.4.42" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.2.4.43" ana="P" lem="ὀπίσω">ὀπίσω</w>
+<w id="Amos.2.4.44" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.2.5.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.5.2" ana="VF2 FAI1S" lem="ἐκ   ἀπο-στέλλω">ἐξαποστελῶ</w>
+<w id="Amos.2.5.3" ana="N3 ASN" lem="πῦρ">πῦρ</w>
+<w id="Amos.2.5.4" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.2.5.5" ana="N1T ASM" lem="Ἰούδασ">Ιουδαν</w>
+<w id="Amos.2.5.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.5.7" ana="VF FMI3S" lem="κατα-ἐσθίω">καταφάγεται</w>
+<w id="Amos.2.5.8" ana="N2N APN" lem="θεμέλιον">θεμέλια</w>
+<w id="Amos.2.5.9" ana="N GSF" lem="Ἰερουσαλήμ">Ιερουσαλημ</w>
+<w id="Amos.2.6.1" ana="RD APN" lem="ὅδε">τάδε</w>
+<w id="Amos.2.6.2" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.2.6.3" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.2.6.4" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.2.6.5" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.2.6.6" ana="A3 DPF" lem="τρεῖσ">τρισὶν</w>
+<w id="Amos.2.6.7" ana="N1A DPF" lem="ἀσέβεια">ἀσεβείαισ</w>
+<w id="Amos.2.6.8" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.2.6.9" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.6.10" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.2.6.11" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.2.6.12" ana="A3 DPF" lem="τέσσαρεσ">τέσσαρσιν</w>
+<w id="Amos.2.6.13" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.2.6.14" ana="VD FPI1S" lem="ἀπο-στρέφω">ἀποστραφήσομαι</w>
+<w id="Amos.2.6.15" ana="RD ASM" lem="αὐτόσ">αὐτόν</w>
+<w id="Amos.2.6.16" ana="P" lem="ἀντί">ἀνθ'</w>
+<w id="Amos.2.6.17" ana="RR GPM" lem="ὅσ">ὧν</w>
+<w id="Amos.2.6.18" ana="VOI AMI3P" lem="ἀπο-δίδωμι">ἀπέδοντο</w>
+<w id="Amos.2.6.19" ana="N2N GSN" lem="ἀργύριον">ἀργυρίου</w>
+<w id="Amos.2.6.20" ana="A1A ASM" lem="δίκαιοσ">δίκαιον</w>
+<w id="Amos.2.6.21" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.6.22" ana="N3T ASM" lem="πένησ">πένητα</w>
+<w id="Amos.2.6.23" ana="P" lem="ἕνεκεν">ἕνεκεν</w>
+<w id="Amos.2.6.24" ana="N3M GPN" lem="ὑπόδημα">ὑποδημάτων</w>
+<w id="Amos.2.7.1" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.2.7.2" ana="V2 PAPAPN" lem="πατέω">πατοῦντα</w>
+<w id="Amos.2.7.3" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.2.7.4" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.2.7.5" ana="N3 ASM" lem="χοῦσ">χοῦν</w>
+<w id="Amos.2.7.6" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.2.7.7" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.2.7.8" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.7.9" ana="V1I IAI3P" lem="κονδυλίζω">ἐκονδύλιζον</w>
+<w id="Amos.2.7.10" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.2.7.11" ana="N1 APF" lem="κεφαλή">κεφαλὰσ</w>
+<w id="Amos.2.7.12" ana="N2 GPM" lem="πτωχόσ">πτωχῶν</w>
+<w id="Amos.2.7.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.7.14" ana="N2 ASF" lem="ὁδόσ">ὁδὸν</w>
+<w id="Amos.2.7.15" ana="A1 GPM" lem="ταπεινόσ">ταπεινῶν</w>
+<w id="Amos.2.7.16" ana="VAI AAI3P" lem="ἐκ-κλίνω">ἐξέκλιναν</w>
+<w id="Amos.2.7.17" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.7.18" ana="N2 NSM" lem="υἱόσ">υἱὸσ</w>
+<w id="Amos.2.7.19" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.7.20" ana="N3 NSM" lem="πατήρ">πατὴρ</w>
+<w id="Amos.2.7.21" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.2.7.22" ana="V1I IMI3P" lem="εἰσ-πορεύομαι">εἰσεπορεύοντο</w>
+<w id="Amos.2.7.23" ana="P" lem="πρόσ">πρὸσ</w>
+<w id="Amos.2.7.24" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.2.7.25" ana="RD ASF" lem="αὐτόσ">αὐτὴν</w>
+<w id="Amos.2.7.26" ana="N1 ASF" lem="παιδίσκη">παιδίσκην</w>
+<w id="Amos.2.7.27" ana="C" lem="ὅπωσ">ὅπωσ</w>
+<w id="Amos.2.7.28" ana="VA AAS3P" lem="βεβηλόω">βεβηλώσωσιν</w>
+<w id="Amos.2.7.29" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.2.7.30" ana="N3M ASN" lem="ὄνομα">ὄνομα</w>
+<w id="Amos.2.7.31" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.2.7.32" ana="N2 GSM" lem="θεόσ">θεοῦ</w>
+<w id="Amos.2.7.33" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.2.8.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.8.2" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.2.8.3" ana="N2N APN" lem="ἱμάτιον">ἱμάτια</w>
+<w id="Amos.2.8.4" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.2.8.5" ana="V1 PAPNPM" lem="δεσμεύω">δεσμεύοντεσ</w>
+<w id="Amos.2.8.6" ana="N2N DPN" lem="σχοινίον">σχοινίοισ</w>
+<w id="Amos.2.8.7" ana="N3M APN" lem="παραπέτασμα">παραπετάσματα</w>
+<w id="Amos.2.8.8" ana="V2I IAI3P" lem="ποιέω">ἐποίουν</w>
+<w id="Amos.2.8.9" ana="V1 PMPAPN" lem="ἔχω">ἐχόμενα</w>
+<w id="Amos.2.8.10" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.2.8.11" ana="N2N GSN" lem="θυσιαστήριον">θυσιαστηρίου</w>
+<w id="Amos.2.8.12" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.8.13" ana="N2 ASM" lem="οἶνοσ">οἶνον</w>
+<w id="Amos.2.8.14" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.2.8.15" ana="N1A GPF" lem="συκοφαντία">συκοφαντιῶν</w>
+<w id="Amos.2.8.16" ana="V1I IAI3P" lem="πίνω">ἔπινον</w>
+<w id="Amos.2.8.17" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.2.8.18" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Amos.2.8.19" ana="N2 DSM" lem="οἶκοσ">οἴκῳ</w>
+<w id="Amos.2.8.20" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.2.8.21" ana="N2 GSM" lem="θεόσ">θεοῦ</w>
+<w id="Amos.2.8.22" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.2.9.1" ana="RP NS" lem="ἐγώ">ἐγὼ</w>
+<w id="Amos.2.9.2" ana="X" lem="δέ">δὲ</w>
+<w id="Amos.2.9.3" ana="VAI AAI1S" lem="ἐκ-αἴρω">ἐξῆρα</w>
+<w id="Amos.2.9.4" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.2.9.5" ana="N2 ASM" lem="Ἀμορραῖοσ">Αμορραῖον</w>
+<w id="Amos.2.9.6" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.2.9.7" ana="N2N GSN" lem="πρόσωπον">προσώπου</w>
+<w id="Amos.2.9.8" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.2.9.9" ana="RR GSM" lem="ὅσ">οὗ</w>
+<w id="Amos.2.9.10" ana="V9 IAI3S" lem="εἰμί">ἦν</w>
+<w id="Amos.2.9.11" ana="D" lem="καθώσ">καθὼσ</w>
+<w id="Amos.2.9.12" ana="N3E NSN" lem="ὕψοσ">ὕψοσ</w>
+<w id="Amos.2.9.13" ana="N2 GSF" lem="κέδροσ">κέδρου</w>
+<w id="Amos.2.9.14" ana="RA NSN" lem="ὁ">τὸ</w>
+<w id="Amos.2.9.15" ana="N3E NSN" lem="ὕψοσ">ὕψοσ</w>
+<w id="Amos.2.9.16" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.2.9.17" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.9.18" ana="A1A NSM" lem="ἰσχυρόσ">ἰσχυρὸσ</w>
+<w id="Amos.2.9.19" ana="V9 IAI3S" lem="εἰμί">ἦν</w>
+<w id="Amos.2.9.20" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Amos.2.9.21" ana="N3U NSF" lem="δρῦσ">δρῦσ</w>
+<w id="Amos.2.9.22" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.9.23" ana="VAI AAI1S" lem="ἐκ-αἴρω">ἐξῆρα</w>
+<w id="Amos.2.9.24" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.2.9.25" ana="N2 ASM" lem="καρπόσ">καρπὸν</w>
+<w id="Amos.2.9.26" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.2.9.27" ana="D" lem="ἐπάνωθεν">ἐπάνωθεν</w>
+<w id="Amos.2.9.28" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.9.29" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="Amos.2.9.30" ana="N1S APF" lem="ῥίζα">ῥίζασ</w>
+<w id="Amos.2.9.31" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.2.9.32" ana="P" lem="ὑποκάτωθεν">ὑποκάτωθεν</w>
+<w id="Amos.2.10.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.10.2" ana="RP NS" lem="ἐγώ">ἐγὼ</w>
+<w id="Amos.2.10.3" ana="VBI AAI1S" lem="ἀνα-ἄγω">ἀνήγαγον</w>
+<w id="Amos.2.10.4" ana="RP AP" lem="σύ">ὑμᾶσ</w>
+<w id="Amos.2.10.5" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.2.10.6" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.2.10.7" ana="N2 GSF" lem="Αἴγυπτοσ">Αἰγύπτου</w>
+<w id="Amos.2.10.8" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.10.9" ana="VBI AAI1S" lem="περι-ἄγω">περιήγαγον</w>
+<w id="Amos.2.10.10" ana="RP AP" lem="σύ">ὑμᾶσ</w>
+<w id="Amos.2.10.11" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.2.10.12" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Amos.2.10.13" ana="N2 DSF" lem="ἔρημοσ">ἐρήμῳ</w>
+<w id="Amos.2.10.14" ana="M" lem="τεσσαράκοντα">τεσσαράκοντα</w>
+<w id="Amos.2.10.15" ana="N3E APN" lem="ἔτοσ">ἔτη</w>
+<w id="Amos.2.10.16" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.2.10.17" ana="VA AAN" lem="κατα-κληρονομέω">κατακληρονομῆσαι</w>
+<w id="Amos.2.10.18" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.2.10.19" ana="N1 ASF" lem="γῆ">γῆν</w>
+<w id="Amos.2.10.20" ana="RA GPM" lem="ὁ">τῶν</w>
+<w id="Amos.2.10.21" ana="N2 GPM" lem="Ἀμορραῖοσ">Αμορραίων</w>
+<w id="Amos.2.11.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.11.2" ana="VBI AAI1S" lem="λαμβάνω">ἔλαβον</w>
+<w id="Amos.2.11.3" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.2.11.4" ana="RA GPM" lem="ὁ">τῶν</w>
+<w id="Amos.2.11.5" ana="N2 GPM" lem="υἱόσ">υἱῶν</w>
+<w id="Amos.2.11.6" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.2.11.7" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.2.11.8" ana="N1M APM" lem="προφήτησ">προφήτασ</w>
+<w id="Amos.2.11.9" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.11.10" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.2.11.11" ana="RA GPM" lem="ὁ">τῶν</w>
+<w id="Amos.2.11.12" ana="N2 GPM" lem="νεανίσκοσ">νεανίσκων</w>
+<w id="Amos.2.11.13" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.2.11.14" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.2.11.15" ana="N2 ASM" lem="ἁγιασμόσ">ἁγιασμόν</w>
+<w id="Amos.2.11.16" ana="D" lem="μή">μὴ</w>
+<w id="Amos.2.11.17" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.2.11.18" ana="V9 PAI3S" lem="εἰμί">ἔστιν</w>
+<w id="Amos.2.11.19" ana="RD NPN" lem="οὗτοσ">ταῦτα</w>
+<w id="Amos.2.11.20" ana="N2 NPM" lem="υἱόσ">υἱοὶ</w>
+<w id="Amos.2.11.21" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.2.11.22" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.2.11.23" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.2.12.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.12.2" ana="V1I IAI2P" lem="ποτίζω">ἐποτίζετε</w>
+<w id="Amos.2.12.3" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Amos.2.12.4" ana="VT XMPAPM" lem="ἁγιάζω">ἡγιασμένουσ</w>
+<w id="Amos.2.12.5" ana="N2 ASM" lem="οἶνοσ">οἶνον</w>
+<w id="Amos.2.12.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.12.7" ana="RA DPM" lem="ὁ">τοῖσ</w>
+<w id="Amos.2.12.8" ana="N1M DPM" lem="προφήτησ">προφήταισ</w>
+<w id="Amos.2.12.9" ana="V1I IMI2P" lem="ἐν-τέλλομαι">ἐνετέλλεσθε</w>
+<w id="Amos.2.12.10" ana="V1 PAPNPM" lem="λέγω">λέγοντεσ</w>
+<w id="Amos.2.12.11" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.2.12.12" ana="D" lem="μή">μὴ</w>
+<w id="Amos.2.12.13" ana="VA AAS2P" lem="προφητεύω">προφητεύσητε</w>
+<w id="Amos.2.13.1" ana="P" lem="διά">διὰ</w>
+<w id="Amos.2.13.2" ana="RD ASN" lem="οὗτοσ">τοῦτο</w>
+<w id="Amos.2.13.3" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="Amos.2.13.4" ana="RP NS" lem="ἐγώ">ἐγὼ</w>
+<w id="Amos.2.13.5" ana="V1 PAI1S" lem="κυλίω">κυλίω</w>
+<w id="Amos.2.13.6" ana="P" lem="ὑποκάτω">ὑποκάτω</w>
+<w id="Amos.2.13.7" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.2.13.8" ana="RR ASM" lem="ὅσ">ὃν</w>
+<w id="Amos.2.13.9" ana="N2 ASM" lem="τρόποσ">τρόπον</w>
+<w id="Amos.2.13.10" ana="V1 PPI3S" lem="κυλίω">κυλίεται</w>
+<w id="Amos.2.13.11" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Amos.2.13.12" ana="N1S NSF" lem="ἅμαξα">ἅμαξα</w>
+<w id="Amos.2.13.13" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Amos.2.13.14" ana="V1 PAPNSF" lem="γέμω">γέμουσα</w>
+<w id="Amos.2.13.15" ana="N1 GSF" lem="καλάμη">καλάμησ</w>
+<w id="Amos.2.14.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.14.2" ana="VF2 FMI3S" lem="ἀπο-ὀλλύω">ἀπολεῖται</w>
+<w id="Amos.2.14.3" ana="N1 NSF" lem="φυγή">φυγὴ</w>
+<w id="Amos.2.14.4" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.2.14.5" ana="N3V GSM" lem="δρομεύσ">δρομέωσ</w>
+<w id="Amos.2.14.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.14.7" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.2.14.8" ana="A1A NSM" lem="κραταιόσ">κραταιὸσ</w>
+<w id="Amos.2.14.9" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.2.14.10" ana="D" lem="μή">μὴ</w>
+<w id="Amos.2.14.11" ana="VA AAS3S" lem="κρατέω">κρατήσῃ</w>
+<w id="Amos.2.14.12" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.2.14.13" ana="N3U GSF" lem="ἰσχύσ">ἰσχύοσ</w>
+<w id="Amos.2.14.14" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.2.14.15" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.14.16" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.2.14.17" ana="N1M NSM" lem="μαχητήσ">μαχητὴσ</w>
+<w id="Amos.2.14.18" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.2.14.19" ana="D" lem="μή">μὴ</w>
+<w id="Amos.2.14.20" ana="VA AAS3S" lem="σώζω">σώσῃ</w>
+<w id="Amos.2.14.21" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.2.14.22" ana="N1 ASF" lem="ψυχή">ψυχὴν</w>
+<w id="Amos.2.14.23" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.2.15.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.15.2" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.2.15.3" ana="N1M NSM" lem="τοξότησ">τοξότησ</w>
+<w id="Amos.2.15.4" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.2.15.5" ana="D" lem="μή">μὴ</w>
+<w id="Amos.2.15.6" ana="VH AAS3S" lem="ὑπο-ἵστημι">ὑποστῇ</w>
+<w id="Amos.2.15.7" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.15.8" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.2.15.9" ana="A3U NSM" lem="ὀξύσ">ὀξὺσ</w>
+<w id="Amos.2.15.10" ana="RA DPM" lem="ὁ">τοῖσ</w>
+<w id="Amos.2.15.11" ana="N3D DPM" lem="πούσ">ποσὶν</w>
+<w id="Amos.2.15.12" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.2.15.13" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.2.15.14" ana="D" lem="μή">μὴ</w>
+<w id="Amos.2.15.15" ana="VC APS3S" lem="δια-σώζω">διασωθῇ</w>
+<w id="Amos.2.15.16" ana="C" lem="οὐδέ">οὐδὲ</w>
+<w id="Amos.2.15.17" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.2.15.18" ana="N3V NSM" lem="ἱππεύσ">ἱππεὺσ</w>
+<w id="Amos.2.15.19" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.2.15.20" ana="D" lem="μή">μὴ</w>
+<w id="Amos.2.15.21" ana="VA AAS3S" lem="σώζω">σώσῃ</w>
+<w id="Amos.2.15.22" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.2.15.23" ana="N1 ASF" lem="ψυχή">ψυχὴν</w>
+<w id="Amos.2.15.24" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.2.16.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.2.16.2" ana="VF FAI3S" lem="εὑρίσκω">εὑρήσει</w>
+<w id="Amos.2.16.3" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.2.16.4" ana="N1A ASF" lem="καρδία">καρδίαν</w>
+<w id="Amos.2.16.5" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.2.16.6" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.2.16.7" ana="N1A DPF" lem="δυναστεία">δυναστείαισ</w>
+<w id="Amos.2.16.8" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.2.16.9" ana="A1 NSM" lem="γυμνόσ">γυμνὸσ</w>
+<w id="Amos.2.16.10" ana="VF FMI3S" lem="διώκω">διώξεται</w>
+<w id="Amos.2.16.11" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.2.16.12" ana="RD DSF" lem="ἐκεῖνοσ">ἐκείνῃ</w>
+<w id="Amos.2.16.13" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Amos.2.16.14" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Amos.2.16.15" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.2.16.16" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.3.1.1" ana="VA AAD2P" lem="ἀκούω">ἀκούσατε</w>
+<w id="Amos.3.1.2" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.3.1.3" ana="N2 ASM" lem="λόγοσ">λόγον</w>
+<w id="Amos.3.1.4" ana="RD ASM" lem="οὗτοσ">τοῦτον</w>
+<w id="Amos.3.1.5" ana="RR ASM" lem="ὅσ">ὃν</w>
+<w id="Amos.3.1.6" ana="VAI AAI3S" lem="λαλέω">ἐλάλησεν</w>
+<w id="Amos.3.1.7" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.3.1.8" ana="P" lem="ἐπί">ἐφ'</w>
+<w id="Amos.3.1.9" ana="RP AP" lem="σύ">ὑμᾶσ</w>
+<w id="Amos.3.1.10" ana="N2 NSM" lem="οἶκοσ">οἶκοσ</w>
+<w id="Amos.3.1.11" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.3.1.12" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.1.13" ana="P" lem="κατά">κατὰ</w>
+<w id="Amos.3.1.14" ana="A1S GSF" lem="πᾶσ">πάσησ</w>
+<w id="Amos.3.1.15" ana="N1 GSF" lem="φυλή">φυλῆσ</w>
+<w id="Amos.3.1.16" ana="RR GSF" lem="ὅσ">ἧσ</w>
+<w id="Amos.3.1.17" ana="VBI AAI1S" lem="ἀνα-ἄγω">ἀνήγαγον</w>
+<w id="Amos.3.1.18" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.3.1.19" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.3.1.20" ana="N2 GSF" lem="Αἴγυπτοσ">Αἰγύπτου</w>
+<w id="Amos.3.1.21" ana="V1 PAPNSM" lem="λέγω">λέγων</w>
+<w id="Amos.3.2.1" ana="D" lem="πλήν">πλὴν</w>
+<w id="Amos.3.2.2" ana="RP AP" lem="σύ">ὑμᾶσ</w>
+<w id="Amos.3.2.3" ana="VZI AAI1S" lem="γιγνώσκω">ἔγνων</w>
+<w id="Amos.3.2.4" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.3.2.5" ana="A1S GPF" lem="πᾶσ">πασῶν</w>
+<w id="Amos.3.2.6" ana="N1 GPF" lem="φυλή">φυλῶν</w>
+<w id="Amos.3.2.7" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.3.2.8" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.3.2.9" ana="P" lem="διά">διὰ</w>
+<w id="Amos.3.2.10" ana="RD ASN" lem="οὗτοσ">τοῦτο</w>
+<w id="Amos.3.2.11" ana="VF FAI1S" lem="ἐκ-δικέω">ἐκδικήσω</w>
+<w id="Amos.3.2.12" ana="P" lem="ἐπί">ἐφ'</w>
+<w id="Amos.3.2.13" ana="RP AP" lem="σύ">ὑμᾶσ</w>
+<w id="Amos.3.2.14" ana="A1S APF" lem="πᾶσ">πάσασ</w>
+<w id="Amos.3.2.15" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="Amos.3.2.16" ana="N1A APF" lem="ἁμαρτία">ἁμαρτίασ</w>
+<w id="Amos.3.2.17" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.3.3.1" ana="C" lem="εἰ">εἰ</w>
+<w id="Amos.3.3.2" ana="VF FMI3P" lem="πορεύομαι">πορεύσονται</w>
+<w id="Amos.3.3.3" ana="M" lem="δύο">δύο</w>
+<w id="Amos.3.3.4" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.3.3.5" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.3.3.6" ana="RD ASN" lem="αὐτόσ">αὐτὸ</w>
+<w id="Amos.3.3.7" ana="D" lem="καθόλου">καθόλου</w>
+<w id="Amos.3.3.8" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="Amos.3.3.9" ana="D" lem="μή">μὴ</w>
+<w id="Amos.3.3.10" ana="VA AAS3P" lem="γνωρίζω">γνωρίσωσιν</w>
+<w id="Amos.3.3.11" ana="RD APM" lem="ἑαυτοῦ">ἑαυτούσ</w>
+<w id="Amos.3.4.1" ana="C" lem="εἰ">εἰ</w>
+<w id="Amos.3.4.2" ana="VF FMI3S" lem="ἐρεύγομαι">ἐρεύξεται</w>
+<w id="Amos.3.4.3" ana="N3W NSM" lem="λέων">λέων</w>
+<w id="Amos.3.4.4" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.3.4.5" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.3.4.6" ana="N2 GSM" lem="δρυμόσ">δρυμοῦ</w>
+<w id="Amos.3.4.7" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.3.4.8" ana="N1A ASF" lem="θήρα">θήραν</w>
+<w id="Amos.3.4.9" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.3.4.10" ana="V1 PAPNSM" lem="ἔχω">ἔχων</w>
+<w id="Amos.3.4.11" ana="C" lem="εἰ">εἰ</w>
+<w id="Amos.3.4.12" ana="VF FAI3S" lem="δίδωμι">δώσει</w>
+<w id="Amos.3.4.13" ana="N2 NSM" lem="σκύμνοσ">σκύμνοσ</w>
+<w id="Amos.3.4.14" ana="N1 ASF" lem="φωνή">φωνὴν</w>
+<w id="Amos.3.4.15" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.3.4.16" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.3.4.17" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.3.4.18" ana="N1A GSF" lem="μάνδρα">μάνδρασ</w>
+<w id="Amos.3.4.19" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.3.4.20" ana="D" lem="καθόλου">καθόλου</w>
+<w id="Amos.3.4.21" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="Amos.3.4.22" ana="D" lem="μή">μὴ</w>
+<w id="Amos.3.4.23" ana="VA AAS3S" lem="ἁρπάζω">ἁρπάσῃ</w>
+<w id="Amos.3.4.24" ana="RI ASN" lem="τισ">τι</w>
+<w id="Amos.3.5.1" ana="C" lem="εἰ">εἰ</w>
+<w id="Amos.3.5.2" ana="VF2 FMI3S" lem="πίπτω">πεσεῖται</w>
+<w id="Amos.3.5.3" ana="N2N NSN" lem="ὄρνεον">ὄρνεον</w>
+<w id="Amos.3.5.4" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.3.5.5" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.3.5.6" ana="N1 ASF" lem="γῆ">γῆν</w>
+<w id="Amos.3.5.7" ana="P" lem="ἄνευ">ἄνευ</w>
+<w id="Amos.3.5.8" ana="N1M GSM" lem="ἰξευτήσ">ἰξευτοῦ</w>
+<w id="Amos.3.5.9" ana="C" lem="εἰ">εἰ</w>
+<w id="Amos.3.5.10" ana="VC FPI3S" lem="σχάζω">σχασθήσεται</w>
+<w id="Amos.3.5.11" ana="N3D NSF" lem="παγίσ">παγὶσ</w>
+<w id="Amos.3.5.12" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.3.5.13" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.3.5.14" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.3.5.15" ana="P" lem="ἄνευ">ἄνευ</w>
+<w id="Amos.3.5.16" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.3.5.17" ana="V1 PAN" lem="συν-λαμβάνω">συλλαβεῖν</w>
+<w id="Amos.3.5.18" ana="RI ASN" lem="τισ">τι</w>
+<w id="Amos.3.6.1" ana="C" lem="εἰ">εἰ</w>
+<w id="Amos.3.6.2" ana="VF FAI3S" lem="φωνέω">φωνήσει</w>
+<w id="Amos.3.6.3" ana="N3G NSF" lem="σάλπιγξ">σάλπιγξ</w>
+<w id="Amos.3.6.4" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.3.6.5" ana="N3I DSF" lem="πόλισ">πόλει</w>
+<w id="Amos.3.6.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.6.7" ana="N2 NSM" lem="λαόσ">λαὸσ</w>
+<w id="Amos.3.6.8" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.3.6.9" ana="VC FPI3S" lem="πτοέω">πτοηθήσεται</w>
+<w id="Amos.3.6.10" ana="C" lem="εἰ">εἰ</w>
+<w id="Amos.3.6.11" ana="V9 FMI3S" lem="εἰμί">ἔσται</w>
+<w id="Amos.3.6.12" ana="N1A NSF" lem="κακία">κακία</w>
+<w id="Amos.3.6.13" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.3.6.14" ana="N3I DSF" lem="πόλισ">πόλει</w>
+<w id="Amos.3.6.15" ana="RR ASF" lem="ὅσ">ἣν</w>
+<w id="Amos.3.6.16" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.3.6.17" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.3.6.18" ana="VAI AAI3S" lem="ποιέω">ἐποίησεν</w>
+<w id="Amos.3.7.1" ana="C" lem="διότι">διότι</w>
+<w id="Amos.3.7.2" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.3.7.3" ana="D" lem="μή">μὴ</w>
+<w id="Amos.3.7.4" ana="VA AAS3S" lem="ποιέω">ποιήσῃ</w>
+<w id="Amos.3.7.5" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.3.7.6" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.3.7.7" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="Amos.3.7.8" ana="N3M ASN" lem="πρᾶγμα">πρᾶγμα</w>
+<w id="Amos.3.7.9" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="Amos.3.7.10" ana="D" lem="μή">μὴ</w>
+<w id="Amos.3.7.11" ana="VF FMI2S" lem="ἀπο-καλύπτω">ἀποκαλύψῃ</w>
+<w id="Amos.3.7.12" ana="N1A ASF" lem="παιδεία">παιδείαν</w>
+<w id="Amos.3.7.13" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.3.7.14" ana="P" lem="πρόσ">πρὸσ</w>
+<w id="Amos.3.7.15" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Amos.3.7.16" ana="N2 APM" lem="δοῦλοσ">δούλουσ</w>
+<w id="Amos.3.7.17" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.3.7.18" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Amos.3.7.19" ana="N1M APM" lem="προφήτησ">προφήτασ</w>
+<w id="Amos.3.8.1" ana="N3W NSM" lem="λέων">λέων</w>
+<w id="Amos.3.8.2" ana="VF FMI3S" lem="ἐρεύγομαι">ἐρεύξεται</w>
+<w id="Amos.3.8.3" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.8.4" ana="RI NSM" lem="τίσ">τίσ</w>
+<w id="Amos.3.8.5" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.3.8.6" ana="VC FPI3S" lem="φοβέω">φοβηθήσεται</w>
+<w id="Amos.3.8.7" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.3.8.8" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.3.8.9" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="Amos.3.8.10" ana="VAI AAI3S" lem="λαλέω">ἐλάλησεν</w>
+<w id="Amos.3.8.11" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.8.12" ana="RI NSM" lem="τίσ">τίσ</w>
+<w id="Amos.3.8.13" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.3.8.14" ana="VF FAI3S" lem="προφητεύω">προφητεύσει</w>
+<w id="Amos.3.9.1" ana="VA AAD2P" lem="ἀπο-ἀγγέλλω">ἀπαγγείλατε</w>
+<w id="Amos.3.9.2" ana="N1A DPF" lem="χώρα">χώραισ</w>
+<w id="Amos.3.9.3" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.3.9.4" ana="N2 DPM" lem="Ἀσσύριοσ">Ἀσσυρίοισ</w>
+<w id="Amos.3.9.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.9.6" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.3.9.7" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="Amos.3.9.8" ana="N1A APF" lem="χώρα">χώρασ</w>
+<w id="Amos.3.9.9" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.3.9.10" ana="N2 GSF" lem="Αἴγυπτοσ">Αἰγύπτου</w>
+<w id="Amos.3.9.11" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.9.12" ana="VAI AAI2P" lem="εἶπον">εἴπατε</w>
+<w id="Amos.3.9.13" ana="VQ APD2P" lem="συν-ἄγω">συνάχθητε</w>
+<w id="Amos.3.9.14" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.3.9.15" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.3.9.16" ana="N3E ASN" lem="ὄροσ">ὄροσ</w>
+<w id="Amos.3.9.17" ana="N1A GSF" lem="Σαμαρεία">Σαμαρείασ</w>
+<w id="Amos.3.9.18" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.9.19" ana="VB AAD2P" lem="ὁράω">ἴδετε</w>
+<w id="Amos.3.9.20" ana="A1 APN" lem="θαυμαστόσ">θαυμαστὰ</w>
+<w id="Amos.3.9.21" ana="A1 APN" lem="πολύσ">πολλὰ</w>
+<w id="Amos.3.9.22" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.3.9.23" ana="A1 DSN" lem="μέσοσ">μέσῳ</w>
+<w id="Amos.3.9.24" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Amos.3.9.25" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.9.26" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.3.9.27" ana="N1A ASF" lem="καταδυναστεία">καταδυναστείαν</w>
+<w id="Amos.3.9.28" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.3.9.29" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.3.9.30" ana="RD DSF" lem="αὐτόσ">αὐτῇ</w>
+<w id="Amos.3.10.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.10.2" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.3.10.3" ana="VZI AAI3S" lem="γιγνώσκω">ἔγνω</w>
+<w id="Amos.3.10.4" ana="RR APN" lem="ὅσ">ἃ</w>
+<w id="Amos.3.10.5" ana="V9 FMI3S" lem="εἰμί">ἔσται</w>
+<w id="Amos.3.10.6" ana="P" lem="ἐναντίον">ἐναντίον</w>
+<w id="Amos.3.10.7" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Amos.3.10.8" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.3.10.9" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.3.10.10" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.3.10.11" ana="V1 PAPNPM" lem="θησαυρίζω">θησαυρίζοντεσ</w>
+<w id="Amos.3.10.12" ana="N1A ASF" lem="ἀδικία">ἀδικίαν</w>
+<w id="Amos.3.10.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.10.14" ana="N1A ASF" lem="ταλαιπωρία">ταλαιπωρίαν</w>
+<w id="Amos.3.10.15" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.3.10.16" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.3.10.17" ana="N1A DPF" lem="χώρα">χώραισ</w>
+<w id="Amos.3.10.18" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.3.11.1" ana="P" lem="διά">διὰ</w>
+<w id="Amos.3.11.2" ana="RD ASN" lem="οὗτοσ">τοῦτο</w>
+<w id="Amos.3.11.3" ana="RD APN" lem="ὅδε">τάδε</w>
+<w id="Amos.3.11.4" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.3.11.5" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.3.11.6" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.3.11.7" ana="N2 NSM" lem="θεόσ">θεόσ</w>
+<w id="Amos.3.11.8" ana="N2 NSF" lem="Τύροσ">Τύροσ</w>
+<w id="Amos.3.11.9" ana="D" lem="κυκλόθεν">κυκλόθεν</w>
+<w id="Amos.3.11.10" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Amos.3.11.11" ana="N1 NSF" lem="γῆ">γῆ</w>
+<w id="Amos.3.11.12" ana="RP GS" lem="σύ">σου</w>
+<w id="Amos.3.11.13" ana="VC FPI3S" lem="ἐρημόω">ἐρημωθήσεται</w>
+<w id="Amos.3.11.14" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.11.15" ana="VF FAI3S" lem="κατα-ἄγω">κατάξει</w>
+<w id="Amos.3.11.16" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.3.11.17" ana="RP GS" lem="σύ">σοῦ</w>
+<w id="Amos.3.11.18" ana="N3 ASF" lem="ἰσχύσ">ἰσχύν</w>
+<w id="Amos.3.11.19" ana="RP GS" lem="σύ">σου</w>
+<w id="Amos.3.11.20" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.11.21" ana="VD FPI3P" lem="δια-ἁρπάζω">διαρπαγήσονται</w>
+<w id="Amos.3.11.22" ana="RA NPF" lem="ὁ">αἱ</w>
+<w id="Amos.3.11.23" ana="N1A NPF" lem="χώρα">χῶραί</w>
+<w id="Amos.3.11.24" ana="RP GS" lem="σύ">σου</w>
+<w id="Amos.3.12.1" ana="RD APN" lem="ὅδε">τάδε</w>
+<w id="Amos.3.12.2" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.3.12.3" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.3.12.4" ana="RR ASM" lem="ὅσ">ὃν</w>
+<w id="Amos.3.12.5" ana="N2 ASM" lem="τρόποσ">τρόπον</w>
+<w id="Amos.3.12.6" ana="D" lem="ὅταν">ὅταν</w>
+<w id="Amos.3.12.7" ana="VA AAS3S" lem="ἐκ-σπάω">ἐκσπάσῃ</w>
+<w id="Amos.3.12.8" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.3.12.9" ana="N3 NSM" lem="ποιμήν">ποιμὴν</w>
+<w id="Amos.3.12.10" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.3.12.11" ana="N3M GSN" lem="στόμα">στόματοσ</w>
+<w id="Amos.3.12.12" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.3.12.13" ana="N3 GSM" lem="λέων">λέοντοσ</w>
+<w id="Amos.3.12.14" ana="M" lem="δύο">δύο</w>
+<w id="Amos.3.12.15" ana="N3E APN" lem="σκέλοσ">σκέλη</w>
+<w id="Amos.3.12.16" ana="C" lem="ἤ">ἢ</w>
+<w id="Amos.3.12.17" ana="N2 ASM" lem="λοβόσ">λοβὸν</w>
+<w id="Amos.3.12.18" ana="N2N GSN" lem="ὠτίον">ὠτίου</w>
+<w id="Amos.3.12.19" ana="D" lem="οὕτωσ">οὕτωσ</w>
+<w id="Amos.3.12.20" ana="VS FPI3P" lem="ἐκ-σπάω">ἐκσπασθήσονται</w>
+<w id="Amos.3.12.21" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.3.12.22" ana="N2 NPM" lem="υἱόσ">υἱοὶ</w>
+<w id="Amos.3.12.23" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.3.12.24" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.3.12.25" ana="V2 PAPNPM" lem="κατα-οἰκέω">κατοικοῦντεσ</w>
+<w id="Amos.3.12.26" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.3.12.27" ana="N1A DSF" lem="Σαμαρεία">Σαμαρείᾳ</w>
+<w id="Amos.3.12.28" ana="D" lem="κατέναντι">κατέναντι</w>
+<w id="Amos.3.12.29" ana="N1 GSF" lem="φυλή">φυλῆσ</w>
+<w id="Amos.3.12.30" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.12.31" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.3.12.32" ana="N2 DS" lem="Δαμασκόσ">Δαμασκῷ</w>
+<w id="Amos.3.12.33" ana="N3V NPM" lem="ἱερεύσ">ἱερεῖσ</w>
+<w id="Amos.3.13.1" ana="VA AAD2P" lem="ἀκούω">ἀκούσατε</w>
+<w id="Amos.3.13.2" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.13.3" ana="VA AMD2P" lem="ἐπι-μαρτυρέω">ἐπιμαρτύρασθε</w>
+<w id="Amos.3.13.4" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Amos.3.13.5" ana="N2 DSM" lem="οἶκοσ">οἴκῳ</w>
+<w id="Amos.3.13.6" ana="N GSM" lem="Ἰακώβ">Ιακωβ</w>
+<w id="Amos.3.13.7" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.3.13.8" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.3.13.9" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.3.13.10" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="Amos.3.13.11" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.3.13.12" ana="N3R NSM" lem="παντοκράτωρ">παντοκράτωρ</w>
+<w id="Amos.3.14.1" ana="C" lem="διότι">διότι</w>
+<w id="Amos.3.14.2" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.3.14.3" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Amos.3.14.4" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Amos.3.14.5" ana="D" lem="ὅταν">ὅταν</w>
+<w id="Amos.3.14.6" ana="V2 PAI1S" lem="ἐκ-δικέω">ἐκδικῶ</w>
+<w id="Amos.3.14.7" ana="N1A GSF" lem="ἀσέβεια">ἀσεβείασ</w>
+<w id="Amos.3.14.8" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.3.14.9" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.3.14.10" ana="P" lem="ἐπί">ἐπ'</w>
+<w id="Amos.3.14.11" ana="RD ASM" lem="αὐτόσ">αὐτόν</w>
+<w id="Amos.3.14.12" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.14.13" ana="VF FAI1S" lem="ἐκ-δικέω">ἐκδικήσω</w>
+<w id="Amos.3.14.14" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.3.14.15" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.3.14.16" ana="N2N APN" lem="θυσιαστήριον">θυσιαστήρια</w>
+<w id="Amos.3.14.17" ana="N GSF" lem="Βαιθηλ">Βαιθηλ</w>
+<w id="Amos.3.14.18" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.14.19" ana="VD FPI3S" lem="κατα-σκάπτω">κατασκαφήσεται</w>
+<w id="Amos.3.14.20" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.3.14.21" ana="N3T APN" lem="κέρασ">κέρατα</w>
+<w id="Amos.3.14.22" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.3.14.23" ana="N2N GSN" lem="θυσιαστήριον">θυσιαστηρίου</w>
+<w id="Amos.3.14.24" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.14.25" ana="VF2 FMI3P" lem="πίπτω">πεσοῦνται</w>
+<w id="Amos.3.14.26" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.3.14.27" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.3.14.28" ana="N1 ASF" lem="γῆ">γῆν</w>
+<w id="Amos.3.15.1" ana="VF2 FAI1S" lem="συν-χέω">συγχεῶ</w>
+<w id="Amos.3.15.2" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.15.3" ana="VF FAI1S" lem="πατάσσω">πατάξω</w>
+<w id="Amos.3.15.4" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.3.15.5" ana="N2 ASM" lem="οἶκοσ">οἶκον</w>
+<w id="Amos.3.15.6" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.3.15.7" ana="A1B ASM" lem="περίπτεροσ">περίπτερον</w>
+<w id="Amos.3.15.8" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.3.15.9" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.3.15.10" ana="N2 ASM" lem="οἶκοσ">οἶκον</w>
+<w id="Amos.3.15.11" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.3.15.12" ana="A1 ASM" lem="θερινόσ">θερινόν</w>
+<w id="Amos.3.15.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.15.14" ana="VF2 FMI3P" lem="ἀπο-ὀλλύω">ἀπολοῦνται</w>
+<w id="Amos.3.15.15" ana="N2 NPM" lem="οἶκοσ">οἶκοι</w>
+<w id="Amos.3.15.16" ana="A1 NPM" lem="ἐλεφάντινοσ">ἐλεφάντινοι</w>
+<w id="Amos.3.15.17" ana="C" lem="καί">καὶ</w>
+<w id="Amos.3.15.18" ana="VC FPI3P" lem="προσ-τίθημι">προστεθήσονται</w>
+<w id="Amos.3.15.19" ana="N2 NPM" lem="οἶκοσ">οἶκοι</w>
+<w id="Amos.3.15.20" ana="A1A NPM" lem="ἕτεροσ">ἕτεροι</w>
+<w id="Amos.3.15.21" ana="A1 NPM" lem="πολύσ">πολλοί</w>
+<w id="Amos.3.15.22" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.3.15.23" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.4.1.1" ana="VA AAD2P" lem="ἀκούω">ἀκούσατε</w>
+<w id="Amos.4.1.2" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.4.1.3" ana="N2 ASM" lem="λόγοσ">λόγον</w>
+<w id="Amos.4.1.4" ana="RD ASM" lem="οὗτοσ">τοῦτον</w>
+<w id="Amos.4.1.5" ana="N3I VPF" lem="δάμαλισ">δαμάλεισ</w>
+<w id="Amos.4.1.6" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.4.1.7" ana="N3D GSF" lem="Βασανίτισ">Βασανίτιδοσ</w>
+<w id="Amos.4.1.8" ana="RA NPF" lem="ὁ">αἱ</w>
+<w id="Amos.4.1.9" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.4.1.10" ana="RA DSN" lem="ὁ">τῷ</w>
+<w id="Amos.4.1.11" ana="N3E DSN" lem="ὄροσ">ὄρει</w>
+<w id="Amos.4.1.12" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.4.1.13" ana="N1A GSF" lem="Σαμαρεία">Σαμαρείασ</w>
+<w id="Amos.4.1.14" ana="RA NPF" lem="ὁ">αἱ</w>
+<w id="Amos.4.1.15" ana="V1 PAPNPF" lem="κατα-δυναστεύω">καταδυναστεύουσαι</w>
+<w id="Amos.4.1.16" ana="N2 APM" lem="πτωχόσ">πτωχοὺσ</w>
+<w id="Amos.4.1.17" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.1.18" ana="V2 PAPNPF" lem="κατα-πατέω">καταπατοῦσαι</w>
+<w id="Amos.4.1.19" ana="N3T APM" lem="πένησ">πένητασ</w>
+<w id="Amos.4.1.20" ana="RA NPF" lem="ὁ">αἱ</w>
+<w id="Amos.4.1.21" ana="V1 PAPNPF" lem="λέγω">λέγουσαι</w>
+<w id="Amos.4.1.22" ana="RA DPM" lem="ὁ">τοῖσ</w>
+<w id="Amos.4.1.23" ana="N2 DPM" lem="κύριοσ">κυρίοισ</w>
+<w id="Amos.4.1.24" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.4.1.25" ana="VO AAD2P" lem="ἐπι-δίδωμι">ἐπίδοτε</w>
+<w id="Amos.4.1.26" ana="RP DP" lem="ἐγώ">ἡμῖν</w>
+<w id="Amos.4.1.27" ana="C" lem="ὅπωσ">ὅπωσ</w>
+<w id="Amos.4.1.28" ana="VB AAS1P" lem="πίνω">πίωμεν</w>
+<w id="Amos.4.2.1" ana="V5 PAI3S" lem="ὄμνυμι">ὀμνύει</w>
+<w id="Amos.4.2.2" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.4.2.3" ana="P" lem="κατά">κατὰ</w>
+<w id="Amos.4.2.4" ana="RA GPM" lem="ὁ">τῶν</w>
+<w id="Amos.4.2.5" ana="A1A GPM" lem="ἅγιοσ">ἁγίων</w>
+<w id="Amos.4.2.6" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.4.2.7" ana="C" lem="διότι">διότι</w>
+<w id="Amos.4.2.8" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="Amos.4.2.9" ana="N1A NPF" lem="ἡμέρα">ἡμέραι</w>
+<w id="Amos.4.2.10" ana="V1 PMI3P" lem="ἔρχομαι">ἔρχονται</w>
+<w id="Amos.4.2.11" ana="P" lem="ἐπί">ἐφ'</w>
+<w id="Amos.4.2.12" ana="RP AP" lem="σύ">ὑμᾶσ</w>
+<w id="Amos.4.2.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.2.14" ana="VF FMI3P" lem="λαμβάνω">λήμψονται</w>
+<w id="Amos.4.2.15" ana="RP AP" lem="σύ">ὑμᾶσ</w>
+<w id="Amos.4.2.16" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.4.2.17" ana="N2N DPN" lem="ὅπλον">ὅπλοισ</w>
+<w id="Amos.4.2.18" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.2.19" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Amos.4.2.20" ana="P" lem="μετά">μεθ'</w>
+<w id="Amos.4.2.21" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.4.2.22" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.4.2.23" ana="N3T APM" lem="λέβησ">λέβητασ</w>
+<w id="Amos.4.2.24" ana="V1 PMPAPM" lem="ὑπο-καίω">ὑποκαιομένουσ</w>
+<w id="Amos.4.2.25" ana="VF2 FAI3P" lem="ἐν-βάλλω">ἐμβαλοῦσιν</w>
+<w id="Amos.4.2.26" ana="A1B NPM" lem="ἔμπυροσ">ἔμπυροι</w>
+<w id="Amos.4.2.27" ana="N2 NPM" lem="λοιμόσ">λοιμοί</w>
+<w id="Amos.4.3.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.3.2" ana="VQ FPI2P" lem="ἐκ-φέρω">ἐξενεχθήσεσθε</w>
+<w id="Amos.4.3.3" ana="A1 NPF" lem="γυμνόσ">γυμναὶ</w>
+<w id="Amos.4.3.4" ana="D" lem="κατέναντι">κατέναντι</w>
+<w id="Amos.4.3.5" ana="RD GPM" lem="ἀλλήλω">ἀλλήλων</w>
+<w id="Amos.4.3.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.3.7" ana="VD FPI2P" lem="ἀπο-ῥίπτω">ἀπορριφήσεσθε</w>
+<w id="Amos.4.3.8" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.4.3.9" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.4.3.10" ana="N3E ASN" lem="ὄροσ">ὄροσ</w>
+<w id="Amos.4.3.11" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.4.3.12" ana="N ASN" lem="Ρεμμαν">Ρεμμαν</w>
+<w id="Amos.4.3.13" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.4.3.14" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.4.3.15" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.4.3.16" ana="N2 NSM" lem="θεόσ">θεόσ</w>
+<w id="Amos.4.4.1" ana="VBI AAI2P" lem="εἰσ-ἔρχομαι">εἰσήλθατε</w>
+<w id="Amos.4.4.2" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.4.4.3" ana="N ASF" lem="Βαιθηλ">Βαιθηλ</w>
+<w id="Amos.4.4.4" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.4.5" ana="VAI AAI2P" lem="ἀνομέω">ἠνομήσατε</w>
+<w id="Amos.4.4.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.4.7" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.4.4.8" ana="N ASF" lem="Γαλγαλα">Γαλγαλα</w>
+<w id="Amos.4.4.9" ana="VAI AAI2P" lem="πληθύνω">ἐπληθύνατε</w>
+<w id="Amos.4.4.10" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.4.4.11" ana="VA AAN" lem="ἀσεβέω">ἀσεβῆσαι</w>
+<w id="Amos.4.4.12" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.4.13" ana="VAI AAI2P" lem="φέρω">ἠνέγκατε</w>
+<w id="Amos.4.4.14" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.4.4.15" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.4.4.16" ana="D" lem="πρωΐ">πρωὶ</w>
+<w id="Amos.4.4.17" ana="N1A APF" lem="θυσία">θυσίασ</w>
+<w id="Amos.4.4.18" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.4.4.19" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.4.4.20" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.4.4.21" ana="N1A ASF" lem="τριημερία">τριημερίαν</w>
+<w id="Amos.4.4.22" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.4.4.23" ana="A1 APN" lem="ἐπιδέκατοσ">ἐπιδέκατα</w>
+<w id="Amos.4.4.24" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.4.5.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.5.2" ana="VZI AAI3P" lem="ἀνα-γιγνώσκω">ἀνέγνωσαν</w>
+<w id="Amos.4.5.3" ana="D" lem="ἔξω">ἔξω</w>
+<w id="Amos.4.5.4" ana="N2 ASM" lem="νόμοσ">νόμον</w>
+<w id="Amos.4.5.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.5.6" ana="VAI AMI3P" lem="ἐπι-καλέω">ἐπεκαλέσαντο</w>
+<w id="Amos.4.5.7" ana="N1A APF" lem="ὁμολογία">ὁμολογίασ</w>
+<w id="Amos.4.5.8" ana="VA AAD2P" lem="ἀπο-ἀγγέλλω">ἀπαγγείλατε</w>
+<w id="Amos.4.5.9" ana="C" lem="ὅτι">ὅτι</w>
+<w id="Amos.4.5.10" ana="RD APN" lem="οὗτοσ">ταῦτα</w>
+<w id="Amos.4.5.11" ana="VAI AAI3P" lem="ἀγαπάω">ἠγάπησαν</w>
+<w id="Amos.4.5.12" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.4.5.13" ana="N2 NPM" lem="υἱόσ">υἱοὶ</w>
+<w id="Amos.4.5.14" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.4.5.15" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.4.5.16" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.4.5.17" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.4.5.18" ana="N2 NSM" lem="θεόσ">θεόσ</w>
+<w id="Amos.4.6.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.6.2" ana="RP NS" lem="ἐγώ">ἐγὼ</w>
+<w id="Amos.4.6.3" ana="VF FAI1S" lem="δίδωμι">δώσω</w>
+<w id="Amos.4.6.4" ana="RP DP" lem="σύ">ὑμῖν</w>
+<w id="Amos.4.6.5" ana="N2 ASM" lem="γομφιασμόσ">γομφιασμὸν</w>
+<w id="Amos.4.6.6" ana="N3 GPM" lem="ὀδούσ">ὀδόντων</w>
+<w id="Amos.4.6.7" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.4.6.8" ana="A1S DPF" lem="πᾶσ">πάσαισ</w>
+<w id="Amos.4.6.9" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.4.6.10" ana="N3I DPF" lem="πόλισ">πόλεσιν</w>
+<w id="Amos.4.6.11" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.4.6.12" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.6.13" ana="N1A ASF" lem="ἔνδεια">ἔνδειαν</w>
+<w id="Amos.4.6.14" ana="N2 GPM" lem="ἄρτοσ">ἄρτων</w>
+<w id="Amos.4.6.15" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.4.6.16" ana="A3 DPM" lem="πᾶσ">πᾶσι</w>
+<w id="Amos.4.6.17" ana="RA DPM" lem="ὁ">τοῖσ</w>
+<w id="Amos.4.6.18" ana="N2 DPM" lem="τόποσ">τόποισ</w>
+<w id="Amos.4.6.19" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.4.6.20" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.6.21" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.4.6.22" ana="VAI AAI2P" lem="ἐπι-στρέφω">ἐπεστρέψατε</w>
+<w id="Amos.4.6.23" ana="P" lem="πρόσ">πρόσ</w>
+<w id="Amos.4.6.24" ana="RP AS" lem="ἐγώ">με</w>
+<w id="Amos.4.6.25" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.4.6.26" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.4.7.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.7.2" ana="RP NS" lem="ἐγώ">ἐγὼ</w>
+<w id="Amos.4.7.3" ana="VBI AAI1S" lem="ἀνα-ἔχω">ἀνέσχον</w>
+<w id="Amos.4.7.4" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Amos.4.7.5" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.4.7.6" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.4.7.7" ana="N2 ASM" lem="ὑετόσ">ὑετὸν</w>
+<w id="Amos.4.7.8" ana="P" lem="πρό">πρὸ</w>
+<w id="Amos.4.7.9" ana="A3 GPM" lem="τρεῖσ">τριῶν</w>
+<w id="Amos.4.7.10" ana="N3 GPM" lem="μήν">μηνῶν</w>
+<w id="Amos.4.7.11" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.4.7.12" ana="N2 GSM" lem="τρύγητοσ">τρυγήτου</w>
+<w id="Amos.4.7.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.7.14" ana="VF FAI1S" lem="βρέχω">βρέξω</w>
+<w id="Amos.4.7.15" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.4.7.16" ana="N3I ASF" lem="πόλισ">πόλιν</w>
+<w id="Amos.4.7.17" ana="A1A ASF" lem="εἷσ">μίαν</w>
+<w id="Amos.4.7.18" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.4.7.19" ana="X" lem="δέ">δὲ</w>
+<w id="Amos.4.7.20" ana="N3I ASF" lem="πόλισ">πόλιν</w>
+<w id="Amos.4.7.21" ana="A1A ASF" lem="εἷσ">μίαν</w>
+<w id="Amos.4.7.22" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.4.7.23" ana="VF FAI1S" lem="βρέχω">βρέξω</w>
+<w id="Amos.4.7.24" ana="N3D NSF" lem="μερίσ">μερὶσ</w>
+<w id="Amos.4.7.25" ana="A1A NSF" lem="εἷσ">μία</w>
+<w id="Amos.4.7.26" ana="VD FPI3S" lem="βρέχω">βραχήσεται</w>
+<w id="Amos.4.7.27" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.7.28" ana="N3D NSF" lem="μερίσ">μερίσ</w>
+<w id="Amos.4.7.29" ana="P" lem="ἐπί">ἐφ'</w>
+<w id="Amos.4.7.30" ana="RR ASF" lem="ὅσ">ἣν</w>
+<w id="Amos.4.7.31" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.4.7.32" ana="VF FAI1S" lem="βρέχω">βρέξω</w>
+<w id="Amos.4.7.33" ana="P" lem="ἐπί">ἐπ'</w>
+<w id="Amos.4.7.34" ana="RD ASF" lem="αὐτόσ">αὐτήν</w>
+<w id="Amos.4.7.35" ana="VC FPI3S" lem="ξηραίνω">ξηρανθήσεται</w>
+<w id="Amos.4.8.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.8.2" ana="VS FPI3P" lem="συν-ἀθροίζω">συναθροισθήσονται</w>
+<w id="Amos.4.8.3" ana="M" lem="δύο">δύο</w>
+<w id="Amos.4.8.4" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.8.5" ana="A3 NPF" lem="τρεῖσ">τρεῖσ</w>
+<w id="Amos.4.8.6" ana="N3I NPF" lem="πόλισ">πόλεισ</w>
+<w id="Amos.4.8.7" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.4.8.8" ana="N3I ASF" lem="πόλισ">πόλιν</w>
+<w id="Amos.4.8.9" ana="A1A ASF" lem="εἷσ">μίαν</w>
+<w id="Amos.4.8.10" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.4.8.11" ana="VB AAN" lem="πίνω">πιεῖν</w>
+<w id="Amos.4.8.12" ana="N3 ASN" lem="ὕδωρ">ὕδωρ</w>
+<w id="Amos.4.8.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.8.14" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.4.8.15" ana="D" lem="μή">μὴ</w>
+<w id="Amos.4.8.16" ana="VS APS3P" lem="ἐν-πίμπλημι">ἐμπλησθῶσιν</w>
+<w id="Amos.4.8.17" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.8.18" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.4.8.19" ana="VAI AAI2P" lem="ἐπι-στρέφω">ἐπεστρέψατε</w>
+<w id="Amos.4.8.20" ana="P" lem="πρόσ">πρόσ</w>
+<w id="Amos.4.8.21" ana="RP AS" lem="ἐγώ">με</w>
+<w id="Amos.4.8.22" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.4.8.23" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.4.9.1" ana="VAI AAI1S" lem="πατάσσω">ἐπάταξα</w>
+<w id="Amos.4.9.2" ana="RP AP" lem="σύ">ὑμᾶσ</w>
+<w id="Amos.4.9.3" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.4.9.4" ana="N3I DPF" lem="πυρώσισ">πυρώσει</w>
+<w id="Amos.4.9.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.9.6" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.4.9.7" ana="N2 DSM" lem="ἴκτεροσ">ἰκτέρῳ</w>
+<w id="Amos.4.9.8" ana="VAI AAI2P" lem="πληθύνω">ἐπληθύνατε</w>
+<w id="Amos.4.9.9" ana="N2 APM" lem="κῆποσ">κήπουσ</w>
+<w id="Amos.4.9.10" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.4.9.11" ana="N3W APM" lem="ἀμπελών">ἀμπελῶνασ</w>
+<w id="Amos.4.9.12" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.4.9.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.9.14" ana="N3W APM" lem="συκών">συκῶνασ</w>
+<w id="Amos.4.9.15" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.4.9.16" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.9.17" ana="N3W APM" lem="ἐλαιών">ἐλαιῶνασ</w>
+<w id="Amos.4.9.18" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.4.9.19" ana="VBI AAI3S" lem="κατα-ἐσθίω">κατέφαγεν</w>
+<w id="Amos.4.9.20" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Amos.4.9.21" ana="N1 NSF" lem="κάμπη">κάμπη</w>
+<w id="Amos.4.9.22" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.9.23" ana="C" lem="οὐδέ">οὐδ'</w>
+<w id="Amos.4.9.24" ana="C" lem="ὥσ">ὧσ</w>
+<w id="Amos.4.9.25" ana="VAI AAI2P" lem="ἐπι-στρέφω">ἐπεστρέψατε</w>
+<w id="Amos.4.9.26" ana="P" lem="πρόσ">πρόσ</w>
+<w id="Amos.4.9.27" ana="RP AS" lem="ἐγώ">με</w>
+<w id="Amos.4.9.28" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.4.9.29" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.4.10.1" ana="VAI AAI1S" lem="ἐκ   ἀπο-στέλλω">ἐξαπέστειλα</w>
+<w id="Amos.4.10.2" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.4.10.3" ana="RP AP" lem="σύ">ὑμᾶσ</w>
+<w id="Amos.4.10.4" ana="N2 ASM" lem="θάνατοσ">θάνατον</w>
+<w id="Amos.4.10.5" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.4.10.6" ana="N2 DSF" lem="ὁδόσ">ὁδῷ</w>
+<w id="Amos.4.10.7" ana="N2 GSF" lem="Αἴγυπτοσ">Αἰγύπτου</w>
+<w id="Amos.4.10.8" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.10.9" ana="VAI AAI1S" lem="ἀπο-κτείνω">ἀπέκτεινα</w>
+<w id="Amos.4.10.10" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.4.10.11" ana="N1A DSF" lem="ῥομφαία">ῥομφαίᾳ</w>
+<w id="Amos.4.10.12" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Amos.4.10.13" ana="N2 APM" lem="νεανίσκοσ">νεανίσκουσ</w>
+<w id="Amos.4.10.14" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.4.10.15" ana="P" lem="μετά">μετὰ</w>
+<w id="Amos.4.10.16" ana="N1A GSF" lem="αἰχμαλωσία">αἰχμαλωσίασ</w>
+<w id="Amos.4.10.17" ana="N2 GPM" lem="ἵπποσ">ἵππων</w>
+<w id="Amos.4.10.18" ana="RP GS" lem="σύ">σου</w>
+<w id="Amos.4.10.19" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.10.20" ana="VBI AAI1S" lem="ἀνα-ἄγω">ἀνήγαγον</w>
+<w id="Amos.4.10.21" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.4.10.22" ana="N3 DSN" lem="πῦρ">πυρὶ</w>
+<w id="Amos.4.10.23" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="Amos.4.10.24" ana="N1 APF" lem="παρεμβολή">παρεμβολὰσ</w>
+<w id="Amos.4.10.25" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.4.10.26" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.4.10.27" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Amos.4.10.28" ana="N1 DSF" lem="ὀργή">ὀργῇ</w>
+<w id="Amos.4.10.29" ana="RP GS" lem="ἐγώ">μου</w>
+<w id="Amos.4.10.30" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.10.31" ana="C" lem="οὐδέ">οὐδ'</w>
+<w id="Amos.4.10.32" ana="C" lem="ὥσ">ὧσ</w>
+<w id="Amos.4.10.33" ana="VAI AAI2P" lem="ἐπι-στρέφω">ἐπεστρέψατε</w>
+<w id="Amos.4.10.34" ana="P" lem="πρόσ">πρόσ</w>
+<w id="Amos.4.10.35" ana="RP AS" lem="ἐγώ">με</w>
+<w id="Amos.4.10.36" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.4.10.37" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.4.11.1" ana="VAI AAI1S" lem="κατα-στρέφω">κατέστρεψα</w>
+<w id="Amos.4.11.2" ana="RP AP" lem="σύ">ὑμᾶσ</w>
+<w id="Amos.4.11.3" ana="D" lem="καθώσ">καθὼσ</w>
+<w id="Amos.4.11.4" ana="VAI AAI3S" lem="κατα-στρέφω">κατέστρεψεν</w>
+<w id="Amos.4.11.5" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.4.11.6" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="Amos.4.11.7" ana="N AS" lem="Σοδομα">Σοδομα</w>
+<w id="Amos.4.11.8" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.11.9" ana="N AS" lem="Γομορρα">Γομορρα</w>
+<w id="Amos.4.11.10" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.11.11" ana="VBI AMI2P" lem="γίγνομαι">ἐγένεσθε</w>
+<w id="Amos.4.11.12" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Amos.4.11.13" ana="N2 NSM" lem="δαλόσ">δαλὸσ</w>
+<w id="Amos.4.11.14" ana="VM XMPNSM" lem="ἐκ-σπάω">ἐξεσπασμένοσ</w>
+<w id="Amos.4.11.15" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.4.11.16" ana="N3 GSN" lem="πῦρ">πυρόσ</w>
+<w id="Amos.4.11.17" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.11.18" ana="C" lem="οὐδέ">οὐδ'</w>
+<w id="Amos.4.11.19" ana="C" lem="ὥσ">ὧσ</w>
+<w id="Amos.4.11.20" ana="VAI AAI2P" lem="ἐπι-στρέφω">ἐπεστρέψατε</w>
+<w id="Amos.4.11.21" ana="P" lem="πρόσ">πρόσ</w>
+<w id="Amos.4.11.22" ana="RP AS" lem="ἐγώ">με</w>
+<w id="Amos.4.11.23" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.4.11.24" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.4.12.1" ana="P" lem="διά">διὰ</w>
+<w id="Amos.4.12.2" ana="RD ASN" lem="οὗτοσ">τοῦτο</w>
+<w id="Amos.4.12.3" ana="D" lem="οὕτωσ">οὕτωσ</w>
+<w id="Amos.4.12.4" ana="VF FAI1S" lem="ποιέω">ποιήσω</w>
+<w id="Amos.4.12.5" ana="RP DS" lem="σύ">σοι</w>
+<w id="Amos.4.12.6" ana="N VSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.4.12.7" ana="D" lem="πλήν">πλὴν</w>
+<w id="Amos.4.12.8" ana="C" lem="ὅτι">ὅτι</w>
+<w id="Amos.4.12.9" ana="D" lem="οὕτωσ">οὕτωσ</w>
+<w id="Amos.4.12.10" ana="VF FAI1S" lem="ποιέω">ποιήσω</w>
+<w id="Amos.4.12.11" ana="RP DS" lem="σύ">σοι</w>
+<w id="Amos.4.12.12" ana="V1 PMD2S" lem="ἑτοιμάζω">ἑτοιμάζου</w>
+<w id="Amos.4.12.13" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.4.12.14" ana="V2 PMN" lem="ἐπι-καλέω">ἐπικαλεῖσθαι</w>
+<w id="Amos.4.12.15" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.4.12.16" ana="N2 ASM" lem="θεόσ">θεόν</w>
+<w id="Amos.4.12.17" ana="RP GS" lem="σύ">σου</w>
+<w id="Amos.4.12.18" ana="N VSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.4.13.1" ana="C" lem="διότι">διότι</w>
+<w id="Amos.4.13.2" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="Amos.4.13.3" ana="RP NS" lem="ἐγώ">ἐγὼ</w>
+<w id="Amos.4.13.4" ana="V4 PAPNSM" lem="στερεόω">στερεῶν</w>
+<w id="Amos.4.13.5" ana="N1 ASF" lem="βροντή">βροντὴν</w>
+<w id="Amos.4.13.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.13.7" ana="V1 PAPNSM" lem="κτίζω">κτίζων</w>
+<w id="Amos.4.13.8" ana="N3M ASN" lem="πνεῦμα">πνεῦμα</w>
+<w id="Amos.4.13.9" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.13.10" ana="V1 PAPNSM" lem="ἀπο-ἀγγέλλω">ἀπαγγέλλων</w>
+<w id="Amos.4.13.11" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.4.13.12" ana="N2 APM" lem="ἄνθρωποσ">ἀνθρώπουσ</w>
+<w id="Amos.4.13.13" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.4.13.14" ana="A1 ASM" lem="χριστόσ">χριστὸν</w>
+<w id="Amos.4.13.15" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.4.13.16" ana="V2 PAPNSM" lem="ποιέω">ποιῶν</w>
+<w id="Amos.4.13.17" ana="N2 ASM" lem="ὄρθροσ">ὄρθρον</w>
+<w id="Amos.4.13.18" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.13.19" ana="N1 ASF" lem="ὁμίχλη">ὁμίχλην</w>
+<w id="Amos.4.13.20" ana="C" lem="καί">καὶ</w>
+<w id="Amos.4.13.21" ana="V1 PAPNSM" lem="ἐπι-βαίνω">ἐπιβαίνων</w>
+<w id="Amos.4.13.22" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.4.13.23" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.4.13.24" ana="N3E APN" lem="ὕψοσ">ὕψη</w>
+<w id="Amos.4.13.25" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.4.13.26" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.4.13.27" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.4.13.28" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.4.13.29" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="Amos.4.13.30" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.4.13.31" ana="N3R NSM" lem="παντοκράτωρ">παντοκράτωρ</w>
+<w id="Amos.4.13.32" ana="N3M NSN" lem="ὄνομα">ὄνομα</w>
+<w id="Amos.4.13.33" ana="RD DSM" lem="αὐτόσ">αὐτῷ</w>
+<w id="Amos.5.1.1" ana="VA AAD2P" lem="ἀκούω">ἀκούσατε</w>
+<w id="Amos.5.1.2" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.5.1.3" ana="N2 ASM" lem="λόγοσ">λόγον</w>
+<w id="Amos.5.1.4" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Amos.5.1.5" ana="RD ASM" lem="οὗτοσ">τοῦτον</w>
+<w id="Amos.5.1.6" ana="RR ASM" lem="ὅσ">ὃν</w>
+<w id="Amos.5.1.7" ana="RP NS" lem="ἐγώ">ἐγὼ</w>
+<w id="Amos.5.1.8" ana="V1 PAI1S" lem="λαμβάνω">λαμβάνω</w>
+<w id="Amos.5.1.9" ana="P" lem="ἐπί">ἐφ'</w>
+<w id="Amos.5.1.10" ana="RP AP" lem="σύ">ὑμᾶσ</w>
+<w id="Amos.5.1.11" ana="N2 ASM" lem="θρῆνοσ">θρῆνον</w>
+<w id="Amos.5.1.12" ana="N2 NSM" lem="οἶκοσ">οἶκοσ</w>
+<w id="Amos.5.1.13" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.5.2.1" ana="VBI AAI3S" lem="πίπτω">ἔπεσεν</w>
+<w id="Amos.5.2.2" ana="D" lem="οὐκέτι">οὐκέτι</w>
+<w id="Amos.5.2.3" ana="D" lem="μή">μὴ</w>
+<w id="Amos.5.2.4" ana="VE AAS3S" lem="προσ-τίθημι">προσθῇ</w>
+<w id="Amos.5.2.5" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.5.2.6" ana="VH AAN" lem="ἀνα-ἵστημι">ἀναστῆναι</w>
+<w id="Amos.5.2.7" ana="N2 NSF" lem="παρθένοσ">παρθένοσ</w>
+<w id="Amos.5.2.8" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.5.2.9" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.5.2.10" ana="VZI AAI3S" lem="σφάλλω">ἔσφαλεν</w>
+<w id="Amos.5.2.11" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.5.2.12" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.5.2.13" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.5.2.14" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Amos.5.2.15" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.5.2.16" ana="V9 PAI3S" lem="εἰμί">ἔστιν</w>
+<w id="Amos.5.2.17" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.2.18" ana="VF FAPNSM" lem="ἀνα-ἵστημι">ἀναστήσων</w>
+<w id="Amos.5.2.19" ana="RD ASF" lem="αὐτόσ">αὐτήν</w>
+<w id="Amos.5.3.1" ana="C" lem="διότι">διότι</w>
+<w id="Amos.5.3.2" ana="RD APN" lem="ὅδε">τάδε</w>
+<w id="Amos.5.3.3" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.5.3.4" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.5.3.5" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.5.3.6" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Amos.5.3.7" ana="N3I NSF" lem="πόλισ">πόλισ</w>
+<w id="Amos.5.3.8" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Amos.5.3.9" ana="RR GSF" lem="ὅσ">ἧσ</w>
+<w id="Amos.5.3.10" ana="V1I IMI3P" lem="ἐκ-πορεύομαι">ἐξεπορεύοντο</w>
+<w id="Amos.5.3.11" ana="A1A NPM" lem="χίλιοι">χίλιοι</w>
+<w id="Amos.5.3.12" ana="VV FPI3P" lem="ὑπο-λείπω">ὑπολειφθήσονται</w>
+<w id="Amos.5.3.13" ana="M" lem="ἑκατόν">ἑκατόν</w>
+<w id="Amos.5.3.14" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.3.15" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Amos.5.3.16" ana="RR GSF" lem="ὅσ">ἧσ</w>
+<w id="Amos.5.3.17" ana="V1I IMI3P" lem="ἐκ-πορεύομαι">ἐξεπορεύοντο</w>
+<w id="Amos.5.3.18" ana="M" lem="ἑκατόν">ἑκατόν</w>
+<w id="Amos.5.3.19" ana="VV FPI3P" lem="ὑπο-λείπω">ὑπολειφθήσονται</w>
+<w id="Amos.5.3.20" ana="M" lem="δέκα">δέκα</w>
+<w id="Amos.5.3.21" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Amos.5.3.22" ana="N2 DSM" lem="οἶκοσ">οἴκῳ</w>
+<w id="Amos.5.3.23" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.5.4.1" ana="C" lem="διότι">διότι</w>
+<w id="Amos.5.4.2" ana="RD APN" lem="ὅδε">τάδε</w>
+<w id="Amos.5.4.3" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.5.4.4" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.5.4.5" ana="P" lem="πρόσ">πρὸσ</w>
+<w id="Amos.5.4.6" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.5.4.7" ana="N2 ASM" lem="οἶκοσ">οἶκον</w>
+<w id="Amos.5.4.8" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.5.4.9" ana="VA AAD2P" lem="ἐκ-ζητέω">ἐκζητήσατέ</w>
+<w id="Amos.5.4.10" ana="RP AS" lem="ἐγώ">με</w>
+<w id="Amos.5.4.11" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.4.12" ana="VF FMI2P" lem="ζάω">ζήσεσθε</w>
+<w id="Amos.5.5.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.5.2" ana="D" lem="μή">μὴ</w>
+<w id="Amos.5.5.3" ana="V2 PAI2P" lem="ἐκ-ζητέω">ἐκζητεῖτε</w>
+<w id="Amos.5.5.4" ana="N ASF" lem="Βαιθηλ">Βαιθηλ</w>
+<w id="Amos.5.5.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.5.6" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.5.5.7" ana="N ASF" lem="Γαλγαλα">Γαλγαλα</w>
+<w id="Amos.5.5.8" ana="D" lem="μή">μὴ</w>
+<w id="Amos.5.5.9" ana="V1 PMD2P" lem="εἰσ-πορεύομαι">εἰσπορεύεσθε</w>
+<w id="Amos.5.5.10" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.5.11" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.5.5.12" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.5.5.13" ana="N3T ASN" lem="φρέαρ">φρέαρ</w>
+<w id="Amos.5.5.14" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.5.5.15" ana="N2 GSM" lem="ὅρκοσ">ὅρκου</w>
+<w id="Amos.5.5.16" ana="D" lem="μή">μὴ</w>
+<w id="Amos.5.5.17" ana="V1 PAD2P" lem="δια-βαίνω">διαβαίνετε</w>
+<w id="Amos.5.5.18" ana="C" lem="ὅτι">ὅτι</w>
+<w id="Amos.5.5.19" ana="N NSF" lem="Γαλγαλα">Γαλγαλα</w>
+<w id="Amos.5.5.20" ana="V1 PPPNSF" lem="αἰχμαλωτεύω">αἰχμαλωτευομένη</w>
+<w id="Amos.5.5.21" ana="VC FPI3S" lem="αἰχμαλωτεύω">αἰχμαλωτευθήσεται</w>
+<w id="Amos.5.5.22" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.5.23" ana="N NSF" lem="Βαιθηλ">Βαιθηλ</w>
+<w id="Amos.5.5.24" ana="V9 FMI3S" lem="εἰμί">ἔσται</w>
+<w id="Amos.5.5.25" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Amos.5.5.26" ana="D" lem="οὐ">οὐχ</w>
+<w id="Amos.5.5.27" ana="V1 PAPNSF" lem="ὑπο-ἄρχω">ὑπάρχουσα</w>
+<w id="Amos.5.6.1" ana="VA AAD2P" lem="ἐκ-ζητέω">ἐκζητήσατε</w>
+<w id="Amos.5.6.2" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.5.6.3" ana="N2 ASM" lem="κύριοσ">κύριον</w>
+<w id="Amos.5.6.4" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.6.5" ana="VA AAD2P" lem="ζάω">ζήσατε</w>
+<w id="Amos.5.6.6" ana="C" lem="ὅπωσ">ὅπωσ</w>
+<w id="Amos.5.6.7" ana="D" lem="μή">μὴ</w>
+<w id="Amos.5.6.8" ana="VA AAS3S" lem="ἀνα-λάμπω">ἀναλάμψῃ</w>
+<w id="Amos.5.6.9" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Amos.5.6.10" ana="N3 NSN" lem="πῦρ">πῦρ</w>
+<w id="Amos.5.6.11" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.6.12" ana="N2 NSM" lem="οἶκοσ">οἶκοσ</w>
+<w id="Amos.5.6.13" ana="N GSM" lem="Ιωσηφ">Ιωσηφ</w>
+<w id="Amos.5.6.14" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.6.15" ana="VF FMI3S" lem="κατα-ἐσθίω">καταφάγεται</w>
+<w id="Amos.5.6.16" ana="RD ASM" lem="αὐτόσ">αὐτόν</w>
+<w id="Amos.5.6.17" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.6.18" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.5.6.19" ana="V9 FMI3S" lem="εἰμί">ἔσται</w>
+<w id="Amos.5.6.20" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.6.21" ana="VF FAPNSM" lem="σβέννυμι">σβέσων</w>
+<w id="Amos.5.6.22" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Amos.5.6.23" ana="N2 DSM" lem="οἶκοσ">οἴκῳ</w>
+<w id="Amos.5.6.24" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.5.7.1" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.5.7.2" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.7.3" ana="V2 PAPNSM" lem="ποιέω">ποιῶν</w>
+<w id="Amos.5.7.4" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.5.7.5" ana="N3E ASN" lem="ὕψοσ">ὕψοσ</w>
+<w id="Amos.5.7.6" ana="N3M ASN" lem="κρίμα">κρίμα</w>
+<w id="Amos.5.7.7" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.7.8" ana="N1 ASF" lem="δικαιοσύνη">δικαιοσύνην</w>
+<w id="Amos.5.7.9" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.5.7.10" ana="N1 ASF" lem="γῆ">γῆν</w>
+<w id="Amos.5.7.11" ana="VAI AAI3S" lem="τίθημι">ἔθηκεν</w>
+<w id="Amos.5.8.1" ana="V2 PAPNSM" lem="ποιέω">ποιῶν</w>
+<w id="Amos.5.8.2" ana="A3 APN" lem="πᾶσ">πάντα</w>
+<w id="Amos.5.8.3" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.8.4" ana="V1 PAPNSM" lem="μετα-σκευάζω">μετασκευάζων</w>
+<w id="Amos.5.8.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.8.6" ana="V1 PAPNSM" lem="ἐκ-τρέπω">ἐκτρέπων</w>
+<w id="Amos.5.8.7" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.5.8.8" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.5.8.9" ana="D" lem="πρωΐ">πρωὶ</w>
+<w id="Amos.5.8.10" ana="N1A ASF" lem="σκιά">σκιὰν</w>
+<w id="Amos.5.8.11" ana="N2 GSM" lem="θάνατοσ">θανάτου</w>
+<w id="Amos.5.8.12" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.8.13" ana="N1A ASF" lem="ἡμέρα">ἡμέραν</w>
+<w id="Amos.5.8.14" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.5.8.15" ana="N3 ASF" lem="νύξ">νύκτα</w>
+<w id="Amos.5.8.16" ana="V1 PAPNSM" lem="συν-σκοτάζω">συσκοτάζων</w>
+<w id="Amos.5.8.17" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.8.18" ana="V2 PMPNSM" lem="προσ-καλέω">προσκαλούμενοσ</w>
+<w id="Amos.5.8.19" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.5.8.20" ana="N3 ASN" lem="ὕδωρ">ὕδωρ</w>
+<w id="Amos.5.8.21" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.5.8.22" ana="N1S GSF" lem="θάλασσα">θαλάσσησ</w>
+<w id="Amos.5.8.23" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.8.24" ana="V2 PAPNSM" lem="ἐκ-χέω">ἐκχέων</w>
+<w id="Amos.5.8.25" ana="RD ASN" lem="αὐτόσ">αὐτὸ</w>
+<w id="Amos.5.8.26" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.5.8.27" ana="N2N GSN" lem="πρόσωπον">προσώπου</w>
+<w id="Amos.5.8.28" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.5.8.29" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.5.8.30" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.5.8.31" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.8.32" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="Amos.5.8.33" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.8.34" ana="N3R NSM" lem="παντοκράτωρ">παντοκράτωρ</w>
+<w id="Amos.5.8.35" ana="N3M NSN" lem="ὄνομα">ὄνομα</w>
+<w id="Amos.5.8.36" ana="RD DSM" lem="αὐτόσ">αὐτῷ</w>
+<w id="Amos.5.9.1" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.9.2" ana="V2 PAPNSM" lem="δια-αἱρέω">διαιρῶν</w>
+<w id="Amos.5.9.3" ana="N2 ASM" lem="συντριμμόσ">συντριμμὸν</w>
+<w id="Amos.5.9.4" ana="P" lem="ἐπί">ἐπ'</w>
+<w id="Amos.5.9.5" ana="N3 ASF" lem="ἰσχύσ">ἰσχὺν</w>
+<w id="Amos.5.9.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.9.7" ana="N1A ASF" lem="ταλαιπωρία">ταλαιπωρίαν</w>
+<w id="Amos.5.9.8" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.5.9.9" ana="N3M ASN" lem="ὀχύρωμα">ὀχύρωμα</w>
+<w id="Amos.5.9.10" ana="V1 PAPNSM" lem="ἐπι-ἄγω">ἐπάγων</w>
+<w id="Amos.5.10.1" ana="VAI AAI3P" lem="μισέω">ἐμίσησαν</w>
+<w id="Amos.5.10.2" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.5.10.3" ana="N1 DPF" lem="πύλη">πύλαισ</w>
+<w id="Amos.5.10.4" ana="V1 PAPASM" lem="ἐλέγχω">ἐλέγχοντα</w>
+<w id="Amos.5.10.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.10.6" ana="N2 ASM" lem="λόγοσ">λόγον</w>
+<w id="Amos.5.10.7" ana="A1A ASM" lem="ὅσιοσ">ὅσιον</w>
+<w id="Amos.5.10.8" ana="VAI AMI3P" lem="βδελύσσω">ἐβδελύξαντο</w>
+<w id="Amos.5.11.1" ana="P" lem="διά">διὰ</w>
+<w id="Amos.5.11.2" ana="RD ASN" lem="οὗτοσ">τοῦτο</w>
+<w id="Amos.5.11.3" ana="P" lem="ἀντί">ἀνθ'</w>
+<w id="Amos.5.11.4" ana="RR GPM" lem="ὅσ">ὧν</w>
+<w id="Amos.5.11.5" ana="V1I IAI2P" lem="κατα-κονδυλίζω">κατεκονδυλίζετε</w>
+<w id="Amos.5.11.6" ana="N2 APM" lem="πτωχόσ">πτωχοὺσ</w>
+<w id="Amos.5.11.7" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.11.8" ana="N2N APN" lem="δῶρον">δῶρα</w>
+<w id="Amos.5.11.9" ana="A1 APN" lem="ἐκλεκτόσ">ἐκλεκτὰ</w>
+<w id="Amos.5.11.10" ana="VAI AMI2P" lem="δέχομαι">ἐδέξασθε</w>
+<w id="Amos.5.11.11" ana="P" lem="παρά">παρ'</w>
+<w id="Amos.5.11.12" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.5.11.13" ana="N2 APM" lem="οἶκοσ">οἴκουσ</w>
+<w id="Amos.5.11.14" ana="A1B APM" lem="ξυστόσ">ξυστοὺσ</w>
+<w id="Amos.5.11.15" ana="VAI AAI2P" lem="οἰκοδομέω">ᾠκοδομήσατε</w>
+<w id="Amos.5.11.16" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.11.17" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.5.11.18" ana="D" lem="μή">μὴ</w>
+<w id="Amos.5.11.19" ana="VA AAS2P" lem="κατα-οἰκέω">κατοικήσητε</w>
+<w id="Amos.5.11.20" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.5.11.21" ana="RD DPM" lem="αὐτόσ">αὐτοῖσ</w>
+<w id="Amos.5.11.22" ana="N3W APM" lem="ἀμπελών">ἀμπελῶνασ</w>
+<w id="Amos.5.11.23" ana="A1 APM" lem="ἐπιθυμητόσ">ἐπιθυμητοὺσ</w>
+<w id="Amos.5.11.24" ana="VAI AAI2P" lem="φυτεύω">ἐφυτεύσατε</w>
+<w id="Amos.5.11.25" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.11.26" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.5.11.27" ana="D" lem="μή">μὴ</w>
+<w id="Amos.5.11.28" ana="VB AAS2P" lem="πίνω">πίητε</w>
+<w id="Amos.5.11.29" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.5.11.30" ana="N2 ASM" lem="οἶνοσ">οἶνον</w>
+<w id="Amos.5.11.31" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Amos.5.11.32" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.5.12.1" ana="C" lem="ὅτι">ὅτι</w>
+<w id="Amos.5.12.2" ana="VZI AAI1S" lem="γιγνώσκω">ἔγνων</w>
+<w id="Amos.5.12.3" ana="A1 APF" lem="πολύσ">πολλὰσ</w>
+<w id="Amos.5.12.4" ana="N1A APF" lem="ἀσέβεια">ἀσεβείασ</w>
+<w id="Amos.5.12.5" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.5.12.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.12.7" ana="A1A NPF" lem="ἰσχυρόσ">ἰσχυραὶ</w>
+<w id="Amos.5.12.8" ana="RA NPF" lem="ὁ">αἱ</w>
+<w id="Amos.5.12.9" ana="N1A NPF" lem="ἁμαρτία">ἁμαρτίαι</w>
+<w id="Amos.5.12.10" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.5.12.11" ana="V2 PAPNPM" lem="κατα-πατέω">καταπατοῦντεσ</w>
+<w id="Amos.5.12.12" ana="A1A ASM" lem="δίκαιοσ">δίκαιον</w>
+<w id="Amos.5.12.13" ana="V1 PAPNPM" lem="λαμβάνω">λαμβάνοντεσ</w>
+<w id="Amos.5.12.14" ana="N3M APN" lem="ἄλλαγμα">ἀλλάγματα</w>
+<w id="Amos.5.12.15" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.12.16" ana="N3T APM" lem="πένησ">πένητασ</w>
+<w id="Amos.5.12.17" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.5.12.18" ana="N1 DPF" lem="πύλη">πύλαισ</w>
+<w id="Amos.5.12.19" ana="V1 PAPNPM" lem="ἐκ-κλίνω">ἐκκλίνοντεσ</w>
+<w id="Amos.5.13.1" ana="P" lem="διά">διὰ</w>
+<w id="Amos.5.13.2" ana="RD ASN" lem="οὗτοσ">τοῦτο</w>
+<w id="Amos.5.13.3" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.13.4" ana="V7 PAPNSM" lem="συν-ἵημι">συνίων</w>
+<w id="Amos.5.13.5" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.5.13.6" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Amos.5.13.7" ana="N2 DSM" lem="καιρόσ">καιρῷ</w>
+<w id="Amos.5.13.8" ana="RD DSM" lem="ἐκεῖνοσ">ἐκείνῳ</w>
+<w id="Amos.5.13.9" ana="VF FMI3S" lem="σιωπάω">σιωπήσεται</w>
+<w id="Amos.5.13.10" ana="C" lem="ὅτι">ὅτι</w>
+<w id="Amos.5.13.11" ana="N2 NSM" lem="καιρόσ">καιρὸσ</w>
+<w id="Amos.5.13.12" ana="A1A NSM" lem="πονηρόσ">πονηρόσ</w>
+<w id="Amos.5.13.13" ana="V9 PAI3S" lem="εἰμί">ἐστιν</w>
+<w id="Amos.5.14.1" ana="VA AAD2P" lem="ἐκ-ζητέω">ἐκζητήσατε</w>
+<w id="Amos.5.14.2" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.5.14.3" ana="A1 ASN" lem="καλόσ">καλὸν</w>
+<w id="Amos.5.14.4" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.14.5" ana="D" lem="μή">μὴ</w>
+<w id="Amos.5.14.6" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.5.14.7" ana="A1A ASN" lem="πονηρόσ">πονηρόν</w>
+<w id="Amos.5.14.8" ana="C" lem="ὅπωσ">ὅπωσ</w>
+<w id="Amos.5.14.9" ana="VA AAS2P" lem="ζάω">ζήσητε</w>
+<w id="Amos.5.14.10" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.14.11" ana="V9 FMI3S" lem="εἰμί">ἔσται</w>
+<w id="Amos.5.14.12" ana="D" lem="οὕτωσ">οὕτωσ</w>
+<w id="Amos.5.14.13" ana="P" lem="μετά">μεθ'</w>
+<w id="Amos.5.14.14" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.5.14.15" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.5.14.16" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.14.17" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="Amos.5.14.18" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.14.19" ana="N3R NSM" lem="παντοκράτωρ">παντοκράτωρ</w>
+<w id="Amos.5.14.20" ana="RR ASM" lem="ὅσ">ὃν</w>
+<w id="Amos.5.14.21" ana="N2 ASM" lem="τρόποσ">τρόπον</w>
+<w id="Amos.5.14.22" ana="VAI AAI2P" lem="εἶπον">εἴπατε</w>
+<w id="Amos.5.15.1" ana="VX XAI1P" lem="μισέω">μεμισήκαμεν</w>
+<w id="Amos.5.15.2" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.5.15.3" ana="A1A APN" lem="πονηρόσ">πονηρὰ</w>
+<w id="Amos.5.15.4" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.15.5" ana="VX XAI1P" lem="ἀγαπάω">ἠγαπήκαμεν</w>
+<w id="Amos.5.15.6" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.5.15.7" ana="A1 APN" lem="καλόσ">καλά</w>
+<w id="Amos.5.15.8" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.15.9" ana="VA AAD2P" lem="ἀπο  κατα-ἵστημι">ἀποκαταστήσατε</w>
+<w id="Amos.5.15.10" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.5.15.11" ana="N1 DPF" lem="πύλη">πύλαισ</w>
+<w id="Amos.5.15.12" ana="N3M ASN" lem="κρίμα">κρίμα</w>
+<w id="Amos.5.15.13" ana="C" lem="ὅπωσ">ὅπωσ</w>
+<w id="Amos.5.15.14" ana="VA AAD3S" lem="ἐλεέω">ἐλεήσῃ</w>
+<w id="Amos.5.15.15" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.5.15.16" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.15.17" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="Amos.5.15.18" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.15.19" ana="N3R NSM" lem="παντοκράτωρ">παντοκράτωρ</w>
+<w id="Amos.5.15.20" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Amos.5.15.21" ana="A1B APM" lem="περίλοιποσ">περιλοίπουσ</w>
+<w id="Amos.5.15.22" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.5.15.23" ana="N GSM" lem="Ιωσηφ">Ιωσηφ</w>
+<w id="Amos.5.16.1" ana="P" lem="διά">διὰ</w>
+<w id="Amos.5.16.2" ana="RD ASN" lem="οὗτοσ">τοῦτο</w>
+<w id="Amos.5.16.3" ana="RD APN" lem="ὅδε">τάδε</w>
+<w id="Amos.5.16.4" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.5.16.5" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.5.16.6" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.16.7" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="Amos.5.16.8" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.16.9" ana="N3R NSM" lem="παντοκράτωρ">παντοκράτωρ</w>
+<w id="Amos.5.16.10" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.5.16.11" ana="A1S DPF" lem="πᾶσ">πάσαισ</w>
+<w id="Amos.5.16.12" ana="A3U DPF" lem="πλατύσ">πλατείαισ</w>
+<w id="Amos.5.16.13" ana="N2 NSM" lem="κοπετόσ">κοπετόσ</w>
+<w id="Amos.5.16.14" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.16.15" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.5.16.16" ana="A1S DPF" lem="πᾶσ">πάσαισ</w>
+<w id="Amos.5.16.17" ana="N2 DPF" lem="ὁδόσ">ὁδοῖσ</w>
+<w id="Amos.5.16.18" ana="VC FPI3S" lem="εἶπον">ῥηθήσεται</w>
+<w id="Amos.5.16.19" ana="I" lem="οὐαί">οὐαὶ</w>
+<w id="Amos.5.16.20" ana="I" lem="οὐαί">οὐαί</w>
+<w id="Amos.5.16.21" ana="VC FPI3S" lem="καλέω">κληθήσεται</w>
+<w id="Amos.5.16.22" ana="N2 NSM" lem="γεωργόσ">γεωργὸσ</w>
+<w id="Amos.5.16.23" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.5.16.24" ana="N3E ASN" lem="πένθοσ">πένθοσ</w>
+<w id="Amos.5.16.25" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.16.26" ana="N2 ASM" lem="κοπετόσ">κοπετὸν</w>
+<w id="Amos.5.16.27" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.16.28" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.5.16.29" ana="VX XAPAPM" lem="ὁράω">εἰδότασ</w>
+<w id="Amos.5.16.30" ana="N2 ASM" lem="θρῆνοσ">θρῆνον</w>
+<w id="Amos.5.17.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.17.2" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.5.17.3" ana="A1S DPF" lem="πᾶσ">πάσαισ</w>
+<w id="Amos.5.17.4" ana="N2 DPF" lem="ὁδόσ">ὁδοῖσ</w>
+<w id="Amos.5.17.5" ana="N2 NSM" lem="κοπετόσ">κοπετόσ</w>
+<w id="Amos.5.17.6" ana="C" lem="διότι">διότι</w>
+<w id="Amos.5.17.7" ana="VF FMI1S" lem="δια-ἔρχομαι">διελεύσομαι</w>
+<w id="Amos.5.17.8" ana="P" lem="διά">διὰ</w>
+<w id="Amos.5.17.9" ana="A1 GSN" lem="μέσοσ">μέσου</w>
+<w id="Amos.5.17.10" ana="RP GS" lem="σύ">σου</w>
+<w id="Amos.5.17.11" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Amos.5.17.12" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.5.18.1" ana="I" lem="οὐαί">οὐαὶ</w>
+<w id="Amos.5.18.2" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.5.18.3" ana="V4 PAPNPM" lem="ἐπι-θυμόω">ἐπιθυμοῦντεσ</w>
+<w id="Amos.5.18.4" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.5.18.5" ana="N1A ASF" lem="ἡμέρα">ἡμέραν</w>
+<w id="Amos.5.18.6" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Amos.5.18.7" ana="C" lem="ἵνα">ἵνα</w>
+<w id="Amos.5.18.8" ana="RI ASN" lem="τίσ">τί</w>
+<w id="Amos.5.18.9" ana="RD NSF" lem="οὗτοσ">αὕτη</w>
+<w id="Amos.5.18.10" ana="RP DP" lem="σύ">ὑμῖν</w>
+<w id="Amos.5.18.11" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Amos.5.18.12" ana="N1A NSF" lem="ἡμέρα">ἡμέρα</w>
+<w id="Amos.5.18.13" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.5.18.14" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Amos.5.18.15" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.18.16" ana="RD NSF" lem="αὐτόσ">αὐτή</w>
+<w id="Amos.5.18.17" ana="V9 PAI3S" lem="εἰμί">ἐστιν</w>
+<w id="Amos.5.18.18" ana="N3E NSN" lem="σκότοσ">σκότοσ</w>
+<w id="Amos.5.18.19" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.18.20" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.5.18.21" ana="N3T NSN" lem="φῶσ">φῶσ</w>
+<w id="Amos.5.19.1" ana="RR ASM" lem="ὅσ">ὃν</w>
+<w id="Amos.5.19.2" ana="N2 ASM" lem="τρόποσ">τρόπον</w>
+<w id="Amos.5.19.3" ana="D" lem="ὅταν">ὅταν</w>
+<w id="Amos.5.19.4" ana="VB AAS3S" lem="φεύγω">φύγῃ</w>
+<w id="Amos.5.19.5" ana="N2 NSM" lem="ἄνθρωποσ">ἄνθρωποσ</w>
+<w id="Amos.5.19.6" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.5.19.7" ana="N2N GSN" lem="πρόσωπον">προσώπου</w>
+<w id="Amos.5.19.8" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.5.19.9" ana="N3 GSM" lem="λέων">λέοντοσ</w>
+<w id="Amos.5.19.10" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.19.11" ana="VF FMI2S" lem="ἐν-πίπτω">ἐμπέσῃ</w>
+<w id="Amos.5.19.12" ana="RD DSM" lem="αὐτόσ">αὐτῷ</w>
+<w id="Amos.5.19.13" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Amos.5.19.14" ana="N2 NSF" lem="ἄρκοσ">ἄρκοσ</w>
+<w id="Amos.5.19.15" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.19.16" ana="VA AAS3S" lem="εἰσ-πηδάω">εἰσπηδήσῃ</w>
+<w id="Amos.5.19.17" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.5.19.18" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.5.19.19" ana="N2 ASM" lem="οἶκοσ">οἶκον</w>
+<w id="Amos.5.19.20" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.5.19.21" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.19.22" ana="VA AMS3S" lem="ἀπο-ἐρείδω">ἀπερείσηται</w>
+<w id="Amos.5.19.23" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="Amos.5.19.24" ana="N3 APF" lem="χείρ">χεῖρασ</w>
+<w id="Amos.5.19.25" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.5.19.26" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.5.19.27" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.5.19.28" ana="N2 ASM" lem="τοῖχοσ">τοῖχον</w>
+<w id="Amos.5.19.29" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.19.30" ana="VB AAS3S" lem="δάκνω">δάκῃ</w>
+<w id="Amos.5.19.31" ana="RD ASM" lem="αὐτόσ">αὐτὸν</w>
+<w id="Amos.5.19.32" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.19.33" ana="N3I NSM" lem="ὄφισ">ὄφισ</w>
+<w id="Amos.5.20.1" ana="D" lem="οὐ">οὐχὶ</w>
+<w id="Amos.5.20.2" ana="N3E NSN" lem="σκότοσ">σκότοσ</w>
+<w id="Amos.5.20.3" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Amos.5.20.4" ana="N1A NSF" lem="ἡμέρα">ἡμέρα</w>
+<w id="Amos.5.20.5" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.5.20.6" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Amos.5.20.7" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.20.8" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.5.20.9" ana="N3T NSN" lem="φῶσ">φῶσ</w>
+<w id="Amos.5.20.10" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.20.11" ana="N2 NSM" lem="γνόφοσ">γνόφοσ</w>
+<w id="Amos.5.20.12" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.5.20.13" ana="V1 PAPNSM" lem="ἔχω">ἔχων</w>
+<w id="Amos.5.20.14" ana="N3E ASN" lem="φέγγοσ">φέγγοσ</w>
+<w id="Amos.5.20.15" ana="RD DSF" lem="αὐτόσ">αὐτῇ</w>
+<w id="Amos.5.21.1" ana="VX XAI1S" lem="μισέω">μεμίσηκα</w>
+<w id="Amos.5.21.2" ana="VM XMI1S" lem="ἀπο-ὠθέω">ἀπῶσμαι</w>
+<w id="Amos.5.21.3" ana="N1 APF" lem="ἑορτή">ἑορτὰσ</w>
+<w id="Amos.5.21.4" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.5.21.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.21.6" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.5.21.7" ana="D" lem="μή">μὴ</w>
+<w id="Amos.5.21.8" ana="VC APS1S" lem="ὀσφραίνομαι">ὀσφρανθῶ</w>
+<w id="Amos.5.21.9" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.5.21.10" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.5.21.11" ana="N3I DPF" lem="πανήγυρισ">πανηγύρεσιν</w>
+<w id="Amos.5.21.12" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.5.22.1" ana="C" lem="διότι">διότι</w>
+<w id="Amos.5.22.2" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.22.3" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="Amos.5.22.4" ana="VAI AAS2P" lem="φέρω">ἐνέγκητέ</w>
+<w id="Amos.5.22.5" ana="RP DS" lem="ἐγώ">μοι</w>
+<w id="Amos.5.22.6" ana="N3M APN" lem="ὁλοκαύτωμα">ὁλοκαυτώματα</w>
+<w id="Amos.5.22.7" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.22.8" ana="N1A APF" lem="θυσία">θυσίασ</w>
+<w id="Amos.5.22.9" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.5.22.10" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.5.22.11" ana="VF FMI1S" lem="προσ-δέχομαι">προσδέξομαι</w>
+<w id="Amos.5.22.12" ana="RD APN" lem="αὐτόσ">αὐτά</w>
+<w id="Amos.5.22.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.22.14" ana="N2N GSN" lem="σωτήριον">σωτηρίου</w>
+<w id="Amos.5.22.15" ana="N1A APF" lem="ἐπιφανεία">ἐπιφανείασ</w>
+<w id="Amos.5.22.16" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.5.22.17" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.5.22.18" ana="VF FMI1S" lem="ἐπι-βλέπω">ἐπιβλέψομαι</w>
+<w id="Amos.5.23.1" ana="VA AAD2S" lem="μετα-ἵστημι">μετάστησον</w>
+<w id="Amos.5.23.2" ana="P" lem="ἀπό">ἀπ'</w>
+<w id="Amos.5.23.3" ana="RP GS" lem="ἐγώ">ἐμοῦ</w>
+<w id="Amos.5.23.4" ana="N2 ASM" lem="ἦχοσ">ἦχον</w>
+<w id="Amos.5.23.5" ana="N1 GPF" lem="ᾠδή">ᾠδῶν</w>
+<w id="Amos.5.23.6" ana="RP GS" lem="σύ">σου</w>
+<w id="Amos.5.23.7" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.23.8" ana="N2 ASM" lem="ψαλμόσ">ψαλμὸν</w>
+<w id="Amos.5.23.9" ana="N2N GPN" lem="ὄργανον">ὀργάνων</w>
+<w id="Amos.5.23.10" ana="RP GS" lem="σύ">σου</w>
+<w id="Amos.5.23.11" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.5.23.12" ana="VF FMI1S" lem="ἀκούω">ἀκούσομαι</w>
+<w id="Amos.5.24.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.24.2" ana="VS FPI3S" lem="κυλίω">κυλισθήσεται</w>
+<w id="Amos.5.24.3" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Amos.5.24.4" ana="N3 NSN" lem="ὕδωρ">ὕδωρ</w>
+<w id="Amos.5.24.5" ana="N3M NSN" lem="κρίμα">κρίμα</w>
+<w id="Amos.5.24.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.24.7" ana="N1 NSF" lem="δικαιοσύνη">δικαιοσύνη</w>
+<w id="Amos.5.24.8" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Amos.5.24.9" ana="A1C NSM" lem="χειμάρρουσ">χειμάρρουσ</w>
+<w id="Amos.5.24.10" ana="A1B NSM" lem="ἄβατοσ">ἄβατοσ</w>
+<w id="Amos.5.25.1" ana="D" lem="μή">μὴ</w>
+<w id="Amos.5.25.2" ana="N2N APN" lem="σφάγιον">σφάγια</w>
+<w id="Amos.5.25.3" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.25.4" ana="N1A APF" lem="θυσία">θυσίασ</w>
+<w id="Amos.5.25.5" ana="VAI AAI2P" lem="προσ-φέρω">προσηνέγκατέ</w>
+<w id="Amos.5.25.6" ana="RP DS" lem="ἐγώ">μοι</w>
+<w id="Amos.5.25.7" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.5.25.8" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Amos.5.25.9" ana="N2 DSF" lem="ἔρημοσ">ἐρήμῳ</w>
+<w id="Amos.5.25.10" ana="M" lem="τεσσαράκοντα">τεσσαράκοντα</w>
+<w id="Amos.5.25.11" ana="N3E APN" lem="ἔτοσ">ἔτη</w>
+<w id="Amos.5.25.12" ana="N2 NSM" lem="οἶκοσ">οἶκοσ</w>
+<w id="Amos.5.25.13" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.5.26.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.26.2" ana="VBI AAI2P" lem="ἀνα-λαμβάνω">ἀνελάβετε</w>
+<w id="Amos.5.26.3" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.5.26.4" ana="N1 ASF" lem="σκηνή">σκηνὴν</w>
+<w id="Amos.5.26.5" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.5.26.6" ana="N GS" lem="Μολοχ">Μολοχ</w>
+<w id="Amos.5.26.7" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.26.8" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.5.26.9" ana="N2N ASN" lem="ἄστρον">ἄστρον</w>
+<w id="Amos.5.26.10" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.5.26.11" ana="N2 GSM" lem="θεόσ">θεοῦ</w>
+<w id="Amos.5.26.12" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.5.26.13" ana="N GS" lem="Ραιφαν">Ραιφαν</w>
+<w id="Amos.5.26.14" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Amos.5.26.15" ana="N2 APM" lem="τύποσ">τύπουσ</w>
+<w id="Amos.5.26.16" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.5.26.17" ana="RR APM" lem="ὅσ">οὓσ</w>
+<w id="Amos.5.26.18" ana="VAI AAI2P" lem="ποιέω">ἐποιήσατε</w>
+<w id="Amos.5.26.19" ana="RD DPM" lem="ἑαυτοῦ">ἑαυτοῖσ</w>
+<w id="Amos.5.27.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.5.27.2" ana="VF2 FAI1S" lem="μετα-οἰκίζω">μετοικιῶ</w>
+<w id="Amos.5.27.3" ana="RP AP" lem="σύ">ὑμᾶσ</w>
+<w id="Amos.5.27.4" ana="D" lem="ἐπέκεινα">ἐπέκεινα</w>
+<w id="Amos.5.27.5" ana="N2 GS" lem="Δαμασκόσ">Δαμασκοῦ</w>
+<w id="Amos.5.27.6" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.5.27.7" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.5.27.8" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.27.9" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="Amos.5.27.10" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.5.27.11" ana="N3R NSM" lem="παντοκράτωρ">παντοκράτωρ</w>
+<w id="Amos.5.27.12" ana="N3M NSN" lem="ὄνομα">ὄνομα</w>
+<w id="Amos.5.27.13" ana="RD DSM" lem="αὐτόσ">αὐτῷ</w>
+<w id="Amos.6.1.1" ana="I" lem="οὐαί">οὐαὶ</w>
+<w id="Amos.6.1.2" ana="RA DPM" lem="ὁ">τοῖσ</w>
+<w id="Amos.6.1.3" ana="V4 PAPDPM" lem="ἐκ-οὐθενόω">ἐξουθενοῦσιν</w>
+<w id="Amos.6.1.4" ana="N AS" lem="Σιων">Σιων</w>
+<w id="Amos.6.1.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.1.6" ana="RA DPM" lem="ὁ">τοῖσ</w>
+<w id="Amos.6.1.7" ana="VX XAPDPM" lem="πείθω">πεποιθόσιν</w>
+<w id="Amos.6.1.8" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.6.1.9" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.6.1.10" ana="N3E ASN" lem="ὄροσ">ὄροσ</w>
+<w id="Amos.6.1.11" ana="N1A GSF" lem="Σαμαρεία">Σαμαρείασ</w>
+<w id="Amos.6.1.12" ana="VAI AAI3P" lem="ἀπο-τρυγάω">ἀπετρύγησαν</w>
+<w id="Amos.6.1.13" ana="N1 APF" lem="ἀρχή">ἀρχὰσ</w>
+<w id="Amos.6.1.14" ana="N3E GPN" lem="ἔθνοσ">ἐθνῶν</w>
+<w id="Amos.6.1.15" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.1.16" ana="VBI AAI3P" lem="εἰσ-ἔρχομαι">εἰσῆλθον</w>
+<w id="Amos.6.1.17" ana="RD NPM" lem="αὐτόσ">αὐτοί</w>
+<w id="Amos.6.1.18" ana="N2 NSM" lem="οἶκοσ">οἶκοσ</w>
+<w id="Amos.6.1.19" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.6.1.20" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.6.2.1" ana="VZ AAD2P" lem="δια-βαίνω">διάβητε</w>
+<w id="Amos.6.2.2" ana="A3 NPM" lem="πᾶσ">πάντεσ</w>
+<w id="Amos.6.2.3" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.2.4" ana="VB AAD2P" lem="ὁράω">ἴδετε</w>
+<w id="Amos.6.2.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.2.6" ana="VB AAD2P" lem="δια-ἔρχομαι">διέλθατε</w>
+<w id="Amos.6.2.7" ana="D" lem="ἐκεῖθεν">ἐκεῖθεν</w>
+<w id="Amos.6.2.8" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.6.2.9" ana="N AS" lem="Εμαθ">Εμαθ</w>
+<w id="Amos.6.2.10" ana="N AS" lem="Ραββα">Ραββα</w>
+<w id="Amos.6.2.11" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.2.12" ana="VZ AAD2P" lem="κατα-βαίνω">κατάβητε</w>
+<w id="Amos.6.2.13" ana="D" lem="ἐκεῖθεν">ἐκεῖθεν</w>
+<w id="Amos.6.2.14" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.6.2.15" ana="N AS" lem="Γεθ">Γεθ</w>
+<w id="Amos.6.2.16" ana="A1B GPM" lem="ἀλλόφυλοσ">ἀλλοφύλων</w>
+<w id="Amos.6.2.17" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="Amos.6.2.18" ana="A1 APFS" lem="κρείσσων">κρατίστασ</w>
+<w id="Amos.6.2.19" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.6.2.20" ana="A1S GPF" lem="πᾶσ">πασῶν</w>
+<w id="Amos.6.2.21" ana="RA GPF" lem="ὁ">τῶν</w>
+<w id="Amos.6.2.22" ana="N1A GPF" lem="βασιλεία">βασιλειῶν</w>
+<w id="Amos.6.2.23" ana="RD GPF" lem="οὗτοσ">τούτων</w>
+<w id="Amos.6.2.24" ana="C" lem="εἰ">εἰ</w>
+<w id="Amos.6.2.25" ana="A3C NPN" lem="πολύσ">πλέονα</w>
+<w id="Amos.6.2.26" ana="RA NPN" lem="ὁ">τὰ</w>
+<w id="Amos.6.2.27" ana="N2N NPN" lem="ὅριον">ὅρια</w>
+<w id="Amos.6.2.28" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.6.2.29" ana="V9 PAI3S" lem="εἰμί">ἐστιν</w>
+<w id="Amos.6.2.30" ana="RA GPN" lem="ὁ">τῶν</w>
+<w id="Amos.6.2.31" ana="A1A GPN" lem="ὑμέτεροσ">ὑμετέρων</w>
+<w id="Amos.6.2.32" ana="N2N GPN" lem="ὅριον">ὁρίων</w>
+<w id="Amos.6.3.1" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.6.3.2" ana="V1 PMPNPM" lem="ἔρχομαι">ἐρχόμενοι</w>
+<w id="Amos.6.3.3" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.6.3.4" ana="N1A ASF" lem="ἡμέρα">ἡμέραν</w>
+<w id="Amos.6.3.5" ana="A1 ASF" lem="κακόσ">κακήν</w>
+<w id="Amos.6.3.6" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.6.3.7" ana="V1 PAPNPM" lem="ἐγγίζω">ἐγγίζοντεσ</w>
+<w id="Amos.6.3.8" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.3.9" ana="V1 PMPNPM" lem="ἐπι-ἅπτω">ἐφαπτόμενοι</w>
+<w id="Amos.6.3.10" ana="N2N GPN" lem="σάββατον">σαββάτων</w>
+<w id="Amos.6.3.11" ana="A3H GPN" lem="ψευδήσ">ψευδῶν</w>
+<w id="Amos.6.4.1" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.6.4.2" ana="V1 PAPNPM" lem="κατα-εὕδω">καθεύδοντεσ</w>
+<w id="Amos.6.4.3" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.6.4.4" ana="N1 GPF" lem="κλίνη">κλινῶν</w>
+<w id="Amos.6.4.5" ana="A1 GPF" lem="ἐλεφαντίνοσ">ἐλεφαντίνων</w>
+<w id="Amos.6.4.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.4.7" ana="V3 PAPNPM" lem="κατα-σπαταλάω">κατασπαταλῶντεσ</w>
+<w id="Amos.6.4.8" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.6.4.9" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Amos.6.4.10" ana="N1 DPF" lem="στρωμνή">στρωμναῖσ</w>
+<w id="Amos.6.4.11" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.6.4.12" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.4.13" ana="V1 PAPNPM" lem="ἐσθίω">ἔσθοντεσ</w>
+<w id="Amos.6.4.14" ana="N2 APM" lem="ἔριφοσ">ἐρίφουσ</w>
+<w id="Amos.6.4.15" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.6.4.16" ana="N2N GPN" lem="ποίμνιον">ποιμνίων</w>
+<w id="Amos.6.4.17" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.4.18" ana="N2N APN" lem="μοσχάριον">μοσχάρια</w>
+<w id="Amos.6.4.19" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.6.4.20" ana="A1 GSN" lem="μέσοσ">μέσου</w>
+<w id="Amos.6.4.21" ana="N2 GPN" lem="βουλόλιον">βουκολίων</w>
+<w id="Amos.6.4.22" ana="A1B APN" lem="γαλαθηνόσ">γαλαθηνά</w>
+<w id="Amos.6.5.1" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.6.5.2" ana="V2 PAPNPM" lem="ἐπι-κροτέω">ἐπικροτοῦντεσ</w>
+<w id="Amos.6.5.3" ana="P" lem="πρόσ">πρὸσ</w>
+<w id="Amos.6.5.4" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.6.5.5" ana="N1 ASF" lem="φωνή">φωνὴν</w>
+<w id="Amos.6.5.6" ana="RA GPN" lem="ὁ">τῶν</w>
+<w id="Amos.6.5.7" ana="N2N GPN" lem="ὄργανον">ὀργάνων</w>
+<w id="Amos.6.5.8" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Amos.6.5.9" ana="VXI XAPASM" lem="ἵστημι">ἑστῶτα</w>
+<w id="Amos.6.5.10" ana="VAI AMI3P" lem="λογίζομαι">ἐλογίσαντο</w>
+<w id="Amos.6.5.11" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.5.12" ana="D" lem="οὐ">οὐχ</w>
+<w id="Amos.6.5.13" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Amos.6.5.14" ana="V1 PAPASM" lem="φεύγω">φεύγοντα</w>
+<w id="Amos.6.6.1" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.6.6.2" ana="V1 PAPNPM" lem="πίνω">πίνοντεσ</w>
+<w id="Amos.6.6.3" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.6.6.4" ana="VA APPASM" lem="δια-ὑλίζω">διυλισμένον</w>
+<w id="Amos.6.6.5" ana="N2 ASM" lem="οἶνοσ">οἶνον</w>
+<w id="Amos.6.6.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.6.7" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.6.6.8" ana="A1 APN" lem="πρῶτοσ">πρῶτα</w>
+<w id="Amos.6.6.9" ana="N2N APN" lem="μύρον">μύρα</w>
+<w id="Amos.6.6.10" ana="V1 PMPNPM" lem="χρίω">χριόμενοι</w>
+<w id="Amos.6.6.11" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.6.12" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.6.6.13" ana="V1I IAI3P" lem="πάσχω">ἔπασχον</w>
+<w id="Amos.6.6.14" ana="A3 ASN" lem="οὐδείσ">οὐδὲν</w>
+<w id="Amos.6.6.15" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.6.6.16" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Amos.6.6.17" ana="N1 DSF" lem="συντριβή">συντριβῇ</w>
+<w id="Amos.6.6.18" ana="N GSM" lem="Ιωσηφ">Ιωσηφ</w>
+<w id="Amos.6.7.1" ana="P" lem="διά">διὰ</w>
+<w id="Amos.6.7.2" ana="RD ASN" lem="οὗτοσ">τοῦτο</w>
+<w id="Amos.6.7.3" ana="D" lem="νῦν">νῦν</w>
+<w id="Amos.6.7.4" ana="A1B NPM" lem="αἰχμάλωτοσ">αἰχμάλωτοι</w>
+<w id="Amos.6.7.5" ana="VF FMI3P" lem="εἰμί">ἔσονται</w>
+<w id="Amos.6.7.6" ana="P" lem="ἀπό">ἀπ'</w>
+<w id="Amos.6.7.7" ana="N1 GSF" lem="ἀρχή">ἀρχῆσ</w>
+<w id="Amos.6.7.8" ana="N1M GPM" lem="δυνάστησ">δυναστῶν</w>
+<w id="Amos.6.7.9" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.7.10" ana="VC FPI3S" lem="ἐκ-αἴρω">ἐξαρθήσεται</w>
+<w id="Amos.6.7.11" ana="N2 NSM" lem="χρεμετισμόσ">χρεμετισμὸσ</w>
+<w id="Amos.6.7.12" ana="N2 GPM" lem="ἵπποσ">ἵππων</w>
+<w id="Amos.6.7.13" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Amos.6.7.14" ana="N GSM" lem="Ἐφράιμ">Εφραιμ</w>
+<w id="Amos.6.8.1" ana="C" lem="ὅτι">ὅτι</w>
+<w id="Amos.6.8.2" ana="VAI AAI3S" lem="ὄμνυμι">ὤμοσεν</w>
+<w id="Amos.6.8.3" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.6.8.4" ana="P" lem="κατά">καθ'</w>
+<w id="Amos.6.8.5" ana="RD GSM" lem="ἑαυτοῦ">ἑαυτοῦ</w>
+<w id="Amos.6.8.6" ana="C" lem="διότι">διότι</w>
+<w id="Amos.6.8.7" ana="V1 PMI1S" lem="βδελύσσω">βδελύσσομαι</w>
+<w id="Amos.6.8.8" ana="RP NS" lem="ἐγώ">ἐγὼ</w>
+<w id="Amos.6.8.9" ana="A1S ASF" lem="πᾶσ">πᾶσαν</w>
+<w id="Amos.6.8.10" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.6.8.11" ana="N3I ASF" lem="ὕβρισ">ὕβριν</w>
+<w id="Amos.6.8.12" ana="N GSM" lem="Ἰακώβ">Ιακωβ</w>
+<w id="Amos.6.8.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.8.14" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="Amos.6.8.15" ana="N1A APF" lem="χώρα">χώρασ</w>
+<w id="Amos.6.8.16" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.6.8.17" ana="VX XAI1S" lem="μισέω">μεμίσηκα</w>
+<w id="Amos.6.8.18" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.8.19" ana="VF2 FAI1S" lem="ἐκ-αἴρω">ἐξαρῶ</w>
+<w id="Amos.6.8.20" ana="N3I ASF" lem="πόλισ">πόλιν</w>
+<w id="Amos.6.8.21" ana="P" lem="σύν">σὺν</w>
+<w id="Amos.6.8.22" ana="A3 DPM" lem="πᾶσ">πᾶσιν</w>
+<w id="Amos.6.8.23" ana="RA DPM" lem="ὁ">τοῖσ</w>
+<w id="Amos.6.8.24" ana="V2 PAPDPM" lem="κατα-οἰκέω">κατοικοῦσιν</w>
+<w id="Amos.6.8.25" ana="RD ASF" lem="αὐτόσ">αὐτήν</w>
+<w id="Amos.6.9.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.9.2" ana="V9 FMI3S" lem="εἰμί">ἔσται</w>
+<w id="Amos.6.9.3" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="Amos.6.9.4" ana="VV APS3P" lem="ὑπο-λείπω">ὑπολειφθῶσιν</w>
+<w id="Amos.6.9.5" ana="M" lem="δέκα">δέκα</w>
+<w id="Amos.6.9.6" ana="N3 NPM" lem="ἀνήρ">ἄνδρεσ</w>
+<w id="Amos.6.9.7" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.6.9.8" ana="N1A DSF" lem="οἰκία">οἰκίᾳ</w>
+<w id="Amos.6.9.9" ana="A1A DSF" lem="εἷσ">μιᾷ</w>
+<w id="Amos.6.9.10" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.9.11" ana="VF2 FMI3P" lem="ἀπο-θνήσκω">ἀποθανοῦνται</w>
+<w id="Amos.6.9.12" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.9.13" ana="VV FPI3P" lem="ὑπο-λείπω">ὑπολειφθήσονται</w>
+<w id="Amos.6.9.14" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.6.9.15" ana="A1B NPM" lem="κατάλοιποσ">κατάλοιποι</w>
+<w id="Amos.6.10.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.10.2" ana="VF FMI3P" lem="λαμβάνω">λήμψονται</w>
+<w id="Amos.6.10.3" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.6.10.4" ana="A1A NPM" lem="οἰκεῖοσ">οἰκεῖοι</w>
+<w id="Amos.6.10.5" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.6.10.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.10.7" ana="V4 PMS3P" lem="παρα-βιόω">παραβιῶνται</w>
+<w id="Amos.6.10.8" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.6.10.9" ana="VA AAN" lem="ἐκ-φέρω">ἐξενέγκαι</w>
+<w id="Amos.6.10.10" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.6.10.11" ana="N2N APN" lem="ὀστέον">ὀστᾶ</w>
+<w id="Amos.6.10.12" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.6.10.13" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.6.10.14" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.6.10.15" ana="N2 GSM" lem="οἶκοσ">οἴκου</w>
+<w id="Amos.6.10.16" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.10.17" ana="VF2 FAI3S" lem="εἶπον">ἐρεῖ</w>
+<w id="Amos.6.10.18" ana="RA DPM" lem="ὁ">τοῖσ</w>
+<w id="Amos.6.10.19" ana="VXI XAPDPM" lem="προ-ἵστημι">προεστηκόσι</w>
+<w id="Amos.6.10.20" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.6.10.21" ana="N1A GSF" lem="οἰκία">οἰκίασ</w>
+<w id="Amos.6.10.22" ana="C" lem="εἰ">εἰ</w>
+<w id="Amos.6.10.23" ana="D" lem="ἔτι">ἔτι</w>
+<w id="Amos.6.10.24" ana="V1 PAI3S" lem="ὑπο-ἄρχω">ὑπάρχει</w>
+<w id="Amos.6.10.25" ana="P" lem="παρά">παρὰ</w>
+<w id="Amos.6.10.26" ana="RP DS" lem="σύ">σοί</w>
+<w id="Amos.6.10.27" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.10.28" ana="VF2 FAI3S" lem="εἶπον">ἐρεῖ</w>
+<w id="Amos.6.10.29" ana="D" lem="οὐκέτι">οὐκέτι</w>
+<w id="Amos.6.10.30" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.10.31" ana="VF2 FAI3S" lem="εἶπον">ἐρεῖ</w>
+<w id="Amos.6.10.32" ana="V3 PAD2S" lem="σιγάω">σίγα</w>
+<w id="Amos.6.10.33" ana="P" lem="ἕνεκα">ἕνεκα</w>
+<w id="Amos.6.10.34" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.6.10.35" ana="D" lem="μή">μὴ</w>
+<w id="Amos.6.10.36" ana="VA AAN" lem="ὀνομάζω">ὀνομάσαι</w>
+<w id="Amos.6.10.37" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.6.10.38" ana="N3M ASN" lem="ὄνομα">ὄνομα</w>
+<w id="Amos.6.10.39" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Amos.6.11.1" ana="C" lem="διότι">διότι</w>
+<w id="Amos.6.11.2" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="Amos.6.11.3" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.6.11.4" ana="V1 PMI3S" lem="ἐν-τέλλομαι">ἐντέλλεται</w>
+<w id="Amos.6.11.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.11.6" ana="VF FAI3S" lem="πατάσσω">πατάξει</w>
+<w id="Amos.6.11.7" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.6.11.8" ana="N2 ASM" lem="οἶκοσ">οἶκον</w>
+<w id="Amos.6.11.9" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.6.11.10" ana="A1P ASM" lem="μέγασ">μέγαν</w>
+<w id="Amos.6.11.11" ana="N3M DPN" lem="θλάσμα">θλάσμασιν</w>
+<w id="Amos.6.11.12" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.11.13" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.6.11.14" ana="N2 ASM" lem="οἶκοσ">οἶκον</w>
+<w id="Amos.6.11.15" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.6.11.16" ana="A1A ASM" lem="μικρόσ">μικρὸν</w>
+<w id="Amos.6.11.17" ana="N3M DPN" lem="ῥάγμα">ῥάγμασιν</w>
+<w id="Amos.6.12.1" ana="C" lem="εἰ">εἰ</w>
+<w id="Amos.6.12.2" ana="VF FMI3P" lem="διώκω">διώξονται</w>
+<w id="Amos.6.12.3" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.6.12.4" ana="N1A DPF" lem="πέτρα">πέτραισ</w>
+<w id="Amos.6.12.5" ana="N2 NPM" lem="ἵπποσ">ἵπποι</w>
+<w id="Amos.6.12.6" ana="C" lem="εἰ">εἰ</w>
+<w id="Amos.6.12.7" ana="VF FMI3P" lem="παρα-σιωπάω">παρασιωπήσονται</w>
+<w id="Amos.6.12.8" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.6.12.9" ana="A3U DPF" lem="θῆλυσ">θηλείαισ</w>
+<w id="Amos.6.12.10" ana="C" lem="ὅτι">ὅτι</w>
+<w id="Amos.6.12.11" ana="RP NP" lem="σύ">ὑμεῖσ</w>
+<w id="Amos.6.12.12" ana="VAI AAI2P" lem="ἐκ-στρέφω">ἐξεστρέψατε</w>
+<w id="Amos.6.12.13" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.6.12.14" ana="N2 ASM" lem="θυμόσ">θυμὸν</w>
+<w id="Amos.6.12.15" ana="N3M ASN" lem="κρίμα">κρίμα</w>
+<w id="Amos.6.12.16" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.12.17" ana="N2 ASM" lem="καρπόσ">καρπὸν</w>
+<w id="Amos.6.12.18" ana="N1 GSF" lem="δικαιοσύνη">δικαιοσύνησ</w>
+<w id="Amos.6.12.19" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.6.12.20" ana="N1A ASF" lem="πικρία">πικρίαν</w>
+<w id="Amos.6.13.1" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.6.13.2" ana="V1 PMPNPM" lem="εὐφραίνω">εὐφραινόμενοι</w>
+<w id="Amos.6.13.3" ana="P" lem="ἐπί">ἐπ'</w>
+<w id="Amos.6.13.4" ana="A3 DSM" lem="οὐδείσ">οὐδενὶ</w>
+<w id="Amos.6.13.5" ana="N2 DSM" lem="λόγοσ">λόγῳ</w>
+<w id="Amos.6.13.6" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.6.13.7" ana="V1 PAPNPM" lem="λέγω">λέγοντεσ</w>
+<w id="Amos.6.13.8" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.6.13.9" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.6.13.10" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Amos.6.13.11" ana="N3U DSF" lem="ἰσχύσ">ἰσχύι</w>
+<w id="Amos.6.13.12" ana="RP GP" lem="ἐγώ">ἡμῶν</w>
+<w id="Amos.6.13.13" ana="VBI AAI1P" lem="ἔχω">ἔσχομεν</w>
+<w id="Amos.6.13.14" ana="N3T APN" lem="κέρασ">κέρατα</w>
+<w id="Amos.6.14.1" ana="C" lem="διότι">διότι</w>
+<w id="Amos.6.14.2" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="Amos.6.14.3" ana="RP NS" lem="ἐγώ">ἐγὼ</w>
+<w id="Amos.6.14.4" ana="V1 PAI1S" lem="ἐπι-ἐγείρω">ἐπεγείρω</w>
+<w id="Amos.6.14.5" ana="P" lem="ἐπί">ἐφ'</w>
+<w id="Amos.6.14.6" ana="RP AP" lem="σύ">ὑμᾶσ</w>
+<w id="Amos.6.14.7" ana="N2 NSM" lem="οἶκοσ">οἶκοσ</w>
+<w id="Amos.6.14.8" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.6.14.9" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.6.14.10" ana="N3E ASN" lem="ἔθνοσ">ἔθνοσ</w>
+<w id="Amos.6.14.11" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.14.12" ana="VF FAI3P" lem="ἐκ-θλίβω">ἐκθλίψουσιν</w>
+<w id="Amos.6.14.13" ana="RP AP" lem="σύ">ὑμᾶσ</w>
+<w id="Amos.6.14.14" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.6.14.15" ana="D" lem="μή">μὴ</w>
+<w id="Amos.6.14.16" ana="VB AAN" lem="εἰσ-ἔρχομαι">εἰσελθεῖν</w>
+<w id="Amos.6.14.17" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.6.14.18" ana="N AS" lem="Εμαθ">Εμαθ</w>
+<w id="Amos.6.14.19" ana="C" lem="καί">καὶ</w>
+<w id="Amos.6.14.20" ana="P" lem="ἕωσ">ἕωσ</w>
+<w id="Amos.6.14.21" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.6.14.22" ana="N2 GSM" lem="χειμάρρουσ">χειμάρρου</w>
+<w id="Amos.6.14.23" ana="RA GPF" lem="ὁ">τῶν</w>
+<w id="Amos.6.14.24" ana="N1 GPF" lem="δυσμή">δυσμῶν</w>
+<w id="Amos.7.1.1" ana="D" lem="οὕτωσ">οὕτωσ</w>
+<w id="Amos.7.1.2" ana="VAI AAI3S" lem="δεικνύω">ἔδειξέν</w>
+<w id="Amos.7.1.3" ana="RP DS" lem="ἐγώ">μοι</w>
+<w id="Amos.7.1.4" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.7.1.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.1.6" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="Amos.7.1.7" ana="N1 NSF" lem="ἐπιγονή">ἐπιγονὴ</w>
+<w id="Amos.7.1.8" ana="N3D GPF" lem="ἀκρίσ">ἀκρίδων</w>
+<w id="Amos.7.1.9" ana="V1 PMPNSF" lem="ἔρχομαι">ἐρχομένη</w>
+<w id="Amos.7.1.10" ana="A1 NSF" lem="ἑωθινόσ">ἑωθινή</w>
+<w id="Amos.7.1.11" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.1.12" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="Amos.7.1.13" ana="N2 NSM" lem="βροῦχοσ">βροῦχοσ</w>
+<w id="Amos.7.1.14" ana="A3 NSM" lem="εἷσ">εἷσ</w>
+<w id="Amos.7.1.15" ana="N NSM" lem="Γωγ">Γωγ</w>
+<w id="Amos.7.1.16" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.7.1.17" ana="N3V NSM" lem="βασιλεύσ">βασιλεύσ</w>
+<w id="Amos.7.2.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.2.2" ana="V9 FMI3S" lem="εἰμί">ἔσται</w>
+<w id="Amos.7.2.3" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="Amos.7.2.4" ana="VA AAS3S" lem="συν-τελέω">συντελέσῃ</w>
+<w id="Amos.7.2.5" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.7.2.6" ana="VB AAN" lem="κατα-ἐσθίω">καταφαγεῖν</w>
+<w id="Amos.7.2.7" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.7.2.8" ana="N2 ASM" lem="χόρτοσ">χόρτον</w>
+<w id="Amos.7.2.9" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.7.2.10" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.7.2.11" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.2.12" ana="VAI AAI1S" lem="εἶπον">εἶπα</w>
+<w id="Amos.7.2.13" ana="N2 VSM" lem="κύριοσ">κύριε</w>
+<w id="Amos.7.2.14" ana="N2 VSM" lem="κύριοσ">κύριε</w>
+<w id="Amos.7.2.15" ana="A1B NSM" lem="ἵλεωσ">ἵλεωσ</w>
+<w id="Amos.7.2.16" ana="VB AMD2S" lem="γίγνομαι">γενοῦ</w>
+<w id="Amos.7.2.17" ana="RI NSM" lem="τίσ">τίσ</w>
+<w id="Amos.7.2.18" ana="VF FAI3S" lem="ἀνα-ἵστημι">ἀναστήσει</w>
+<w id="Amos.7.2.19" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.7.2.20" ana="N ASM" lem="Ἰακώβ">Ιακωβ</w>
+<w id="Amos.7.2.21" ana="C" lem="ὅτι">ὅτι</w>
+<w id="Amos.7.2.22" ana="A1 NSM" lem="ὀλιγοστόσ">ὀλιγοστόσ</w>
+<w id="Amos.7.2.23" ana="V9 PAI3S" lem="εἰμί">ἐστιν</w>
+<w id="Amos.7.3.1" ana="VA AAD2S" lem="μετα-νοέω">μετανόησον</w>
+<w id="Amos.7.3.2" ana="N2 VSM" lem="κύριοσ">κύριε</w>
+<w id="Amos.7.3.3" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.7.3.4" ana="RD DSM" lem="οὗτοσ">τούτῳ</w>
+<w id="Amos.7.3.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.3.6" ana="RD NSN" lem="οὗτοσ">τοῦτο</w>
+<w id="Amos.7.3.7" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.7.3.8" ana="V9 FMI3S" lem="εἰμί">ἔσται</w>
+<w id="Amos.7.3.9" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.7.3.10" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.7.4.1" ana="D" lem="οὕτωσ">οὕτωσ</w>
+<w id="Amos.7.4.2" ana="VAI AAI3S" lem="δεικνύω">ἔδειξέν</w>
+<w id="Amos.7.4.3" ana="RP DS" lem="ἐγώ">μοι</w>
+<w id="Amos.7.4.4" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.7.4.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.4.6" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="Amos.7.4.7" ana="VAI AAI3S" lem="καλέω">ἐκάλεσεν</w>
+<w id="Amos.7.4.8" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.7.4.9" ana="N1 ASF" lem="δίκη">δίκην</w>
+<w id="Amos.7.4.10" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.7.4.11" ana="N3 DSN" lem="πῦρ">πυρὶ</w>
+<w id="Amos.7.4.12" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.7.4.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.4.14" ana="VBI AAI3S" lem="κατα-ἐσθίω">κατέφαγε</w>
+<w id="Amos.7.4.15" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.7.4.16" ana="N2 ASF" lem="ἄβυσσοσ">ἄβυσσον</w>
+<w id="Amos.7.4.17" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.7.4.18" ana="A1 ASF" lem="πολύσ">πολλὴν</w>
+<w id="Amos.7.4.19" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.4.20" ana="VBI AAI3S" lem="κατα-ἐσθίω">κατέφαγεν</w>
+<w id="Amos.7.4.21" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.7.4.22" ana="N3D ASF" lem="μερίσ">μερίδα</w>
+<w id="Amos.7.5.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.5.2" ana="VAI AAI1S" lem="εἶπον">εἶπα</w>
+<w id="Amos.7.5.3" ana="N2 VSM" lem="κύριοσ">κύριε</w>
+<w id="Amos.7.5.4" ana="N2 VSM" lem="κύριοσ">κύριε</w>
+<w id="Amos.7.5.5" ana="VA AAD2S" lem="κοπάζω">κόπασον</w>
+<w id="Amos.7.5.6" ana="X" lem="δή">δή</w>
+<w id="Amos.7.5.7" ana="RI NSM" lem="τίσ">τίσ</w>
+<w id="Amos.7.5.8" ana="VF FAI3S" lem="ἀνα-ἵστημι">ἀναστήσει</w>
+<w id="Amos.7.5.9" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.7.5.10" ana="N ASM" lem="Ἰακώβ">Ιακωβ</w>
+<w id="Amos.7.5.11" ana="C" lem="ὅτι">ὅτι</w>
+<w id="Amos.7.5.12" ana="A1 NSM" lem="ὀλιγοστόσ">ὀλιγοστόσ</w>
+<w id="Amos.7.5.13" ana="V9 PAI3S" lem="εἰμί">ἐστιν</w>
+<w id="Amos.7.6.1" ana="VA AAD2S" lem="μετα-νοέω">μετανόησον</w>
+<w id="Amos.7.6.2" ana="N2 VSM" lem="κύριοσ">κύριε</w>
+<w id="Amos.7.6.3" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.7.6.4" ana="RD DSM" lem="οὗτοσ">τούτῳ</w>
+<w id="Amos.7.6.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.6.6" ana="RD NSN" lem="οὗτοσ">τοῦτο</w>
+<w id="Amos.7.6.7" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.7.6.8" ana="D" lem="μή">μὴ</w>
+<w id="Amos.7.6.9" ana="VB AMS3S" lem="γίγνομαι">γένηται</w>
+<w id="Amos.7.6.10" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.7.6.11" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.7.7.1" ana="D" lem="οὕτωσ">οὕτωσ</w>
+<w id="Amos.7.7.2" ana="VAI AAI3S" lem="δεικνύω">ἔδειξέν</w>
+<w id="Amos.7.7.3" ana="RP DS" lem="ἐγώ">μοι</w>
+<w id="Amos.7.7.4" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.7.7.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.7.6" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="Amos.7.7.7" ana="N3 NSM" lem="ἀνήρ">ἀνὴρ</w>
+<w id="Amos.7.7.8" ana="VXI XAPNSM" lem="ἵστημι">ἑστηκὼσ</w>
+<w id="Amos.7.7.9" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.7.7.10" ana="N3E GSN" lem="τεῖχοσ">τείχουσ</w>
+<w id="Amos.7.7.11" ana="A1 GSN" lem="ἀδαμάντινοσ">ἀδαμαντίνου</w>
+<w id="Amos.7.7.12" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.7.13" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.7.7.14" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Amos.7.7.15" ana="N3 DSF" lem="χείρ">χειρὶ</w>
+<w id="Amos.7.7.16" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.7.7.17" ana="N3 NSM" lem="ἀδάμασ">ἀδάμασ</w>
+<w id="Amos.7.8.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.8.2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Amos.7.8.3" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.7.8.4" ana="P" lem="πρόσ">πρόσ</w>
+<w id="Amos.7.8.5" ana="RP AS" lem="ἐγώ">με</w>
+<w id="Amos.7.8.6" ana="RI ASN" lem="τίσ">τί</w>
+<w id="Amos.7.8.7" ana="RP NS" lem="σύ">σὺ</w>
+<w id="Amos.7.8.8" ana="V3 PAI2S" lem="ὁράω">ὁρᾷσ</w>
+<w id="Amos.7.8.9" ana="N VSM" lem="Αμωσ">Αμωσ</w>
+<w id="Amos.7.8.10" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.8.11" ana="VAI AAI1S" lem="εἶπον">εἶπα</w>
+<w id="Amos.7.8.12" ana="N3 ASM" lem="ἀδάμασ">ἀδάμαντα</w>
+<w id="Amos.7.8.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.8.14" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Amos.7.8.15" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.7.8.16" ana="P" lem="πρόσ">πρόσ</w>
+<w id="Amos.7.8.17" ana="RP AS" lem="ἐγώ">με</w>
+<w id="Amos.7.8.18" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="Amos.7.8.19" ana="RP NS" lem="ἐγώ">ἐγὼ</w>
+<w id="Amos.7.8.20" ana="V1 PAI1S" lem="ἐν-τάσσω">ἐντάσσω</w>
+<w id="Amos.7.8.21" ana="N3 ASM" lem="ἀδάμασ">ἀδάμαντα</w>
+<w id="Amos.7.8.22" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.7.8.23" ana="A1 DSN" lem="μέσοσ">μέσῳ</w>
+<w id="Amos.7.8.24" ana="N2 GSM" lem="λαόσ">λαοῦ</w>
+<w id="Amos.7.8.25" ana="RP GS" lem="ἐγώ">μου</w>
+<w id="Amos.7.8.26" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.7.8.27" ana="D" lem="οὐκέτι">οὐκέτι</w>
+<w id="Amos.7.8.28" ana="D" lem="μή">μὴ</w>
+<w id="Amos.7.8.29" ana="VE AAS1S" lem="προσ-τίθημι">προσθῶ</w>
+<w id="Amos.7.8.30" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.7.8.31" ana="VB AAN" lem="παρα-ἔρχομαι">παρελθεῖν</w>
+<w id="Amos.7.8.32" ana="RD ASM" lem="αὐτόσ">αὐτόν</w>
+<w id="Amos.7.9.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.9.2" ana="VS FPI3P" lem="ἀπο  ἀνα-ἵζω">ἀφανισθήσονται</w>
+<w id="Amos.7.9.3" ana="N2 NPM" lem="βωμόσ">βωμοὶ</w>
+<w id="Amos.7.9.4" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.7.9.5" ana="N3T GSM" lem="γέλωσ">γέλωτοσ</w>
+<w id="Amos.7.9.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.9.7" ana="RA NPF" lem="ὁ">αἱ</w>
+<w id="Amos.7.9.8" ana="N1 NPF" lem="τελετή">τελεταὶ</w>
+<w id="Amos.7.9.9" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.7.9.10" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.7.9.11" ana="VC FPI3P" lem="ἐκ-ἐρημόω">ἐξερημωθήσονται</w>
+<w id="Amos.7.9.12" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.9.13" ana="VF FMI1S" lem="ἀνα-ἵστημι">ἀναστήσομαι</w>
+<w id="Amos.7.9.14" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.7.9.15" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.7.9.16" ana="N2 ASM" lem="οἶκοσ">οἶκον</w>
+<w id="Amos.7.9.17" ana="N GSM" lem="Ιεροβοαμ">Ιεροβοαμ</w>
+<w id="Amos.7.9.18" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.7.9.19" ana="N1A DSF" lem="ῥομφαία">ῥομφαίᾳ</w>
+<w id="Amos.7.10.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.10.2" ana="VAI AAI3S" lem="ἐκ   ἀπο-στέλλω">ἐξαπέστειλεν</w>
+<w id="Amos.7.10.3" ana="N1T NSM" lem="Αμασιασ">Αμασιασ</w>
+<w id="Amos.7.10.4" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.7.10.5" ana="N3V NSM" lem="ἱερεύσ">ἱερεὺσ</w>
+<w id="Amos.7.10.6" ana="N GSF" lem="Βαιθηλ">Βαιθηλ</w>
+<w id="Amos.7.10.7" ana="P" lem="πρόσ">πρὸσ</w>
+<w id="Amos.7.10.8" ana="N ASM" lem="Ιεροβοαμ">Ιεροβοαμ</w>
+<w id="Amos.7.10.9" ana="N3V ASM" lem="βασιλεύσ">βασιλέα</w>
+<w id="Amos.7.10.10" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.7.10.11" ana="V1 PAPNSM" lem="λέγω">λέγων</w>
+<w id="Amos.7.10.12" ana="N1 APF" lem="συστροφή">συστροφὰσ</w>
+<w id="Amos.7.10.13" ana="V2 PMI3S" lem="ποιέω">ποιεῖται</w>
+<w id="Amos.7.10.14" ana="P" lem="κατά">κατὰ</w>
+<w id="Amos.7.10.15" ana="RP GS" lem="σύ">σοῦ</w>
+<w id="Amos.7.10.16" ana="N NSM" lem="Αμωσ">Αμωσ</w>
+<w id="Amos.7.10.17" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.7.10.18" ana="A1 DSN" lem="μέσοσ">μέσῳ</w>
+<w id="Amos.7.10.19" ana="N2 GSM" lem="οἶκοσ">οἴκου</w>
+<w id="Amos.7.10.20" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.7.10.21" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.7.10.22" ana="D" lem="μή">μὴ</w>
+<w id="Amos.7.10.23" ana="V6 PMS3S" lem="δύναμαι">δύνηται</w>
+<w id="Amos.7.10.24" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Amos.7.10.25" ana="N1 NSF" lem="γῆ">γῆ</w>
+<w id="Amos.7.10.26" ana="VB AAN" lem="ὑπο-φέρω">ὑπενεγκεῖν</w>
+<w id="Amos.7.10.27" ana="A3 APM" lem="ἅπασ">ἅπαντασ</w>
+<w id="Amos.7.10.28" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Amos.7.10.29" ana="N2 APM" lem="λόγοσ">λόγουσ</w>
+<w id="Amos.7.10.30" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.7.11.1" ana="C" lem="διότι">διότι</w>
+<w id="Amos.7.11.2" ana="RD APN" lem="ὅδε">τάδε</w>
+<w id="Amos.7.11.3" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.7.11.4" ana="N NSM" lem="Αμωσ">Αμωσ</w>
+<w id="Amos.7.11.5" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.7.11.6" ana="N1A DSF" lem="ῥομφαία">ῥομφαίᾳ</w>
+<w id="Amos.7.11.7" ana="VF FAI3S" lem="τελευτάω">τελευτήσει</w>
+<w id="Amos.7.11.8" ana="N NSM" lem="Ιεροβοαμ">Ιεροβοαμ</w>
+<w id="Amos.7.11.9" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.7.11.10" ana="X" lem="δέ">δὲ</w>
+<w id="Amos.7.11.11" ana="N NSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.7.11.12" ana="A1B NSM" lem="αἰχμάλωτοσ">αἰχμάλωτοσ</w>
+<w id="Amos.7.11.13" ana="VQ FPI3S" lem="ἄγω">ἀχθήσεται</w>
+<w id="Amos.7.11.14" ana="P" lem="ἀπό">ἀπὸ</w>
+<w id="Amos.7.11.15" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.7.11.16" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.7.11.17" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.7.12.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.12.2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Amos.7.12.3" ana="N1T NSM" lem="Αμασιασ">Αμασιασ</w>
+<w id="Amos.7.12.4" ana="P" lem="πρόσ">πρὸσ</w>
+<w id="Amos.7.12.5" ana="N ASM" lem="Αμωσ">Αμωσ</w>
+<w id="Amos.7.12.6" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.7.12.7" ana="V3 PAPNSM" lem="ὁράω">ὁρῶν</w>
+<w id="Amos.7.12.8" ana="V1 PAD2S" lem="βαδίζω">βάδιζε</w>
+<w id="Amos.7.12.9" ana="VA AAD2S" lem="ἐκ-χωρέω">ἐκχώρησον</w>
+<w id="Amos.7.12.10" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.7.12.11" ana="N1 ASF" lem="γῆ">γῆν</w>
+<w id="Amos.7.12.12" ana="N GSM" lem="Ιουδα">Ιουδα</w>
+<w id="Amos.7.12.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.12.14" ana="D" lem="ἐκεῖ">ἐκεῖ</w>
+<w id="Amos.7.12.15" ana="V4 PAD2S" lem="κατα-βιόω">καταβίου</w>
+<w id="Amos.7.12.16" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.12.17" ana="D" lem="ἐκεῖ">ἐκεῖ</w>
+<w id="Amos.7.12.18" ana="VF FAI2S" lem="προφητεύω">προφητεύσεισ</w>
+<w id="Amos.7.13.1" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.7.13.2" ana="X" lem="δέ">δὲ</w>
+<w id="Amos.7.13.3" ana="N ASF" lem="Βαιθηλ">Βαιθηλ</w>
+<w id="Amos.7.13.4" ana="D" lem="οὐκέτι">οὐκέτι</w>
+<w id="Amos.7.13.5" ana="D" lem="μή">μὴ</w>
+<w id="Amos.7.13.6" ana="VE AAS2S" lem="προσ-τίθημι">προσθῇσ</w>
+<w id="Amos.7.13.7" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.7.13.8" ana="VA AAN" lem="προφητεύω">προφητεῦσαι</w>
+<w id="Amos.7.13.9" ana="C" lem="ὅτι">ὅτι</w>
+<w id="Amos.7.13.10" ana="N3M NSN" lem="ἁγίασμα">ἁγίασμα</w>
+<w id="Amos.7.13.11" ana="N3V GSM" lem="βασιλεύσ">βασιλέωσ</w>
+<w id="Amos.7.13.12" ana="V9 PAI3S" lem="εἰμί">ἐστὶν</w>
+<w id="Amos.7.13.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.13.14" ana="N2 NSM" lem="οἶκοσ">οἶκοσ</w>
+<w id="Amos.7.13.15" ana="N1A GSF" lem="βασιλεία">βασιλείασ</w>
+<w id="Amos.7.13.16" ana="V9 PAI3S" lem="εἰμί">ἐστίν</w>
+<w id="Amos.7.14.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.14.2" ana="VCI API3S" lem="ἀπο-κρίνω">ἀπεκρίθη</w>
+<w id="Amos.7.14.3" ana="N NSM" lem="Αμωσ">Αμωσ</w>
+<w id="Amos.7.14.4" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.14.5" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Amos.7.14.6" ana="P" lem="πρόσ">πρὸσ</w>
+<w id="Amos.7.14.7" ana="N1T ASM" lem="Αμασιαν">Αμασιαν</w>
+<w id="Amos.7.14.8" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.7.14.9" ana="V9I IAI1S" lem="εἰμί">ἤμην</w>
+<w id="Amos.7.14.10" ana="N1M NSM" lem="προφήτησ">προφήτησ</w>
+<w id="Amos.7.14.11" ana="RP NS" lem="ἐγώ">ἐγὼ</w>
+<w id="Amos.7.14.12" ana="C" lem="οὐδέ">οὐδὲ</w>
+<w id="Amos.7.14.13" ana="N2 NSM" lem="υἱόσ">υἱὸσ</w>
+<w id="Amos.7.14.14" ana="N1M GSM" lem="προφήτησ">προφήτου</w>
+<w id="Amos.7.14.15" ana="C" lem="ἀλλά">ἀλλ'</w>
+<w id="Amos.7.14.16" ana="C" lem="ἤ">ἢ</w>
+<w id="Amos.7.14.17" ana="N2 NSM" lem="αἰπόλοσ">αἰπόλοσ</w>
+<w id="Amos.7.14.18" ana="V9I IAI1S" lem="εἰμί">ἤμην</w>
+<w id="Amos.7.14.19" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.14.20" ana="V1 PAPNSM" lem="κνίζω">κνίζων</w>
+<w id="Amos.7.14.21" ana="N2N APN" lem="συκάμινον">συκάμινα</w>
+<w id="Amos.7.15.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.15.2" ana="VBI AAI3S" lem="ἀνα-λαμβάνω">ἀνέλαβέν</w>
+<w id="Amos.7.15.3" ana="RP AS" lem="ἐγώ">με</w>
+<w id="Amos.7.15.4" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.7.15.5" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.7.15.6" ana="RA GPN" lem="ὁ">τῶν</w>
+<w id="Amos.7.15.7" ana="N2N GPN" lem="πρόβατον">προβάτων</w>
+<w id="Amos.7.15.8" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.15.9" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Amos.7.15.10" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.7.15.11" ana="P" lem="πρόσ">πρόσ</w>
+<w id="Amos.7.15.12" ana="RP AS" lem="ἐγώ">με</w>
+<w id="Amos.7.15.13" ana="V1 PAD2S" lem="βαδίζω">βάδιζε</w>
+<w id="Amos.7.15.14" ana="VA AAD2S" lem="προφητεύω">προφήτευσον</w>
+<w id="Amos.7.15.15" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.7.15.16" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.7.15.17" ana="N2 ASM" lem="λαόσ">λαόν</w>
+<w id="Amos.7.15.18" ana="RP GS" lem="ἐγώ">μου</w>
+<w id="Amos.7.15.19" ana="N ASM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.7.16.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.16.2" ana="D" lem="νῦν">νῦν</w>
+<w id="Amos.7.16.3" ana="V1 PAD2S" lem="ἀκούω">ἄκουε</w>
+<w id="Amos.7.16.4" ana="N2 ASM" lem="λόγοσ">λόγον</w>
+<w id="Amos.7.16.5" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Amos.7.16.6" ana="RP NS" lem="σύ">σὺ</w>
+<w id="Amos.7.16.7" ana="V1 PAI2S" lem="λέγω">λέγεισ</w>
+<w id="Amos.7.16.8" ana="D" lem="μή">μὴ</w>
+<w id="Amos.7.16.9" ana="V1 PAD2S" lem="προφητεύω">προφήτευε</w>
+<w id="Amos.7.16.10" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.7.16.11" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.7.16.12" ana="N ASM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.7.16.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.16.14" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.7.16.15" ana="D" lem="μή">μὴ</w>
+<w id="Amos.7.16.16" ana="VA AAS2S" lem="ὀχλαγωγέω">ὀχλαγωγήσῃσ</w>
+<w id="Amos.7.16.17" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.7.16.18" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.7.16.19" ana="N2 ASM" lem="οἶκοσ">οἶκον</w>
+<w id="Amos.7.16.20" ana="N GSM" lem="Ἰακώβ">Ιακωβ</w>
+<w id="Amos.7.17.1" ana="P" lem="διά">διὰ</w>
+<w id="Amos.7.17.2" ana="RD ASN" lem="οὗτοσ">τοῦτο</w>
+<w id="Amos.7.17.3" ana="RD APN" lem="ὅδε">τάδε</w>
+<w id="Amos.7.17.4" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.7.17.5" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.7.17.6" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Amos.7.17.7" ana="N3K NSF" lem="γυνή">γυνή</w>
+<w id="Amos.7.17.8" ana="RP GS" lem="σύ">σου</w>
+<w id="Amos.7.17.9" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.7.17.10" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Amos.7.17.11" ana="N3I DSF" lem="πόλισ">πόλει</w>
+<w id="Amos.7.17.12" ana="VF FAI3S" lem="πορνεύω">πορνεύσει</w>
+<w id="Amos.7.17.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.17.14" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.7.17.15" ana="N2 NPM" lem="υἱόσ">υἱοί</w>
+<w id="Amos.7.17.16" ana="RP GS" lem="σύ">σου</w>
+<w id="Amos.7.17.17" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.17.18" ana="RA NPF" lem="ὁ">αἱ</w>
+<w id="Amos.7.17.19" ana="N3 NPF" lem="θυγάτηρ">θυγατέρεσ</w>
+<w id="Amos.7.17.20" ana="RP GS" lem="σύ">σου</w>
+<w id="Amos.7.17.21" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.7.17.22" ana="N1A DSF" lem="ῥομφαία">ῥομφαίᾳ</w>
+<w id="Amos.7.17.23" ana="VF2 FMI3P" lem="πίπτω">πεσοῦνται</w>
+<w id="Amos.7.17.24" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.17.25" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Amos.7.17.26" ana="N1 NSF" lem="γῆ">γῆ</w>
+<w id="Amos.7.17.27" ana="RP GS" lem="σύ">σου</w>
+<w id="Amos.7.17.28" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.7.17.29" ana="N2N DSN" lem="σχοινίον">σχοινίῳ</w>
+<w id="Amos.7.17.30" ana="VC FPI3S" lem="κατα-μετρέω">καταμετρηθήσεται</w>
+<w id="Amos.7.17.31" ana="C" lem="καί">καὶ</w>
+<w id="Amos.7.17.32" ana="RP NS" lem="σύ">σὺ</w>
+<w id="Amos.7.17.33" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.7.17.34" ana="N1 DSF" lem="γῆ">γῇ</w>
+<w id="Amos.7.17.35" ana="A1B DSF" lem="ἀκάθαρτοσ">ἀκαθάρτῳ</w>
+<w id="Amos.7.17.36" ana="VF FAI2S" lem="τελευτάω">τελευτήσεισ</w>
+<w id="Amos.7.17.37" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.7.17.38" ana="X" lem="δέ">δὲ</w>
+<w id="Amos.7.17.39" ana="N NSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.7.17.40" ana="A1B NSM" lem="αἰχμάλωτοσ">αἰχμάλωτοσ</w>
+<w id="Amos.7.17.41" ana="VQ FPI3S" lem="ἄγω">ἀχθήσεται</w>
+<w id="Amos.7.17.42" ana="P" lem="ἀπό">ἀπὸ</w>
+<w id="Amos.7.17.43" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.7.17.44" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.7.17.45" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.8.1.1" ana="D" lem="οὕτωσ">οὕτωσ</w>
+<w id="Amos.8.1.2" ana="VAI AAI3S" lem="δεικνύω">ἔδειξέν</w>
+<w id="Amos.8.1.3" ana="RP DS" lem="ἐγώ">μοι</w>
+<w id="Amos.8.1.4" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.8.1.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.1.6" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="Amos.8.1.7" ana="N3E NSN" lem="ἄγγοσ">ἄγγοσ</w>
+<w id="Amos.8.1.8" ana="N1M GSM" lem="ἰξευτήσ">ἰξευτοῦ</w>
+<w id="Amos.8.2.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.2.2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Amos.8.2.3" ana="RI ASN" lem="τίσ">τί</w>
+<w id="Amos.8.2.4" ana="RP NS" lem="σύ">σὺ</w>
+<w id="Amos.8.2.5" ana="V1 PAI2S" lem="βλέπω">βλέπεισ</w>
+<w id="Amos.8.2.6" ana="N VSM" lem="Αμωσ">Αμωσ</w>
+<w id="Amos.8.2.7" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.2.8" ana="VAI AAI1S" lem="εἶπον">εἶπα</w>
+<w id="Amos.8.2.9" ana="N3E ASN" lem="ἄγγοσ">ἄγγοσ</w>
+<w id="Amos.8.2.10" ana="N1M GSM" lem="ἰξευτήσ">ἰξευτοῦ</w>
+<w id="Amos.8.2.11" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.2.12" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Amos.8.2.13" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.8.2.14" ana="P" lem="πρόσ">πρόσ</w>
+<w id="Amos.8.2.15" ana="RP AS" lem="ἐγώ">με</w>
+<w id="Amos.8.2.16" ana="V1 PAI3S" lem="ἥκω">ἥκει</w>
+<w id="Amos.8.2.17" ana="RA NSN" lem="ὁ">τὸ</w>
+<w id="Amos.8.2.18" ana="N3T NSN" lem="πέρασ">πέρασ</w>
+<w id="Amos.8.2.19" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.8.2.20" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.8.2.21" ana="N2 ASM" lem="λαόσ">λαόν</w>
+<w id="Amos.8.2.22" ana="RP GS" lem="ἐγώ">μου</w>
+<w id="Amos.8.2.23" ana="N ASM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.8.2.24" ana="D" lem="οὐκέτι">οὐκέτι</w>
+<w id="Amos.8.2.25" ana="D" lem="μή">μὴ</w>
+<w id="Amos.8.2.26" ana="VE AAS1S" lem="προσ-τίθημι">προσθῶ</w>
+<w id="Amos.8.2.27" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.8.2.28" ana="VB AAN" lem="παρα-ἔρχομαι">παρελθεῖν</w>
+<w id="Amos.8.2.29" ana="RD ASM" lem="αὐτόσ">αὐτόν</w>
+<w id="Amos.8.3.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.3.2" ana="VF FAI3S" lem="ὀλολύζω">ὀλολύξει</w>
+<w id="Amos.8.3.3" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.8.3.4" ana="N3M APN" lem="φάτνωμα">φατνώματα</w>
+<w id="Amos.8.3.5" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.8.3.6" ana="N2 GSM" lem="ναόσ">ναοῦ</w>
+<w id="Amos.8.3.7" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.8.3.8" ana="RD DSF" lem="ἐκεῖνοσ">ἐκείνῃ</w>
+<w id="Amos.8.3.9" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Amos.8.3.10" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Amos.8.3.11" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.8.3.12" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.8.3.13" ana="A1P NSM" lem="πολύσ">πολὺσ</w>
+<w id="Amos.8.3.14" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.8.3.15" ana="VX XAPNSM" lem="πίπτω">πεπτωκὼσ</w>
+<w id="Amos.8.3.16" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.8.3.17" ana="A3 DSM" lem="πᾶσ">παντὶ</w>
+<w id="Amos.8.3.18" ana="N2 DSM" lem="τόποσ">τόπῳ</w>
+<w id="Amos.8.3.19" ana="VA AAS1S" lem="ἐπι-ῥίπτω">ἐπιρρίψω</w>
+<w id="Amos.8.3.20" ana="N1 ASF" lem="σιωπή">σιωπήν</w>
+<w id="Amos.8.4.1" ana="VA AAD2P" lem="ἀκούω">ἀκούσατε</w>
+<w id="Amos.8.4.2" ana="X" lem="δή">δὴ</w>
+<w id="Amos.8.4.3" ana="RD APN" lem="οὗτοσ">ταῦτα</w>
+<w id="Amos.8.4.4" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.8.4.5" ana="V1 PAPNPM" lem="ἐκ-τρίβω">ἐκτρίβοντεσ</w>
+<w id="Amos.8.4.6" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.8.4.7" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.8.4.8" ana="D" lem="πρωΐ">πρωὶ</w>
+<w id="Amos.8.4.9" ana="N3T ASM" lem="πένησ">πένητα</w>
+<w id="Amos.8.4.10" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.4.11" ana="V1 PAPNPM" lem="κατα-δυναστεύω">καταδυναστεύοντεσ</w>
+<w id="Amos.8.4.12" ana="N2 APM" lem="πτωχόσ">πτωχοὺσ</w>
+<w id="Amos.8.4.13" ana="P" lem="ἀπό">ἀπὸ</w>
+<w id="Amos.8.4.14" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.8.4.15" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.8.5.1" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.8.5.2" ana="V1 PAPNPM" lem="λέγω">λέγοντεσ</w>
+<w id="Amos.8.5.3" ana="D" lem="πότε">πότε</w>
+<w id="Amos.8.5.4" ana="VF FMI3S" lem="δια-ἔρχομαι">διελεύσεται</w>
+<w id="Amos.8.5.5" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.8.5.6" ana="N3 NSM" lem="μήν">μὴν</w>
+<w id="Amos.8.5.7" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.5.8" ana="VF FAI1P" lem="ἐμπολάω">ἐμπολήσομεν</w>
+<w id="Amos.8.5.9" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.5.10" ana="RA NPN" lem="ὁ">τὰ</w>
+<w id="Amos.8.5.11" ana="N2N NPN" lem="σάββατον">σάββατα</w>
+<w id="Amos.8.5.12" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.5.13" ana="VF FAI1P" lem="ἀνα-οἴγω">ἀνοίξομεν</w>
+<w id="Amos.8.5.14" ana="N2 APM" lem="θησαυρόσ">θησαυροὺσ</w>
+<w id="Amos.8.5.15" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.8.5.16" ana="VA AAN" lem="ποιέω">ποιῆσαι</w>
+<w id="Amos.8.5.17" ana="A1A ASN" lem="μικρόσ">μικρὸν</w>
+<w id="Amos.8.5.18" ana="N2N ASN" lem="μέτρον">μέτρον</w>
+<w id="Amos.8.5.19" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.5.20" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.8.5.21" ana="VA AAN" lem="μεγαλύνω">μεγαλῦναι</w>
+<w id="Amos.8.5.22" ana="N2N APN" lem="στάθμιον">στάθμια</w>
+<w id="Amos.8.5.23" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.5.24" ana="VA AAN" lem="ποιέω">ποιῆσαι</w>
+<w id="Amos.8.5.25" ana="N2 ASM" lem="ζυγόσ">ζυγὸν</w>
+<w id="Amos.8.5.26" ana="A1B ASM" lem="ἄδικοσ">ἄδικον</w>
+<w id="Amos.8.6.1" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.8.6.2" ana="V3 PMN" lem="κτάομαι">κτᾶσθαι</w>
+<w id="Amos.8.6.3" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.8.6.4" ana="N2N DSN" lem="ἀργύριον">ἀργυρίῳ</w>
+<w id="Amos.8.6.5" ana="N2 APM" lem="πτωχόσ">πτωχοὺσ</w>
+<w id="Amos.8.6.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.6.7" ana="A1 ASM" lem="ταπεινόσ">ταπεινὸν</w>
+<w id="Amos.8.6.8" ana="P" lem="ἀντί">ἀντὶ</w>
+<w id="Amos.8.6.9" ana="N3M GPN" lem="ὑπόδημα">ὑποδημάτων</w>
+<w id="Amos.8.6.10" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.6.11" ana="P" lem="ἀπό">ἀπὸ</w>
+<w id="Amos.8.6.12" ana="A3 GSN" lem="πᾶσ">παντὸσ</w>
+<w id="Amos.8.6.13" ana="N3M GSN" lem="γένημα">γενήματοσ</w>
+<w id="Amos.8.6.14" ana="VF FMI1P" lem="ἐν-πορεύομαι">ἐμπορευσόμεθα</w>
+<w id="Amos.8.7.1" ana="V5 PAI3S" lem="ὄμνυμι">ὀμνύει</w>
+<w id="Amos.8.7.2" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.8.7.3" ana="P" lem="κατά">καθ'</w>
+<w id="Amos.8.7.4" ana="N1A GSF" lem="ὑπερηφανία">ὑπερηφανίασ</w>
+<w id="Amos.8.7.5" ana="N GSM" lem="Ἰακώβ">Ιακωβ</w>
+<w id="Amos.8.7.6" ana="C" lem="εἰ">εἰ</w>
+<w id="Amos.8.7.7" ana="VC FPI3S" lem="ἐπι-λανθάνω">ἐπιλησθήσεται</w>
+<w id="Amos.8.7.8" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.8.7.9" ana="N3E ASN" lem="νεῖκοσ">νεῖκοσ</w>
+<w id="Amos.8.7.10" ana="A3 APN" lem="πᾶσ">πάντα</w>
+<w id="Amos.8.7.11" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.8.7.12" ana="N2N APN" lem="ἔργον">ἔργα</w>
+<w id="Amos.8.7.13" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.8.8.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.8.2" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.8.8.3" ana="RD DPM" lem="οὗτοσ">τούτοισ</w>
+<w id="Amos.8.8.4" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.8.8.5" ana="VQ FPI3S" lem="ταράσσω">ταραχθήσεται</w>
+<w id="Amos.8.8.6" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Amos.8.8.7" ana="N1 NSF" lem="γῆ">γῆ</w>
+<w id="Amos.8.8.8" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.8.9" ana="VF FAI3S" lem="πενθέω">πενθήσει</w>
+<w id="Amos.8.8.10" ana="A3 NSM" lem="πᾶσ">πᾶσ</w>
+<w id="Amos.8.8.11" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.8.8.12" ana="V2 PAPNSM" lem="κατα-οἰκέω">κατοικῶν</w>
+<w id="Amos.8.8.13" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.8.8.14" ana="RD DSF" lem="αὐτόσ">αὐτῇ</w>
+<w id="Amos.8.8.15" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.8.16" ana="VF FMI3S" lem="ἀνα-βαίνω">ἀναβήσεται</w>
+<w id="Amos.8.8.17" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Amos.8.8.18" ana="N2 NSM" lem="ποταμόσ">ποταμὸσ</w>
+<w id="Amos.8.8.19" ana="N1A NSF" lem="συντέλεια">συντέλεια</w>
+<w id="Amos.8.8.20" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.8.21" ana="VF FMI3S" lem="κατα-βαίνω">καταβήσεται</w>
+<w id="Amos.8.8.22" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Amos.8.8.23" ana="N2 NSM" lem="ποταμόσ">ποταμὸσ</w>
+<w id="Amos.8.8.24" ana="N2 GSF" lem="Αἴγυπτοσ">Αἰγύπτου</w>
+<w id="Amos.8.9.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.9.2" ana="V9 FMI3S" lem="εἰμί">ἔσται</w>
+<w id="Amos.8.9.3" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.8.9.4" ana="RD DSF" lem="ἐκεῖνοσ">ἐκείνῃ</w>
+<w id="Amos.8.9.5" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Amos.8.9.6" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Amos.8.9.7" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.8.9.8" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.8.9.9" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.8.9.10" ana="N2 NSM" lem="θεόσ">θεόσ</w>
+<w id="Amos.8.9.11" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.9.12" ana="VF FMI3S" lem="δύω">δύσεται</w>
+<w id="Amos.8.9.13" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.8.9.14" ana="N2 NSM" lem="ἥλιοσ">ἥλιοσ</w>
+<w id="Amos.8.9.15" ana="N1A GSF" lem="μεσημβρία">μεσημβρίασ</w>
+<w id="Amos.8.9.16" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.9.17" ana="VF FAI3S" lem="συν-σκοτάζω">συσκοτάσει</w>
+<w id="Amos.8.9.18" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.8.9.19" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.8.9.20" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.8.9.21" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.8.9.22" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Amos.8.9.23" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.8.9.24" ana="N3T ASN" lem="φῶσ">φῶσ</w>
+<w id="Amos.8.10.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.10.2" ana="VF FAI1S" lem="μετα-στρέφω">μεταστρέψω</w>
+<w id="Amos.8.10.3" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="Amos.8.10.4" ana="N1 APF" lem="ἑορτή">ἑορτὰσ</w>
+<w id="Amos.8.10.5" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.8.10.6" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.8.10.7" ana="N3E ASN" lem="πένθοσ">πένθοσ</w>
+<w id="Amos.8.10.8" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.10.9" ana="A1S APF" lem="πᾶσ">πάσασ</w>
+<w id="Amos.8.10.10" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="Amos.8.10.11" ana="N1 APF" lem="ᾠδή">ᾠδὰσ</w>
+<w id="Amos.8.10.12" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Amos.8.10.13" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.8.10.14" ana="N2 ASM" lem="θρῆνοσ">θρῆνον</w>
+<w id="Amos.8.10.15" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.10.16" ana="VF2 FAI1S" lem="ἀνα-βιβάζω">ἀναβιβῶ</w>
+<w id="Amos.8.10.17" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.8.10.18" ana="A1S ASF" lem="πᾶσ">πᾶσαν</w>
+<w id="Amos.8.10.19" ana="N3U ASF" lem="ὀσφύσ">ὀσφὺν</w>
+<w id="Amos.8.10.20" ana="N2 ASM" lem="σάκκοσ">σάκκον</w>
+<w id="Amos.8.10.21" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.10.22" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.8.10.23" ana="A1S ASF" lem="πᾶσ">πᾶσαν</w>
+<w id="Amos.8.10.24" ana="N1 ASF" lem="κεφαλή">κεφαλὴν</w>
+<w id="Amos.8.10.25" ana="N3M ASN" lem="φαλάκρωμα">φαλάκρωμα</w>
+<w id="Amos.8.10.26" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.10.27" ana="VF FMI1S" lem="τίθημι">θήσομαι</w>
+<w id="Amos.8.10.28" ana="RD ASM" lem="αὐτόσ">αὐτὸν</w>
+<w id="Amos.8.10.29" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Amos.8.10.30" ana="N3E ASN" lem="πένθοσ">πένθοσ</w>
+<w id="Amos.8.10.31" ana="A1 GSM" lem="ἀγαπητόσ">ἀγαπητοῦ</w>
+<w id="Amos.8.10.32" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.10.33" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Amos.8.10.34" ana="P" lem="μετά">μετ'</w>
+<w id="Amos.8.10.35" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.8.10.36" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Amos.8.10.37" ana="N1A ASF" lem="ἡμέρα">ἡμέραν</w>
+<w id="Amos.8.10.38" ana="N1 GSF" lem="ὀδύνη">ὀδύνησ</w>
+<w id="Amos.8.11.1" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="Amos.8.11.2" ana="N1A NPF" lem="ἡμέρα">ἡμέραι</w>
+<w id="Amos.8.11.3" ana="V1 PMI3P" lem="ἔρχομαι">ἔρχονται</w>
+<w id="Amos.8.11.4" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.8.11.5" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.8.11.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.11.7" ana="VF2 FAI1S" lem="ἐκ   ἀπο-στέλλω">ἐξαποστελῶ</w>
+<w id="Amos.8.11.8" ana="N2 ASM" lem="λιμόσ">λιμὸν</w>
+<w id="Amos.8.11.9" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.8.11.10" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.8.11.11" ana="N1 ASF" lem="γῆ">γῆν</w>
+<w id="Amos.8.11.12" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.8.11.13" ana="N2 ASM" lem="λιμόσ">λιμὸν</w>
+<w id="Amos.8.11.14" ana="N2 GSM" lem="ἄρτοσ">ἄρτου</w>
+<w id="Amos.8.11.15" ana="C" lem="οὐδέ">οὐδὲ</w>
+<w id="Amos.8.11.16" ana="N1S ASF" lem="δίψα">δίψαν</w>
+<w id="Amos.8.11.17" ana="N3T GSN" lem="ὕδωρ">ὕδατοσ</w>
+<w id="Amos.8.11.18" ana="C" lem="ἀλλά">ἀλλὰ</w>
+<w id="Amos.8.11.19" ana="N2 ASM" lem="λιμόσ">λιμὸν</w>
+<w id="Amos.8.11.20" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.8.11.21" ana="VA AAN" lem="ἀκούω">ἀκοῦσαι</w>
+<w id="Amos.8.11.22" ana="N2 ASM" lem="λόγοσ">λόγον</w>
+<w id="Amos.8.11.23" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Amos.8.12.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.12.2" ana="VC FPI3P" lem="σαλεύω">σαλευθήσονται</w>
+<w id="Amos.8.12.3" ana="N3T APN" lem="ὕδωρ">ὕδατα</w>
+<w id="Amos.8.12.4" ana="P" lem="ἕωσ">ἕωσ</w>
+<w id="Amos.8.12.5" ana="N1S GSF" lem="θάλασσα">θαλάσσησ</w>
+<w id="Amos.8.12.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.12.7" ana="P" lem="ἀπό">ἀπὸ</w>
+<w id="Amos.8.12.8" ana="N1T GSM" lem="βορέασ">βορρᾶ</w>
+<w id="Amos.8.12.9" ana="P" lem="ἕωσ">ἕωσ</w>
+<w id="Amos.8.12.10" ana="N1 GPF" lem="ἀνατολή">ἀνατολῶν</w>
+<w id="Amos.8.12.11" ana="VF2 FMI3P" lem="περι-τρέχω">περιδραμοῦνται</w>
+<w id="Amos.8.12.12" ana="V2 PAPNPM" lem="ζητέω">ζητοῦντεσ</w>
+<w id="Amos.8.12.13" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.8.12.14" ana="N2 ASM" lem="λόγοσ">λόγον</w>
+<w id="Amos.8.12.15" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Amos.8.12.16" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.12.17" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.8.12.18" ana="D" lem="μή">μὴ</w>
+<w id="Amos.8.12.19" ana="VB AAS3P" lem="εὑρίσκω">εὕρωσιν</w>
+<w id="Amos.8.13.1" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.8.13.2" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Amos.8.13.3" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Amos.8.13.4" ana="RD DSF" lem="ἐκεῖνοσ">ἐκείνῃ</w>
+<w id="Amos.8.13.5" ana="VF FAI3P" lem="ἐκ-λείπω">ἐκλείψουσιν</w>
+<w id="Amos.8.13.6" ana="RA NPF" lem="ὁ">αἱ</w>
+<w id="Amos.8.13.7" ana="N2 NPF" lem="παρθένοσ">παρθένοι</w>
+<w id="Amos.8.13.8" ana="RA NPF" lem="ὁ">αἱ</w>
+<w id="Amos.8.13.9" ana="A1 NPF" lem="καλόσ">καλαὶ</w>
+<w id="Amos.8.13.10" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.13.11" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.8.13.12" ana="N2 NPM" lem="νεανίσκοσ">νεανίσκοι</w>
+<w id="Amos.8.13.13" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.8.13.14" ana="N3E DSN" lem="δίψοσ">δίψει</w>
+<w id="Amos.8.14.1" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.8.14.2" ana="V5 PAPNPM" lem="ὄμνυμι">ὀμνύοντεσ</w>
+<w id="Amos.8.14.3" ana="P" lem="κατά">κατὰ</w>
+<w id="Amos.8.14.4" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.8.14.5" ana="N2 GSM" lem="ἱλασμόσ">ἱλασμοῦ</w>
+<w id="Amos.8.14.6" ana="N1A GSF" lem="Σαμαρεία">Σαμαρείασ</w>
+<w id="Amos.8.14.7" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.14.8" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.8.14.9" ana="V1 PAPNPM" lem="λέγω">λέγοντεσ</w>
+<w id="Amos.8.14.10" ana="V3 PAI3S" lem="ζάω">ζῇ</w>
+<w id="Amos.8.14.11" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.8.14.12" ana="N2 NSM" lem="θεόσ">θεόσ</w>
+<w id="Amos.8.14.13" ana="RP GS" lem="σύ">σου</w>
+<w id="Amos.8.14.14" ana="N VSM" lem="Δαν">Δαν</w>
+<w id="Amos.8.14.15" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.14.16" ana="V3 PAI3S" lem="ζάω">ζῇ</w>
+<w id="Amos.8.14.17" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.8.14.18" ana="N2 NSM" lem="θεόσ">θεόσ</w>
+<w id="Amos.8.14.19" ana="RP GS" lem="σύ">σου</w>
+<w id="Amos.8.14.20" ana="N VS" lem="Βηρσαβεε">Βηρσαβεε</w>
+<w id="Amos.8.14.21" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.14.22" ana="VF2 FMI3P" lem="πίπτω">πεσοῦνται</w>
+<w id="Amos.8.14.23" ana="C" lem="καί">καὶ</w>
+<w id="Amos.8.14.24" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.8.14.25" ana="D" lem="μή">μὴ</w>
+<w id="Amos.8.14.26" ana="VH AAS3P" lem="ἀνα-ἵστημι">ἀναστῶσιν</w>
+<w id="Amos.8.14.27" ana="D" lem="ἔτι">ἔτι</w>
+<w id="Amos.9.1.1" ana="VBI AAI1S" lem="ὁράω">εἶδον</w>
+<w id="Amos.9.1.2" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.9.1.3" ana="N2 ASM" lem="κύριοσ">κύριον</w>
+<w id="Amos.9.1.4" ana="VXI XAPASM" lem="ἐπι-ἵστημι">ἐφεστῶτα</w>
+<w id="Amos.9.1.5" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.9.1.6" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Amos.9.1.7" ana="N2N GSN" lem="θυσιαστήριον">θυσιαστηρίου</w>
+<w id="Amos.9.1.8" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.1.9" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Amos.9.1.10" ana="VA AAD2S" lem="πατάσσω">πάταξον</w>
+<w id="Amos.9.1.11" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.9.1.12" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.9.1.13" ana="N2N ASN" lem="ἱλαστήριον">ἱλαστήριον</w>
+<w id="Amos.9.1.14" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.1.15" ana="VC FPI3S" lem="σείω">σεισθήσεται</w>
+<w id="Amos.9.1.16" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.9.1.17" ana="N2N APN" lem="πρόπυλον">πρόπυλα</w>
+<w id="Amos.9.1.18" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.1.19" ana="VA AAD2S" lem="δια-κόπτω">διάκοψον</w>
+<w id="Amos.9.1.20" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.9.1.21" ana="N1 APF" lem="κεφαλή">κεφαλὰσ</w>
+<w id="Amos.9.1.22" ana="A3 GPM" lem="πᾶσ">πάντων</w>
+<w id="Amos.9.1.23" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.1.24" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Amos.9.1.25" ana="A1B APM" lem="κατάλοιποσ">καταλοίπουσ</w>
+<w id="Amos.9.1.26" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.9.1.27" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.9.1.28" ana="N1A DSF" lem="ῥομφαία">ῥομφαίᾳ</w>
+<w id="Amos.9.1.29" ana="VF2 FAI1S" lem="ἀπο-κτείνω">ἀποκτενῶ</w>
+<w id="Amos.9.1.30" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.9.1.31" ana="D" lem="μή">μὴ</w>
+<w id="Amos.9.1.32" ana="VB AAS3S" lem="δια-φεύγω">διαφύγῃ</w>
+<w id="Amos.9.1.33" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Amos.9.1.34" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.9.1.35" ana="V1 PAPNSM" lem="φεύγω">φεύγων</w>
+<w id="Amos.9.1.36" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.1.37" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.9.1.38" ana="D" lem="μή">μὴ</w>
+<w id="Amos.9.1.39" ana="VC APS3S" lem="δια-σώζω">διασωθῇ</w>
+<w id="Amos.9.1.40" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Amos.9.1.41" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.9.1.42" ana="V1 PMPNSM" lem="ἀνα-σώζω">ἀνασῳζόμενοσ</w>
+<w id="Amos.9.2.1" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="Amos.9.2.2" ana="VD APS3P" lem="κατα-ὀρύσσω">κατορυγῶσιν</w>
+<w id="Amos.9.2.3" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.9.2.4" ana="N1M GSM" lem="ᾅδησ">ᾅδου</w>
+<w id="Amos.9.2.5" ana="D" lem="ἐκεῖθεν">ἐκεῖθεν</w>
+<w id="Amos.9.2.6" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Amos.9.2.7" ana="N3 NSF" lem="χείρ">χείρ</w>
+<w id="Amos.9.2.8" ana="RP GS" lem="ἐγώ">μου</w>
+<w id="Amos.9.2.9" ana="VF FAI3S" lem="ἀνα-σπάω">ἀνασπάσει</w>
+<w id="Amos.9.2.10" ana="RD APM" lem="αὐτόσ">αὐτούσ</w>
+<w id="Amos.9.2.11" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.2.12" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="Amos.9.2.13" ana="VZ AAS3P" lem="ἀνα-βαίνω">ἀναβῶσιν</w>
+<w id="Amos.9.2.14" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.9.2.15" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.9.2.16" ana="N2 ASM" lem="οὐρανόσ">οὐρανόν</w>
+<w id="Amos.9.2.17" ana="D" lem="ἐκεῖθεν">ἐκεῖθεν</w>
+<w id="Amos.9.2.18" ana="VF FAI1S" lem="κατα-ἄγω">κατάξω</w>
+<w id="Amos.9.2.19" ana="RD APM" lem="αὐτόσ">αὐτούσ</w>
+<w id="Amos.9.3.1" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="Amos.9.3.2" ana="VD APS3P" lem="ἐν-κρύπτω">ἐγκρυβῶσιν</w>
+<w id="Amos.9.3.3" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.9.3.4" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.9.3.5" ana="N1 ASF" lem="κορυφή">κορυφὴν</w>
+<w id="Amos.9.3.6" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.9.3.7" ana="N2 GSM" lem="Καρμήλοσ">Καρμήλου</w>
+<w id="Amos.9.3.8" ana="D" lem="ἐκεῖθεν">ἐκεῖθεν</w>
+<w id="Amos.9.3.9" ana="VA AAS1S" lem="ἐκ-ἐρευνάω">ἐξερευνήσω</w>
+<w id="Amos.9.3.10" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.3.11" ana="VF FMI1S" lem="λαμβάνω">λήμψομαι</w>
+<w id="Amos.9.3.12" ana="RD APM" lem="αὐτόσ">αὐτούσ</w>
+<w id="Amos.9.3.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.3.14" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="Amos.9.3.15" ana="VA AAS3P" lem="κατα-δύω">καταδύσωσιν</w>
+<w id="Amos.9.3.16" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Amos.9.3.17" ana="N2 GPM" lem="ὀφθαλμόσ">ὀφθαλμῶν</w>
+<w id="Amos.9.3.18" ana="RP GS" lem="ἐγώ">μου</w>
+<w id="Amos.9.3.19" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.9.3.20" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.9.3.21" ana="N3E APN" lem="βάθοσ">βάθη</w>
+<w id="Amos.9.3.22" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.9.3.23" ana="N1S GSF" lem="θάλασσα">θαλάσσησ</w>
+<w id="Amos.9.3.24" ana="D" lem="ἐκεῖ">ἐκεῖ</w>
+<w id="Amos.9.3.25" ana="V2 PMI1S" lem="ἐν-τελέω">ἐντελοῦμαι</w>
+<w id="Amos.9.3.26" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Amos.9.3.27" ana="N3 DSM" lem="δράκων">δράκοντι</w>
+<w id="Amos.9.3.28" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.3.29" ana="VF FMI3S" lem="δάκνω">δήξεται</w>
+<w id="Amos.9.3.30" ana="RD APM" lem="αὐτόσ">αὐτούσ</w>
+<w id="Amos.9.4.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.4.2" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="Amos.9.4.3" ana="VC APS3P" lem="πορεύομαι">πορευθῶσιν</w>
+<w id="Amos.9.4.4" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.9.4.5" ana="N1A DSF" lem="αἰχμαλωσία">αἰχμαλωσίᾳ</w>
+<w id="Amos.9.4.6" ana="P" lem="πρό">πρὸ</w>
+<w id="Amos.9.4.7" ana="N2N GSN" lem="πρόσωπον">προσώπου</w>
+<w id="Amos.9.4.8" ana="RA GPM" lem="ὁ">τῶν</w>
+<w id="Amos.9.4.9" ana="N2 GPM" lem="ἐχθρόσ">ἐχθρῶν</w>
+<w id="Amos.9.4.10" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.9.4.11" ana="D" lem="ἐκεῖ">ἐκεῖ</w>
+<w id="Amos.9.4.12" ana="V2 PMI1S" lem="ἐν-τελέω">ἐντελοῦμαι</w>
+<w id="Amos.9.4.13" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Amos.9.4.14" ana="N1A DSF" lem="ῥομφαία">ῥομφαίᾳ</w>
+<w id="Amos.9.4.15" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.4.16" ana="VF2 FAI3S" lem="ἀπο-κτείνω">ἀποκτενεῖ</w>
+<w id="Amos.9.4.17" ana="RD APM" lem="αὐτόσ">αὐτούσ</w>
+<w id="Amos.9.4.18" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.4.19" ana="VF2 FAI1S" lem="στηρίζω">στηριῶ</w>
+<w id="Amos.9.4.20" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Amos.9.4.21" ana="N2 APM" lem="ὀφθαλμόσ">ὀφθαλμούσ</w>
+<w id="Amos.9.4.22" ana="RP GS" lem="ἐγώ">μου</w>
+<w id="Amos.9.4.23" ana="P" lem="ἐπί">ἐπ'</w>
+<w id="Amos.9.4.24" ana="RD APM" lem="αὐτόσ">αὐτοὺσ</w>
+<w id="Amos.9.4.25" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.9.4.26" ana="A1 APN" lem="κακόσ">κακὰ</w>
+<w id="Amos.9.4.27" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.4.28" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.9.4.29" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.9.4.30" ana="A1 APN" lem="ἀγαθόσ">ἀγαθά</w>
+<w id="Amos.9.5.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.5.2" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.9.5.3" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.9.5.4" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.9.5.5" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="Amos.9.5.6" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.9.5.7" ana="N3R NSM" lem="παντοκράτωρ">παντοκράτωρ</w>
+<w id="Amos.9.5.8" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.9.5.9" ana="V1 PMPNSM" lem="ἐπι-ἅπτω">ἐφαπτόμενοσ</w>
+<w id="Amos.9.5.10" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.9.5.11" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.9.5.12" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.5.13" ana="V1 PAPNSM" lem="σαλεύω">σαλεύων</w>
+<w id="Amos.9.5.14" ana="RD ASF" lem="αὐτόσ">αὐτήν</w>
+<w id="Amos.9.5.15" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.5.16" ana="VF FAI3P" lem="πενθέω">πενθήσουσιν</w>
+<w id="Amos.9.5.17" ana="A3 NPM" lem="πᾶσ">πάντεσ</w>
+<w id="Amos.9.5.18" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.9.5.19" ana="V2 PAPNPM" lem="κατα-οἰκέω">κατοικοῦντεσ</w>
+<w id="Amos.9.5.20" ana="RD ASF" lem="αὐτόσ">αὐτήν</w>
+<w id="Amos.9.5.21" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.5.22" ana="VF FMI3S" lem="ἀνα-βαίνω">ἀναβήσεται</w>
+<w id="Amos.9.5.23" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Amos.9.5.24" ana="N2 NSM" lem="ποταμόσ">ποταμὸσ</w>
+<w id="Amos.9.5.25" ana="N1A NSF" lem="συντέλεια">συντέλεια</w>
+<w id="Amos.9.5.26" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Amos.9.5.27" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.5.28" ana="VF FMI3S" lem="κατα-βαίνω">καταβήσεται</w>
+<w id="Amos.9.5.29" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Amos.9.5.30" ana="N2 NSM" lem="ποταμόσ">ποταμὸσ</w>
+<w id="Amos.9.5.31" ana="N2 GSF" lem="Αἴγυπτοσ">Αἰγύπτου</w>
+<w id="Amos.9.6.1" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.9.6.2" ana="V2 PAPNSM" lem="οἰκοδομέω">οἰκοδομῶν</w>
+<w id="Amos.9.6.3" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.9.6.4" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.9.6.5" ana="N2 ASM" lem="οὐρανόσ">οὐρανὸν</w>
+<w id="Amos.9.6.6" ana="N3I ASF" lem="ἀνάβασισ">ἀνάβασιν</w>
+<w id="Amos.9.6.7" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.9.6.8" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.6.9" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.9.6.10" ana="N1A ASF" lem="ἐπαγγελία">ἐπαγγελίαν</w>
+<w id="Amos.9.6.11" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Amos.9.6.12" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.9.6.13" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.9.6.14" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.9.6.15" ana="V4 PAPNSM" lem="θεμελιόω">θεμελιῶν</w>
+<w id="Amos.9.6.16" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.9.6.17" ana="V2 PMPNSM" lem="προσ-καλέω">προσκαλούμενοσ</w>
+<w id="Amos.9.6.18" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Amos.9.6.19" ana="N3 ASN" lem="ὕδωρ">ὕδωρ</w>
+<w id="Amos.9.6.20" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.9.6.21" ana="N1S GSF" lem="θάλασσα">θαλάσσησ</w>
+<w id="Amos.9.6.22" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.6.23" ana="V2 PAPNSM" lem="ἐκ-χέω">ἐκχέων</w>
+<w id="Amos.9.6.24" ana="RD ASN" lem="αὐτόσ">αὐτὸ</w>
+<w id="Amos.9.6.25" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.9.6.26" ana="N2N ASN" lem="πρόσωπον">πρόσωπον</w>
+<w id="Amos.9.6.27" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.9.6.28" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.9.6.29" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.9.6.30" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.9.6.31" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="Amos.9.6.32" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.9.6.33" ana="N3R NSM" lem="παντοκράτωρ">παντοκράτωρ</w>
+<w id="Amos.9.6.34" ana="N3M NSN" lem="ὄνομα">ὄνομα</w>
+<w id="Amos.9.6.35" ana="RD DSM" lem="αὐτόσ">αὐτῷ</w>
+<w id="Amos.9.7.1" ana="D" lem="οὐ">οὐχ</w>
+<w id="Amos.9.7.2" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Amos.9.7.3" ana="N2 NPM" lem="υἱόσ">υἱοὶ</w>
+<w id="Amos.9.7.4" ana="N3P GPM" lem="Αἰθίοψ">Αἰθιόπων</w>
+<w id="Amos.9.7.5" ana="RP NP" lem="σύ">ὑμεῖσ</w>
+<w id="Amos.9.7.6" ana="V9 PAI2P" lem="εἰμί">ἐστε</w>
+<w id="Amos.9.7.7" ana="RP DS" lem="ἐγώ">ἐμοί</w>
+<w id="Amos.9.7.8" ana="N2 NPM" lem="υἱόσ">υἱοὶ</w>
+<w id="Amos.9.7.9" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.9.7.10" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.9.7.11" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.9.7.12" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.9.7.13" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.9.7.14" ana="N ASM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.9.7.15" ana="VBI AAI1S" lem="ἀνα-ἄγω">ἀνήγαγον</w>
+<w id="Amos.9.7.16" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.9.7.17" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.9.7.18" ana="N2 GSF" lem="Αἴγυπτοσ">Αἰγύπτου</w>
+<w id="Amos.9.7.19" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.7.20" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Amos.9.7.21" ana="A1B APM" lem="ἀλλόφυλοσ">ἀλλοφύλουσ</w>
+<w id="Amos.9.7.22" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.9.7.23" ana="N1A GSF" lem="Καππαδοκία">Καππαδοκίασ</w>
+<w id="Amos.9.7.24" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.7.25" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Amos.9.7.26" ana="N2 APM" lem="Σύροσ">Σύρουσ</w>
+<w id="Amos.9.7.27" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Amos.9.7.28" ana="N2 GSM" lem="βόθροσ">βόθρου</w>
+<w id="Amos.9.8.1" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="Amos.9.8.2" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.9.8.3" ana="N2 NPM" lem="ὀφθαλμόσ">ὀφθαλμοὶ</w>
+<w id="Amos.9.8.4" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Amos.9.8.5" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.9.8.6" ana="N2 GSM" lem="θεόσ">θεοῦ</w>
+<w id="Amos.9.8.7" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.9.8.8" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.9.8.9" ana="N1A ASF" lem="βασιλεία">βασιλείαν</w>
+<w id="Amos.9.8.10" ana="RA GPM" lem="ὁ">τῶν</w>
+<w id="Amos.9.8.11" ana="A1B GPM" lem="ἁμαρτωλόσ">ἁμαρτωλῶν</w>
+<w id="Amos.9.8.12" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.8.13" ana="VF2 FAI1S" lem="ἐκ-αἴρω">ἐξαρῶ</w>
+<w id="Amos.9.8.14" ana="RD ASF" lem="αὐτόσ">αὐτὴν</w>
+<w id="Amos.9.8.15" ana="P" lem="ἀπό">ἀπὸ</w>
+<w id="Amos.9.8.16" ana="N2N GSN" lem="πρόσωπον">προσώπου</w>
+<w id="Amos.9.8.17" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.9.8.18" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.9.8.19" ana="D" lem="πλήν">πλὴν</w>
+<w id="Amos.9.8.20" ana="C" lem="ὅτι">ὅτι</w>
+<w id="Amos.9.8.21" ana="D" lem="οὐ">οὐκ</w>
+<w id="Amos.9.8.22" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Amos.9.8.23" ana="N3E ASN" lem="τέλοσ">τέλοσ</w>
+<w id="Amos.9.8.24" ana="VF2 FAI1S" lem="ἐκ-αἴρω">ἐξαρῶ</w>
+<w id="Amos.9.8.25" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.9.8.26" ana="N2 ASM" lem="οἶκοσ">οἶκον</w>
+<w id="Amos.9.8.27" ana="N GSM" lem="Ἰακώβ">Ιακωβ</w>
+<w id="Amos.9.8.28" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.9.8.29" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.9.9.1" ana="C" lem="διότι">διότι</w>
+<w id="Amos.9.9.2" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="Amos.9.9.3" ana="RP NS" lem="ἐγώ">ἐγὼ</w>
+<w id="Amos.9.9.4" ana="V1 PMI1S" lem="ἐν-τέλλομαι">ἐντέλλομαι</w>
+<w id="Amos.9.9.5" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.9.6" ana="VF2 FAI1S" lem="λικμίζω">λικμιῶ</w>
+<w id="Amos.9.9.7" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.9.9.8" ana="A3 DPN" lem="πᾶσ">πᾶσι</w>
+<w id="Amos.9.9.9" ana="RA DPN" lem="ὁ">τοῖσ</w>
+<w id="Amos.9.9.10" ana="N3E DPN" lem="ἔθνοσ">ἔθνεσιν</w>
+<w id="Amos.9.9.11" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.9.9.12" ana="N2 ASM" lem="οἶκοσ">οἶκον</w>
+<w id="Amos.9.9.13" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.9.9.14" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.9.9.15" ana="RR ASM" lem="ὅσ">ὃν</w>
+<w id="Amos.9.9.16" ana="N2 ASM" lem="τρόποσ">τρόπον</w>
+<w id="Amos.9.9.17" ana="V3 PMI3S" lem="λικμάω">λικμᾶται</w>
+<w id="Amos.9.9.18" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.9.9.19" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Amos.9.9.20" ana="N2 DSM" lem="λικμόσ">λικμῷ</w>
+<w id="Amos.9.9.21" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.9.22" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.9.9.23" ana="D" lem="μή">μὴ</w>
+<w id="Amos.9.9.24" ana="VF FMI2S" lem="πίπτω">πέσῃ</w>
+<w id="Amos.9.9.25" ana="N3M NSN" lem="σύντριμμα">σύντριμμα</w>
+<w id="Amos.9.9.26" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.9.9.27" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.9.9.28" ana="N1 ASF" lem="γῆ">γῆν</w>
+<w id="Amos.9.10.1" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.9.10.2" ana="N1A DSF" lem="ῥομφαία">ῥομφαίᾳ</w>
+<w id="Amos.9.10.3" ana="VF FAI3P" lem="τελευτάω">τελευτήσουσι</w>
+<w id="Amos.9.10.4" ana="A3 NPM" lem="πᾶσ">πάντεσ</w>
+<w id="Amos.9.10.5" ana="A1B NPM" lem="ἁμαρτωλόσ">ἁμαρτωλοὶ</w>
+<w id="Amos.9.10.6" ana="N2 GSM" lem="λαόσ">λαοῦ</w>
+<w id="Amos.9.10.7" ana="RP GS" lem="ἐγώ">μου</w>
+<w id="Amos.9.10.8" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.9.10.9" ana="V1 PAPNPM" lem="λέγω">λέγοντεσ</w>
+<w id="Amos.9.10.10" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.9.10.11" ana="D" lem="μή">μὴ</w>
+<w id="Amos.9.10.12" ana="VA AAS3S" lem="ἐγγίζω">ἐγγίσῃ</w>
+<w id="Amos.9.10.13" ana="C" lem="οὐδέ">οὐδ'</w>
+<w id="Amos.9.10.14" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.9.10.15" ana="D" lem="μή">μὴ</w>
+<w id="Amos.9.10.16" ana="VB AMS3S" lem="γίγνομαι">γένηται</w>
+<w id="Amos.9.10.17" ana="P" lem="ἐπί">ἐφ'</w>
+<w id="Amos.9.10.18" ana="RP AP" lem="ἐγώ">ἡμᾶσ</w>
+<w id="Amos.9.10.19" ana="RA NPN" lem="ὁ">τὰ</w>
+<w id="Amos.9.10.20" ana="A1 NPN" lem="κακόσ">κακά</w>
+<w id="Amos.9.11.1" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.9.11.2" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Amos.9.11.3" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Amos.9.11.4" ana="RD DSF" lem="ἐκεῖνοσ">ἐκείνῃ</w>
+<w id="Amos.9.11.5" ana="VF FAI1S" lem="ἀνα-ἵστημι">ἀναστήσω</w>
+<w id="Amos.9.11.6" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.9.11.7" ana="N1 ASF" lem="σκηνή">σκηνὴν</w>
+<w id="Amos.9.11.8" ana="N GSM" lem="Δαυίδ">Δαυιδ</w>
+<w id="Amos.9.11.9" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.9.11.10" ana="VX XAPASF" lem="πίπτω">πεπτωκυῖαν</w>
+<w id="Amos.9.11.11" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.11.12" ana="VF FAI1S" lem="ἀνα-οἰκοδομέω">ἀνοικοδομήσω</w>
+<w id="Amos.9.11.13" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.9.11.14" ana="VX XAPAPN" lem="πίπτω">πεπτωκότα</w>
+<w id="Amos.9.11.15" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Amos.9.11.16" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.11.17" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.9.11.18" ana="VP XPPAPN" lem="κατα-σκάπτω">κατεσκαμμένα</w>
+<w id="Amos.9.11.19" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Amos.9.11.20" ana="VF FAI1S" lem="ἀνα-ἵστημι">ἀναστήσω</w>
+<w id="Amos.9.11.21" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.11.22" ana="VF FAI1S" lem="ἀνα-οἰκοδομέω">ἀνοικοδομήσω</w>
+<w id="Amos.9.11.23" ana="RD ASF" lem="αὐτόσ">αὐτὴν</w>
+<w id="Amos.9.11.24" ana="D" lem="καθώσ">καθὼσ</w>
+<w id="Amos.9.11.25" ana="RA NPF" lem="ὁ">αἱ</w>
+<w id="Amos.9.11.26" ana="N1A NPF" lem="ἡμέρα">ἡμέραι</w>
+<w id="Amos.9.11.27" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Amos.9.11.28" ana="N3W GSM" lem="αἰών">αἰῶνοσ</w>
+<w id="Amos.9.12.1" ana="C" lem="ὅπωσ">ὅπωσ</w>
+<w id="Amos.9.12.2" ana="VA AAS3P" lem="ἐκ-ζητέω">ἐκζητήσωσιν</w>
+<w id="Amos.9.12.3" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.9.12.4" ana="A1B NPM" lem="κατάλοιποσ">κατάλοιποι</w>
+<w id="Amos.9.12.5" ana="RA GPM" lem="ὁ">τῶν</w>
+<w id="Amos.9.12.6" ana="N2 GPM" lem="ἄνθρωποσ">ἀνθρώπων</w>
+<w id="Amos.9.12.7" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.12.8" ana="A3 APN" lem="πᾶσ">πάντα</w>
+<w id="Amos.9.12.9" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.9.12.10" ana="N3E APN" lem="ἔθνοσ">ἔθνη</w>
+<w id="Amos.9.12.11" ana="P" lem="ἐπί">ἐφ'</w>
+<w id="Amos.9.12.12" ana="RR APM" lem="ὅσ">οὓσ</w>
+<w id="Amos.9.12.13" ana="VM XPI3S" lem="ἐπι-καλέω">ἐπικέκληται</w>
+<w id="Amos.9.12.14" ana="RA NSN" lem="ὁ">τὸ</w>
+<w id="Amos.9.12.15" ana="N3M NSN" lem="ὄνομα">ὄνομά</w>
+<w id="Amos.9.12.16" ana="RP GS" lem="ἐγώ">μου</w>
+<w id="Amos.9.12.17" ana="P" lem="ἐπί">ἐπ'</w>
+<w id="Amos.9.12.18" ana="RD APM" lem="αὐτόσ">αὐτούσ</w>
+<w id="Amos.9.12.19" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.9.12.20" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.9.12.21" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.9.12.22" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="Amos.9.12.23" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.9.12.24" ana="V2 PAPNSM" lem="ποιέω">ποιῶν</w>
+<w id="Amos.9.12.25" ana="RD APN" lem="οὗτοσ">ταῦτα</w>
+<w id="Amos.9.13.1" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="Amos.9.13.2" ana="N1A NPF" lem="ἡμέρα">ἡμέραι</w>
+<w id="Amos.9.13.3" ana="V1 PMI3P" lem="ἔρχομαι">ἔρχονται</w>
+<w id="Amos.9.13.4" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.9.13.5" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.9.13.6" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.13.7" ana="VF FMI3S" lem="κατα-λαμβάνω">καταλήμψεται</w>
+<w id="Amos.9.13.8" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.9.13.9" ana="N2 NSM" lem="ἀλοητόσ">ἀλοητὸσ</w>
+<w id="Amos.9.13.10" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.9.13.11" ana="N2 ASM" lem="τρύγητοσ">τρύγητον</w>
+<w id="Amos.9.13.12" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.13.13" ana="VF FAI3S" lem="περκάζω">περκάσει</w>
+<w id="Amos.9.13.14" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Amos.9.13.15" ana="N1 NSF" lem="σταφυλή">σταφυλὴ</w>
+<w id="Amos.9.13.16" ana="P" lem="ἐν">ἐν</w>
+<w id="Amos.9.13.17" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Amos.9.13.18" ana="N2 DSM" lem="σπόροσ">σπόρῳ</w>
+<w id="Amos.9.13.19" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.13.20" ana="VF FAI3S" lem="ἀπο-σταλάσσω">ἀποσταλάξει</w>
+<w id="Amos.9.13.21" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Amos.9.13.22" ana="N3E APN" lem="ὄροσ">ὄρη</w>
+<w id="Amos.9.13.23" ana="N2 ASM" lem="γλυκασμόσ">γλυκασμόν</w>
+<w id="Amos.9.13.24" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.13.25" ana="A3 NPM" lem="πᾶσ">πάντεσ</w>
+<w id="Amos.9.13.26" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Amos.9.13.27" ana="N2 NPM" lem="βουνόσ">βουνοὶ</w>
+<w id="Amos.9.13.28" ana="A1B NPM" lem="σύμφυτοσ">σύμφυτοι</w>
+<w id="Amos.9.13.29" ana="VF FMI3P" lem="εἰμί">ἔσονται</w>
+<w id="Amos.9.14.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.14.2" ana="VF FAI1S" lem="ἐπι-στρέφω">ἐπιστρέψω</w>
+<w id="Amos.9.14.3" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Amos.9.14.4" ana="N1A ASF" lem="αἰχμαλωσία">αἰχμαλωσίαν</w>
+<w id="Amos.9.14.5" ana="N2 GSM" lem="λαόσ">λαοῦ</w>
+<w id="Amos.9.14.6" ana="RP GS" lem="ἐγώ">μου</w>
+<w id="Amos.9.14.7" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Amos.9.14.8" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.14.9" ana="VF FAI3P" lem="οἰκοδομέω">οἰκοδομήσουσιν</w>
+<w id="Amos.9.14.10" ana="N3I APF" lem="πόλισ">πόλεισ</w>
+<w id="Amos.9.14.11" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="Amos.9.14.12" ana="VT XPPAPF" lem="ἀπο  ἀνα-ἵζω">ἠφανισμένασ</w>
+<w id="Amos.9.14.13" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.14.14" ana="VF FAI3P" lem="κατα-οἰκέω">κατοικήσουσιν</w>
+<w id="Amos.9.14.15" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.14.16" ana="VF FAI3P" lem="κατα-φυτεύω">καταφυτεύσουσιν</w>
+<w id="Amos.9.14.17" ana="N3W APM" lem="ἀμπελών">ἀμπελῶνασ</w>
+<w id="Amos.9.14.18" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.14.19" ana="VF FMI3P" lem="πίνω">πίονται</w>
+<w id="Amos.9.14.20" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.9.14.21" ana="N2 ASM" lem="οἶνοσ">οἶνον</w>
+<w id="Amos.9.14.22" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.9.14.23" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.14.24" ana="VF FAI3P" lem="φυτεύω">φυτεύσουσιν</w>
+<w id="Amos.9.14.25" ana="N2 APM" lem="κῆποσ">κήπουσ</w>
+<w id="Amos.9.14.26" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.14.27" ana="VF FMI3P" lem="ἐσθίω">φάγονται</w>
+<w id="Amos.9.14.28" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Amos.9.14.29" ana="N2 ASM" lem="καρπόσ">καρπὸν</w>
+<w id="Amos.9.14.30" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.9.15.1" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.15.2" ana="VF FAI1S" lem="κατα-φυτεύω">καταφυτεύσω</w>
+<w id="Amos.9.15.3" ana="RD APM" lem="αὐτόσ">αὐτοὺσ</w>
+<w id="Amos.9.15.4" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Amos.9.15.5" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.9.15.6" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.9.15.7" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.9.15.8" ana="C" lem="καί">καὶ</w>
+<w id="Amos.9.15.9" ana="D" lem="οὐ">οὐ</w>
+<w id="Amos.9.15.10" ana="D" lem="μή">μὴ</w>
+<w id="Amos.9.15.11" ana="VS APS3P" lem="ἐκ-σπάω">ἐκσπασθῶσιν</w>
+<w id="Amos.9.15.12" ana="D" lem="οὐκέτι">οὐκέτι</w>
+<w id="Amos.9.15.13" ana="P" lem="ἀπό">ἀπὸ</w>
+<w id="Amos.9.15.14" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Amos.9.15.15" ana="N1 GSF" lem="γῆ">γῆσ</w>
+<w id="Amos.9.15.16" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Amos.9.15.17" ana="RR GSF" lem="ὅσ">ἧσ</w>
+<w id="Amos.9.15.18" ana="VAI AAI1S" lem="δίδωμι">ἔδωκα</w>
+<w id="Amos.9.15.19" ana="RD DPM" lem="αὐτόσ">αὐτοῖσ</w>
+<w id="Amos.9.15.20" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Amos.9.15.21" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Amos.9.15.22" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.9.15.23" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="Amos.9.15.24" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Amos.9.15.25" ana="N3R NSM" lem="παντοκράτωρ">παντοκράτωρ</w>

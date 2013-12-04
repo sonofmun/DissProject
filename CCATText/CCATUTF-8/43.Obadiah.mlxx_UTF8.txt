@@ -1,0 +1,472 @@
+<w id="Obad.1..1" ana="N3I NSF" lem="ὅρασισ">ὅρασισ</w>
+<w id="Obad.1..2" ana="N1T GSM" lem="Αβδιασ">Αβδιου</w>
+<w id="Obad.1..3" ana="RD APN" lem="ὅδε">τάδε</w>
+<w id="Obad.1..4" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Obad.1..5" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Obad.1..6" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Obad.1..7" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="Obad.1..8" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Obad.1..9" ana="N1A DSF" lem="Ιδουμαία">Ιδουμαίᾳ</w>
+<w id="Obad.1..10" ana="N1 ASF" lem="ἀκοή">ἀκοὴν</w>
+<w id="Obad.1..11" ana="VAI AAI1S" lem="ἀκούω">ἤκουσα</w>
+<w id="Obad.1..12" ana="P" lem="παρά">παρὰ</w>
+<w id="Obad.1..13" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Obad.1..14" ana="C" lem="καί">καὶ</w>
+<w id="Obad.1..15" ana="N1 ASF" lem="περιοχή">περιοχὴν</w>
+<w id="Obad.1..16" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Obad.1..17" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Obad.1..18" ana="N3E APN" lem="ἔθνοσ">ἔθνη</w>
+<w id="Obad.1..19" ana="VAI AAI3S" lem="ἐκ   ἀπο-στέλλω">ἐξαπέστειλεν</w>
+<w id="Obad.1..20" ana="VH AAD2P" lem="ἀνα-ἵστημι">ἀνάστητε</w>
+<w id="Obad.1..21" ana="C" lem="καί">καὶ</w>
+<w id="Obad.1..22" ana="VH AAS1P" lem="ἐκ   ἀνα-ἵστημι">ἐξαναστῶμεν</w>
+<w id="Obad.1..23" ana="P" lem="ἐπί">ἐπ'</w>
+<w id="Obad.1..24" ana="RD ASF" lem="αὐτόσ">αὐτὴν</w>
+<w id="Obad.1..25" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Obad.1..26" ana="N2 ASM" lem="πόλεμοσ">πόλεμον</w>
+<w id="Obad.2..1" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="Obad.2..2" ana="A1 ASM" lem="ὀλιγοστόσ">ὀλιγοστὸν</w>
+<w id="Obad.2..3" ana="VX XAI1S" lem="δίδωμι">δέδωκά</w>
+<w id="Obad.2..4" ana="RP AS" lem="σύ">σε</w>
+<w id="Obad.2..5" ana="P" lem="ἐν">ἐν</w>
+<w id="Obad.2..6" ana="RA DPN" lem="ὁ">τοῖσ</w>
+<w id="Obad.2..7" ana="N3E DPN" lem="ἔθνοσ">ἔθνεσιν</w>
+<w id="Obad.2..8" ana="VM XPPNSM" lem="ἀτιμόω">ἠτιμωμένοσ</w>
+<w id="Obad.2..9" ana="RP NS" lem="σύ">σὺ</w>
+<w id="Obad.2..10" ana="V9 PAI2S" lem="εἰμί">εἶ</w>
+<w id="Obad.2..11" ana="D" lem="σφόδρα">σφόδρα</w>
+<w id="Obad.3..1" ana="N1A NSF" lem="ὑπερηφανία">ὑπερηφανία</w>
+<w id="Obad.3..2" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Obad.3..3" ana="N1A GSF" lem="καρδία">καρδίασ</w>
+<w id="Obad.3..4" ana="RP GS" lem="σύ">σου</w>
+<w id="Obad.3..5" ana="VAI AAI3S" lem="ἐπι-αἴρω">ἐπῆρέν</w>
+<w id="Obad.3..6" ana="RP AS" lem="σύ">σε</w>
+<w id="Obad.3..7" ana="V4 PAPASM" lem="κατα-σκηνόω">κατασκηνοῦντα</w>
+<w id="Obad.3..8" ana="P" lem="ἐν">ἐν</w>
+<w id="Obad.3..9" ana="RA DPF" lem="ὁ">ταῖσ</w>
+<w id="Obad.3..10" ana="N1 DPF" lem="ὀπή">ὀπαῖσ</w>
+<w id="Obad.3..11" ana="RA GPM" lem="ὁ">τῶν</w>
+<w id="Obad.3..12" ana="N2 GPM" lem="πέτροσ">πετρῶν</w>
+<w id="Obad.3..13" ana="N3E GPN" lem="ὕψοσ">ὑψῶν</w>
+<w id="Obad.3..14" ana="N1A ASF" lem="κατοικία">κατοικίαν</w>
+<w id="Obad.3..15" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Obad.3..16" ana="V1 PAPNSM" lem="λέγω">λέγων</w>
+<w id="Obad.3..17" ana="P" lem="ἐν">ἐν</w>
+<w id="Obad.3..18" ana="N1A DSF" lem="καρδία">καρδίᾳ</w>
+<w id="Obad.3..19" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Obad.3..20" ana="RI NSM" lem="τίσ">τίσ</w>
+<w id="Obad.3..21" ana="RP AS" lem="ἐγώ">με</w>
+<w id="Obad.3..22" ana="VF FAI3S" lem="κατα-ἄγω">κατάξει</w>
+<w id="Obad.3..23" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Obad.3..24" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Obad.3..25" ana="N1 ASF" lem="γῆ">γῆν</w>
+<w id="Obad.4..1" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="Obad.4..2" ana="VS APS2S" lem="μετεωρίζω">μετεωρισθῇσ</w>
+<w id="Obad.4..3" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Obad.4..4" ana="N2 NSM" lem="ἀετόσ">ἀετὸσ</w>
+<w id="Obad.4..5" ana="C" lem="καί">καὶ</w>
+<w id="Obad.4..6" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="Obad.4..7" ana="P" lem="ἀνά">ἀνὰ</w>
+<w id="Obad.4..8" ana="A1 ASN" lem="μέσοσ">μέσον</w>
+<w id="Obad.4..9" ana="RA GPN" lem="ὁ">τῶν</w>
+<w id="Obad.4..10" ana="N2N GPN" lem="ἄστρον">ἄστρων</w>
+<w id="Obad.4..11" ana="VE AAS2S" lem="τίθημι">θῇσ</w>
+<w id="Obad.4..12" ana="N1A ASF" lem="νοσσιά">νοσσιάν</w>
+<w id="Obad.4..13" ana="RP GS" lem="σύ">σου</w>
+<w id="Obad.4..14" ana="D" lem="ἐκεῖθεν">ἐκεῖθεν</w>
+<w id="Obad.4..15" ana="VF FAI1S" lem="κατα-ἄγω">κατάξω</w>
+<w id="Obad.4..16" ana="RP AS" lem="σύ">σε</w>
+<w id="Obad.4..17" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Obad.4..18" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Obad.5..1" ana="C" lem="εἰ">εἰ</w>
+<w id="Obad.5..2" ana="N1M NPM" lem="κλέπτησ">κλέπται</w>
+<w id="Obad.5..3" ana="VBI AAI3P" lem="εἰσ-ἔρχομαι">εἰσῆλθον</w>
+<w id="Obad.5..4" ana="P" lem="πρόσ">πρὸσ</w>
+<w id="Obad.5..5" ana="RP AS" lem="σύ">σὲ</w>
+<w id="Obad.5..6" ana="C" lem="ἤ">ἢ</w>
+<w id="Obad.5..7" ana="N1M NPM" lem="λῃστήσ">λῃσταὶ</w>
+<w id="Obad.5..8" ana="N3 GSF" lem="νύξ">νυκτόσ</w>
+<w id="Obad.5..9" ana="D" lem="ποῦ">ποῦ</w>
+<w id="Obad.5..10" ana="X" lem="ἄν">ἂν</w>
+<w id="Obad.5..11" ana="VVI API2S" lem="ἀπο-ῥίπτω">ἀπερρίφησ</w>
+<w id="Obad.5..12" ana="D" lem="οὐ">οὐκ</w>
+<w id="Obad.5..13" ana="X" lem="ἄν">ἂν</w>
+<w id="Obad.5..14" ana="VAI AAI3P" lem="κλέπτω">ἔκλεψαν</w>
+<w id="Obad.5..15" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Obad.5..16" ana="A1 APN" lem="ἱκανόσ">ἱκανὰ</w>
+<w id="Obad.5..17" ana="RD DPM" lem="ἑαυτοῦ">ἑαυτοῖσ</w>
+<w id="Obad.5..18" ana="C" lem="καί">καὶ</w>
+<w id="Obad.5..19" ana="C" lem="εἰ">εἰ</w>
+<w id="Obad.5..20" ana="N1M NPM" lem="τρυγητήσ">τρυγηταὶ</w>
+<w id="Obad.5..21" ana="VBI AAI3P" lem="εἰσ-ἔρχομαι">εἰσῆλθον</w>
+<w id="Obad.5..22" ana="P" lem="πρόσ">πρὸσ</w>
+<w id="Obad.5..23" ana="RP AS" lem="σύ">σέ</w>
+<w id="Obad.5..24" ana="D" lem="οὐ">οὐκ</w>
+<w id="Obad.5..25" ana="X" lem="ἄν">ἂν</w>
+<w id="Obad.5..26" ana="VBI AMI3P" lem="ὑπο-λείπω">ὑπελίποντο</w>
+<w id="Obad.5..27" ana="N3D ASF" lem="ἐπιφυλλίσ">ἐπιφυλλίδα</w>
+<w id="Obad.6..1" ana="D" lem="πῶσ">πῶσ</w>
+<w id="Obad.6..2" ana="VCI API3S" lem="ἐκ-ἐρευνάω">ἐξηρευνήθη</w>
+<w id="Obad.6..3" ana="N NSM" lem="Ησαυ">Ησαυ</w>
+<w id="Obad.6..4" ana="C" lem="καί">καὶ</w>
+<w id="Obad.6..5" ana="VVI API3S" lem="κατα-λαμβάνω">κατελήμφθη</w>
+<w id="Obad.6..6" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Obad.6..7" ana="RA NPN" lem="ὁ">τὰ</w>
+<w id="Obad.6..8" ana="VP XMPNPN" lem="κρύπτω">κεκρυμμένα</w>
+<w id="Obad.7..1" ana="P" lem="ἕωσ">ἕωσ</w>
+<w id="Obad.7..2" ana="RA GPN" lem="ὁ">τῶν</w>
+<w id="Obad.7..3" ana="N2N GPN" lem="ὅριον">ὁρίων</w>
+<w id="Obad.7..4" ana="RP GS" lem="σύ">σου</w>
+<w id="Obad.7..5" ana="VAI AAI3P" lem="ἐκ   ἀπο-στέλλω">ἐξαπέστειλάν</w>
+<w id="Obad.7..6" ana="RP AS" lem="σύ">σε</w>
+<w id="Obad.7..7" ana="A3 NPM" lem="πᾶσ">πάντεσ</w>
+<w id="Obad.7..8" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Obad.7..9" ana="N3 NPM" lem="ἀνήρ">ἄνδρεσ</w>
+<w id="Obad.7..10" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Obad.7..11" ana="N1 GSF" lem="διαθήκη">διαθήκησ</w>
+<w id="Obad.7..12" ana="RP GS" lem="σύ">σου</w>
+<w id="Obad.7..13" ana="VHI AAI3P" lem="ἀντι-ἵστημι">ἀντέστησάν</w>
+<w id="Obad.7..14" ana="RP DS" lem="σύ">σοι</w>
+<w id="Obad.7..15" ana="VSI API3P" lem="δύναμαι">ἠδυνάσθησαν</w>
+<w id="Obad.7..16" ana="P" lem="πρόσ">πρὸσ</w>
+<w id="Obad.7..17" ana="RP AS" lem="σύ">σὲ</w>
+<w id="Obad.7..18" ana="N3 NPM" lem="ἀνήρ">ἄνδρεσ</w>
+<w id="Obad.7..19" ana="A1 NPM" lem="εἰρηνικόσ">εἰρηνικοί</w>
+<w id="Obad.7..20" ana="RP GS" lem="σύ">σου</w>
+<w id="Obad.7..21" ana="VAI AAI3P" lem="τίθημι">ἔθηκαν</w>
+<w id="Obad.7..22" ana="N2N APN" lem="ἔνεδρον">ἔνεδρα</w>
+<w id="Obad.7..23" ana="P" lem="ὑποκάτω">ὑποκάτω</w>
+<w id="Obad.7..24" ana="RP GS" lem="σύ">σου</w>
+<w id="Obad.7..25" ana="D" lem="οὐ">οὐκ</w>
+<w id="Obad.7..26" ana="V9 PAI3S" lem="εἰμί">ἔστιν</w>
+<w id="Obad.7..27" ana="N3I NSF" lem="σύνεσισ">σύνεσισ</w>
+<w id="Obad.7..28" ana="RD DPM" lem="αὐτόσ">αὐτοῖσ</w>
+<w id="Obad.8..1" ana="P" lem="ἐν">ἐν</w>
+<w id="Obad.8..2" ana="RD DSF" lem="ἐκεῖνοσ">ἐκείνῃ</w>
+<w id="Obad.8..3" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Obad.8..4" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Obad.8..5" ana="V1 PAI3S" lem="λέγω">λέγει</w>
+<w id="Obad.8..6" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Obad.8..7" ana="VF2 FAI1S" lem="ἀπο-ὀλλύω">ἀπολῶ</w>
+<w id="Obad.8..8" ana="A1 APM" lem="σοφόσ">σοφοὺσ</w>
+<w id="Obad.8..9" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Obad.8..10" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Obad.8..11" ana="N1A GSF" lem="Ιδουμαία">Ιδουμαίασ</w>
+<w id="Obad.8..12" ana="C" lem="καί">καὶ</w>
+<w id="Obad.8..13" ana="N3I ASF" lem="σύνεσισ">σύνεσιν</w>
+<w id="Obad.8..14" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Obad.8..15" ana="N3E GSN" lem="ὄροσ">ὄρουσ</w>
+<w id="Obad.8..16" ana="N GSM" lem="Ησαυ">Ησαυ</w>
+<w id="Obad.9..1" ana="C" lem="καί">καὶ</w>
+<w id="Obad.9..2" ana="VC FPI3P" lem="πτοέω">πτοηθήσονται</w>
+<w id="Obad.9..3" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Obad.9..4" ana="N1M NPM" lem="μαχητήσ">μαχηταί</w>
+<w id="Obad.9..5" ana="RP GS" lem="σύ">σου</w>
+<w id="Obad.9..6" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Obad.9..7" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Obad.9..8" ana="N GS" lem="Θαιμαν">Θαιμαν</w>
+<w id="Obad.9..9" ana="C" lem="ὅπωσ">ὅπωσ</w>
+<w id="Obad.9..10" ana="VC APS3S" lem="ἐκ-αἴρω">ἐξαρθῇ</w>
+<w id="Obad.9..11" ana="N2 NSM" lem="ἄνθρωποσ">ἄνθρωποσ</w>
+<w id="Obad.9..12" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Obad.9..13" ana="N3E GSN" lem="ὄροσ">ὄρουσ</w>
+<w id="Obad.9..14" ana="N GSM" lem="Ησαυ">Ησαυ</w>
+<w id="Obad.10..1" ana="P" lem="διά">διὰ</w>
+<w id="Obad.10..2" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Obad.10..3" ana="N1 ASF" lem="σφαγή">σφαγὴν</w>
+<w id="Obad.10..4" ana="C" lem="καί">καὶ</w>
+<w id="Obad.10..5" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Obad.10..6" ana="N1A ASF" lem="ἀσέβεια">ἀσέβειαν</w>
+<w id="Obad.10..7" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Obad.10..8" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Obad.10..9" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Obad.10..10" ana="N2 ASM" lem="ἀδελφόσ">ἀδελφόν</w>
+<w id="Obad.10..11" ana="RP GS" lem="σύ">σου</w>
+<w id="Obad.10..12" ana="N ASM" lem="Ἰακώβ">Ιακωβ</w>
+<w id="Obad.10..13" ana="C" lem="καί">καὶ</w>
+<w id="Obad.10..14" ana="VF FAI3S" lem="καλύπτω">καλύψει</w>
+<w id="Obad.10..15" ana="RP AS" lem="σύ">σε</w>
+<w id="Obad.10..16" ana="N1 NSF" lem="αἰσχύνη">αἰσχύνη</w>
+<w id="Obad.10..17" ana="C" lem="καί">καὶ</w>
+<w id="Obad.10..18" ana="VC FPI2S" lem="ἐκ-αἴρω">ἐξαρθήσῃ</w>
+<w id="Obad.10..19" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Obad.10..20" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Obad.10..21" ana="N3W ASM" lem="αἰών">αἰῶνα</w>
+<w id="Obad.11..1" ana="P" lem="ἀπό">ἀφ'</w>
+<w id="Obad.11..2" ana="RR GSF" lem="ὅσ">ἧσ</w>
+<w id="Obad.11..3" ana="N1A GSF" lem="ἡμέρα">ἡμέρασ</w>
+<w id="Obad.11..4" ana="VHI AAI2S" lem="ἀντι-ἵστημι">ἀντέστησ</w>
+<w id="Obad.11..5" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Obad.11..6" ana="A1A GSF" lem="ἐναντίοσ">ἐναντίασ</w>
+<w id="Obad.11..7" ana="P" lem="ἐν">ἐν</w>
+<w id="Obad.11..8" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Obad.11..9" ana="V1 PAPGPM" lem="αἰχμαλωτεύω">αἰχμαλωτευόντων</w>
+<w id="Obad.11..10" ana="A3H GPM" lem="ἀλλογενήσ">ἀλλογενῶν</w>
+<w id="Obad.11..11" ana="N3I ASF" lem="δύναμισ">δύναμιν</w>
+<w id="Obad.11..12" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Obad.11..13" ana="C" lem="καί">καὶ</w>
+<w id="Obad.11..14" ana="A1A NPM" lem="ἀλλότριοσ">ἀλλότριοι</w>
+<w id="Obad.11..15" ana="VBI AAI3P" lem="εἰσ-ἔρχομαι">εἰσῆλθον</w>
+<w id="Obad.11..16" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Obad.11..17" ana="N1 APF" lem="πύλη">πύλασ</w>
+<w id="Obad.11..18" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Obad.11..19" ana="C" lem="καί">καὶ</w>
+<w id="Obad.11..20" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Obad.11..21" ana="N ASF" lem="Ἰερουσαλήμ">Ιερουσαλημ</w>
+<w id="Obad.11..22" ana="VBI AAI3P" lem="βάλλω">ἔβαλον</w>
+<w id="Obad.11..23" ana="N2 APM" lem="κλῆροσ">κλήρουσ</w>
+<w id="Obad.11..24" ana="C" lem="καί">καὶ</w>
+<w id="Obad.11..25" ana="RP NS" lem="σύ">σὺ</w>
+<w id="Obad.11..26" ana="V9I IAI2S" lem="εἰμί">ἦσ</w>
+<w id="Obad.11..27" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Obad.11..28" ana="A3 NSM" lem="εἷσ">εἷσ</w>
+<w id="Obad.11..29" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Obad.11..30" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Obad.12..1" ana="C" lem="καί">καὶ</w>
+<w id="Obad.12..2" ana="D" lem="μή">μὴ</w>
+<w id="Obad.12..3" ana="V2 PAS2S" lem="ἐπι-δέω">ἐπίδῃσ</w>
+<w id="Obad.12..4" ana="N1A ASF" lem="ἡμέρα">ἡμέραν</w>
+<w id="Obad.12..5" ana="N2 GSM" lem="ἀδελφόσ">ἀδελφοῦ</w>
+<w id="Obad.12..6" ana="RP GS" lem="σύ">σου</w>
+<w id="Obad.12..7" ana="P" lem="ἐν">ἐν</w>
+<w id="Obad.12..8" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Obad.12..9" ana="A1A GPM" lem="ἀλλότριοσ">ἀλλοτρίων</w>
+<w id="Obad.12..10" ana="C" lem="καί">καὶ</w>
+<w id="Obad.12..11" ana="D" lem="μή">μὴ</w>
+<w id="Obad.12..12" ana="VD APS2S" lem="ἐπι-χαίρω">ἐπιχαρῇσ</w>
+<w id="Obad.12..13" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Obad.12..14" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Obad.12..15" ana="N2 APM" lem="υἱόσ">υἱοὺσ</w>
+<w id="Obad.12..16" ana="N GSM" lem="Ιουδα">Ιουδα</w>
+<w id="Obad.12..17" ana="P" lem="ἐν">ἐν</w>
+<w id="Obad.12..18" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Obad.12..19" ana="N1A GSF" lem="ἀπώλεια">ἀπωλείασ</w>
+<w id="Obad.12..20" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Obad.12..21" ana="C" lem="καί">καὶ</w>
+<w id="Obad.12..22" ana="D" lem="μή">μὴ</w>
+<w id="Obad.12..23" ana="VA AAS2S" lem="μεγαλορρημονέω">μεγαλορρημονήσῃσ</w>
+<w id="Obad.12..24" ana="P" lem="ἐν">ἐν</w>
+<w id="Obad.12..25" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Obad.12..26" ana="N3I GSF" lem="θλῖψισ">θλίψεωσ</w>
+<w id="Obad.13..1" ana="C" lem="μηδέ">μηδὲ</w>
+<w id="Obad.13..2" ana="VB AAS2S" lem="εἰσ-ἔρχομαι">εἰσέλθῃσ</w>
+<w id="Obad.13..3" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Obad.13..4" ana="N1 APF" lem="πύλη">πύλασ</w>
+<w id="Obad.13..5" ana="N2 GPM" lem="λαόσ">λαῶν</w>
+<w id="Obad.13..6" ana="P" lem="ἐν">ἐν</w>
+<w id="Obad.13..7" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Obad.13..8" ana="N2 GPM" lem="πόνοσ">πόνων</w>
+<w id="Obad.13..9" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Obad.13..10" ana="C" lem="μηδέ">μηδὲ</w>
+<w id="Obad.13..11" ana="V2 PAS2S" lem="ἐπι-δέω">ἐπίδῃσ</w>
+<w id="Obad.13..12" ana="C" lem="καί">καὶ</w>
+<w id="Obad.13..13" ana="RP NS" lem="σύ">σὺ</w>
+<w id="Obad.13..14" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Obad.13..15" ana="N1 ASF" lem="συναγωγή">συναγωγὴν</w>
+<w id="Obad.13..16" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Obad.13..17" ana="P" lem="ἐν">ἐν</w>
+<w id="Obad.13..18" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Obad.13..19" ana="N2 GSM" lem="ὄλεθροσ">ὀλέθρου</w>
+<w id="Obad.13..20" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Obad.13..21" ana="C" lem="μηδέ">μηδὲ</w>
+<w id="Obad.13..22" ana="VE AAS3S" lem="συν   ἐπι-τίθημι">συνεπιθῇ</w>
+<w id="Obad.13..23" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Obad.13..24" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Obad.13..25" ana="N3I ASF" lem="δύναμισ">δύναμιν</w>
+<w id="Obad.13..26" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Obad.13..27" ana="P" lem="ἐν">ἐν</w>
+<w id="Obad.13..28" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Obad.13..29" ana="N1A GSF" lem="ἀπώλεια">ἀπωλείασ</w>
+<w id="Obad.13..30" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Obad.14..1" ana="C" lem="μηδέ">μηδὲ</w>
+<w id="Obad.14..2" ana="VH AAS2S" lem="ἐπι-ἵστημι">ἐπιστῇσ</w>
+<w id="Obad.14..3" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Obad.14..4" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="Obad.14..5" ana="N1 APF" lem="διεκβολή">διεκβολὰσ</w>
+<w id="Obad.14..6" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Obad.14..7" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Obad.14..8" ana="VA AAN" lem="ἐκ-ὀλεθρεύω">ἐξολεθρεῦσαι</w>
+<w id="Obad.14..9" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Obad.14..10" ana="V1 PMPAPM" lem="ἀνα-σώζω">ἀνασῳζομένουσ</w>
+<w id="Obad.14..11" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Obad.14..12" ana="C" lem="μηδέ">μηδὲ</w>
+<w id="Obad.14..13" ana="VA AAS2S" lem="συν-κλείω">συγκλείσῃσ</w>
+<w id="Obad.14..14" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Obad.14..15" ana="V1 PAPAPM" lem="φεύγω">φεύγοντασ</w>
+<w id="Obad.14..16" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Obad.14..17" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Obad.14..18" ana="P" lem="ἐν">ἐν</w>
+<w id="Obad.14..19" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Obad.14..20" ana="N3I GSF" lem="θλῖψισ">θλίψεωσ</w>
+<w id="Obad.15..1" ana="C" lem="διότι">διότι</w>
+<w id="Obad.15..2" ana="D" lem="ἐγγύσ">ἐγγὺσ</w>
+<w id="Obad.15..3" ana="N1A NSF" lem="ἡμέρα">ἡμέρα</w>
+<w id="Obad.15..4" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Obad.15..5" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Obad.15..6" ana="A3 APN" lem="πᾶσ">πάντα</w>
+<w id="Obad.15..7" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Obad.15..8" ana="N3E APN" lem="ἔθνοσ">ἔθνη</w>
+<w id="Obad.15..9" ana="RR ASM" lem="ὅσ">ὃν</w>
+<w id="Obad.15..10" ana="N2 ASM" lem="τρόποσ">τρόπον</w>
+<w id="Obad.15..11" ana="VAI AAI2S" lem="ποιέω">ἐποίησασ</w>
+<w id="Obad.15..12" ana="D" lem="οὕτωσ">οὕτωσ</w>
+<w id="Obad.15..13" ana="V9 FMI3S" lem="εἰμί">ἔσται</w>
+<w id="Obad.15..14" ana="RP DS" lem="σύ">σοι</w>
+<w id="Obad.15..15" ana="RA NSN" lem="ὁ">τὸ</w>
+<w id="Obad.15..16" ana="N3M NSN" lem="ἀνταπόδομα">ἀνταπόδομά</w>
+<w id="Obad.15..17" ana="RP GS" lem="σύ">σου</w>
+<w id="Obad.15..18" ana="VC FPI3S" lem="ἀντι ἀπο-δίδωμι">ἀνταποδοθήσεται</w>
+<w id="Obad.15..19" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Obad.15..20" ana="N1 ASF" lem="κεφαλή">κεφαλήν</w>
+<w id="Obad.15..21" ana="RP GS" lem="σύ">σου</w>
+<w id="Obad.16..1" ana="C" lem="διότι">διότι</w>
+<w id="Obad.16..2" ana="RR ASM" lem="ὅσ">ὃν</w>
+<w id="Obad.16..3" ana="N2 ASM" lem="τρόποσ">τρόπον</w>
+<w id="Obad.16..4" ana="VBI AAI2S" lem="πίνω">ἔπιεσ</w>
+<w id="Obad.16..5" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Obad.16..6" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Obad.16..7" ana="N3E ASN" lem="ὄροσ">ὄροσ</w>
+<w id="Obad.16..8" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Obad.16..9" ana="A1A ASN" lem="ἅγιοσ">ἅγιόν</w>
+<w id="Obad.16..10" ana="RP GS" lem="ἐγώ">μου</w>
+<w id="Obad.16..11" ana="VF FMI3P" lem="πίνω">πίονται</w>
+<w id="Obad.16..12" ana="A3 NPN" lem="πᾶσ">πάντα</w>
+<w id="Obad.16..13" ana="RA NPN" lem="ὁ">τὰ</w>
+<w id="Obad.16..14" ana="N3E NPN" lem="ἔθνοσ">ἔθνη</w>
+<w id="Obad.16..15" ana="N2 ASM" lem="οἶνοσ">οἶνον</w>
+<w id="Obad.16..16" ana="VF FMI3P" lem="πίνω">πίονται</w>
+<w id="Obad.16..17" ana="C" lem="καί">καὶ</w>
+<w id="Obad.16..18" ana="VF FMI3P" lem="κατα-βαίνω">καταβήσονται</w>
+<w id="Obad.16..19" ana="C" lem="καί">καὶ</w>
+<w id="Obad.16..20" ana="VF FMI3P" lem="εἰμί">ἔσονται</w>
+<w id="Obad.16..21" ana="D" lem="καθώσ">καθὼσ</w>
+<w id="Obad.16..22" ana="D" lem="οὐ">οὐχ</w>
+<w id="Obad.16..23" ana="V1 PAPNPM" lem="ὑπο-ἄρχω">ὑπάρχοντεσ</w>
+<w id="Obad.17..1" ana="P" lem="ἐν">ἐν</w>
+<w id="Obad.17..2" ana="X" lem="δέ">δὲ</w>
+<w id="Obad.17..3" ana="RA DSN" lem="ὁ">τῷ</w>
+<w id="Obad.17..4" ana="N3E DSN" lem="ὄροσ">ὄρει</w>
+<w id="Obad.17..5" ana="N GS" lem="Σιων">Σιων</w>
+<w id="Obad.17..6" ana="V9 FMI3S" lem="εἰμί">ἔσται</w>
+<w id="Obad.17..7" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Obad.17..8" ana="N1A NSF" lem="σωτηρία">σωτηρία</w>
+<w id="Obad.17..9" ana="C" lem="καί">καὶ</w>
+<w id="Obad.17..10" ana="V9 FMI3S" lem="εἰμί">ἔσται</w>
+<w id="Obad.17..11" ana="A1A NSN" lem="ἅγιοσ">ἅγιον</w>
+<w id="Obad.17..12" ana="C" lem="καί">καὶ</w>
+<w id="Obad.17..13" ana="VF FAI3P" lem="κατα-κληρονομέω">κατακληρονομήσουσιν</w>
+<w id="Obad.17..14" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Obad.17..15" ana="N2 NSM" lem="οἶκοσ">οἶκοσ</w>
+<w id="Obad.17..16" ana="N GSM" lem="Ἰακώβ">Ιακωβ</w>
+<w id="Obad.17..17" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Obad.17..18" ana="VA AAPAPM" lem="κατα-κληρονομέω">κατακληρονομήσαντασ</w>
+<w id="Obad.17..19" ana="RD APM" lem="αὐτόσ">αὐτούσ</w>
+<w id="Obad.18..1" ana="C" lem="καί">καὶ</w>
+<w id="Obad.18..2" ana="V9 FMI3S" lem="εἰμί">ἔσται</w>
+<w id="Obad.18..3" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Obad.18..4" ana="N2 NSM" lem="οἶκοσ">οἶκοσ</w>
+<w id="Obad.18..5" ana="N GSM" lem="Ἰακώβ">Ιακωβ</w>
+<w id="Obad.18..6" ana="N3 NSN" lem="πῦρ">πῦρ</w>
+<w id="Obad.18..7" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Obad.18..8" ana="X" lem="δέ">δὲ</w>
+<w id="Obad.18..9" ana="N2 NSM" lem="οἶκοσ">οἶκοσ</w>
+<w id="Obad.18..10" ana="N GSM" lem="Ιωσηφ">Ιωσηφ</w>
+<w id="Obad.18..11" ana="N3G NSF" lem="φλόξ">φλόξ</w>
+<w id="Obad.18..12" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Obad.18..13" ana="X" lem="δέ">δὲ</w>
+<w id="Obad.18..14" ana="N2 NSM" lem="οἶκοσ">οἶκοσ</w>
+<w id="Obad.18..15" ana="N GSM" lem="Ησαυ">Ησαυ</w>
+<w id="Obad.18..16" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Obad.18..17" ana="N1 ASF" lem="καλάμη">καλάμην</w>
+<w id="Obad.18..18" ana="C" lem="καί">καὶ</w>
+<w id="Obad.18..19" ana="VC FPI3P" lem="ἐκ-καίω">ἐκκαυθήσονται</w>
+<w id="Obad.18..20" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Obad.18..21" ana="RD APM" lem="αὐτόσ">αὐτοὺσ</w>
+<w id="Obad.18..22" ana="C" lem="καί">καὶ</w>
+<w id="Obad.18..23" ana="VF FMI3P" lem="κατα-ἐσθίω">καταφάγονται</w>
+<w id="Obad.18..24" ana="RD APM" lem="αὐτόσ">αὐτούσ</w>
+<w id="Obad.18..25" ana="C" lem="καί">καὶ</w>
+<w id="Obad.18..26" ana="D" lem="οὐ">οὐκ</w>
+<w id="Obad.18..27" ana="V9 FMI3S" lem="εἰμί">ἔσται</w>
+<w id="Obad.18..28" ana="A1B NSM" lem="πυροφόροσ">πυροφόροσ</w>
+<w id="Obad.18..29" ana="P" lem="ἐν">ἐν</w>
+<w id="Obad.18..30" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Obad.18..31" ana="N2 DSM" lem="οἶκοσ">οἴκῳ</w>
+<w id="Obad.18..32" ana="N GSM" lem="Ησαυ">Ησαυ</w>
+<w id="Obad.18..33" ana="C" lem="διότι">διότι</w>
+<w id="Obad.18..34" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Obad.18..35" ana="VAI AAI3S" lem="λαλέω">ἐλάλησεν</w>
+<w id="Obad.19..1" ana="C" lem="καί">καὶ</w>
+<w id="Obad.19..2" ana="VF FAI3P" lem="κατα-κληρονομέω">κατακληρονομήσουσιν</w>
+<w id="Obad.19..3" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Obad.19..4" ana="P" lem="ἐν">ἐν</w>
+<w id="Obad.19..5" ana="N DS" lem="Ναγεβ">Ναγεβ</w>
+<w id="Obad.19..6" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Obad.19..7" ana="N3E ASN" lem="ὄροσ">ὄροσ</w>
+<w id="Obad.19..8" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Obad.19..9" ana="N ASN" lem="Ησαυ">Ησαυ</w>
+<w id="Obad.19..10" ana="C" lem="καί">καὶ</w>
+<w id="Obad.19..11" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Obad.19..12" ana="P" lem="ἐν">ἐν</w>
+<w id="Obad.19..13" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Obad.19..14" ana="N DSF" lem="Σεφηλα">Σεφηλα</w>
+<w id="Obad.19..15" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Obad.19..16" ana="A1B APM" lem="ἀλλόφυλοσ">ἀλλοφύλουσ</w>
+<w id="Obad.19..17" ana="C" lem="καί">καὶ</w>
+<w id="Obad.19..18" ana="VF FAI3P" lem="κατα-κληρονομέω">κατακληρονομήσουσιν</w>
+<w id="Obad.19..19" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Obad.19..20" ana="N3E ASN" lem="ὄροσ">ὄροσ</w>
+<w id="Obad.19..21" ana="N GSM" lem="Ἐφράιμ">Εφραιμ</w>
+<w id="Obad.19..22" ana="C" lem="καί">καὶ</w>
+<w id="Obad.19..23" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Obad.19..24" ana="N2N ASN" lem="πεδίον">πεδίον</w>
+<w id="Obad.19..25" ana="N1A GSF" lem="Σαμαρεία">Σαμαρείασ</w>
+<w id="Obad.19..26" ana="C" lem="καί">καὶ</w>
+<w id="Obad.19..27" ana="N ASM" lem="Βενιαμίν">Βενιαμιν</w>
+<w id="Obad.19..28" ana="C" lem="καί">καὶ</w>
+<w id="Obad.19..29" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Obad.19..30" ana="N3 ASF" lem="Γαλααδῖτισ">Γαλααδῖτιν</w>
+<w id="Obad.20..1" ana="C" lem="καί">καὶ</w>
+<w id="Obad.20..2" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Obad.20..3" ana="N1A GSF" lem="μετοικεσία">μετοικεσίασ</w>
+<w id="Obad.20..4" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Obad.20..5" ana="N1 NSF" lem="ἀρχή">ἀρχὴ</w>
+<w id="Obad.20..6" ana="RD NSF" lem="οὗτοσ">αὕτη</w>
+<w id="Obad.20..7" ana="RA DPM" lem="ὁ">τοῖσ</w>
+<w id="Obad.20..8" ana="N2 DPM" lem="υἱόσ">υἱοῖσ</w>
+<w id="Obad.20..9" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Obad.20..10" ana="N1 NSF" lem="γῆ">γῆ</w>
+<w id="Obad.20..11" ana="RA GPM" lem="ὁ">τῶν</w>
+<w id="Obad.20..12" ana="N2 GPM" lem="Χαναναῖοσ">Χαναναίων</w>
+<w id="Obad.20..13" ana="P" lem="ἕωσ">ἕωσ</w>
+<w id="Obad.20..14" ana="N1A GPF" lem="Σαρεπτα">Σαρεπτων</w>
+<w id="Obad.20..15" ana="C" lem="καί">καὶ</w>
+<w id="Obad.20..16" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Obad.20..17" ana="N1A NSF" lem="μετοικεσία">μετοικεσία</w>
+<w id="Obad.20..18" ana="N GSF" lem="Ἰερουσαλήμ">Ιερουσαλημ</w>
+<w id="Obad.20..19" ana="P" lem="ἕωσ">ἕωσ</w>
+<w id="Obad.20..20" ana="N GS" lem="Εφραθα">Εφραθα</w>
+<w id="Obad.20..21" ana="C" lem="καί">καὶ</w>
+<w id="Obad.20..22" ana="VF FAI3P" lem="κληρονομέω">κληρονομήσουσιν</w>
+<w id="Obad.20..23" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="Obad.20..24" ana="N3I APF" lem="πόλισ">πόλεισ</w>
+<w id="Obad.20..25" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Obad.20..26" ana="N GS" lem="Ναγεβ">Ναγεβ</w>
+<w id="Obad.21..1" ana="C" lem="καί">καὶ</w>
+<w id="Obad.21..2" ana="VF FMI3P" lem="ἀνα-βαίνω">ἀναβήσονται</w>
+<w id="Obad.21..3" ana="N3 NPM" lem="ἀνήρ">ἄνδρεσ</w>
+<w id="Obad.21..4" ana="VT XPPNPM" lem="σώζω">σεσῳσμένοι</w>
+<w id="Obad.21..5" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Obad.21..6" ana="N3E GSN" lem="ὄροσ">ὄρουσ</w>
+<w id="Obad.21..7" ana="N GS" lem="Σιων">Σιων</w>
+<w id="Obad.21..8" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Obad.21..9" ana="VA AAN" lem="ἐκ-δικέω">ἐκδικῆσαι</w>
+<w id="Obad.21..10" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Obad.21..11" ana="N3E ASN" lem="ὄροσ">ὄροσ</w>
+<w id="Obad.21..12" ana="N GSM" lem="Ησαυ">Ησαυ</w>
+<w id="Obad.21..13" ana="C" lem="καί">καὶ</w>
+<w id="Obad.21..14" ana="V9 FMI3S" lem="εἰμί">ἔσται</w>
+<w id="Obad.21..15" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Obad.21..16" ana="N2 DSM" lem="κύριοσ">κυρίῳ</w>
+<w id="Obad.21..17" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Obad.21..18" ana="N1A NSF" lem="βασιλεία">βασιλεία</w>

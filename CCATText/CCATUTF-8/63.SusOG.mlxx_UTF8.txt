@@ -1,0 +1,792 @@
+<w id="Sus.6..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.6..2" ana="V1I IMI3P" lem="ἄρχω">ἤρχοντο</w>
+<w id="Sus.6..3" ana="N3I NPF" lem="κρίσισ">κρίσεισ</w>
+<w id="Sus.6..4" ana="P" lem="ἐκ">ἐξ</w>
+<w id="Sus.6..5" ana="RD GPF" lem="ἄλλοσ">ἄλλων</w>
+<w id="Sus.6..6" ana="N3I GPF" lem="πόλισ">πόλεων</w>
+<w id="Sus.6..7" ana="P" lem="πρόσ">πρὸσ</w>
+<w id="Sus.6..8" ana="RD APM" lem="αὐτόσ">αὐτούσ</w>
+<w id="Sus.7..1" ana="RD NPM" lem="οὗτοσ">οὗτοι</w>
+<w id="Sus.7..2" ana="VB AAPNPM" lem="ὁράω">ἰδόντεσ</w>
+<w id="Sus.7..3" ana="N3K ASF" lem="γυνή">γυναῖκα</w>
+<w id="Sus.7..4" ana="A1A ASF" lem="ἀστεῖοσ">ἀστείαν</w>
+<w id="Sus.7..5" ana="RA DSN" lem="ὁ">τῷ</w>
+<w id="Sus.7..6" ana="N3E DSN" lem="εἶδοσ">εἴδει</w>
+<w id="Sus.7..7" ana="N3K ASF" lem="γυνή">γυναῖκα</w>
+<w id="Sus.7..8" ana="N2 GSM" lem="ἀδελφόσ">ἀδελφοῦ</w>
+<w id="Sus.7..9" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Sus.7..10" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Sus.7..11" ana="RA GPM" lem="ὁ">τῶν</w>
+<w id="Sus.7..12" ana="N2 GPM" lem="υἱόσ">υἱῶν</w>
+<w id="Sus.7..13" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Sus.7..14" ana="N3M ASN" lem="ὄνομα">ὄνομα</w>
+<w id="Sus.7..15" ana="N ASF" lem="Σουσαννα">Σουσανναν</w>
+<w id="Sus.7..16" ana="N3 ASF" lem="θυγάτηρ">θυγατέρα</w>
+<w id="Sus.7..17" ana="N GSM" lem="Χελκιοσ">Χελκιου</w>
+<w id="Sus.7..18" ana="N3K ASF" lem="γυνή">γυναῖκα</w>
+<w id="Sus.7..19" ana="N GSM" lem="Ιωακιμ">Ιωακιμ</w>
+<w id="Sus.7..20" ana="V2 PAPASF" lem="περι-πατέω">περιπατοῦσαν</w>
+<w id="Sus.7..21" ana="P" lem="ἐν">ἐν</w>
+<w id="Sus.7..22" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Sus.7..23" ana="N2 DSM" lem="παράδεισοσ">παραδείσῳ</w>
+<w id="Sus.7..24" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Sus.7..25" ana="N3 GSM" lem="ἀνήρ">ἀνδρὸσ</w>
+<w id="Sus.7..26" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Sus.7..27" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Sus.7..28" ana="A1 ASN" lem="δειλινόσ">δειλινὸν</w>
+<w id="Sus.7..29" ana="C" lem="καί">καὶ</w>
+<w id="Sus.7..30" ana="VA AAPNPM" lem="ἐπι-θυμέω">ἐπιθυμήσαντεσ</w>
+<w id="Sus.7..31" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Sus.9..1" ana="VAI AAI3P" lem="δια-στρέφω">διέστρεψαν</w>
+<w id="Sus.9..2" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Sus.9..3" ana="N2C ASM" lem="νοῦσ">νοῦν</w>
+<w id="Sus.9..4" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Sus.9..5" ana="C" lem="καί">καὶ</w>
+<w id="Sus.9..6" ana="VAI AAI3P" lem="ἐκ-κλίνω">ἐξέκλιναν</w>
+<w id="Sus.9..7" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Sus.9..8" ana="N2 APM" lem="ὀφθαλμόσ">ὀφθαλμοὺσ</w>
+<w id="Sus.9..9" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Sus.9..10" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Sus.9..11" ana="D" lem="μή">μὴ</w>
+<w id="Sus.9..12" ana="V1 PAN" lem="βλέπω">βλέπειν</w>
+<w id="Sus.9..13" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Sus.9..14" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Sus.9..15" ana="N2 ASM" lem="οὐρανόσ">οὐρανὸν</w>
+<w id="Sus.9..16" ana="C" lem="μηδέ">μηδὲ</w>
+<w id="Sus.9..17" ana="V1 PAN" lem="μνημονεύω">μνημονεύειν</w>
+<w id="Sus.9..18" ana="N3M GPN" lem="κρίμα">κριμάτων</w>
+<w id="Sus.9..19" ana="A1A GPN" lem="δίκαιοσ">δικαίων</w>
+<w id="Sus.10..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.10..2" ana="A1 NPM" lem="ἀμφότεροι">ἀμφότεροι</w>
+<w id="Sus.10..3" ana="V9 IAI3P" lem="εἰμί">ἦσαν</w>
+<w id="Sus.10..4" ana="VM XMPNPM" lem="κατα-νύσσω">κατανενυγμένοι</w>
+<w id="Sus.10..5" ana="P" lem="περί">περὶ</w>
+<w id="Sus.10..6" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Sus.10..7" ana="C" lem="καί">καὶ</w>
+<w id="Sus.10..8" ana="A1A NSM" lem="ἕτεροσ">ἕτεροσ</w>
+<w id="Sus.10..9" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Sus.10..10" ana="A1A DSM" lem="ἕτεροσ">ἑτέρῳ</w>
+<w id="Sus.10..11" ana="D" lem="οὐ">οὐ</w>
+<w id="Sus.10..12" ana="V2I IMI3S" lem="προσ-ποιέω">προσεποιεῖτο</w>
+<w id="Sus.10..13" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Sus.10..14" ana="A1 ASN" lem="κακόσ">κακὸν</w>
+<w id="Sus.10..15" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Sus.10..16" ana="V1 PAPASN" lem="ἔχω">ἔχον</w>
+<w id="Sus.10..17" ana="RD APM" lem="αὐτόσ">αὐτοὺσ</w>
+<w id="Sus.10..18" ana="P" lem="περί">περὶ</w>
+<w id="Sus.10..19" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Sus.10..20" ana="C" lem="οὐδέ">οὐδὲ</w>
+<w id="Sus.10..21" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Sus.10..22" ana="N3K NSF" lem="γυνή">γυνὴ</w>
+<w id="Sus.10..23" ana="VZI AAI3S" lem="γιγνώσκω">ἔγνω</w>
+<w id="Sus.10..24" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Sus.10..25" ana="N3M ASN" lem="πρᾶγμα">πρᾶγμα</w>
+<w id="Sus.10..26" ana="RD ASN" lem="οὗτοσ">τοῦτο</w>
+<w id="Sus.12..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.12..2" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Sus.12..3" ana="V1I IMI3S" lem="γίγνομαι">ἐγίνετο</w>
+<w id="Sus.12..4" ana="N2 NSM" lem="ὄρθροσ">ὄρθροσ</w>
+<w id="Sus.12..5" ana="V1 PMPNPM" lem="ἔρχομαι">ἐρχόμενοι</w>
+<w id="Sus.12..6" ana="V1I IAI3P" lem="κλέπτω">ἔκλεπτον</w>
+<w id="Sus.12..7" ana="RD APM" lem="ἀλλήλω">ἀλλήλουσ</w>
+<w id="Sus.12..8" ana="V1 PAPNPM" lem="σπεύδω">σπεύδοντεσ</w>
+<w id="Sus.12..9" ana="RI NSM" lem="τίσ">τίσ</w>
+<w id="Sus.12..10" ana="VD FPI3S" lem="φαίνω">φανήσεται</w>
+<w id="Sus.12..11" ana="RD DSF" lem="αὐτόσ">αὐτῇ</w>
+<w id="Sus.12..12" ana="A1A NSM" lem="πρότεροσ">πρότεροσ</w>
+<w id="Sus.12..13" ana="C" lem="καί">καὶ</w>
+<w id="Sus.12..14" ana="VF FAI3S" lem="λαλέω">λαλήσει</w>
+<w id="Sus.12..15" ana="P" lem="πρόσ">πρὸσ</w>
+<w id="Sus.12..16" ana="RD ASF" lem="αὐτόσ">αὐτήν</w>
+<w id="Sus.13..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.13..2" ana="VB AMD2S" lem="ὁράω">ἰδοὺ</w>
+<w id="Sus.13..3" ana="RD NSF" lem="οὗτοσ">αὕτη</w>
+<w id="Sus.13..4" ana="P" lem="κατά">κατὰ</w>
+<w id="Sus.13..5" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Sus.13..6" ana="VX XAPASN" lem="ἔθω">εἰωθὸσ</w>
+<w id="Sus.13..7" ana="V2I IAI3S" lem="περι-πατέω">περιεπάτει</w>
+<w id="Sus.13..8" ana="C" lem="καί">καὶ</w>
+<w id="Sus.13..9" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Sus.13..10" ana="M NSM" lem="εἷσ">εἷσ</w>
+<w id="Sus.13..11" ana="RA GPM" lem="ὁ">τῶν</w>
+<w id="Sus.13..12" ana="N2 GPM" lem="πρεσβύτεροσ">πρεσβυτέρων</w>
+<w id="Sus.13..13" ana="VXI YAI3S" lem="ἔρχομαι">ἐληλύθει</w>
+<w id="Sus.13..14" ana="C" lem="καί">καὶ</w>
+<w id="Sus.13..15" ana="VB AMD2S" lem="ὁράω">ἰδοὺ</w>
+<w id="Sus.13..16" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Sus.13..17" ana="A1A NSM" lem="ἕτεροσ">ἕτεροσ</w>
+<w id="Sus.13..18" ana="VBI AMI3S" lem="παρα-γίγνομαι">παρεγένετο</w>
+<w id="Sus.13..19" ana="C" lem="καί">καὶ</w>
+<w id="Sus.13..20" ana="M NSM" lem="εἷσ">εἷσ</w>
+<w id="Sus.13..21" ana="RA ASN" lem="ὁ">τὸν</w>
+<w id="Sus.13..22" ana="A1A ASN" lem="ἕτεροσ">ἕτερον</w>
+<w id="Sus.13..23" ana="VAI AAI3S" lem="ἀνα-κρίνω">ἀνέκρινε</w>
+<w id="Sus.13..24" ana="V1 PAPNSM" lem="λέγω">λέγων</w>
+<w id="Sus.13..25" ana="RI ASN" lem="τίσ">τί</w>
+<w id="Sus.13..26" ana="RP NS" lem="σύ">σὺ</w>
+<w id="Sus.13..27" ana="D" lem="οὕτωσ">οὕτωσ</w>
+<w id="Sus.13..28" ana="N2 GSM" lem="ὄρθροσ">ὄρθρου</w>
+<w id="Sus.13..29" ana="VBI AAI2S" lem="ἐκ-ἔρχομαι">ἐξῆλθεσ</w>
+<w id="Sus.13..30" ana="D" lem="οὐ">οὐ</w>
+<w id="Sus.13..31" ana="VB AAPNSM" lem="παρα-λαμβάνω">παραλαβών</w>
+<w id="Sus.13..32" ana="RP AS" lem="ἐγώ">με</w>
+<w id="Sus.13..33" ana="C" lem="καί">καὶ</w>
+<w id="Sus.13..34" ana="VAI AMI3P" lem="ἐκ-ὁμολογέω">ἐξωμολογήσαντο</w>
+<w id="Sus.13..35" ana="P" lem="πρόσ">πρὸσ</w>
+<w id="Sus.13..36" ana="RD APM" lem="ἀλλήλω">ἀλλήλουσ</w>
+<w id="Sus.13..37" ana="A1A NSM" lem="ἑκάτεροσ">ἑκάτεροσ</w>
+<w id="Sus.13..38" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Sus.13..39" ana="N1 ASF" lem="ὀδύνη">ὀδύνην</w>
+<w id="Sus.13..40" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="Sus.19..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.19..2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Sus.19..3" ana="M NSM" lem="εἷσ">εἷσ</w>
+<w id="Sus.19..4" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Sus.19..5" ana="A1A DSM" lem="ἕτεροσ">ἑτέρῳ</w>
+<w id="Sus.19..6" ana="VC APS1P" lem="πορεύομαι">πορευθῶμεν</w>
+<w id="Sus.19..7" ana="P" lem="πρόσ">πρὸσ</w>
+<w id="Sus.19..8" ana="RD ASF" lem="αὐτόσ">αὐτήν</w>
+<w id="Sus.19..9" ana="C" lem="καί">καὶ</w>
+<w id="Sus.19..10" ana="VT XMPNPM" lem="συν-τίθημι">συνθέμενοι</w>
+<w id="Sus.19..11" ana="VBI AAI3P" lem="προσ-ἔρχομαι">προσήλθοσαν</w>
+<w id="Sus.19..12" ana="RD DSF" lem="αὐτόσ">αὐτῇ</w>
+<w id="Sus.19..13" ana="C" lem="καί">καὶ</w>
+<w id="Sus.19..14" ana="V1I IMI3P" lem="ἐκ-βιάζω">ἐξεβιάζοντο</w>
+<w id="Sus.19..15" ana="RD ASF" lem="αὐτόσ">αὐτήν</w>
+<w id="Sus.22..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.22..2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Sus.22..3" ana="RD DPM" lem="αὐτόσ">αὐτοῖσ</w>
+<w id="Sus.22..4" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Sus.22..5" ana="N1A NSF" lem="Ἰουδαία">Ιουδαία</w>
+<w id="Sus.22..6" ana="VX XAI1S" lem="οἶδα">οἶδα</w>
+<w id="Sus.22..7" ana="C" lem="ὅτι">ὅτι</w>
+<w id="Sus.22..8" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="Sus.22..9" ana="VA AAS1S" lem="πράσσω">πράξω</w>
+<w id="Sus.22..10" ana="RD ASN" lem="οὗτοσ">τοῦτο</w>
+<w id="Sus.22..11" ana="N2 NSM" lem="θάνατοσ">θάνατόσ</w>
+<w id="Sus.22..12" ana="RP DS" lem="ἐγώ">μοί</w>
+<w id="Sus.22..13" ana="V9 PAI3S" lem="εἰμί">ἐστι</w>
+<w id="Sus.22..14" ana="C" lem="καί">καὶ</w>
+<w id="Sus.22..15" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="Sus.22..16" ana="D" lem="μή">μὴ</w>
+<w id="Sus.22..17" ana="VA AAS1S" lem="πράσσω">πράξω</w>
+<w id="Sus.22..18" ana="D" lem="οὐ">οὐκ</w>
+<w id="Sus.22..19" ana="VF FMI1S" lem="ἐκ-φεύγω">ἐκφεύξομαι</w>
+<w id="Sus.22..20" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="Sus.22..21" ana="N3 APF" lem="χείρ">χεῖρασ</w>
+<w id="Sus.22..22" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Sus.23..1" ana="A3C ASN" lem="καλόσ">κάλλιον</w>
+<w id="Sus.23..2" ana="X" lem="δέ">δέ</w>
+<w id="Sus.23..3" ana="RP AS" lem="ἐγώ">με</w>
+<w id="Sus.23..4" ana="D" lem="μή">μὴ</w>
+<w id="Sus.23..5" ana="VA AAPASF" lem="πράσσω">πράξασαν</w>
+<w id="Sus.23..6" ana="VB AAN" lem="ἐν-πίπτω">ἐμπεσεῖν</w>
+<w id="Sus.23..7" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Sus.23..8" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="Sus.23..9" ana="N3 APF" lem="χείρ">χεῖρασ</w>
+<w id="Sus.23..10" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Sus.23..11" ana="C" lem="ἤ">ἢ</w>
+<w id="Sus.23..12" ana="VB AAN" lem="ἁμαρτάνω">ἁμαρτεῖν</w>
+<w id="Sus.23..13" ana="D P" lem="ἐνώπιον">ἐνώπιον</w>
+<w id="Sus.23..14" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Sus.28..1" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Sus.28..2" ana="X" lem="δέ">δὲ</w>
+<w id="Sus.28..3" ana="A1B NPM" lem="παράνομοσ">παράνομοι</w>
+<w id="Sus.28..4" ana="N3 NPM" lem="ἀνήρ">ἄνδρεσ</w>
+<w id="Sus.28..5" ana="VAI AAI3P" lem="ἀπο-στρέφω">ἀπέστρεψαν</w>
+<w id="Sus.28..6" ana="V2 PAPNPM" lem="ἀπο-εἰλέω">ἀπειλοῦντεσ</w>
+<w id="Sus.28..7" ana="P" lem="ἐν">ἐν</w>
+<w id="Sus.28..8" ana="RD DPM" lem="ἑαυτοῦ">ἑαυτοῖσ</w>
+<w id="Sus.28..9" ana="C" lem="καί">καὶ</w>
+<w id="Sus.28..10" ana="V1 PAPNPM" lem="ἐνεδρεύω">ἐνεδρεύοντεσ</w>
+<w id="Sus.28..11" ana="C" lem="ἵνα">ἵνα</w>
+<w id="Sus.28..12" ana="VA AAS3P" lem="θανατόω">θανατώσουσιν</w>
+<w id="Sus.28..13" ana="RD ASF" lem="αὐτόσ">αὐτήν</w>
+<w id="Sus.28..14" ana="C" lem="καί">καὶ</w>
+<w id="Sus.28..15" ana="VB AAPNPM" lem="ἔρχομαι">ἐλθόντεσ</w>
+<w id="Sus.28..16" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Sus.28..17" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Sus.28..18" ana="N1 ASF" lem="συναγωγή">συναγωγὴν</w>
+<w id="Sus.28..19" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Sus.28..20" ana="N3I GSF" lem="πόλισ">πόλεωσ</w>
+<w id="Sus.28..21" ana="D" lem="οὗ">οὗ</w>
+<w id="Sus.28..22" ana="V2 IAI3P" lem="παρα-οἰκέω">παρῳκοῦσαν</w>
+<w id="Sus.28..23" ana="C" lem="καί">καὶ</w>
+<w id="Sus.28..24" ana="VAI AAI3P" lem="συνεδρεύω">συνήδρευσαν</w>
+<w id="Sus.28..25" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Sus.28..26" ana="V9 PAPNPM" lem="εἰμί">ὄντεσ</w>
+<w id="Sus.28..27" ana="D" lem="ἐκεῖ">ἐκεῖ</w>
+<w id="Sus.28..28" ana="A3 NPM" lem="πᾶσ">πάντεσ</w>
+<w id="Sus.28..29" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Sus.28..30" ana="N2 NPM" lem="υἱόσ">υἱοὶ</w>
+<w id="Sus.28..31" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Sus.29..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.29..2" ana="VH AAPNPM" lem="ἀνα-ἵστημι">ἀναστάντεσ</w>
+<w id="Sus.29..3" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Sus.29..4" ana="M NDM" lem="δύο">δύο</w>
+<w id="Sus.29..5" ana="N2 NPM" lem="πρεσβύτεροσ">πρεσβύτεροι</w>
+<w id="Sus.29..6" ana="C" lem="καί">καὶ</w>
+<w id="Sus.29..7" ana="N1M NPM" lem="κριτήσ">κριταὶ</w>
+<w id="Sus.29..8" ana="VAI AAI3P" lem="εἶπον">εἶπαν</w>
+<w id="Sus.29..9" ana="VA AAD2P" lem="ἀπο-στέλλω">ἀποστείλατε</w>
+<w id="Sus.29..10" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Sus.29..11" ana="N ASF" lem="Σουσαννα">Σουσανναν</w>
+<w id="Sus.29..12" ana="N3 ASF" lem="θυγάτηρ">θυγατέρα</w>
+<w id="Sus.29..13" ana="N GSM" lem="Χελκιοσ">Χελκιου</w>
+<w id="Sus.29..14" ana="RX NSF" lem="ὅστισ">ἥτισ</w>
+<w id="Sus.29..15" ana="V9 PAI3S" lem="εἰμί">ἐστὶ</w>
+<w id="Sus.29..16" ana="N3K NSF" lem="γυνή">γυνὴ</w>
+<w id="Sus.29..17" ana="N GSM" lem="Ιωακιμ">Ιωακιμ</w>
+<w id="Sus.29..18" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Sus.29..19" ana="X" lem="δέ">δὲ</w>
+<w id="Sus.29..20" ana="D" lem="εὐθέωσ">εὐθέωσ</w>
+<w id="Sus.29..21" ana="VAI AAI3P" lem="καλέω">ἐκάλεσαν</w>
+<w id="Sus.29..22" ana="RD ASF" lem="αὐτόσ">αὐτήν</w>
+<w id="Sus.30..1" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Sus.30..2" ana="X" lem="δέ">δὲ</w>
+<w id="Sus.30..3" ana="VCI API3S" lem="παρα-γίγνομαι">παρεγενήθη</w>
+<w id="Sus.30..4" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Sus.30..5" ana="N3K NSF" lem="γυνή">γυνὴ</w>
+<w id="Sus.30..6" ana="P" lem="σύν">σὺν</w>
+<w id="Sus.30..7" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Sus.30..8" ana="N3 DSM" lem="πατήρ">πατρὶ</w>
+<w id="Sus.30..9" ana="RD GSF" lem="ἑαυτοῦ">ἑαυτῆσ</w>
+<w id="Sus.30..10" ana="C" lem="καί">καὶ</w>
+<w id="Sus.30..11" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Sus.30..12" ana="N3 DSF" lem="μήτηρ">μητρί</w>
+<w id="Sus.30..13" ana="C" lem="καί">καὶ</w>
+<w id="Sus.30..14" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Sus.30..15" ana="N3D NPM" lem="παῖσ">παῖδεσ</w>
+<w id="Sus.30..16" ana="C" lem="καί">καὶ</w>
+<w id="Sus.30..17" ana="RA NPF" lem="ὁ">αἱ</w>
+<w id="Sus.30..18" ana="N1 NPF" lem="παιδίσκη">παιδίσκαι</w>
+<w id="Sus.30..19" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Sus.30..20" ana="V9 PAPNPM" lem="εἰμί">ὄντεσ</w>
+<w id="Sus.30..21" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Sus.30..22" ana="N2 ASM" lem="ἀριθμόσ">ἀριθμὸν</w>
+<w id="Sus.30..23" ana="A1A NPM" lem="πεντακόσιοι">πεντακόσιοι</w>
+<w id="Sus.30..24" ana="VBI AMI3P" lem="παρα-γίγνομαι">παρεγένοντο</w>
+<w id="Sus.30..25" ana="C" lem="καί">καὶ</w>
+<w id="Sus.30..26" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Sus.30..27" ana="N2N APN" lem="παιδίον">παιδία</w>
+<w id="Sus.30..28" ana="N GSF" lem="Σουσαννα">Σουσαννασ</w>
+<w id="Sus.30..29" ana="A3 APN" lem="τέσσαρεσ">τέσσαρα</w>
+<w id="Sus.31..1" ana="V9 IAI3S" lem="εἰμί">ἦν</w>
+<w id="Sus.31..2" ana="X" lem="δέ">δὲ</w>
+<w id="Sus.31..3" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Sus.31..4" ana="N3K NSF" lem="γυνή">γυνὴ</w>
+<w id="Sus.31..5" ana="A1A NSF" lem="τρυφερόσ">τρυφερὰ</w>
+<w id="Sus.31..6" ana="D" lem="σφόδρα">σφόδρα</w>
+<w id="Sus.32..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.32..2" ana="VAI AAI3P" lem="προσ-τάσσω">προσέταξαν</w>
+<w id="Sus.32..3" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Sus.32..4" ana="A1B NPM" lem="παράνομοσ">παράνομοι</w>
+<w id="Sus.32..5" ana="VA AAN" lem="ἀπο-καλύπτω">ἀποκαλύψαι</w>
+<w id="Sus.32..6" ana="RD ASF" lem="αὐτόσ">αὐτήν</w>
+<w id="Sus.32..7" ana="C" lem="ἵνα">ἵνα</w>
+<w id="Sus.32..8" ana="VS APS3P" lem="ἐν-πίμπλημι">ἐμπλησθῶσι</w>
+<w id="Sus.32..9" ana="N3E GSN" lem="κάλλοσ">κάλλουσ</w>
+<w id="Sus.32..10" ana="N1A APF" lem="ἐπιθυμία">ἐπιθυμίασ</w>
+<w id="Sus.32..11" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Sus.33..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.33..2" ana="V1 IAI3S" lem="κλαίω">ἐκλαίοσαν</w>
+<w id="Sus.33..3" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Sus.33..4" ana="P" lem="παρά">παρ'</w>
+<w id="Sus.33..5" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Sus.33..6" ana="A3 NPM" lem="πᾶσ">πάντεσ</w>
+<w id="Sus.33..7" ana="C" lem="καί">καὶ</w>
+<w id="Sus.33..8" ana="A1 NPM" lem="ὅσοσ">ὅσοι</w>
+<w id="Sus.33..9" ana="RD ASF" lem="αὐτόσ">αὐτὴν</w>
+<w id="Sus.33..10" ana="VX YAI3P" lem="οἶδα">ᾔδεισαν</w>
+<w id="Sus.33..11" ana="A3 NPM" lem="πᾶσ">πάντεσ</w>
+<w id="Sus.34..1" ana="VH AAPNPM" lem="ἀνα-ἵστημι">ἀναστάντεσ</w>
+<w id="Sus.34..2" ana="X" lem="δέ">δὲ</w>
+<w id="Sus.34..3" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Sus.34..4" ana="A1A NPMC" lem="πρεσβύτεροσ">πρεσβύτεροι</w>
+<w id="Sus.34..5" ana="C" lem="καί">καὶ</w>
+<w id="Sus.34..6" ana="N1M NPM" lem="κριτήσ">κριταὶ</w>
+<w id="Sus.34..7" ana="VAI AAI3P" lem="ἐπι-τίθημι">ἐπέθηκαν</w>
+<w id="Sus.34..8" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="Sus.34..9" ana="N3 APF" lem="χείρ">χεῖρασ</w>
+<w id="Sus.34..10" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Sus.34..11" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Sus.34..12" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Sus.34..13" ana="N1 GSF" lem="κεφαλή">κεφαλῆσ</w>
+<w id="Sus.34..14" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Sus.35..1" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Sus.35..2" ana="X" lem="δέ">δὲ</w>
+<w id="Sus.35..3" ana="N1A NSF" lem="καρδία">καρδία</w>
+<w id="Sus.35..4" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Sus.35..5" ana="VXI YAI3S" lem="πείθω">ἐπεποίθει</w>
+<w id="Sus.35..6" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Sus.35..7" ana="N2 DSM" lem="κύριοσ">κυρίῳ</w>
+<w id="Sus.35..8" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Sus.35..9" ana="N2 DSM" lem="θεόσ">θεῷ</w>
+<w id="Sus.35..10" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Sus.35..11" ana="C" lem="καί">καὶ</w>
+<w id="Sus.35..12" ana="VA AAPNSF" lem="ἀνα-κύπτω">ἀνακύψασα</w>
+<w id="Sus.35..13" ana="VAI AAI3S" lem="κλαίω">ἔκλαυσεν</w>
+<w id="Sus.35..14" ana="P" lem="ἐν">ἐν</w>
+<w id="Sus.35..15" ana="RD DSF" lem="ἑαυτοῦ">ἑαυτῇ</w>
+<w id="Sus.35..16" ana="V1 PAPNSF" lem="λέγω">λέγουσα</w>
+<w id="Sus.35..1" ana="N2 VSM" lem="κύριοσ">κύριε</w>
+<w id="Sus.35..2" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Sus.35..3" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="Sus.35..4" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Sus.35..5" ana="A1B NSM" lem="αἰώνιοσ">αἰώνιοσ</w>
+<w id="Sus.35..6" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Sus.35..7" ana="VX XAPNSM" lem="οἰδά">εἰδὼσ</w>
+<w id="Sus.35..8" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Sus.35..9" ana="A3 APN" lem="πᾶσ">πάντα</w>
+<w id="Sus.35..10" ana="D" lem="πρίν">πρὶν</w>
+<w id="Sus.35..11" ana="N3I GSF" lem="γένεσισ">γενέσεωσ</w>
+<w id="Sus.35..12" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Sus.35..13" ana="RP NS" lem="σύ">σὺ</w>
+<w id="Sus.35..14" ana="VX XAI2S" lem="οἶδα">οἶδασ</w>
+<w id="Sus.35..15" ana="C" lem="ὅτι">ὅτι</w>
+<w id="Sus.35..16" ana="D" lem="οὐ">οὐκ</w>
+<w id="Sus.35..17" ana="VAI AAI1S" lem="ποιέω">ἐποίησα</w>
+<w id="Sus.35..18" ana="RR APN" lem="ὅσ">ἃ</w>
+<w id="Sus.35..19" ana="V1 PMI3P" lem="πονηρεύω">πονηρεύονται</w>
+<w id="Sus.35..20" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Sus.35..21" ana="A1B NPM" lem="ἄνομοσ">ἄνομοι</w>
+<w id="Sus.35..22" ana="RD NPM" lem="οὗτοσ">οὗτοι</w>
+<w id="Sus.35..23" ana="P" lem="ἐπί">ἐπ'</w>
+<w id="Sus.35..24" ana="RP DS" lem="ἐγώ">ἐμοί</w>
+<w id="Sus.35..25" ana="C" lem="καί">καὶ</w>
+<w id="Sus.35..26" ana="VAI AAI3S" lem="εἰσ-ἀκούω">εἰσήκουσε</w>
+<w id="Sus.35..27" ana="N2 NSM" lem="κύριοσ">κύριοσ</w>
+<w id="Sus.35..28" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Sus.35..29" ana="N3I GSF" lem="δέησισ">δεήσεωσ</w>
+<w id="Sus.35..30" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Sus.36..1" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Sus.36..2" ana="X" lem="δέ">δὲ</w>
+<w id="Sus.36..3" ana="M NDM" lem="δύο">δύο</w>
+<w id="Sus.36..4" ana="N2 NPM" lem="πρεσβύτεροσ">πρεσβύτεροι</w>
+<w id="Sus.36..5" ana="VAI AAI3P" lem="εἶπον">εἶπαν</w>
+<w id="Sus.36..6" ana="RP NP" lem="ἐγώ">ἡμεῖσ</w>
+<w id="Sus.36..7" ana="V2I IAI1P" lem="περι-πατέω">περιεπατοῦμεν</w>
+<w id="Sus.36..8" ana="P" lem="ἐν">ἐν</w>
+<w id="Sus.36..9" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Sus.36..10" ana="N2 DSM" lem="παράδεισοσ">παραδείσῳ</w>
+<w id="Sus.36..11" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Sus.36..12" ana="N3 GSM" lem="ἀνήρ">ἀνδρὸσ</w>
+<w id="Sus.36..13" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="Sus.37..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.37..2" ana="V4 PAPNPM" lem="κυκλόω">κυκλοῦντεσ</w>
+<w id="Sus.37..3" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Sus.37..4" ana="N2N ASN" lem="στάδιον">στάδιον</w>
+<w id="Sus.37..5" ana="VBI AAI1P" lem="ὁράω">εἴδομεν</w>
+<w id="Sus.37..6" ana="RD ASF" lem="οὗτοσ">ταύτην</w>
+<w id="Sus.37..7" ana="V1 PMPASF" lem="ἀνα-παύω">ἀναπαυομένην</w>
+<w id="Sus.37..8" ana="P" lem="μετά">μετὰ</w>
+<w id="Sus.37..9" ana="N3 GSM" lem="ἀνήρ">ἀνδρὸσ</w>
+<w id="Sus.37..10" ana="C" lem="καί">καὶ</w>
+<w id="Sus.37..11" ana="VH AAPNPM" lem="ἵστημι">στάντεσ</w>
+<w id="Sus.37..12" ana="V2I IAI1P" lem="θεωρέω">ἐθεωροῦμεν</w>
+<w id="Sus.37..13" ana="RD APM" lem="αὐτόσ">αὐτοὺσ</w>
+<w id="Sus.37..14" ana="V2 PAPAPM" lem="ὁμιλέω">ὁμιλοῦντασ</w>
+<w id="Sus.37..15" ana="RD DPM" lem="ἀλλήλω">ἀλλήλοισ</w>
+<w id="Sus.38..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.38..2" ana="RD NPM" lem="αὐτόσ">αὐτοὶ</w>
+<w id="Sus.38..3" ana="D" lem="οὐ">οὐκ</w>
+<w id="Sus.38..4" ana="VX YAI3P" lem="οἶδα">ᾔδεισαν</w>
+<w id="Sus.38..5" ana="C" lem="ὅτι">ὅτι</w>
+<w id="Sus.38..6" ana="VXI YAI1P" lem="ἵστημι">εἱστήκειμεν</w>
+<w id="Sus.38..7" ana="D" lem="τότε">τότε</w>
+<w id="Sus.38..8" ana="VAI AMI1P" lem="συν-εἶπον">συνειπάμεθα</w>
+<w id="Sus.38..9" ana="RD DPM" lem="ἀλλήλω">ἀλλήλοισ</w>
+<w id="Sus.38..10" ana="V1 PAPNPM" lem="λέγω">λέγοντεσ</w>
+<w id="Sus.38..11" ana="VB AAS1P" lem="μανθάνω">μάθωμεν</w>
+<w id="Sus.38..12" ana="RI NPM" lem="τίσ">τίνεσ</w>
+<w id="Sus.38..13" ana="V9 PAI3P" lem="εἰμί">εἰσὶν</w>
+<w id="Sus.38..14" ana="RD NPM" lem="οὗτοσ">οὗτοι</w>
+<w id="Sus.39..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.39..2" ana="VB AAPNPM" lem="προσ-ἔρχομαι">προσελθόντεσ</w>
+<w id="Sus.39..3" ana="VZI AAI1P" lem="ἐπι-γιγνώσκω">ἐπέγνωμεν</w>
+<w id="Sus.39..4" ana="RD ASF" lem="αὐτόσ">αὐτήν</w>
+<w id="Sus.39..5" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Sus.39..6" ana="X" lem="δέ">δὲ</w>
+<w id="Sus.39..7" ana="N2 NSM" lem="νεανίσκοσ">νεανίσκοσ</w>
+<w id="Sus.39..8" ana="VBI AAI3S" lem="φεύγω">ἔφυγε</w>
+<w id="Sus.39..9" ana="VM XMPNSM" lem="συν-καλύπτω">συγκεκαλυμμένοσ</w>
+<w id="Sus.40..1" ana="RD GSF" lem="οὗτοσ">ταύτησ</w>
+<w id="Sus.40..2" ana="X" lem="δέ">δὲ</w>
+<w id="Sus.40..3" ana="VB AMPNPM" lem="ἐπι-λαμβάνω">ἐπιλαβόμενοι</w>
+<w id="Sus.40..4" ana="V3I IAI1P" lem="ἐπι-ἐρωτάω">ἐπηρωτῶμεν</w>
+<w id="Sus.40..5" ana="RD ASF" lem="αὐτόσ">αὐτήν</w>
+<w id="Sus.40..6" ana="RI NSM" lem="τίσ">τίσ</w>
+<w id="Sus.40..7" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Sus.40..8" ana="N2 NSM" lem="ἄνθρωποσ">ἄνθρωποσ</w>
+<w id="Sus.41..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.41..2" ana="D" lem="οὐ">οὐκ</w>
+<w id="Sus.41..3" ana="VAI AAI3S" lem="ἀπο-ἀγγέλλω">ἀπήγγειλεν</w>
+<w id="Sus.41..4" ana="RP DP" lem="ἐγώ">ἡμῖν</w>
+<w id="Sus.41..5" ana="RI NSM" lem="τίσ">τίσ</w>
+<w id="Sus.41..6" ana="V9 IAI3S" lem="εἰμί">ἦν</w>
+<w id="Sus.41..7" ana="RD APN" lem="οὗτοσ">ταῦτα</w>
+<w id="Sus.41..8" ana="V2 PAI1P" lem="μαρτυρέω">μαρτυροῦμεν</w>
+<w id="Sus.41..9" ana="C" lem="καί">καὶ</w>
+<w id="Sus.41..10" ana="VAI AAI3S" lem="πιστεύω">ἐπίστευσεν</w>
+<w id="Sus.41..11" ana="RD DPM" lem="αὐτόσ">αὐτοῖσ</w>
+<w id="Sus.41..12" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Sus.41..13" ana="N1 NSF" lem="συναγωγή">συναγωγὴ</w>
+<w id="Sus.41..14" ana="A1S NSF" lem="πᾶσ">πᾶσα</w>
+<w id="Sus.41..15" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Sus.41..16" ana="N2 GPM" lem="πρεσβύτεροσ">πρεσβυτέρων</w>
+<w id="Sus.41..17" ana="V9 PAPGPM" lem="εἰμί">ὄντων</w>
+<w id="Sus.41..18" ana="C" lem="καί">καὶ</w>
+<w id="Sus.41..19" ana="N1M GPM" lem="κριτήσ">κριτῶν</w>
+<w id="Sus.41..20" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Sus.41..21" ana="N2 GSM" lem="λαόσ">λαοῦ</w>
+<w id="Sus.44..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.44..2" ana="VB AMD2S" lem="ὁράω">ἰδοὺ</w>
+<w id="Sus.44..3" ana="N2 NSM" lem="ἄγγελοσ">ἄγγελοσ</w>
+<w id="Sus.44..4" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Sus.44..5" ana="RD GSF" lem="ἐκεῖνοσ">ἐκείνησ</w>
+<w id="Sus.44..6" ana="V1 PMPGSF" lem="ἐκ-ἄγω">ἐξαγομένησ</w>
+<w id="Sus.44..7" ana="VB AMN" lem="ἀπο-ὀλλύω">ἀπολέσθαι</w>
+<w id="Sus.44..8" ana="C" lem="καί">καὶ</w>
+<w id="Sus.44..9" ana="VAI AAI3S" lem="δίδωμι">ἔδωκεν</w>
+<w id="Sus.44..10" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Sus.44..11" ana="N2 NSM" lem="ἄγγελοσ">ἄγγελοσ</w>
+<w id="Sus.44..12" ana="C W(S" lem="κατα">καθὼσ</w>
+<w id="Sus.44..13" ana="VD API3S" lem="προσ-τάσσω">προσετάγη</w>
+<w id="Sus.44..14" ana="N3M NSN" lem="πνεῦμα">πνεῦμα</w>
+<w id="Sus.44..15" ana="N3I GSF" lem="σύνεσισ">συνέσεωσ</w>
+<w id="Sus.44..16" ana="A1A DSM" lem="νέοσ">νεωτέρῳ</w>
+<w id="Sus.44..17" ana="V9 PAPDSM" lem="εἰμί">ὄντι</w>
+<w id="Sus.44..18" ana="N DSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="Sus.48..1" ana="VA AAPNSM" lem="δια-στέλλω">διαστείλασ</w>
+<w id="Sus.48..2" ana="X" lem="δέ">δὲ</w>
+<w id="Sus.48..3" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="Sus.48..4" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Sus.48..5" ana="N2 ASM" lem="ὄχλοσ">ὄχλον</w>
+<w id="Sus.48..6" ana="C" lem="καί">καὶ</w>
+<w id="Sus.48..7" ana="VH AAPNSM" lem="ἵστημι">στὰσ</w>
+<w id="Sus.48..8" ana="P" lem="ἐν">ἐν</w>
+<w id="Sus.48..9" ana="A1 DSM" lem="μέσοσ">μέσῳ</w>
+<w id="Sus.48..10" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Sus.48..11" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Sus.48..12" ana="D" lem="οὕτωσ">οὕτωσ</w>
+<w id="Sus.48..13" ana="A1A NPM" lem="μωρόσ">μωροί</w>
+<w id="Sus.48..14" ana="N2 NPM" lem="υἱόσ">υἱοὶ</w>
+<w id="Sus.48..15" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Sus.48..16" ana="D" lem="οὐ">οὐκ</w>
+<w id="Sus.48..17" ana="VA AAPNPM" lem="ἀνα-κρίνω">ἀνακρίναντεσ</w>
+<w id="Sus.48..18" ana="C" lem="οὐδέ">οὐδὲ</w>
+<w id="Sus.48..19" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Sus.48..20" ana="A3H ASN" lem="σαφήσ">σαφὲσ</w>
+<w id="Sus.48..21" ana="VZ AAPNPM" lem="ἐπι-γιγνώσκω">ἐπιγνόντεσ</w>
+<w id="Sus.48..22" ana="VAI AAI2P" lem="ἀπο-κρίνω">ἀπεκρίνατε</w>
+<w id="Sus.48..23" ana="N3 ASF" lem="θυγάτηρ">θυγατέρα</w>
+<w id="Sus.48..24" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Sus.51..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.51..2" ana="D" lem="νῦν">νῦν</w>
+<w id="Sus.51..3" ana="VA AAD2P" lem="δια-χωρίζω">διαχωρίσατέ</w>
+<w id="Sus.51..4" ana="RP DS" lem="ἐγώ">μοι</w>
+<w id="Sus.51..5" ana="RD APM" lem="αὐτόσ">αὐτοὺσ</w>
+<w id="Sus.51..6" ana="P" lem="ἀπό">ἀπ'</w>
+<w id="Sus.51..7" ana="RD GPM" lem="ἀλλήλω">ἀλλήλων</w>
+<w id="Sus.51..8" ana="A1A ASF" lem="μακρόσ">μακράν</w>
+<w id="Sus.51..9" ana="C" lem="ἵνα">ἵνα</w>
+<w id="Sus.51..10" ana="VA AAS1S" lem="ἐτάζω">ἐτάσω</w>
+<w id="Sus.51..11" ana="RD APM" lem="αὐτόσ">αὐτούσ</w>
+<w id="Sus.52..1" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Sus.52..2" ana="X" lem="δέ">δὲ</w>
+<w id="Sus.52..3" ana="VSI API3P" lem="δια-χωρίζω">διεχωρίσθησαν</w>
+<w id="Sus.52..4" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Sus.52..5" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="Sus.52..6" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Sus.52..7" ana="N1 DSF" lem="συναγωγή">συναγωγῇ</w>
+<w id="Sus.52..8" ana="D" lem="νῦν">νῦν</w>
+<w id="Sus.52..9" ana="D" lem="μή">μὴ</w>
+<w id="Sus.52..10" ana="VA AAS2P" lem="βλέπω">βλέψητε</w>
+<w id="Sus.52..11" ana="C" lem="ὅτι">ὅτι</w>
+<w id="Sus.52..12" ana="RD NPM" lem="οὗτοσ">οὗτοί</w>
+<w id="Sus.52..13" ana="V9 PAI3P" lem="εἰμί">εἰσι</w>
+<w id="Sus.52..14" ana="N2 NPM" lem="πρεσβύτεροσ">πρεσβύτεροι</w>
+<w id="Sus.52..15" ana="V1 PAPNPM" lem="λέγω">λέγοντεσ</w>
+<w id="Sus.52..16" ana="D" lem="οὐ">οὐ</w>
+<w id="Sus.52..17" ana="D" lem="μή">μὴ</w>
+<w id="Sus.52..18" ana="VA AMS3P" lem="ψεύδω">ψεύσωνται</w>
+<w id="Sus.52..19" ana="C" lem="ἀλλά">ἀλλὰ</w>
+<w id="Sus.52..20" ana="VF2 FAI1S" lem="ἀνα-κρίνω">ἀνακρινῶ</w>
+<w id="Sus.52..21" ana="RD APM" lem="αὐτόσ">αὐτοὺσ</w>
+<w id="Sus.52..22" ana="P" lem="κατά">κατὰ</w>
+<w id="Sus.52..23" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="Sus.52..24" ana="V1 PAPAPN" lem="ὑπο-πίπτω">ὑποπίπτοντά</w>
+<w id="Sus.52..25" ana="RP DS" lem="ἐγώ">μοι</w>
+<w id="Sus.52..26" ana="C" lem="καί">καὶ</w>
+<w id="Sus.52..27" ana="VAI AAI3S" lem="καλέω">ἐκάλεσε</w>
+<w id="Sus.52..28" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Sus.52..29" ana="A3 ASM" lem="εἷσ">ἕνα</w>
+<w id="Sus.52..30" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Sus.52..31" ana="C" lem="καί">καὶ</w>
+<w id="Sus.52..32" ana="VBI AAI3P" lem="προσ-ἄγω">προσήγαγον</w>
+<w id="Sus.52..33" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Sus.52..34" ana="N2 ASM" lem="πρεσβύτεροσ">πρεσβύτερον</w>
+<w id="Sus.52..35" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Sus.52..36" ana="A1A DSM" lem="νέοσ">νεωτέρῳ</w>
+<w id="Sus.52..37" ana="C" lem="καί">καὶ</w>
+<w id="Sus.52..38" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Sus.52..39" ana="RD DSM" lem="αὐτόσ">αὐτῷ</w>
+<w id="Sus.52..40" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="Sus.52..41" ana="V1 PAD2S" lem="ἀκούω">ἄκουε</w>
+<w id="Sus.52..42" ana="V1 PAD2S" lem="ἀκούω">ἄκουε</w>
+<w id="Sus.52..43" ana="VM XMPVSM" lem="παλαιόω">πεπαλαιωμένε</w>
+<w id="Sus.52..44" ana="N1A GPF" lem="ἡμέρα">ἡμερῶν</w>
+<w id="Sus.52..45" ana="A1 GPF" lem="κακόσ">κακῶν</w>
+<w id="Sus.52..46" ana="D" lem="νῦν">νῦν</w>
+<w id="Sus.52..47" ana="V1 PAI3P" lem="ἥκω">ἥκασί</w>
+<w id="Sus.52..48" ana="RP GS" lem="σύ">σου</w>
+<w id="Sus.52..49" ana="RA NPF" lem="ὁ">αἱ</w>
+<w id="Sus.52..50" ana="N1A NPF" lem="ἁμαρτία">ἁμαρτίαι</w>
+<w id="Sus.52..51" ana="RR APF" lem="ὅσ">ἃσ</w>
+<w id="Sus.52..52" ana="V2I IAI2S" lem="ποιέω">ἐποίεισ</w>
+<w id="Sus.52..53" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Sus.52..54" ana="A1A ASN" lem="πρότεροσ">πρότερον</w>
+<w id="Sus.53..1" ana="VC APPNSM" lem="πιστεύω">πιστευθεὶσ</w>
+<w id="Sus.53..2" ana="V1 PAN" lem="ἀκούω">ἀκούειν</w>
+<w id="Sus.53..3" ana="C" lem="καί">καὶ</w>
+<w id="Sus.53..4" ana="V1 PAN" lem="κρίνω">κρίνειν</w>
+<w id="Sus.53..5" ana="N3I NPF" lem="κρίσισ">κρίσεισ</w>
+<w id="Sus.53..6" ana="N2 ASM" lem="θάνατοσ">θάνατον</w>
+<w id="Sus.53..7" ana="V1 PAPAPF" lem="ἐπι-φέρω">ἐπιφερούσασ</w>
+<w id="Sus.53..8" ana="C" lem="καί">καὶ</w>
+<w id="Sus.53..9" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Sus.53..10" ana="X" lem="μέν">μὲν</w>
+<w id="Sus.53..11" ana="A1 ASM" lem="ἀθῷοσ">ἀθῷον</w>
+<w id="Sus.53..12" ana="VAI AAI2S" lem="κατα-κρίνω">κατέκρινασ</w>
+<w id="Sus.53..13" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="Sus.53..14" ana="X" lem="δέ">δὲ</w>
+<w id="Sus.53..15" ana="A1B APM" lem="ἔνοχοσ">ἐνόχουσ</w>
+<w id="Sus.53..16" ana="V7 IAI2S" lem="ἀφίημι">ἠφίεισ</w>
+<w id="Sus.53..17" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Sus.53..18" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Sus.53..19" ana="V1 PAPGSM" lem="λέγω">λέγοντοσ</w>
+<w id="Sus.53..20" ana="A1 ASM" lem="ἀθῷοσ">ἀθῷον</w>
+<w id="Sus.53..21" ana="C" lem="καί">καὶ</w>
+<w id="Sus.53..22" ana="A1A ASM" lem="δίκαιοσ">δίκαιον</w>
+<w id="Sus.53..23" ana="D" lem="οὐ">οὐκ</w>
+<w id="Sus.53..24" ana="VF2 FAI2S" lem="ἀπο-κτείνω">ἀποκτενεῖσ</w>
+<w id="Sus.54..1" ana="D" lem="νῦν">νῦν</w>
+<w id="Sus.54..2" ana="X" lem="οὖν">οὖν</w>
+<w id="Sus.54..3" ana="P" lem="ὑπό">ὑπὸ</w>
+<w id="Sus.54..4" ana="RI ASN" lem="τίσ">τί</w>
+<w id="Sus.54..5" ana="N2N ASN" lem="δένδρον">δένδρον</w>
+<w id="Sus.54..6" ana="C" lem="καί">καὶ</w>
+<w id="Sus.54..7" ana="A1 DSM" lem="ποταπόσ">ποταπῷ</w>
+<w id="Sus.54..8" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Sus.54..9" ana="N2 GSM" lem="παράδεισοσ">παραδείσου</w>
+<w id="Sus.54..10" ana="N2 DSM" lem="τόποσ">τόπῳ</w>
+<w id="Sus.54..11" ana="VX XAI2S" lem="ὁράω">ἑώρακασ</w>
+<w id="Sus.54..12" ana="RD APM" lem="αὐτόσ">αὐτοὺσ</w>
+<w id="Sus.54..13" ana="V9 PAPAPM" lem="εἰμί">ὄντασ</w>
+<w id="Sus.54..14" ana="P" lem="σύν">σὺν</w>
+<w id="Sus.54..15" ana="RD DPM" lem="ἑαυτοῦ">ἑαυτοῖσ</w>
+<w id="Sus.54..16" ana="C" lem="καί">καὶ</w>
+<w id="Sus.54..17" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Sus.54..18" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Sus.54..19" ana="A3H NSM" lem="ἀσεβήσ">ἀσεβήσ</w>
+<w id="Sus.54..20" ana="P" lem="ὑπό">ὑπὸ</w>
+<w id="Sus.54..21" ana="N2 ASF" lem="σχῖνοσ">σχῖνον</w>
+<w id="Sus.55..1" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Sus.55..2" ana="X" lem="δέ">δὲ</w>
+<w id="Sus.55..3" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Sus.55..4" ana="A1A NSMC" lem="νέοσ">νεώτεροσ</w>
+<w id="Sus.55..5" ana="D" lem="ὀρθῶσ">ὀρθῶσ</w>
+<w id="Sus.55..6" ana="VM XMI2S" lem="ψεύδομαι">ἔψευσαι</w>
+<w id="Sus.55..7" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Sus.55..8" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Sus.55..9" ana="RD GSM" lem="σεαυτοῦ">σεαυτοῦ</w>
+<w id="Sus.55..10" ana="N1 ASF" lem="ψυχή">ψυχήν</w>
+<w id="Sus.55..11" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Sus.55..12" ana="X" lem="γάρ">γὰρ</w>
+<w id="Sus.55..13" ana="N2 NSM" lem="ἄγγελοσ">ἄγγελοσ</w>
+<w id="Sus.55..14" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Sus.55..15" ana="VF FAI3S" lem="σχίζω">σχίσει</w>
+<w id="Sus.55..16" ana="RP GS" lem="σύ">σου</w>
+<w id="Sus.55..17" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Sus.55..18" ana="N1 ASF" lem="ψυχή">ψυχὴν</w>
+<w id="Sus.55..19" ana="D" lem="σήμερον">σήμερον</w>
+<w id="Sus.56..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.56..2" ana="RD ASM" lem="οὗτοσ">τοῦτον</w>
+<w id="Sus.56..3" ana="VA AAPNSM" lem="μετα-ἵστημι">μεταστήσασ</w>
+<w id="Sus.56..4" ana="VB AAD2S" lem="λέγω">εἶπε</w>
+<w id="Sus.56..5" ana="VB AAN" lem="προσ-ἄγω">προσαγαγεῖν</w>
+<w id="Sus.56..6" ana="RD DSM" lem="αὐτόσ">αὐτῷ</w>
+<w id="Sus.56..7" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="Sus.56..8" ana="A1A ASM" lem="ἕτεροσ">ἕτερον</w>
+<w id="Sus.56..9" ana="C" lem="καί">καὶ</w>
+<w id="Sus.56..10" ana="RD DSM" lem="οὗτοσ">τούτῳ</w>
+<w id="Sus.56..11" ana="X" lem="δέ">δὲ</w>
+<w id="Sus.56..12" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Sus.56..13" ana="P" lem="διά">διὰ</w>
+<w id="Sus.56..14" ana="RI ASN" lem="τίσ">τί</w>
+<w id="Sus.56..15" ana="VP XMPASN" lem="δια-στρέφω">διεστραμμένον</w>
+<w id="Sus.56..16" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Sus.56..17" ana="N3M ASN" lem="σπέρμα">σπέρμα</w>
+<w id="Sus.56..18" ana="RP GS" lem="σύ">σου</w>
+<w id="Sus.56..19" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Sus.56..20" ana="N GS" lem="Σιδών">Σιδῶνοσ</w>
+<w id="Sus.56..21" ana="C" lem="καί">καὶ</w>
+<w id="Sus.56..22" ana="D" lem="οὐ">οὐχ</w>
+<w id="Sus.56..23" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Sus.56..24" ana="N GS" lem="Ιουδα">Ιουδα</w>
+<w id="Sus.56..25" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="Sus.56..26" ana="N3E ASN" lem="κάλλοσ">κάλλοσ</w>
+<w id="Sus.56..27" ana="RP AS" lem="σύ">σε</w>
+<w id="Sus.56..28" ana="VAI AAI3S" lem="ἀπατάω">ἠπάτησεν</w>
+<w id="Sus.56..29" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Sus.56..30" ana="A1A NSF" lem="μιαρόσ">μιαρὰ</w>
+<w id="Sus.56..31" ana="N1A NSF" lem="ἐπιθυμία">ἐπιθυμία</w>
+<w id="Sus.57..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.57..2" ana="D" lem="οὕτωσ">οὕτωσ</w>
+<w id="Sus.57..3" ana="V2I IAI2P" lem="ποιέω">ἐποιεῖτε</w>
+<w id="Sus.57..4" ana="N3 DPF" lem="θυγατράσιν">θυγατράσιν</w>
+<w id="Sus.57..5" ana="N GSM" lem="Ἰσραήλ">Ισραηλ</w>
+<w id="Sus.57..6" ana="C" lem="καί">καὶ</w>
+<w id="Sus.57..7" ana="RD NPF" lem="ἐκεῖνοσ">ἐκεῖναι</w>
+<w id="Sus.57..8" ana="V2 PMPNPF" lem="φοβέω">φοβούμεναι</w>
+<w id="Sus.57..9" ana="V2I IAI3P" lem="ὁμιλέω">ὡμιλοῦσαν</w>
+<w id="Sus.57..10" ana="RP DP" lem="σύ">ὑμῖν</w>
+<w id="Sus.57..11" ana="C" lem="ἀλλά">ἀλλ'</w>
+<w id="Sus.57..12" ana="D" lem="οὐ">οὐ</w>
+<w id="Sus.57..13" ana="N3 NSF" lem="θυγάτηρ">θυγάτηρ</w>
+<w id="Sus.57..14" ana="N GSM" lem="Ιουδα">Ιουδα</w>
+<w id="Sus.57..15" ana="VAI AAI3S" lem="ὑπο-μένω">ὑπέμεινε</w>
+<w id="Sus.57..16" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Sus.57..17" ana="N2 ASF" lem="νόσοσ">νόσον</w>
+<w id="Sus.57..18" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="Sus.57..19" ana="P" lem="ἐν">ἐν</w>
+<w id="Sus.57..20" ana="N1A DSF" lem="ἀνομία">ἀνομίᾳ</w>
+<w id="Sus.57..21" ana="VB AAN" lem="ὑπο-φέρω">ὑπενεγκεῖν</w>
+<w id="Sus.58..1" ana="D" lem="νῦν">νῦν</w>
+<w id="Sus.58..2" ana="X" lem="οὖν">οὖν</w>
+<w id="Sus.58..3" ana="V1 PAD2S" lem="λέγω">λέγε</w>
+<w id="Sus.58..4" ana="RP DS" lem="ἐγώ">μοι</w>
+<w id="Sus.58..5" ana="P" lem="ὑπό">ὑπὸ</w>
+<w id="Sus.58..6" ana="RI ASN" lem="τίσ">τί</w>
+<w id="Sus.58..7" ana="N2N ASN" lem="δένδρον">δένδρον</w>
+<w id="Sus.58..8" ana="C" lem="καί">καὶ</w>
+<w id="Sus.58..9" ana="P" lem="ἐν">ἐν</w>
+<w id="Sus.58..10" ana="A1A DSM" lem="ποῖοσ">ποίῳ</w>
+<w id="Sus.58..11" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="Sus.58..12" ana="N2 GSM" lem="κῆποσ">κήπου</w>
+<w id="Sus.58..13" ana="N2 DSM" lem="τόποσ">τόπῳ</w>
+<w id="Sus.58..14" ana="VBI AAI2S" lem="κατα-λαμβάνω">κατέλαβεσ</w>
+<w id="Sus.58..15" ana="RD APM" lem="αὐτόσ">αὐτοὺσ</w>
+<w id="Sus.58..16" ana="V2 PAPAPM" lem="ὁμιλέω">ὁμιλοῦντασ</w>
+<w id="Sus.58..17" ana="RD DPM" lem="ἀλλήλω">ἀλλήλοισ</w>
+<w id="Sus.58..18" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Sus.58..19" ana="X" lem="δέ">δὲ</w>
+<w id="Sus.58..20" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Sus.58..21" ana="P" lem="ὑπό">ὑπὸ</w>
+<w id="Sus.58..22" ana="N2 ASF" lem="πρῖνοσ">πρῖνον</w>
+<w id="Sus.59..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.59..2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="Sus.59..3" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="Sus.59..4" ana="N2 VSM" lem="ἁμαρτωλόσ">ἁμαρτωλέ</w>
+<w id="Sus.59..5" ana="D" lem="νῦν">νῦν</w>
+<w id="Sus.59..6" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Sus.59..7" ana="N2 NSM" lem="ἄγγελοσ">ἄγγελοσ</w>
+<w id="Sus.59..8" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Sus.59..9" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="Sus.59..10" ana="N1A ASF" lem="ῥομφαία">ῥομφαίαν</w>
+<w id="Sus.59..11" ana="VXI XAI3S" lem="ἵστημι">ἕστηκεν</w>
+<w id="Sus.59..12" ana="V1 PAPNSM" lem="ἔχω">ἔχων</w>
+<w id="Sus.59..13" ana="C" lem="ἕωσ">ἕωσ</w>
+<w id="Sus.59..14" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Sus.59..15" ana="N2 NSM" lem="λαόσ">λαὸσ</w>
+<w id="Sus.59..16" ana="VF FAI3S" lem="ἐκ-ὀλεθρεύω">ἐξολεθρεύσει</w>
+<w id="Sus.59..17" ana="RP AP" lem="σύ">ὑμᾶσ</w>
+<w id="Sus.59..18" ana="C" lem="ἵνα">ἵνα</w>
+<w id="Sus.59..19" ana="VA AAS3S" lem="κατα-πρίω">καταπρίσῃ</w>
+<w id="Sus.59..20" ana="RP AS" lem="σύ">σε</w>
+<w id="Sus.60..1" ana="C" lem="καί">καὶ</w>
+<w id="Sus.60..2" ana="A1S NSF" lem="πᾶσ">πᾶσα</w>
+<w id="Sus.60..3" ana="RA NSF" lem="ὁ">ἡ</w>
+<w id="Sus.60..4" ana="N1 NSF" lem="συναγωγή">συναγωγὴ</w>
+<w id="Sus.60..5" ana="VAI AAI3S" lem="ἀνα-βοάω">ἀνεβόησεν</w>
+<w id="Sus.60..6" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="Sus.60..7" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="Sus.60..8" ana="A1A DSM" lem="νέοσ">νεωτέρῳ</w>
+<w id="Sus.60..9" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Sus.60..10" ana="P" lem="ἐκ">ἐκ</w>
+<w id="Sus.60..11" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="Sus.60..12" ana="A1A GSN" lem="ἴδιοσ">ἰδίου</w>
+<w id="Sus.60..13" ana="N3M GSN" lem="στόμα">στόματοσ</w>
+<w id="Sus.60..14" ana="A1B APM" lem="ὁμόλογοσ">ὁμολόγουσ</w>
+<w id="Sus.60..15" ana="RD APM" lem="αὐτόσ">αὐτοὺσ</w>
+<w id="Sus.60..16" ana="VAI AAI3S" lem="κατα-ἵστημι">κατέστησεν</w>
+<w id="Sus.60..17" ana="A1 APM" lem="ἀμφότεροι">ἀμφοτέρουσ</w>
+<w id="Sus.60..18" ana="N3 APM" lem="ψευδομάρτυσ">ψευδομάρτυρασ</w>
+<w id="Sus.60..19" ana="C" lem="καί">καὶ</w>
+<w id="Sus.60..20" ana="C" lem="ὡσ">ὡσ</w>
+<w id="Sus.60..21" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Sus.60..22" ana="N2 NSM" lem="νόμοσ">νόμοσ</w>
+<w id="Sus.60..23" ana="V1 PAI3S" lem="δια-ἀγορεύω">διαγορεύει</w>
+<w id="Sus.60..24" ana="VAI AAI3P" lem="ποιέω">ἐποίησαν</w>
+<w id="Sus.60..25" ana="RD DPM" lem="αὐτόσ">αὐτοῖσ</w>
+<w id="Sus.60..26" ana="C W(S" lem="κατα">καθὼσ</w>
+<w id="Sus.60..27" ana="VAI AMI3P" lem="πονηρεύω">ἐπονηρεύσαντο</w>
+<w id="Sus.60..28" ana="P" lem="κατά">κατὰ</w>
+<w id="Sus.60..29" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="Sus.60..30" ana="N1 GSF" lem="ἀδελφή">ἀδελφῆσ</w>
+<w id="Sus.60..31" ana="C" lem="καί">καὶ</w>
+<w id="Sus.60..32" ana="VAI AAI3P" lem="φιμόω">ἐφίμωσαν</w>
+<w id="Sus.60..33" ana="RD APM" lem="αὐτόσ">αὐτοὺσ</w>
+<w id="Sus.60..34" ana="C" lem="καί">καὶ</w>
+<w id="Sus.60..35" ana="VB AAPNPM" lem="ἐκ-ἄγω">ἐξαγαγόντεσ</w>
+<w id="Sus.60..36" ana="VAI AAI3P" lem="ῥίπτω">ἔρριψαν</w>
+<w id="Sus.60..37" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Sus.60..38" ana="N3G ASF" lem="φάραγξ">φάραγγα</w>
+<w id="Sus.60..39" ana="D" lem="τότε">τότε</w>
+<w id="Sus.60..40" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="Sus.60..41" ana="N2 NSM" lem="ἄγγελοσ">ἄγγελοσ</w>
+<w id="Sus.60..42" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="Sus.60..43" ana="VAI AAI3S" lem="ῥίπτω">ἔρριψε</w>
+<w id="Sus.60..44" ana="N3 ASN" lem="πῦρ">πῦρ</w>
+<w id="Sus.60..45" ana="P" lem="διά">διὰ</w>
+<w id="Sus.60..46" ana="A1 GSM" lem="μέσοσ">μέσου</w>
+<w id="Sus.60..47" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Sus.60..48" ana="C" lem="καί">καὶ</w>
+<w id="Sus.60..49" ana="VCI API3S" lem="σώζω">ἐσώθη</w>
+<w id="Sus.60..50" ana="N3M NSN" lem="αἷμα">αἷμα</w>
+<w id="Sus.60..51" ana="A1A NSN" lem="ἀναίτιοσ">ἀναίτιον</w>
+<w id="Sus.60..52" ana="P" lem="ἐν">ἐν</w>
+<w id="Sus.60..53" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Sus.60..54" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="Sus.60..55" ana="RD DSF" lem="ἐκεῖνοσ">ἐκείνῃ</w>
+<w id="Sus.63..1" ana="P" lem="διά">διὰ</w>
+<w id="Sus.63..2" ana="RD ASN" lem="οὗτοσ">τοῦτο</w>
+<w id="Sus.63..3" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="Sus.63..4" ana="A1A NPMC" lem="νέοσ">νεώτεροι</w>
+<w id="Sus.63..5" ana="A1 NPM" lem="ἀγαπητόσ">ἀγαπητοὶ</w>
+<w id="Sus.63..6" ana="N GSM" lem="Ἰακώβ">Ιακωβ</w>
+<w id="Sus.63..7" ana="P" lem="ἐν">ἐν</w>
+<w id="Sus.63..8" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="Sus.63..9" ana="N3T DSF" lem="ἁπλότησ">ἁπλότητι</w>
+<w id="Sus.63..10" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="Sus.63..11" ana="C" lem="καί">καὶ</w>
+<w id="Sus.63..12" ana="RP NP" lem="ἐγώ">ἡμεῖσ</w>
+<w id="Sus.63..13" ana="V1 PMS1P" lem="φυλάσσω">φυλασσώμεθα</w>
+<w id="Sus.63..14" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Sus.63..15" ana="N2 APM" lem="υἱόσ">υἱοὺσ</w>
+<w id="Sus.63..16" ana="A1 APM" lem="δυνατόσ">δυνατοὺσ</w>
+<w id="Sus.63..17" ana="A1A APMC" lem="νέοσ">νεωτέρουσ</w>
+<w id="Sus.63..18" ana="VF FAI3P" lem="εὐσεβέω">εὐσεβήσουσι</w>
+<w id="Sus.63..19" ana="X" lem="γάρ">γὰρ</w>
+<w id="Sus.63..20" ana="A1A NPMC" lem="νέοσ">νεώτεροι</w>
+<w id="Sus.63..21" ana="C" lem="καί">καὶ</w>
+<w id="Sus.63..22" ana="VF FMI3S" lem="εἰμί">ἔσται</w>
+<w id="Sus.63..23" ana="P" lem="ἐν">ἐν</w>
+<w id="Sus.63..24" ana="RD DPM" lem="αὐτόσ">αὐτοῖσ</w>
+<w id="Sus.63..25" ana="N3M NSN" lem="πνεῦμα">πνεῦμα</w>
+<w id="Sus.63..26" ana="N1 GSF" lem="ἐπιστήμη">ἐπιστήμησ</w>
+<w id="Sus.63..27" ana="C" lem="καί">καὶ</w>
+<w id="Sus.63..28" ana="N3I GSF" lem="σύνεσισ">συνέσεωσ</w>
+<w id="Sus.63..29" ana="P" lem="εἰσ">εἰσ</w>
+<w id="Sus.63..30" ana="N3W ASM" lem="αἰών">αἰῶνα</w>
+<w id="Sus.63..31" ana="N3W GSM" lem="αἰών">αἰῶνοσ</w>

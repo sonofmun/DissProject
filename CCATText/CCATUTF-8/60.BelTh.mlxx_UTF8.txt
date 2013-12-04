@@ -1,0 +1,871 @@
+<w id="BelTh.1..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.1..2" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.1..3" ana="N3V NSM" lem="βασιλεύσ">βασιλεὺσ</w>
+<w id="BelTh.1..4" ana="N1M NSM" lem="Ἀστυάγησ">Ἀστυάγησ</w>
+<w id="BelTh.1..5" ana="VCI API3S" lem="προσ-τίθημι">προσετέθη</w>
+<w id="BelTh.1..6" ana="P" lem="πρόσ">πρὸσ</w>
+<w id="BelTh.1..7" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="BelTh.1..8" ana="N3 APM" lem="πατήρ">πατέρασ</w>
+<w id="BelTh.1..9" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="BelTh.1..10" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.1..11" ana="VBI AAI3S" lem="παρα-λαμβάνω">παρέλαβεν</w>
+<w id="BelTh.1..12" ana="N NSM" lem="Κῦροσ">Κῦροσ</w>
+<w id="BelTh.1..13" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.1..14" ana="N1M NSM" lem="Πέρσησ">Πέρσησ</w>
+<w id="BelTh.1..15" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="BelTh.1..16" ana="N1A ASF" lem="βασιλεία">βασιλείαν</w>
+<w id="BelTh.1..17" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="BelTh.2..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.2..2" ana="V9 IAI3S" lem="εἰμί">ἦν</w>
+<w id="BelTh.2..3" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.2..4" ana="N1M NSM" lem="συμβιωτήσ">συμβιωτὴσ</w>
+<w id="BelTh.2..5" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="BelTh.2..6" ana="N3V GSM" lem="βασιλεύσ">βασιλέωσ</w>
+<w id="BelTh.2..7" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.2..8" ana="A1B NSM" lem="ἔνδοξοσ">ἔνδοξοσ</w>
+<w id="BelTh.2..9" ana="P" lem="ὑπέρ">ὑπὲρ</w>
+<w id="BelTh.2..10" ana="A3 APM" lem="πᾶσ">πάντασ</w>
+<w id="BelTh.2..11" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="BelTh.2..12" ana="A1 APM" lem="φίλοσ">φίλουσ</w>
+<w id="BelTh.2..13" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="BelTh.3..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.3..2" ana="V9 IAI3S" lem="εἰμί">ἦν</w>
+<w id="BelTh.3..3" ana="N2N NSN" lem="εἴδωλον">εἴδωλον</w>
+<w id="BelTh.3..4" ana="RA DPM" lem="ὁ">τοῖσ</w>
+<w id="BelTh.3..5" ana="N2 DPM" lem="Βαβυλωνίοσ">Βαβυλωνίοισ</w>
+<w id="BelTh.3..6" ana="RR DSN" lem="ὅσ">ᾧ</w>
+<w id="BelTh.3..7" ana="N3M NSN" lem="ὄνομα">ὄνομα</w>
+<w id="BelTh.3..8" ana="N NSM" lem="Βηλ">Βηλ</w>
+<w id="BelTh.3..9" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.3..10" ana="V3I IPI3P" lem="δαπανάω">ἐδαπανῶντο</w>
+<w id="BelTh.3..11" ana="P" lem="εἰσ">εἰσ</w>
+<w id="BelTh.3..12" ana="RD ASM" lem="αὐτόσ">αὐτὸν</w>
+<w id="BelTh.3..13" ana="A1 GSF" lem="ἕκαστοσ">ἑκάστησ</w>
+<w id="BelTh.3..14" ana="N1A GSF" lem="ἡμέρα">ἡμέρασ</w>
+<w id="BelTh.3..15" ana="N3I GSF" lem="σεμίδαλισ">σεμιδάλεωσ</w>
+<w id="BelTh.3..16" ana="N1 NPF" lem="ἀρτάβη">ἀρτάβαι</w>
+<w id="BelTh.3..17" ana="M" lem="δώδεκα">δώδεκα</w>
+<w id="BelTh.3..18" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.3..19" ana="N2N NPN" lem="πρόβατον">πρόβατα</w>
+<w id="BelTh.3..20" ana="M" lem="τεσσαράκοντα">τεσσαράκοντα</w>
+<w id="BelTh.3..21" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.3..22" ana="N2 GSM" lem="οἶνοσ">οἴνου</w>
+<w id="BelTh.3..23" ana="N1M NPM" lem="μετρητήσ">μετρηταὶ</w>
+<w id="BelTh.3..24" ana="M" lem="ἕξ">ἕξ</w>
+<w id="BelTh.4..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.4..2" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.4..3" ana="N3V NSM" lem="βασιλεύσ">βασιλεὺσ</w>
+<w id="BelTh.4..4" ana="V1I IMI3S" lem="σέβω">ἐσέβετο</w>
+<w id="BelTh.4..5" ana="RD ASM" lem="αὐτόσ">αὐτὸν</w>
+<w id="BelTh.4..6" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.4..7" ana="V1I IMI3S" lem="πορεύομαι">ἐπορεύετο</w>
+<w id="BelTh.4..8" ana="P" lem="κατά">καθ'</w>
+<w id="BelTh.4..9" ana="A1 ASF" lem="ἕκαστοσ">ἑκάστην</w>
+<w id="BelTh.4..10" ana="N1A ASF" lem="ἡμέρα">ἡμέραν</w>
+<w id="BelTh.4..11" ana="V2 PAN" lem="προσ-κυνέω">προσκυνεῖν</w>
+<w id="BelTh.4..12" ana="RD DSM" lem="αὐτόσ">αὐτῷ</w>
+<w id="BelTh.4..13" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.4..14" ana="X" lem="δέ">δὲ</w>
+<w id="BelTh.4..15" ana="V2I IAI3S" lem="προσ-κυνέω">προσεκύνει</w>
+<w id="BelTh.4..16" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="BelTh.4..17" ana="N2 DSM" lem="θεόσ">θεῷ</w>
+<w id="BelTh.4..18" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="BelTh.5..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.5..2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.5..3" ana="RD DSM" lem="αὐτόσ">αὐτῷ</w>
+<w id="BelTh.5..4" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.5..5" ana="N3V NSM" lem="βασιλεύσ">βασιλεύσ</w>
+<w id="BelTh.5..6" ana="P" lem="διά">διὰ</w>
+<w id="BelTh.5..7" ana="RI ASN" lem="τίσ">τί</w>
+<w id="BelTh.5..8" ana="D" lem="οὐ">οὐ</w>
+<w id="BelTh.5..9" ana="V2 PAI2S" lem="προσ-κυνέω">προσκυνεῖσ</w>
+<w id="BelTh.5..10" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="BelTh.5..11" ana="N DSM" lem="Βηλ">Βηλ</w>
+<w id="BelTh.5..12" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.5..13" ana="X" lem="δέ">δὲ</w>
+<w id="BelTh.5..14" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.5..15" ana="C" lem="ὅτι">ὅτι</w>
+<w id="BelTh.5..16" ana="D" lem="οὐ">οὐ</w>
+<w id="BelTh.5..17" ana="V1 PMI1S" lem="σέβω">σέβομαι</w>
+<w id="BelTh.5..18" ana="N2N APN" lem="εἴδωλον">εἴδωλα</w>
+<w id="BelTh.5..19" ana="A1B APN" lem="χειροποίητοσ">χειροποίητα</w>
+<w id="BelTh.5..20" ana="C" lem="ἀλλά">ἀλλὰ</w>
+<w id="BelTh.5..21" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.5..22" ana="V3 PAPASM" lem="ζάω">ζῶντα</w>
+<w id="BelTh.5..23" ana="N2 ASM" lem="θεόσ">θεὸν</w>
+<w id="BelTh.5..24" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.5..25" ana="VA AAPASM" lem="κτίζω">κτίσαντα</w>
+<w id="BelTh.5..26" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.5..27" ana="N2 ASM" lem="οὐρανόσ">οὐρανὸν</w>
+<w id="BelTh.5..28" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.5..29" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="BelTh.5..30" ana="N1 ASF" lem="γῆ">γῆν</w>
+<w id="BelTh.5..31" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.5..32" ana="V1 PAPASM" lem="ἔχω">ἔχοντα</w>
+<w id="BelTh.5..33" ana="A1S GSF" lem="πᾶσ">πάσησ</w>
+<w id="BelTh.5..34" ana="N3K GSF" lem="σάρξ">σαρκὸσ</w>
+<w id="BelTh.5..35" ana="N1A ASF" lem="κυριεία">κυριείαν</w>
+<w id="BelTh.6..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.6..2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.6..3" ana="RD DSM" lem="αὐτόσ">αὐτῷ</w>
+<w id="BelTh.6..4" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.6..5" ana="N3V NSM" lem="βασιλεύσ">βασιλεύσ</w>
+<w id="BelTh.6..6" ana="D" lem="οὐ">οὐ</w>
+<w id="BelTh.6..7" ana="V2 PAI3S" lem="δοκέω">δοκεῖ</w>
+<w id="BelTh.6..8" ana="RP DS" lem="σύ">σοι</w>
+<w id="BelTh.6..9" ana="N ASM" lem="Βηλ">Βηλ</w>
+<w id="BelTh.6..10" ana="V9 PAN" lem="εἰμί">εἶναι</w>
+<w id="BelTh.6..11" ana="V3 PAPNSM" lem="ζάω">ζῶν</w>
+<w id="BelTh.6..12" ana="N2 NSM" lem="θεόσ">θεόσ</w>
+<w id="BelTh.6..13" ana="C" lem="ἤ">ἦ</w>
+<w id="BelTh.6..14" ana="D" lem="οὐ">οὐχ</w>
+<w id="BelTh.6..15" ana="V3 PAI2S" lem="ὁράω">ὁρᾷσ</w>
+<w id="BelTh.6..16" ana="A1 APN" lem="ὅσοσ">ὅσα</w>
+<w id="BelTh.6..17" ana="V1 PAI3S" lem="ἐσθίω">ἐσθίει</w>
+<w id="BelTh.6..18" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.6..19" ana="V1 PAI3S" lem="πίνω">πίνει</w>
+<w id="BelTh.6..20" ana="P" lem="κατά">καθ'</w>
+<w id="BelTh.6..21" ana="A1 ASF" lem="ἕκαστοσ">ἑκάστην</w>
+<w id="BelTh.6..22" ana="N1A ASF" lem="ἡμέρα">ἡμέραν</w>
+<w id="BelTh.7..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.7..2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.7..3" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.7..4" ana="VA AAPNSM" lem="γελάω">γελάσασ</w>
+<w id="BelTh.7..5" ana="D" lem="μή">μὴ</w>
+<w id="BelTh.7..6" ana="V3 PAI1S" lem="πλανάω">πλανῶ</w>
+<w id="BelTh.7..7" ana="N3V VSM" lem="βασιλεύσ">βασιλεῦ</w>
+<w id="BelTh.7..8" ana="RD NSM" lem="οὗτοσ">οὗτοσ</w>
+<w id="BelTh.7..9" ana="X" lem="γάρ">γὰρ</w>
+<w id="BelTh.7..10" ana="D" lem="ἔσωθεν">ἔσωθεν</w>
+<w id="BelTh.7..11" ana="X" lem="μέν">μέν</w>
+<w id="BelTh.7..12" ana="V9 PAI3S" lem="εἰμί">ἐστι</w>
+<w id="BelTh.7..13" ana="N2 NSM" lem="πηλόσ">πηλὸσ</w>
+<w id="BelTh.7..14" ana="D" lem="ἔξωθεν">ἔξωθεν</w>
+<w id="BelTh.7..15" ana="X" lem="δέ">δὲ</w>
+<w id="BelTh.7..16" ana="N2 NSM" lem="χαλκόσ">χαλκὸσ</w>
+<w id="BelTh.7..17" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.7..18" ana="D" lem="οὐ">οὐ</w>
+<w id="BelTh.7..19" ana="VX XAI3S" lem="βιβρώσκω">βέβρωκεν</w>
+<w id="BelTh.7..20" ana="C" lem="οὐδέ">οὐδὲ</w>
+<w id="BelTh.7..21" ana="VX XAI3S" lem="πίνω">πέπωκεν</w>
+<w id="BelTh.7..22" ana="D" lem="πώποτε">πώποτε</w>
+<w id="BelTh.8..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.8..2" ana="VC APPNSM" lem="θυμόω">θυμωθεὶσ</w>
+<w id="BelTh.8..3" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.8..4" ana="N3V NSM" lem="βασιλεύσ">βασιλεὺσ</w>
+<w id="BelTh.8..5" ana="VAI AAI3S" lem="καλέω">ἐκάλεσεν</w>
+<w id="BelTh.8..6" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="BelTh.8..7" ana="N3V NPM" lem="ἱερεύσ">ἱερεῖσ</w>
+<w id="BelTh.8..8" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="BelTh.8..9" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.8..10" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.8..11" ana="RD DPM" lem="αὐτόσ">αὐτοῖσ</w>
+<w id="BelTh.8..12" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="BelTh.8..13" ana="D" lem="μή">μὴ</w>
+<w id="BelTh.8..14" ana="VB AAS2P" lem="εἶπον">εἴπητέ</w>
+<w id="BelTh.8..15" ana="RP DS" lem="ἐγώ">μοι</w>
+<w id="BelTh.8..16" ana="RI NSM" lem="τίσ">τίσ</w>
+<w id="BelTh.8..17" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.8..18" ana="V1 PAPNSM" lem="κατα-ἐσθίω">κατέσθων</w>
+<w id="BelTh.8..19" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="BelTh.8..20" ana="N1 ASF" lem="δαπάνη">δαπάνην</w>
+<w id="BelTh.8..21" ana="RD ASF" lem="οὗτοσ">ταύτην</w>
+<w id="BelTh.8..22" ana="VF2 FMI2P" lem="ἀπο-θνήσκω">ἀποθανεῖσθε</w>
+<w id="BelTh.8..23" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="BelTh.8..24" ana="X" lem="δέ">δὲ</w>
+<w id="BelTh.8..25" ana="VA AAS2P" lem="δεικνύω">δείξητε</w>
+<w id="BelTh.8..26" ana="C" lem="ὅτι">ὅτι</w>
+<w id="BelTh.8..27" ana="N NSM" lem="Βηλ">Βηλ</w>
+<w id="BelTh.8..28" ana="V1 PAI3S" lem="κατα-ἐσθίω">κατεσθίει</w>
+<w id="BelTh.8..29" ana="RD APN" lem="αὐτόσ">αὐτά</w>
+<w id="BelTh.8..30" ana="VF2 FMI2S" lem="ἀπο-θνήσκω">ἀποθανεῖται</w>
+<w id="BelTh.8..31" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.8..32" ana="C" lem="ὅτι">ὅτι</w>
+<w id="BelTh.8..33" ana="VAI AAI3S" lem="βλασφημέω">ἐβλασφήμησεν</w>
+<w id="BelTh.8..34" ana="P" lem="εἰσ">εἰσ</w>
+<w id="BelTh.8..35" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.8..36" ana="N ASM" lem="Βηλ">Βηλ</w>
+<w id="BelTh.9..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.9..2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.9..3" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.9..4" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="BelTh.9..5" ana="N3V DSM" lem="βασιλεύσ">βασιλεῖ</w>
+<w id="BelTh.9..6" ana="V1 PMD3S" lem="γίγνομαι">γινέσθω</w>
+<w id="BelTh.9..7" ana="P" lem="κατά">κατὰ</w>
+<w id="BelTh.9..8" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="BelTh.9..9" ana="N3M ASN" lem="ῥῆμα">ῥῆμά</w>
+<w id="BelTh.9..10" ana="RP GS" lem="σύ">σου</w>
+<w id="BelTh.9..11" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.9..12" ana="V9 IAI3P" lem="εἰμί">ἦσαν</w>
+<w id="BelTh.9..13" ana="N3V NPM" lem="ἱερεύσ">ἱερεῖσ</w>
+<w id="BelTh.9..14" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="BelTh.9..15" ana="N GSM" lem="Βηλ">Βηλ</w>
+<w id="BelTh.9..16" ana="M" lem="ἑβδομήκοντα">ἑβδομήκοντα</w>
+<w id="BelTh.9..17" ana="P" lem="ἐκτόσ">ἐκτὸσ</w>
+<w id="BelTh.9..18" ana="N3K GPF" lem="γυνή">γυναικῶν</w>
+<w id="BelTh.9..19" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.9..20" ana="N2N GPN" lem="τέκνον">τέκνων</w>
+<w id="BelTh.10..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.10..2" ana="VBI AAI3S" lem="ἔρχομαι">ἦλθεν</w>
+<w id="BelTh.10..3" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.10..4" ana="N3V NSM" lem="βασιλεύσ">βασιλεὺσ</w>
+<w id="BelTh.10..5" ana="P" lem="μετά">μετὰ</w>
+<w id="BelTh.10..6" ana="N GSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.10..7" ana="P" lem="εἰσ">εἰσ</w>
+<w id="BelTh.10..8" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.10..9" ana="N2 ASM" lem="οἶκοσ">οἶκον</w>
+<w id="BelTh.10..10" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="BelTh.10..11" ana="N GSM" lem="Βηλ">Βηλ</w>
+<w id="BelTh.11..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.11..2" ana="VAI AAI3P" lem="εἶπον">εἶπαν</w>
+<w id="BelTh.11..3" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="BelTh.11..4" ana="N3V NPM" lem="ἱερεύσ">ἱερεῖσ</w>
+<w id="BelTh.11..5" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="BelTh.11..6" ana="N GSM" lem="Βηλ">Βηλ</w>
+<w id="BelTh.11..7" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="BelTh.11..8" ana="RP NP" lem="ἐγώ">ἡμεῖσ</w>
+<w id="BelTh.11..9" ana="V1 PAI1P" lem="ἀπο-τρέχω">ἀποτρέχομεν</w>
+<w id="BelTh.11..10" ana="D" lem="ἔξω">ἔξω</w>
+<w id="BelTh.11..11" ana="RP NS" lem="σύ">σὺ</w>
+<w id="BelTh.11..12" ana="X" lem="δέ">δέ</w>
+<w id="BelTh.11..13" ana="N3V VSM" lem="βασιλεύσ">βασιλεῦ</w>
+<w id="BelTh.11..14" ana="VE AAD2S" lem="παρα-τίθημι">παράθεσ</w>
+<w id="BelTh.11..15" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="BelTh.11..16" ana="N3M APN" lem="βρῶμα">βρώματα</w>
+<w id="BelTh.11..17" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.11..18" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.11..19" ana="N2 ASM" lem="οἶνοσ">οἶνον</w>
+<w id="BelTh.11..20" ana="VA AAPNSM" lem="κεράννυμι">κεράσασ</w>
+<w id="BelTh.11..21" ana="VE AAD2S" lem="τίθημι">θὲσ</w>
+<w id="BelTh.11..22" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.11..23" ana="VA AAD2S" lem="ἀπο-κλείω">ἀπόκλεισον</w>
+<w id="BelTh.11..24" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="BelTh.11..25" ana="N1A ASF" lem="θύρα">θύραν</w>
+<w id="BelTh.11..26" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.11..27" ana="VA AAD2S" lem="σφραγίζω">σφράγισον</w>
+<w id="BelTh.11..28" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="BelTh.11..29" ana="N2 DSM" lem="δακτύλιοσ">δακτυλίῳ</w>
+<w id="BelTh.11..30" ana="RP GS" lem="σύ">σου</w>
+<w id="BelTh.11..31" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.11..32" ana="VB AAPNSM" lem="ἔρχομαι">ἐλθὼν</w>
+<w id="BelTh.11..33" ana="D" lem="πρωΐ">πρωὶ</w>
+<w id="BelTh.11..34" ana="C" lem="ἐάν">ἐὰν</w>
+<w id="BelTh.11..35" ana="D" lem="μή">μὴ</w>
+<w id="BelTh.11..36" ana="VB AAS2S" lem="εὑρίσκω">εὕρῃσ</w>
+<w id="BelTh.11..37" ana="A3 APN" lem="πᾶσ">πάντα</w>
+<w id="BelTh.11..38" ana="VM XPPAPN" lem="βιβρώσκω">βεβρωμένα</w>
+<w id="BelTh.11..39" ana="P" lem="ὑπό">ὑπὸ</w>
+<w id="BelTh.11..40" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="BelTh.11..41" ana="N GSM" lem="Βηλ">Βηλ</w>
+<w id="BelTh.11..42" ana="VF2 FMI1P" lem="ἀπο-θνήσκω">ἀποθανούμεθα</w>
+<w id="BelTh.11..43" ana="C" lem="ἤ">ἢ</w>
+<w id="BelTh.11..44" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.11..45" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.11..46" ana="V1 PMPNSM" lem="ψεύδομαι">ψευδόμενοσ</w>
+<w id="BelTh.11..47" ana="P" lem="κατά">καθ'</w>
+<w id="BelTh.11..48" ana="RP GP" lem="ἐγώ">ἡμῶν</w>
+<w id="BelTh.12..1" ana="RD NPM" lem="αὐτόσ">αὐτοὶ</w>
+<w id="BelTh.12..2" ana="X" lem="δέ">δὲ</w>
+<w id="BelTh.12..3" ana="V2I IAI3P" lem="κατα-φρονέω">κατεφρόνουν</w>
+<w id="BelTh.12..4" ana="C" lem="ὅτι">ὅτι</w>
+<w id="BelTh.12..5" ana="VX YAI3P" lem="ποιέω">πεποιήκεισαν</w>
+<w id="BelTh.12..6" ana="P" lem="ὑπό">ὑπὸ</w>
+<w id="BelTh.12..7" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="BelTh.12..8" ana="N1S ASF" lem="τράπεζα">τράπεζαν</w>
+<w id="BelTh.12..9" ana="VP XMPASF" lem="κρύπτω">κεκρυμμένην</w>
+<w id="BelTh.12..10" ana="N2 ASF" lem="εἴσοδοσ">εἴσοδον</w>
+<w id="BelTh.12..11" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.12..12" ana="P" lem="διά">δι'</w>
+<w id="BelTh.12..13" ana="RD GSF" lem="αὐτόσ">αὐτῆσ</w>
+<w id="BelTh.12..14" ana="V1I IMI3P" lem="εἰσ-πορεύομαι">εἰσεπορεύοντο</w>
+<w id="BelTh.12..15" ana="D" lem="διόλου">διόλου</w>
+<w id="BelTh.12..16" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.12..17" ana="V4I IAI3P" lem="ἀνα-ἁλίσκω">ἀνήλουν</w>
+<w id="BelTh.12..18" ana="RD APN" lem="αὐτόσ">αὐτά</w>
+<w id="BelTh.13..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.13..2" ana="VBI AMI3S" lem="γίγνομαι">ἐγένετο</w>
+<w id="BelTh.13..3" ana="C" lem="ὡσ">ὡσ</w>
+<w id="BelTh.13..4" ana="VBI AAI3P" lem="ἐκ-ἔρχομαι">ἐξήλθοσαν</w>
+<w id="BelTh.13..5" ana="RD NPM" lem="ἐκεῖνοσ">ἐκεῖνοι</w>
+<w id="BelTh.13..6" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.13..7" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.13..8" ana="N3V NSM" lem="βασιλεύσ">βασιλεὺσ</w>
+<w id="BelTh.13..9" ana="VAI AAI3S" lem="παρα-τίθημι">παρέθηκεν</w>
+<w id="BelTh.13..10" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="BelTh.13..11" ana="N3M APN" lem="βρῶμα">βρώματα</w>
+<w id="BelTh.13..12" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="BelTh.13..13" ana="N DSM" lem="Βηλ">Βηλ</w>
+<w id="BelTh.14..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.14..2" ana="VAI AAI3S" lem="ἐπι-τάσσω">ἐπέταξεν</w>
+<w id="BelTh.14..3" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.14..4" ana="RA DPN" lem="ὁ">τοῖσ</w>
+<w id="BelTh.14..5" ana="N2N DPN" lem="παιδάριον">παιδαρίοισ</w>
+<w id="BelTh.14..6" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="BelTh.14..7" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.14..8" ana="VAI AAI3P" lem="φέρω">ἤνεγκαν</w>
+<w id="BelTh.14..9" ana="N1A ASF" lem="τέφρα">τέφραν</w>
+<w id="BelTh.14..10" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.14..11" ana="VAI AAI3P" lem="κατα-σείω">κατέσησαν</w>
+<w id="BelTh.14..12" ana="A1 ASM" lem="ὅλοσ">ὅλον</w>
+<w id="BelTh.14..13" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.14..14" ana="N2 ASM" lem="ναόσ">ναὸν</w>
+<w id="BelTh.14..15" ana="P" lem="ἐνώπιον">ἐνώπιον</w>
+<w id="BelTh.14..16" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="BelTh.14..17" ana="N3V GSM" lem="βασιλεύσ">βασιλέωσ</w>
+<w id="BelTh.14..18" ana="A1 GSM" lem="μόνοσ">μόνου</w>
+<w id="BelTh.14..19" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.14..20" ana="VB AAPNPM" lem="ἐκ-ἔρχομαι">ἐξελθόντεσ</w>
+<w id="BelTh.14..21" ana="VAI AAI3P" lem="κλείω">ἔκλεισαν</w>
+<w id="BelTh.14..22" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="BelTh.14..23" ana="N1A ASF" lem="θύρα">θύραν</w>
+<w id="BelTh.14..24" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.14..25" ana="VAI AMI3P" lem="σφραγίζω">ἐσφραγίσαντο</w>
+<w id="BelTh.14..26" ana="P" lem="ἐν">ἐν</w>
+<w id="BelTh.14..27" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="BelTh.14..28" ana="N2 DSM" lem="δακτύλιοσ">δακτυλίῳ</w>
+<w id="BelTh.14..29" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="BelTh.14..30" ana="N3V GSM" lem="βασιλεύσ">βασιλέωσ</w>
+<w id="BelTh.14..31" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.14..32" ana="VBI AAI3P" lem="ἀπο-ἔρχομαι">ἀπῆλθον</w>
+<w id="BelTh.15..1" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="BelTh.15..2" ana="X" lem="δέ">δὲ</w>
+<w id="BelTh.15..3" ana="N3V NPM" lem="ἱερεύσ">ἱερεῖσ</w>
+<w id="BelTh.15..4" ana="VBI AAI3P" lem="ἔρχομαι">ἦλθον</w>
+<w id="BelTh.15..5" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="BelTh.15..6" ana="N3 ASF" lem="νύξ">νύκτα</w>
+<w id="BelTh.15..7" ana="P" lem="κατά">κατὰ</w>
+<w id="BelTh.15..8" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="BelTh.15..9" ana="N3E ASN" lem="ἔθοσ">ἔθοσ</w>
+<w id="BelTh.15..10" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="BelTh.15..11" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.15..12" ana="RA NPF" lem="ὁ">αἱ</w>
+<w id="BelTh.15..13" ana="N3K NPF" lem="γυνή">γυναῖκεσ</w>
+<w id="BelTh.15..14" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.15..15" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="BelTh.15..16" ana="N2N APN" lem="τέκνον">τέκνα</w>
+<w id="BelTh.15..17" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="BelTh.15..18" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.15..19" ana="VBI AAI3P" lem="κατα-ἐσθίω">κατέφαγον</w>
+<w id="BelTh.15..20" ana="A3 ASM" lem="πᾶσ">πάντα</w>
+<w id="BelTh.15..21" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.15..22" ana="VBI AAI3P" lem="ἐκ-πίνω">ἐξέπιον</w>
+<w id="BelTh.16..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.16..2" ana="VAI AAI3S" lem="ὀρθρίζω">ὤρθρισεν</w>
+<w id="BelTh.16..3" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.16..4" ana="N3V NSM" lem="βασιλεύσ">βασιλεὺσ</w>
+<w id="BelTh.16..5" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="BelTh.16..6" ana="D" lem="πρωΐ">πρωὶ</w>
+<w id="BelTh.16..7" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.16..8" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.16..9" ana="P" lem="μετά">μετ'</w>
+<w id="BelTh.16..10" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="BelTh.17..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.17..2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.17..3" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.17..4" ana="N3V NSM" lem="βασιλεύσ">βασιλεύσ</w>
+<w id="BelTh.17..5" ana="A1A NPM" lem="σῷοσ">σῷοι</w>
+<w id="BelTh.17..6" ana="RA NPF" lem="ὁ">αἱ</w>
+<w id="BelTh.17..7" ana="N3D NPF" lem="σφραγίσ">σφραγῖδεσ</w>
+<w id="BelTh.17..8" ana="N VSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.17..9" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.17..10" ana="X" lem="δέ">δὲ</w>
+<w id="BelTh.17..11" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.17..12" ana="A1A NPM" lem="σῷοσ">σῷοι</w>
+<w id="BelTh.17..13" ana="N3V VSM" lem="βασιλεύσ">βασιλεῦ</w>
+<w id="BelTh.18..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.18..2" ana="VBI AMI3S" lem="γίγνομαι">ἐγένετο</w>
+<w id="BelTh.18..3" ana="D" lem="ἅμα">ἅμα</w>
+<w id="BelTh.18..4" ana="RA DSN" lem="ὁ">τῷ</w>
+<w id="BelTh.18..5" ana="VA AMN" lem="ἀνα-οἴγω">ἀνοῖξαι</w>
+<w id="BelTh.18..6" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="BelTh.18..7" ana="N1A APF" lem="θύρα">θύρασ</w>
+<w id="BelTh.18..8" ana="VA AAPNSM" lem="ἐπι-βλέπω">ἐπιβλέψασ</w>
+<w id="BelTh.18..9" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.18..10" ana="N3V NSM" lem="βασιλεύσ">βασιλεὺσ</w>
+<w id="BelTh.18..11" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="BelTh.18..12" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="BelTh.18..13" ana="N1S ASF" lem="τράπεζα">τράπεζαν</w>
+<w id="BelTh.18..14" ana="VAI AAI3S" lem="βοάω">ἐβόησεν</w>
+<w id="BelTh.18..15" ana="N1 DSF" lem="φωνή">φωνῇ</w>
+<w id="BelTh.18..16" ana="A1 DSF" lem="μέγασ">μεγάλῃ</w>
+<w id="BelTh.18..17" ana="A1P NSM" lem="μέγασ">μέγασ</w>
+<w id="BelTh.18..18" ana="V9 PAI2S" lem="εἰμί">εἶ</w>
+<w id="BelTh.18..19" ana="N VSM" lem="Βηλ">Βηλ</w>
+<w id="BelTh.18..20" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.18..21" ana="D" lem="οὐ">οὐκ</w>
+<w id="BelTh.18..22" ana="V9 PAI3S" lem="εἰμί">ἔστιν</w>
+<w id="BelTh.18..23" ana="P" lem="παρά">παρὰ</w>
+<w id="BelTh.18..24" ana="RP DS" lem="σύ">σοὶ</w>
+<w id="BelTh.18..25" ana="N2 NSM" lem="δόλοσ">δόλοσ</w>
+<w id="BelTh.18..26" ana="C" lem="οὐδέ">οὐδὲ</w>
+<w id="BelTh.18..27" ana="A3 NSM" lem="εἷσ">εἷσ</w>
+<w id="BelTh.19..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.19..2" ana="VAI AAI3S" lem="γελάω">ἐγέλασεν</w>
+<w id="BelTh.19..3" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.19..4" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.19..5" ana="VAI AAI3S" lem="κρατέω">ἐκράτησεν</w>
+<w id="BelTh.19..6" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.19..7" ana="N3V ASM" lem="βασιλεύσ">βασιλέα</w>
+<w id="BelTh.19..8" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="BelTh.19..9" ana="D" lem="μή">μὴ</w>
+<w id="BelTh.19..10" ana="VB AAN" lem="εἰσ-ἔρχομαι">εἰσελθεῖν</w>
+<w id="BelTh.19..11" ana="RD ASM" lem="αὐτόσ">αὐτὸν</w>
+<w id="BelTh.19..12" ana="D" lem="ἔσω">ἔσω</w>
+<w id="BelTh.19..13" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.19..14" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.19..15" ana="VB AAD2S" lem="ὁράω">ἰδὲ</w>
+<w id="BelTh.19..16" ana="X" lem="δή">δὴ</w>
+<w id="BelTh.19..17" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="BelTh.19..18" ana="N3E ASN" lem="ἔδαφοσ">ἔδαφοσ</w>
+<w id="BelTh.19..19" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.19..20" ana="VZ AAD2S" lem="γιγνώσκω">γνῶθι</w>
+<w id="BelTh.19..21" ana="RI GSM" lem="τίσ">τίνοσ</w>
+<w id="BelTh.19..22" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="BelTh.19..23" ana="N3E APN" lem="ἴχνοσ">ἴχνη</w>
+<w id="BelTh.19..24" ana="RD APN" lem="οὗτοσ">ταῦτα</w>
+<w id="BelTh.20..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.20..2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.20..3" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.20..4" ana="N3V NSM" lem="βασιλεύσ">βασιλεύσ</w>
+<w id="BelTh.20..5" ana="V3 PAI1S" lem="ὁράω">ὁρῶ</w>
+<w id="BelTh.20..6" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="BelTh.20..7" ana="N3E APN" lem="ἴχνοσ">ἴχνη</w>
+<w id="BelTh.20..8" ana="N3 GPM" lem="ἀνήρ">ἀνδρῶν</w>
+<w id="BelTh.20..9" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.20..10" ana="N3K GPF" lem="γυνή">γυναικῶν</w>
+<w id="BelTh.20..11" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.20..12" ana="N2N GPN" lem="παιδίον">παιδίων</w>
+<w id="BelTh.21..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.21..2" ana="VS APPNSM" lem="ὀργίζω">ὀργισθεὶσ</w>
+<w id="BelTh.21..3" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.21..4" ana="N3V NSM" lem="βασιλεύσ">βασιλεὺσ</w>
+<w id="BelTh.21..5" ana="D" lem="τότε">τότε</w>
+<w id="BelTh.21..6" ana="VBI AAI3S" lem="συν-λαμβάνω">συνέλαβεν</w>
+<w id="BelTh.21..7" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="BelTh.21..8" ana="N3V APM" lem="ἱερεύσ">ἱερεῖσ</w>
+<w id="BelTh.21..9" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.21..10" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="BelTh.21..11" ana="N3K APF" lem="γυνή">γυναῖκασ</w>
+<w id="BelTh.21..12" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.21..13" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="BelTh.21..14" ana="N2N APN" lem="τέκνον">τέκνα</w>
+<w id="BelTh.21..15" ana="RD GPM" lem="αὐτόσ">αὐτῶν</w>
+<w id="BelTh.21..16" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.21..17" ana="VAI AAI3P" lem="δεικνύω">ἔδειξαν</w>
+<w id="BelTh.21..18" ana="RD DSM" lem="αὐτόσ">αὐτῷ</w>
+<w id="BelTh.21..19" ana="RA APF" lem="ὁ">τὰσ</w>
+<w id="BelTh.21..20" ana="A1 APF" lem="κρυπτόσ">κρυπτὰσ</w>
+<w id="BelTh.21..21" ana="N1A APF" lem="θύρα">θύρασ</w>
+<w id="BelTh.21..22" ana="P" lem="διά">δι'</w>
+<w id="BelTh.21..23" ana="RR GPM" lem="ὅσ">ὧν</w>
+<w id="BelTh.21..24" ana="V1I IMI3P" lem="εἰσ-πορεύομαι">εἰσεπορεύοντο</w>
+<w id="BelTh.21..25" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.21..26" ana="V3I IAI3P" lem="δαπανάω">ἐδαπάνων</w>
+<w id="BelTh.21..27" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="BelTh.21..28" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="BelTh.21..29" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="BelTh.21..30" ana="N1S DSF" lem="τράπεζα">τραπέζῃ</w>
+<w id="BelTh.22..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.22..2" ana="VAI AAI3S" lem="ἀπο-κτείνω">ἀπέκτεινεν</w>
+<w id="BelTh.22..3" ana="RD APM" lem="αὐτόσ">αὐτοὺσ</w>
+<w id="BelTh.22..4" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.22..5" ana="N3V NSM" lem="βασιλεύσ">βασιλεὺσ</w>
+<w id="BelTh.22..6" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.22..7" ana="VAI AAI3S" lem="δίδωμι">ἔδωκεν</w>
+<w id="BelTh.22..8" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.22..9" ana="N ASM" lem="Βηλ">Βηλ</w>
+<w id="BelTh.22..10" ana="A1B ASM" lem="ἔκδοτοσ">ἔκδοτον</w>
+<w id="BelTh.22..11" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="BelTh.22..12" ana="N DSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.22..13" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.22..14" ana="VAI AAI3S" lem="κατα-στρέφω">κατέστρεψεν</w>
+<w id="BelTh.22..15" ana="RD ASM" lem="αὐτόσ">αὐτὸν</w>
+<w id="BelTh.22..16" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.22..17" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="BelTh.22..18" ana="N2N ASN" lem="ἱερόν">ἱερὸν</w>
+<w id="BelTh.22..19" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="BelTh.23..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.23..2" ana="V9 IAI3S" lem="εἰμί">ἦν</w>
+<w id="BelTh.23..3" ana="N3 NSM" lem="δράκων">δράκων</w>
+<w id="BelTh.23..4" ana="A1P NSM" lem="μέγασ">μέγασ</w>
+<w id="BelTh.23..5" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.23..6" ana="V1I IMI3P" lem="σέβω">ἐσέβοντο</w>
+<w id="BelTh.23..7" ana="RD ASM" lem="αὐτόσ">αὐτὸν</w>
+<w id="BelTh.23..8" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="BelTh.23..9" ana="N2 NPM" lem="Βαβυλωνίοσ">Βαβυλώνιοι</w>
+<w id="BelTh.24..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.24..2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.24..3" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.24..4" ana="N3V NSM" lem="βασιλεύσ">βασιλεὺσ</w>
+<w id="BelTh.24..5" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="BelTh.24..6" ana="N DSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.24..7" ana="D" lem="οὐ">οὐ</w>
+<w id="BelTh.24..8" ana="V6 PMI2S" lem="δύναμαι">δύνασαι</w>
+<w id="BelTh.24..9" ana="VB AAN" lem="εἶπον">εἰπεῖν</w>
+<w id="BelTh.24..10" ana="C" lem="ὅτι">ὅτι</w>
+<w id="BelTh.24..11" ana="D" lem="οὐ">οὐκ</w>
+<w id="BelTh.24..12" ana="V9 PAI3S" lem="εἰμί">ἔστιν</w>
+<w id="BelTh.24..13" ana="RD NSM" lem="οὗτοσ">οὗτοσ</w>
+<w id="BelTh.24..14" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="BelTh.24..15" ana="V3 PAPNSM" lem="ζάω">ζῶν</w>
+<w id="BelTh.24..16" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.24..17" ana="VA AAD2S" lem="προσ-κυνέω">προσκύνησον</w>
+<w id="BelTh.24..18" ana="RD DSM" lem="αὐτόσ">αὐτῷ</w>
+<w id="BelTh.25..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.25..2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.25..3" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.25..4" ana="N2 DSM" lem="κύριοσ">κυρίῳ</w>
+<w id="BelTh.25..5" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="BelTh.25..6" ana="N2 DSM" lem="θεόσ">θεῷ</w>
+<w id="BelTh.25..7" ana="RP GS" lem="ἐγώ">μου</w>
+<w id="BelTh.25..8" ana="VF FAI1S" lem="προσ-κυνέω">προσκυνήσω</w>
+<w id="BelTh.25..9" ana="C" lem="ὅτι">ὅτι</w>
+<w id="BelTh.25..10" ana="RD NSM" lem="οὗτοσ">οὗτόσ</w>
+<w id="BelTh.25..11" ana="V9 PAI3S" lem="εἰμί">ἐστιν</w>
+<w id="BelTh.25..12" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="BelTh.25..13" ana="V3 PAPNSM" lem="ζάω">ζῶν</w>
+<w id="BelTh.25..14" ana="RP NS" lem="σύ">σὺ</w>
+<w id="BelTh.25..15" ana="X" lem="δέ">δέ</w>
+<w id="BelTh.25..16" ana="N3V VSM" lem="βασιλεύσ">βασιλεῦ</w>
+<w id="BelTh.25..17" ana="VO AAD2S" lem="δίδωμι">δόσ</w>
+<w id="BelTh.25..18" ana="RP DS" lem="ἐγώ">μοι</w>
+<w id="BelTh.25..19" ana="N1A ASF" lem="ἐξουσία">ἐξουσίαν</w>
+<w id="BelTh.25..20" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.25..21" ana="VF2 FAI1S" lem="ἀπο-κτείνω">ἀποκτενῶ</w>
+<w id="BelTh.25..22" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.25..23" ana="N3 ASM" lem="δράκων">δράκοντα</w>
+<w id="BelTh.25..24" ana="P" lem="ἄνευ">ἄνευ</w>
+<w id="BelTh.25..25" ana="N1 GSF" lem="μάχαιρα">μαχαίρασ</w>
+<w id="BelTh.25..26" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.25..27" ana="N2 GSF" lem="ῥάβδοσ">ῥάβδου</w>
+<w id="BelTh.26..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.26..2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.26..3" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.26..4" ana="N3V NSM" lem="βασιλεύσ">βασιλεύσ</w>
+<w id="BelTh.26..5" ana="V8 PAI1S" lem="δίδωμι">δίδωμί</w>
+<w id="BelTh.26..6" ana="RP DS" lem="σύ">σοι</w>
+<w id="BelTh.27..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.27..2" ana="VBI AAI3S" lem="λαμβάνω">ἔλαβεν</w>
+<w id="BelTh.27..3" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.27..4" ana="N1A ASF" lem="πίσσα">πίσσαν</w>
+<w id="BelTh.27..5" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.27..6" ana="N3 ASN" lem="στῆρ">στῆρ</w>
+<w id="BelTh.27..7" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.27..8" ana="N3 APF" lem="θρίξ">τρίχασ</w>
+<w id="BelTh.27..9" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.27..10" ana="VAI AAI3S" lem="ἕψω">ἥψησεν</w>
+<w id="BelTh.27..11" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="BelTh.27..12" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="BelTh.27..13" ana="RD ASN" lem="αὐτόσ">αὐτὸ</w>
+<w id="BelTh.27..14" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.27..15" ana="VAI AAI3S" lem="ποιέω">ἐποίησεν</w>
+<w id="BelTh.27..16" ana="N1A APF" lem="μάζα">μάζασ</w>
+<w id="BelTh.27..17" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.27..18" ana="VAI AAI3S" lem="δίδωμι">ἔδωκεν</w>
+<w id="BelTh.27..19" ana="P" lem="εἰσ">εἰσ</w>
+<w id="BelTh.27..20" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="BelTh.27..21" ana="N3M ASN" lem="στόμα">στόμα</w>
+<w id="BelTh.27..22" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="BelTh.27..23" ana="N3 GSM" lem="δράκων">δράκοντοσ</w>
+<w id="BelTh.27..24" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.27..25" ana="VB AAPNSM" lem="ἐσθίω">φαγὼν</w>
+<w id="BelTh.27..26" ana="VDI API3S" lem="δια-ῥήγνυμι">διερράγη</w>
+<w id="BelTh.27..27" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.27..28" ana="N3 NSM" lem="δράκων">δράκων</w>
+<w id="BelTh.27..29" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.27..30" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.27..31" ana="VB AAD2P" lem="ὁράω">ἴδετε</w>
+<w id="BelTh.27..32" ana="RA APN" lem="ὁ">τὰ</w>
+<w id="BelTh.27..33" ana="N3M APN" lem="σέβασμα">σεβάσματα</w>
+<w id="BelTh.27..34" ana="RP GP" lem="σύ">ὑμῶν</w>
+<w id="BelTh.28..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.28..2" ana="VBI AMI3S" lem="γίγνομαι">ἐγένετο</w>
+<w id="BelTh.28..3" ana="C" lem="ὡσ">ὡσ</w>
+<w id="BelTh.28..4" ana="VAI AAI3P" lem="ἀκούω">ἤκουσαν</w>
+<w id="BelTh.28..5" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="BelTh.28..6" ana="N2 NPM" lem="Βαβυλωνίοσ">Βαβυλώνιοι</w>
+<w id="BelTh.28..7" ana="VAI AAI3P" lem="ἀγανακτέω">ἠγανάκτησαν</w>
+<w id="BelTh.28..8" ana="D" lem="λίαν">λίαν</w>
+<w id="BelTh.28..9" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.28..10" ana="VDI API3P" lem="συν-στρέφω">συνεστράφησαν</w>
+<w id="BelTh.28..11" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="BelTh.28..12" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.28..13" ana="N3V ASM" lem="βασιλεύσ">βασιλέα</w>
+<w id="BelTh.28..14" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.28..15" ana="VAI AAI3P" lem="εἶπον">εἶπαν</w>
+<w id="BelTh.28..16" ana="N2 NSM" lem="Ἰουδαῖοσ">Ιουδαῖοσ</w>
+<w id="BelTh.28..17" ana="VX XAI3S" lem="γίγνομαι">γέγονεν</w>
+<w id="BelTh.28..18" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.28..19" ana="N3V NSM" lem="βασιλεύσ">βασιλεύσ</w>
+<w id="BelTh.28..20" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.28..21" ana="N ASM" lem="Βηλ">Βηλ</w>
+<w id="BelTh.28..22" ana="VAI AAI3S" lem="κατα-σπάω">κατέσπασεν</w>
+<w id="BelTh.28..23" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.28..24" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.28..25" ana="N3 ASM" lem="δράκων">δράκοντα</w>
+<w id="BelTh.28..26" ana="VAI AAI3S" lem="ἀπο-κτείνω">ἀπέκτεινεν</w>
+<w id="BelTh.28..27" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.28..28" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="BelTh.28..29" ana="N3V APM" lem="ἱερεύσ">ἱερεῖσ</w>
+<w id="BelTh.28..30" ana="VAI AAI3S" lem="κατα-σφάζω">κατέσφαξεν</w>
+<w id="BelTh.29..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.29..2" ana="VAI AAI3P" lem="εἶπον">εἶπαν</w>
+<w id="BelTh.29..3" ana="VA AAPNPM" lem="ἔρχομαι">ἐλθόντεσ</w>
+<w id="BelTh.29..4" ana="P" lem="πρόσ">πρὸσ</w>
+<w id="BelTh.29..5" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.29..6" ana="N3V ASM" lem="βασιλεύσ">βασιλέα</w>
+<w id="BelTh.29..7" ana="VO AAD2S" lem="παρα-δίδωμι">παράδοσ</w>
+<w id="BelTh.29..8" ana="RP DP" lem="ἐγώ">ἡμῖν</w>
+<w id="BelTh.29..9" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.29..10" ana="N ASM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.29..11" ana="C" lem="εἰ">εἰ</w>
+<w id="BelTh.29..12" ana="X" lem="δέ">δὲ</w>
+<w id="BelTh.29..13" ana="D" lem="μή">μή</w>
+<w id="BelTh.29..14" ana="VF2 FAI1P" lem="ἀπο-κτείνω">ἀποκτενοῦμέν</w>
+<w id="BelTh.29..15" ana="RP AS" lem="σύ">σε</w>
+<w id="BelTh.29..16" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.29..17" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.29..18" ana="N2 ASM" lem="οἶκοσ">οἶκόν</w>
+<w id="BelTh.29..19" ana="RP GS" lem="σύ">σου</w>
+<w id="BelTh.30..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.30..2" ana="VB AAI3S" lem="ὁράω">εἶδεν</w>
+<w id="BelTh.30..3" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.30..4" ana="N3V NSM" lem="βασιλεύσ">βασιλεὺσ</w>
+<w id="BelTh.30..5" ana="C" lem="ὅτι">ὅτι</w>
+<w id="BelTh.30..6" ana="V1 PAI3P" lem="ἐπείγω">ἐπείγουσιν</w>
+<w id="BelTh.30..7" ana="RD ASM" lem="αὐτόσ">αὐτὸν</w>
+<w id="BelTh.30..8" ana="D" lem="σφόδρα">σφόδρα</w>
+<w id="BelTh.30..9" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.30..10" ana="VS APPNSM" lem="ἀνα-ἀγκάζω">ἀναγκασθεὶσ</w>
+<w id="BelTh.30..11" ana="VAI AAI3S" lem="παρα-δίδωμι">παρέδωκεν</w>
+<w id="BelTh.30..12" ana="RD DPM" lem="αὐτόσ">αὐτοῖσ</w>
+<w id="BelTh.30..13" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.30..14" ana="N ASM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.31..1" ana="RA NPM" lem="ὁ">οἱ</w>
+<w id="BelTh.31..2" ana="X" lem="δέ">δὲ</w>
+<w id="BelTh.31..3" ana="VBI AAI3S" lem="ἐν-βάλλω">ἐνέβαλον</w>
+<w id="BelTh.31..4" ana="RD ASM" lem="αὐτόσ">αὐτὸν</w>
+<w id="BelTh.31..5" ana="P" lem="εἰσ">εἰσ</w>
+<w id="BelTh.31..6" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.31..7" ana="N2 ASM" lem="λάκκοσ">λάκκον</w>
+<w id="BelTh.31..8" ana="RA GPM" lem="ὁ">τῶν</w>
+<w id="BelTh.31..9" ana="N3 GPM" lem="λέων">λεόντων</w>
+<w id="BelTh.31..10" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.31..11" ana="V9 IAI3S" lem="εἰμί">ἦν</w>
+<w id="BelTh.31..12" ana="D" lem="ἐκεῖ">ἐκεῖ</w>
+<w id="BelTh.31..13" ana="N1A APF" lem="ἡμέρα">ἡμέρασ</w>
+<w id="BelTh.31..14" ana="M" lem="ἕξ">ἕξ</w>
+<w id="BelTh.32..1" ana="V9 IAI3P" lem="εἰμί">ἦσαν</w>
+<w id="BelTh.32..2" ana="X" lem="δέ">δὲ</w>
+<w id="BelTh.32..3" ana="P" lem="ἐν">ἐν</w>
+<w id="BelTh.32..4" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="BelTh.32..5" ana="N2 DSM" lem="λάκκοσ">λάκκῳ</w>
+<w id="BelTh.32..6" ana="M" lem="ἑπτά">ἑπτὰ</w>
+<w id="BelTh.32..7" ana="N3 NPM" lem="λέων">λέοντεσ</w>
+<w id="BelTh.32..8" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.32..9" ana="V8I IMI3S" lem="δίδωμι">ἐδίδετο</w>
+<w id="BelTh.32..10" ana="RD DPM" lem="αὐτόσ">αὐτοῖσ</w>
+<w id="BelTh.32..11" ana="RA ASF" lem="ὁ">τὴν</w>
+<w id="BelTh.32..12" ana="N1A ASF" lem="ἡμέρα">ἡμέραν</w>
+<w id="BelTh.32..13" ana="M" lem="δύο">δύο</w>
+<w id="BelTh.32..14" ana="N3M NPN" lem="σῶμα">σώματα</w>
+<w id="BelTh.32..15" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.32..16" ana="M" lem="δύο">δύο</w>
+<w id="BelTh.32..17" ana="N2N NPN" lem="πρόβατον">πρόβατα</w>
+<w id="BelTh.32..18" ana="D" lem="τότε">τότε</w>
+<w id="BelTh.32..19" ana="X" lem="δέ">δὲ</w>
+<w id="BelTh.32..20" ana="D" lem="οὐ">οὐκ</w>
+<w id="BelTh.32..21" ana="VCI API3S" lem="δίδωμι">ἐδόθη</w>
+<w id="BelTh.32..22" ana="RD DPM" lem="αὐτόσ">αὐτοῖσ</w>
+<w id="BelTh.32..23" ana="C" lem="ἵνα">ἵνα</w>
+<w id="BelTh.32..24" ana="VB AAS3P" lem="ἐσθίω">καταφάγωσιν</w>
+<w id="BelTh.32..25" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.32..26" ana="N ASM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.33..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.33..2" ana="V9 IAI3S" lem="εἰμί">ἦν</w>
+<w id="BelTh.33..3" ana="N NSM" lem="Αμβακουμ">Αμβακουμ</w>
+<w id="BelTh.33..4" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.33..5" ana="N1M NSM" lem="προφήτησ">προφήτησ</w>
+<w id="BelTh.33..6" ana="P" lem="ἐν">ἐν</w>
+<w id="BelTh.33..7" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="BelTh.33..8" ana="N1A DSF" lem="Ἰουδαία">Ιουδαίᾳ</w>
+<w id="BelTh.33..9" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.33..10" ana="RD NSM" lem="αὐτόσ">αὐτὸσ</w>
+<w id="BelTh.33..11" ana="VAI AAI3S" lem="ἕψω">ἥψησεν</w>
+<w id="BelTh.33..12" ana="N3M ASN" lem="ἕψεμα">ἕψεμα</w>
+<w id="BelTh.33..13" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.33..14" ana="VAI AAI3S" lem="ἐν-θρύπτω">ἐνέθρυψεν</w>
+<w id="BelTh.33..15" ana="N2 APM" lem="ἄρτοσ">ἄρτουσ</w>
+<w id="BelTh.33..16" ana="P" lem="εἰσ">εἰσ</w>
+<w id="BelTh.33..17" ana="N1 ASF" lem="σκάφη">σκάφην</w>
+<w id="BelTh.33..18" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.33..19" ana="V1I IMI3S" lem="πορεύομαι">ἐπορεύετο</w>
+<w id="BelTh.33..20" ana="P" lem="εἰσ">εἰσ</w>
+<w id="BelTh.33..21" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="BelTh.33..22" ana="N2N ASN" lem="πεδίον">πεδίον</w>
+<w id="BelTh.33..23" ana="VA AAN" lem="ἀπο-φέρω">ἀπενέγκαι</w>
+<w id="BelTh.33..24" ana="RA DPM" lem="ὁ">τοῖσ</w>
+<w id="BelTh.33..25" ana="N1M DPM" lem="θεριστήσ">θερισταῖσ</w>
+<w id="BelTh.34..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.34..2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.34..3" ana="N2 NSM" lem="ἄγγελοσ">ἄγγελοσ</w>
+<w id="BelTh.34..4" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="BelTh.34..5" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="BelTh.34..6" ana="N DSM" lem="Αμβακουμ">Αμβακουμ</w>
+<w id="BelTh.34..7" ana="VA AAD2S" lem="ἀπο-φέρω">ἀπένεγκε</w>
+<w id="BelTh.34..8" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="BelTh.34..9" ana="N2N ASN" lem="ἄριστον">ἄριστον</w>
+<w id="BelTh.34..10" ana="RR ASN" lem="ὅσ">ὃ</w>
+<w id="BelTh.34..11" ana="V1 PAI2S" lem="ἔχω">ἔχεισ</w>
+<w id="BelTh.34..12" ana="P" lem="εἰσ">εἰσ</w>
+<w id="BelTh.34..13" ana="N3W ASF" lem="Βαβυλών">Βαβυλῶνα</w>
+<w id="BelTh.34..14" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="BelTh.34..15" ana="N DSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.34..16" ana="P" lem="εἰσ">εἰσ</w>
+<w id="BelTh.34..17" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.34..18" ana="N2 ASM" lem="λάκκοσ">λάκκον</w>
+<w id="BelTh.34..19" ana="RA GPM" lem="ὁ">τῶν</w>
+<w id="BelTh.34..20" ana="N3 GPM" lem="λέων">λεόντων</w>
+<w id="BelTh.35..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.35..2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.35..3" ana="N NSM" lem="Αμβακουμ">Αμβακουμ</w>
+<w id="BelTh.35..4" ana="N2 VSM" lem="κύριοσ">κύριε</w>
+<w id="BelTh.35..5" ana="N3W ASF" lem="Βαβυλών">Βαβυλῶνα</w>
+<w id="BelTh.35..6" ana="D" lem="οὐ">οὐχ</w>
+<w id="BelTh.35..7" ana="VX XAI1S" lem="ὁράω">ἑώρακα</w>
+<w id="BelTh.35..8" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.35..9" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.35..10" ana="N2 ASM" lem="λάκκοσ">λάκκον</w>
+<w id="BelTh.35..11" ana="D" lem="οὐ">οὐ</w>
+<w id="BelTh.35..12" ana="V1 PAI1S" lem="γιγνώσκω">γινώσκω</w>
+<w id="BelTh.36..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.36..2" ana="VBI AMI3S" lem="ἐπι-λαμβάνω">ἐπελάβετο</w>
+<w id="BelTh.36..3" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.36..4" ana="N2 NSM" lem="ἄγγελοσ">ἄγγελοσ</w>
+<w id="BelTh.36..5" ana="N2 GSM" lem="κύριοσ">κυρίου</w>
+<w id="BelTh.36..6" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="BelTh.36..7" ana="N1 GSF" lem="κορυφή">κορυφῆσ</w>
+<w id="BelTh.36..8" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="BelTh.36..9" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.36..10" ana="VA AAPNSM" lem="βαστάζω">βαστάσασ</w>
+<w id="BelTh.36..11" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="BelTh.36..12" ana="N1 GSF" lem="κόμη">κόμησ</w>
+<w id="BelTh.36..13" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="BelTh.36..14" ana="N1 GSF" lem="κεφαλή">κεφαλῆσ</w>
+<w id="BelTh.36..15" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="BelTh.36..16" ana="VAI AAI3S" lem="τίθημι">ἔθηκεν</w>
+<w id="BelTh.36..17" ana="RD ASM" lem="αὐτόσ">αὐτὸν</w>
+<w id="BelTh.36..18" ana="P" lem="εἰσ">εἰσ</w>
+<w id="BelTh.36..19" ana="N3W ASF" lem="Βαβυλών">Βαβυλῶνα</w>
+<w id="BelTh.36..20" ana="D" lem="ἐπάνω">ἐπάνω</w>
+<w id="BelTh.36..21" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="BelTh.36..22" ana="N2 GSM" lem="λάκκοσ">λάκκου</w>
+<w id="BelTh.36..23" ana="P" lem="ἐν">ἐν</w>
+<w id="BelTh.36..24" ana="RA DSM" lem="ὁ">τῷ</w>
+<w id="BelTh.36..25" ana="N2 DSM" lem="ῥοίζοσ">ῥοίζῳ</w>
+<w id="BelTh.36..26" ana="RA GSN" lem="ὁ">τοῦ</w>
+<w id="BelTh.36..27" ana="N3M GSN" lem="πνεῦμα">πνεύματοσ</w>
+<w id="BelTh.36..28" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="BelTh.37..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.37..2" ana="VAI AAI3S" lem="βοάω">ἐβόησεν</w>
+<w id="BelTh.37..3" ana="N NSM" lem="Αμβακουμ">Αμβακουμ</w>
+<w id="BelTh.37..4" ana="V1 PAPNSM" lem="λέγω">λέγων</w>
+<w id="BelTh.37..5" ana="N VSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.37..6" ana="N VSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.37..7" ana="VB AAD2S" lem="λαμβάνω">λαβὲ</w>
+<w id="BelTh.37..8" ana="RA ASN" lem="ὁ">τὸ</w>
+<w id="BelTh.37..9" ana="N2N ASN" lem="ἄριστον">ἄριστον</w>
+<w id="BelTh.37..10" ana="RR ASN" lem="ὅσ">ὃ</w>
+<w id="BelTh.37..11" ana="VAI AAI3S" lem="ἀπο-στέλλω">ἀπέστειλέν</w>
+<w id="BelTh.37..12" ana="RP DS" lem="σύ">σοι</w>
+<w id="BelTh.37..13" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.37..14" ana="N2 NSM" lem="θεόσ">θεόσ</w>
+<w id="BelTh.38..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.38..2" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.38..3" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.38..4" ana="VSI API2S" lem="μιμνήσκω">ἐμνήσθησ</w>
+<w id="BelTh.38..5" ana="X" lem="γάρ">γάρ</w>
+<w id="BelTh.38..6" ana="RP GS" lem="ἐγώ">μου</w>
+<w id="BelTh.38..7" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.38..8" ana="N2 NSM" lem="θεόσ">θεόσ</w>
+<w id="BelTh.38..9" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.38..10" ana="D" lem="οὐ">οὐκ</w>
+<w id="BelTh.38..11" ana="VBI AAI2S" lem="ἐν   κατα-λείπω">ἐγκατέλιπεσ</w>
+<w id="BelTh.38..12" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="BelTh.38..13" ana="V3 PAPAPM" lem="ἀγαπάω">ἀγαπῶντάσ</w>
+<w id="BelTh.38..14" ana="RP AS" lem="σύ">σε</w>
+<w id="BelTh.39..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.39..2" ana="VH AAPNSM" lem="ἀνα-ἵστημι">ἀναστὰσ</w>
+<w id="BelTh.39..3" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.39..4" ana="VBI AAI3S" lem="ἐσθίω">ἔφαγεν</w>
+<w id="BelTh.39..5" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.39..6" ana="X" lem="δέ">δὲ</w>
+<w id="BelTh.39..7" ana="N2 NSM" lem="ἄγγελοσ">ἄγγελοσ</w>
+<w id="BelTh.39..8" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="BelTh.39..9" ana="N2 GSM" lem="θεόσ">θεοῦ</w>
+<w id="BelTh.39..10" ana="VHI AAI3S" lem="ἀπο  κατα-ἵστημι">ἀπεκατέστησεν</w>
+<w id="BelTh.39..11" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.39..12" ana="N ASM" lem="Αμβακουμ">Αμβακουμ</w>
+<w id="BelTh.39..13" ana="D" lem="παραχρῆμα">παραχρῆμα</w>
+<w id="BelTh.39..14" ana="P" lem="εἰσ">εἰσ</w>
+<w id="BelTh.39..15" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.39..16" ana="N2 ASM" lem="τόποσ">τόπον</w>
+<w id="BelTh.39..17" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="BelTh.40..1" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.40..2" ana="X" lem="δέ">δὲ</w>
+<w id="BelTh.40..3" ana="N3V NSM" lem="βασιλεύσ">βασιλεὺσ</w>
+<w id="BelTh.40..4" ana="VBI AAI3S" lem="ἔρχομαι">ἦλθεν</w>
+<w id="BelTh.40..5" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="BelTh.40..6" ana="N1A DSF" lem="ἡμέρα">ἡμέρᾳ</w>
+<w id="BelTh.40..7" ana="RA DSF" lem="ὁ">τῇ</w>
+<w id="BelTh.40..8" ana="A1 DSF" lem="ἕβδομοσ">ἑβδόμῃ</w>
+<w id="BelTh.40..9" ana="VA AAN" lem="πενθέω">πενθῆσαι</w>
+<w id="BelTh.40..10" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.40..11" ana="N ASM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.40..12" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.40..13" ana="VBI AAI3S" lem="ἔρχομαι">ἦλθεν</w>
+<w id="BelTh.40..14" ana="P" lem="ἐπί">ἐπὶ</w>
+<w id="BelTh.40..15" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.40..16" ana="N2 ASM" lem="λάκκοσ">λάκκον</w>
+<w id="BelTh.40..17" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.40..18" ana="VAI AAI3S" lem="ἐν-βλέπω">ἐνέβλεψεν</w>
+<w id="BelTh.40..19" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.40..20" ana="I" lem="ἰδού">ἰδοὺ</w>
+<w id="BelTh.40..21" ana="N NSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.40..22" ana="V1 PMPNSM" lem="κατα-ἧμαι">καθήμενοσ</w>
+<w id="BelTh.41..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.41..2" ana="VA AAPNSM" lem="ἀνα-βοάω">ἀναβοήσασ</w>
+<w id="BelTh.41..3" ana="N1 DSF" lem="φωνή">φωνῇ</w>
+<w id="BelTh.41..4" ana="A1 DSF" lem="μέγασ">μεγάλῃ</w>
+<w id="BelTh.41..5" ana="VBI AAI3S" lem="εἶπον">εἶπεν</w>
+<w id="BelTh.41..6" ana="A1P NSM" lem="μέγασ">μέγασ</w>
+<w id="BelTh.41..7" ana="V9 PAI2S" lem="εἰμί">εἶ</w>
+<w id="BelTh.41..8" ana="N2 VSM" lem="κύριοσ">κύριε</w>
+<w id="BelTh.41..9" ana="RA NSM" lem="ὁ">ὁ</w>
+<w id="BelTh.41..10" ana="N2 NSM" lem="θεόσ">θεὸσ</w>
+<w id="BelTh.41..11" ana="RA GSM" lem="ὁ">τοῦ</w>
+<w id="BelTh.41..12" ana="N GSM" lem="Δανιηλ">Δανιηλ</w>
+<w id="BelTh.41..13" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.41..14" ana="D" lem="οὐ">οὐκ</w>
+<w id="BelTh.41..15" ana="V9 PAI3S" lem="εἰμί">ἔστιν</w>
+<w id="BelTh.41..16" ana="D" lem="πλήν">πλὴν</w>
+<w id="BelTh.41..17" ana="RP GS" lem="σύ">σοῦ</w>
+<w id="BelTh.41..18" ana="RD NSM" lem="ἄλλοσ">ἄλλοσ</w>
+<w id="BelTh.42..1" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.42..2" ana="VAI AAI3S" lem="ἀνα-σπάω">ἀνέσπασεν</w>
+<w id="BelTh.42..3" ana="RD ASM" lem="αὐτόσ">αὐτόν</w>
+<w id="BelTh.42..4" ana="RA APM" lem="ὁ">τοὺσ</w>
+<w id="BelTh.42..5" ana="X" lem="δέ">δὲ</w>
+<w id="BelTh.42..6" ana="A1A APM" lem="αἴτιοσ">αἰτίουσ</w>
+<w id="BelTh.42..7" ana="RA GSF" lem="ὁ">τῆσ</w>
+<w id="BelTh.42..8" ana="N1A GSF" lem="ἀπώλεια">ἀπωλείασ</w>
+<w id="BelTh.42..9" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
+<w id="BelTh.42..10" ana="VBI AAI3S" lem="ἐν-βάλλω">ἐνέβαλεν</w>
+<w id="BelTh.42..11" ana="P" lem="εἰσ">εἰσ</w>
+<w id="BelTh.42..12" ana="RA ASM" lem="ὁ">τὸν</w>
+<w id="BelTh.42..13" ana="N2 ASM" lem="λάκκοσ">λάκκον</w>
+<w id="BelTh.42..14" ana="C" lem="καί">καὶ</w>
+<w id="BelTh.42..15" ana="VCI API3P" lem="κατα-βιβρώσκω">κατεβρώθησαν</w>
+<w id="BelTh.42..16" ana="D" lem="παραχρῆμα">παραχρῆμα</w>
+<w id="BelTh.42..17" ana="P" lem="ἐνώπιον">ἐνώπιον</w>
+<w id="BelTh.42..18" ana="RD GSM" lem="αὐτόσ">αὐτοῦ</w>
