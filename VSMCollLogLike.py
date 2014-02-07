@@ -16,7 +16,7 @@ with open(CollVSM, encoding = 'utf-8', newline = '\n') as CollFile:
 headings = [x.strip(" '") for x in CollList.pop(0).split(',')]
 formats = ['<U30'] #initiates the list that will become the list of the object types of the columns, setting the type of the first column (the target word)
 [formats.append('int') for x in range(len(headings)-1)] #finishes creating the list of column object types, typing them all as floating point depending on the number of lexical types that exist in the original document.
-mydescriptor = {}
+mydescriptor = {'names': headings, 'formats': testformats}
 CollList = [x.split(', ') for x in CollList] #this separates each element in CollList (each of which are str) into individual elements
 #the following loop transforms each numerical element in CollList into an int type
 for i, line in enumerate(CollList):
@@ -26,9 +26,8 @@ for i, line in enumerate(CollList):
         except ValueError as E:
             line[i2] = element.strip("'")
             continue
-    testlist[i] = line
-#The following will not work.  I cannot assign the dtypes to it.  I might need to create a zeroes array and then fill each value manually.
-VSM = np.array(CollList)
+    CollList[i] = tuple(line)
+VSM = np.array(CollList, dtype = mydescriptor)
 decimal.getcontext().Emin = -425000000
 for file in FileList:    #iterates through the collcation files in the source directory
     LLCollList = ''
