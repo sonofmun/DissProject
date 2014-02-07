@@ -1,5 +1,5 @@
 '''
-Created on 14.02.2013
+Created on 25.01.2014
 
 @author: matthew.munson
 '''
@@ -9,7 +9,26 @@ import os.path
 import decimal
 from tkinter.filedialog import askopenfilename
 from tkinter.filedialog import askdirectory
+import numpy as np
 CollVSM = askopenfilename(title = 'Where is your collocate VSM located?')
+with open(CollVSM, encoding = 'utf-8', newline = '\n') as CollFile:
+    CollList = [x.rstrip('\n') for x in CollFile.readlines()]
+headings = [x.strip(" '") for x in CollList.pop(0).split(',')]
+formats = ['<U30'] #initiates the list that will become the list of the object types of the columns, setting the type of the first column (the target word)
+[formats.append('int') for x in range(len(headings)-1)] #finishes creating the list of column object types, typing them all as floating point depending on the number of lexical types that exist in the original document.
+mydescriptor = {}
+CollList = [x.split(', ') for x in CollList] #this separates each element in CollList (each of which are str) into individual elements
+#the following loop transforms each numerical element in CollList into an int type
+for i, line in enumerate(CollList):
+    for i2, element in enumerate(line):
+        try:
+            line[i2] = int(element)
+        except ValueError as E:
+            line[i2] = element.strip("'")
+            continue
+    testlist[i] = line
+#The following will not work.  I cannot assign the dtypes to it.  I might need to create a zeroes array and then fill each value manually.
+VSM = np.array(CollList)
 decimal.getcontext().Emin = -425000000
 for file in FileList:    #iterates through the collcation files in the source directory
     LLCollList = ''
