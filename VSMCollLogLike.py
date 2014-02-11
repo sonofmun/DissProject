@@ -75,4 +75,5 @@ for i2, element in enumerate(CollVSM):
         LL = -2*(LL1+LL2-LL3-LL4) #this is the calculation of the log likelihood adjusted to be referenced on a chi-squared table (i.e., *-2)
         LLVSM[i2][i+2] = LL
 with open(LLVSMFile, mode = 'w', encoding = 'utf-8') as LLFile:
+    LLFile.write(''.join([str(LLVSM.dtype.names).strip('()').replace(' ', ''), '\n']))
     np.savetxt(LLFile, LLVSM, delimiter = ',', fmt = '%s')
