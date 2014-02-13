@@ -10,7 +10,7 @@ from numpy import *
 from tkinter.filedialog import asksaveasfilename, askopenfilename
 LLVSMFile = askopenfilename(title = 'Where is your log likelihood VSM located?')
 CSVSMFile = asksaveasfilename(title = 'Where would you like to save your cosine similarity VSM file?')
-deci.getcontext().prec = 999999999999999999
+deci.getcontext().prec = 425000000
 def NP4LL_cosine_similarity(c1, c2):
     dotprod = deci.Decimal('0')
     magA = deci.Decimal('0')
@@ -29,13 +29,16 @@ def NP4LL_cosine_similarity(c1, c2):
 '''
 The following loop constructs a numpy array from the LL VSM file
 '''
-with open(r'C:\Users\mam3tc\Documents\GitHub\DissProject\CCAT\CCATCollCount\test_LL.txt', encoding = 'utf-8') as LLfile:
-    headstr = LLfile.readline()
-    headings = headstr.replace("'", '').rstrip('\n').split(',')
-    formats = ['<U30', 'int']
-    [formats.append('float') for x in range(len(headings)-1)]
-    mydescriptor = {'names': headings, 'formats': formats}
-    LLVSM = loadtxt(LLfile, delimiter = ',', dtype = mydescriptor)
+def Txt_to_nparray():
+    with open(LLVSMFile, encoding = 'utf-8') as LLfile:
+        headstr = LLfile.readline()
+        headings = headstr.replace("'", '').rstrip('\n').split(',')
+        formats = ['<U30', 'int']
+        [formats.append('float') for x in range(len(headings)-1)]
+        mydescriptor = {'names': headings, 'formats': formats}
+        LLVSM = loadtxt(LLfile, delimiter = ',', dtype = mydescriptor)
+        return LLVSM, mydescriptor
+LLVSM, mydescriptor = Txt_to_nparray()
 LLRange = range(len(LLVSM)) #this range object will be used in the loops below
 CSVSM = zeros(len(LLVSM), dtype = mydescriptor) #empty array to be filled with Cosine Similarity scores
 '''
