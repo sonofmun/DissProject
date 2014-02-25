@@ -35,11 +35,17 @@ def Txt_to_nparray():
     with open(LLVSMFile, encoding = 'utf-8') as LLfile:
         headstr = LLfile.readline()
         headings = headstr.replace("'", '').rstrip('\n').split(',')
+        print(len(headings))
+        print(len(set(headings)))
+        print(set([x for x in headings if headings.count(x) > 1]))
         formats = ['<U30', 'int']
         [formats.append('float') for x in range(len(headings)-1)]
         mydescriptor = {'names': headings, 'formats': formats}
+        print(len(headings))
+        print(len(formats))
         cols_2_use = range(2, len(headings)-3)
         LLVSM = loadtxt(LLfile, delimiter = ',', dtype = mydescriptor)
+        print('finished')
     with open(LLVSMFile, encoding = 'utf-8') as LLfile:
         Short_LLVSM = loadtxt(LLfile, delimiter = ',', usecols = cols_2_use, skiprows = 1)
         return LLVSM, Short_LLVSM, mydescriptor
@@ -47,8 +53,8 @@ LLVSM, Short_LLVSM, mydescriptor = Txt_to_nparray()
 LLRange = range(len(LLVSM)) #this range object will be used in the loops below
 CSVSM = zeros(len(LLVSM), dtype = mydescriptor) #empty array to be filled with Cosine Similarity scores
 CS_Dists = pairwise_distances(Short_LLVSM, metric = 'cosine', n_jobs = -1)
-for i in range(len(CSVSM)-1):
-    for i2 in range(len(CSVSM[i])-3):
+for i in range(len(CSVSM)):
+    for i2 in range(len(CSVSM[i])-2):
         CSVSM[i][0] = LLVSM[i][0]
         CSVSM[i][1] = LLVSM[i][1]
         CSVSM[i][i2+2] = CS_Dists[i][i2]
