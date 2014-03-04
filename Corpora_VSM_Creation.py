@@ -50,20 +50,18 @@ def Txt_to_nparray(orig_file): # this function builds the np.arrays from the txt
     with open(orig_file, encoding = 'utf-8') as LLfile:
         headstr = LLfile.readline()
         headings = headstr.replace("'", '').rstrip('\n').split(', ')
+        extra = list(set(typelist).difference(set(headings)))
+        [headings.append(x) for x in extra]
         formats = ['<U30', 'int']
         [formats.append('int') for x in range(len(headings)-1)]
         mydescriptor = {'names': headings, 'formats': formats}
         print('LLVSM_Temp start')
-        LLVSM_Temp = np.loadtxt(LLfile, delimiter = ',', dtype = mydescriptor)
+        LLVSM_Temp = np.recfromtxt(LLfile, dtype = mydescriptor, delimiter = ', ', filling_values = 0, comments = None)
         print(LLVSM_Temp[0][0])
         LLVSM = np.empty((len(headings[2:])), dtype = desc_2)
         print('LLVSM finish')
         LLVSM[:]['Lemma'] = headings[2:]
-        for i1, row in enumerate(LLVSM_Temp):
-            row = list(row)
-            for i, item in enumerate(row[1:]):
-                LLVSM[i1][typelist.index(headings[i1+2])] = item
-        return LLVSM
+        return LLVSM_Temp
 LLVSM_1 = Txt_to_nparray(PE_VSM_File)
 '''
 for file_1 in Orig_Files:
