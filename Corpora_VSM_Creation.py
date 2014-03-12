@@ -27,7 +27,7 @@ for file in Orig_Files:
         for lemma in heading[2:]:
             wordlist.append(lemma.strip())
 typelist = sorted(list(set(wordlist))) #creates a list of the types as opposed to the tokens
-names = ['Lemma', 'Count']
+'''names = ['Lemma', 'Count']
 formats = ['<U30', 'int']
 for file_1 in Orig_Files: # This loop will fill in the dtype names and formats values for the different corpora comparisons.
     corp_1 = p_spl(file_1)[-1].split('_')[0]
@@ -46,23 +46,26 @@ formats = ['<U30', 'int']
 desc_2 = {'names': names, 'formats': formats}
 Comp_VSM = np.empty((len(typelist)), dtype = desc_1) #this is the empty array into which the comparison scores between the copora will be put
 Comp_VSM[:]['Lemma'] = typelist # sets the value for the 'Lemma' columns of the resulting array
-def Txt_to_nparray(orig_file): # this function builds the np.arrays from the txt files
-    with open(orig_file, encoding = 'utf-8') as LLfile:
-        headstr = LLfile.readline()
-        headings = headstr.replace("'", '').rstrip('\n').split(', ')
-        extra = list(set(typelist).difference(set(headings)))
-        [headings.append(x) for x in extra]
-        formats = ['<U30', 'int']
-        [formats.append('int') for x in range(len(headings)-1)]
-        mydescriptor = {'names': headings, 'formats': formats}
-        print('LLVSM_Temp start')
-        LLVSM_Temp = np.recfromtxt(LLfile, dtype = mydescriptor, delimiter = ', ', filling_values = 0, comments = None)
-        print(LLVSM_Temp[0][0])
-        LLVSM = np.empty((len(headings[2:])), dtype = desc_2)
-        print('LLVSM finish')
-        LLVSM[:]['Lemma'] = headings[2:]
-        return LLVSM_Temp
-LLVSM_1 = Txt_to_nparray(PE_VSM_File)
+#def Txt_to_nparray(orig_file): # this function builds the np.arrays from the txt files
+with open(PE_VSM_File, encoding = 'utf-8') as LLfile:
+    headstr = LLfile.readline()
+    headings = headstr.replace("'", '').rstrip('\n').split(', ')
+    #headings_old = headstr.replace("'", '').rstrip('\n').split(', ')
+    #extra = list(set(typelist).difference(set(headings)))
+    #[headings.append(x) for x in extra]
+    formats = ['<U30', 'int']
+    [formats.append('int') for x in range(len(headings)-2)]
+    mydescriptor = {'names': headings, 'formats': formats}
+    LLVSM_Temp = np.loadtxt(LLfile, dtype = mydescriptor, delimiter = ', ')
+    print('LLVSM start')
+    LLVSM = np.empty((len(headings[2:])), dtype = desc_2)
+    for column in headings:
+        LLVSM[:][column] = LLVSM_Temp[:][column]
+    print('LLVSM finish')
+#LLVSM[:]['Lemma'] = headings[2:]
+#return LLVSM_Temp
+#LLVSM_1 = Txt_to_nparray(PE_VSM_File)
+'''
 '''
 for file_1 in Orig_Files:
     LLVSM_1 = Txt_to_nparray(file_1)
