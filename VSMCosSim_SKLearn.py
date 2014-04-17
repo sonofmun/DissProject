@@ -52,6 +52,7 @@ def Txt_to_nparray():
 LLVSM, Short_LLVSM, mydescriptor = Txt_to_nparray()
 LLRange = range(len(LLVSM)) #this range object will be used in the loops below
 CSVSM = zeros(len(LLVSM), dtype = mydescriptor) #empty array to be filled with Cosine Similarity scores
+LLVSM[:]['Lemma'] = CSVSM.dtype.names[2:]
 CS_Dists = pairwise_distances(Short_LLVSM, metric = 'cosine', n_jobs = -1)
 for i in range(len(CSVSM)):
     for i2 in range(len(CSVSM[i])-2):
@@ -64,4 +65,6 @@ for every word in the array, and then writes it to the CSVSM array.
 '''
 with open(CSVSMFile, mode = 'w', encoding = 'utf-8') as CSFile:
     CSFile.write(''.join([str(CSVSM.dtype.names).strip('()').replace(' ', ''), '\n']))
-    savetxt(CSFile, CSVSM, delimiter = ',', fmt = '%s')
+    for line in CSVSM:
+        CSFile.write(''.join([str(line), '\n'))
+    #savetxt(CSFile, CSVSM, delimiter = ',', fmt = '%s') #the savetxt function does not seem to work very well, at least not on my Windows machine
