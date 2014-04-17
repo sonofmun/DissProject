@@ -1,7 +1,7 @@
 def Txt_to_nparray(filename):
     import numpy as np
     with open(filename, encoding = 'utf-8') as file:
-        CS_List = file.readlines()
+        CS_list = file.readlines()
     for i, line in enumerate(CS_list):
         CS_list[i] = line.rstrip('\n').replace("'", '').split(',')
     heading = CS_list.pop(0)
@@ -14,23 +14,16 @@ def Txt_to_nparray(filename):
         count = int(line.pop(0))
         lem_dict[lem] = {'index': i, 'count': count}
     #CS_iter = map(tuple, CS_list)
-    VSM = np.core.records.fromrecords(CS_list, dtype = {'names': heading, 'formats': formats})
-    return VSM
+    VSM = np.recarray(len(CS_list), dtype = {'names': heading, 'formats': formats})
+    for i, item in enumerate(CS_list):
+        VSM[i] = tuple(item)
+    return VSM, lem_dict
 '''
-        headstr = file.readline()
-        headings = headstr.replace("'", '').rstrip('\n').split(',')
-        print(len(headings))
-        print(len(set(headings)))
-        print(set([x for x in headings if headings.count(x) > 1]))
-        formats = ['<U30', 'int']
-        [formats.append('float') for x in range(len(headings)-1)]
-        mydescriptor = {'names': headings, 'formats': formats}
-        print(len(headings))
-        print(len(formats))
-        cols_2_use = range(2, len(headings)-3)
-        VSM = np.empty(len(headings)-2, dtype = mydescriptor)
-        for i, row in enumerate(file.readlines()):
-            VSM[i] = row
-        #LLVSM = loadtxt(file, delimiter = ',', dtype = mydescriptor)
-        print('finished')
+After running this, to get a list of (word, CS_Dist) that can later be sorted, do this:
+sorted_dict = {}
+for lem in lem_dict:
+    lem_CS_vals = VSM[lem['index']]
+    sorted_dict[lem] = []
+    for name in VSM.dtype.names:
+        sorted_dict[lem].append((name, VSM[lem['index']][name]))
 '''
