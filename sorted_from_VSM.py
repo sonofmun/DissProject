@@ -7,7 +7,7 @@ for file in VSM_list:
     if not file.endswith('.txt'):
         VSM_list.remove(file)
 for filename in VSM_list:
-    dest_filename = ''.join(os.path.splitext(filename)[0], '_Abridged', os.path.splitext(filename)[1])
+    dest_filename = ''.join([os.path.splitext(filename)[0], '_Abridged', os.path.splitext(filename)[1]])
     CS, lem_dict = Txt_to_nparray(filename)
     unsorted_dict = {}
     sorted_dict = {}
