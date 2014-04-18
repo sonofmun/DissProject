@@ -18,12 +18,3 @@ def Txt_to_nparray(filename):
     for i, item in enumerate(CS_list):
         VSM[i] = tuple(item)
     return VSM, lem_dict
-'''
-After running this, to get a list of (word, CS_Dist) that can later be sorted, do this:
-sorted_dict = {}
-for lem in lem_dict:
-    lem_CS_vals = VSM[lem['index']]
-    sorted_dict[lem] = []
-    for name in VSM.dtype.names:
-        sorted_dict[lem].append((name, VSM[lem['index']][name]))
-'''
