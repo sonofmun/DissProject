@@ -36,9 +36,12 @@ def log_like(x):
     #And since c(w1,-w2) is c(w1)-c(w1,w2), then this can be rewritten as N-c(w2)-(c(w1)-c(w1,w2)) or N-c(w2)-c(w1)+c(w1,w2).
     #Adding c(w1,w2) back at the end corrects for the number of times that w1 appears with w2 that were already counted in c(w2)
     c1 = lem_counts[x.name] #the count of the target word (names of the row in the df)
-    LL, p, dof, expected = chi2_contingency([[x, max(c1-x, 0)],[max(lem_counts-x,0), max(N-lem_counts-c1+x,0)]], lambda_ = 0)
+    LL, p, dof, expected = chi2_contingency([[x, np.fmax(c1-x, 0)],[np.fmax(lem_counts-x,0), np.fmax(N-lem_counts-c1+x,0)]], lambda_ = 0)
     return LL, p
 #The above returns one value for the whole row.  I need to figure out how to get it to return a value for each element.
+#I have 2 Series (x, lem_counts) and one constant.  Can I somehow map the once series onto the other with the formulae above?  I will try tomorrow.
+#something like: x.map(cont_funct(lem_counts))?  With cont_funct accepting the values and spitting out the elementwise answers?
+#ref cont_func(x, y): chi2_contingency([[x, np.fmax(c1-x, 0)],[np.fmax(y-x, 0), np.fmax(N-y-c1+x)]], lambda_ = 0).  I might even be able to use max instead of fp.max.  I will test tomorrow.
 
 def counter(lem_dict_filename):
     #constructs a series of the total counts of all of the lemmata from the lem_dict

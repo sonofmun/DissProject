@@ -38,7 +38,7 @@ def fishers_calc(x):
     #And since c(w1,-w2) is c(w1)-c(w1,w2), then this can be rewritten as N-c(w2)-(c(w1)-c(w1,w2)) or N-c(w2)-c(w1)+c(w1,w2).
     #Adding c(w1,w2) back at the end corrects for the number of times that w1 appears with w2 that were already counted in c(w2)
     c1 = lem_counts[x.name] #the count of the target word (names of the row in the df)
-    odds, p = fisher_exact([[x, c1-x],[lem_counts-x, N-lem_counts-c1+x]])
+    odds, p = fisher_exact([[x, max(c1-x, 0)],[max(lem_counts-x,0), max(N-lem_counts-c1+x,0)]])
     return p
 
 def counter(lem_dict_filename):
