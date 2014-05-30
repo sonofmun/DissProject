@@ -8,16 +8,19 @@ import numpy as np
 from scipy.stats import fisher_exact
 from tkinter.filedialog import askdirectory
 import os.path
+import datetime
 
 def file_dict_builder():
-    orig_dir = askdirectory(title= 'Where are your collocate DataFrames and lem_dicts located?')
+    orig_dir = askdirectory(title= 'Where are your collocate DataFrames located?')
+    dicts = askdirectory(title = 'Where are your lem_dicts located?')
     dest_dir = askdirectory(title = 'Where would you like to save the resulting files?')
-    file_list = os.listdir(orig_dir)
-    df_dict_dict = {}
-    for file in file_list:
-        if file.endswith('Coll.pickle'):
-            df_dict_dict[file] = ''.join([file.split('.')[0], '_lem_dict.pickle'])
-    return df_dict_dict, dest_dir
+    file_list = sorted([x for x in os.listdir(orig_dir) if x.endswith('.pickle')])
+    dict_list = sorted([x for x in os.listdir(dicts) if x.endswith('.pickle')])
+    df_dict_list = zip(file_list, dict_list)
+    #for file in file_list:
+    #    if file.endswith('Coll.pickle'):
+    #        df_dict_dict[file] = ''.join([file.split('.')[0], '_lem_dict.pickle'])
+    return df_dict_list, dest_dir, dicts, orig_dir
 
 def fishers_calc(x):
     #For Fisher's exact test, we need first to construct a 2x2 contingency table like the one below
@@ -37,26 +40,38 @@ def fishers_calc(x):
     #And since c(-w2) (or -w1) is N-c(w2), we can rewrite this as N-c(w2)-c(w1,-w2).
     #And since c(w1,-w2) is c(w1)-c(w1,w2), then this can be rewritten as N-c(w2)-(c(w1)-c(w1,w2)) or N-c(w2)-c(w1)+c(w1,w2).
     #Adding c(w1,w2) back at the end corrects for the number of times that w1 appears with w2 that were already counted in c(w2)
-    c1 = lem_counts[x.name] #the count of the target word (names of the row in the df)
-    odds, p = fisher_exact([[x, max(c1-x, 0)],[max(lem_counts-x,0), max(N-lem_counts-c1+x,0)]])
+    c1 = lem_counts[x] #the count of the target word (names of the row in the df)
+    c12 = Coll_df.ix[row]
+    c2 = lem_counts
+    a = c12
+    b = c1-c12
+    c = c2- 12
+    d = N-c2-c1+c12
+    odds, p = fisher_exact([[a, b],[c, d]])
     return p
 
 def counter(lem_dict_filename):
     #constructs a series of the total counts of all of the lemmata from the lem_dict
     #returns this series and N, the total number of words in the corpus
     lem_dict = pd.read_pickle(lem_dict_filename)
-    new_dict = {}
-    for key, value in lem_dict.values():
-        new_dict[key] = value['count']
-    lem_counts = pd.Series(new_dict)
+    #new_dict = {}
+    #for key, value in lem_dict.values():
+    #    new_dict[key] = value['count']
+    lem_counts = pd.Series(lem_dict)
     N = lem_counts.sum()
     return lem_counts, N
 
-file_dict, dest_dir = file_dict_builder()
+file_list, dest_dir, dicts, orig_dir = file_dict_builder()
 
-for df_file, lem_file in file_dict.items():
-    dest_file = ''.join([dest_dir, df_file.split('_')[0], '_LL.pickle'])
-    lem_counts, N = counter(lem_file)
-    Coll_df = pd.read_pickle(df_file)
-    FE_df = Coll_df.apply(lambda x: fishers_calc(x), axis = 1)
+for df_file, lem_file in file_list:
+    print('Analyzing %s at %s' % (df_file, datetime.datetime.now().time().isoformat()))
+    dest_file = ''.join([dest_dir, df_file.rstrip('_coll.pickle')[0], '_FE.pickle'])
+    lem_counts, N = counter('/'.join([dicts, lem_file]))
+    Coll_df = pd.read_pickle('/'.join([orig_dir, df_file]))
+    FE_df = pd.DataFrame(0., index = Coll_df.index, columns = Coll_df.index)
+    my_counter = 0
+    for row in Coll_df.index:
+        if my_counter % 100 == 0:
+            print('Row %s of %s at %s'% (my_counter, len(Coll_df), datetime.datetime.now().time().isoformat()))
+        FE_df.ix[row] = fishers_calc(row)
     FE_df.to_pickle(dest_file)

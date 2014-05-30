@@ -9,40 +9,69 @@ from tkinter.filedialog import askdirectory
 import os.path
 from scipy.stats import chi2_contingency
 import datetime
+from decimal import *
 def file_dict_builder():
-    orig_dir = askdirectory(title= 'Where are your collocate DataFrames and lem_dicts located?')
+    orig_dir = askdirectory(title= 'Where are your collocate DataFrames located?')
+    dicts = askdirectory(title = 'Where are you lem dicts located?')
     dest_dir = askdirectory(title = 'Where would you like to save the resulting files?')
-    file_list = os.listdir(orig_dir)
+    VSM_list = sorted([x for x in os.listdir(orig_dir) if x.endswith('pickle')])
+    dicts_list = sorted([x for x in os.listdir(dicts) if x.endswith('pickle')])
+    file_list = zip(VSM_list, dicts_list)
     df_dict_dict = {}
-    for file in file_list:
-        if file.endswith('coll.pickle'):
-            df_dict_dict[file] = ''.join([file.split('.')[0], '_dict.pickle'])
-    return df_dict_dict, dest_dir, orig_dir
-def log_like(column, row):
-    #For chi2 contingency test, we need first to construct a 2x2 contingency table like the one below
-    #      |    w2    |    -w2    |
-    #------------------------------
-    #  w1  | c(w1,w2) | c(w1,-w2) |  c(w1)
-    #--------------------------------------
-    #  -w1 | c(-w1,w2)|c(-w1,-w2) |  c(-w1)
-    #--------------------------------------
-    #      |   c(w2)  | c(-w2)    |   N
-    #
-    #c(w1,w2) is the value in the cell in Series x that we are investigating
-    #c(w1,-w2) is c(w1)-c(w1,w2).  c(w1) is extracted by looking up the word that is the 'name' of the Series x and finding its value in the lem_counts Series
-    #c(-w1,w2) is c(w2)-c(w1,w2).  c(w2) is the cell in lem_counts that matches the cell we are dealing with now, i.e., has the same index.
-    #Thus, c(w2) can be accessed simply by calling lem_counts since all calculations will be vectorized and thus matched.
-    #c(-w1,-w2) is either c(-w2)-c(w1,-w2) or c(-w1)-c(-w1,w2).
-    #And since c(-w2) (or -w1) is N-c(w2), we can rewrite this as N-c(w2)-c(w1,-w2).
-    #And since c(w1,-w2) is c(w1)-c(w1,w2), then this can be rewritten as N-c(w2)-(c(w1)-c(w1,w2)) or N-c(w2)-c(w1)+c(w1,w2).
-    #Adding c(w1,w2) back at the end corrects for the number of times that w1 appears with w2 that were already counted in c(w2)
-    c1 = lem_counts[row] #the count of the target word (names of the row in the df)
-    LL, p, dof, expected = chi2_contingency([[Coll_df.ix[column, row], max(c1-Coll_df.ix[column, row], 0)],[max(lem_counts[column]-Coll_df.ix[column, row],0), max(N-lem_counts[column]-c1+Coll_df.ix[column, row],0)]], lambda_ = 0)
-    return LL, p
-#The above returns one value for the whole row.  I need to figure out how to get it to return a value for each element.
-#I have 2 Series (x, lem_counts) and one constant.  Can I somehow map the once series onto the other with the formulae above?  I will try tomorrow.
-#something like: x.map(cont_funct(lem_counts))?  With cont_funct accepting the values and spitting out the elementwise answers?
-#ref cont_func(x, y): chi2_contingency([[x, np.fmax(c1-x, 0)],[np.fmax(y-x, 0), np.fmax(N-y-c1+x)]], lambda_ = 0).  I might even be able to use max instead of fp.max.  I will test tomorrow.
+    for df, d in file_list:
+        df_dict_dict[df] = d
+    return df_dict_dict, dest_dir, dicts, orig_dir
+def log_like(row):
+    import numpy as np
+    #values for c1
+    C1 = lem_counts[row] #this value will be the same throughout a whole row
+    #values for c2
+    #here I need a Series that has all the values for all of the words
+    C2 = lem_counts
+    '''
+    values for c12
+    '''
+    C12 = Coll_df.ix[row]/8 #this is the row in the coll_df that I am looking at
+    #values for p
+    '''
+    Just dividing C2 by N would gives the probability that any one word is word 2.
+    Since we are working with an 8 word window, the probability that word 2 occurs in this window
+    is actually 8 times the probability that any one word in that window is word 2.  Thus we
+    multiply the probability by 8 in order to correct for this and set the maximum value for P
+    at .99999 (it can't be more probable than 100%).
+    '''
+    P = C2/N #N is the total number of words
+    #values for p1
+    P1 = C12/C1
+    #values for p2
+    P2 = (C2-C12)/(N-C1)
+    '''
+    In the calculations below, we replace -inf with zero.  This will only happen if we try to
+    take the log of 0.  So if either of our np.power calculations is 0, this will occur.
+    One of them could be 0 for the following reasons.
+    1) if P == 0.  This would mean that the word does not occur in our corpus.  We won't
+    be doing any calculations for words that don't occur in our corpus.
+    2) if P == 1.  This will happen if the chance of word 2 occuring in the 8-word
+    window is 100%.  This is only relevant for LL1 and LL2 (so measures of independence).
+    Since the np.power calculations will always be below 1 (neither P nor 1-P can be more than 1),
+    the np.log of a number between 0 and 1 will always be negative.  So the maximum value for
+    independence is 0.  Therefore, if we expect a word to occur all of the time by chance in the
+    8-word window, we must set the independence value to its maximum, i.e., 0).
+    3) One of the P values (P, P1, P2) are so small and the value of the exponent is so high that
+    the number goes under the minimum value that np.float128 can track (i.e., 10**-4551).  The only
+    time this will occur is if the exponents are VERY large, which would only realistically happen when
+    C1-C12 is very large, i.e., word 1 occurs extremely more often than it collocates with word 2, or
+    vice versa, if C2-C12 is very large, meaning that word 2 occurs extremely more often outside of
+    instead of inside of collocation with word 1.  Both of these would happen in such rare cases, I will
+    ignore the possibility for now and leave -inf there now and recalculate them later using the
+    Decimal package.
+    '''
+    LL1 = np.log(np.power(np.float128(P), C12)*np.power(np.float128(1-P), C1-C12))#.replace([-np.inf], [0])
+    LL2 = np.log(np.power(np.float128(P), C2-C12)*np.power(np.float128(1-P), (N-C1)-(C2-C12)))# .replace([-np.inf], [0])
+    LL3 = np.log(np.power(np.float128(P1), C12)*np.power(np.float128(1-P1), C1-C12))
+    LL4 = np.log(np.power(np.float128(P2), C2-C12)*np.power(np.float128(1-P2), (N-C1)-(C2-C12)))
+    LL = -2*(LL1+LL2-LL3-LL4)
+    return LL
 
 def counter(lem_dict_filename):
     #constructs a series of the total counts of all of the lemmata from the lem_dict
@@ -55,24 +84,23 @@ def counter(lem_dict_filename):
     N = lem_counts.sum()
     return lem_counts, N
 
-file_dict, dest_dir, orig_dir = file_dict_builder()
+file_dict, dest_dir, dicts, orig_dir = file_dict_builder()
 for df_file, lem_file in file_dict.items():
     print('Now analyzing %s'% df_file)
-    LL_dest_file = '/'.join([dest_dir, ''.join([df_file.split('_')[0], '_LL.pickle'])])
-    LL_p_dest_file = '/'.join([dest_dir, ''.join([df_file.split('_')[0], '_LL_p.pickle'])])
+    LL_dest_file = '/'.join([dest_dir, ''.join([df_file.rstrip('_coll.pickle'), '_LL.pickle'])])
+    #LL_p_dest_file = '/'.join([dest_dir, ''.join([df_file.rstrip('_coll.pickle'), '_LL_p.pickle'])])
     if os.path.isfile(LL_dest_file) and os.path.isfile(LL_p_dest_file):
         continue
     else:
-        lem_counts, N = counter('/'.join([orig_dir, lem_file]))
+        lem_counts, N = counter('/'.join([dicts, lem_file]))
         Coll_df = pd.read_pickle('/'.join([orig_dir, df_file]))
         LL_df = pd.DataFrame(0., index = Coll_df.index, columns = Coll_df.index)
-        LL_p_df = pd.DataFrame(0., index = Coll_df.index, columns = Coll_df.index)
+        #LL_p_df = pd.DataFrame(0., index = Coll_df.index, columns = Coll_df.index)
         my_counter = 0
         for row in Coll_df.index:
             if my_counter % 100 == 0:
                 print('Row %s of %s at %s'% (my_counter, len(Coll_df), datetime.datetime.now().time().isoformat()))
-            for column in Coll_df.index:
-                LL_df.ix[column, row], LL_p_df.ix[column, row] = log_like(column, row)
+            LL_df.ix[row] = log_like(row)
             my_counter += 1
         LL_df.to_pickle(LL_dest_file)
-        LL_p_df.to_pickle(LL_p_dest_file)
+        #LL_p_df.to_pickle(LL_p_dest_file)
