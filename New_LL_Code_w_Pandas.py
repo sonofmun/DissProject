@@ -31,7 +31,7 @@ def log_like(row):
     '''
     values for c12
     '''
-    C12 = Coll_df.ix[row]/8 #this is the row in the coll_df that I am looking at
+    C12 = Coll_df.ix[row] #this is the row in the coll_df that I am looking at
     #values for p
     '''
     Just dividing C2 by N would gives the probability that any one word is word 2.
@@ -40,7 +40,7 @@ def log_like(row):
     multiply the probability by 8 in order to correct for this and set the maximum value for P
     at .99999 (it can't be more probable than 100%).
     '''
-    P = C2/N #N is the total number of words
+    P = np.fmin(1-((1-(C2/N))**8), .99) #N is the total number of words
     #values for p1
     P1 = C12/C1
     #values for p2
