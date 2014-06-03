@@ -40,14 +40,7 @@ def log_like(row):
     '''
     #C21 = Coll_df.ix[:, row]
     #values for p
-    '''
-    Just dividing C2 by N would gives the probability that any one word is word 2.
-    Since we are working with an 8 word window, the probability that word 2 occurs in this window
-    is actually 8 times the probability that any one word in that window is word 2.  Thus we
-    multiply the probability by 8 in order to correct for this and set the maximum value for P
-    at .99999 (it can't be more probable than 100%).
-    '''
-    P = C2/N #N is the total number of words
+    #P = C2/N #N is the total number of words. This has been moved to the table loop since we know C2 and N there.
     #values for p1
     P1 = C12/C1
     #values for p2
@@ -104,6 +97,8 @@ for df_file, lem_file in file_dict.items():
         Coll_df = pd.read_pickle('/'.join([orig_dir, df_file]))
         N = np.sum(Coll_df.values)      
         C2 = np.sum(Coll_df)
+        #values for p
+        P = C2/N #N is the total number of words
         LL_df = pd.DataFrame(0., index = Coll_df.index, columns = Coll_df.index, dtype = np.float128)
         #LL_p_df = pd.DataFrame(0., index = Coll_df.index, columns = Coll_df.index)
         my_counter = 0

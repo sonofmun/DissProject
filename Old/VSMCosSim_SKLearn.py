@@ -66,5 +66,5 @@ for every word in the array, and then writes it to the CSVSM array.
 with open(CSVSMFile, mode = 'w', encoding = 'utf-8') as CSFile:
     CSFile.write(''.join([str(CSVSM.dtype.names).strip('()').replace(' ', ''), '\n']))
     for line in CSVSM:
-        CSFile.write(''.join([str(line), '\n'))
+        CSFile.write(''.join([str(line), '\n']))
     #savetxt(CSFile, CSVSM, delimiter = ',', fmt = '%s') #the savetxt function does not seem to work very well, at least not on my Windows machine

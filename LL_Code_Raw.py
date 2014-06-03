@@ -1,0 +1,84 @@
+'''
+To apply the log-likelihood function to every cell in a pandas DataFrame
+use df.apply(function).  The function can then call the name and index of
+the cell you are working on, and thus call values from other DataFrames
+'''
+import pandas as pd
+import numpy as np
+from tkinter.filedialog import askdirectory
+import os.path
+from scipy.stats import chi2_contingency
+import datetime
+from decimal import *
+def file_dict_builder():
+    orig_dir = askdirectory(title= 'Where are your collocate DataFrames located?')
+    dicts = askdirectory(title = 'Where are you lem dicts located?')
+    dest_dir = askdirectory(title = 'Where would you like to save the resulting files?')
+    VSM_list = sorted([x for x in os.listdir(orig_dir) if x.endswith('pickle')])
+    dicts_list = sorted([x for x in os.listdir(dicts) if x.endswith('pickle')])
+    file_list = zip(VSM_list, dicts_list)
+    df_dict_dict = {}
+    for df, d in file_list:
+        df_dict_dict[df] = d
+    return df_dict_dict, dest_dir, dicts, orig_dir
+def log_like(row):
+    import numpy as np
+    #values for c1
+    C1 = np.sum(Coll_df.ix[row])/8 #this value will be the same throughout a whole row
+    #values for c2
+    #here I need a Series that has all the values for all of the words
+    #C2 = np.sum(Coll_df.values)
+    '''
+    values for c12
+    '''
+    C12 = Coll_df.ix[row] #this is the row in the coll_df that I am looking at
+    #values for p
+    #P = C2/N #N is the total number of words. This is being calculated at the table level instead of the row level since at that point we know C2 and we know N.
+    #values for p1
+    P1 = C12/C1
+    #values for p2
+    P2 = (C2-C12)/(N-C1)
+    LL1 = np.log(np.power(np.float128(P), C12)*np.power(np.float128(1-P), C1-C12))
+    LL2 = np.log(np.power(np.float128(P), C2-C12)*np.power(np.float128(1-P), (N-C1)-(C2-C12)))
+    LL3 = np.log(np.power(np.float128(P1), C12)*np.power(np.float128(1-P1), C1-C12))
+    LL4 = np.log(np.power(np.float128(P2), C2-C12)*np.power(np.float128(1-P2), (N-C1)-(C2-C12)))
+    LL = -2*(LL1+LL2-LL3-LL4)
+    return LL
+
+def counter(lem_dict_filename):
+    #constructs a series of the total counts of all of the lemmata from the lem_dict
+    #returns this series and N, the total number of words in the corpus
+    lem_dict = pd.read_pickle(lem_dict_filename)
+    new_dict = {}
+    for key, value in lem_dict.items():
+        new_dict[key] = value
+    lem_counts = pd.Series(new_dict)
+    #N = lem_counts.sum()
+    return lem_counts#, N
+
+file_dict, dest_dir, dicts, orig_dir = file_dict_builder()
+for df_file, lem_file in file_dict.items():
+    print('Now analyzing %s'% df_file)
+    LL_dest_file = '/'.join([dest_dir, ''.join([df_file.rstrip('_coll.pickle'), '_LL.pickle'])])
+    #LL_p_dest_file = '/'.join([dest_dir, ''.join([df_file.rstrip('_coll.pickle'), '_LL_p.pickle'])])
+    if os.path.isfile(LL_dest_file) and os.path.isfile(LL_p_dest_file):
+        continue
+    else:
+        #lem_counts, N = counter('/'.join([dicts, lem_file]))
+        lem_counts = counter('/'.join([dicts, lem_file]))
+        Coll_df = pd.read_pickle('/'.join([orig_dir, df_file]))
+        N = np.sum(Coll_df.values)
+        #values for C2
+        C2 = np.sum(Coll_df)/8
+        #values for p
+        P = C2/N #N is the total number of words
+        LL_df = pd.DataFrame(0., index = Coll_df.index, columns = Coll_df.index, dtype = np.float128)
+        #LL_p_df = pd.DataFrame(0., index = Coll_df.index, columns = Coll_df.index)
+        my_counter = 0
+        for row in Coll_df.index:
+            if my_counter % 100 == 0:
+                print('Row %s of %s at %s'% (my_counter, len(Coll_df), datetime.datetime.now().time().isoformat()))
+            LL_df.ix[row] = log_like(row)
+            my_counter += 1
+        LL_df.to_pickle(LL_dest_file)
+        #LL_p_df.to_pickle(LL_p_dest_file)
