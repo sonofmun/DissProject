@@ -24,10 +24,10 @@ def file_dict_builder():
 def log_like(row):
     import numpy as np
     #values for c1
-    C1 = lem_counts[row] #this value will be the same throughout a whole row
+    C1 = np.sum(Coll_df.ix[row]) #this value will be the same throughout a whole row
     #values for c2
     #here I need a Series that has all the values for all of the words
-    C2 = lem_counts
+    #C2 = np.sum(Coll_df.values)
     '''
     values for c12
     '''
@@ -38,7 +38,7 @@ def log_like(row):
     to find the number of times that word 2 occurs outside of collocation
     with word 1.
     '''
-    C21 = Coll_df.ix[:, row]
+    #C21 = Coll_df.ix[:, row]
     #values for p
     '''
     Just dividing C2 by N would gives the probability that any one word is word 2.
@@ -47,11 +47,11 @@ def log_like(row):
     multiply the probability by 8 in order to correct for this and set the maximum value for P
     at .99999 (it can't be more probable than 100%).
     '''
-    P = np.fmin(1-((1-(C2/N))**8), .99) #N is the total number of words
+    P = C2/N #N is the total number of words
     #values for p1
     P1 = C12/C1
     #values for p2
-    P2 = (C2-C21)/(N-C1)
+    P2 = (C2-C12)/(N-C1)
     '''
     In the calculations below, we replace -inf with zero.  This will only happen if we try to
     take the log of 0.  So if either of our np.power calculations is 0, this will occur.
@@ -88,8 +88,8 @@ def counter(lem_dict_filename):
     for key, value in lem_dict.items():
         new_dict[key] = value
     lem_counts = pd.Series(new_dict)
-    N = lem_counts.sum()
-    return lem_counts, N
+    #N = lem_counts.sum()
+    return lem_counts#, N
 
 file_dict, dest_dir, dicts, orig_dir = file_dict_builder()
 for df_file, lem_file in file_dict.items():
@@ -99,9 +99,12 @@ for df_file, lem_file in file_dict.items():
     if os.path.isfile(LL_dest_file) and os.path.isfile(LL_p_dest_file):
         continue
     else:
-        lem_counts, N = counter('/'.join([dicts, lem_file]))
+        #lem_counts, N = counter('/'.join([dicts, lem_file]))
+        lem_counts = counter('/'.join([dicts, lem_file]))
         Coll_df = pd.read_pickle('/'.join([orig_dir, df_file]))
-        LL_df = pd.DataFrame(0., index = Coll_df.index, columns = Coll_df.index)
+        N = np.sum(Coll_df.values)      
+        C2 = np.sum(Coll_df)
+        LL_df = pd.DataFrame(0., index = Coll_df.index, columns = Coll_df.index, dtype = np.float128)
         #LL_p_df = pd.DataFrame(0., index = Coll_df.index, columns = Coll_df.index)
         my_counter = 0
         for row in Coll_df.index:
