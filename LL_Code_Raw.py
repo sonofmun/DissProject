@@ -24,7 +24,8 @@ def file_dict_builder():
 def log_like(row):
     import numpy as np
     #values for c1
-    C1 = np.sum(Coll_df.ix[row])/8 #this value will be the same throughout a whole row
+    c1 = np.sum(Coll_df.ix[row])
+    C1 = c1/8 #this value will be the same throughout a whole row
     #values for c2
     #here I need a Series that has all the values for all of the words
     #C2 = np.sum(Coll_df.values)
@@ -35,7 +36,7 @@ def log_like(row):
     #values for p
     #P = C2/N #N is the total number of words. This is being calculated at the table level instead of the row level since at that point we know C2 and we know N.
     #values for p1
-    P1 = C12/C1
+    P1 = C12/c1
     #values for p2
     P2 = (C2-C12)/(N-C1)
     LL1 = np.log(np.power(np.float128(P), C12)*np.power(np.float128(1-P), C1-C12))
@@ -65,9 +66,10 @@ for df_file, lem_file in file_dict.items():
         continue
     else:
         #lem_counts, N = counter('/'.join([dicts, lem_file]))
-        lem_counts = counter('/'.join([dicts, lem_file]))
+        #lem_counts = counter('/'.join([dicts, lem_file])) # This is only needed for the raw counts code
+        #N = sum(lem_counts.values) # This is only needed for the raw counts code
         Coll_df = pd.read_pickle('/'.join([orig_dir, df_file]))
-        N = np.sum(Coll_df.values)
+        N = np.sum(Coll_df.values)/8 # This is for the binary counts code
         #values for C2
         C2 = np.sum(Coll_df)/8
         #values for p

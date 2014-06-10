@@ -93,10 +93,11 @@ for df_file, lem_file in file_dict.items():
         continue
     else:
         #lem_counts, N = counter('/'.join([dicts, lem_file]))
-        lem_counts = counter('/'.join([dicts, lem_file]))
+        #lem_counts = counter('/'.join([dicts, lem_file])) #This is only needed for the raw counts code
+        #N = np.sum(lem_counts) #This is for the raw counts code.
         Coll_df = pd.read_pickle('/'.join([orig_dir, df_file]))
-        N = np.sum(Coll_df.values)      
-        C2 = np.sum(Coll_df)
+        N = np.sum(Coll_df.values) # This is for the binary corpus
+        C2 = np.sum(Coll_df, axis = 1)
         #values for p
         P = C2/N #N is the total number of words
         LL_df = pd.DataFrame(0., index = Coll_df.index, columns = Coll_df.index, dtype = np.float128)

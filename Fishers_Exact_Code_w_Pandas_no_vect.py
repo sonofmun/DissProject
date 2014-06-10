@@ -50,10 +50,15 @@ def fishers_calc(x):
     c12 = Coll_df.ix[row]
     #c2 = lem_counts # This is calculated at the table level, not at the row level.
     a = c12
-    b = c2 - c12
-    c = c1 - c12
+    b = np.fmax(c2 - c12, 0)
+    c = np.fmax(c1 - c12, 0)
     d = N - c2 - c1 + c12
-    #odds, p = fisher_exact([[a, b],[c, d]]) #I haven't been able to get this to work with vectorization.
+    data = {'a': a, 'b': b, 'c': c, 'd': d}
+    fe_df = pd.DataFrame(data)
+    new_row = pd.Series(index = Coll_df.index)
+    for index, v in fe_df.iterrows():
+        odds, p = fisher_exact([[v[0], v[1]],[v[2], v[3]]]) #I haven't been able to get this to work with vectorization.
+        new_row.ix[index] = p
     '''
     The following is taken from Moore, "On Log-Likelihood and the Significance of Rare Events",
     http://research.microsoft.com/pubs/68957/rare-events-final-rev.pdf
@@ -66,8 +71,8 @@ def fishers_calc(x):
     c(w1,-w2) = c
     c(-w1,-w2) = d
     '''
-    p = (factorial(round(c1))*m_f(c+d)*fact_c2*fact_nc2)/(fact_N*m_f(a)*m_f(b)*m_f(c)*m_f(d))
-    return p
+    #p = (factorial(round(c1))*m_f(c+d)*fact_c2*fact_nc2)/(fact_N*m_f(a)*m_f(b)*m_f(c)*m_f(d))
+    return new_row
 
 def counter(lem_dict_filename):
     #constructs a series of the total counts of all of the lemmata from the lem_dict
@@ -84,19 +89,16 @@ dest_dir, file_list, orig_dir = file_dict_builder()
 
 for file in file_list:
     print('Analyzing %s at %s' % (file, datetime.datetime.now().time().isoformat()))
-    dest_file = ''.join([dest_dir, file.rstrip('_coll.pickle')[0], '_FE.pickle'])
+    dest_file = ''.join([dest_dir, '/', file.rstrip('_coll.pickle')[0], '_FE.pickle'])
     #lem_counts, N = counter('/'.join([dicts, lem_file]))
     Coll_df = pd.read_pickle('/'.join([orig_dir, file]))
     N = np.sum(Coll_df.values)/8
-    fact_N = factorial(round(N)) #The factorial function from math seems to be faster
     c2 = np.sum(Coll_df)/8
-    fact_c2 = m_f(c2)
-    fact_nc2 = m_f(N-c2)
     FE_df = pd.DataFrame(0., index = Coll_df.index, columns = Coll_df.index)
     my_counter = 0
     for row in Coll_df.index:
-        #if my_counter % 100 == 0:
-        print('Row %s of %s at %s'% (my_counter, len(Coll_df), datetime.datetime.now().time().isoformat()))
+        if my_counter % 100 == 0:
+            print('Row %s of %s at %s'% (my_counter, len(Coll_df), datetime.datetime.now().time().isoformat()))
         my_counter += 1
         FE_df.ix[row] = fishers_calc(row)
     FE_df.to_pickle(dest_file)
