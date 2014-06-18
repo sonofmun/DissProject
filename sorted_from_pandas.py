@@ -9,6 +9,9 @@ dicts = askdirectory(title = 'Where are your lem_dict pickles located?')
 dest_dir = askdirectory(title = 'Where would you like to save the resulting CSV files?')
 VSM_list = sorted([x for x in os.listdir(orig_dir) if x.endswith('pickle')])
 dicts_list = sorted([x for x in os.listdir(dicts) if x.endswith('pickle')])
+if len(VSM_list) > len(dicts_list):
+    dicts_list *= len(VSM_list)//len(dicts_list)
+    dicts_list = sorted(dicts_list)
 files = zip(VSM_list, dicts_list)
 
 for file, lem_dict in files:
