@@ -7,6 +7,8 @@ from bs4 import BeautifulSoup
 import urllib.request
 from html.parser import HTMLParser as Parse
 import re
+import pickle
+
 def handle_data(self, data):
         DataText = list(data)
         return DataText
@@ -56,9 +58,13 @@ for L1Link in LevelOne:
                     WordGloss = GreekWordsList[1]
                     WordSection = GreekWordsList[2]
                     if WordDict.get(Word) != None:
-                        WordDict[Word] = WordDict[Word] + [int(WordSection.split('.')[0]), L1Dict[int(WordSection.split('.')[0])], WordGloss, WordSection]
+                        WordDict[Word]['Section'].append({int(WordSection.split('.')[0]): [L1Dict[int(WordSection.split('.')[0]), int(WordSection.split('.')[1])})
+                        WordDict[Word]['Gloss'].append({WordSection: WordGloss})
+                        #= WordDict[Word] + [int(WordSection.split('.')[0]), L1Dict[int(WordSection.split('.')[0])], WordGloss, WordSection]
                     else:
-                        WordDict[Word] = [int(WordSection.split('.')[0]), L1Dict[int(WordSection.split('.')[0])], WordGloss, WordSection]
+                        #WordDict[Word] = [int(WordSection.split('.')[0]), L1Dict[int(WordSection.split('.')[0])], WordGloss, WordSection]
+                        WordDict[Word]['Section'] = {int(WordSection.split('.')[0]): [L1Dict[int(WordSection.split('.')[0]), int(WordSection.split('.')[1])}
+                        WordDict[Word]['Gloss'] = {WordSection: WordGloss}
 for L2Link in LevelTwo:
         L2Page = urllib.request.urlopen(L2Link)
         L2Soup = BeautifulSoup(L2Page)
@@ -72,11 +78,12 @@ for L2Link in LevelTwo:
                     WordSection = GreekWordsList[2]
                     L2WordSection = WordSection.split('.')[0] + SectionTitle
                     WordDict[Word].insert(WordDict[Word].index(WordGloss), L2WordSection)
-TextFile = open('C:/Users/mam3tc/Google Drive/Dissertation/CompLing/GBible/LouwNidaText.txt', mode='w', encoding='UTF-8')
-DictFile = open('C:/Users/mam3tc/Google Drive/Dissertation/CompLing/GBible/LouwNidaDict.txt', mode='w', encoding='UTF-8')
-StrWordDict = str(WordDict)
-StrWordDict2 = re.sub(r"([\'\"]\],) ([\'\"])", r'\1\n\2', StrWordDict)
-DictFile.write(StrWordDict2)
+TextFile = open('/media/matt/DATA/Diss_Data/LouwNidaText.txt', mode='w', encoding='UTF-8')
+DictFile = open('/media/matt/DATA/Diss_Data/LouwNidaDict.txt', mode='w', encoding='UTF-8')
+#StrWordDict = str(WordDict)
+#StrWordDict2 = re.sub(r"([\'\"]\],) ([\'\"])", r'\1\n\2', StrWordDict)
+#DictFile.write(StrWordDict2)
+pickle.dump(WordDict, DictFile)
 DictFile.close()
 StrWordDict = re.sub("[\'\"]\], [\'\"]", '\n', StrWordDict)
 StrWordDict = re.sub("[\'\"]: \[", '\t', StrWordDict)
