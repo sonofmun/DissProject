@@ -37,8 +37,8 @@ if 'LL' in file_pattern[-1]:
     NT_high = s_list[5][s_list[5]>s_list[5].mean() + s_list[5].std()*mult]
 elif 'CS' in file_pattern[-1]:
     measure = 'Cosine Similarity'
-    above = 1
-    below = 1
+    above = .5
+    below = .2
     mult = -2
     PE_high = s_list[0][s_list[0]<s_list[0].mean() + s_list[0].std()*mult]
     FP_high = s_list[1][s_list[1]<s_list[1].mean() + s_list[1].std()*mult]
@@ -63,10 +63,15 @@ for i, corpus in enumerate(s_list):
     plt.plot(corpus)
     plt.title(corpora[i], fontsize = 24)
     plt.xlim(1,93)
+    #plt.axhline(y = s_list[i].mean() + s_list[i].std(), c='r', ls='-')
+    #plt.axhline(y = -(s_list[i].mean() + s_list[i].std()), c='r', ls='-')
+    m = 0
     for value in shared_high:
         plt.axvline(x = value-1, color = 'red', label = str(value))
     for category, value in all_highs[i].iteritems():
-        plt.annotate('%s =\n %s' % (LN[category]['Gloss'], round(value, 4)), xy = (category-1, value), xytext = (category-3, value*2), arrowprops=dict(facecolor='black', shrink=0.05, linewidth = .1))
-    plt.ylim(c_min, c_max)
+        text_place = min(value*(1.5-(m%2)), s_list[i].max()*1.25)
+        plt.annotate('%s =\n %s' % (LN[category]['Gloss'], round(value, 4)), xy = (category-1, value), xytext = (category-3, text_place), arrowprops=dict(facecolor='black', shrink=0.05, linewidth = .1))
+        m += 1
+    plt.ylim(-s_list[i].std()*2, s_list[i].max()*1.5)
 plt.subplots_adjust(hspace = 0.4)
 plt.show()
