@@ -2,14 +2,23 @@ from bs4 import BeautifulSoup, element
 import urllib.request
 from operator import itemgetter
 from string import punctuation
-par_bible_file = open(r'C:\Users\mam3tc\Google Drive\Dissertation\CompLing\GBible\XML\ParallelBible\par_bible.txt', mode = 'w', encoding = 'utf-8')
+import sys
+from pickle import dump
+from tkinter.filedialog import asksaveasfilename as save_as
+import datetime
+
+sys.setrecursionlimit(50000) # needed to pickle the resulting dictionary
+#par_bible_file = open(r'C:\Users\mam3tc\Google Drive\Dissertation\CompLing\GBible\XML\ParallelBible\par_bible.txt', mode = 'w', encoding = 'utf-8')
+dest = save_as(title = 'Where would you like to save your pickled dictionary?')
 abbs = {'Judges': 'Jdg', 'SongofSongs': 'Sol', 'Philemon': 'Phm'}
 chapters = ['/interlinear/Genesis%201']
 page_base = "http://studybible.info"
 full_page = page_base + "/interlinear"
 #site = urllib.request.urlopen(page)
 #soup = BeautifulSoup(site, 'html.parser')
+greekdict = {}
 def chapterread(page):
+    global greekdict
     site = urllib.request.urlopen(page)
     soup = BeautifulSoup(site, 'html.parser')
     bookname = soup.find('h1').contents[0].rstrip('123456789 ').replace(' ', '')
@@ -20,7 +29,7 @@ def chapterread(page):
     greekkey = ''
     engcontents = []
     greekvalue = ''
-    greekdict = {}
+    #greekdict = {}
     for units in soup.find_all(class_ = 'unit'):
         if units.find(class_ = 'ref greek'):
             wordcount = 0
@@ -36,18 +45,28 @@ def chapterread(page):
                     engcontents[i] = ''
             greekvalue = ''.join(engcontents).strip().lower()
             greekkey = ''.join(units.find(class_ = 'greek').contents).lower()
+            strongs = (units.find(class_ = 'strongs').find_all('a'))
             if ' ' in greekkey:
                 greekkey = greekkey.split()
                 greekvalue = greekvalue.upper()
-                for key in greekkey:
+                for i, key in enumerate(greekkey):
                     wordcount += 1
                     chapterverseword = '.'.join([bookname, chapterverse, str(wordcount)])
-                    greekdict[chapterverseword] = {key: greekvalue}
+                    #print(chapterverseword)
+                    try:
+                        greekdict[chapterverseword] = {key: {'strongs': strongs[i].text, 'english': greekvalue}}
+                    except IndexError as E2:
+                        greekdict[chapterverseword] = {key: {'strongs': '', 'english': greekvalue}}
+                        print('Problem with %s. strongs = %s' % (chapterverseword, strongs))
             else:
                 wordcount += 1
                 chapterverseword = '.'.join([bookname, chapterverse, str(wordcount)])
-                greekdict[chapterverseword] = {greekkey: greekvalue}
-    return greekdict, soup
+                try:
+                    greekdict[chapterverseword] = {greekkey: {'strongs': strongs[0].text, 'english': greekvalue}}
+                except IndexError as E:
+                    greekdict[chapterverseword] = {greekkey: {'strongs': '', 'english': greekvalue}}
+                    print('Problem with %s. strongs = %s' % (chapterverseword, strongs))
+    return soup
 def write_to_file(x):
     x_keys = list(iter(x))
     for i, item in enumerate(x_keys):
@@ -71,15 +90,18 @@ def write_to_file(x):
     for key in primary_sort:
         joined_key = '.'.join([key[0], str(key[1]), str(key[2]), str(key[3])])
         par_bible_file.write(''.join(['<w id="', joined_key, '" eng="', str(x[joined_key]).split(':')[1].strip("}' ").strip(punctuation), '">', str(x[joined_key]).split(':')[0].strip("{' "), '</w>', '\n']))
-dict_to_write, the_soup = chapterread(full_page)
-write_to_file(dict_to_write)
+the_soup = chapterread(full_page)
+#write_to_file(dict_to_write)
 while the_soup.find(class_='next_chapter')['href'] not in chapters:
     full_page = ''.join([page_base, the_soup.find(class_='next_chapter')['href']])
     chapters.append(the_soup.find(class_='next_chapter')['href'])
-    dict_to_write, the_soup = chapterread(full_page)
-    write_to_file(dict_to_write)
-    print(full_page)
-par_bible_file.close()
+    print('Extracting %s at %s' % (full_page, datetime.datetime.now().time().isoformat()))
+    the_soup = chapterread(full_page)
+    #write_to_file(dict_to_write)
+#par_bible_file.close()
+with open(dest, mode = 'wb') as file:
+    print('Pickling the full dictionary at %s' % datetime.datetime.now().time().isoformat())
+    dump(greekdict, file)
 '''page = "http://studybible.info/interlinear"
     site = urllib.request.urlopen(page)
     soup = BeautifulSoup(site, 'html.parser')

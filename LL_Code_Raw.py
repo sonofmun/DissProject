@@ -36,7 +36,8 @@ def log_like(row):
     #values for p
     #P = C2/N #N is the total number of words. This is being calculated at the table level instead of the row level since at that point we know C2 and we know N.
     #values for p1
-    P1 = C12/c1
+    #P1 = C12/c1 #this is wrong!  Corrected below.
+    P1 = C12/C1
     #values for p2
     P2 = (C2-C12)/(N-C1)
     LL1 = np.log(np.power(np.float128(P), C12)*np.power(np.float128(1-P), C1-C12))
