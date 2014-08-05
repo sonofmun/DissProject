@@ -143,6 +143,7 @@ def log_like(row, C2, P, N):
                           (log(1-P2[ind])*((N-C1)-(C2[ind]-C12[ind])))
         except ValueError as E:
             LL4.ix[ind] = 0
+
     
     return -2*(LL1+LL2-LL3-LL4)
 
