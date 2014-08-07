@@ -32,7 +32,7 @@ def log_L(k,n,x):
     This function applies the correct values from the DataFrame to the
     binomial distribution function L(k,n,x) = (x**k)*(1-x)**(n-k).
     '''
-    return np.log((x**k)*((1-x)**(n-k)))
+    return np.log(np.power(np.float128(x),k)*np.power(np.float128(1-x),(n-k)))
 
 def log_space_L(s, k,n,x):
     '''
@@ -42,11 +42,13 @@ def log_space_L(s, k,n,x):
     I use math.log here instead of np.log because all the values are
     scalars instead of Series and math.log is 10x faster than np.log
     '''
+    #I have not implemented this function because it is actually a little
+    #slower than running the same loop within the parent function (log_like)
     s_inf = s[np.isinf(s)]
     for ind in s_inf.index:
         try:
             s.ix[ind] = (log(x[ind])*k[ind]) + (log(1-x[ind])*(n-k[ind]))
-        except ValueError:
+        except ValueError as E:
             s.ix[ind] = 0
     return s
 
@@ -82,9 +84,7 @@ def log_like(row, C2, P, N):
     P number to even a moderately large exponent.
     '''
     
-    LL1 = np.log(np.power(np.float128(P), C12)*
-                 np.power(np.float128(1-P),C1-C12))
-
+    LL1 = log_L(C12, C1, P)
     '''
     The following finds all inf and -inf values in LL1 by
     moving calculations into log space.
@@ -97,8 +97,8 @@ def log_like(row, C2, P, N):
         except ValueError as E:
             LL1.ix[ind] = 0
     
-    LL2 = np.log(np.power(np.float128(P), C2-C12)*
-                 np.power(np.float128(1-P), (N-C1)-(C2-C12)))
+    LL2 = log_L(C2-C12, N-C1, P)
+
     '''
     The following finds all inf and -inf values in LL2 by
     moving calculations into log space.
@@ -111,9 +111,8 @@ def log_like(row, C2, P, N):
                           (log(1-P[ind])*((N-C1)-(C2[ind]-C12[ind])))
         except ValueError as E:
             LL2.ix[ind] = 0
-
-    LL3 = np.log(np.power(np.float128(P1), C12)*
-                 np.power(np.float128(1-P1), C1-C12))
+    
+    LL3 = log_L(C12, C1, P1)
     
     '''
     The following finds all inf and -inf values in LL3 by
@@ -127,10 +126,9 @@ def log_like(row, C2, P, N):
                           (log(1-P1[ind])*(C1-C12[ind]))
         except ValueError as E:
             LL3.ix[ind] = 0
-
-    LL4 = np.log(np.power(np.float128(P2), C2-C12)*
-                 np.power(np.float128(1-P2), (N-C1)-(C2-C12)))
-
+    
+    LL4 = log_L(C2-C12, N-C1, P2)
+    
     '''
     The following finds all inf and -inf values in LL4 by
     moving calculations into log space.
@@ -143,7 +141,6 @@ def log_like(row, C2, P, N):
                           (log(1-P2[ind])*((N-C1)-(C2[ind]-C12[ind])))
         except ValueError as E:
             LL4.ix[ind] = 0
-
     
     return -2*(LL1+LL2-LL3-LL4)
 
