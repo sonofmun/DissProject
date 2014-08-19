@@ -32,9 +32,10 @@ def log_L(k,n,x):
     This function applies the correct values from the DataFrame to the
     binomial distribution function L(k,n,x) = (x**k)*(1-x)**(n-k).
     '''
-    return np.log(np.power(np.float128(x),k)*np.power(np.float128(1-x),(n-k)))
+    return np.log(np.power(np.float128(x),k)
+                  * np.power(np.float128(1-x),(n-k)))
 
-def log_space_L(s, k,n,x):
+def log_space_L(k,n,x):
     '''
     This function finds all the inf and -inf values in the Series s and
     corrects the NaN and inf values by moving the whole equation to the log
@@ -44,13 +45,9 @@ def log_space_L(s, k,n,x):
     '''
     #I have not implemented this function because it is actually a little
     #slower than running the same loop within the parent function (log_like)
-    s_inf = s[np.isinf(s)]
-    for ind in s_inf.index:
-        try:
-            s.ix[ind] = (log(x[ind])*k[ind]) + (log(1-x[ind])*(n-k[ind]))
-        except ValueError as E:
-            s.ix[ind] = 0
-    return s
+    
+    return (np.log(np.float128(x)) * np.float128((k))
+            + (np.log(np.float128((1-x)) * np.float128((n-k)))))
 
 def p_calc(c_1, c_2, c_12, n_):
     '''
@@ -68,7 +65,7 @@ def log_like(row, C2, P, N):
     C12 = Coll_df.ix[row]
     #value for C1 will be a scalar value used for all calculations on
     #that row
-    C1 = np.sum(C12)/8
+    C1 = np.sum(C12)
     #The values for P1 and P2 will be the same for the whole row
     #P1, P2 = p_calc(C1, C2, C12, N)
     P1 = C12/C1
@@ -98,12 +95,13 @@ def log_like(row, C2, P, N):
             LL1.ix[ind] = 0
     
     LL2 = log_L(C2-C12, N-C1, P)
+    
 
     '''
     The following finds all inf and -inf values in LL2 by
     moving calculations into log space.
     '''
-
+    
     LL2_inf = LL2[np.isinf(LL2)]
     for ind in LL2_inf.index:
         try:
@@ -118,7 +116,7 @@ def log_like(row, C2, P, N):
     The following finds all inf and -inf values in LL3 by
     moving calculations into log space.
     '''
-
+    
     LL3_inf = LL3[np.isinf(LL3)]
     for ind in LL3_inf.index:
         try:
@@ -133,7 +131,7 @@ def log_like(row, C2, P, N):
     The following finds all inf and -inf values in LL4 by
     moving calculations into log space.
     '''
-
+    
     LL4_inf = LL4[np.isinf(LL4)]
     for ind in LL4_inf.index:
         try:
@@ -142,7 +140,7 @@ def log_like(row, C2, P, N):
         except ValueError as E:
             LL4.ix[ind] = 0
     
-    return -2*(LL1+LL2-LL3-LL4)
+    return -2 * (LL1 + LL2 - LL3 - LL4)
 
 DFs, dest_dir, orig_dir = file_dict_builder()
 
@@ -157,13 +155,13 @@ for df_file in DFs:
         continue
     else:
         Coll_df = pd.read_pickle(os.path.join(orig_dir, df_file))
-        n = np.sum(Coll_df.values)/8 
+        n = np.sum(Coll_df.values)
         #values for C2
-        c2 = np.sum(Coll_df)/8
+        c2 = np.sum(Coll_df)
         #values for p
         p = c2/n 
-        LL_df = pd.DataFrame(0., index = Coll_df.index,
-                             columns = Coll_df.index, dtype = np.float128)
+        LL_df = pd.DataFrame(0., index=Coll_df.index,
+                             columns=Coll_df.index, dtype=np.float128)
         my_counter = 0
         for row in Coll_df.index:
             if my_counter % 100 == 0:
