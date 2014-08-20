@@ -13,12 +13,12 @@ dest = askdirectory(title='Where would you like to save your resulting'
 
 files = [x for x in listdir(orig) if x.endswith('.txt')]
 
-for file in files:
-    counter = 1
-    old_id = ''
-    with open(os.path.join(orig, file)) as f:
-        lines = f.readlines()
-    with open(os.path.join(dest, 'NT_text.txt'), mode='w') as f:
+with open(os.path.join(dest, 'SBL_GNT_text.txt'), mode='w') as NT:
+    for file in files:
+        counter = 1
+        old_id = ''
+        with open(os.path.join(orig, file)) as f:
+            lines = f.readlines()
         for line in lines:
             l = line.split()
             if old_id != '.'.join([file.split('-')[1], l[0][2:4], l[0][4:]]):
@@ -33,6 +33,6 @@ for file in files:
                                 '" ana="', ana,
                                 '" lem="', lem,
                                 '">', w, '</w>\n'])
-            f.write(xml_line)
+            NT.write(xml_line)
             old_id = '.'.join([file.split('-')[1], l[0][2:4], l[0][4:]])
             counter += 1
