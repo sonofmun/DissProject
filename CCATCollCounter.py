@@ -24,19 +24,19 @@ def file_chooser(orig, dest):
     '''
     with open(orig, encoding = 'utf-8') as file:
         filelist = [x.rstrip('\n') for x in file.readlines()]        
-    words = [re.sub(r'.+?lem="([^"]*).*', r'\1', line) for line in filelist]
+    POS = [re.sub(r'.+?ana="([A-Z]).*', r'\1', line) for line in filelist]
     counts = {}
     #NB: looping through list as below is actually faster than using Counter
-    for lemma in list(set(words)):
-        counts[lemma] = words.count(lemma)
+    for lemma in list(set(POS)):
+        counts[lemma] = POS.count(lemma)
     with open(dest, mode = 'wb') as file:
         dump(counts, file)
-    return words
+    return POS
 
-def cooc_counter(tokens, dest, window = 4):
+def cooc_counter(tokens, dest, window = 20):
     '''
     This function takes a token list, a windows size (default
-    is 4 left and 4 right), and a destination filename, runs through the
+    is 20 left and 20 right), and a destination filename, runs through the
     token list, reading every word to the window left and window right of
     the target word, and then keeps track of these co-occurrences in a
     cooc_dict dictionary.  Finally, it creates a coll_df DataFrame from this
@@ -44,6 +44,15 @@ def cooc_counter(tokens, dest, window = 4):
     '''
     cooc_dict = defaultdict(dict)
     for i, t in enumerate(tokens):
+        for pos in range(-window, window+1):
+            if pos == 0:
+                continue
+            else:
+                try:
+                    cooc_dict[t][i+pos][tokens[i+pos]] += 1
+                except:
+                    cooc_dict[t][i+pos][tokens[i+pos]] = 1
+        ###NEED TO CONTINUE THIS LINE OF THOUGHT
         c_list = []
         [c_list.append(c) for c in
          tokens[max(i-window, 0):min(i+window+1, len(tokens))]]
