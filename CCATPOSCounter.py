@@ -7,7 +7,7 @@ import re
 from tkinter.filedialog import askdirectory
 import os.path
 from pickle import dump
-from collections import defaultdict
+from collections import defaultdict, Counter
 import datetime
 
 xml_dir = askdirectory(title = 'Where are your CCAT XML Files located?')
@@ -42,17 +42,15 @@ def cooc_counter(tokens, dest, window = 20):
     cooc_dict dictionary.  Finally, it creates a coll_df DataFrame from this
     dictionary and then pickles this DataFrame to dest
     '''
-    cooc_dict = defaultdict(dict)
+    cooc_dict = defaultdict(lambda: defaultdict(Counter))
     for i, t in enumerate(tokens):
         for pos in range(-window, window+1):
-            if pos == 0:
+            if pos == 0 or i + pos < 0 or i + pos > len(tokens)-1:
                 continue
             else:
-                try:
-                    cooc_dict[t][i+pos][tokens[i+pos]] += 1
-                except:
-                    cooc_dict[t][i+pos][tokens[i+pos]] = 1
+                cooc_dict[t][pos][tokens[i+pos]] += 1
         ###NEED TO CONTINUE THIS LINE OF THOUGHT
+        '''
         c_list = []
         [c_list.append(c) for c in
          tokens[max(i-window, 0):min(i+window+1, len(tokens))]]
@@ -65,8 +63,15 @@ def cooc_counter(tokens, dest, window = 20):
         if i % 100000 == 0:
             print('Processing token %s of %s at %s' % (i, len(tokens),
                             datetime.datetime.now().time().isoformat()))
-    coll_df = pd.DataFrame(cooc_dict).fillna(0)
-    coll_df.to_pickle(dest_file)
+        '''
+    pos_df = pd.Panel(cooc_dict).fillna(0)
+    pos_df.to_pickle(dest_file)
+    ### the following writes each DataFrame in the pos_df panel to
+    ### a text file.
+    with open(dest_file.replace('.pickle', '.txt'), mode='w') as f:
+        for POS in pos_df:
+            s = ''.join(['\n', POS, '\n', pos_df.ix[POS].to_string(), '\n'])
+            f.write(s)
     
 
 for filename in fileslist:
@@ -91,9 +96,9 @@ for filename in fileslist:
                                 datetime.datetime.now().time().isoformat()))
     file = '/'.join([xml_dir, filename])
     dest_file = '/'.join([coll_dir, '_'.join([filename.split('_')[1],
-                                              'coll.pickle'])])
+                                              'pos.pickle'])])
     dict_file = '/'.join([coll_dir, '_'.join([filename.split('_')[1],
-                                              'coll_dict.pickle'])])
+                                              'pos_dict.pickle'])])
     wordlist = file_chooser(file, dict_file)
     cooc_counter(wordlist, dest_file)
         
