@@ -283,9 +283,8 @@ def SigNoise(df1, df2):
     :param df2:
     :return signal-to-noise ratio:
     """
-    df1[df1<0] = 0
-    df2[df2<0] = 0
-    return np.mean((df1-df2).values)
+
+    return np.mean((df1.abs()-df2.abs()).values)
 
 
 def RunTests(min_w, max_w):
