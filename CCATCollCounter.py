@@ -10,10 +10,6 @@ from pickle import dump
 from collections import defaultdict
 import datetime
 
-xml_dir = askdirectory(title = 'Where are your CCAT XML Files located?')
-coll_dir = askdirectory(title = 'Where would you like to save your pickled \
-                        collocate DataFrames?')
-fileslist = os.listdir(xml_dir)
 
 def file_chooser(orig, dest):
     '''
@@ -33,7 +29,8 @@ def file_chooser(orig, dest):
         dump(counts, file)
     return words
 
-def cooc_counter(tokens, dest, window = 4):
+
+def cooc_counter(tokens, dest, window):
     '''
     This function takes a token list, a windows size (default
     is 4 left and 4 right), and a destination filename, runs through the
@@ -57,35 +54,44 @@ def cooc_counter(tokens, dest, window = 4):
             print('Processing token %s of %s at %s' % (i, len(tokens),
                             datetime.datetime.now().time().isoformat()))
     coll_df = pd.DataFrame(cooc_dict).fillna(0)
-    coll_df.to_pickle(dest_file)
+    coll_df.to_pickle(dest)
     
 
-for filename in fileslist:
+def colls(w):
+    """Takes an xml formatted file, extracts the 'lem' attributes from
+    each <w> tag, and then counts how often each word occurs withing the
+    specified window size 'w' left and window size right.
+    :param w:
+    """
+    xml_dir = askdirectory(title = 'Where are your CCAT XML Files located?')
+    coll_dir = askdirectory(title = 'Where would you like to save your pickled \
+                            collocate DataFrames?')
+    fileslist = os.listdir(xml_dir)
 
-    ##########
-    '''
-    Each loop will open an xml formatted file that contains all of the
-    lemmata for a specific document in a 'lemma' attribute for each <w> tag.
-    It then derives the name for the destination files for the co-occurrence
-    DataFrame and the count dictionary from the input file name for the text
-    being analyzed.
-    It then calls the function ('file_chooser' defined above) that will
-    create the count dictionary and dump it to a pickle file and the type list
-    and token list that will be used to create co-occurrence DataFrame.
-    Finally, it calls the 'cooc_counter' function, which takes as input
-    a token list, a type list, and a window size and finally creates and
-    pickles the co-occurrence DataFrame.
-    '''
-    ##########
-    
-    print('Now analyzing %s at %s' % (filename, 
-                                datetime.datetime.now().time().isoformat()))
-    file = '/'.join([xml_dir, filename])
-    dest_file = '/'.join([coll_dir, '_'.join([filename.split('_')[1],
-                                              'coll.pickle'])])
-    dict_file = '/'.join([coll_dir, '_'.join([filename.split('_')[1],
-                                              'coll_dict.pickle'])])
-    wordlist = file_chooser(file, dict_file)
-    cooc_counter(wordlist, dest_file)
-        
-            
+    for filename in fileslist:
+
+        ##########
+        '''
+        Each loop will open an xml formatted file that contains all of the
+        lemmata for a specific document in a 'lemma' attribute for each <w> tag.
+        It then derives the name for the destination files for the co-occurrence
+        DataFrame and the count dictionary from the input file name for the text
+        being analyzed.
+        It then calls the function ('file_chooser' defined above) that will
+        create the count dictionary and dump it to a pickle file and the type list
+        and token list that will be used to create co-occurrence DataFrame.
+        Finally, it calls the 'cooc_counter' function, which takes as input
+        a token list, a type list, and a window size and finally creates and
+        pickles the co-occurrence DataFrame.
+        '''
+        ##########
+
+        print('Now analyzing %s at %s' % (filename,
+                                    datetime.datetime.now().time().isoformat()))
+        file = '/'.join([xml_dir, filename])
+        dest_file = '/'.join([coll_dir, '_'.join([filename.split('_')[1],
+                                                  'coll.pickle'])])
+        dict_file = '/'.join([coll_dir, '_'.join([filename.split('_')[1],
+                                                  'coll_dict.pickle'])])
+        wordlist = file_chooser(file, dict_file)
+        cooc_counter(wordlist, dest_file, w)
