@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+
 __author__ = 'matt'
 
 '''
@@ -15,6 +17,7 @@ from glob import glob
 import numpy as np
 from math import log
 from copy import deepcopy
+import sys
 
 
 class CollCount:
@@ -352,10 +355,11 @@ def SigNoise(df1, df2):
     return np.mean((df1/df2).values)
 
 
-def RunTests(min_w, max_w):
+def RunTests(min_w, max_w, orig=None):
     now = datetime.datetime.now().time().isoformat()
-    orig = askdirectory(title='Where are your original XML files located?')
-    orig = os.path.join(orig, '*.txt')
+    if orig == None:
+        orig = askdirectory(title='Where are your original XML files located?')
+        orig = os.path.join(orig, '*.txt')
     files = glob(orig)
     for file in files:
         corpus = file.split('_')[-2]
@@ -394,3 +398,7 @@ def RunTests(min_w, max_w):
         dest_file = file.replace('.txt', 'sig_noise.pickle')
         with open(dest_file, mode='wb') as f:
             dump(sig_noise_dict, f)
+    print('Finished at %s' % (now))
+
+if __name__ = __main__:
+    RunTests(1,20, orig=sys.argv[1])
