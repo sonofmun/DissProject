@@ -8,7 +8,6 @@ word with every other word
 '''
 import pandas as pd
 import re
-from tkinter.filedialog import askdirectory
 import os.path
 from pickle import dump
 from collections import defaultdict
@@ -358,6 +357,7 @@ def SigNoise(df1, df2):
 def RunTests(min_w, max_w, orig=None):
     now = datetime.datetime.now().time().isoformat()
     if orig == None:
+        from tkinter.filedialog import askdirectory
         orig = askdirectory(title='Where are your original XML files located?')
         orig = os.path.join(orig, '*.txt')
     files = glob(orig)
