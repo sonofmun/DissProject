@@ -19,7 +19,7 @@ from copy import deepcopy
 
 class CollCount:
 
-    def __init__(self, file, w):
+    def __init__(self, file, w, lem):
         """Takes an xml formatted file, extracts the 'lem' attributes from
         each <w> tag, and then counts how often each word occurs withing the
         specified window size 'w' left and window size right.
@@ -27,6 +27,7 @@ class CollCount:
         """
         self.file = file
         self.w = w
+        self.lems = lem
 
     def file_chooser(self):
         '''
@@ -35,8 +36,12 @@ class CollCount:
         lists, and then returns the type and token lists, which will then be
         used to calculated co-occurrences later
         '''
-        words = [re.sub(r'.+?lem="([^"]*).*', r'\1', line)
-                 for line in self.file]
+        if self.lems:
+            words = [re.sub(r'.+?lem="([^"]*).*', r'\1', line)
+                     for line in self.file]
+        else:
+            words = [re.sub(r'.+?>([^<]*).*', r'\1', line)
+                     for line in self.file]
         return words
 
 
@@ -94,8 +99,8 @@ class LogLike:
         This function applies the correct values from the DataFrame to the
         binomial distribution function L(k,n,x) = (x**k)*(1-x)**(n-k).
         '''
-        return np.log(np.power(np.float128(x),k)
-                      * np.power(np.float128(1-x),n-k))
+        return np.log(np.power(np.float64(x),k)
+                      * np.power(np.float64(1-x),n-k))
 
     def log_space_L(self, k,n,x):
         '''
@@ -219,7 +224,7 @@ class LogLike:
         #values for p
         p = c2/n
         LL_df = pd.DataFrame(0., index=self.colls.index,
-                             columns=self.colls.index, dtype=np.float128)
+                             columns=self.colls.index, dtype=np.float64)
         my_counter = 0
         for row in self.colls.index:
             if my_counter % 100 == 0:
@@ -229,6 +234,55 @@ class LogLike:
             LL_df.ix[row] = self.log_like(row, c2, p, n)
             my_counter += 1
         return LL_df.fillna(0)
+
+class PPMI:
+
+    def __init__(self, colls):
+        """Calculates the Positive Pointwise Mutual Information of a
+        DataFrame of co-occurrence count values.
+
+
+        :param colls:
+        :return:
+        """
+        self.colls = colls
+
+    def PMI_calc(self, row, P2, N):
+        '''
+        values for c12
+        this is the row in the coll_df that I am looking at
+        '''
+        C12 = self.colls.ix[row]
+        #value for C1 will be a scalar value used for all calculations on
+        #that row
+        C1 = np.sum(C12)
+        P1 = C1/N
+        P12 = C12/N
+
+        return np.log2(np.divide(P12,P1*P2))
+
+    def PPMI(self):
+        """Runs a log-likelihood computation on a series of collocation
+        DataFrames in a specific directory, saving them to a new directory.
+        """
+
+        print('Now running PPMI calculations')
+
+        n = np.sum(self.colls.values)
+        #values for C2
+        p2 = np.sum(self.colls)/n
+        PMI_df = pd.DataFrame(0., index=self.colls.index,
+                             columns=self.colls.index, dtype=np.float64)
+        my_counter = 0
+        for row in self.colls.index:
+            if my_counter % 100 == 0:
+                print('Row %s of %s at %s'%
+                      (my_counter, len(self.colls),
+                       datetime.datetime.now().time().isoformat()))
+            PMI_df.ix[row] = self.PMI_calc(row, p2, n)
+            my_counter += 1
+        PMI_df[PMI_df<0] = 0
+        return PMI_df.fillna(0)
 
 
 class CosSim:
@@ -275,6 +329,17 @@ def randomizer(l):
     [shuffle(l) for x in range(10)]
     return l
 
+
+def scaler(df):
+    """Scales the values of the given DataFrame to a range between
+    0 and 1
+
+    :param df:
+    """
+    from sklearn.preprocessing import MinMaxScaler
+    return pd.DataFrame(MinMaxScaler(feature_range=(.01,1)).fit_transform(df))
+
+
 def SigNoise(df1, df2):
     """Divides the DataFrame representing signal by the DataFrame representing
     noise and returns the sum of the resulting values
@@ -284,7 +349,7 @@ def SigNoise(df1, df2):
     :return signal-to-noise ratio:
     """
 
-    return np.mean((df1.abs()-df2.abs()).values)
+    return np.mean((df1/df2).values)
 
 
 def RunTests(min_w, max_w):
@@ -295,19 +360,37 @@ def RunTests(min_w, max_w):
     for file in files:
         corpus = file.split('_')[-2]
         print('Started analyzing %s at %s' % (corpus, now))
-        sig_noise_dict = defaultdict(dict)
+        sig_noise_dict = {}
         with open(file) as f:
             t = f.read().split('\n')
         print('Started randomizing at %s' % (now))
         r = randomizer(deepcopy(t))
         for size in range(min_w, max_w+1):
-            print('Starting calculations for original text for window size '
-                  '%s at %s' % (str(size), now))
-            t_ll = LogLike(CollCount(t, size).colls()).LL()
-            print('Starting calculations for randomized text for windows size '
-                  '%s at %s' % (int(size), now))
-            r_ll = LogLike(CollCount(r, size).colls()).LL()
-            sig_noise_dict[corpus][size] = SigNoise(t_ll, r_ll)
+            for lemmata in (True, False):
+                t_colls = CollCount(t, size, lemmata).colls()
+                r_colls = CollCount(r, size, lemmata).colls()
+                print('Starting LL calculations for original text for '
+                      'window size %s at %s' % (str(size), now))
+                t_ll = LogLike(t_colls).LL()
+                print('Starting LL calculations for randomized text for '
+                      'window size %s at %s' % (int(size), now))
+                r_ll = LogLike(r_colls).LL()
+                sig_noise_dict[('LL', size, 'lems=%s' % (lemmata))] = \
+                    SigNoise(scaler(t_ll),scaler(r_ll))
+                r_ll[r_ll<0] = 0
+                t_ll[t_ll<0] = 0
+                sig_noise_dict[('PLL', size, 'lems=%s' % (lemmata))] = \
+                    SigNoise(scaler(t_ll),scaler(r_ll))
+                del r_ll, t_ll
+                print('Starting PPMI calculations for original text for '
+                      'window size %s at %s' % (str(size), now))
+                t_pmi = PPMI(t_colls).PPMI()
+                print('Starting PPMI calculations for randomized text for '
+                      'window size %s at %s' % (int(size), now))
+                r_pmi = PPMI(r_colls).PPMI()
+                sig_noise_dict[('PPMI', size, 'lems=%s' % (lemmata))] = \
+                    SigNoise(scaler(t_pmi),scaler(r_pmi))
+                del r_pmi, t_pmi
         dest_file = file.replace('.txt', 'sig_noise.pickle')
         with open(dest_file, mode='wb') as f:
             dump(sig_noise_dict, f)

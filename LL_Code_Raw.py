@@ -47,8 +47,7 @@ def log_space_L(k,n,x):
     #I have not implemented this function because it is actually a little
     #slower than running the same loop within the parent function (log_like)
     
-    return (np.log(np.float128(x)) * np.float128((k))
-            + (np.log(np.float128((1-x)) * np.float128((n-k)))))
+    return (np.log(x) * (k)) + (np.log(1-x) * (n-k))
 
 def p_calc(c_1, c_2, c_12, n_):
     '''
@@ -58,12 +57,12 @@ def p_calc(c_1, c_2, c_12, n_):
     p2 = (c_2-c_12)/(n_-c_1)
     return p1, p2
 
-def log_like(row, C2, P, N, Coll_df):
+def log_like(row, C2, P, N, colls):
     '''
     values for c12
     this is the row in the coll_df that I am looking at
     '''
-    C12 = Coll_df.ix[row]
+    C12 = colls.ix[row]
     #value for C1 will be a scalar value used for all calculations on
     #that row
     C1 = np.sum(C12)
@@ -77,32 +76,34 @@ def log_like(row, C2, P, N, Coll_df):
     The following lines call alternately the log_L and the log_space_L
     function.  The first will calculate most values correctly except where
     they underrun the np.float128 object (10**-4950).  Those cases will be
-    dealt with by moving the calculations to log space, thus calculating the
-    natural log before the float128 can be underrun when taking a very small
-    P number to even a moderately large exponent.
+    dealt with by moving the calculations to log space, thus calculating
+    the natural log before the float128 can be underrun when taking a
+    very small P number to even a moderately large exponent.
     '''
-    
-    LL1 = log_L(C12, C1, P)
+
+    LL1 = log_space_L(C12, C1, P)
+
     '''
     The following finds all inf and -inf values in LL1 by
     moving calculations into log space.
     '''
-
+    '''
     LL1_inf = LL1[np.isinf(LL1)]
     for ind in LL1_inf.index:
         try:
-            LL1.ix[ind] = (log(P[ind])*C12[ind])+(log(1-P[ind])*(C1-C12[ind]))
+            LL1.ix[ind] = (log(P[ind])*C12[ind])+\
+                          (log(1-P[ind])*(C1-C12[ind]))
         except ValueError as E:
             LL1.ix[ind] = 0
-    
-    LL2 = log_L(C2-C12, N-C1, P)
-    
+    '''
+    LL2 = log_space_L(C2-C12, N-C1, P)
+
 
     '''
     The following finds all inf and -inf values in LL2 by
     moving calculations into log space.
     '''
-    
+    '''
     LL2_inf = LL2[np.isinf(LL2)]
     for ind in LL2_inf.index:
         try:
@@ -110,14 +111,14 @@ def log_like(row, C2, P, N, Coll_df):
                           (log(1-P[ind])*((N-C1)-(C2[ind]-C12[ind])))
         except ValueError as E:
             LL2.ix[ind] = 0
-    
+    '''
     LL3 = log_L(C12, C1, P1)
-    
+
     '''
     The following finds all inf and -inf values in LL3 by
     moving calculations into log space.
     '''
-    
+
     LL3_inf = LL3[np.isinf(LL3)]
     for ind in LL3_inf.index:
         try:
@@ -125,28 +126,27 @@ def log_like(row, C2, P, N, Coll_df):
                           (log(1-P1[ind])*(C1-C12[ind]))
         except ValueError as E:
             LL3.ix[ind] = 0
-    
-    LL4 = log_L(C2-C12, N-C1, P2)
-    
+
+    LL4 = log_space_L(C2-C12, N-C1, P2)
+
     '''
     The following finds all inf and -inf values in LL4 by
     moving calculations into log space.
     '''
-    
+
     LL4_inf = LL4[np.isinf(LL4)]
     for ind in LL4_inf.index:
         try:
-            LL4.ix[ind] = (log(P2[ind])*(C2[ind]-C12[ind]))+\
-                          (log(1-P2[ind])*((N-C1)-(C2[ind]-C12[ind])))
+            LL4.ix[ind] = self.log_L((C2[ind]-C12[ind]), (N-C1), P2[ind])
         except ValueError as E:
             LL4.ix[ind] = 0
-    
+
     return -2 * (LL1 + LL2 - LL3 - LL4)
 
 
 def LL():
     """Runs a log-likelihood computation on a series of collocation
-    DataFrames in a specific directory, saving them to a new directory.
+DataFrames in a specific directory, saving them to a new directory.
     """
     DFs, dest_dir, orig_dir = file_dict_builder()
 
@@ -177,3 +177,13 @@ def LL():
                 LL_df.ix[row] = log_like(row, c2, p, n, Coll_df)
                 my_counter += 1
             LL_df.to_pickle(LL_dest_file)
+
+def ll_unit_test(c1, c2, c12, n):
+    p = c2/n
+    p1 = c12/c1
+    p2 = (c2-c12)/(n-c1)
+    LL1 = log_space_L(c12, c1, p)
+    LL2 = log_space_L(c2-c12, n-c1, p)
+    LL3 = log_space_L(c12, c1, p1)
+    LL4 = log_space_L(c2-c12, n-c1, p2)
+    return -2 * (LL1 + LL2 - LL3 - LL4)
