@@ -366,7 +366,7 @@ def RunTests(min_w, max_w, orig=None):
     if orig == None:
         from tkinter.filedialog import askdirectory
         orig = askdirectory(title='Where are your original XML files located?')
-        orig = os.path.join(orig, '*.txt')
+    orig = os.path.join(orig, '*.txt')
     files = glob(orig)
     for file in files:
         corpus = file.split('_')[-2]
