@@ -378,7 +378,7 @@ def RunTests(min_w, max_w, orig=None):
         r = randomizer(deepcopy(t))
         for size in range(min_w, max_w+1):
             for lemmata in (True, False):
-                for weighted in (True, False)
+                for weighted in (True, False):
                     t_colls = CollCount(t, size, lemmata, weighted).colls()
                     r_colls = CollCount(r, size, lemmata, weighted).colls()
                     print('Starting LL calculations for original text for '
