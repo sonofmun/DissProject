@@ -417,5 +417,5 @@ def RunTests(min_w, max_w, orig=None):
             dump(sig_noise_dict, f)
     print('Finished at %s' % (now))
 
-if __name__ == __main__:
+if __name__ == '__main__':
     RunTests(1,20, orig=sys.argv[1])
