@@ -21,7 +21,7 @@ import sys
 
 class CollCount:
 
-    def __init__(self, file, w, lem):
+    def __init__(self, file, w, lem, weighted):
         """Takes an xml formatted file, extracts the 'lem' attributes from
         each <w> tag, and then counts how often each word occurs withing the
         specified window size 'w' left and window size right.
@@ -30,6 +30,7 @@ class CollCount:
         self.file = file
         self.w = w
         self.lems = lem
+        self.weighted = weighted
 
     def file_chooser(self):
         '''
@@ -59,9 +60,15 @@ class CollCount:
         cooc_dict = defaultdict(dict)
         for i, t in enumerate(tokens):
             c_list = []
-            [c_list.append(c) for c in
-             tokens[max(i-self.w, 0):min(i+self.w+1, len(tokens))]]
-            c_list.remove(t)
+            if self.weighted:
+                for pos in range(max(i-self.w, 0),min(i+self.w+1, len(tokens))):
+                    if pos != i:
+                        for x in range(self.w+1-abs(i-pos)):
+                            c_list.append(tokens[pos])
+            else:
+                [c_list.append(c) for c in
+                 tokens[max(i-self.w, 0):min(i+self.w+1, len(tokens))]]
+                c_list.remove(t)
             for c in c_list:
                 try:
                     cooc_dict[t][c] += 1
@@ -286,13 +293,13 @@ class PPMI:
         PMI_df[PMI_df<0] = 0
         return PMI_df.fillna(0)
 
-
+'''
 class CosSim:
 
     from sklearn.metrics.pairwise import pairwise_distances
 
     def __init__(self, LLs):
-        '''
+        """
         Created on 30.04.2013
         by Matthew Munson
         The purpose of this file is to run a cosine similarity comparison between
@@ -300,7 +307,7 @@ class CosSim:
         with 1 line for headings, then one line for each lemma, with the CS scores
         for each word in the heading arranged under it.
         :param LLs:
-        '''
+        """
         self.LLs = LLs
 
 
@@ -322,7 +329,7 @@ class CosSim:
                           columns=self.LLs.index)
         return CS
 
-
+'''
 def randomizer(l):
     """Takes a list of words as input, randomizes the list 1000 times,
     and returns the randomized list.
@@ -371,30 +378,40 @@ def RunTests(min_w, max_w, orig=None):
         r = randomizer(deepcopy(t))
         for size in range(min_w, max_w+1):
             for lemmata in (True, False):
-                t_colls = CollCount(t, size, lemmata).colls()
-                r_colls = CollCount(r, size, lemmata).colls()
-                print('Starting LL calculations for original text for '
-                      'window size %s at %s' % (str(size), now))
-                t_ll = LogLike(t_colls).LL()
-                print('Starting LL calculations for randomized text for '
-                      'window size %s at %s' % (int(size), now))
-                r_ll = LogLike(r_colls).LL()
-                sig_noise_dict[('LL', size, 'lems=%s' % (lemmata))] = \
-                    SigNoise(scaler(t_ll),scaler(r_ll))
-                r_ll[r_ll<0] = 0
-                t_ll[t_ll<0] = 0
-                sig_noise_dict[('PLL', size, 'lems=%s' % (lemmata))] = \
-                    SigNoise(scaler(t_ll),scaler(r_ll))
-                del r_ll, t_ll
-                print('Starting PPMI calculations for original text for '
-                      'window size %s at %s' % (str(size), now))
-                t_pmi = PPMI(t_colls).PPMI()
-                print('Starting PPMI calculations for randomized text for '
-                      'window size %s at %s' % (int(size), now))
-                r_pmi = PPMI(r_colls).PPMI()
-                sig_noise_dict[('PPMI', size, 'lems=%s' % (lemmata))] = \
-                    SigNoise(scaler(t_pmi),scaler(r_pmi))
-                del r_pmi, t_pmi
+                for weighted in (True, False)
+                    t_colls = CollCount(t, size, lemmata, weighted).colls()
+                    r_colls = CollCount(r, size, lemmata, weighted).colls()
+                    print('Starting LL calculations for original text for '
+                          'window size %s at %s' % (str(size), now))
+                    t_ll = LogLike(t_colls).LL()
+                    print('Starting LL calculations for randomized text for '
+                          'window size %s at %s' % (int(size), now))
+                    r_ll = LogLike(r_colls).LL()
+                    sig_noise_dict[('LL',
+                                    size,
+                                    'lems=%s' % (lemmata),
+                                    'weighted =%s' % (weighted))] = \
+                                    SigNoise(scaler(t_ll),scaler(r_ll))
+                    r_ll[r_ll<0] = 0
+                    t_ll[t_ll<0] = 0
+                    sig_noise_dict[('PLL',
+                                    size,
+                                    'lems=%s' % (lemmata),
+                                    'weighted =%s' % (weighted))] = \
+                                    SigNoise(scaler(t_ll),scaler(r_ll))
+                    del r_ll, t_ll
+                    print('Starting PPMI calculations for original text for '
+                          'window size %s at %s' % (str(size), now))
+                    t_pmi = PPMI(t_colls).PPMI()
+                    print('Starting PPMI calculations for randomized text for '
+                          'window size %s at %s' % (int(size), now))
+                    r_pmi = PPMI(r_colls).PPMI()
+                    sig_noise_dict[('PPMI',
+                                    size,
+                                    'lems=%s' % (lemmata),
+                                    'weighted =%s' % (weighted))] = \
+                                    SigNoise(scaler(t_pmi),scaler(r_pmi))
+                    del r_pmi, t_pmi
         dest_file = file.replace('.txt', 'sig_noise.pickle')
         with open(dest_file, mode='wb') as f:
             dump(sig_noise_dict, f)
