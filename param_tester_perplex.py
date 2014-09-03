@@ -14,25 +14,27 @@ from collections import defaultdict
 import datetime
 from glob import glob
 import numpy as np
-from math import log
+from math import log, pow
 from copy import deepcopy
 import sys
+from sklearn.cross_validation import KFold
 
 
 class CollCount:
 
-    def __init__(self, file, w, lem, weighted):
+    def __init__(self, training, testing, w, lem, weighted):
         """Takes an xml formatted file, extracts the 'lem' attributes from
         each <w> tag, and then counts how often each word occurs withing the
         specified window size 'w' left and window size right.
         :param w:
         """
-        self.file = file
+        self.training = training
+        self.testing = testing
         self.w = w
         self.lems = lem
         self.weighted = weighted
 
-    def file_chooser(self):
+    def file_chooser(self, l):
         '''
         This function opens the filename from the main for loop, extracts a
         type list and a token list, creates a count dictionary from these two
@@ -41,10 +43,10 @@ class CollCount:
         '''
         if self.lems:
             words = [re.sub(r'.+?lem="([^"]*).*', r'\1', line)
-                     for line in self.file]
+                     for line in l]
         else:
             words = [re.sub(r'.+?>([^<]*).*', r'\1', line)
-                     for line in self.file]
+                     for line in l]
         return words
 
 
@@ -87,8 +89,9 @@ class CollCount:
         specified window size 'w' left and window size right.
         """
 
-        wordlist = self.file_chooser()
-        return self.cooc_counter(wordlist)
+        train_words = self.file_chooser(self.training)
+        test_words = self.file_chooser(self.testing)
+        return self.cooc_counter(train_words), self.cooc_counter(test_words)
 
 
 class LogLike:
@@ -234,14 +237,8 @@ class LogLike:
         p = c2/n
         LL_df = pd.DataFrame(0., index=self.colls.index,
                              columns=self.colls.index, dtype=np.float64)
-        my_counter = 0
         for row in self.colls.index:
-            if my_counter % 100 == 0:
-                print('Row %s of %s at %s'%
-                      (my_counter, len(self.colls),
-                       datetime.datetime.now().time().isoformat()))
             LL_df.ix[row] = self.log_like(row, c2, p, n)
-            my_counter += 1
         return LL_df.fillna(0)
 
 class PPMI:
@@ -282,14 +279,8 @@ class PPMI:
         p2 = np.sum(self.colls)/n
         PMI_df = pd.DataFrame(0., index=self.colls.index,
                              columns=self.colls.index, dtype=np.float64)
-        my_counter = 0
         for row in self.colls.index:
-            if my_counter % 100 == 0:
-                print('Row %s of %s at %s'%
-                      (my_counter, len(self.colls),
-                       datetime.datetime.now().time().isoformat()))
             PMI_df.ix[row] = self.PMI_calc(row, p2, n)
-            my_counter += 1
         PMI_df[PMI_df<0] = 0
         return PMI_df.fillna(0)
 
@@ -330,14 +321,6 @@ class CosSim:
         return CS
 
 '''
-def randomizer(l):
-    """Takes a list of words as input, randomizes the list 1000 times,
-    and returns the randomized list.
-    """
-    from numpy.random import shuffle
-    [shuffle(l) for x in range(10)]
-    return l
-
 
 def scaler(df):
     """Scales the values of the given DataFrame to a range between
@@ -349,21 +332,7 @@ def scaler(df):
     df1 = deepcopy(df)
     return pd.DataFrame(MinMaxScaler(feature_range=(.01,1)).fit_transform(df1))
 
-
-def SigNoise(df1, df2):
-    """Divides the DataFrame representing signal by the DataFrame representing
-    noise and returns the sum of the resulting values
-
-    :param df1:
-    :param df2:
-    :return signal-to-noise ratio:
-    """
-
-    return np.mean((df1/df2).values)
-
-
 def RunTests(min_w, max_w, orig=None):
-    now = datetime.datetime.now().time().isoformat()
     if orig == None:
         from tkinter.filedialog import askdirectory
         orig = askdirectory(title='Where are your original XML files located?')
@@ -371,52 +340,97 @@ def RunTests(min_w, max_w, orig=None):
     files = glob(orig)
     for file in files:
         corpus = file.split('_')[-2]
-        print('Started analyzing %s at %s' % (corpus, now))
-        sig_noise_dict = {}
+        print('Started analyzing %s at %s' %
+              (corpus,
+              datetime.datetime.now().time().isoformat()))
+        perplex_dict = {}
         with open(file) as f:
             t = f.read().split('\n')
-        print('Started randomizing at %s' % (now))
-        r = randomizer(deepcopy(t))
+        kf = KFold(len(t), n_folds=10)
         for size in range(min_w, max_w+1):
             for lemmata in (True, False):
                 for weighted in (True, False):
-                    t_colls = CollCount(t, size, lemmata, weighted).colls()
-                    r_colls = CollCount(r, size, lemmata, weighted).colls()
-                    print('Starting LL calculations for original text for '
-                          'window size %s at %s' % (str(size), now))
-                    t_ll = LogLike(t_colls).LL()
-                    print('Starting LL calculations for randomized text for '
-                          'window size %s at %s' % (int(size), now))
-                    r_ll = LogLike(r_colls).LL()
-                    sig_noise_dict[('LL',
-                                    size,
-                                    'lems=%s' % (lemmata),
-                                    'weighted =%s' % (weighted))] = \
-                                    SigNoise(scaler(t_ll),scaler(r_ll))
-                    r_ll[r_ll<0] = 0
-                    t_ll[t_ll<0] = 0
-                    sig_noise_dict[('PLL',
-                                    size,
-                                    'lems=%s' % (lemmata),
-                                    'weighted =%s' % (weighted))] = \
-                                    SigNoise(scaler(t_ll),scaler(r_ll))
-                    del r_ll, t_ll
-                    print('Starting PPMI calculations for original text for '
-                          'window size %s at %s' % (str(size), now))
-                    t_pmi = PPMI(t_colls).PPMI()
-                    print('Starting PPMI calculations for randomized text for '
-                          'window size %s at %s' % (int(size), now))
-                    r_pmi = PPMI(r_colls).PPMI()
-                    sig_noise_dict[('PPMI',
-                                    size,
-                                    'lems=%s' % (lemmata),
-                                    'weighted =%s' % (weighted))] = \
-                                    SigNoise(scaler(t_pmi),scaler(r_pmi))
-                    del r_pmi, t_pmi
-        dest_file = file.replace('.txt', 'sig_noise.pickle')
+                    ll_list = []
+                    pll_list = []
+                    pmi_list = []
+                    counter = 1
+                    for train, test in kf:
+                        print('Fold %s, weighted %s, lemmata %s, w=%s at %s' %
+                              (counter,
+                               weighted,
+                               lemmata,
+                               size,
+                               datetime.datetime.now().time().isoformat()))
+                        t_train, t_test = CollCount([t[x] for x in train],
+                                                    [t[x] for x in test],
+                                                    size,
+                                                    lemmata,
+                                                    weighted).colls()
+                        ind_int = set(t_train.index).intersection(t_test.index)
+                        exponent = 1/len(t_test)
+                        print('Starting LL calculations for '
+                              'window size %s at %s' %
+                              (str(size),
+                               datetime.datetime.now().time().isoformat()))
+                        t_ll = LogLike(t_train).LL()
+                        ll_list.append(pow
+                                       (np.sum
+                                        (
+                                            (1/np.multiply
+                                            (scaler
+                                             (t_ll).ix[ind_int,ind_int],
+                                             t_test.ix[ind_int,ind_int])
+                                             .fillna(0).values)
+                                        ),
+                                        exponent))
+                        t_ll[t_ll<0] = 0
+                        pll_list.append(pow
+                                        (np.sum
+                                         (
+                                             (1/np.multiply
+                                             (scaler
+                                              (t_ll).ix[ind_int,ind_int],
+                                              t_test.ix[ind_int,ind_int])
+                                              .fillna(0).values)
+                                         ),
+                                         exponent))
+                        del t_ll
+                        print('Starting PPMI calculations for '
+                              'window size %s at %s' %
+                              (str(size),
+                              datetime.datetime.now().time().isoformat()))
+                        t_pmi = PPMI(t_train).PPMI()
+                        pmi_list.append(pow
+                                        (np.sum
+                                         (
+                                             (1/np.multiply
+                                             (scaler
+                                              (t_pmi).ix[ind_int,ind_int],
+                                              t_test.ix[ind_int,ind_int])
+                                              .fillna(0).values)
+                                         ),
+                                         exponent))
+                        del t_pmi
+                        counter += 1
+                    perplex_dict[('LL',
+                                  size,
+                                  'lems=%s' % (lemmata),
+                                  'weighted =%s' % (weighted))] = \
+                                    sum(ll_list)/len(ll_list)
+                    perplex_dict[('PLL',
+                                  size,
+                                  'lems=%s' % (lemmata),
+                                  'weighted =%s' % (weighted))] = \
+                                    sum(pll_list)/len(pll_list)
+                    perplex_dict[('PPMI',
+                                  size,
+                                  'lems=%s' % (lemmata),
+                                  'weighted =%s' % (weighted))] = \
+                                    sum(pmi_list)/len(pmi_list)
+        dest_file = file.replace('.txt', 'perplexity.pickle')
         with open(dest_file, mode='wb') as f:
-            dump(sig_noise_dict, f)
-    print('Finished at %s' % (now))
+            dump(perplex_dict, f)
+    print('Finished at %s' % (datetime.datetime.now().time().isoformat()))
 
 if __name__ == '__main__':
     RunTests(1,20, orig=sys.argv[1])
