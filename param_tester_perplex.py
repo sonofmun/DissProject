@@ -376,10 +376,10 @@ def RunTests(min_w, max_w, orig=None):
                     ll_list.append(pow
                                    (np.sum
                                     (
-                                        (1/np.multiply
+                                        ((1/np.multiply
                                         (scaler
                                          (t_ll).ix[ind_int,ind_int],
-                                         t_test.ix[ind_int,ind_int])
+                                         t_test.ix[ind_int,ind_int]))
                                           .replace((np.inf,
                                                    -np.inf,
                                                    np.nan),
@@ -391,10 +391,10 @@ def RunTests(min_w, max_w, orig=None):
                     pll_list.append(pow
                                     (np.sum
                                      (
-                                         (1/np.multiply
+                                         ((1/np.multiply
                                          (scaler
                                           (t_ll).ix[ind_int,ind_int],
-                                          t_test.ix[ind_int,ind_int])
+                                          t_test.ix[ind_int,ind_int]))
                                           .replace((np.inf,
                                                    -np.inf,
                                                    np.nan),
@@ -411,10 +411,10 @@ def RunTests(min_w, max_w, orig=None):
                     pmi_list.append(pow
                                     (np.sum
                                      (
-                                         (1/np.multiply
+                                         ((1/np.multiply
                                          (scaler
                                           (t_pmi).ix[ind_int,ind_int],
-                                          t_test.ix[ind_int,ind_int])
+                                          t_test.ix[ind_int,ind_int]))
                                           .replace((np.inf,
                                                    -np.inf,
                                                    np.nan),
