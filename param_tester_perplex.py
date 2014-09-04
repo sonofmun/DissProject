@@ -381,6 +381,7 @@ def RunTests(min_w, max_w, orig=None):
                                          (t_ll).ix[ind_int,ind_int],
                                          t_test.ix[ind_int,ind_int])
                                          .fillna(0).values)
+                                        .replace((np.inf, -np.inf, np.nan), 0)
                                     ),
                                     exponent))
                     t_ll[t_ll<0] = 0
@@ -392,6 +393,7 @@ def RunTests(min_w, max_w, orig=None):
                                           (t_ll).ix[ind_int,ind_int],
                                           t_test.ix[ind_int,ind_int])
                                           .fillna(0).values)
+                                         .replace((np.inf, -np.inf, np.nan), 0)
                                      ),
                                      exponent))
                     del t_ll
@@ -408,6 +410,7 @@ def RunTests(min_w, max_w, orig=None):
                                           (t_pmi).ix[ind_int,ind_int],
                                           t_test.ix[ind_int,ind_int])
                                           .fillna(0).values)
+                                         .replace((np.inf, -np.inf, np.nan), 0)
                                      ),
                                      exponent))
                     del t_pmi
