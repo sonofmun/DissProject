@@ -225,7 +225,6 @@ class LogLike:
         DataFrames in a specific directory, saving them to a new directory.
         """
 
-        print('Now running log-likelihood calculations')
 
         n = np.sum(self.colls.values)
         #values for C2
@@ -234,14 +233,8 @@ class LogLike:
         p = c2/n
         LL_df = pd.DataFrame(0., index=self.colls.index,
                              columns=self.colls.index, dtype=np.float64)
-        my_counter = 0
         for row in self.colls.index:
-            if my_counter % 100 == 0:
-                print('Row %s of %s at %s'%
-                      (my_counter, len(self.colls),
-                       datetime.datetime.now().time().isoformat()))
             LL_df.ix[row] = self.log_like(row, c2, p, n)
-            my_counter += 1
         return LL_df.fillna(0)
 
 class PPMI:
@@ -275,21 +268,14 @@ class PPMI:
         DataFrames in a specific directory, saving them to a new directory.
         """
 
-        print('Now running PPMI calculations')
 
         n = np.sum(self.colls.values)
         #values for C2
         p2 = np.sum(self.colls)/n
         PMI_df = pd.DataFrame(0., index=self.colls.index,
                              columns=self.colls.index, dtype=np.float64)
-        my_counter = 0
         for row in self.colls.index:
-            if my_counter % 100 == 0:
-                print('Row %s of %s at %s'%
-                      (my_counter, len(self.colls),
-                       datetime.datetime.now().time().isoformat()))
             PMI_df.ix[row] = self.PMI_calc(row, p2, n)
-            my_counter += 1
         PMI_df[PMI_df<0] = 0
         return PMI_df.fillna(0)
 
@@ -363,7 +349,6 @@ def SigNoise(df1, df2):
 
 
 def RunTests(min_w, max_w, orig=None):
-    now = datetime.datetime.now().time().isoformat()
     if orig == None:
         from tkinter.filedialog import askdirectory
         orig = askdirectory(title='Where are your original XML files located?')
@@ -378,45 +363,64 @@ def RunTests(min_w, max_w, orig=None):
         print('Started randomizing at %s' % (now))
         r = randomizer(deepcopy(t))
         for size in range(min_w, max_w+1):
-            for lemmata in (True, False):
-                for weighted in (True, False):
-                    t_colls = CollCount(t, size, lemmata, weighted).colls()
-                    r_colls = CollCount(r, size, lemmata, weighted).colls()
-                    print('Starting LL calculations for original text for '
-                          'window size %s at %s' % (str(size), now))
-                    t_ll = LogLike(t_colls).LL()
-                    print('Starting LL calculations for randomized text for '
-                          'window size %s at %s' % (int(size), now))
-                    r_ll = LogLike(r_colls).LL()
-                    sig_noise_dict[('LL',
-                                    size,
-                                    'lems=%s' % (lemmata),
-                                    'weighted =%s' % (weighted))] = \
-                                    SigNoise(scaler(t_ll),scaler(r_ll))
-                    r_ll[r_ll<0] = 0
-                    t_ll[t_ll<0] = 0
-                    sig_noise_dict[('PLL',
-                                    size,
-                                    'lems=%s' % (lemmata),
-                                    'weighted =%s' % (weighted))] = \
-                                    SigNoise(scaler(t_ll),scaler(r_ll))
-                    del r_ll, t_ll
-                    print('Starting PPMI calculations for original text for '
-                          'window size %s at %s' % (str(size), now))
-                    t_pmi = PPMI(t_colls).PPMI()
-                    print('Starting PPMI calculations for randomized text for '
-                          'window size %s at %s' % (int(size), now))
-                    r_pmi = PPMI(r_colls).PPMI()
-                    sig_noise_dict[('PPMI',
-                                    size,
-                                    'lems=%s' % (lemmata),
-                                    'weighted =%s' % (weighted))] = \
-                                    SigNoise(scaler(t_pmi),scaler(r_pmi))
-                    del r_pmi, t_pmi
+            for weighted in (True, False):
+                lemmata = False
+                t_colls = CollCount(t, size, lemmata, weighted).colls()
+                r_colls = CollCount(r, size, lemmata, weighted).colls()
+                print('Starting LL calculations for original text for '
+                      'w=%s, lem=%s, weighted=%s at %s' %
+                      (str(size),
+                       lemmata,
+                       weighted,
+                      datetime.datetime.now().time().isoformat()))
+                t_ll = LogLike(t_colls).LL()
+                print('Starting LL calculations for randomized text for '
+                      'w=%s, lem=%s, weighted=%s at %s' %
+                      (str(size),
+                       lemmata,
+                       weighted,
+                      datetime.datetime.now().time().isoformat()))
+                r_ll = LogLike(r_colls).LL()
+                sig_noise_dict[('LL',
+                                size,
+                                'lems=%s' % (lemmata),
+                                'weighted =%s' % (weighted))] = \
+                                SigNoise(scaler(t_ll),scaler(r_ll))
+                r_ll[r_ll<0] = 0
+                t_ll[t_ll<0] = 0
+                sig_noise_dict[('PLL',
+                                size,
+                                'lems=%s' % (lemmata),
+                                'weighted =%s' % (weighted))] = \
+                                SigNoise(scaler(t_ll),scaler(r_ll))
+                del r_ll, t_ll
+                print('Starting PPMI calculations for original text for '
+                      'w=%s, lem=%s, weighted=%s at %s' %
+                      (str(size),
+                       lemmata,
+                       weighted,
+                      datetime.datetime.now().time().isoformat()))
+                t_pmi = PPMI(t_colls).PPMI()
+                print('Starting PPMI calculations for randomized text for '
+                      'w=%s, lem=%s, weighted=%s at %s' %
+                      (str(size),
+                       lemmata,
+                       weighted,
+                      datetime.datetime.now().time().isoformat()))
+                r_pmi = PPMI(r_colls).PPMI()
+                sig_noise_dict[('PPMI',
+                                size,
+                                'lems=%s' % (lemmata),
+                                'weighted =%s' % (weighted))] = \
+                                SigNoise(scaler(t_pmi),scaler(r_pmi))
+                del r_pmi, t_pmi
         dest_file = file.replace('.txt', 'sig_noise.pickle')
         with open(dest_file, mode='wb') as f:
             dump(sig_noise_dict, f)
-    print('Finished at %s' % (now))
+    print('Finished at %s' % (datetime.datetime.now().time().isoformat()))
 
 if __name__ == '__main__':
-    RunTests(1,20, orig=sys.argv[1])
+    if len(sys.argv)>1:
+        RunTests(1,20, orig=sys.argv[1])
+    else:
+        RunTests(1,20)

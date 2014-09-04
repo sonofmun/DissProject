@@ -348,89 +348,92 @@ def RunTests(min_w, max_w, orig=None):
             t = f.read().split('\n')
         kf = KFold(len(t), n_folds=10)
         for size in range(min_w, max_w+1):
-            for lemmata in (True, False):
-                for weighted in (True, False):
-                    ll_list = []
-                    pll_list = []
-                    pmi_list = []
-                    counter = 1
-                    for train, test in kf:
-                        print('Fold %s, weighted %s, lemmata %s, w=%s at %s' %
-                              (counter,
-                               weighted,
-                               lemmata,
-                               size,
-                               datetime.datetime.now().time().isoformat()))
-                        t_train, t_test = CollCount([t[x] for x in train],
-                                                    [t[x] for x in test],
-                                                    size,
-                                                    lemmata,
-                                                    weighted).colls()
-                        ind_int = set(t_train.index).intersection(t_test.index)
-                        exponent = 1/len(t_test)
-                        print('Starting LL calculations for '
-                              'window size %s at %s' %
-                              (str(size),
-                               datetime.datetime.now().time().isoformat()))
-                        t_ll = LogLike(t_train).LL()
-                        ll_list.append(pow
-                                       (np.sum
-                                        (
-                                            (1/np.multiply
-                                            (scaler
-                                             (t_ll).ix[ind_int,ind_int],
-                                             t_test.ix[ind_int,ind_int])
-                                             .fillna(0).values)
-                                        ),
-                                        exponent))
-                        t_ll[t_ll<0] = 0
-                        pll_list.append(pow
-                                        (np.sum
-                                         (
-                                             (1/np.multiply
-                                             (scaler
-                                              (t_ll).ix[ind_int,ind_int],
-                                              t_test.ix[ind_int,ind_int])
-                                              .fillna(0).values)
-                                         ),
-                                         exponent))
-                        del t_ll
-                        print('Starting PPMI calculations for '
-                              'window size %s at %s' %
-                              (str(size),
-                              datetime.datetime.now().time().isoformat()))
-                        t_pmi = PPMI(t_train).PPMI()
-                        pmi_list.append(pow
-                                        (np.sum
-                                         (
-                                             (1/np.multiply
-                                             (scaler
-                                              (t_pmi).ix[ind_int,ind_int],
-                                              t_test.ix[ind_int,ind_int])
-                                              .fillna(0).values)
-                                         ),
-                                         exponent))
-                        del t_pmi
-                        counter += 1
-                    perplex_dict[('LL',
-                                  size,
-                                  'lems=%s' % (lemmata),
-                                  'weighted =%s' % (weighted))] = \
-                                    sum(ll_list)/len(ll_list)
-                    perplex_dict[('PLL',
-                                  size,
-                                  'lems=%s' % (lemmata),
-                                  'weighted =%s' % (weighted))] = \
-                                    sum(pll_list)/len(pll_list)
-                    perplex_dict[('PPMI',
-                                  size,
-                                  'lems=%s' % (lemmata),
-                                  'weighted =%s' % (weighted))] = \
-                                    sum(pmi_list)/len(pmi_list)
+            for weighted in (True, False):
+                lemmata = False
+                ll_list = []
+                pll_list = []
+                pmi_list = []
+                counter = 1
+                for train, test in kf:
+                    print('Fold %s, weighted %s, lemmata %s, w=%s at %s' %
+                          (counter,
+                           weighted,
+                           lemmata,
+                           size,
+                           datetime.datetime.now().time().isoformat()))
+                    t_train, t_test = CollCount([t[x] for x in train],
+                                                [t[x] for x in test],
+                                                size,
+                                                lemmata,
+                                                weighted).colls()
+                    ind_int = set(t_train.index).intersection(t_test.index)
+                    exponent = 1/len(t_test)
+                    print('Starting LL calculations for '
+                          'window size %s at %s' %
+                          (str(size),
+                           datetime.datetime.now().time().isoformat()))
+                    t_ll = LogLike(t_train).LL()
+                    ll_list.append(pow
+                                   (np.sum
+                                    (
+                                        (1/np.multiply
+                                        (scaler
+                                         (t_ll).ix[ind_int,ind_int],
+                                         t_test.ix[ind_int,ind_int])
+                                         .fillna(0).values)
+                                    ),
+                                    exponent))
+                    t_ll[t_ll<0] = 0
+                    pll_list.append(pow
+                                    (np.sum
+                                     (
+                                         (1/np.multiply
+                                         (scaler
+                                          (t_ll).ix[ind_int,ind_int],
+                                          t_test.ix[ind_int,ind_int])
+                                          .fillna(0).values)
+                                     ),
+                                     exponent))
+                    del t_ll
+                    print('Starting PPMI calculations for '
+                          'window size %s at %s' %
+                          (str(size),
+                          datetime.datetime.now().time().isoformat()))
+                    t_pmi = PPMI(t_train).PPMI()
+                    pmi_list.append(pow
+                                    (np.sum
+                                     (
+                                         (1/np.multiply
+                                         (scaler
+                                          (t_pmi).ix[ind_int,ind_int],
+                                          t_test.ix[ind_int,ind_int])
+                                          .fillna(0).values)
+                                     ),
+                                     exponent))
+                    del t_pmi
+                    counter += 1
+                perplex_dict[('LL',
+                              size,
+                              'lems=%s' % (lemmata),
+                              'weighted =%s' % (weighted))] = \
+                                sum(ll_list)/len(ll_list)
+                perplex_dict[('PLL',
+                              size,
+                              'lems=%s' % (lemmata),
+                              'weighted =%s' % (weighted))] = \
+                                sum(pll_list)/len(pll_list)
+                perplex_dict[('PPMI',
+                              size,
+                              'lems=%s' % (lemmata),
+                              'weighted =%s' % (weighted))] = \
+                                sum(pmi_list)/len(pmi_list)
         dest_file = file.replace('.txt', 'perplexity.pickle')
         with open(dest_file, mode='wb') as f:
             dump(perplex_dict, f)
     print('Finished at %s' % (datetime.datetime.now().time().isoformat()))
 
 if __name__ == '__main__':
-    RunTests(1,20, orig=sys.argv[1])
+    if len(sys.argv)>1:
+        RunTests(sys.argv[1],sys.argv[2], orig=sys.argv[3])
+    else:
+        RunTests(1,20)
