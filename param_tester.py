@@ -356,11 +356,14 @@ def RunTests(min_w, max_w, orig=None):
     files = glob(orig)
     for file in files:
         corpus = file.split('_')[-2]
-        print('Started analyzing %s at %s' % (corpus, now))
+        print('Started analyzing %s at %s' %
+              (corpus,
+              datetime.datetime.now().time().isoformat()))
         sig_noise_dict = {}
         with open(file) as f:
             t = f.read().split('\n')
-        print('Started randomizing at %s' % (now))
+        print('Started randomizing at %s' %
+              (datetime.datetime.now().time().isoformat()))
         r = randomizer(deepcopy(t))
         for size in range(min_w, max_w+1):
             for weighted in (True, False):
