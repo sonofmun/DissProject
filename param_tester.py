@@ -417,7 +417,8 @@ def RunTests(min_w, max_w, orig=None):
                                 'weighted =%s' % (weighted))] = \
                                 SigNoise(scaler(t_pmi),scaler(r_pmi))
                 del r_pmi, t_pmi
-        dest_file = file.replace('.txt', 'sig_noise.pickle')
+        dest_file = file.replace('.txt',
+                                 '_%s_%s_sig_noise.pickle' % (min_w, max_w))
         with open(dest_file, mode='wb') as f:
             dump(sig_noise_dict, f)
     print('Finished at %s' % (datetime.datetime.now().time().isoformat()))

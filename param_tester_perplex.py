@@ -427,7 +427,8 @@ def RunTests(min_w, max_w, orig=None):
                               'lems=%s' % (lemmata),
                               'weighted =%s' % (weighted))] = \
                                 sum(pmi_list)/len(pmi_list)
-        dest_file = file.replace('.txt', 'perplexity.pickle')
+        dest_file = file.replace('.txt',
+                                 '_%s_%s_perplexity.pickle' % (min_w, max_w))
         with open(dest_file, mode='wb') as f:
             dump(perplex_dict, f)
     print('Finished at %s' % (datetime.datetime.now().time().isoformat()))
