@@ -434,6 +434,6 @@ def RunTests(min_w, max_w, orig=None):
 
 if __name__ == '__main__':
     if len(sys.argv)>1:
-        RunTests(sys.argv[1],sys.argv[2], orig=sys.argv[3])
+        RunTests(int(sys.argv[1]),int(sys.argv[2]), orig=sys.argv[3])
     else:
         RunTests(1,20)
