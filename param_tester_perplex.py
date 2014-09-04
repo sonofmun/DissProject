@@ -349,7 +349,7 @@ def RunTests(min_w, max_w, orig=None):
         kf = KFold(len(t), n_folds=10)
         for size in range(min_w, max_w+1):
             for weighted in (True, False):
-                lemmata = False
+                lemmata = True
                 ll_list = []
                 pll_list = []
                 pmi_list = []
