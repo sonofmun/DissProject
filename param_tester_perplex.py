@@ -330,7 +330,10 @@ def scaler(df):
     """
     from sklearn.preprocessing import MinMaxScaler
     df1 = deepcopy(df)
-    return pd.DataFrame(MinMaxScaler(feature_range=(.01,1)).fit_transform(df1))
+    scaled = pd.DataFrame(MinMaxScaler
+                          (feature_range=(.01,1)).fit_transform(df1),
+                          index = df.index, columns = df.columns)
+    return scaled
 
 def RunTests(min_w, max_w, orig=None):
     if orig == None:
@@ -367,6 +370,7 @@ def RunTests(min_w, max_w, orig=None):
                                                 lemmata,
                                                 weighted).colls()
                     ind_int = set(t_train.index).intersection(t_test.index)
+                    print(ind_int)
                     exponent = 1/len(t_test)
                     print('Starting LL calculations for '
                           'window size %s at %s' %
