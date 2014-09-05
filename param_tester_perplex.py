@@ -370,7 +370,6 @@ def RunTests(min_w, max_w, orig=None):
                                                 lemmata,
                                                 weighted).colls()
                     ind_int = set(t_train.index).intersection(t_test.index)
-                    print(ind_int)
                     exponent = 1/len(t_test)
                     print('Starting LL calculations for '
                           'window size %s at %s' %
