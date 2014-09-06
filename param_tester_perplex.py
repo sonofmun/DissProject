@@ -377,7 +377,7 @@ def RunTests(min_w, max_w, orig=None):
                            datetime.datetime.now().time().isoformat()))
                     t_ll = LogLike(t_train).LL()
                     ll_list.append(pow
-                                   (np.sum
+                                   (np.prod
                                     (
                                         ((1/np.multiply
                                         (scaler
@@ -392,7 +392,7 @@ def RunTests(min_w, max_w, orig=None):
                                     exponent))
                     t_ll[t_ll<0] = 0
                     pll_list.append(pow
-                                    (np.sum
+                                    (np.prod
                                      (
                                          ((1/np.multiply
                                          (scaler
@@ -412,7 +412,7 @@ def RunTests(min_w, max_w, orig=None):
                           datetime.datetime.now().time().isoformat()))
                     t_pmi = PPMI(t_train).PPMI()
                     pmi_list.append(pow
-                                    (np.sum
+                                    (np.prod
                                      (
                                          ((1/np.multiply
                                          (scaler
