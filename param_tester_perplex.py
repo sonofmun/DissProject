@@ -80,7 +80,8 @@ class CollCount:
                 print('Processing token %s of %s at %s' % (i, len(tokens),
                                 datetime.datetime.now().time().isoformat()))
         coll_df = pd.DataFrame(cooc_dict).fillna(0)
-        return coll_df
+        # Add 1 to the answer for LaPlace Smoothing
+        return coll_df + 1
 
 
     def colls(self):
@@ -332,7 +333,9 @@ def scaler(df):
     df1 = deepcopy(df)
     scaled = pd.DataFrame(MinMaxScaler
                           (feature_range=(.01,1)).fit_transform(df1),
-                          index = df.index, columns = df.columns)
+                          index = df.index,
+                          columns = df.columns,
+                          dtype=np.float128)
     return scaled
 
 def RunTests(min_w, max_w, orig=None):
@@ -376,55 +379,37 @@ def RunTests(min_w, max_w, orig=None):
                           (str(size),
                            datetime.datetime.now().time().isoformat()))
                     t_ll = LogLike(t_train).LL()
-                    ll_list.append(pow
-                                   (np.prod
-                                    (
-                                        ((1/np.multiply
+                    ll_list.append(np.sum
+                                    (np.log
+                                        (1/np.multiply
                                         (scaler
                                          (t_ll).ix[ind_int,ind_int],
-                                         t_test.ix[ind_int,ind_int]))
-                                          .replace((np.inf,
-                                                   -np.inf,
-                                                   np.nan),
-                                                  0)
-                                          .values)
-                                    ),
-                                    exponent))
+                                         t_test.ix[ind_int,ind_int])
+                                          .values))
+                                    * exponent)
                     t_ll[t_ll<0] = 0
-                    pll_list.append(pow
-                                    (np.prod
-                                     (
-                                         ((1/np.multiply
-                                         (scaler
-                                          (t_ll).ix[ind_int,ind_int],
-                                          t_test.ix[ind_int,ind_int]))
-                                          .replace((np.inf,
-                                                   -np.inf,
-                                                   np.nan),
-                                                  0)
-                                          .values)
-                                     ),
-                                     exponent))
+                    pll_list.append(np.sum
+                                    (np.log
+                                        (1/np.multiply
+                                        (scaler
+                                         (t_ll).ix[ind_int,ind_int],
+                                         t_test.ix[ind_int,ind_int])
+                                          .values))
+                                    * exponent)
                     del t_ll
                     print('Starting PPMI calculations for '
                           'window size %s at %s' %
                           (str(size),
                           datetime.datetime.now().time().isoformat()))
                     t_pmi = PPMI(t_train).PPMI()
-                    pmi_list.append(pow
-                                    (np.prod
-                                     (
-                                         ((1/np.multiply
-                                         (scaler
-                                          (t_pmi).ix[ind_int,ind_int],
-                                          t_test.ix[ind_int,ind_int]))
-                                          .replace((np.inf,
-                                                   -np.inf,
-                                                   np.nan),
-                                                  0)
-                                          .values)
-                                     ),
-                                     exponent))
+                    pmi_list.append(np.sum
+                                    (np.log
+                                        (1/np.multiply
+                                        (scaler
+                                         (t_pmi).ix[ind_int,ind_int],
+                                         t_test.ix[ind_int,ind_int])
+                                          .values))
+                                    * exponent)
                     del t_pmi
                     counter += 1
                 perplex_dict[('LL',
