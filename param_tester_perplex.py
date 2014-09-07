@@ -373,43 +373,49 @@ def RunTests(min_w, max_w, orig=None):
                                                 lemmata,
                                                 weighted).colls()
                     ind_int = set(t_train.index).intersection(t_test.index)
-                    exponent = 1/len(t_test)
+                    exponent = 1/np.sum(t_test.values)
                     print('Starting LL calculations for '
                           'window size %s at %s' %
                           (str(size),
                            datetime.datetime.now().time().isoformat()))
                     t_ll = LogLike(t_train).LL()
-                    ll_list.append(np.sum
+                    ll_list.append(pow
+                                   (np.e,
+                                    np.sum
                                     (np.log
                                         (1/np.multiply
                                         (scaler
                                          (t_ll).ix[ind_int,ind_int],
                                          t_test.ix[ind_int,ind_int])
                                           .values))
-                                    * exponent)
+                                    * exponent))
                     t_ll[t_ll<0] = 0
-                    pll_list.append(np.sum
+                    pll_list.append(pow
+                                    (np.e,
+                                     np.sum
                                     (np.log
                                         (1/np.multiply
                                         (scaler
                                          (t_ll).ix[ind_int,ind_int],
                                          t_test.ix[ind_int,ind_int])
                                           .values))
-                                    * exponent)
+                                    * exponent))
                     del t_ll
                     print('Starting PPMI calculations for '
                           'window size %s at %s' %
                           (str(size),
                           datetime.datetime.now().time().isoformat()))
                     t_pmi = PPMI(t_train).PPMI()
-                    pmi_list.append(np.sum
+                    pmi_list.append(pow
+                                    (np.e,
+                                     np.sum
                                     (np.log
                                         (1/np.multiply
                                         (scaler
                                          (t_pmi).ix[ind_int,ind_int],
                                          t_test.ix[ind_int,ind_int])
                                           .values))
-                                    * exponent)
+                                    * exponent))
                     del t_pmi
                     counter += 1
                 perplex_dict[('LL',

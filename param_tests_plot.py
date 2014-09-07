@@ -40,7 +40,7 @@ def build_panels(d):
 panels = {}
 for corp in corpora.keys():
     panels[corp] = pd.Panel(items=['LL', 'PLL', 'PPMI'],
-                  major_axis=list(range(0,40)),
+                  major_axis=list(range(1,51)),
                   minor_axis=('Weighted', 'Unweighted'))
     for each_dict in corpora[corp]:
         for key in each_dict.keys():
@@ -76,7 +76,7 @@ for corp in panels.keys():
     plt.setp(pll_w, marker='x', markersize=8.0)
     plt.setp(pll_uw, marker='+', markersize=8.0)
     plt.title(corp, fontsize = 24)
-    plt.xlim(1,40)
+    plt.xlim(1,50)
     counter += 1
     plt.legend([ll_w, ll_uw, pll_w, pll_uw, pmi_w, pmi_uw],
                ['LL Weighted', 'LL Unweighted', 'PLL Weighted',
