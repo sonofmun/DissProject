@@ -390,13 +390,6 @@ def RunTests(min_w, max_w, orig=None):
                                 'lems=%s' % (lemmata),
                                 'weighted =%s' % (weighted))] = \
                                 SigNoise(scaler(t_ll),scaler(r_ll))
-                r_ll[r_ll<0] = 0
-                t_ll[t_ll<0] = 0
-                sig_noise_dict[('PLL',
-                                size,
-                                'lems=%s' % (lemmata),
-                                'weighted =%s' % (weighted))] = \
-                                SigNoise(scaler(t_ll),scaler(r_ll))
                 del r_ll, t_ll
                 print('Starting PPMI calculations for original text for '
                       'w=%s, lem=%s, weighted=%s at %s' %
