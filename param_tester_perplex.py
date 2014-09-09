@@ -357,7 +357,6 @@ def RunTests(min_w, max_w, orig=None):
             for weighted in (True, False):
                 lemmata = True
                 ll_list = []
-                pll_list = []
                 pmi_list = []
                 counter = 1
                 for train, test in kf:
@@ -389,17 +388,6 @@ def RunTests(min_w, max_w, orig=None):
                                          t_test.ix[ind_int,ind_int])
                                           .values))
                                     * exponent))
-                    t_ll[t_ll<0] = 0
-                    pll_list.append(pow
-                                    (np.e,
-                                     np.sum
-                                    (np.log
-                                        (1/np.multiply
-                                        (scaler
-                                         (t_ll).ix[ind_int,ind_int],
-                                         t_test.ix[ind_int,ind_int])
-                                          .values))
-                                    * exponent))
                     del t_ll
                     print('Starting PPMI calculations for '
                           'window size %s at %s' %
@@ -423,11 +411,6 @@ def RunTests(min_w, max_w, orig=None):
                               'lems=%s' % (lemmata),
                               'weighted =%s' % (weighted))] = \
                                 sum(ll_list)/len(ll_list)
-                perplex_dict[('PLL',
-                              size,
-                              'lems=%s' % (lemmata),
-                              'weighted =%s' % (weighted))] = \
-                                sum(pll_list)/len(pll_list)
                 perplex_dict[('PPMI',
                               size,
                               'lems=%s' % (lemmata),

@@ -63,28 +63,29 @@ plt.suptitle('Parameter comparison for semantic information extraction',
              fontsize=36)
 counter = 1
 for corp in panels.keys():
-    plt.subplot(ceil(len(panels)/2),2,counter)
+    cols = 1 if len(panels) == 1 else 2
+    plt.subplot(ceil(len(panels)/2),cols,counter)
     plt.ylabel('Signal-to-Noise Ratio')
     plt.xlabel('Window Size')
     ll_w, ll_uw = plt.plot(panels[corp]['LL'], color='k')
-    pll_w, pll_uw = plt.plot(panels[corp]['PLL'], color='k')
+    #pll_w, pll_uw = plt.plot(panels[corp]['PLL'], color='k')
     pmi_w, pmi_uw = plt.plot(panels[corp]['PPMI'], color='k')
     plt.setp(ll_w, marker='o', markersize=8.0)
     plt.setp(ll_uw, marker='^', markersize=8.0)
     plt.setp(pmi_w, marker='s', markersize=8.0)
     plt.setp(pmi_uw, marker='*', markersize=8.0)
-    plt.setp(pll_w, marker='x', markersize=8.0)
-    plt.setp(pll_uw, marker='+', markersize=8.0)
+    #plt.setp(pll_w, marker='x', markersize=8.0)
+    #plt.setp(pll_uw, marker='+', markersize=8.0)
     plt.title(corp, fontsize = 24)
     plt.xlim(1,60)
     counter += 1
-    plt.legend([ll_w, ll_uw, pll_w, pll_uw, pmi_w, pmi_uw],
-               ['LL Weighted', 'LL Unweighted', 'PLL Weighted',
-                'PLL Unweighted', 'PPMI Weighted', 'PPMI Unweighted'],
+    plt.legend([ll_w, ll_uw,  pmi_w, pmi_uw],
+               ['LL Weighted', 'LL Unweighted',
+                'PPMI Weighted', 'PPMI Unweighted'],
                loc=2)
-    '''plt.legend([ll_w, ll_uw, pll_w, pll_uw, pmi_w, pmi_uw],
-               ['LL Lemmatized', 'LL Unlemmatized', 'PLL Lemmatized',
-                'PLL Unlemmatized', 'PPMI Lemmatized', 'PPMI Unlemmatized'],
+    '''plt.legend([ll_w, ll_uw, pmi_w, pmi_uw],
+               ['LL Lemmatized', 'LL Unlemmatized',
+               'PPMI Lemmatized', 'PPMI Unlemmatized'],
                loc=2)
     '''
 plt.subplots_adjust(hspace = 0.4)
