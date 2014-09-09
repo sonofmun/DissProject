@@ -78,7 +78,8 @@ class CollCount:
                 print('Processing token %s of %s at %s' % (i, len(tokens),
                                 datetime.datetime.now().time().isoformat()))
         coll_df = pd.DataFrame(cooc_dict).fillna(0)
-        return coll_df
+        # Add 1 for Laplace smoothing
+        return coll_df + 1
 
 
     def colls(self):
