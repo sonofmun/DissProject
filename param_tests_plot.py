@@ -39,8 +39,8 @@ def build_panels(d):
 
 panels = {}
 for corp in corpora.keys():
-    panels[corp] = pd.Panel(items=['LL', 'PLL', 'PPMI'],
-                  major_axis=list(range(1,61)),
+    panels[corp] = pd.Panel(items=['LL', 'LL_SVD', 'PLL', 'PPMI', 'PPMI_SVD'],
+                  major_axis=list(range(1,81)),
                   minor_axis=('Weighted', 'Unweighted'))
     for each_dict in corpora[corp]:
         for key in each_dict.keys():
@@ -70,17 +70,26 @@ for corp in panels.keys():
     ll_w, ll_uw = plt.plot(panels[corp]['LL'], color='k')
     #pll_w, pll_uw = plt.plot(panels[corp]['PLL'], color='k')
     pmi_w, pmi_uw = plt.plot(panels[corp]['PPMI'], color='k')
+    ll_svd_w, ll_svd_uw = plt.plot(panels[corp]['LL_SVD'])
     plt.setp(ll_w, marker='o', markersize=8.0)
     plt.setp(ll_uw, marker='^', markersize=8.0)
     plt.setp(pmi_w, marker='s', markersize=8.0)
     plt.setp(pmi_uw, marker='*', markersize=8.0)
-    #plt.setp(pll_w, marker='x', markersize=8.0)
-    #plt.setp(pll_uw, marker='+', markersize=8.0)
+    plt.setp(ll_svd_w, marker='x', markersize=8.0)
+    plt.setp(ll_svd_uw, marker='+', markersize=8.0)
+    #plt.setp(pmi_svd_w, marker='x', markersize=8.0)
+    #plt.setp(pmi_svd_uw, marker='+', markersize=8.0)
     plt.title(corp, fontsize = 24)
-    plt.xlim(1,60)
+    plt.xlim(1,80)
     counter += 1
-    plt.legend([ll_w, ll_uw,  pmi_w, pmi_uw],
+    '''plt.legend([ll_w, ll_uw,  pmi_w, pmi_uw],
                ['LL Weighted', 'LL Unweighted',
+                'PPMI Weighted', 'PPMI Unweighted'],
+               loc=2)
+    '''
+    plt.legend([ll_w, ll_uw, ll_svd_w, ll_svd_uw,  pmi_w, pmi_uw],
+               ['LL Weighted', 'LL Unweighted',
+                'SVD Weighted', 'SVD Unweighted',
                 'PPMI Weighted', 'PPMI Unweighted'],
                loc=2)
     '''plt.legend([ll_w, ll_uw, pmi_w, pmi_uw],
