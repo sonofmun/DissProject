@@ -65,7 +65,7 @@ counter = 1
 for corp in panels.keys():
     cols = 1 if len(panels) == 1 else 2
     plt.subplot(ceil(len(panels)/2),cols,counter)
-    plt.ylabel('Signal-to-Noise Ratio')
+    plt.ylabel('Perplexity Score')
     plt.xlabel('Window Size')
     ll_w, ll_uw = plt.plot(panels[corp]['LL'], color='k')
     #pll_w, pll_uw = plt.plot(panels[corp]['PLL'], color='k')
@@ -75,27 +75,28 @@ for corp in panels.keys():
     plt.setp(ll_uw, marker='^', markersize=8.0)
     plt.setp(pmi_w, marker='s', markersize=8.0)
     plt.setp(pmi_uw, marker='*', markersize=8.0)
-    plt.setp(ll_svd_w, marker='x', markersize=8.0)
-    plt.setp(ll_svd_uw, marker='+', markersize=8.0)
+    #plt.setp(ll_svd_w, marker='x', markersize=8.0)
+    #plt.setp(ll_svd_uw, marker='+', markersize=8.0)
     #plt.setp(pmi_svd_w, marker='x', markersize=8.0)
     #plt.setp(pmi_svd_uw, marker='+', markersize=8.0)
     plt.title(corp, fontsize = 24)
-    plt.xlim(1,80)
+    plt.xticks([0, 9, 19, 29, 39, 49, 59, 69, 79],
+               [1, 10, 20, 30, 40, 50, 60, 70, 80])
     counter += 1
-    '''plt.legend([ll_w, ll_uw,  pmi_w, pmi_uw],
+    plt.legend([ll_w, ll_uw,  pmi_w, pmi_uw],
                ['LL Weighted', 'LL Unweighted',
                 'PPMI Weighted', 'PPMI Unweighted'],
-               loc=2)
-    '''
-    plt.legend([ll_w, ll_uw, ll_svd_w, ll_svd_uw,  pmi_w, pmi_uw],
+               loc=1)
+    '''plt.legend([ll_w, ll_uw, ll_svd_w, ll_svd_uw,  pmi_w, pmi_uw],
                ['LL Weighted', 'LL Unweighted',
                 'SVD Weighted', 'SVD Unweighted',
                 'PPMI Weighted', 'PPMI Unweighted'],
-               loc=2)
+               loc=1)
+    '''
     '''plt.legend([ll_w, ll_uw, pmi_w, pmi_uw],
                ['LL Lemmatized', 'LL Unlemmatized',
                'PPMI Lemmatized', 'PPMI Unlemmatized'],
-               loc=2)
+               loc=1)
     '''
 plt.subplots_adjust(hspace = 0.4)
 plt.show()

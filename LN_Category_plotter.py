@@ -1,4 +1,4 @@
-'''
+    '''
 This script extracts the words for specific domains in the Louw-Nida lexicon and plots their relationship among the different
 corpora.
 '''
