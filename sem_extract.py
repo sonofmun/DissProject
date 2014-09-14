@@ -424,6 +424,6 @@ def sem_extract(win, weighted=True, lemmata=True, ppmi=True, loglike=False, orig
 
 if __name__ == '__main__':
     if len(sys.argv)>1:
-        RunTests(int(sys.argv[1]), orig=sys.argv[2])
+        sem_extract(int(sys.argv[1]), orig=sys.argv[2])
     else:
-        RunTests(300)
+        sem_extract(300)
