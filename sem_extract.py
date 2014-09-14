@@ -8,7 +8,7 @@ word with every other word
 '''
 import pandas as pd
 import re
-import os.path
+import os
 from pickle import dump
 from collections import defaultdict
 import datetime
@@ -22,20 +22,24 @@ from sklearn.cross_validation import KFold
 
 class CollCount:
 
-    def __init__(self, training, testing, w, lem, weighted):
+    def __init__(self, xml, w, lem, weighted):
         """Takes an xml formatted file, extracts the 'lem' attributes from
         each <w> tag, and then counts how often each word occurs withing the
         specified window size 'w' left and window size right.
         :param w:
         """
-        self.training = training
-        self.testing = testing
+        self.xml = xml
         self.w = w
         self.lems = lem
         self.weighted = weighted
 
     def file_chooser(self, l):
-
+        '''
+        This function opens the filename from the main for loop, extracts a
+        type list and a token list, creates a count dictionary from these two
+        lists, and then returns the type and token lists, which will then be
+        used to calculated co-occurrences later
+        '''
         if self.lems:
             words = [re.sub(r'.+?lem="([^"]*).*', r'\1', line)
                      for line in l]
@@ -46,7 +50,14 @@ class CollCount:
 
 
     def cooc_counter(self, tokens):
-
+        '''
+        This function takes a token list, a windows size (default
+        is 4 left and 4 right), and a destination filename, runs through the
+        token list, reading every word to the window left and window right of
+        the target word, and then keeps track of these co-occurrences in a
+        cooc_dict dictionary.  Finally, it creates a coll_df DataFrame from
+        this dictionary and then pickles this DataFrame to dest
+        '''
         cooc_dict = defaultdict(dict)
         for i, t in enumerate(tokens):
             c_list = []
@@ -73,10 +84,13 @@ class CollCount:
 
 
     def colls(self):
+        """Takes an xml formatted file, extracts the 'lem' attributes from
+        each <w> tag, and then counts how often each word occurs withing the
+        specified window size 'w' left and window size right.
+        """
 
-        train_words = self.file_chooser(self.training)
-        test_words = self.file_chooser(self.testing)
-        return self.cooc_counter(train_words), self.cooc_counter(test_words)
+        words = self.file_chooser(self.xml)
+        return self.cooc_counter(words)
 
 
 class LogLike:
@@ -269,7 +283,7 @@ class PPMI:
         PMI_df[PMI_df<0] = 0
         return PMI_df.fillna(0)
 
-'''
+
 class CosSim:
 
     from sklearn.metrics.pairwise import pairwise_distances
@@ -293,36 +307,30 @@ class CosSim:
         the similarity score (i.e., 1-cosine distance) for every word, saving
         the results then to a different directory.
         """
-
+        from sklearn.metrics.pairwise import pairwise_distances
         print('Starting cosine similarity calculation at %s' %
               (datetime.datetime.now().time().isoformat()))
         self.LLs = self.LLs.fillna(value=0)
         self.LLs = self.LLs.replace(to_replace=np.inf, value=0)
-        CSfile = '_'.join([LLfile.rstrip('_LL.pickle'), 'CS.pickle'])
         #print('test')
         CS_Dists = 1-pairwise_distances(self.LLs, metric='cosine', n_jobs = 1)
         CS = pd.DataFrame(CS_Dists, index=self.LLs.index,
                           columns=self.LLs.index)
         return CS
 
-'''
 
-def scaler(df):
-    """Scales the values of the given DataFrame to a range between
-    0 and 1
+def svd_calc(df):
+    """Calculates the truncated singular value decomposition of df
+    using the first n principal components
 
     :param df:
     """
-    from sklearn.preprocessing import MinMaxScaler
-    df1 = deepcopy(df)
-    scaled = pd.DataFrame(MinMaxScaler
-                          (feature_range=(.01,1)).fit_transform(df1),
-                          index = df.index,
-                          columns = df.columns,
-                          dtype=np.float128)
-    return scaled
+    from scipy import linalg
+    U, s, Vh = linalg.svd(df)
+    S = np.diag(s)
+    return U, S
 
-def RunTests(min_w, max_w, orig=None):
+def sem_extract(win, weighted=True, lemmata=True, ppmi=True, loglike=False, orig=None):
     if orig == None:
         from tkinter.filedialog import askdirectory
         orig = askdirectory(title='Where are your original XML files located?')
@@ -333,82 +341,89 @@ def RunTests(min_w, max_w, orig=None):
         print('Started analyzing %s at %s' %
               (corpus,
               datetime.datetime.now().time().isoformat()))
-        perplex_dict = {}
         with open(file) as f:
             t = f.read().split('\n')
-        kf = KFold(len(t), n_folds=10)
-        for size in range(min_w, max_w+1):
-            for weighted in (True, False):
-                for lemmata in (True, False):
-                    ll_list = []
-                    pmi_list = []
-                    counter = 1
-                    for train, test in kf:
-                        print('Fold %s, weighted %s, lemmata %s, w=%s at %s' %
-                              (counter,
-                               weighted,
-                               lemmata,
-                               size,
-                               datetime.datetime.now().time().isoformat()))
-                        t_train, t_test = CollCount([t[x] for x in train],
-                                                    [t[x] for x in test],
-                                                    size,
-                                                    lemmata,
-                                                    weighted).colls()
-                        ind_int = set(t_train.index).intersection(t_test.index)
-                        exponent = 1/np.sum(t_test.values)
-                        print('Starting LL calculations for '
-                              'window size %s at %s' %
-                              (str(size),
-                               datetime.datetime.now().time().isoformat()))
-                        t_ll = LogLike(t_train).LL()
-                        ll_list.append(pow
-                                       (np.e,
-                                        np.sum
-                                        (np.log
-                                            (1/np.multiply
-                                            (scaler
-                                             (t_ll).ix[ind_int,ind_int],
-                                             t_test.ix[ind_int,ind_int])
-                                              .values))
-                                        * exponent))
-                        del t_ll
-                        print('Starting PPMI calculations for '
-                              'window size %s at %s' %
-                              (str(size),
-                              datetime.datetime.now().time().isoformat()))
-                        t_pmi = PPMI(t_train).PPMI()
-                        pmi_list.append(pow
-                                        (np.e,
-                                         np.sum
-                                        (np.log
-                                            (1/np.multiply
-                                            (scaler
-                                             (t_pmi).ix[ind_int,ind_int],
-                                             t_test.ix[ind_int,ind_int])
-                                              .values))
-                                        * exponent))
-                        del t_pmi
-                        counter += 1
-                    perplex_dict[('LL',
-                                  size,
-                                  'lems=%s' % (lemmata),
-                                  'weighted =%s' % (weighted))] = \
-                                    sum(ll_list)/len(ll_list)
-                    perplex_dict[('PPMI',
-                                  size,
-                                  'lems=%s' % (lemmata),
-                                  'weighted =%s' % (weighted))] = \
-                                    sum(pmi_list)/len(pmi_list)
-        dest_file = file.replace('.txt',
-                                 '_%s_%s_perplexity_lems.pickle' %
-                                 (min_w, max_w))
-        with open(dest_file, mode='wb') as f:
-            dump(perplex_dict, f)
+        ll_list = []
+        pmi_list = []
+        counter = 1
+        cooc_counts = CollCount(t, win, lemmata, weighted).colls()
+        if loglike:
+            print('Starting LL calculations for '
+                  'window size %s at %s' %
+                  (str(win),
+                   datetime.datetime.now().time().isoformat()))
+            t_ll = LogLike(cooc_counts).LL()
+            ll_dir = os.path.join(os.path.dirname(file), 'LL')
+            ll_win_dir = os.path.join(ll_dir, str(win))
+            ll_file = os.path.basename(file).replace('.txt', '_LL.pickle')
+            ll_path = os.path.join(ll_win_dir, ll_file)
+            if os.path.isdir(ll_dir) == False:
+                os.mkdir(ll_dir)
+            if os.path.isdir(ll_win_dir) == False:
+                os.mkdir(ll_win_dir)
+            t_ll.to_pickle(ll_path)
+            '''
+            t_ll_U, t_ll_S = svd_calc(t_ll)
+            t_ll_svd = pd.DataFrame(np.dot(t_ll_U, t_ll_S**.25),
+                             index=t_ll.index,
+                             columns=t_ll.columns)
+            '''
+            t_ll_cs = CosSim(t_ll).CS()
+            cs_dir = os.path.join(os.path.dirname(file), 'CS')
+            cs_win_dir = os.path.join(cs_dir, str(win))
+            cs_file = os.path.basename(file).replace('.txt', '_LLCS.pickle')
+            cs_path = os.path.join(cs_win_dir, cs_file)
+            if os.path.isdir(cs_dir) == False:
+                os.mkdir(cs_dir)
+            if os.path.isdir(cs_win_dir) == False:
+                os.mkdir(cs_win_dir)
+            t_ll_cs.to_pickle(cs_path)
+            del t_ll, t_ll_svd, t_ll_cs
+        if ppmi:
+            print('Starting PPMI calculations for '
+                  'window size %s at %s' %
+                  (str(win),
+                  datetime.datetime.now().time().isoformat()))
+            t_pmi = PPMI(cooc_counts).PPMI()
+            pmi_dir = os.path.join(os.path.dirname(file), 'PMI')
+            pmi_win_dir = os.path.join(pmi_dir, str(win))
+            pmi_file = os.path.basename(file).replace('.txt', '_PMI.pickle')
+            pmi_path = os.path.join(pmi_win_dir, pmi_file)
+            if os.path.isdir(pmi_dir) == False:
+                os.mkdir(pmi_dir)
+            if os.path.isdir(pmi_win_dir) == False:
+                os.mkdir(pmi_win_dir)
+            t_pmi.to_pickle(pmi_path)
+            '''t_pmi_U, t_pmi_S = svd_calc(t_pmi)
+            t_pmi_svd = pd.DataFrame(np.dot(t_pmi_U, t_pmi_S),
+                             index=t_pmi.index,
+                             columns=t_pmi.columns)
+            '''
+            t_pmi_cs = CosSim(t_pmi).CS()
+            cs_dir = os.path.join(os.path.dirname(file), 'CS')
+            cs_win_dir = os.path.join(cs_dir, str(win))
+            cs_file = os.path.basename(file).replace('.txt', '_PMICS.pickle')
+            cs_path = os.path.join(cs_win_dir, cs_file)
+            if os.path.isdir(cs_dir) == False:
+                os.mkdir(cs_dir)
+            if os.path.isdir(cs_win_dir) == False:
+                os.mkdir(cs_win_dir)
+            t_pmi_cs.to_pickle(cs_path)
+            del t_pmi, t_pmi_cs
+        cooc_dir = os.path.join(os.path.dirname(file), 'cooc')
+        cooc_win_dir = os.path.join(cooc_dir, str(win))
+        cooc_file = os.path.basename(file).replace('.txt', '_cooc.pickle')
+        cooc_path = os.path.join(cooc_win_dir, cooc_file)
+        if os.path.isdir(cooc_dir) == False:
+            os.mkdir(cooc_dir)
+        if os.path.isdir(cooc_win_dir) == False:
+            os.mkdir(cooc_win_dir)
+        cooc_counts.to_pickle(cooc_path)
+        del cooc_counts
     print('Finished at %s' % (datetime.datetime.now().time().isoformat()))
 
 if __name__ == '__main__':
     if len(sys.argv)>1:
-        RunTests(int(sys.argv[1]),int(sys.argv[2]), orig=sys.argv[3])
+        RunTests(int(sys.argv[1]), orig=sys.argv[2])
     else:
-        RunTests(1,20)
+        RunTests(300)

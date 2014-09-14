@@ -80,8 +80,8 @@ for corp in panels.keys():
     #plt.setp(pmi_svd_w, marker='x', markersize=8.0)
     #plt.setp(pmi_svd_uw, marker='+', markersize=8.0)
     plt.title(corp, fontsize = 24)
-    plt.xticks([0, 9, 19, 29, 39, 49, 59, 69, 79],
-               [1, 10, 20, 30, 40, 50, 60, 70, 80])
+    plt.xticks([0, 9, 19, 29, 39, 49, 59, 69, 79, 89, 99],
+               [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
     counter += 1
     plt.legend([ll_w, ll_uw,  pmi_w, pmi_uw],
                ['LL Weighted', 'LL Unweighted',
