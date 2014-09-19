@@ -39,8 +39,11 @@ def build_panels(d):
 
 panels = {}
 for corp in corpora.keys():
-    panels[corp] = pd.Panel(items=['LL', 'LL_SVD', 'PLL', 'PPMI', 'PPMI_SVD'],
-                  major_axis=list(range(1,81)),
+    #sizes = list(range(20,31))
+    sizes = list(range(1,501))
+    #[sizes.append(x) for x in [40, 60, 100, 200, 300, 400, 500]]
+    panels[corp] = pd.Panel(items=['LL', 'LL_LEM', 'PPMI', 'PPMI_LEM'],
+                  major_axis=sizes,
                   minor_axis=('Weighted', 'Unweighted'))
     for each_dict in corpora[corp]:
         for key in each_dict.keys():
@@ -48,7 +51,11 @@ for corp in corpora.keys():
                 weighted = 'Weighted'
             elif key[3] == 'weighted =False':
                 weighted = 'Unweighted'
-            panels[corp].ix[key[0], key[1], weighted] = each_dict[key]
+            if key[2] == 'lems=True':
+                name = key[0] + '_LEM'
+            else:
+                name = key[0]
+            panels[corp].ix[name, key[1], weighted] = each_dict[key]
             '''
             if key[3] == 'weighted =True':
                 continue
@@ -62,41 +69,64 @@ plt.figure(1)
 plt.suptitle('Parameter comparison for semantic information extraction',
              fontsize=36)
 counter = 1
-for corp in panels.keys():
-    cols = 1 if len(panels) == 1 else 2
-    plt.subplot(ceil(len(panels)/2),cols,counter)
-    plt.ylabel('Perplexity Score')
-    plt.xlabel('Window Size')
-    ll_w, ll_uw = plt.plot(panels[corp]['LL'], color='k')
-    #pll_w, pll_uw = plt.plot(panels[corp]['PLL'], color='k')
-    pmi_w, pmi_uw = plt.plot(panels[corp]['PPMI'], color='k')
-    ll_svd_w, ll_svd_uw = plt.plot(panels[corp]['LL_SVD'])
-    plt.setp(ll_w, marker='o', markersize=8.0)
-    plt.setp(ll_uw, marker='^', markersize=8.0)
-    plt.setp(pmi_w, marker='s', markersize=8.0)
-    plt.setp(pmi_uw, marker='*', markersize=8.0)
-    #plt.setp(ll_svd_w, marker='x', markersize=8.0)
-    #plt.setp(ll_svd_uw, marker='+', markersize=8.0)
-    #plt.setp(pmi_svd_w, marker='x', markersize=8.0)
-    #plt.setp(pmi_svd_uw, marker='+', markersize=8.0)
-    plt.title(corp, fontsize = 24)
-    plt.xticks([0, 9, 19, 29, 39, 49, 59, 69, 79, 89, 99],
-               [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
+ordered_corps = ['Septuagint',
+                 'Pentateuch',
+                 'Former Prophets',
+                 'Later Prophets',
+                 'Writings',
+                 'Intertestamental',
+                 'New Testament']
+for corp in sorted(panels.keys(), key=lambda x: ordered_corps.index(x)):
+    if len(panels) == 1:
+        cols = 1
+    elif len(panels) in [2, 4]:
+        cols = 2
+    else:
+        cols = 3
+    plt.subplot(ceil(len(panels)/3),cols,counter)
+    plt.ylabel('Perplexity Score', fontsize=24)
+    plt.xlabel('Window Size', fontsize=24)
+    ll_w, ll_uw = plt.plot(panels[corp]['LL'], ls='')
+    #pll_w, pll_uw = plt.plot(panels[corp]['PLL'])
+    pmi_w, pmi_uw = plt.plot(panels[corp]['PPMI'], ls='')
+    ll_lems_w, ll_lems_uw = plt.plot(panels[corp]['LL_LEM'], ls='')
+    pmi_lems_w, pmi_lems_uw = plt.plot(panels[corp]['PPMI_LEM'], ls='')
+    #plt.setp(ll_w, marker='o', markersize=12.0)
+    #plt.setp(ll_uw, marker='^', markersize=12.0)
+   # plt.setp(pmi_w, marker='s', markersize=12.0)
+    #plt.setp(pmi_uw, marker='*', markersize=12.0)
+    plt.setp(ll_lems_w, marker='D', markersize=12.0)
+    plt.setp(ll_lems_uw, marker='d', markersize=12.0)
+    plt.setp(pmi_lems_w, marker='x', markersize=12.0)
+    plt.setp(pmi_lems_uw, marker='+', markersize=12.0)
+    plt.title(corp, fontsize = 32)
+    plt.xlim(0,501)
+    plt.xticks([0, 19, 39, 59, 99, 199, 299, 399, 499],
+               [1, 20, 40, 60, 100, 200, 300, 400, 500], fontsize=24)
+    #plt.xticks(list(range(0,11)), list(range(20,32)), fontsize=24)
+    plt.yticks(fontsize=24)
     counter += 1
-    plt.legend([ll_w, ll_uw,  pmi_w, pmi_uw],
+    plt.legend([ll_lems_w, ll_lems_uw,  pmi_lems_w, pmi_lems_uw],
                ['LL Weighted', 'LL Unweighted',
                 'PPMI Weighted', 'PPMI Unweighted'],
                loc=1)
+
     '''plt.legend([ll_w, ll_uw, ll_svd_w, ll_svd_uw,  pmi_w, pmi_uw],
                ['LL Weighted', 'LL Unweighted',
                 'SVD Weighted', 'SVD Unweighted',
                 'PPMI Weighted', 'PPMI Unweighted'],
                loc=1)
     '''
-    '''plt.legend([ll_w, ll_uw, pmi_w, pmi_uw],
-               ['LL Lemmatized', 'LL Unlemmatized',
-               'PPMI Lemmatized', 'PPMI Unlemmatized'],
+    '''plt.legend([ll_w, ll_uw,
+                pmi_w, pmi_uw,
+                ll_lems_w, ll_lems_uw,
+                pmi_lems_w, pmi_lems_uw],
+               ['LL Weighted Unlemmatized', 'LL Unweighted Unlemmatized',
+               'PPMI Weighted Unlemmatized', 'PPMI Unweighted Unlemmatized',
+               'LL Weighted Lemmatized', 'LL Unweighted Lemmatized',
+               'PPMI Weighted Lemmatized', 'PPMI Unweighted Lemmatized'],
                loc=1)
     '''
-plt.subplots_adjust(hspace = 0.4)
+plt.subplots_adjust(hspace=0.4)
+plt.subplots_adjust(wspace=0.1)
 plt.show()
