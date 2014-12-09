@@ -9,7 +9,7 @@ from tkinter.filedialog import askdirectory, askopenfilename
 import matplotlib.pyplot as plt
 import os
 
-LN_file = askopenfilename(title = 'Where is your Louw-Nida dictionary?')
+LN_file = askopenfilename(title = 'Where is your LouwNida dictionary?')
 CCAT = askdirectory(title = 'Where are your CCAT data frames located?')
 NT = askopenfilename(title = 'Where is the appropriate NT data frame?')
 dest = askdirectory(title = 'Where would you like to save your results?')
@@ -29,7 +29,7 @@ def extract_info(f):
     return df.ix['ἐκκλησία'].fillna(0), df.index
     
 
-#this is the dictionary with the words and categories of the Louw-Nida lexicon
+#this is the dictionary with the words and categories of the LouwNida lexicon
 LN = pd.read_pickle(LN_file)
 
 for file in files:

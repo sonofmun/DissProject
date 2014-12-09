@@ -8,7 +8,7 @@ from tkinter.filedialog import askdirectory, askopenfilenames, askopenfilename
 import os
 import matplotlib.pyplot as plt
 
-LN = pd.read_pickle(askopenfilename(title = 'Where is your Louw-Nida dictionary?'))
+LN = pd.read_pickle(askopenfilename(title = 'Where is your LouwNida dictionary?'))
 files = askopenfilenames(title = 'Which data files would you like to plot?')
 corpora = {}
 corp_names = {'LXX': 'Septuagint', 'PE': 'Pentateuch', 'FP': 'Former Prophets', 'LP': 'Later Prophets',
@@ -38,11 +38,11 @@ elif 'CS' in file_pattern[-1]:
         highs[key] = corpora[key][corpora[key]<corpora[key].mean() + corpora[key].std()*mult]
 
 plt.figure(1)
-plt.suptitle('%s Comparison of %s in the biblical corpora according to Louw-Nida semantic domains' % (measure, word), fontsize = 36)
+plt.suptitle('%s Comparison of %s in the biblical corpora according to LouwNida semantic domains' % (measure, word), fontsize = 36)
 counter = 0
 for corpus in corpora.keys():
     plt.subplot(len(corpora),1,1+counter)
-    plt.xlabel('Louw-Nida Semantic Domain')
+    plt.xlabel('LouwNida Semantic Domain')
     plt.ylabel('Average of %s scores' % measure)
     plt.plot(corpora[corpus])
     plt.title(corpus, fontsize = 24)

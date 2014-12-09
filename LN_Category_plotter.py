@@ -1,5 +1,5 @@
     '''
-This script extracts the words for specific domains in the Louw-Nida lexicon and plots their relationship among the different
+This script extracts the words for specific domains in the LouwNida lexicon and plots their relationship among the different
 corpora.
 '''
 
@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 CCAT = askopenfilenames(title = 'Which CCAT pickles would you like to use?')
 NT = askopenfilename(title = 'Where is your NT data pickle?')
-LN_file = askopenfilename(title = 'Where is your Louw-Nida dictionary?')
+LN_file = askopenfilename(title = 'Where is your LouwNida dictionary?')
 
 corpora = {}
 corp_names = {'LXX': 'Septuagint', 'PE': 'Pentateuch', 'FP': 'Former Prophets', 'LP': 'Later Prophets',

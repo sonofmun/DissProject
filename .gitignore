@@ -237,3 +237,6 @@ coverage.xml
 
 # Sphinx documentation
 docs/_build/
+
+# For this project
+Data/*
