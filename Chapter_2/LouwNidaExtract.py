@@ -83,6 +83,10 @@ class extractLouwNida:
 		self.L2Dict[(68, 34, 57)] = {'gloss': '?', 'words': []}
 
 	def buildWordDict(self):
+		#acutes is because there seems to be a problem with acute accents
+		#in the unicode of the LN online. This is for normalization to the
+		#morphgnt standard.
+		acutes = {'ά': 'ά', 'ό': 'ό', 'έ': 'έ', 'ώ': 'ώ', 'ί': 'ί', 'ή': 'ή', 'ύ': 'ύ',}
 		for L1Link in self.LevelOne:
 			L1Soup = BeautifulSoup(urllib.request.urlopen(L1Link))
 			for GreekWords in L1Soup.find_all('tr'):
@@ -90,6 +94,8 @@ class extractLouwNida:
 					GreekWordsList = list(GreekWords.strings)
 					if len(GreekWordsList) == 3:
 						Word = GreekWordsList[0]
+						for key in acutes.keys():
+							Word.replace(key, acutes[key])
 						WordGloss = GreekWordsList[1]
 						cat = int(GreekWordsList[2].split('.')[0])
 						sect = int(GreekWordsList[2].split('.')[1])
@@ -98,6 +104,8 @@ class extractLouwNida:
 						self.WordDict[WordSection].append({Word: WordGloss})
 					elif len(GreekWordsList) == 5:
 						Word = GreekWordsList[0]
+						for key in acutes.keys():
+							Word.replace(key, acutes[key])
 						WordGloss = GreekWordsList[3]
 						cat = int(GreekWordsList[4].split('.')[0])
 						sect = int(GreekWordsList[4].split('.')[1])
@@ -107,7 +115,8 @@ class extractLouwNida:
 		for cat, start, stop in self.L2Dict.keys():
 			for x in range(start, stop+1):
 				if len(self.WordDict[(cat, x)]) != 0:
-					self.L2Dict[(cat, start, stop)]['words'].append(self.WordDict[(cat, x)])
+					for d in self.WordDict[(cat, x)]:
+						self.L2Dict[(cat, start, stop)]['words'].append(d)
 		sys.setrecursionlimit(50000)
 		dump(self.L2Dict, open('Data/LN_Cat_Dict.pickle', mode='wb'))
 		dump(self.WordDict, open('Data/LN_Word_Dict.pickle', mode='wb'))
