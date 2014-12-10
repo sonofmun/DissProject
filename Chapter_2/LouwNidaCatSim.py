@@ -10,7 +10,7 @@ sys.setrecursionlimit(50000)
 #word_cats = (('θεός', 12), ('ἔθνος', 11), ('λατρεύω', 53),
 #             ('βασιλεύς', 37), ('ἡγέομαι', 36), ('γινώσκω', 28))
 
-ln = pd.read_pickle('../Data/Chapter_2/LN_Cat_Dict.pickle')
+ln = pd.read_pickle('Data/Chapter_2/LN_Cat_Dict.pickle')
 scores = {}
 averages = {}
 good_words = []
@@ -18,7 +18,7 @@ prob_words = []
 
 for win in (20, 60, 100, 200, 300, 400, 500):
 	scores[win] = {}
-	file = ''.join(['../Data/PMI_CS_', str(win), '_SBL_GNT.pickle'])
+	file = ''.join(['Data/PMI_CS_', str(win), '_SBL_GNT.pickle'])
 	df = pd.read_pickle(file)
 	mean, std = np.mean(df.values), np.std(df.values)
 	print('%s average: %s, std: %s' % (win, mean, std))
@@ -40,18 +40,17 @@ for win in (20, 60, 100, 200, 300, 400, 500):
 			vals = []
 			for word2 in words:
 				if word1 != word2:
-					try:
-						vals.append(df.ix[word1, word2])
-					except KeyError as E:
-						continue
+					vals.append(df.ix[word1, word2])
 			scores[win][cat].ix[word1, 'Mean'] = np.mean(vals)
 			scores[win][cat].ix[word1, 'STD +/-'] = (np.mean(vals)-mean)/std
 	total = 0
 	for cat in scores[win]:
-		total += scores[win][cat].sum()
+		total += scores[win][cat].ix[:, 'STD +/-'].fillna(0).sum()
 	averages[win] = total/tot_words
-dump(scores, open('../Data/Chapter_2/LN_Word_Cat_Scores.pickle', mode='wb'))
-dump(averages, open('../Data/Chapter_2/LN_Window_Averages.pickle', mode='wb'))
+dump(scores, open('Data/Chapter_2/LN_Word_Cat_Scores.pickle', mode='wb'))
+dump(averages, open('Data/Chapter_2/LN_Window_Averages.pickle', mode='wb'))
 prob_words = list(set(prob_words))
 good_words = list(set(good_words))
-
+print('prob_words', len(prob_words), prob_words[:10])
+print('good_words', len(good_words), good_words[:10])
+print(averages)
