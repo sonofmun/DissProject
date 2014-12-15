@@ -148,7 +148,7 @@ class extractLouwNida:
 		for cat, start, stop in self.L2Dict.keys():
 			for x in range(start, stop+1):
 				if len(self.WordDict[(cat, x)]) != 0:
-					for d in self.WordDict[(cat, x)]:
+					for index, d in enumerate(self.WordDict[(cat, x)]):
 						self.L2Dict[(cat, start, stop)]['words'].append(d)
 		sys.setrecursionlimit(50000)
 		dump(self.L2Dict, open('Data/Chapter_2/LN_Cat_Dict.pickle', mode='wb'))

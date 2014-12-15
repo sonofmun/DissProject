@@ -16,13 +16,14 @@ from sklearn.metrics.pairwise import pairwise_distances
 
 class SemPipeline:
 
-	def __init__(self, win_size=500, lemmata=True, weighted=True, algo='PPMI'):
+	def __init__(self, win_size=500, lemmata=True, weighted=True, algo='PPMI', svd=None):
 		"""
 		"""
 		self.w = win_size
 		self.lems = lemmata
 		self.weighted = weighted
 		self.algo = algo
+		self.svd = svd
 
 	def file_chooser(self):
 		title = 'Which XML file(s) would you like to anaylze?'
@@ -265,9 +266,12 @@ class SemPipeline:
 								  columns=self.stat_df.index)
 		dest_file = os.path.join(self.dest,
 								 'CS',
-								 '_'.join([self.corpus[0],
-										  self.corpus[1],
-										  'CS.pickle']))
+								 '_'.join([self.algo,
+										   'CS',
+										   str(self.w),
+										   self.corpus[0],
+										   self.corpus[1],
+										   'SVD_exp={0}.pickle'.format(str(self.svd))]))
 		try:
 			os.mkdir(os.path.join(self.dest, 'CS'))
 		except:
@@ -281,6 +285,19 @@ class SemPipeline:
 			self.PPMI()
 		except AssertionError as E:
 			self.LL()
+
+	def svd_calc(self):
+		"""Calculates the truncated singular value decomposition of df
+		using the first n principal components
+
+		:param df:
+		"""
+		from scipy import linalg
+		U, s, Vh = linalg.svd(self.stat_df)
+		S = np.diag(s)
+		self.stat_df = pd.DataFrame(np.dot(U, S**self.svd),
+					 index=self.stat_df.index)#,
+					 #columns=self.stat_df.columns)
 
 	def runPipeline(self):
 		self.file_chooser()
@@ -308,6 +325,8 @@ class SemPipeline:
 				   self.weighted,
 				  datetime.datetime.now().time().isoformat()))
 			self.stat_eval()
+			if self.svd:
+				self.svd_calc()
 			print('Starting CS calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
 				  (self.corpus[1],
