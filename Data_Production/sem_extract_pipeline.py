@@ -73,14 +73,9 @@ class SemPipeline:
 								datetime.datetime.now().time().isoformat()))
 		self.coll_df = pd.DataFrame(cooc_dict).fillna(0)
 		dest_file = os.path.join(self.dest,
-								 'COOC',
 								 '_'.join([self.corpus[0],
 										  self.corpus[1],
 										  'cooc.pickle']))
-		try:
-			os.mkdir(os.path.join(self.dest, 'COOC'))
-		except:
-			pass
 		self.coll_df.to_pickle(dest_file)
 
 	def log_L(self, k, n, x):
@@ -204,14 +199,9 @@ class SemPipeline:
 			self.stat_df.ix[row] = self.log_like(row, c2, p, n)
 		self.stat_df = self.stat_df.fillna(0)
 		dest_file = os.path.join(self.dest,
-								 'LL',
 								 '_'.join([self.corpus[0],
 										  self.corpus[1],
 										  'LL.pickle']))
-		try:
-			os.mkdir(os.path.join(self.dest, 'LL'))
-		except:
-			pass
 		self.stat_df.to_pickle(dest_file)
 		del self.coll_df
 
@@ -241,14 +231,9 @@ class SemPipeline:
 		self.stat_df[self.stat_df<0] = 0
 		self.stat_df= self.stat_df.fillna(0)
 		dest_file = os.path.join(self.dest,
-								 'PPMI',
 								 '_'.join([self.corpus[0],
 										  self.corpus[1],
 										  'PPMI.pickle']))
-		try:
-			os.mkdir(os.path.join(self.dest, 'PPMI'))
-		except:
-			pass
 		self.stat_df.to_pickle(dest_file)
 		del self.coll_df
 
@@ -265,17 +250,12 @@ class SemPipeline:
 		self.CS_df = pd.DataFrame(CS_Dists, index=self.stat_df.index,
 								  columns=self.stat_df.index)
 		dest_file = os.path.join(self.dest,
-								 'CS',
 								 '_'.join([self.algo,
 										   'CS',
 										   str(self.w),
 										   self.corpus[0],
 										   self.corpus[1],
 										   'SVD_exp={0}.pickle'.format(str(self.svd))]))
-		try:
-			os.mkdir(os.path.join(self.dest, 'CS'))
-		except:
-			pass
 		self.CS_df.to_pickle(dest_file)
 		del self.stat_df
 
@@ -296,8 +276,7 @@ class SemPipeline:
 		U, s, Vh = linalg.svd(self.stat_df)
 		S = np.diag(s)
 		self.stat_df = pd.DataFrame(np.dot(U, S**self.svd),
-					 index=self.stat_df.index)#,
-					 #columns=self.stat_df.columns)
+					 index=self.stat_df.index)
 
 	def runPipeline(self):
 		self.file_chooser()
