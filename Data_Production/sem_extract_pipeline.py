@@ -10,7 +10,8 @@ from collections import defaultdict
 import datetime
 import numpy as np
 from math import log
-from tkinter.filedialog import askopenfilenames
+if __name__ != '__main__':
+	from tkinter.filedialog import askopenfilenames
 from sklearn.metrics.pairwise import pairwise_distances
 import sys
 from glob import glob
