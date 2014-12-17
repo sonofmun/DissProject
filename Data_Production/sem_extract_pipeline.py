@@ -17,7 +17,7 @@ import sys
 
 class SemPipeline:
 
-	def __init__(self, win_size=500, lemmata=True, weighted=True, algo='PPMI', svd=None):
+	def __init__(self, win_size=500, lemmata=True, weighted=True, algo='PPMI', svd=1.45):
 		"""
 		"""
 		self.w = win_size
