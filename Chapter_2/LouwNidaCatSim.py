@@ -55,7 +55,7 @@ class CatSim:
 			for word1 in words:
 				vals = []
 				for word2 in words:
-					if word1 != word2:
+					if word1[0] != word2[0]:
 						vals.append(self.df.ix[word1[0], word2[0]])
 				#scores[win][cat].ix[word1, 'Gloss'] = word1[1]
 				#try:

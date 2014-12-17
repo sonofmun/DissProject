@@ -12,6 +12,7 @@ import numpy as np
 from math import log
 from tkinter.filedialog import askopenfilenames
 from sklearn.metrics.pairwise import pairwise_distances
+import sys
 
 
 class SemPipeline:
@@ -318,4 +319,4 @@ class SemPipeline:
 		print('Finished at %s' % (datetime.datetime.now().time().isoformat()))
 
 if __name__ == '__main__':
-	SemPipeline().runPipeline()
+	SemPipeline(win_size=int(sys.argv[1])).runPipeline()
