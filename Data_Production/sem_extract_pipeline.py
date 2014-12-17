@@ -13,6 +13,7 @@ from math import log
 from tkinter.filedialog import askopenfilenames
 from sklearn.metrics.pairwise import pairwise_distances
 import sys
+from glob import glob
 
 
 class SemPipeline:
@@ -280,7 +281,10 @@ class SemPipeline:
 					 index=self.stat_df.index)
 
 	def runPipeline(self):
-		self.file_chooser()
+		if __name__ == '__main__':
+			self.files = glob(os.getcwd() + '/*.txt')
+		else:
+			self.file_chooser()
 		for file in self.files:
 			self.orig = os.path.split(file)[0]
 			filename = os.path.split(file)[1]
