@@ -238,3 +238,98 @@ class CatSimSVD(CatSim):
 			file.write('Window Size,Average +/- Standard Deviations\n')
 			for w_size in sorted(self.ave_no_93.keys()):
 				file.write('{0},{1}\n'.format(w_size, self.ave_no_93[w_size]))
+
+class WordCatFinder(CatSim):
+
+	def __init__(self, words):
+		if type(words) != list:
+			raise TypeError('"words" must be a list')
+		try:
+			self.ln = pd.read_pickle('Data/Chapter_2/LN_Cat_Dict.pickle')
+		except FileNotFoundError:
+			ln_file = askopenfilename(title='Where is your Louw-Nida dictionary pickle?')
+			self.ln = pd.read_pickle(ln_file)
+		self.scores = {}
+		self.averages = {}
+		self.ave_no_93 = {}
+		self.good_words = []
+		self.prob_words = []
+		self.rng = words
+
+	def LoadDF(self):
+		file = 'Data/350/PPMI_CS_350_SBL_GNT_SVD_exp=1.45.pickle'
+		try:
+			self.df = pd.read_pickle(file)
+		except FileNotFoundError:
+			file = askopenfilename(title='Where is your pickle file for window = 350, svd exponent = 1.45')
+			self.df = pd.read_pickle(file)
+
+	def SimCalc(self, w):
+		self.scores[w] = {}
+		mean, std = np.mean(self.df.values), np.std(self.df.values)
+		print(w)
+		self.scores[w] = pd.DataFrame(index=list(self.ln.keys()),
+										  columns=['Mean', 'STD +/-'])
+		for cat in self.ln.keys():
+			vals = []
+			cat_words = []
+			for d in self.ln[cat]['words']:
+				word = list(d.keys())[0]
+				if word in self.df.index:
+					cat_words.append((word, d[word]))
+					self.good_words.append(word)
+				else:
+					self.prob_words.append(word)
+			for word1 in cat_words:
+				if word1[0] != w:
+					vals.append(self.df.ix[word1[0], w])
+			self.scores[w].ix[cat, 'Mean'] = np.mean(vals)
+			self.scores[w].ix[cat, 'STD +/-'] = (np.mean(vals)-mean)/std
+
+	def WriteFiles(self):
+		with open('Data/Chapter_2/LN_Word_Cat_Finder_SVD.pickle', mode='wb') as file:
+			dump(self.scores, file)
+		#lems = pd.read_pickle('Data/SBLGNT_lem_dict.pickle')
+		save_file = 'Data/Chapter_2/LN_Word_Cat_Finder_SVD.csv'
+		self.WriteLines(save_file)
+
+	def WriteLines(self, save_file):
+		print('Writing Lines')
+		with open(save_file, mode='w', encoding='utf-8') as file:
+			file.write('Scores for Window Size 350; SVD Exponent 1.45\n')
+			file.write('Word,Category,Mean CS with Category,'
+					   'Standard Deviations +/- Average\n')
+			for word in self.scores.keys():
+				for cat in sorted(self.scores[word].index):
+					try:
+						file.write(
+							'{0},{1}.{2}-{3} {4},{5},{6}\n'.format
+							(
+								word,
+								cat[0],
+								cat[1],
+								cat[2],
+								self.ln[cat]['gloss'].replace(',', ' '),
+								self.scores[word].ix[cat, 'Mean'][0],
+								self.scores[word].ix[cat, 'STD +/-'][0]
+							)
+						)
+					except IndexError:
+						file.write(
+							'{0},{1}.{2}-{3} {4},{5},{6}\n'.format
+							(
+								word,
+								cat[0],
+								cat[1],
+								cat[2],
+								self.ln[cat]['gloss'].replace(',', ' '),
+								self.scores[word].ix[cat, 'Mean'],
+								self.scores[word].ix[cat, 'STD +/-']
+							)
+						)
+
+	def CatSimPipe(self):
+		self.LoadDF()
+		for w in self.rng:
+			self.SimCalc(w)
+		self.WriteFiles()
