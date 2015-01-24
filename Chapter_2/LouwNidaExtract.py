@@ -87,6 +87,10 @@ class extractLouwNida:
 		for h3 in self.soup.find_all('h3'):
 			L1List = list(h3.stripped_strings)
 			self.L1Dict[L1List[0]] = {'gloss': L1List[1]}
+			if h3.next_sibling.next_sibling.name != 'p':
+				self.L2Dict[(int(L1List[0]), 1, 1000)] = {'gloss': L1List[1],
+													 'words': []}
+
 
 	def buildL2(self):
 		#all subcategory information is contained in <p> tags
@@ -147,9 +151,12 @@ class extractLouwNida:
 						self.WordDict[WordSection].append({Word: WordGloss.strip(') ')})
 		for cat, start, stop in self.L2Dict.keys():
 			for x in range(start, stop+1):
-				if len(self.WordDict[(cat, x)]) != 0:
-					for index, d in enumerate(self.WordDict[(cat, x)]):
-						self.L2Dict[(cat, start, stop)]['words'].append(d)
+				try:
+					if len(self.WordDict[(cat, x)]) != 0:
+						for index, d in enumerate(self.WordDict[(cat, x)]):
+							self.L2Dict[(cat, start, stop)]['words'].append(d)
+				except KeyError:
+					break
 		sys.setrecursionlimit(50000)
 		dump(self.L2Dict, open('Data/Chapter_2/LN_Cat_Dict.pickle', mode='wb'))
 		dump(self.WordDict, open('Data/Chapter_2/LN_Word_Dict.pickle', mode='wb'))
