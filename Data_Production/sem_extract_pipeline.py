@@ -10,7 +10,8 @@ from collections import defaultdict
 import datetime
 import numpy as np
 from math import log
-from tkinter.filedialog import askopenfilenames
+if __name__ != '__main__':
+	from tkinter.filedialog import askopenfilenames
 from sklearn.metrics.pairwise import pairwise_distances
 import sys
 from glob import glob
@@ -75,9 +76,10 @@ class SemPipeline:
 								datetime.datetime.now().time().isoformat()))
 		self.coll_df = pd.DataFrame(cooc_dict).fillna(0)
 		dest_file = os.path.join(self.dest,
-								 '_'.join([self.corpus[0],
-										  self.corpus[1],
-										  'cooc.pickle']))
+								 '_'.join(['COOC',
+										   str(self.w),
+										   self.corpus[0],
+										   self.corpus[1]]) + '.pickle')
 		self.coll_df.to_pickle(dest_file)
 
 	def log_L(self, k, n, x):
@@ -201,9 +203,10 @@ class SemPipeline:
 			self.stat_df.ix[row] = self.log_like(row, c2, p, n)
 		self.stat_df = self.stat_df.fillna(0)
 		dest_file = os.path.join(self.dest,
-								 '_'.join([self.corpus[0],
-										  self.corpus[1],
-										  'LL.pickle']))
+								 '_'.join(['LL',
+										   str(self.w),
+										   self.corpus[0],
+										   self.corpus[1]]) + '.pickle')
 		self.stat_df.to_pickle(dest_file)
 		del self.coll_df
 
@@ -233,9 +236,10 @@ class SemPipeline:
 		self.stat_df[self.stat_df<0] = 0
 		self.stat_df= self.stat_df.fillna(0)
 		dest_file = os.path.join(self.dest,
-								 '_'.join([self.corpus[0],
-										  self.corpus[1],
-										  'PPMI.pickle']))
+								 '_'.join(['PPMI',
+										   str(self.w),
+										   self.corpus[0],
+										   self.corpus[1]]) + '.pickle')
 		self.stat_df.to_pickle(dest_file)
 		del self.coll_df
 
