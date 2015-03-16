@@ -10,8 +10,10 @@ from collections import defaultdict
 import datetime
 import numpy as np
 from math import log
-if __name__ != '__main__':
+try:
 	from tkinter.filedialog import askopenfilenames
+except ImportError:
+	print('Tkinter cannot be used on this Python installation.\nPlease designate a list of files in the files variable.')
 from sklearn.metrics.pairwise import pairwise_distances
 import sys
 from glob import glob
@@ -19,7 +21,7 @@ from glob import glob
 
 class SemPipeline:
 
-	def __init__(self, win_size=500, lemmata=True, weighted=True, algo='PPMI', svd=1.45):
+	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1.45, files=None):
 		"""
 		"""
 		self.w = win_size
@@ -27,10 +29,13 @@ class SemPipeline:
 		self.weighted = weighted
 		self.algo = algo
 		self.svd = svd
+		self.files = files
+
 
 	def file_chooser(self):
-		title = 'Which XML file(s) would you like to anaylze?'
-		self.files = askopenfilenames(title=title)
+		if self.files == None:
+			title = 'Which XML file(s) would you like to anaylze?'
+			self.files = askopenfilenames(title=title)
 
 	def word_extract(self):
 		'''
