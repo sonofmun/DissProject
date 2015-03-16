@@ -83,6 +83,7 @@ class SemPipeline:
 		dest_file = os.path.join(self.dest,
 								 '_'.join(['COOC',
 										   str(self.w),
+										   'lems={0}'.format(self.lems),
 										   self.corpus[0],
 										   self.corpus[1]]) + '.pickle')
 		self.coll_df.to_pickle(dest_file)
@@ -210,6 +211,7 @@ class SemPipeline:
 		dest_file = os.path.join(self.dest,
 								 '_'.join(['LL',
 										   str(self.w),
+										   'lems={0}'.format(self.lems),
 										   self.corpus[0],
 										   self.corpus[1]]) + '.pickle')
 		self.stat_df.to_pickle(dest_file)
@@ -243,6 +245,7 @@ class SemPipeline:
 		dest_file = os.path.join(self.dest,
 								 '_'.join(['PPMI',
 										   str(self.w),
+										   'lems={0}'.format(self.lems),
 										   self.corpus[0],
 										   self.corpus[1]]) + '.pickle')
 		self.stat_df.to_pickle(dest_file)
@@ -266,6 +269,7 @@ class SemPipeline:
 										   str(self.w),
 										   self.corpus[0],
 										   self.corpus[1],
+										   'lems={0}'.format(self.lems),
 										   'SVD_exp={0}.pickle'.format(str(self.svd))]))
 		self.CS_df.to_pickle(dest_file)
 		del self.stat_df
