@@ -43,10 +43,10 @@ class SemPipeline:
 		the XML file
 		'''
 		if self.lems:
-			return [re.sub(r'.+?lem="([^"]*).*', r'\1', line)
+			return [re.sub(r'.+?lem="([^"]*).*', r'\1', line).lower()
 					 for line in self.t]
 		else:
-			return [re.sub(r'.+?>([^<]*).*', r'\1', line)
+			return [re.sub(r'.+?>([^<]*).*', r'\1', line).lower()
 					 for line in self.t]
 
 	def cooc_counter(self):
