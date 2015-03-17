@@ -335,5 +335,61 @@ class SemPipeline:
 
 		print('Finished at %s' % (datetime.datetime.now().time().isoformat()))
 
+class PseudoLem(SemPipeline):
+
+	def __init__(self, win_size=350, lemmata=False, weighted=True, algo='PPMI', svd=1.45, files=None, forms=[], lemma=''):
+		"""
+		"""
+		self.w = win_size
+		self.lems = lemmata
+		self.weighted = weighted
+		self.algo = algo
+		self.svd = svd
+		self.files = files
+		self.forms = forms
+		self.lemma = lemma
+
+	def cooc_counter(self):
+		'''
+		This function takes a token list, a windows size (default
+		is 4 left and 4 right), and a destination filename, runs through the
+		token list, reading every word to the window left and window right of
+		the target word, and then keeps track of these co-occurrences in a
+		cooc_dict dictionary.  Finally, it creates a coll_df DataFrame from
+		this dictionary and then pickles this DataFrame to dest
+		'''
+		words = self.word_extract()
+		for i, word in enumerate(words):
+			if word in self.forms:
+				words[i] = self.lemma
+		cooc_dict = defaultdict(dict)
+		for i, t in enumerate(words):
+			c_list = []
+			if self.weighted:
+				for pos in range(max(i-self.w, 0),min(i+self.w+1, len(words))):
+					if pos != i:
+						for x in range(self.w+1-abs(i-pos)):
+							c_list.append(words[pos])
+			else:
+				[c_list.append(c) for c in
+				 words[max(i-self.w, 0):min(i+self.w+1, len(words))]]
+				c_list.remove(t)
+			for c in c_list:
+				try:
+					cooc_dict[t][c] += 1
+				except KeyError:
+					cooc_dict[t][c] = 1
+			if i % 100000 == 0:
+				print('Processing token %s of %s at %s' % (i, len(words),
+								datetime.datetime.now().time().isoformat()))
+		self.coll_df = pd.DataFrame(cooc_dict).fillna(0)
+		dest_file = os.path.join(self.dest,
+								 '_'.join(['COOC',
+										   str(self.w),
+										   'lems={0}'.format(self.lems),
+										   self.corpus[0],
+										   self.corpus[1]]) + '.pickle')
+		self.coll_df.to_pickle(dest_file)
+
 if __name__ == '__main__':
 	SemPipeline(win_size=int(sys.argv[1])).runPipeline()
