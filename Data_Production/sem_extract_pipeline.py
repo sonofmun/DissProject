@@ -9,7 +9,7 @@ import os
 from collections import defaultdict
 import datetime
 import numpy as np
-from math import log
+from math import log, ceil
 try:
 	from tkinter.filedialog import askopenfilenames
 except ImportError:
@@ -17,6 +17,8 @@ except ImportError:
 from sklearn.metrics.pairwise import pairwise_distances
 import sys
 from glob import glob
+from celery import group
+from proj.tasks import counter
 
 
 class SemPipeline:
@@ -257,8 +259,13 @@ class SemPipeline:
 		the similarity score (i.e., 1-cosine distance) for every word, saving
 		the results then to a different directory.
 		"""
-		print('Starting cosine similarity calculation at %s' %
-			  (datetime.datetime.now().time().isoformat()))
+		print('Starting CS calculations for %s for '
+				  'w=%s, lem=%s, weighted=%s at %s' %
+				  (self.corpus[1],
+				   str(self.w),
+				   self.lems,
+				   self.weighted,
+				  datetime.datetime.now().time().isoformat()))
 		self.stat_df = self.stat_df.replace(to_replace=np.inf, value=0)
 		CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs = 1)
 		self.CS_df = pd.DataFrame(CS_Dists, index=self.stat_df.index,
@@ -273,47 +280,16 @@ class SemPipeline:
 										   'SVD_exp={0}.pickle'.format(str(self.svd))]))
 		self.CS_df.to_pickle(dest_file)
 		del self.stat_df
+		print('Finished with CS calculations for %s for '
+				  'w=%s, lem=%s, weighted=%s at %s' %
+				  (self.corpus[1],
+				   str(self.w),
+				   self.lems,
+				   self.weighted,
+				  datetime.datetime.now().time().isoformat()))
 
 	def stat_eval(self):
-		try:
-			assert(self.algo == 'PPMI')
-			self.PPMI()
-		except AssertionError as E:
-			self.LL()
-
-	def svd_calc(self):
-		"""Calculates the truncated singular value decomposition of df
-		using the first n principal components
-
-		:param df:
-		"""
-		from scipy import linalg
-		U, s, Vh = linalg.svd(self.stat_df)
-		S = np.diag(s)
-		self.stat_df = pd.DataFrame(np.dot(U, S**self.svd),
-					 index=self.stat_df.index)
-
-	def runPipeline(self):
-		if __name__ == '__main__':
-			self.files = glob(os.getcwd() + '/*.txt')
-		else:
-			self.file_chooser()
-		for file in self.files:
-			self.orig = os.path.split(file)[0]
-			filename = os.path.split(file)[1]
-			self.dest = os.path.join(self.orig, str(self.w))
-			try:
-				os.mkdir(self.dest)
-			except:
-				pass
-			self.corpus = filename.split('_')[-3:-1]
-			print('Started analyzing %s at %s' %
-				  (self.corpus[1],
-				  datetime.datetime.now().time().isoformat()))
-			with open(file) as f:
-				self.t = f.read().split('\n')
-			self.cooc_counter()
-			print('Starting %s calculations for %s for '
+		print('Starting %s calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
 				  (self.corpus[1],
 				   self.algo,
@@ -321,16 +297,72 @@ class SemPipeline:
 				   self.lems,
 				   self.weighted,
 				  datetime.datetime.now().time().isoformat()))
-			self.stat_eval()
-			if self.svd:
-				self.svd_calc()
-			print('Starting CS calculations for %s for '
+		try:
+			assert(self.algo == 'PPMI')
+			self.PPMI()
+		except AssertionError as E:
+			self.LL()
+		print('Finished with %s calculations for %s for '
+				  'w=%s, lem=%s, weighted=%s at %s' %
+				  (self.corpus[1],
+				   self.algo,
+				   str(self.w),
+				   self.lems,
+				   self.weighted,
+				  datetime.datetime.now().time().isoformat()))
+
+	def svd_calc(self):
+		"""Calculates the truncated singular value decomposition of df
+		using the first n principal components
+
+		:param df:
+		"""
+		print('Starting SVD calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
 				  (self.corpus[1],
 				   str(self.w),
 				   self.lems,
 				   self.weighted,
 				  datetime.datetime.now().time().isoformat()))
+		from scipy import linalg
+		U, s, Vh = linalg.svd(self.stat_df)
+		S = np.diag(s)
+		self.stat_df = pd.DataFrame(np.dot(U, S**self.svd),
+					 index=self.stat_df.index)
+		print('Finished SVD calculations for %s for '
+				  'w=%s, lem=%s, weighted=%s at %s' %
+				  (self.corpus[1],
+				   str(self.w),
+				   self.lems,
+				   self.weighted,
+				  datetime.datetime.now().time().isoformat()))
+
+	def makeFileNames(self, f):
+		self.orig = os.path.split(f)[0]
+		filename = os.path.split(f)[1]
+		self.dest = os.path.join(self.orig, str(self.w))
+		try:
+			os.mkdir(self.dest)
+		except:
+			pass
+		self.corpus = filename.split('_')[-3:-1]
+
+	def runPipeline(self):
+		if __name__ == '__main__':
+			self.files = glob(os.getcwd() + '/*.txt')
+		else:
+			self.file_chooser()
+		for file in self.files:
+			self.makeFileNames(file)
+			print('Started analyzing %s at %s' %
+				  (self.corpus[1],
+				  datetime.datetime.now().time().isoformat()))
+			with open(file) as f:
+				self.t = f.read().split('\n')
+			self.cooc_counter()
+			self.stat_eval()
+			if self.svd:
+				self.svd_calc()
 			self.CS()
 
 		print('Finished at %s' % (datetime.datetime.now().time().isoformat()))
@@ -349,6 +381,16 @@ class PseudoLem(SemPipeline):
 		self.forms = forms
 		self.lemma = lemma
 
+	def makeFileNames(self, f):
+		self.orig = os.path.split(f)[0]
+		filename = os.path.split(f)[1]
+		self.dest = os.path.join(self.orig, str(self.w), self.lemma)
+		try:
+			os.mkdir(self.dest)
+		except:
+			pass
+		self.corpus = filename.split('_')[-3:-1]
+
 	def cooc_counter(self):
 		'''
 		This function takes a token list, a windows size (default
@@ -358,6 +400,7 @@ class PseudoLem(SemPipeline):
 		cooc_dict dictionary.  Finally, it creates a coll_df DataFrame from
 		this dictionary and then pickles this DataFrame to dest
 		'''
+		self.dest = os.path.join(self.dest, self.lemma)
 		words = self.word_extract()
 		for i, word in enumerate(words):
 			if word in self.forms:
@@ -384,6 +427,37 @@ class PseudoLem(SemPipeline):
 								datetime.datetime.now().time().isoformat()))
 		self.coll_df = pd.DataFrame(cooc_dict).fillna(0)
 		dest_file = os.path.join(self.dest,
+								 '_'.join(['COOC',
+										   str(self.w),
+										   'lems={0}'.format(self.lems),
+										   self.corpus[0],
+										   self.corpus[1]]) + '.pickle')
+		self.coll_df.to_pickle(dest_file)
+
+class WithCelery(SemPipeline):
+
+	def cooc_counter(self):
+		'''
+		This function takes a token list, a windows size (default
+		is 4 left and 4 right), and a destination filename, runs through the
+		token list, reading every word to the window left and window right of
+		the target word, and then keeps track of these co-occurrences in a
+		cooc_dict dictionary.  Finally, it creates a coll_df DataFrame from
+		this dictionary and then pickles this DataFrame to dest
+		'''
+		words = self.word_extract()
+		vocab = list(set(words))
+		self.coll_df = pd.DataFrame(index=vocab, columns=vocab)
+		c = 8
+		step = ceil(len(words)/c)
+		steps = []
+		for i in range(c):
+			steps.append((step*i, min(step*(i+1), len(words))))
+		res = group(counter.s(self.weighted, self.w, words, limits) for limits in steps)().get()
+		for r in res:
+			self.coll_df = self.coll_df.add(pd.DataFrame(r), fill_value=0)
+		self.coll_df.fillna(0)
+		dest_file = os.path.join(self.dest, 'test',
 								 '_'.join(['COOC',
 										   str(self.w),
 										   'lems={0}'.format(self.lems),

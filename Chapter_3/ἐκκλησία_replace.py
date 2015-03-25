@@ -10,7 +10,7 @@ with open(gk_file, mode='r', encoding='utf-8') as f:
 #replace the list below with the forms of the word that you want to replace
 #putting a \b before and behind all words will make sure the regex matches only
 #complete words
-words = [r'\bἐκκλησίαις\b', r'\bἐκκλησίαι\b', r'\bἐκκλησίαν\b', r'\bἐκκλησίας\b', r'\bἐκκλησιῶν\b', r'\bἐκκλησίᾳ\b']
+words = [r'\bἐκκλησ[ίί]αις\b', r'\bἐκκλησ[ίί]αι\b', r'\bἐκκλησ[ίί]αν\b', r'\bἐκκλησ[ίί]ας\b', r'\bἐκκλησιῶν\b', r'\bἐκκλησ[ίί]ᾳ\b']
 #substitute the dictionary form of your lemma below
 lemma = 'ἐκκλησία'
 p = re.compile(r'({0})'.format('|'.join([w for w in words])))
