@@ -31,7 +31,7 @@ from proj.tasks import counter
 
 class SemPipeline:
 
-	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1.45, files=None):
+	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1.45, files=None, c=8):
 		"""
 		"""
 		self.w = win_size
@@ -40,7 +40,7 @@ class SemPipeline:
 		self.algo = algo
 		self.svd = svd
 		self.files = files
-		print(win_size, lemmata, weighted, algo, svd, files)
+		self.c = c
 
 
 	def file_chooser(self):
@@ -72,10 +72,10 @@ class SemPipeline:
 		words = self.word_extract()
 		vocab = list(set(words))
 		self.coll_df = pd.DataFrame(index=vocab, columns=vocab)
-		c = 8
-		step = ceil(len(words)/c)
+		# c = self.c
+		step = ceil(len(words)/self.c)
 		steps = []
-		for i in range(c):
+		for i in range(self.c):
 			steps.append((step*i, min(step*(i+1), len(words))))
 		res = group(counter.s(self.weighted, self.w, words, limits) for limits in steps)().get()
 		for r in res:
@@ -463,4 +463,10 @@ class WithCelery(SemPipeline):
 		self.coll_df.to_pickle(dest_file)
 
 if __name__ == '__main__':
-	SemPipeline(win_size=int(sys.argv[1]), lemmata=bool(int(sys.argv[2])), weighted=bool(int(sys.argv[3])), algo=sys.argv[4], svd=float(sys.argv[5]), files=sys.argv[6].split()).runPipeline()
+	SemPipeline(win_size=int(sys.argv[1]),
+				lemmata=bool(int(sys.argv[2])),
+				weighted=bool(int(sys.argv[3])),
+				algo=sys.argv[4],
+				svd=float(sys.argv[5]),
+				files=sys.argv[6].split(),
+				c=int(sys.argv[7])).runPipeline()
