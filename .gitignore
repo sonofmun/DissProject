@@ -240,3 +240,4 @@ docs/_build/
 
 # For this project
 Data/*
+diss_pipe.sh
