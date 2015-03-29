@@ -358,7 +358,7 @@ class SemPipeline:
 				self.t = f.read().split('\n')
 			self.cooc_counter()
 			self.stat_eval()
-			if self.svd:
+			if self.svd != 1:
 				self.svd_calc()
 			self.CS()
 
