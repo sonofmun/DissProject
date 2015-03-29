@@ -81,7 +81,7 @@ class SemPipeline:
 		for r in res:
 			self.coll_df = self.coll_df.add(pd.DataFrame(r), fill_value=0)
 		self.coll_df.fillna(0)
-		dest_file = os.path.join(self.dest, 'test',
+		dest_file = os.path.join(self.dest,
 								 '_'.join(['COOC',
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
