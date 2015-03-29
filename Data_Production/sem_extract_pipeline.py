@@ -40,6 +40,7 @@ class SemPipeline:
 		self.algo = algo
 		self.svd = svd
 		self.files = files
+		print(win_size, lemmata, weighted, algo, svd, files)
 
 
 	def file_chooser(self):
@@ -462,4 +463,4 @@ class WithCelery(SemPipeline):
 		self.coll_df.to_pickle(dest_file)
 
 if __name__ == '__main__':
-	SemPipeline(win_size=int(sys.argv[1]), lemmata=bool(sys.argv[2]), weighted=bool(sys.argv[3]), algo=str(sys.argv[4]), svd=float(sys.argv[5]), files=sys.argv[6].split()).runPipeline()
+	SemPipeline(win_size=int(sys.argv[1]), lemmata=bool(int(sys.argv[2])), weighted=bool(int(sys.argv[3])), algo=sys.argv[4], svd=float(sys.argv[5]), files=sys.argv[6].split()).runPipeline()
