@@ -2,14 +2,22 @@
 
 __author__ = 'matt'
 
-
-import pandas as pd
-import re
+import sys
 import os
+
+PACKAGE_PARENT = '..'
+SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
+sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
+
+
+import re
 from collections import defaultdict
 import datetime
-import numpy as np
 from math import log, ceil
+
+import pandas as pd
+import numpy as np
+
 try:
 	from tkinter.filedialog import askopenfilenames
 except ImportError:
@@ -61,28 +69,18 @@ class SemPipeline:
 		this dictionary and then pickles this DataFrame to dest
 		'''
 		words = self.word_extract()
-		cooc_dict = defaultdict(dict)
-		for i, t in enumerate(words):
-			c_list = []
-			if self.weighted:
-				for pos in range(max(i-self.w, 0),min(i+self.w+1, len(words))):
-					if pos != i:
-						for x in range(self.w+1-abs(i-pos)):
-							c_list.append(words[pos])
-			else:
-				[c_list.append(c) for c in
-				 words[max(i-self.w, 0):min(i+self.w+1, len(words))]]
-				c_list.remove(t)
-			for c in c_list:
-				try:
-					cooc_dict[t][c] += 1
-				except KeyError:
-					cooc_dict[t][c] = 1
-			if i % 100000 == 0:
-				print('Processing token %s of %s at %s' % (i, len(words),
-								datetime.datetime.now().time().isoformat()))
-		self.coll_df = pd.DataFrame(cooc_dict).fillna(0)
-		dest_file = os.path.join(self.dest,
+		vocab = list(set(words))
+		self.coll_df = pd.DataFrame(index=vocab, columns=vocab)
+		c = 8
+		step = ceil(len(words)/c)
+		steps = []
+		for i in range(c):
+			steps.append((step*i, min(step*(i+1), len(words))))
+		res = group(counter.s(self.weighted, self.w, words, limits) for limits in steps)().get()
+		for r in res:
+			self.coll_df = self.coll_df.add(pd.DataFrame(r), fill_value=0)
+		self.coll_df.fillna(0)
+		dest_file = os.path.join(self.dest, 'test',
 								 '_'.join(['COOC',
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
@@ -348,9 +346,7 @@ class SemPipeline:
 		self.corpus = filename.split('_')[-3:-1]
 
 	def runPipeline(self):
-		if __name__ == '__main__':
-			self.files = glob(os.getcwd() + '/*.txt')
-		else:
+		if self.files == None:
 			self.file_chooser()
 		for file in self.files:
 			self.makeFileNames(file)
@@ -466,4 +462,4 @@ class WithCelery(SemPipeline):
 		self.coll_df.to_pickle(dest_file)
 
 if __name__ == '__main__':
-	SemPipeline(win_size=int(sys.argv[1])).runPipeline()
+	SemPipeline(win_size=int(sys.argv[1]), lemmata=bool(sys.argv[2]), weighted=bool(sys.argv[3]), algo=str(sys.argv[4]), svd=float(sys.argv[5]), files=sys.argv[6].split()).runPipeline()
