@@ -23,7 +23,6 @@ try:
 except ImportError:
 	print('Tkinter cannot be used on this Python installation.\nPlease designate a list of files in the files variable.')
 from sklearn.metrics.pairwise import pairwise_distances
-import sys
 from glob import glob
 from celery import group
 from proj.tasks import counter
@@ -229,7 +228,7 @@ class SemPipeline:
 		C1 = np.sum(C12)
 		P1 = C1/N
 		P12 = C12/N
-		return np.log2(np.divide(P12,P1*P2))
+		return np.log2(np.float256(np.divide(P12,P1*P2)))
 
 	def PPMI(self):
 		"""This function guides the PPMI calculation process
