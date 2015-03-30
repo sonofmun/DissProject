@@ -228,7 +228,7 @@ class SemPipeline:
 		C1 = np.sum(C12)
 		P1 = C1/N
 		P12 = C12/N
-		return np.log2(np.float256(np.divide(P12,P1*P2)))
+		return np.log2(np.float64(np.divide(P12,P1*P2)))
 
 	def PPMI(self):
 		"""This function guides the PPMI calculation process
