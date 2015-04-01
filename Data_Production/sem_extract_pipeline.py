@@ -79,14 +79,14 @@ class SemPipeline:
 		res = group(counter.s(self.weighted, self.w, words, limits) for limits in steps)().get()
 		for r in res:
 			self.coll_df = self.coll_df.add(pd.DataFrame(r), fill_value=0)
-		self.coll_df.fillna(0)
+		self.coll_df = self.coll_df.fillna(0)
 		dest_file = os.path.join(self.dest,
 								 '_'.join(['COOC',
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
 										   self.corpus[0],
-										   self.corpus[1]]) + '.pickle')
-		self.coll_df.to_pickle(dest_file)
+										   self.corpus[1]]) + '.hd5')
+		self.coll_df.to_hdf(dest_file, 'df', mode='w', complevel=9, complib='blosc')
 
 	def log_L(self, k, n, x):
 		'''
@@ -213,8 +213,8 @@ class SemPipeline:
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
 										   self.corpus[0],
-										   self.corpus[1]]) + '.pickle')
-		self.stat_df.to_pickle(dest_file)
+										   self.corpus[1]]) + '.hd5')
+		self.stat_df.to_hdf(dest_file, 'df', mode='w', complevel=9, complib='blosc')
 		del self.coll_df
 
 	def PMI_calc(self, row, P2, N):
@@ -247,8 +247,8 @@ class SemPipeline:
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
 										   self.corpus[0],
-										   self.corpus[1]]) + '.pickle')
-		self.stat_df.to_pickle(dest_file)
+										   self.corpus[1]]) + '.hd5')
+		self.stat_df.to_hdf(dest_file, 'df', mode='w', complevel=9, complib='blosc')
 		del self.coll_df
 
 	def CS(self):
@@ -275,8 +275,8 @@ class SemPipeline:
 										   self.corpus[0],
 										   self.corpus[1],
 										   'lems={0}'.format(self.lems),
-										   'SVD_exp={0}.pickle'.format(str(self.svd))]))
-		self.CS_df.to_pickle(dest_file)
+										   'SVD_exp={0}.hd5'.format(str(self.svd))]))
+		self.CS_df.to_hdf(dest_file, 'df', mode='w', complevel=9, complib='blosc')
 		del self.stat_df
 		print('Finished with CS calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
@@ -427,8 +427,8 @@ class PseudoLem(SemPipeline):
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
 										   self.corpus[0],
-										   self.corpus[1]]) + '.pickle')
-		self.coll_df.to_pickle(dest_file)
+										   self.corpus[1]]) + '.hd5')
+		self.coll_df.to_hdf(dest_file, 'df', mode='w', complevel=9, complib='blosc')
 
 class WithCelery(SemPipeline):
 
@@ -458,8 +458,8 @@ class WithCelery(SemPipeline):
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
 										   self.corpus[0],
-										   self.corpus[1]]) + '.pickle')
-		self.coll_df.to_pickle(dest_file)
+										   self.corpus[1]]) + '.hd5')
+		self.coll_df.to_hdf(dest_file, 'df', mode='w', complevel=9, complib='blosc')
 
 if __name__ == '__main__':
 	SemPipeline(win_size=int(sys.argv[1]),
