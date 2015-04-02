@@ -19,7 +19,7 @@ import pandas as pd
 import numpy as np
 
 try:
-	from tkinter.filedialog import askopenfilenames
+	from tkinter.filedialog import askdirectory
 except ImportError:
 	print('Tkinter cannot be used on this Python installation.\nPlease designate a list of files in the files variable.')
 from sklearn.metrics.pairwise import pairwise_distances
@@ -38,14 +38,14 @@ class SemPipeline:
 		self.weighted = weighted
 		self.algo = algo
 		self.svd = svd
-		self.files = files
+		self.dir = files
 		self.c = c
 
 
 	def file_chooser(self):
-		if self.files == None:
-			title = 'Which XML file(s) would you like to anaylze?'
-			self.files = askopenfilenames(title=title)
+		if self.dir == None:
+			title = 'In which directory are the XML file(s) would you like to analyze?'
+			self.dir = askdirectory(title=title)
 
 	def word_extract(self):
 		'''
@@ -68,25 +68,27 @@ class SemPipeline:
 		cooc_dict dictionary.  Finally, it creates a coll_df DataFrame from
 		this dictionary and then pickles this DataFrame to dest
 		'''
-		words = self.word_extract()
-		vocab = list(set(words))
-		self.coll_df = pd.DataFrame(index=vocab, columns=vocab)
-		# c = self.c
-		step = ceil(len(words)/self.c)
-		steps = []
-		for i in range(self.c):
-			steps.append((step*i, min(step*(i+1), len(words))))
-		res = group(counter.s(self.weighted, self.w, words, limits) for limits in steps)().get()
-		for r in res:
-			self.coll_df = self.coll_df.add(pd.DataFrame(r), fill_value=0)
+		self.coll_df = pd.DataFrame()
+		for file in glob('{0}/*.txt'.format(self.dir)):
+			with open(file) as f:
+				self.t = f.read().split('\n')
+			print('Now analyzing {0}'.format(file))
+			words = self.word_extract()
+			step = ceil(len(words)/self.c)
+			steps = []
+			for i in range(self.c):
+				steps.append((step*i, min(step*(i+1), len(words))))
+			res = group(counter.s(self.weighted, self.w, words, limits) for limits in steps)().get()
+			for r in res:
+				self.coll_df = self.coll_df.add(pd.DataFrame(r), fill_value=0)
 		self.coll_df = self.coll_df.fillna(0)
-		dest_file = os.path.join(self.dest,
-								 '_'.join(['COOC',
-										   str(self.w),
-										   'lems={0}'.format(self.lems),
-										   self.corpus[0],
-										   self.corpus[1]]) + '.hd5')
-		self.coll_df.to_hdf(dest_file, 'df', mode='w', complevel=9, complib='blosc')
+		cooc_dest = os.path.join(self.dest,
+							 '_'.join(['COOC',
+									   str(self.w),
+									   'lems={0}'.format(self.lems),
+									   self.corpus[0],
+									   self.corpus[1]]) + '.hd5')
+		self.coll_df.to_hdf(cooc_dest, 'df', mode='w', complevel=9, complib='blosc')
 
 	def log_L(self, k, n, x):
 		'''
@@ -335,31 +337,26 @@ class SemPipeline:
 				   self.weighted,
 				  datetime.datetime.now().time().isoformat()))
 
-	def makeFileNames(self, f):
-		self.orig = os.path.split(f)[0]
-		filename = os.path.split(f)[1]
-		self.dest = os.path.join(self.orig, str(self.w))
+	def makeFileNames(self):
+		self.dest = os.path.join(self.dir, str(self.w))
 		try:
 			os.mkdir(self.dest)
 		except:
 			pass
-		self.corpus = filename.split('_')[-3:-1]
+		self.corpus = '_'.join(self.dir.split('/')[-1].split('_')[:-1])
 
 	def runPipeline(self):
-		if self.files == None:
+		if self.dir == None:
 			self.file_chooser()
-		for file in self.files:
-			self.makeFileNames(file)
-			print('Started analyzing %s at %s' %
-				  (self.corpus[1],
-				  datetime.datetime.now().time().isoformat()))
-			with open(file) as f:
-				self.t = f.read().split('\n')
-			self.cooc_counter()
-			self.stat_eval()
-			if self.svd != 1:
-				self.svd_calc()
-			self.CS()
+		self.makeFileNames()
+		print('Started analyzing %s at %s' %
+			  (self.corpus[1],
+			   datetime.datetime.now().time().isoformat()))
+		self.cooc_counter()
+		self.stat_eval()
+		if self.svd != 1:
+			self.svd_calc()
+		self.CS()
 
 		print('Finished at %s' % (datetime.datetime.now().time().isoformat()))
 
@@ -373,14 +370,13 @@ class PseudoLem(SemPipeline):
 		self.weighted = weighted
 		self.algo = algo
 		self.svd = svd
-		self.files = files
+		self.dir = files
 		self.forms = forms
 		self.lemma = lemma
 
-	def makeFileNames(self, f):
-		self.orig = os.path.split(f)[0]
-		filename = os.path.split(f)[1]
-		self.dest = os.path.join(self.orig, str(self.w), self.lemma)
+	def makeFileNames(self):
+		filename = '_'.join(self.dir.split('_')[:-1])
+		self.dest = os.path.join(self.dir, str(self.w), self.lemma)
 		try:
 			os.mkdir(self.dest)
 		except:
