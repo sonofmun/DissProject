@@ -72,7 +72,7 @@ class SemPipeline:
 		for file in glob('{0}/*.txt'.format(self.dir)):
 			with open(file) as f:
 				self.t = f.read().split('\n')
-			print('Now analyzing {0}'.format(file))
+			#print('Now analyzing {0}'.format(file))
 			words = self.word_extract()
 			step = ceil(len(words)/self.c)
 			steps = []
@@ -82,6 +82,7 @@ class SemPipeline:
 			for r in res:
 				self.coll_df = self.coll_df.add(pd.DataFrame(r), fill_value=0)
 		self.coll_df = self.coll_df.fillna(0)
+		print('Now writing cooccurrence file at {0}'.format(datetime.datetime.now().time().isoformat()))
 		cooc_dest = os.path.join(self.dest,
 							 '_'.join(['COOC',
 									   str(self.w),
@@ -291,8 +292,8 @@ class SemPipeline:
 	def stat_eval(self):
 		print('Starting %s calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
-				  (self.corpus[1],
-				   self.algo,
+				  (self.algo,
+				   self.corpus[1],
 				   str(self.w),
 				   self.lems,
 				   self.weighted,
@@ -304,8 +305,8 @@ class SemPipeline:
 			self.LL()
 		print('Finished with %s calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
-				  (self.corpus[1],
-				   self.algo,
+				  (self.algo,
+				   self.corpus[1],
 				   str(self.w),
 				   self.lems,
 				   self.weighted,
@@ -350,7 +351,7 @@ class SemPipeline:
 			self.file_chooser()
 		self.makeFileNames()
 		print('Started analyzing %s at %s' %
-			  (self.corpus[1],
+			  (self.corpus,
 			   datetime.datetime.now().time().isoformat()))
 		self.cooc_counter()
 		self.stat_eval()
