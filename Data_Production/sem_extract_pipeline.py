@@ -464,5 +464,5 @@ if __name__ == '__main__':
 				weighted=bool(int(sys.argv[3])),
 				algo=sys.argv[4],
 				svd=float(sys.argv[5]),
-				files=sys.argv[6].split(),
+				files=sys.argv[6],
 				c=int(sys.argv[7])).runPipeline()
