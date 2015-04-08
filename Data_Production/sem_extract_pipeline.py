@@ -87,8 +87,7 @@ class SemPipeline:
 							 '_'.join(['COOC',
 									   str(self.w),
 									   'lems={0}'.format(self.lems),
-									   self.corpus[0],
-									   self.corpus[1]]) + '.hd5')
+									   self.corpus]) + '.hd5')
 		self.coll_df.to_hdf(cooc_dest, 'df', mode='w', complevel=9, complib='blosc')
 
 	def log_L(self, k, n, x):
@@ -215,8 +214,7 @@ class SemPipeline:
 								 '_'.join(['LL',
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
-										   self.corpus[0],
-										   self.corpus[1]]) + '.hd5')
+										   self.corpus]) + '.hd5')
 		self.stat_df.to_hdf(dest_file, 'df', mode='w', complevel=9, complib='blosc')
 		del self.coll_df
 
@@ -249,8 +247,7 @@ class SemPipeline:
 								 '_'.join(['PPMI',
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
-										   self.corpus[0],
-										   self.corpus[1]]) + '.hd5')
+										   self.corpus]) + '.hd5')
 		self.stat_df.to_hdf(dest_file, 'df', mode='w', complevel=9, complib='blosc')
 		del self.coll_df
 
@@ -275,15 +272,14 @@ class SemPipeline:
 								 '_'.join([self.algo,
 										   'CS',
 										   str(self.w),
-										   self.corpus[0],
-										   self.corpus[1],
+										   self.corpus,
 										   'lems={0}'.format(self.lems),
 										   'SVD_exp={0}.hd5'.format(str(self.svd))]))
 		self.CS_df.to_hdf(dest_file, 'df', mode='w', complevel=9, complib='blosc')
 		del self.stat_df
 		print('Finished with CS calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
-				  (self.corpus[1],
+				  (self.corpus,
 				   str(self.w),
 				   self.lems,
 				   self.weighted,
@@ -293,7 +289,7 @@ class SemPipeline:
 		print('Starting %s calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
 				  (self.algo,
-				   self.corpus[1],
+				   self.corpus,
 				   str(self.w),
 				   self.lems,
 				   self.weighted,
@@ -306,7 +302,7 @@ class SemPipeline:
 		print('Finished with %s calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
 				  (self.algo,
-				   self.corpus[1],
+				   self.corpus,
 				   str(self.w),
 				   self.lems,
 				   self.weighted,
@@ -332,7 +328,7 @@ class SemPipeline:
 					 index=self.stat_df.index)
 		print('Finished SVD calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
-				  (self.corpus[1],
+				  (self.corpus,
 				   str(self.w),
 				   self.lems,
 				   self.weighted,
