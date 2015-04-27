@@ -259,7 +259,7 @@ class SemPipeline:
 		"""
 		print('Starting CS calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
-				  (self.corpus[1],
+				  (self.corpus,
 				   str(self.w),
 				   self.lems,
 				   self.weighted,
