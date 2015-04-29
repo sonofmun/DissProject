@@ -2,10 +2,6 @@
 
 __author__ = 'matt'
 
-'''
-This file will calculate a pandas DataFrame for the co-occurrence of each
-word with every other word
-'''
 import pandas as pd
 import re
 import os.path
@@ -18,7 +14,13 @@ from math import log, pow
 from copy import deepcopy
 import sys
 from sklearn.cross_validation import KFold
+from celery import group
+from proj.tasks import counter
 
+
+PACKAGE_PARENT = '..'
+SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
+sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
 
 class CollCount:
 
