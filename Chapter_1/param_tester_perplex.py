@@ -2,99 +2,60 @@
 
 __author__ = 'matt'
 
-import pandas as pd
-import re
-import os.path
 from pickle import dump
-from collections import defaultdict
-import datetime
-from glob import glob
-import numpy as np
 from math import log, pow
 from copy import deepcopy
-import sys
 from sklearn.cross_validation import KFold
-from celery import group
-from proj.tasks import counter
+from Data_Production.sem_extract_pipeline import *
 
 
 PACKAGE_PARENT = '..'
 SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
 sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
 
-class CollCount:
-
-    def __init__(self, training, testing, w, lem, weighted):
-        """Takes an xml formatted file, extracts the 'lem' attributes from
-        each <w> tag, and then counts how often each word occurs withing the
-        specified window size 'w' left and window size right.
-        :param w:
-        """
-        self.training = training
-        self.testing = testing
-        self.w = w
-        self.lems = lem
-        self.weighted = weighted
-
-    def file_chooser(self, l):
-        '''
-        This function opens the filename from the main for loop, extracts a
-        type list and a token list, creates a count dictionary from these two
-        lists, and then returns the type and token lists, which will then be
-        used to calculated co-occurrences later
-        '''
-        if self.lems:
-            words = [re.sub(r'.+?lem="([^"]*).*', r'\1', line)
-                     for line in l]
-        else:
-            words = [re.sub(r'.+?>([^<]*).*', r'\1', line)
-                     for line in l]
-        return words
+def word_extract(self):
+		'''
+		Extracts all of the words/lemmata from the lines extracted from
+		the XML file
+		'''
+		if self.lems:
+			return [re.sub(r'.+?lem="([^"]*).*', r'\1', line).lower()
+					 for line in self.t]
+		else:
+			return [re.sub(r'.+?>([^<]*).*', r'\1', line).lower()
+					 for line in self.t]
 
 
-    def cooc_counter(self, tokens):
-        '''
-        This function takes a token list, a windows size (default
-        is 4 left and 4 right), and a destination filename, runs through the
-        token list, reading every word to the window left and window right of
-        the target word, and then keeps track of these co-occurrences in a
-        cooc_dict dictionary.  Finally, it creates a coll_df DataFrame from
-        this dictionary and then pickles this DataFrame to dest
-        '''
-        cooc_dict = defaultdict(dict)
-        for i, t in enumerate(tokens):
-            c_list = []
-            if self.weighted:
-                for pos in range(max(i-self.w, 0),min(i+self.w+1, len(tokens))):
-                    if pos != i:
-                        for x in range(self.w+1-abs(i-pos)):
-                            c_list.append(tokens[pos])
-            else:
-                [c_list.append(c) for c in
-                 tokens[max(i-self.w, 0):min(i+self.w+1, len(tokens))]]
-                c_list.remove(t)
-            for c in c_list:
-                try:
-                    cooc_dict[t][c] += 1
-                except KeyError:
-                    cooc_dict[t][c] = 1
-            if i % 100000 == 0:
-                print('Processing token %s of %s at %s' % (i, len(tokens),
-                                datetime.datetime.now().time().isoformat()))
-        coll_df = pd.DataFrame(cooc_dict).fillna(0)
-        # Add 1 to the answer for LaPlace Smoothing
-        return coll_df + 1
-
-
-    def colls(self):
-        """Takes an xml formatted file, extracts the 'lem' attributes from
-        each <w> tag, and then counts how often each word occurs withing the
-        specified window size 'w' left and window size right.
-        """
-
-        train_words = self.file_chooser(self.training)
-        test_words = self.file_chooser(self.testing)
-        return self.cooc_counter(train_words), self.cooc_counter(test_words)
+def cooc_counter(self):
+	'''
+	This function takes a token list, a windows size (default
+	is 4 left and 4 right), and a destination filename, runs through the
+	token list, reading every word to the window left and window right of
+	the target word, and then keeps track of these co-occurrences in a
+	cooc_dict dictionary.  Finally, it creates a coll_df DataFrame from
+	this dictionary and then pickles this DataFrame to dest
+	'''
+	self.coll_df = pd.DataFrame()
+	for file in glob('{0}/*.txt'.format(self.dir)):
+		with open(file) as f:
+			self.t = f.read().split('\n')
+		#print('Now analyzing {0}'.format(file))
+		words = self.word_extract()
+		step = ceil(len(words)/self.c)
+		steps = []
+		for i in range(self.c):
+			steps.append((step*i, min(step*(i+1), len(words))))
+		res = group(counter.s(self.weighted, self.w, words, limits) for limits in steps)().get()
+		for r in res:
+			self.coll_df = self.coll_df.add(pd.DataFrame(r), fill_value=0)
+	self.coll_df = self.coll_df.fillna(0)
+	print('Now writing cooccurrence file at {0}'.format(datetime.datetime.now().time().isoformat()))
+	cooc_dest = os.path.join(self.dest,
+						 '_'.join(['COOC',
+								   str(self.w),
+								   'lems={0}'.format(self.lems),
+								   self.corpus]) + '.hd5')
+	self.coll_df.to_hdf(cooc_dest, 'df', mode='w', complevel=9, complib='blosc')
 
 
 class LogLike:
@@ -341,87 +302,78 @@ def scaler(df):
     return scaled
 
 def RunTests(min_w, max_w, orig=None):
-    if orig == None:
-        from tkinter.filedialog import askdirectory
-        orig = askdirectory(title='Where are your original XML files located?')
-    orig = os.path.join(orig, '*.txt')
-    files = glob(orig)
-    for file in files:
-        corpus = file.split('_')[-2]
-        print('Started analyzing %s at %s' %
-              (corpus,
-              datetime.datetime.now().time().isoformat()))
-        perplex_dict = {}
-        with open(file) as f:
-            t = f.read().split('\n')
-        kf = KFold(len(t), n_folds=10)
-        for size in range(min_w, max_w+1):
-            for weighted in (True, False):
-                lemmata = True
-                ll_list = []
-                pmi_list = []
-                counter = 1
-                for train, test in kf:
-                    print('Fold %s, weighted %s, lemmata %s, w=%s at %s' %
-                          (counter,
-                           weighted,
-                           lemmata,
-                           size,
-                           datetime.datetime.now().time().isoformat()))
-                    t_train, t_test = CollCount([t[x] for x in train],
-                                                [t[x] for x in test],
-                                                size,
-                                                lemmata,
-                                                weighted).colls()
-                    ind_int = set(t_train.index).intersection(t_test.index)
-                    exponent = 1/np.sum(t_test.values)
-                    print('Starting LL calculations for '
-                          'window size %s at %s' %
-                          (str(size),
-                           datetime.datetime.now().time().isoformat()))
-                    t_ll = LogLike(t_train).LL()
-                    ll_list.append(pow
-                                   (np.e,
-                                    np.sum
-                                    (np.log
-                                        (1/np.multiply
-                                        (scaler
-                                         (t_ll).ix[ind_int,ind_int],
-                                         t_test.ix[ind_int,ind_int])
-                                          .values))
-                                    * exponent))
-                    del t_ll
-                    print('Starting PPMI calculations for '
-                          'window size %s at %s' %
-                          (str(size),
-                          datetime.datetime.now().time().isoformat()))
-                    t_pmi = PPMI(t_train).PPMI()
-                    pmi_list.append(pow
-                                    (np.e,
-                                     np.sum
-                                    (np.log
-                                        (1/np.multiply
-                                        (scaler
-                                         (t_pmi).ix[ind_int,ind_int],
-                                         t_test.ix[ind_int,ind_int])
-                                          .values))
-                                    * exponent))
-                    del t_pmi
-                    counter += 1
-                perplex_dict[('LL',
-                              size,
-                              'lems=%s' % (lemmata),
-                              'weighted =%s' % (weighted))] = \
-                                sum(ll_list)/len(ll_list)
-                perplex_dict[('PPMI',
-                              size,
-                              'lems=%s' % (lemmata),
-                              'weighted =%s' % (weighted))] = \
-                                sum(pmi_list)/len(pmi_list)
-        dest_file = file.replace('.txt',
-                                 '_%s_%s_perplexity.pickle' % (min_w, max_w))
-        with open(dest_file, mode='wb') as f:
-            dump(perplex_dict, f)
+	perplex_dict = {}
+	t = f.read().split('\n')
+	kf = KFold(len(t), n_folds=10)
+	for size in range(min_w, max_w+1):
+		for weighted in (True, False):
+			lemmata = True
+			pipe = SemPipeline(win_size=size,
+							   lemmata=lemmata,
+							   weighted=weighted,
+							   files=orig,
+							   c=40)
+			ll_list = []
+			pmi_list = []
+			counter = 1
+			for train, test in kf:
+				print('Fold %s, weighted %s, lemmata %s, w=%s at %s' %
+					  (counter,
+					   weighted,
+					   lemmata,
+					   size,
+					   datetime.datetime.now().time().isoformat()))
+
+				t_train, t_test = pipe.cooc_counter()
+				ind_int = set(t_train.index).intersection(t_test.index)
+				exponent = 1/np.sum(t_test.values)
+				print('Starting LL calculations for '
+					  'window size %s at %s' %
+					  (str(size),
+					   datetime.datetime.now().time().isoformat()))
+				t_ll = LogLike(t_train).LL()
+				ll_list.append(pow
+							   (np.e,
+								np.sum
+								(np.log
+									(1/np.multiply
+									(scaler
+									 (t_ll).ix[ind_int,ind_int],
+									 t_test.ix[ind_int,ind_int])
+									  .values))
+								* exponent))
+				del t_ll
+				print('Starting PPMI calculations for '
+					  'window size %s at %s' %
+					  (str(size),
+					  datetime.datetime.now().time().isoformat()))
+				t_pmi = PPMI(t_train).PPMI()
+				pmi_list.append(pow
+								(np.e,
+								 np.sum
+								(np.log
+									(1/np.multiply
+									(scaler
+									 (t_pmi).ix[ind_int,ind_int],
+									 t_test.ix[ind_int,ind_int])
+									  .values))
+								* exponent))
+				del t_pmi
+				counter += 1
+			perplex_dict[('LL',
+						  size,
+						  'lems=%s' % (lemmata),
+						  'weighted =%s' % (weighted))] = \
+							sum(ll_list)/len(ll_list)
+			perplex_dict[('PPMI',
+						  size,
+						  'lems=%s' % (lemmata),
+						  'weighted =%s' % (weighted))] = \
+							sum(pmi_list)/len(pmi_list)
+	dest_file = file.replace('.txt',
+							 '_%s_%s_perplexity.pickle' % (min_w, max_w))
+	with open(dest_file, mode='wb') as f:
+		dump(perplex_dict, f)
     print('Finished at %s' % (datetime.datetime.now().time().isoformat()))
 
 if __name__ == '__main__':

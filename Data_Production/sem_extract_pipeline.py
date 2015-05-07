@@ -13,7 +13,7 @@ sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
 import re
 from collections import defaultdict
 import datetime
-from math import log, ceil
+from math import log, ceil, pow
 
 import pandas as pd
 import numpy as np
@@ -26,6 +26,9 @@ from sklearn.metrics.pairwise import pairwise_distances
 from glob import glob
 from celery import group
 from proj.tasks import counter
+from sklearn.cross_validation import KFold
+from pickle import dump
+from copy import deepcopy
 
 
 class SemPipeline:
@@ -47,6 +50,9 @@ class SemPipeline:
 			title = 'In which directory are the XML file(s) would you like to analyze?'
 			self.dir = askdirectory(title=title)
 
+	def df_to_hdf(self, df, dest):
+		df.to_hdf(dest, 'df', mode='w', complevel=9, complib='blosc')
+
 	def word_extract(self):
 		'''
 		Extracts all of the words/lemmata from the lines extracted from
@@ -58,6 +64,7 @@ class SemPipeline:
 		else:
 			return [re.sub(r'.+?>([^<]*).*', r'\1', line).lower()
 					 for line in self.t]
+
 
 	def cooc_counter(self):
 		'''
@@ -83,12 +90,15 @@ class SemPipeline:
 				self.coll_df = self.coll_df.add(pd.DataFrame(r), fill_value=0)
 		self.coll_df = self.coll_df.fillna(0)
 		print('Now writing cooccurrence file at {0}'.format(datetime.datetime.now().time().isoformat()))
-		cooc_dest = os.path.join(self.dest,
-							 '_'.join(['COOC',
-									   str(self.w),
-									   'lems={0}'.format(self.lems),
-									   self.corpus]) + '.hd5')
-		self.coll_df.to_hdf(cooc_dest, 'df', mode='w', complevel=9, complib='blosc')
+		try:
+			cooc_dest = os.path.join(self.dest,
+								 '_'.join(['COOC',
+										   str(self.w),
+										   'lems={0}'.format(self.lems),
+										   self.corpus]) + '.hd5')
+			self.df_to_hdf(self.coll_df, cooc_dest)
+		except AttributeError:
+			print('Cooccurrence calculation finished')
 
 	def log_L(self, k, n, x):
 		'''
@@ -210,13 +220,16 @@ class SemPipeline:
 		for row in self.coll_df.index:
 			self.stat_df.ix[row] = self.log_like(row, c2, p, n)
 		self.stat_df = self.stat_df.fillna(0)
-		dest_file = os.path.join(self.dest,
-								 '_'.join(['LL',
-										   str(self.w),
-										   'lems={0}'.format(self.lems),
-										   self.corpus]) + '.hd5')
-		self.stat_df.to_hdf(dest_file, 'df', mode='w', complevel=9, complib='blosc')
-		del self.coll_df
+		try:
+			dest_file = os.path.join(self.dest,
+									 '_'.join(['LL',
+											   str(self.w),
+											   'lems={0}'.format(self.lems),
+											   self.corpus]) + '.hd5')
+			self.df_to_hdf(self.stat_df, dest_file)
+			del self.coll_df
+		except AttributeError:
+			print('LL calc finished')
 
 	def PMI_calc(self, row, P2, N):
 		'''
@@ -243,13 +256,16 @@ class SemPipeline:
 			self.stat_df.ix[row] = self.PMI_calc(row, p2, n)
 		self.stat_df[self.stat_df<0] = 0
 		self.stat_df= self.stat_df.fillna(0)
-		dest_file = os.path.join(self.dest,
-								 '_'.join(['PPMI',
-										   str(self.w),
-										   'lems={0}'.format(self.lems),
-										   self.corpus]) + '.hd5')
-		self.stat_df.to_hdf(dest_file, 'df', mode='w', complevel=9, complib='blosc')
-		del self.coll_df
+		try:
+			dest_file = os.path.join(self.dest,
+									 '_'.join(['PPMI',
+											   str(self.w),
+											   'lems={0}'.format(self.lems),
+											   self.corpus]) + '.hd5')
+			self.df_to_hdf(self.stat_df, dest_file)
+			del self.coll_df
+		except AttributeError:
+			print('PPMI Calc finished')
 
 	def CS(self):
 		"""This function calls the pairwise distance function from sklearn
@@ -268,15 +284,18 @@ class SemPipeline:
 		CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs = 1)
 		self.CS_df = pd.DataFrame(CS_Dists, index=self.stat_df.index,
 								  columns=self.stat_df.index)
-		dest_file = os.path.join(self.dest,
-								 '_'.join([self.algo,
-										   'CS',
-										   str(self.w),
-										   self.corpus,
-										   'lems={0}'.format(self.lems),
-										   'SVD_exp={0}.hd5'.format(str(self.svd))]))
-		self.CS_df.to_hdf(dest_file, 'df', mode='w', complevel=9, complib='blosc')
-		del self.stat_df
+		try:
+			dest_file = os.path.join(self.dest,
+									 '_'.join([self.algo,
+											   'CS',
+											   str(self.w),
+											   self.corpus,
+											   'lems={0}'.format(self.lems),
+											   'SVD_exp={0}.hd5'.format(str(self.svd))]))
+			self.df_to_hdf(self.CS_df, dest_file)
+			del self.stat_df
+		except AttributeError:
+			print('Not saving CS file')
 		print('Finished with CS calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
 				  (self.corpus,
@@ -454,11 +473,140 @@ class WithCelery(SemPipeline):
 										   self.corpus[1]]) + '.hd5')
 		self.coll_df.to_hdf(dest_file, 'df', mode='w', complevel=9, complib='blosc')
 
+class ParamTester(SemPipeline):
+
+	def __init__(self, c=8):
+		"""
+		"""
+		self.c = c
+
+	def cooc_counter(self, text):
+		'''
+		This function takes a token list, a windows size (default
+		is 4 left and 4 right), and a destination filename, runs through the
+		token list, reading every word to the window left and window right of
+		the target word, and then keeps track of these co-occurrences in a
+		cooc_dict dictionary.  Finally, it creates a coll_df DataFrame from
+		this dictionary and then pickles this DataFrame to dest
+		'''
+		coll_df = pd.DataFrame()
+		self.t = text
+		words = self.word_extract()
+		step = ceil(len(words)/self.c)
+		steps = []
+		for i in range(self.c):
+			steps.append((step*i, min(step*(i+1), len(words))))
+		res = group(counter.s(self.weighted, self.w, words, limits) for limits in steps)().get()
+		for r in res:
+			coll_df = coll_df.add(pd.DataFrame(r), fill_value=0)
+		coll_df = coll_df.fillna(0)
+		return coll_df
+
+	def scaler(self, df):
+		"""Scales the values of the given DataFrame to a range between
+		0 and 1
+
+		:param df:
+		"""
+		from sklearn.preprocessing import MinMaxScaler
+		df1 = deepcopy(df)
+		scaled = pd.DataFrame(MinMaxScaler
+							  (feature_range=(.01,1)).fit_transform(df1),
+							  index = df.index,
+							  columns = df.columns,
+							  dtype=np.float128)
+		return scaled
+
+	def RunTests(self, min_w, max_w, step, orig=None):
+
+		self.perplex_dict = {}
+		files = glob('{0}/*.txt'.format(orig))
+		folds = defaultdict(list)
+		#calculate the fold indices for all of the individual text
+		for file in files:
+			with open(file, mode='r', encoding='utf-8') as f:
+				t = f.read().split('\n')
+			kf = KFold(len(t), n_folds=10)
+			for train, test in kf:
+				t_train = [t[i] for i in train]
+				t_test = [t[i] for i in test]
+				folds[file].append([t_train, t_test])
+		for self.w in range(min_w, max_w+1, step):
+			self.coll_df = pd.DataFrame()
+			t_test = pd.DataFrame()
+			self.weighted = True
+			self.lems = True
+			ll_list = []
+			pmi_list = []
+			counter = 1
+			#this loop goes through each of the 10 folds for each text
+			#it will keep track of the test and train cooccurrence statistics
+			#individually
+			for f_num in range(10):
+				print('Fold %s, weighted %s, lemmata %s, w=%s at %s' %
+					  (f_num,
+					   self.weighted,
+					   self.lems,
+					   self.w,
+					   datetime.datetime.now().time().isoformat()))
+
+				for file in folds.keys():
+					self.coll_df = self.coll_df.add(self.cooc_counter(folds[file][f_num][0]), fill_value=0).fillna(0)
+					t_test = t_test.add(self.cooc_counter(folds[file][f_num][1]), fill_value=0).fillna(0)
+				#laplace smoothing
+				self.coll_df = self.coll_df + 1
+				t_test = t_test + 1
+				ind_int = set(self.coll_df.index).intersection(t_test.index)
+				exponent = 1/np.sum(t_test.values)
+				print('Starting LL calculations for '
+					  'window size %s at %s' %
+					  (str(self.w),
+					   datetime.datetime.now().time().isoformat()))
+				self.LL()
+				ll_list.append(pow
+							   (np.e,
+								np.sum
+								(np.log(1/np.multiply(self.scaler(self.stat_df).ix[ind_int,ind_int],
+													  t_test.ix[ind_int,ind_int]).values))
+								* exponent))
+				del self.stat_df
+				print('Starting PPMI calculations for '
+					  'window size %s at %s' %
+					  (str(self.w),
+					  datetime.datetime.now().time().isoformat()))
+				self.PPMI()
+				pmi_list.append(pow
+								(np.e, np.sum(np.log(1/np.multiply(self.scaler(self.stat_df).ix[ind_int,ind_int],
+									 t_test.ix[ind_int,ind_int]).values))
+								* exponent))
+				#del self.stat_df
+				counter += 1
+			self.perplex_dict[('LL',
+						  self.w,
+						  'lems=%s' % (self.lems),
+						  'weighted =%s' % (self.weighted))] = \
+							sum(ll_list)/len(ll_list)
+			self.perplex_dict[('PPMI',
+						  self.w,
+						  'lems=%s' % (self.lems),
+						  'weighted =%s' % (self.weighted))] = \
+							sum(pmi_list)/len(pmi_list)
+		dest_file = '{0}/{1}_{2}_perplexity.pickle'.format(orig, min_w, max_w)
+		with open(dest_file, mode='wb') as f:
+			dump(self.perplex_dict, f)
+
+
 if __name__ == '__main__':
-	SemPipeline(win_size=int(sys.argv[1]),
-				lemmata=bool(int(sys.argv[2])),
-				weighted=bool(int(sys.argv[3])),
-				algo=sys.argv[4],
-				svd=float(sys.argv[5]),
-				files=sys.argv[6],
-				c=int(sys.argv[7])).runPipeline()
+	if sys.argv[1] == "SemPipeLine":
+		SemPipeline(win_size=int(sys.argv[2]),
+				lemmata=bool(int(sys.argv[3])),
+				weighted=bool(int(sys.argv[4])),
+				algo=sys.argv[5],
+				svd=float(sys.argv[6]),
+				files=sys.argv[7],
+				c=int(sys.argv[8])).runPipeline()
+	if sys.argv[1] == "ParamTester":
+		ParamTester(c=int(sys.argv[2])).RunTests(min_w=int(sys.argv[3]),
+												 max_w=int(sys.argv[4]),
+												 step=int(sys.argv[5]),
+												 orig=sys.argv[6])
