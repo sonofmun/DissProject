@@ -42,7 +42,7 @@ class CS_comp(compare):
 	def CS_compare(self):
 		for x in range(10, 201, 10):
 			print('NOW WORKING ON CHUNK SIZE {0}'.format(x))
-			with open('{0}/{1}/working/train/model/lex.e2f'.format(self.tests, x), mode='r', encoding='utf-8') as f:
+			with open('{0}/{1}/lex.f2e'.format(self.tests, x), mode='r', encoding='utf-8') as f:
 				test_lines = f.readlines()
 			i = []
 			v = []
@@ -63,7 +63,7 @@ class best_comp(compare):
 		total = 0
 		for x in range(10, 201, 10):
 			print('NOW WORKING ON CHUNK SIZE {0}'.format(x))
-			with open('{0}/{1}/working/train/model/lex.e2f'.format(self.tests, x), mode='r', encoding='utf-8') as f:
+			with open('{0}/{1}/lex.f2e'.format(self.tests, x), mode='r', encoding='utf-8') as f:
 				test_lines = f.readlines()
 			i1 = []
 			i2 = []
@@ -94,7 +94,7 @@ class candidate_comp(compare):
 		total = 0
 		for x in range(10, 201, 10):
 			print('NOW WORKING ON CHUNK SIZE {0}'.format(x))
-			with open('{0}/{1}/working/train/model/lex.e2f'.format(self.tests, x), mode='r', encoding='utf-8') as f:
+			with open('{0}/{1}/lex.f2e'.format(self.tests, x), mode='r', encoding='utf-8') as f:
 				test_lines = f.readlines()
 			i1 = []
 			i2 = []
