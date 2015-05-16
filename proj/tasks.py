@@ -3,7 +3,7 @@ from __future__ import absolute_import
 import datetime
 import pandas as pd
 from celery import Celery
-from collections import defaultdict
+from collections import defaultdict, Counter
 
 app = Celery()
 app.config_from_object('celeryconfig')
@@ -27,7 +27,7 @@ def xsum(numbers):
 @app.task(name='proj.tasks.counter')
 def counter(weighted, w, words, limits):
 	b, e = limits
-	cooc_dict = defaultdict(dict)
+	cooc_dict = defaultdict(Counter)
 	for i in range(b, e):
 		t = words[i]
 		c_list = []
@@ -40,15 +40,16 @@ def counter(weighted, w, words, limits):
 			[c_list.append(c) for c in
 			 words[max(i-w, 0):min(i+w+1, len(words))]]
 			c_list.remove(t)
-		for c in c_list:
-			try:
-				cooc_dict[t][c] += 1
-			except KeyError:
-				cooc_dict[t][c] = 1
+		cooc_dict[t] += Counter(c_list)
+		#for c in c_list:
+		#	try:
+		#		cooc_dict[t][c] += 1
+		#	except KeyError:
+		#		cooc_dict[t][c] = 1
 		if i % 100000 == 0:
 			print('Processing token {0} of {1} for window size {2} at {3}'.format(i, len(words), w,
 							datetime.datetime.now().time().isoformat()))
-	return cooc_dict
+	return Counter(cooc_dict)
 
 	'''s = pd.Series(0, index=[t], name=t)
 	if weighted:
