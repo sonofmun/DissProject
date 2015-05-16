@@ -29,6 +29,7 @@ from proj.tasks import counter
 from sklearn.cross_validation import KFold
 from pickle import dump
 from copy import deepcopy
+import os
 
 
 class SemPipeline:
@@ -76,6 +77,14 @@ class SemPipeline:
 		this dictionary and then pickles this DataFrame to dest
 		'''
 		#self.coll_df = pd.DataFrame()
+		cooc_dest = os.path.join(self.dest,
+								 '_'.join(['COOC',
+										   str(self.w),
+										   'lems={0}'.format(self.lems),
+										   self.corpus]) + '.hd5')
+		if os.path.isfile(cooc_dest):
+			self.coll_df = pd.read_hdf(cooc_dest, 'df')
+			return
 		counts = Counter()
 		for file in glob('{0}/*.txt'.format(self.dir)):
 			with open(file) as f:
@@ -100,11 +109,6 @@ class SemPipeline:
 		self.coll_df = pd.DataFrame(counts, dtype=np.float32).fillna(0)
 		print('Now writing cooccurrence file at {0}'.format(datetime.datetime.now().time().isoformat()))
 		try:
-			cooc_dest = os.path.join(self.dest,
-								 '_'.join(['COOC',
-										   str(self.w),
-										   'lems={0}'.format(self.lems),
-										   self.corpus]) + '.hd5')
 			self.df_to_hdf(self.coll_df, cooc_dest)
 		except AttributeError:
 			print('Cooccurrence calculation finished')
@@ -219,6 +223,14 @@ class SemPipeline:
 	def LL(self):
 		"""This function guides the log-likelihood calculation process
 		"""
+		dest_file = os.path.join(self.dest,
+									 '_'.join(['LL',
+											   str(self.w),
+											   'lems={0}'.format(self.lems),
+											   self.corpus]) + '.hd5')
+		if os.path.isfile(dest_file):
+			self.stat_df = pd.read_hdf(dest_file, 'df')
+			return
 		n = np.sum(self.coll_df.values)
 		#values for C2
 		c2 = np.sum(self.coll_df)
@@ -230,11 +242,6 @@ class SemPipeline:
 			self.stat_df.ix[row] = self.log_like(row, c2, p, n)
 		self.stat_df = self.stat_df.fillna(0)
 		try:
-			dest_file = os.path.join(self.dest,
-									 '_'.join(['LL',
-											   str(self.w),
-											   'lems={0}'.format(self.lems),
-											   self.corpus]) + '.hd5')
 			self.df_to_hdf(self.stat_df, dest_file)
 			del self.coll_df
 		except AttributeError:
@@ -256,6 +263,14 @@ class SemPipeline:
 	def PPMI(self):
 		"""This function guides the PPMI calculation process
 		"""
+		dest_file = os.path.join(self.dest,
+									 '_'.join(['PPMI',
+											   str(self.w),
+											   'lems={0}'.format(self.lems),
+											   self.corpus]) + '.hd5')
+		if os.path.isfile(dest_file):
+			self.stat_df = pd.read_hdf(dest_file, 'df')
+			return
 		n = np.sum(self.coll_df.values)
 		#values for C2
 		p2 = np.sum(self.coll_df)/n
@@ -266,11 +281,6 @@ class SemPipeline:
 		self.stat_df[self.stat_df<0] = 0
 		self.stat_df= self.stat_df.fillna(0)
 		try:
-			dest_file = os.path.join(self.dest,
-									 '_'.join(['PPMI',
-											   str(self.w),
-											   'lems={0}'.format(self.lems),
-											   self.corpus]) + '.hd5')
 			self.df_to_hdf(self.stat_df, dest_file)
 			del self.coll_df
 		except AttributeError:
@@ -290,7 +300,10 @@ class SemPipeline:
 				   self.weighted,
 				  datetime.datetime.now().time().isoformat()))
 		self.stat_df = self.stat_df.replace(to_replace=np.inf, value=0)
-		CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs = 1)
+		if __name__ == '__main__':
+			CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=-1)
+		else:
+			CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=1)
 		self.CS_df = pd.DataFrame(CS_Dists, index=self.stat_df.index,
 								  columns=self.stat_df.index, dtype=np.float32)
 		try:
