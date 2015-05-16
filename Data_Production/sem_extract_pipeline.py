@@ -230,6 +230,7 @@ class SemPipeline:
 											   self.corpus]) + '.hd5')
 		if os.path.isfile(dest_file):
 			self.stat_df = pd.read_hdf(dest_file, 'df')
+			del self.coll_df
 			return
 		n = np.sum(self.coll_df.values)
 		#values for C2
@@ -270,6 +271,7 @@ class SemPipeline:
 											   self.corpus]) + '.hd5')
 		if os.path.isfile(dest_file):
 			self.stat_df = pd.read_hdf(dest_file, 'df')
+			del self.coll_df
 			return
 		n = np.sum(self.coll_df.values)
 		#values for C2
