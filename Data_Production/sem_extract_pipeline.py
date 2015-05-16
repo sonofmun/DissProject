@@ -11,7 +11,7 @@ sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
 
 
 import re
-from collections import defaultdict
+from collections import defaultdict, Counter
 import datetime
 from math import log, ceil, pow
 
@@ -75,7 +75,8 @@ class SemPipeline:
 		cooc_dict dictionary.  Finally, it creates a coll_df DataFrame from
 		this dictionary and then pickles this DataFrame to dest
 		'''
-		self.coll_df = pd.DataFrame()
+		#self.coll_df = pd.DataFrame()
+		counts = Counter()
 		for file in glob('{0}/*.txt'.format(self.dir)):
 			with open(file) as f:
 				self.t = f.read().split('\n')
@@ -85,10 +86,18 @@ class SemPipeline:
 			steps = []
 			for i in range(self.c):
 				steps.append((step*i, min(step*(i+1), len(words))))
-			res = group(counter.s(self.weighted, self.w, words, limits) for limits in steps)().get()
-			for r in res:
-				self.coll_df = self.coll_df.add(pd.DataFrame(r), fill_value=0)
-		self.coll_df = self.coll_df.fillna(0)
+			self.res = group(counter.s(self.weighted, self.w, words, limits) for limits in steps)().get()
+			for r in self.res:
+				for key in r.keys():
+					if key in counts.keys():
+						counts[key].update(r[key])
+					else:
+						counts[key] = r[key]
+		#self.coll_df = pd.DataFrame(0, index=list(counts.keys()), columns=list(counts.keys()))
+		#for key in counts.keys():
+		#	for key2 in counts[key].keys():
+		#		self.coll_df.ix[key, key2] = counts[key][key2]
+		self.coll_df = pd.DataFrame(counts, dtype=np.float32).fillna(0)
 		print('Now writing cooccurrence file at {0}'.format(datetime.datetime.now().time().isoformat()))
 		try:
 			cooc_dest = os.path.join(self.dest,
@@ -216,7 +225,7 @@ class SemPipeline:
 		#values for p
 		p = c2/n
 		self.stat_df = pd.DataFrame(0., index=self.coll_df.index,
-							 columns=self.coll_df.index, dtype=np.float64)
+							 columns=self.coll_df.index, dtype=np.float32)
 		for row in self.coll_df.index:
 			self.stat_df.ix[row] = self.log_like(row, c2, p, n)
 		self.stat_df = self.stat_df.fillna(0)
@@ -251,7 +260,7 @@ class SemPipeline:
 		#values for C2
 		p2 = np.sum(self.coll_df)/n
 		self.stat_df = pd.DataFrame(0., index=self.coll_df.index,
-							 columns=self.coll_df.index, dtype=np.float64)
+							 columns=self.coll_df.index, dtype=np.float32)
 		for row in self.coll_df.index:
 			self.stat_df.ix[row] = self.PMI_calc(row, p2, n)
 		self.stat_df[self.stat_df<0] = 0
@@ -283,7 +292,7 @@ class SemPipeline:
 		self.stat_df = self.stat_df.replace(to_replace=np.inf, value=0)
 		CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs = 1)
 		self.CS_df = pd.DataFrame(CS_Dists, index=self.stat_df.index,
-								  columns=self.stat_df.index)
+								  columns=self.stat_df.index, dtype=np.float32)
 		try:
 			dest_file = os.path.join(self.dest,
 									 '_'.join([self.algo,

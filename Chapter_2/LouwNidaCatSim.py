@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import sys
 from pickle import dump
-from tkinter.filedialog import askopenfilename
+from Data_Production.TK_files import tk_control
 
 sys.setrecursionlimit(50000)
 
@@ -17,7 +17,7 @@ class CatSim:
 		try:
 			self.ln = pd.read_pickle('Data/Chapter_2/LN_Cat_Dict.pickle')
 		except FileNotFoundError:
-			ln_file = askopenfilename(title='Where is your Louw-Nida dictionary pickle?')
+			ln_file = tk_control("askopenfilename(title='Where is your Louw-Nida dictionary pickle?')")
 			self.ln = pd.read_pickle(ln_file)
 		self.scores = {}
 		self.averages = {}
@@ -117,7 +117,8 @@ class CatSim:
 									'ἀΐδιος': 'ἀΐδιος',
 									'ἀγραύλεω': 'ἀγραυλέω',
 									'νεομηνία': 'νουμηνία',
-									'Ἑβραΐς': 'Ἑβραΐς'}
+									'Ἑβραΐς': 'Ἑβραΐς',
+									'Ἀβραάμ': 'Ἀβραάμ'.lower()}
 
 
 	def LoadDF(self, w):
@@ -136,8 +137,8 @@ class CatSim:
 			words = []
 			for d in self.ln[cat]['words']:
 				word = list(d.keys())[0]
-				if word in self.df.index:
-					words.append((word, d[word]))
+				if word.lower() in self.df.index:
+					words.append((word.lower(), d[word]))
 					self.tot_words += 1
 					self.good_words.append(word)
 					if cat[0] != 93:
@@ -145,7 +146,7 @@ class CatSim:
 				else:
 					new_word = self.prob_word_replace[word]
 					if new_word != '':
-						words.append((new_word, d[word]))
+						words.append((new_word.lower(), d[word]))
 					self.tot_words += 1
 					self.good_words.append(w)
 					if cat[0] != 93:
@@ -168,14 +169,18 @@ class CatSim:
 				self.scores[w][cat].ix[word1, 'STD +/-'] = (np.mean(vals)-mean)/std
 
 	def AveCalc(self, w):
-		total = 0
-		total_no_93 = 0
+		total_std = 0
+		total_mean = 0
+		total_no_93_std = 0
+		total_no_93_mean = 0
 		for cat in self.scores[w]:
-			total += self.scores[w][cat].ix[:, 'STD +/-'].fillna(0).sum()
+			total_mean +=self.scores[w][cat].ix[:, 'Mean'].fillna(0).sum()
+			total_std += self.scores[w][cat].ix[:, 'STD +/-'].fillna(0).sum()
 			if cat[0] != 93:
-				total_no_93 += self.scores[w][cat].ix[:, 'STD +/-'].fillna(0).sum()
-		self.averages[w] = total/self.tot_words
-		self.ave_no_93[w] = total_no_93/self.words_no_93
+				total_no_93_mean += self.scores[w][cat].ix[:, 'Mean'].fillna(0).sum()
+				total_no_93_std += self.scores[w][cat].ix[:, 'STD +/-'].fillna(0).sum()
+		self.averages[w] = (total_mean/self.tot_words, total_std/self.tot_words)
+		self.ave_no_93[w] = (total_no_93_mean/self.words_no_93, total_no_93_std/self.words_no_93)
 
 	def WriteFiles(self):
 		raise NotImplementedError('WriteFiles is not implemented on CatSim. '
@@ -242,11 +247,11 @@ class CatSim:
 
 class CatSimWin(CatSim):
 
-	def __init__(self):
+	def __init__(self, algo):
 		try:
 			self.ln = pd.read_pickle('Data/Chapter_2/LN_Cat_Dict.pickle')
 		except FileNotFoundError:
-			ln_file = askopenfilename(title='Where is your Louw-Nida dictionary pickle?')
+			ln_file = tk_control("askopenfilename(title='Where is your Louw-Nida dictionary pickle?')")
 			self.ln = pd.read_pickle(ln_file)
 		self.scores = {}
 		self.averages = {}
@@ -254,7 +259,8 @@ class CatSimWin(CatSim):
 		self.good_words = []
 		self.prob_words = []
 		self.rng_type = 'win'
-		self.rng = (20, 60, 100, 200, 300, 350, 400, 450, 500)
+		self.rng = (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500)
+		self.algo = algo
 		self.prob_word_replace = {'περιΐστημι': 'περιΐστημι',
 									'προΐστημι': 'προΐστημι',
 									'παρατεινω': 'παρατείνω',
@@ -348,43 +354,44 @@ class CatSimWin(CatSim):
 									'ἀΐδιος': 'ἀΐδιος',
 									'ἀγραύλεω': 'ἀγραυλέω',
 									'νεομηνία': 'νουμηνία',
-									'Ἑβραΐς': 'Ἑβραΐς'}
+									'Ἑβραΐς': 'Ἑβραΐς',
+									'Ἀβραάμ': 'Ἀβραάμ'.lower()}
 
 	def LoadDF(self, w):
-		file = 'Data/{0}/PPMI_CS_{0}_SBL_GNT_SVD_exp={1}.pickle'.format(str(w), 'None')
+		file = '/media/matt/Data/DissProject/Data/Chapter_2/NT_dist_data/{0}/{1}_CS_{0}__lems=True_SVD_exp=1.0.hd5'.format(str(w), self.algo)
 		try:
-			self.df = pd.read_pickle(file)
+			self.df = pd.read_hdf(file, 'df')
 		except FileNotFoundError:
-			file = askopenfilename(title='Where is your pickle file for window = {0}, svd exponent = {1}'.format(str(w), 'None'))
+			file = tk_control("askopenfilename(title='Where is your pickle file for window = {0}, svd exponent = {1}'.format(str(w), 'None'))")
 			self.df = pd.read_pickle(file)
 
 	def WriteFiles(self):
-		with open('Data/Chapter_2/LN_Word_Cat_Scores.pickle', mode='wb') as file:
+		with open('Data/Chapter_2//per_book/LN_Word_Cat_Scores_{0}.pickle'.format(self.algo), mode='wb') as file:
 			dump(self.scores, file)
 		lems = pd.read_pickle('Data/SBLGNT_lem_dict.pickle')
 		for w_size in self.scores.keys():
-			save_file = 'Data/Chapter_2/LN_Window={0}_Word_Cat_Scores_SVD_exp={1}.csv'.format(str(w_size), 'None')
+			save_file = 'Data/Chapter_2/per_book/LN_Window={0}_Word_Cat_Scores_SVD_exp={1}_{2}.csv'.format(str(w_size), 'None', self.algo)
 			self.WriteLines(save_file, w_size, 'None', lems)
-		with open('Data/Chapter_2/LN_Window_Averages.pickle', mode='wb') as file:
+		with open('Data/Chapter_2/per_book/LN_Window_Averages_{0}.pickle'.format(self.algo), mode='wb') as file:
 			dump(self.averages, file)
-		with open('Data/Chapter_2/LN_Window_Averages.csv',
+		with open('Data/Chapter_2/per_book/LN_Window_Averages_{0}.csv'.format(self.algo),
 				  mode='w',
 				  encoding='utf-8') as file:
 			file.write('Average Number of Standard Deviations above or below Average '
 					   'per window\n')
 			file.write('Window Size,Average,+/- Standard Deviations\n')
 			for w_size in sorted(self.averages.keys()):
-				file.write('{0},{1}\n'.format(w_size, self.averages[w_size]))
-		with open('Data/Chapter_2/LN_Window_Averages_no_93_SVD.pickle', mode='wb') as file:
+				file.write('{0},{1},{2}\n'.format(w_size, self.averages[w_size][0], self.averages[w_size][1]))
+		with open('Data/Chapter_2/per_book/LN_Window_Averages_no_93_SVD_{0}.pickle'.format(self.algo), mode='wb') as file:
 			dump(self.ave_no_93, file)
-		with open('Data/Chapter_2/LN_Window_Averages_no_93_SVD.csv',
+		with open('Data/Chapter_2/per_book/LN_Window_Averages_no_93_SVD_{0}.csv'.format(self.algo),
 				  mode='w',
 				  encoding='utf-8') as file:
 			file.write('Average Number of Standard Deviations above or below Average '
 					   'per window excluding LN Category 93 (Names)\n')
 			file.write('Window Size,Average +/- Standard Deviations\n')
 			for w_size in sorted(self.ave_no_93.keys()):
-				file.write('{0},{1}\n'.format(w_size, self.ave_no_93[w_size]))
+				file.write('{0},{1},{2}\n'.format(w_size, self.ave_no_93[w_size][0], self.ave_no_93[w_size][1]))
 
 class CatSimSVD(CatSim):
 
@@ -392,7 +399,7 @@ class CatSimSVD(CatSim):
 		try:
 			self.ln = pd.read_pickle('Data/Chapter_2/LN_Cat_Dict.pickle')
 		except FileNotFoundError:
-			ln_file = askopenfilename(title='Where is your Louw-Nida dictionary pickle?')
+			ln_file = tk_control("askopenfilename(title='Where is your Louw-Nida dictionary pickle?')")
 			self.ln = pd.read_pickle(ln_file)
 		self.scores = {}
 		self.averages = {}
@@ -501,7 +508,7 @@ class CatSimSVD(CatSim):
 		try:
 			self.df = pd.read_pickle(file)
 		except FileNotFoundError:
-			file = askopenfilename(title='Where is your pickle file for window = {0}, svd exponent = {1}'.format('350', w))
+			file = tk_control("askopenfilename(title='Where is your pickle file for window = {0}, svd exponent = {1}'.format('350', w))")
 			self.df = pd.read_pickle(file)
 
 	def WriteFiles(self):
@@ -540,7 +547,7 @@ class WordCatFinder(CatSim):
 		try:
 			self.ln = pd.read_pickle('Data/Chapter_2/LN_Cat_Dict.pickle')
 		except FileNotFoundError:
-			ln_file = askopenfilename(title='Where is your Louw-Nida dictionary pickle?')
+			ln_file = tk_control("askopenfilename(title='Where is your Louw-Nida dictionary pickle?')")
 			self.ln = pd.read_pickle(ln_file)
 		self.scores = {}
 		self.averages = {}
@@ -648,7 +655,7 @@ class WordCatFinder(CatSim):
 		try:
 			self.df = pd.read_pickle(file)
 		except FileNotFoundError:
-			file = askopenfilename(title='Where is your pickle file for window = 350, svd exponent = 1.45')
+			file = tk_control("askopenfilename(title='Where is your pickle file for window = 350, svd exponent = 1.45')")
 			self.df = pd.read_pickle(file)
 
 	def SimCalc(self, w):
@@ -723,3 +730,46 @@ class WordCatFinder(CatSim):
 		for w in self.rng:
 			self.SimCalc(w)
 		self.WriteFiles()
+
+class SynSimWin(CatSimWin):
+
+	def __init__(self, algo, num_syns, syn_file=None):
+		if syn_file == None:
+			syn_file = tk_control("askopenfilename(title='Where is your synonym DF?')")
+		self.syn_df = pd.read_hdf(syn_file, 'CS')
+		self.averages = {}
+		self.rng = (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500)
+		self.num_syns = num_syns
+		self.algo = algo
+
+	def SimCalc(self, w):
+		mean, std = np.mean(self.df.values), np.std(self.df.values)
+		print('%s average: %s, std: %s' % (w, mean, std))
+		vals = []
+		for word in self.syn_df.index:
+			top_syns = list(self.syn_df[word].order(ascending=False)[1:self.num_syns+1].index)
+			for word2 in top_syns:
+				try:
+					vals.append(self.df.ix[word, word2])
+				except KeyError:
+					continue
+		syn_mean = np.mean(vals)
+		syn_std = (np.mean(vals)-mean)/std
+		self.averages[w] = (syn_mean, syn_std)
+
+	def WriteFiles(self):
+		with open('Data/Chapter_2/per_book/Syn_Window_Averages_{0}_num_syns={1}.csv'.format(self.algo, self.num_syns),
+				  mode='w',
+				  encoding='utf-8') as file:
+			file.write('Average Number of Standard Deviations above or below Average '
+					   'per window\n')
+			file.write('Window Size,Average,+/- Standard Deviations\n')
+			for w_size in sorted(self.averages.keys()):
+				file.write('{0},{1},{2}\n'.format(w_size, self.averages[w_size][0], self.averages[w_size][1]))
+
+	def CatSimPipe(self):
+		for w in self.rng:
+			self.LoadDF(w)
+			self.SimCalc(w)
+		self.WriteFiles()
+		print('Finished')
