@@ -81,10 +81,10 @@ class SemPipeline:
 								 '_'.join(['COOC',
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
-										   self.corpus]) + '.hd5')
-		if os.path.isfile(cooc_dest):
-			self.coll_df = pd.read_hdf(cooc_dest, 'df')
-			return
+										   self.corpus]) + '.dat')
+		#if os.path.isfile(cooc_dest):
+		#	self.coll_df = pd.read_hdf(cooc_dest, 'df')
+		#	return
 		counts = Counter()
 		for file in glob('{0}/*.txt'.format(self.dir)):
 			with open(file) as f:
@@ -102,16 +102,17 @@ class SemPipeline:
 						counts[key].update(r[key])
 					else:
 						counts[key] = r[key]
-		#self.coll_df = pd.DataFrame(0, index=list(counts.keys()), columns=list(counts.keys()))
-		#for key in counts.keys():
-		#	for key2 in counts[key].keys():
-		#		self.coll_df.ix[key, key2] = counts[key][key2]
-		self.coll_df = pd.DataFrame(counts, dtype=np.float32).fillna(0)
+		i = list(counts.keys())
 		print('Now writing cooccurrence file at {0}'.format(datetime.datetime.now().time().isoformat()))
-		try:
-			self.df_to_hdf(self.coll_df, cooc_dest)
-		except AttributeError:
-			print('Cooccurrence calculation finished')
+		self.coll_df = np.memmap(cooc_dest, dtype='float32', mode='w+', shape=(len(i), len(i)))
+		for ind, key in enumerate(i):
+			for ind2, key2 in enumerate(i):
+				self.coll_df[ind, ind2] = counts[key][key2]
+		#self.coll_df = pd.DataFrame(counts, dtype=np.float32).fillna(0)
+		#try:
+		#	self.df_to_hdf(self.coll_df, cooc_dest)
+		#except AttributeError:
+		#	print('Cooccurrence calculation finished')
 
 	def log_L(self, k, n, x):
 		'''
