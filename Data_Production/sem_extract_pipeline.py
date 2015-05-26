@@ -303,7 +303,7 @@ class SemPipeline:
 				  datetime.datetime.now().time().isoformat()))
 		self.stat_df = self.stat_df.replace(to_replace=np.inf, value=0)
 		if __name__ == '__main__':
-			CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=-1)
+			CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=8)
 		else:
 			CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=1)
 		self.CS_df = pd.DataFrame(CS_Dists, index=self.stat_df.index,
