@@ -34,7 +34,7 @@ import os
 
 class SemPipeline:
 
-	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1.45, files=None, c=8):
+	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1.45, files=None, c=8, occ_dict=None, min_count=None):
 		"""
 		"""
 		self.w = win_size
@@ -44,6 +44,8 @@ class SemPipeline:
 		self.svd = svd
 		self.dir = files
 		self.c = c
+		self.occ_dict = occ_dict
+		self.min_count = min_count
 
 
 	def file_chooser(self):
@@ -81,11 +83,18 @@ class SemPipeline:
 								 '_'.join(['COOC',
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
-										   self.corpus]) + '.hd5')
+										   self.corpus,
+										   'min_occ={0}'.format(self.min_count)]) + '.hd5')
 		if os.path.isfile(cooc_dest):
 			self.coll_df = pd.read_hdf(cooc_dest, 'df')
 			return
 		counts = Counter()
+		if self.occ_dict:
+			occs = pd.read_pickle(self.occ_dict)
+			min_lems = set([w for w in occs if occs[w] < self.min_count])
+			del occs
+		else:
+			min_lems = set()
 		for file in glob('{0}/*.txt'.format(self.dir)):
 			with open(file) as f:
 				self.t = f.read().split('\n')
@@ -96,12 +105,15 @@ class SemPipeline:
 			for i in range(self.c):
 				steps.append((step*i, min(step*(i+1), len(words))))
 			self.res = group(counter.s(self.weighted, self.w, words, limits) for limits in steps)().get()
+			#since the counter task returns Counter objects, the update method
+			#below adds instead of replacing the values
 			for r in self.res:
 				for key in r.keys():
-					if key in counts.keys():
-						counts[key].update(r[key])
-					else:
-						counts[key] = r[key]
+					if key not in min_lems:
+						if key in counts.keys():
+							counts[key].update(r[key])
+						else:
+							counts[key] = r[key]
 		#self.coll_df = pd.DataFrame(0, index=list(counts.keys()), columns=list(counts.keys()))
 		#for key in counts.keys():
 		#	for key2 in counts[key].keys():
@@ -227,7 +239,8 @@ class SemPipeline:
 									 '_'.join(['LL',
 											   str(self.w),
 											   'lems={0}'.format(self.lems),
-											   self.corpus]) + '.hd5')
+											   self.corpus,
+											   'min_occ={0}'.format(self.min_count)]) + '.hd5')
 		if os.path.isfile(dest_file):
 			self.stat_df = pd.read_hdf(dest_file, 'df')
 			del self.coll_df
@@ -268,7 +281,8 @@ class SemPipeline:
 									 '_'.join(['PPMI',
 											   str(self.w),
 											   'lems={0}'.format(self.lems),
-											   self.corpus]) + '.hd5')
+											   self.corpus,
+											   'min_occ={0}'.format(self.min_count)]) + '.hd5')
 		if os.path.isfile(dest_file):
 			self.stat_df = pd.read_hdf(dest_file, 'df')
 			del self.coll_df
@@ -315,6 +329,7 @@ class SemPipeline:
 											   str(self.w),
 											   self.corpus,
 											   'lems={0}'.format(self.lems),
+											   'min_occ={0}'.format(self.min_count),
 											   'SVD_exp={0}.hd5'.format(str(self.svd))]))
 			self.df_to_hdf(self.CS_df, dest_file)
 			del self.stat_df
