@@ -645,7 +645,7 @@ if __name__ == '__main__':
 				files=sys.argv[7],
 				c=int(sys.argv[8]),
 				occ_dict=sys.argv[9],
-				min_count=sys.argv[10]).runPipeline()
+				min_count=int(sys.argv[10])).runPipeline()
 	if sys.argv[1] == "ParamTester":
 		ParamTester(c=int(sys.argv[2])).RunTests(min_w=int(sys.argv[3]),
 												 max_w=int(sys.argv[4]),
