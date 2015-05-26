@@ -19,7 +19,7 @@ import pandas as pd
 import numpy as np
 
 try:
-	from tkinter.filedialog import askdirectory
+	from Data_Production.TK_files import tk_control
 except ImportError:
 	print('Tkinter cannot be used on this Python installation.\nPlease designate a list of files in the files variable.')
 from sklearn.metrics.pairwise import pairwise_distances
@@ -50,8 +50,7 @@ class SemPipeline:
 
 	def file_chooser(self):
 		if self.dir == None:
-			title = 'In which directory are the XML file(s) would you like to analyze?'
-			self.dir = askdirectory(title=title)
+			self.dir = tk_control("askdirectory(title='In which directory are the XML file(s) would you like to analyze?')")
 
 	def df_to_hdf(self, df, dest):
 		df.to_hdf(dest, 'df', mode='w', complevel=9, complib='blosc')
@@ -251,7 +250,7 @@ class SemPipeline:
 		#values for p
 		p = c2/n
 		self.stat_df = pd.DataFrame(0., index=self.coll_df.index,
-							 columns=self.coll_df.index, dtype=np.float32)
+							 columns=self.coll_df.columns, dtype=np.float32)
 		for row in self.coll_df.index:
 			self.stat_df.ix[row] = self.log_like(row, c2, p, n)
 		self.stat_df = self.stat_df.fillna(0)
@@ -291,7 +290,7 @@ class SemPipeline:
 		#values for C2
 		p2 = np.sum(self.coll_df)/n
 		self.stat_df = pd.DataFrame(0., index=self.coll_df.index,
-							 columns=self.coll_df.index, dtype=np.float32)
+							 columns=self.coll_df.columns, dtype=np.float32)
 		for row in self.coll_df.index:
 			self.stat_df.ix[row] = self.PMI_calc(row, p2, n)
 		self.stat_df[self.stat_df<0] = 0
@@ -317,7 +316,7 @@ class SemPipeline:
 				  datetime.datetime.now().time().isoformat()))
 		self.stat_df = self.stat_df.replace(to_replace=np.inf, value=0)
 		if __name__ == '__main__':
-			CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=-1)
+			CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=4)
 		else:
 			CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=1)
 		self.CS_df = pd.DataFrame(CS_Dists, index=self.stat_df.index,
