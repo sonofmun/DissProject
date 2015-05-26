@@ -19,7 +19,7 @@ import pandas as pd
 import numpy as np
 
 try:
-	from tkinter.filedialog import askdirectory
+	from Data_Production.TK_files import tk_control
 except ImportError:
 	print('Tkinter cannot be used on this Python installation.\nPlease designate a list of files in the files variable.')
 from sklearn.metrics.pairwise import pairwise_distances
@@ -32,6 +32,7 @@ from copy import deepcopy
 import os
 
 
+
 class SemPipeline:
 
 	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1.45, files=None, c=8):
@@ -41,6 +42,8 @@ class SemPipeline:
 		self.lems = lemmata
 		self.weighted = weighted
 		self.algo = algo
+		if self.algo not in ['PPMI', 'LL', 'both']:
+			print('The only accepted values for "algo" are "PPMI", "LL", or "both".')
 		self.svd = svd
 		self.dir = files
 		self.c = c
@@ -48,8 +51,7 @@ class SemPipeline:
 
 	def file_chooser(self):
 		if self.dir == None:
-			title = 'In which directory are the XML file(s) would you like to analyze?'
-			self.dir = askdirectory(title=title)
+			self.dir = tk_control("askdirectory(title='In which directory are the XML file(s) would you like to analyze?')")
 
 	def df_to_hdf(self, df, dest):
 		df.to_hdf(dest, 'df', mode='w', complevel=9, complib='blosc')
@@ -78,13 +80,14 @@ class SemPipeline:
 		'''
 		#self.coll_df = pd.DataFrame()
 		cooc_dest = os.path.join(self.dest,
-								 '_'.join(['COOC',
+								 '_'.join([self.corpus,
+										   'COOC',
 										   str(self.w),
-										   'lems={0}'.format(self.lems),
-										   self.corpus]) + '.dat')
-		#if os.path.isfile(cooc_dest):
-		#	self.coll_df = pd.read_hdf(cooc_dest, 'df')
-		#	return
+										   'lems={0}'.format(self.lems)]) + '.dat')
+		if os.path.isfile(cooc_dest):
+			self.ind = pd.read_pickle('{0}/{1}_IndexList_w={2}_lems={3}.pickle'.format(self.dest, self.corpus, self.w, self.lems))
+			self.coll_df = np.memmap(cooc_dest, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
+			return
 		counts = Counter()
 		for file in glob('{0}/*.txt'.format(self.dir)):
 			with open(file) as f:
@@ -102,12 +105,27 @@ class SemPipeline:
 						counts[key].update(r[key])
 					else:
 						counts[key] = r[key]
-		i = list(counts.keys())
+		self.ind = list(counts.keys())
+		with open('{0}/{1}_IndexList_w={2}_lems={3}.pickle'.format(self.dest, self.corpus, self.w, self.lems), mode='wb') as f:
+			dump(self.ind, f)
 		print('Now writing cooccurrence file at {0}'.format(datetime.datetime.now().time().isoformat()))
-		self.coll_df = np.memmap(cooc_dest, dtype='float32', mode='w+', shape=(len(i), len(i)))
-		for ind, key in enumerate(i):
-			for ind2, key2 in enumerate(i):
-				self.coll_df[ind, ind2] = counts[key][key2]
+		self.coll_df = np.memmap(cooc_dest, dtype='float32', mode='w+', shape=(len(self.ind), len(self.ind)))
+		for i, w in enumerate(self.ind):
+			s = pd.Series(counts[w], index=self.ind, dtype=np.float32).fillna(0)
+			self.coll_df[i] = s.values
+			if i % 5000 == 0:
+				del self.coll_df
+				self.coll_df = np.memmap(cooc_dest, dtype='float32', mode='r+', shape=(len(self.ind), len(self.ind)))
+		del self.coll_df
+		self.coll_df = np.memmap(cooc_dest, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
+		'''
+		for (ind, key), (ind2, key2) in combinations(enumerate(self.ind), 2):
+			count += 1
+			self.coll_df[ind, ind2] = counts[key][key2]
+			self.coll_df[ind2, ind] = counts[key2][key]
+			if count % 1000 == 0:
+				self.coll_df.flush()
+		'''
 		#self.coll_df = pd.DataFrame(counts, dtype=np.float32).fillna(0)
 		#try:
 		#	self.df_to_hdf(self.coll_df, cooc_dest)
@@ -119,8 +137,8 @@ class SemPipeline:
 		This function applies the correct values from the DataFrame to the
 		binomial distribution function L(k,n,x) = (x**k)*(1-x)**(n-k).
 		'''
-		return np.log(np.power(np.float64(x),k)
-					  * np.power(np.float64(1-x),n-k))
+		return np.log(np.power(np.float32(x),k)
+					  * np.power(np.float32(1-x),n-k))
 
 	def log_space_L(self, k, n, x):
 		'''
@@ -137,7 +155,7 @@ class SemPipeline:
 		values for c12
 		this is the row in the coll_df that I am looking at
 		'''
-		C12 = self.coll_df.ix[row]
+		C12 = self.coll_df[row]
 		#value for C1 will be a scalar value used for all calculations on
 		#that row
 		C1 = np.sum(C12)
@@ -198,12 +216,13 @@ class SemPipeline:
 		'''
 
 		LL3_inf = LL3[np.isinf(LL3)]
-		for ind in LL3_inf.index:
+		#I need to figure out how to do this without indices
+		for ind in LL3_inf:
 			try:
-				LL3.ix[ind] = (log(P1[ind])*C12[ind])+\
+				LL3[ind] = (log(P1[ind])*C12[ind])+\
 							  (log(1-P1[ind])*(C1-C12[ind]))
 			except ValueError as E:
-				LL3.ix[ind] = 0
+				LL3[ind] = 0
 
 		LL4 = self.log_space_L(C2-C12, N-C1, P2)
 
@@ -213,31 +232,42 @@ class SemPipeline:
 		'''
 
 		LL4_inf = LL4[np.isinf(LL4)]
-		for ind in LL4_inf.index:
+		for ind in LL4_inf:
 			try:
-				LL4.ix[ind] = self.log_L((C2[ind]-C12[ind]), (N-C1), P2[ind])
+				LL4[ind] = self.log_L((C2[ind]-C12[ind]), (N-C1), P2[ind])
 			except ValueError as E:
-				LL4.ix[ind] = 0
-		return -2 * (LL1 + LL2 - LL3 - LL4)
+				LL4[ind] = 0
+
+		a = -2 * (LL1 + LL2 - LL3 - LL4)
+		a[np.abs(a) == np.inf] = 0
+		a[a == np.nan] = 0
+		return a
 
 
 	def LL(self):
 		"""This function guides the log-likelihood calculation process
 		"""
 		dest_file = os.path.join(self.dest,
-									 '_'.join(['LL',
+									 '_'.join([self.corpus,
+											   'LL',
 											   str(self.w),
-											   'lems={0}'.format(self.lems),
-											   self.corpus]) + '.hd5')
+											   'lems={0}'.format(self.lems)]) + '.dat')
 		if os.path.isfile(dest_file):
-			self.stat_df = pd.read_hdf(dest_file, 'df')
-			del self.coll_df
+			self.LL_df = np.memmap(dest_file, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
 			return
-		n = np.sum(self.coll_df.values)
-		#values for C2
-		c2 = np.sum(self.coll_df)
-		#values for p
+		n = np.sum(self.coll_df)
+		c2 = np.sum(self.coll_df, axis=1)
 		p = c2/n
+		self.LL_df = np.memmap(dest_file, dtype='float32', mode='w+', shape=(len(self.ind), len(self.ind)))
+		for i, w in enumerate(self.ind):
+			self.LL_df[i] = self.log_like(i, c2, p, n)
+			if i % 5000 == 0:
+				del self.LL_df
+				self.LL_df = np.memmap(dest_file, dtype='float32', mode='r+', shape=(len(self.ind), len(self.ind)))
+		del self.LL_df
+		self.LL_df = np.memmap(dest_file, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
+
+		'''
 		self.stat_df = pd.DataFrame(0., index=self.coll_df.index,
 							 columns=self.coll_df.index, dtype=np.float32)
 		for row in self.coll_df.index:
@@ -248,48 +278,48 @@ class SemPipeline:
 			del self.coll_df
 		except AttributeError:
 			print('LL calc finished')
+		'''
 
 	def PMI_calc(self, row, P2, N):
 		'''
 		values for c12
 		this is the row in the coll_df that I am looking at
 		'''
-		C12 = self.coll_df.ix[row]
+		C12 = self.coll_df[row]
 		#value for C1 will be a scalar value used for all calculations on
 		#that row
 		C1 = np.sum(C12)
 		P1 = C1/N
 		P12 = C12/N
-		return np.log2(np.float64(np.divide(P12,P1*P2)))
+		a = np.log2(np.float32(np.divide(P12,P1*P2)))
+		a[np.abs(a) == np.inf] = 0
+		a[a == np.nan] = 0
+		return a
 
 	def PPMI(self):
 		"""This function guides the PPMI calculation process
 		"""
 		dest_file = os.path.join(self.dest,
-									 '_'.join(['PPMI',
+									 '_'.join([self.corpus,
+											   'PPMI',
 											   str(self.w),
-											   'lems={0}'.format(self.lems),
-											   self.corpus]) + '.hd5')
+											   'lems={0}'.format(self.lems)]) + '.dat')
 		if os.path.isfile(dest_file):
-			self.stat_df = pd.read_hdf(dest_file, 'df')
-			del self.coll_df
+			self.PPMI_df = np.memmap(dest_file, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
 			return
-		n = np.sum(self.coll_df.values)
+		n = np.sum(self.coll_df)
 		#values for C2
-		p2 = np.sum(self.coll_df)/n
-		self.stat_df = pd.DataFrame(0., index=self.coll_df.index,
-							 columns=self.coll_df.index, dtype=np.float32)
-		for row in self.coll_df.index:
-			self.stat_df.ix[row] = self.PMI_calc(row, p2, n)
-		self.stat_df[self.stat_df<0] = 0
-		self.stat_df= self.stat_df.fillna(0)
-		try:
-			self.df_to_hdf(self.stat_df, dest_file)
-			del self.coll_df
-		except AttributeError:
-			print('PPMI Calc finished')
+		p2 = np.sum(self.coll_df, axis=1)/n
+		self.PPMI_df = np.memmap(dest_file, dtype='float32', mode='w+', shape=(len(self.ind), len(self.ind)))
+		for i, w in enumerate(self.ind):
+			self.PPMI_df[i] = self.PMI_calc(i, p2, n)
+			if i % 5000 == 0:
+				del self.PPMI_df
+				self.PPMI_df = np.memmap(dest_file, dtype='float32', mode='r+', shape=(len(self.ind), len(self.ind)))
+		del self.PPMI_df
+		self.PPMI_df = np.memmap(dest_file, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
 
-	def CS(self):
+	def CS(self, algorithm):
 		"""This function calls the pairwise distance function from sklearn
 		on every log-likelihood DataFrame in a certain directory and returns
 		the similarity score (i.e., 1-cosine distance) for every word, saving
@@ -302,25 +332,36 @@ class SemPipeline:
 				   self.lems,
 				   self.weighted,
 				  datetime.datetime.now().time().isoformat()))
-		self.stat_df = self.stat_df.replace(to_replace=np.inf, value=0)
+		dest_file = os.path.join(self.dest,
+								 '_'.join([self.corpus,
+										   algorithm,
+										   'CS',
+										   str(self.w),
+										   'lems={0}'.format(self.lems),
+										   'SVD_exp={0}.dat'.format(str(self.svd))]))
+		if algorithm == 'PPMI':
+			self.stat_df = self.PPMI_df
+		elif algorithm == 'LL':
+			self.stat_df = self.LL_df
 		if __name__ == '__main__':
-			CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=-1)
+			jobs = 8
 		else:
-			CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=1)
-		self.CS_df = pd.DataFrame(CS_Dists, index=self.stat_df.index,
-								  columns=self.stat_df.index, dtype=np.float32)
+			jobs = 1
+		self.CS_df = np.memmap(dest_file, dtype='float32', mode='w+', shape=(len(self.ind), len(self.ind)))
+		for i, w in enumerate(self.ind):
+			self.CS_df[i] = 1-pairwise_distances(self.stat_df[i], self.stat_df, metric='cosine', n_jobs=jobs)
+			if i % 5000 == 0:
+				del self.CS_df
+				self.CS_df = np.memmap(dest_file, dtype='float32', mode='r+', shape=(len(self.ind), len(self.ind)))
+		del self.CS_df
+		self.CS_df = np.memmap(dest_file, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
+		'''
 		try:
-			dest_file = os.path.join(self.dest,
-									 '_'.join([self.algo,
-											   'CS',
-											   str(self.w),
-											   self.corpus,
-											   'lems={0}'.format(self.lems),
-											   'SVD_exp={0}.hd5'.format(str(self.svd))]))
 			self.df_to_hdf(self.CS_df, dest_file)
 			del self.stat_df
 		except AttributeError:
 			print('Not saving CS file')
+		'''
 		print('Finished with CS calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
 				  (self.corpus,
@@ -338,10 +379,14 @@ class SemPipeline:
 				   self.lems,
 				   self.weighted,
 				  datetime.datetime.now().time().isoformat()))
-		try:
-			assert(self.algo == 'PPMI')
+		if self.algo == 'both':
+			print('Starting PPMI at {0}'.format(os.system('date')))
 			self.PPMI()
-		except AssertionError as E:
+			print('Starting LL at {0}'.format(os.system('date')))
+			self.LL()
+		elif self.algo == 'PPMI':
+			self.PPMI()
+		elif self.algo == 'LL':
 			self.LL()
 		print('Finished with %s calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
@@ -397,7 +442,13 @@ class SemPipeline:
 		self.stat_eval()
 		if self.svd != 1:
 			self.svd_calc()
-		self.CS()
+		if self.algo == 'both':
+			self.CS('PPMI')
+			self.CS('LL')
+		elif self.algo == 'PPMI':
+			self.CS('PPMI')
+		elif self.algo == 'LL':
+			self.CS('LL')
 
 		print('Finished at %s' % (datetime.datetime.now().time().isoformat()))
 
