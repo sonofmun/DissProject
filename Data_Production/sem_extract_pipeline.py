@@ -41,6 +41,8 @@ class SemPipeline:
 		self.lems = lemmata
 		self.weighted = weighted
 		self.algo = algo
+		if self.algo not in ['PPMI', 'LL', 'both']:
+			print('The only accepted values for "algo" are "PPMI", "LL", or "both".')
 		self.svd = svd
 		self.dir = files
 		self.c = c
@@ -117,7 +119,7 @@ class SemPipeline:
 		#for key in counts.keys():
 		#	for key2 in counts[key].keys():
 		#		self.coll_df.ix[key, key2] = counts[key][key2]
-		self.coll_df = pd.DataFrame(counts, dtype=np.float32).fillna(0)
+		self.coll_df = pd.DataFrame(counts, dtype=np.float32).fillna(0).T
 		print('Now writing cooccurrence file at {0}'.format(datetime.datetime.now().time().isoformat()))
 		try:
 			self.df_to_hdf(self.coll_df, cooc_dest)
@@ -241,22 +243,20 @@ class SemPipeline:
 											   self.corpus,
 											   'min_occ={0}'.format(self.min_count)]) + '.hd5')
 		if os.path.isfile(dest_file):
-			self.stat_df = pd.read_hdf(dest_file, 'df')
-			del self.coll_df
+			self.LL_df = pd.read_hdf(dest_file, 'df')
 			return
 		n = np.sum(self.coll_df.values)
 		#values for C2
 		c2 = np.sum(self.coll_df)
 		#values for p
 		p = c2/n
-		self.stat_df = pd.DataFrame(0., index=self.coll_df.index,
+		self.LL_df = pd.DataFrame(0., index=self.coll_df.index,
 							 columns=self.coll_df.columns, dtype=np.float32)
 		for row in self.coll_df.index:
-			self.stat_df.ix[row] = self.log_like(row, c2, p, n)
-		self.stat_df = self.stat_df.fillna(0)
+			self.LL_df.ix[row] = self.log_like(row, c2, p, n)
+		self.LL_df = self.stat_df.fillna(0)
 		try:
-			self.df_to_hdf(self.stat_df, dest_file)
-			del self.coll_df
+			self.df_to_hdf(self.LL_df, dest_file)
 		except AttributeError:
 			print('LL calc finished')
 
@@ -283,25 +283,23 @@ class SemPipeline:
 											   self.corpus,
 											   'min_occ={0}'.format(self.min_count)]) + '.hd5')
 		if os.path.isfile(dest_file):
-			self.stat_df = pd.read_hdf(dest_file, 'df')
-			del self.coll_df
+			self.PPMI_df = pd.read_hdf(dest_file, 'df')
 			return
 		n = np.sum(self.coll_df.values)
 		#values for C2
 		p2 = np.sum(self.coll_df)/n
-		self.stat_df = pd.DataFrame(0., index=self.coll_df.index,
+		self.PPMI_df = pd.DataFrame(0., index=self.coll_df.index,
 							 columns=self.coll_df.columns, dtype=np.float32)
 		for row in self.coll_df.index:
-			self.stat_df.ix[row] = self.PMI_calc(row, p2, n)
-		self.stat_df[self.stat_df<0] = 0
-		self.stat_df= self.stat_df.fillna(0)
+			self.PPMI_df.ix[row] = self.PMI_calc(row, p2, n)
+		self.PPMI_df[self.PPMI_df<0] = 0
+		self.PPMI_df = self.PPMI_df.fillna(0)
 		try:
-			self.df_to_hdf(self.stat_df, dest_file)
-			del self.coll_df
+			self.df_to_hdf(self.PPMI_df, dest_file)
 		except AttributeError:
 			print('PPMI Calc finished')
 
-	def CS(self):
+	def CS(self, algorithm):
 		"""This function calls the pairwise distance function from sklearn
 		on every log-likelihood DataFrame in a certain directory and returns
 		the similarity score (i.e., 1-cosine distance) for every word, saving
@@ -314,11 +312,15 @@ class SemPipeline:
 				   self.lems,
 				   self.weighted,
 				  datetime.datetime.now().time().isoformat()))
-		self.stat_df = self.stat_df.replace(to_replace=np.inf, value=0)
+		if algorithm == 'PPMI':
+			self.stat_df = self.PPMI_df
+		elif algorithm == 'LL':
+			self.stat_df = self.LL_df
 		if __name__ == '__main__':
-			CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=4)
+			jobs = 2
 		else:
-			CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=1)
+			jobs = 1
+		CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=jobs)
 		self.CS_df = pd.DataFrame(CS_Dists, index=self.stat_df.index,
 								  columns=self.stat_df.index, dtype=np.float32)
 		try:
@@ -351,11 +353,16 @@ class SemPipeline:
 				   self.lems,
 				   self.weighted,
 				  datetime.datetime.now().time().isoformat()))
-		try:
-			assert(self.algo == 'PPMI')
+		if self.algo == 'both':
+			print('Starting PPMI at {0}'.format(os.system('date')))
 			self.PPMI()
-		except AssertionError as E:
+			print('Starting LL at {0}'.format(os.system('date')))
 			self.LL()
+		elif self.algo == 'PPMI':
+			self.PPMI()
+		elif self.algo == 'LL':
+			self.LL()
+		del self.coll_df
 		print('Finished with %s calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
 				  (self.algo,
@@ -410,7 +417,15 @@ class SemPipeline:
 		self.stat_eval()
 		if self.svd != 1:
 			self.svd_calc()
-		self.CS()
+		if self.svd != 1:
+			self.svd_calc()
+		if self.algo == 'both':
+			self.CS('PPMI')
+			self.CS('LL')
+		elif self.algo == 'PPMI':
+			self.CS('PPMI')
+		elif self.algo == 'LL':
+			self.CS('LL')
 
 		print('Finished at %s' % (datetime.datetime.now().time().isoformat()))
 
