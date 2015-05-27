@@ -254,7 +254,7 @@ class SemPipeline:
 							 columns=self.coll_df.columns, dtype=np.float32)
 		for row in self.coll_df.index:
 			self.LL_df.ix[row] = self.log_like(row, c2, p, n)
-		self.LL_df = self.stat_df.fillna(0)
+		self.LL_df = self.LL_df.fillna(0)
 		try:
 			self.df_to_hdf(self.LL_df, dest_file)
 		except AttributeError:
