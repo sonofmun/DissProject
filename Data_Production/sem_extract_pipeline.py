@@ -317,7 +317,7 @@ class SemPipeline:
 		elif algorithm == 'LL':
 			self.stat_df = self.LL_df
 		if __name__ == '__main__':
-			jobs = 2
+			jobs = 1
 		else:
 			jobs = 1
 		CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=jobs)
