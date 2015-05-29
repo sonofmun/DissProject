@@ -19,7 +19,7 @@ import pandas as pd
 import numpy as np
 
 try:
-	from tkinter.filedialog import askdirectory
+	from Data_Production.TK_files import tk_control
 except ImportError:
 	print('Tkinter cannot be used on this Python installation.\nPlease designate a list of files in the files variable.')
 from sklearn.metrics.pairwise import pairwise_distances
@@ -34,22 +34,25 @@ import os
 
 class SemPipeline:
 
-	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1.45, files=None, c=8):
+	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1.45, files=None, c=8, occ_dict=None, min_count=None):
 		"""
 		"""
 		self.w = win_size
 		self.lems = lemmata
 		self.weighted = weighted
 		self.algo = algo
+		if self.algo not in ['PPMI', 'LL', 'both']:
+			print('The only accepted values for "algo" are "PPMI", "LL", or "both".')
 		self.svd = svd
 		self.dir = files
 		self.c = c
+		self.occ_dict = occ_dict
+		self.min_count = min_count
 
 
 	def file_chooser(self):
 		if self.dir == None:
-			title = 'In which directory are the XML file(s) would you like to analyze?'
-			self.dir = askdirectory(title=title)
+			self.dir = tk_control("askdirectory(title='In which directory are the XML file(s) would you like to analyze?')")
 
 	def df_to_hdf(self, df, dest):
 		df.to_hdf(dest, 'df', mode='w', complevel=9, complib='blosc')
@@ -81,11 +84,18 @@ class SemPipeline:
 								 '_'.join(['COOC',
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
-										   self.corpus]) + '.hd5')
+										   self.corpus,
+										   'min_occ={0}'.format(self.min_count)]) + '.hd5')
 		if os.path.isfile(cooc_dest):
 			self.coll_df = pd.read_hdf(cooc_dest, 'df')
 			return
 		counts = Counter()
+		if self.occ_dict:
+			occs = pd.read_pickle(self.occ_dict)
+			min_lems = set([w for w in occs if occs[w] < self.min_count])
+			del occs
+		else:
+			min_lems = set()
 		for file in glob('{0}/*.txt'.format(self.dir)):
 			with open(file) as f:
 				self.t = f.read().split('\n')
@@ -96,17 +106,20 @@ class SemPipeline:
 			for i in range(self.c):
 				steps.append((step*i, min(step*(i+1), len(words))))
 			self.res = group(counter.s(self.weighted, self.w, words, limits) for limits in steps)().get()
+			#since the counter task returns Counter objects, the update method
+			#below adds instead of replacing the values
 			for r in self.res:
 				for key in r.keys():
-					if key in counts.keys():
-						counts[key].update(r[key])
-					else:
-						counts[key] = r[key]
+					if key not in min_lems:
+						if key in counts.keys():
+							counts[key].update(r[key])
+						else:
+							counts[key] = r[key]
 		#self.coll_df = pd.DataFrame(0, index=list(counts.keys()), columns=list(counts.keys()))
 		#for key in counts.keys():
 		#	for key2 in counts[key].keys():
 		#		self.coll_df.ix[key, key2] = counts[key][key2]
-		self.coll_df = pd.DataFrame(counts, dtype=np.float32).fillna(0)
+		self.coll_df = pd.DataFrame(counts, dtype=np.float32).fillna(0).T
 		print('Now writing cooccurrence file at {0}'.format(datetime.datetime.now().time().isoformat()))
 		try:
 			self.df_to_hdf(self.coll_df, cooc_dest)
@@ -227,24 +240,23 @@ class SemPipeline:
 									 '_'.join(['LL',
 											   str(self.w),
 											   'lems={0}'.format(self.lems),
-											   self.corpus]) + '.hd5')
+											   self.corpus,
+											   'min_occ={0}'.format(self.min_count)]) + '.hd5')
 		if os.path.isfile(dest_file):
-			self.stat_df = pd.read_hdf(dest_file, 'df')
-			del self.coll_df
+			self.LL_df = pd.read_hdf(dest_file, 'df')
 			return
 		n = np.sum(self.coll_df.values)
 		#values for C2
 		c2 = np.sum(self.coll_df)
 		#values for p
 		p = c2/n
-		self.stat_df = pd.DataFrame(0., index=self.coll_df.index,
-							 columns=self.coll_df.index, dtype=np.float32)
+		self.LL_df = pd.DataFrame(0., index=self.coll_df.index,
+							 columns=self.coll_df.columns, dtype=np.float32)
 		for row in self.coll_df.index:
-			self.stat_df.ix[row] = self.log_like(row, c2, p, n)
-		self.stat_df = self.stat_df.fillna(0)
+			self.LL_df.ix[row] = self.log_like(row, c2, p, n)
+		self.LL_df = self.LL_df.fillna(0)
 		try:
-			self.df_to_hdf(self.stat_df, dest_file)
-			del self.coll_df
+			self.df_to_hdf(self.LL_df, dest_file)
 		except AttributeError:
 			print('LL calc finished')
 
@@ -268,27 +280,26 @@ class SemPipeline:
 									 '_'.join(['PPMI',
 											   str(self.w),
 											   'lems={0}'.format(self.lems),
-											   self.corpus]) + '.hd5')
+											   self.corpus,
+											   'min_occ={0}'.format(self.min_count)]) + '.hd5')
 		if os.path.isfile(dest_file):
-			self.stat_df = pd.read_hdf(dest_file, 'df')
-			del self.coll_df
+			self.PPMI_df = pd.read_hdf(dest_file, 'df')
 			return
 		n = np.sum(self.coll_df.values)
 		#values for C2
 		p2 = np.sum(self.coll_df)/n
-		self.stat_df = pd.DataFrame(0., index=self.coll_df.index,
-							 columns=self.coll_df.index, dtype=np.float32)
+		self.PPMI_df = pd.DataFrame(0., index=self.coll_df.index,
+							 columns=self.coll_df.columns, dtype=np.float32)
 		for row in self.coll_df.index:
-			self.stat_df.ix[row] = self.PMI_calc(row, p2, n)
-		self.stat_df[self.stat_df<0] = 0
-		self.stat_df= self.stat_df.fillna(0)
+			self.PPMI_df.ix[row] = self.PMI_calc(row, p2, n)
+		self.PPMI_df[self.PPMI_df<0] = 0
+		self.PPMI_df = self.PPMI_df.fillna(0)
 		try:
-			self.df_to_hdf(self.stat_df, dest_file)
-			del self.coll_df
+			self.df_to_hdf(self.PPMI_df, dest_file)
 		except AttributeError:
 			print('PPMI Calc finished')
 
-	def CS(self):
+	def CS(self, algorithm):
 		"""This function calls the pairwise distance function from sklearn
 		on every log-likelihood DataFrame in a certain directory and returns
 		the similarity score (i.e., 1-cosine distance) for every word, saving
@@ -301,20 +312,25 @@ class SemPipeline:
 				   self.lems,
 				   self.weighted,
 				  datetime.datetime.now().time().isoformat()))
-		self.stat_df = self.stat_df.replace(to_replace=np.inf, value=0)
+		if algorithm == 'PPMI':
+			self.stat_df = self.PPMI_df
+		elif algorithm == 'LL':
+			self.stat_df = self.LL_df
 		if __name__ == '__main__':
-			CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=-1)
+			jobs = 1
 		else:
-			CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=1)
+			jobs = 1
+		CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=jobs)
 		self.CS_df = pd.DataFrame(CS_Dists, index=self.stat_df.index,
 								  columns=self.stat_df.index, dtype=np.float32)
 		try:
 			dest_file = os.path.join(self.dest,
-									 '_'.join([self.algo,
-											   'CS',
+									 '_'.join(['CS',
+											   algorithm,
 											   str(self.w),
 											   self.corpus,
 											   'lems={0}'.format(self.lems),
+											   'min_occ={0}'.format(self.min_count),
 											   'SVD_exp={0}.hd5'.format(str(self.svd))]))
 			self.df_to_hdf(self.CS_df, dest_file)
 			del self.stat_df
@@ -337,11 +353,16 @@ class SemPipeline:
 				   self.lems,
 				   self.weighted,
 				  datetime.datetime.now().time().isoformat()))
-		try:
-			assert(self.algo == 'PPMI')
+		if self.algo == 'both':
+			print('Starting PPMI at {0}'.format(os.system('date')))
 			self.PPMI()
-		except AssertionError as E:
+			print('Starting LL at {0}'.format(os.system('date')))
 			self.LL()
+		elif self.algo == 'PPMI':
+			self.PPMI()
+		elif self.algo == 'LL':
+			self.LL()
+		del self.coll_df
 		print('Finished with %s calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
 				  (self.algo,
@@ -396,7 +417,15 @@ class SemPipeline:
 		self.stat_eval()
 		if self.svd != 1:
 			self.svd_calc()
-		self.CS()
+		if self.svd != 1:
+			self.svd_calc()
+		if self.algo == 'both':
+			self.CS('PPMI')
+			self.CS('LL')
+		elif self.algo == 'PPMI':
+			self.CS('PPMI')
+		elif self.algo == 'LL':
+			self.CS('LL')
 
 		print('Finished at %s' % (datetime.datetime.now().time().isoformat()))
 
@@ -628,7 +657,9 @@ if __name__ == '__main__':
 				algo=sys.argv[5],
 				svd=float(sys.argv[6]),
 				files=sys.argv[7],
-				c=int(sys.argv[8])).runPipeline()
+				c=int(sys.argv[8]),
+				occ_dict=sys.argv[9],
+				min_count=int(sys.argv[10])).runPipeline()
 	if sys.argv[1] == "ParamTester":
 		ParamTester(c=int(sys.argv[2])).RunTests(min_w=int(sys.argv[3]),
 												 max_w=int(sys.argv[4]),
