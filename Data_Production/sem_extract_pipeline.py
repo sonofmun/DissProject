@@ -46,8 +46,14 @@ class SemPipeline:
 		self.svd = svd
 		self.dir = files
 		self.c = c
-		self.occ_dict = occ_dict
-		self.min_count = min_count
+		if occ_dict == 'None':
+			self.occ_dict = None
+		else:
+			self.occ_dict = occ_dict
+		if min_count == 'None':
+			self.min_count = None
+		else:
+			self.min_count = min_count
 
 
 	def file_chooser(self):
