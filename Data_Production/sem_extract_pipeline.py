@@ -34,7 +34,7 @@ import os
 
 class SemPipeline:
 
-	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1.45, files=None, c=8, occ_dict=None, min_count=None):
+	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1.45, files=None, c=8, occ_dict=None, min_count=None, jobs=1):
 		"""
 		"""
 		self.w = win_size
@@ -410,7 +410,7 @@ class SemPipeline:
 			os.mkdir(self.dest)
 		except:
 			pass
-		self.corpus = '_'.join(self.dir.split('/')[-1].split('_')[:-1])
+		self.corpus = self.dir.split('/')[-1]
 
 	def runPipeline(self):
 		if self.dir == None:
