@@ -325,8 +325,7 @@ class SemPipeline:
 								  columns=self.stat_df.index, dtype=np.float32)
 		try:
 			dest_file = os.path.join(self.dest,
-									 '_'.join([self.algo,
-											   'CS',
+									 '_'.join(['CS',
 											   algorithm,
 											   str(self.w),
 											   self.corpus,
