@@ -3,7 +3,10 @@ __author__ = 'matt'
 import pandas as pd
 from sklearn.metrics.pairwise import pairwise_distances
 from collections import defaultdict
-from Data_Production.TK_files import tk_control
+try:
+	from Data_Production.TK_files import tk_control
+except ImportError:
+	print('TKinter is not available on this machine.\n Please specify your directories manually.')
 import scipy.sparse
 from numpy import save
 
