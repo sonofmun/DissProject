@@ -54,6 +54,7 @@ class SemPipeline:
 			self.min_count = None
 		else:
 			self.min_count = min_count
+		self.jobs = jobs
 
 
 	def file_chooser(self):
@@ -322,11 +323,7 @@ class SemPipeline:
 			self.stat_df = self.PPMI_df
 		elif algorithm == 'LL':
 			self.stat_df = self.LL_df
-		if __name__ == '__main__':
-			jobs = 1
-		else:
-			jobs = 1
-		CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=jobs)
+		CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=self.jobs)
 		self.CS_df = pd.DataFrame(CS_Dists, index=self.stat_df.index,
 								  columns=self.stat_df.index, dtype=np.float32)
 		try:
