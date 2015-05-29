@@ -327,6 +327,7 @@ class SemPipeline:
 			dest_file = os.path.join(self.dest,
 									 '_'.join([self.algo,
 											   'CS',
+											   algorithm,
 											   str(self.w),
 											   self.corpus,
 											   'lems={0}'.format(self.lems),
