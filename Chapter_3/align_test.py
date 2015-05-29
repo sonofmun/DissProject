@@ -55,8 +55,8 @@ class align():
 		sim_df = pd.DataFrame(pairwise_distances(self.trans_arr, self.moses_arr, metric=algorithm))
 		sim_df.to_hdf(self.dest_file, algorithm)
 		matches = 0
-		for x in sim_df.index:
-			if sim_df.ix[x].idxmin() == x:
+		for x in sim_df.columns:
+			if sim_df.ix[max(x-20, 0):min(x+20, len(sim_df.columns)), x].idxmin() == x:
 				matches += 1
 		return matches, sim_df.shape[0]
 
@@ -72,3 +72,24 @@ class align():
 				print('Now calculating {0} distance'.format(algo))
 				match, total = self.sim_calc(algo)
 				f.write('{0},{1},{2},{3}\n'.format(algo, match, total, match/total))
+
+class print_aligned(align):
+
+	def sim_calc(self, algorithm):
+		sim_df = pd.DataFrame(pairwise_distances(self.trans_arr, self.moses_arr, metric=algorithm))
+		sim_df.to_hdf(self.dest_file, algorithm)
+		matches = 0
+		for x in sim_df.columns:
+			if sim_df.ix[max(x-20, 0):min(x+20, len(sim_df.columns)), x].idxmin() == x:
+				matches += 1
+		return matches, sim_df.shape[0]
+
+	def pipe(self):
+		self.dest_file = tk_control("asksaveasfilename(title='Where would you like to save your h5 file?')")
+		results_file = tk_control("asksaveasfilename(title='Where would you like to save your results?')")
+		self.load_txt()
+		self.build_arrays()
+		with open(results_file, mode='w') as f:
+			print('Now calculating {0} distance'.format(algo))
+			match, total = self.sim_calc(algo)
+			f.write('{0},{1},{2},{3}\n'.format(algo, match, total, match/total))
