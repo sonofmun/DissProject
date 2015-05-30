@@ -9,12 +9,16 @@ except ImportError:
 	print('TKinter is not available on this machine.\n Please specify your directories manually.')
 import scipy.sparse
 from numpy import save
+import sys
 
-def calc(lex_file=None, cs_dest=None, syn_dest=None):
+def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10):
 	if lex_file == None:
 		lex_file = tk_control("askopenfilename(title='Where is your Moses lex file?')")
+	if occs_file == None:
+		occs_file = tk_control("askopenfilename(title='Where is your word occurrence dictionary file?')")
 	with open(lex_file) as f:
 		lines = f.read().split('\n')
+	occs = pd.read_pickle(occs_file)
 	d = defaultdict(dict)
 	print('Building dictionary')
 	for line in lines:
@@ -24,7 +28,7 @@ def calc(lex_file=None, cs_dest=None, syn_dest=None):
 		except ValueError:
 			continue
 	e_list = []
-	g_list = list(d.keys())
+	g_list = [w for w in list(d.keys()) if occs[w] >= min_occs]
 	for key in g_list:
 		[e_list.append(w) for w in list(d[key].keys())]
 	e_list = list(set(e_list))
@@ -44,3 +48,6 @@ def calc(lex_file=None, cs_dest=None, syn_dest=None):
 	if syn_dest == None:
 		syn_dest = tk_control("asksaveasfilename(title='Where would you like to save your synonym list?')")
 	syns.to_hdf(syn_dest, 'syns', mode='w', complevel=9, complib='blosc')
+
+if __name__ == '__main__':
+	calc(lex_file=sys.argv[1], cs_dest=sys.argv[2], syn_dest=sys.argv[3], min_occs=int(sys.argv[4]))
