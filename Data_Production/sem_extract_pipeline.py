@@ -34,7 +34,7 @@ import os
 
 class SemPipeline:
 
-	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1.45, files=None, c=8, occ_dict=None, min_count=None):
+	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1.45, files=None, c=8, occ_dict=None, min_count=None, jobs=1):
 		"""
 		"""
 		self.w = win_size
@@ -46,8 +46,15 @@ class SemPipeline:
 		self.svd = svd
 		self.dir = files
 		self.c = c
-		self.occ_dict = occ_dict
-		self.min_count = min_count
+		if occ_dict == 'None':
+			self.occ_dict = None
+		else:
+			self.occ_dict = occ_dict
+		if min_count == 'None':
+			self.min_count = None
+		else:
+			self.min_count = min_count
+		self.jobs = jobs
 
 
 	def file_chooser(self):
@@ -316,11 +323,7 @@ class SemPipeline:
 			self.stat_df = self.PPMI_df
 		elif algorithm == 'LL':
 			self.stat_df = self.LL_df
-		if __name__ == '__main__':
-			jobs = 1
-		else:
-			jobs = 1
-		CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=jobs)
+		CS_Dists = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=self.jobs)
 		self.CS_df = pd.DataFrame(CS_Dists, index=self.stat_df.index,
 								  columns=self.stat_df.index, dtype=np.float32)
 		try:
@@ -404,7 +407,7 @@ class SemPipeline:
 			os.mkdir(self.dest)
 		except:
 			pass
-		self.corpus = '_'.join(self.dir.split('/')[-1].split('_')[:-1])
+		self.corpus = self.dir.split('/')[-1]
 
 	def runPipeline(self):
 		if self.dir == None:
