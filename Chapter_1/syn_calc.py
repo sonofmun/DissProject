@@ -20,9 +20,15 @@ from numpy import save
 
 def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10):
 	if lex_file == None:
-		lex_file = tk_control("askopenfilename(title='Where is your Moses lex file?')")
+		try:
+			lex_file = tk_control("askopenfilename(title='Where is your Moses lex file?')")
+		except NameError:
+			pass
 	if occs_file == None:
-		occs_file = tk_control("askopenfilename(title='Where is your word occurrence dictionary file?')")
+		try:
+			occs_file = tk_control("askopenfilename(title='Where is your word occurrence dictionary file?')")
+		except NameError:
+			pass
 	with open(lex_file) as f:
 		lines = f.read().split('\n')
 	occs = pd.read_pickle(occs_file)
@@ -49,11 +55,17 @@ def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10
 	CS = 1-pairwise_distances(sp_arr, metric='cosine')
 	#CS_df = pd.DataFrame(CS, index=g_list, columns=g_list)
 	if cs_dest == None:
-		cs_dest = tk_control("asksaveasfilename(title='Where would you like to save your similarity data?')")
+		try:
+			cs_dest = tk_control("asksaveasfilename(title='Where would you like to save your similarity data?')")
+		except NameError:
+			pass
 	save(cs_dest, CS)
 	syns = pd.Series(sp_arr.max(axis=1).toarray(), index=g_list)
 	if syn_dest == None:
-		syn_dest = tk_control("asksaveasfilename(title='Where would you like to save your synonym list?')")
+		try:
+			syn_dest = tk_control("asksaveasfilename(title='Where would you like to save your synonym list?')")
+		except NameError:
+			pass
 	syns.to_hdf(syn_dest, 'syns', mode='w', complevel=9, complib='blosc')
 
 if __name__ == '__main__':
