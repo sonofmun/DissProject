@@ -1,5 +1,12 @@
 __author__ = 'matt'
 
+import os
+
+PACKAGE_PARENT = '..'
+SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
+sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
+
+
 import pandas as pd
 from sklearn.metrics.pairwise import pairwise_distances
 from collections import defaultdict

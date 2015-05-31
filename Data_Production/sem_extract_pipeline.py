@@ -29,7 +29,6 @@ from proj.tasks import counter
 from sklearn.cross_validation import KFold
 from pickle import dump
 from copy import deepcopy
-import os
 
 
 class SemPipeline:
