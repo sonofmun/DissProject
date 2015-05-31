@@ -69,4 +69,4 @@ def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10
 	syns.to_hdf(syn_dest, 'syns', mode='w', complevel=9, complib='blosc')
 
 if __name__ == '__main__':
-	calc(lex_file=sys.argv[1], cs_dest=sys.argv[2], syn_dest=sys.argv[3], min_occs=int(sys.argv[4]))
+	calc(lex_file=sys.argv[1], cs_dest=sys.argv[2], syn_dest=sys.argv[3], occs_file=sys.argv[4], min_occs=int(sys.argv[5]))
