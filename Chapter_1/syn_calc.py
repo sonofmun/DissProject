@@ -1,6 +1,7 @@
 __author__ = 'matt'
 
 import os
+import sys
 
 PACKAGE_PARENT = '..'
 SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
@@ -16,7 +17,6 @@ except ImportError:
 	print('TKinter is not available on this machine.\n Please specify your directories manually.')
 import scipy.sparse
 from numpy import save
-import sys
 
 def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10):
 	if lex_file == None:
