@@ -18,7 +18,7 @@ except ImportError:
 import scipy.sparse
 from numpy import save
 
-def calc(lex_file, cs_dest, syn_dest, occs_file, min_occs):
+def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10):
 	if lex_file == None:
 		try:
 			lex_file = tk_control("askopenfilename(title='Where is your Moses lex file?')")
