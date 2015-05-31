@@ -733,17 +733,18 @@ class WordCatFinder(CatSim):
 
 class SynSimWin(CatSimWin):
 
-	def __init__(self, algo, num_syns, rng, syn_file=None):
+	def __init__(self, algo, num_syns, rng, syn_file=None, lems=False):
 		if syn_file == None:
 			syn_file = tk_control("askopenfilename(title='Where is your synonym DF?')")
-		self.syn_df = pd.read_hdf(syn_file, 'syns')
+		self.syn_df = pd.read_hdf(syn_file, 'CS')
 		self.averages = {}
 		self.rng = rng
 		self.num_syns = num_syns
 		self.algo = algo
+		self.lems = lems
 
 	def LoadDF(self, w):
-		file = '/media/matt/Data/DissProject/Data/SBL_GNT_books/{0}/CS_{1}_{0}_SBL_GNT_books_lems=False_min_occ=None_SVD_exp=1.hd5'.format(str(w), self.algo)
+		file = '/media/matt/Data/DissProject/Data/SBL_GNT_books/{0}/CS_{1}_{0}_SBL_GNT_books_lems={2}_min_occ=None_SVD_exp=1.hd5'.format(str(w), self.algo, self.lems)
 		try:
 			self.df = pd.read_hdf(file, 'df')
 		except FileNotFoundError:
@@ -766,7 +767,7 @@ class SynSimWin(CatSimWin):
 		self.averages[w] = (syn_mean, syn_std)
 
 	def WriteFiles(self):
-		with open('Data/Chapter_2/per_book/Syn_Window_Averages_{0}_num_syns={1}_rng={2}.csv'.format(self.algo, self.num_syns, self.rng),
+		with open('Data/Chapter_2/per_book/Syn_Window_Averages_{0}_num_syns={1}_lems={3}_rng={2}.csv'.format(self.algo, self.num_syns, self.rng, self.lems),
 				  mode='w',
 				  encoding='utf-8') as file:
 			file.write('Average Number of Standard Deviations above or below Average '
