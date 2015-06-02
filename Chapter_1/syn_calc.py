@@ -44,7 +44,7 @@ def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10
 			continue
 	e_list = []
 	g_list = [w for w in list(d.keys()) if occs[w] >= min_occs]
-	with open('{0}/cs_index.pickle'.format(os.path.split(cs_dest)[0])) as f:
+	with open('{0}/cs_index.pickle'.format(os.path.split(cs_dest)[0]), mode='wb') as f:
 		dump(g_list, f)
 	for key in g_list:
 		[e_list.append(w) for w in list(d[key].keys())]
