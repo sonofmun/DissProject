@@ -4,7 +4,10 @@ import pandas as pd
 import numpy as np
 import sys
 from pickle import dump
-from Data_Production.TK_files import tk_control
+try:
+	from Data_Production.TK_files import tk_control
+except ImportError:
+	print('Tkinter cannot be used on this Python installation.\nPlease designate a list of files in the files variable.')
 
 sys.setrecursionlimit(50000)
 
@@ -743,7 +746,7 @@ class WordCatFinder(CatSim):
 
 class SynSimWin(CatSimWin):
 
-	def __init__(self, algo, num_syns, rng, syn_file=None, lems=False):
+	def __init__(self, algo, num_syns, rng, syn_file=None, lems=False, CS_dir=None, dest_dir=None):
 		'''
 		This class calculates the context window size that returns the best
 		average cosine similarity score based on synonym similarity data
@@ -762,9 +765,11 @@ class SynSimWin(CatSimWin):
 		self.num_syns = num_syns
 		self.algo = algo
 		self.lems = lems
+		self.CS_dir = CS_dir
+		self.dest_dir = dest_dir
 
 	def LoadDF(self, w):
-		file = '/media/matt/Data/DissProject/Data/SBL_GNT_books/{0}/CS_{1}_{0}_SBL_GNT_books_lems={2}_min_occ=None_SVD_exp=1.hd5'.format(str(w), self.algo, self.lems)
+		file = '{3}/{0}/CS_{1}_{0}_SBL_GNT_books_lems={2}_min_occ=None_SVD_exp=1.hd5'.format(str(w), self.algo, self.lems, self.CS_dir)
 		try:
 			self.df = pd.read_hdf(file, 'df')
 		except FileNotFoundError:
@@ -787,7 +792,7 @@ class SynSimWin(CatSimWin):
 		self.averages[w] = (syn_mean, syn_std)
 
 	def WriteFiles(self):
-		with open('Data/Chapter_2/per_book/Syn_Window_Averages_{0}_num_syns={1}_lems={3}_rng={2}.csv'.format(self.algo, self.num_syns, self.rng, self.lems),
+		with open('{4}/Syn_Window_Averages_{0}_num_syns={1}_lems={3}_rng={2}.csv'.format(self.algo, self.num_syns, self.rng, self.lems, self.dest_dir),
 				  mode='w',
 				  encoding='utf-8') as file:
 			file.write('Average Number of Standard Deviations above or below Average '
