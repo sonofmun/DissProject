@@ -746,7 +746,7 @@ class WordCatFinder(CatSim):
 
 class SynSimWin(CatSimWin):
 
-	def __init__(self, algo, num_syns, rng, syn_file=None, lems=False, CS_dir=None, dest_dir=None):
+	def __init__(self, algo, num_syns, rng, syn_file=None, lems=False, CS_dir=None, dest_dir=None, corpus='SBL_GNT_books'):
 		'''
 		This class calculates the context window size that returns the best
 		average cosine similarity score based on synonym similarity data
@@ -767,9 +767,10 @@ class SynSimWin(CatSimWin):
 		self.lems = lems
 		self.CS_dir = CS_dir
 		self.dest_dir = dest_dir
+		self.corpus = corpus
 
 	def LoadDF(self, w):
-		file = '{3}/{0}/CS_{1}_{0}_SBL_GNT_books_lems={2}_min_occ=None_SVD_exp=1.hd5'.format(str(w), self.algo, self.lems, self.CS_dir)
+		file = '{3}/{0}/CS_{1}_{0}_{4}_lems={2}_min_occ=None_SVD_exp=1.hd5'.format(str(w), self.algo, self.lems, self.CS_dir, self.corpus)
 		try:
 			self.df = pd.read_hdf(file, 'df')
 		except FileNotFoundError:
