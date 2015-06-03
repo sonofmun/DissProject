@@ -19,6 +19,7 @@ import scipy.sparse
 from numpy import save
 from pickle import dump
 import os.path
+from re import sub
 
 def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10):
 	if lex_file == None:
@@ -64,13 +65,20 @@ def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10
 		except NameError:
 			pass
 	CS.to_hdf(cs_dest, 'CS', mode='w', complevel=9, complib='blosc')
-	syns = pd.Series(sp_arr.max(axis=1).toarray(), index=g_list)
+	#syns = {}
+	#for w in CS.index:
+	#	syns[w] = dict(CS.ix[w].order(ascending=False).head(10))
+	#	if occs[w] >= 10:
+	#		syns[w] = dict(CS.ix[w].order(ascending=False).head(10))
 	if syn_dest == None:
 		try:
 			syn_dest = tk_control("asksaveasfilename(title='Where would you like to save your synonym list?')")
 		except NameError:
 			pass
-	syns.to_hdf(syn_dest, 'syns', mode='w', complevel=9, complib='blosc')
+	with open(syn_dest, mode='w') as f:
+		for w in CS.index:
+			if occs[w] >= 10:
+				f.write('{0}\t{1}\n'.format(w, sub(r' +', r'\t', CS.ix[w].order(ascending=False).head(10).to_string().replace('\n', '\n\t'))))
 
 if __name__ == '__main__':
 	print(sys.argv)
