@@ -17,6 +17,9 @@ except ImportError:
 	print('TKinter is not available on this machine.\n Please specify your directories manually.')
 import scipy.sparse
 from numpy import save
+from pickle import dump
+import os.path
+from re import sub
 
 def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10):
 	if lex_file == None:
@@ -42,6 +45,8 @@ def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10
 			continue
 	e_list = []
 	g_list = [w for w in list(d.keys()) if occs[w] >= min_occs]
+	with open('{0}/cs_index.pickle'.format(os.path.split(cs_dest)[0]), mode='wb') as f:
+		dump(g_list, f)
 	for key in g_list:
 		[e_list.append(w) for w in list(d[key].keys())]
 	e_list = list(set(e_list))
@@ -52,21 +57,29 @@ def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10
 			sp_arr[i, e_list.index(value)] = float(d[key][value])
 	sp_arr = sp_arr.tocsr()
 	print('Calculating cosine similarity')
-	CS = 1-pairwise_distances(sp_arr, metric='cosine')
+	CS = pd.DataFrame(1-pairwise_distances(sp_arr, metric='cosine'), index=g_list, columns=g_list)
 	#CS_df = pd.DataFrame(CS, index=g_list, columns=g_list)
 	if cs_dest == None:
 		try:
 			cs_dest = tk_control("asksaveasfilename(title='Where would you like to save your similarity data?')")
 		except NameError:
 			pass
-	save(cs_dest, CS)
-	syns = pd.Series(sp_arr.max(axis=1).toarray(), index=g_list)
+	CS.to_hdf(cs_dest, 'CS', mode='w', complevel=9, complib='blosc')
+	#syns = {}
+	#for w in CS.index:
+	#	syns[w] = dict(CS.ix[w].order(ascending=False).head(10))
+	#	if occs[w] >= 10:
+	#		syns[w] = dict(CS.ix[w].order(ascending=False).head(10))
 	if syn_dest == None:
 		try:
 			syn_dest = tk_control("asksaveasfilename(title='Where would you like to save your synonym list?')")
 		except NameError:
 			pass
-	syns.to_hdf(syn_dest, 'syns', mode='w', complevel=9, complib='blosc')
+	with open(syn_dest, mode='w') as f:
+		for w in CS.index:
+			if occs[w] >= 10:
+				f.write('{0}\t{1}\n'.format(w, sub(r' +', r'\t', CS.ix[w].order(ascending=False).head(10).to_string().replace('\n', '\n\t'))))
 
 if __name__ == '__main__':
-	calc(lex_file=sys.argv[1], cs_dest=sys.argv[2], syn_dest=sys.argv[3], min_occs=int(sys.argv[4]))
+	print(sys.argv)
+	calc(lex_file=sys.argv[1], cs_dest=sys.argv[2], syn_dest=sys.argv[3], occs_file=sys.argv[4], min_occs=int(sys.argv[5]))

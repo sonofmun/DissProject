@@ -374,7 +374,7 @@ class SemPipeline:
 				   self.weighted,
 				  datetime.datetime.now().time().isoformat()))
 
-	def svd_calc(self):
+	def svd_calc(self, algorithm):
 		"""Calculates the truncated singular value decomposition of df
 		using the first n principal components
 
@@ -388,10 +388,16 @@ class SemPipeline:
 				   self.weighted,
 				  datetime.datetime.now().time().isoformat()))
 		from scipy import linalg
-		U, s, Vh = linalg.svd(self.stat_df)
-		S = np.diag(s)
-		self.stat_df = pd.DataFrame(np.dot(U, S**self.svd),
-					 index=self.stat_df.index)
+		if algorithm == 'PPMI':
+			U, s, Vh = linalg.svd(self.PPMI_df)
+			S = np.diag(s)
+			self.PPMI_df = pd.DataFrame(np.dot(U, S**self.svd),
+						 index=self.PPMI_df.index)
+		elif algorithm == 'LL':
+			U, s, Vh = linalg.svd(self.LL_df)
+			S = np.diag(s)
+			self.LL_df = pd.DataFrame(np.dot(U, S**self.svd),
+						 index=self.LL_df.index)
 		print('Finished SVD calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
 				  (self.corpus,
@@ -418,9 +424,13 @@ class SemPipeline:
 		self.cooc_counter()
 		self.stat_eval()
 		if self.svd != 1:
-			self.svd_calc()
-		if self.svd != 1:
-			self.svd_calc()
+			if self.algo == 'both':
+				self.svd_calc('PPMI')
+				self.svd_calc('LL')
+			elif self.algo == 'PPMI':
+				self.svd_calc('PPMI')
+			elif self.algo == 'LL':
+				self.svd_calc('LL')
 		if self.algo == 'both':
 			self.CS('PPMI')
 			self.CS('LL')

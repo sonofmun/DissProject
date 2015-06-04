@@ -4,7 +4,10 @@ import pandas as pd
 import numpy as np
 import sys
 from pickle import dump
-from Data_Production.TK_files import tk_control
+try:
+	from Data_Production.TK_files import tk_control
+except ImportError:
+	print('Tkinter cannot be used on this Python installation.\nPlease designate a list of files in the files variable.')
 
 sys.setrecursionlimit(50000)
 
@@ -395,7 +398,15 @@ class CatSimWin(CatSim):
 
 class CatSimSVD(CatSim):
 
-	def __init__(self):
+	def __init__(self, rng, win, algo):
+		'''
+		This class calculates the average score for each Louw-Nida category
+		based on the SVD exponent that is used.
+		:param rng:
+		:param win:
+		:param algo:
+		:return:
+		'''
 		try:
 			self.ln = pd.read_pickle('Data/Chapter_2/LN_Cat_Dict.pickle')
 		except FileNotFoundError:
@@ -407,7 +418,9 @@ class CatSimSVD(CatSim):
 		self.good_words = []
 		self.prob_words = []
 		self.rng_type = 'svd'
-		self.rng = (.1, .25, .4, .55, .7, .85, 1, 1.15, 1.3, 1.45, 1.6, 1.75)
+		self.rng = rng
+		self.win = win
+		self.algo = algo
 		self.prob_word_replace = {'περιΐστημι': 'περιΐστημι',
 									'προΐστημι': 'προΐστημι',
 									'παρατεινω': 'παρατείνω',
@@ -504,23 +517,23 @@ class CatSimSVD(CatSim):
 									'Ἑβραΐς': 'Ἑβραΐς'}
 
 	def LoadDF(self, w):
-		file = 'Data/{0}/PPMI_CS_{0}_SBL_GNT_SVD_exp={1}.pickle'.format('350', w)
+		file = '/media/matt/Data/DissProject/Data/SBL_GNT_books/{0}/CS_{2}_{0}_SBL_GNT_books_lems=True_min_occ=None_SVD_exp={1}.hd5'.format(self.win, w, self.algo)
 		try:
-			self.df = pd.read_pickle(file)
+			self.df = pd.read_hdf(file, 'df')
 		except FileNotFoundError:
 			file = tk_control("askopenfilename(title='Where is your pickle file for window = {0}, svd exponent = {1}'.format('350', w))")
 			self.df = pd.read_pickle(file)
 
 	def WriteFiles(self):
-		with open('Data/Chapter_2/LN_Word_Cat_Scores_SVD.pickle', mode='wb') as file:
+		with open('Data/Chapter_2/per_book/LN_Word_Cat_Scores_SVD_{0}.pickle'.format(self.algo), mode='wb') as file:
 			dump(self.scores, file)
 		lems = pd.read_pickle('Data/SBLGNT_lem_dict.pickle')
 		for w_size in self.scores.keys():
-			save_file = 'Data/Chapter_2/LN_Window={0}_Word_Cat_Scores_SVD_exp={1}.csv'.format('350', str(w_size))
+			save_file = 'Data/Chapter_2/per_book/LN_Window={0}_Word_Cat_Scores_{2}_SVD_exp={1}.csv'.format(self.win, str(w_size), self.algo)
 			self.WriteLines(save_file, '350', w_size, lems)
-		with open('Data/Chapter_2/LN_Window_Averages_SVD.pickle', mode='wb') as file:
+		with open('Data/Chapter_2/per_book/LN_Window_Averages_SVD_{0}.pickle'.format(self.algo), mode='wb') as file:
 			dump(self.averages, file)
-		with open('Data/Chapter_2/LN_Window_Averages_SVD.csv',
+		with open('Data/Chapter_2/per_book/LN_Window_Averages_SVD_{0}.csv'.format(self.algo),
 				  mode='w',
 				  encoding='utf-8') as file:
 			file.write('Average Number of Standard Deviations above or below Average '
@@ -528,9 +541,9 @@ class CatSimSVD(CatSim):
 			file.write('SVD Exponent,Average,+/- Standard Deviations\n')
 			for w_size in sorted(self.averages.keys()):
 				file.write('{0},{1}\n'.format(w_size, self.averages[w_size]))
-		with open('Data/Chapter_2/LN_Window_Averages_no_93_SVD.pickle', mode='wb') as file:
+		with open('Data/Chapter_2/per_book/LN_Window_Averages_no_93_SVD_{0}.pickle'.format(self.algo), mode='wb') as file:
 			dump(self.ave_no_93, file)
-		with open('Data/Chapter_2/LN_Window_Averages_no_93_SVD.csv',
+		with open('Data/Chapter_2/per_book/LN_Window_Averages_no_93_SVD{0}.csv'.format(self.algo),
 				  mode='w',
 				  encoding='utf-8') as file:
 			file.write('Average Number of Standard Deviations above or below Average '
@@ -733,17 +746,31 @@ class WordCatFinder(CatSim):
 
 class SynSimWin(CatSimWin):
 
-	def __init__(self, algo, num_syns, rng, syn_file=None):
+	def __init__(self, algo, num_syns, rng, syn_file=None, lems=False, CS_dir=None, dest_dir=None, corpus=('SBL_GNT_books', None)):
+		'''
+		This class calculates the context window size that returns the best
+		average cosine similarity score based on synonym similarity data
+		:param algo:
+		:param num_syns:
+		:param rng:
+		:param syn_file:
+		:param lems:
+		:return:
+		'''
 		if syn_file == None:
 			syn_file = tk_control("askopenfilename(title='Where is your synonym DF?')")
-		self.syn_df = pd.read_hdf(syn_file, 'syns')
+		self.syn_df = pd.read_hdf(syn_file, 'CS')
 		self.averages = {}
 		self.rng = rng
 		self.num_syns = num_syns
 		self.algo = algo
+		self.lems = lems
+		self.CS_dir = CS_dir
+		self.dest_dir = dest_dir
+		self.corpus = corpus
 
 	def LoadDF(self, w):
-		file = '/media/matt/Data/DissProject/Data/SBL_GNT_books/{0}/CS_{1}_{0}_SBL_GNT_books_lems=False_min_occ=None_SVD_exp=1.hd5'.format(str(w), self.algo)
+		file = '{3}/{0}/CS_{1}_{0}_{4}_lems={2}_min_occ={5}_SVD_exp=1.0.hd5'.format(str(w), self.algo, self.lems, self.CS_dir, self.corpus[0], self.corpus[1])
 		try:
 			self.df = pd.read_hdf(file, 'df')
 		except FileNotFoundError:
@@ -766,7 +793,7 @@ class SynSimWin(CatSimWin):
 		self.averages[w] = (syn_mean, syn_std)
 
 	def WriteFiles(self):
-		with open('Data/Chapter_2/per_book/Syn_Window_Averages_{0}_num_syns={1}_rng={2}.csv'.format(self.algo, self.num_syns, self.rng),
+		with open('{4}/Syn_Window_Averages_{0}_num_syns={1}_lems={3}_rng={2}.csv'.format(self.algo, self.num_syns, self.rng, self.lems, self.dest_dir),
 				  mode='w',
 				  encoding='utf-8') as file:
 			file.write('Average Number of Standard Deviations above or below Average '
@@ -781,3 +808,35 @@ class SynSimWin(CatSimWin):
 			self.SimCalc(w)
 		self.WriteFiles()
 		print('Finished')
+
+class SynSimSVD(SynSimWin):
+
+	def __init__(self, algo, num_syns, rng, win, syn_file=None, lems=False):
+		'''
+		This class calculates the SVD exponent that returns the best
+		average cosine similarity score based on synonym similarity data
+		:param algo:
+		:param num_syns:
+		:param rng:
+		:param win:
+		:param syn_file:
+		:param lems:
+		:return:
+		'''
+		if syn_file == None:
+			syn_file = tk_control("askopenfilename(title='Where is your synonym DF?')")
+		self.syn_df = pd.read_hdf(syn_file, 'CS')
+		self.averages = {}
+		self.rng = rng
+		self.num_syns = num_syns
+		self.algo = algo
+		self.lems = lems
+		self.win = win
+
+	def LoadDF(self, w):
+		file = '/media/matt/Data/DissProject/Data/SBL_GNT_books/{0}/CS_{1}_{0}_SBL_GNT_books_lems={2}_min_occ=None_SVD_exp={3}.hd5'.format(self.win, self.algo, self.lems, str(w))
+		try:
+			self.df = pd.read_hdf(file, 'df')
+		except FileNotFoundError:
+			file = tk_control("askopenfilename(title='Where is your pickle file for window = {0}, svd exponent = {1}'.format(str(w), 'None'))")
+			self.df = pd.read_pickle(file)
