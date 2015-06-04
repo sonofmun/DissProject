@@ -2,7 +2,10 @@ __author__ = 'matt'
 
 import pandas as pd
 from sklearn.metrics.pairwise import pairwise_distances
-from Data_Production.TK_files import tk_control
+try:
+	from Data_Production.TK_files import tk_control
+except ImportError:
+	print('Tkinter cannot be used on this Python installation.\nPlease designate a list of files in the files variable.')
 from collections import Counter
 import scipy.sparse
 import numpy as np
@@ -10,16 +13,22 @@ from sklearn.feature_extraction.text import TfidfTransformer
 
 class align():
 
-	def __init__(self, tfidf=True):
+	def __init__(self, corpus, tfidf=True, trans_file=None, moses_file=None, dest_dir=None):
 		self.tfidf = tfidf
+		self.trans_file = trans_file
+		self.moses_file = moses_file
+		self.dest_dir = dest_dir
+		self.corpus = corpus
 
 	def load_txt(self):
-		trans_file = tk_control("askopenfilename(title='Where is your hand translation?')")
-		moses_file = tk_control("askopenfilename(title='Where is your automatically translated file?')")
-		self.base_name = trans_file.replace('.en', '')
-		with open(trans_file) as f:
+		if self.trans_file == None:
+			self.trans_file = tk_control("askopenfilename(title='Where is your hand translation?')")
+		if self.moses_file == None:
+			self.moses_file = tk_control("askopenfilename(title='Where is your automatically translated file?')")
+		self.base_name = self.trans_file.replace('.en', '')
+		with open(self.trans_file) as f:
 			trans_text = f.read()
-		with open(moses_file) as f:
+		with open(self.moses_file) as f:
 			moses_text = f.read()
 		self.trans_sents = trans_text.split('\n')
 		self.moses_sents = moses_text.split('\n')
@@ -63,8 +72,11 @@ class align():
 		return matches, sim_df.shape[0]
 
 	def pipe(self):
-		self.dest_file = tk_control("asksaveasfilename(title='Where would you like to save your h5 file?')")
-		results_file = tk_control("asksaveasfilename(title='Where would you like to save your results?')")
+		if self.dest_dir == None:
+			self.dest_file = tk_control("asksaveasfilename(title='Where would you like to save your h5 file?')")
+		else:
+			self.dest_file = '{0}/{1}_align_sim_dfs_tfidf={2}.h5'.format(self.dest_dir, self.corpus, self.tfidf)
+		results_file = self.dest_file.replace('.h5', '.csv')
 		self.load_txt()
 		self.build_arrays()
 		algos = ['cityblock', 'cosine', 'euclidean', 'l1', 'l2', 'manhattan']
