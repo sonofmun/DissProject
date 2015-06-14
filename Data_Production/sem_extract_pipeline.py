@@ -239,10 +239,12 @@ class SemPipeline:
 		#I need to figure out how to do this without indices
 		for ind in LL3_inf:
 			try:
-				LL3[ind] = (log(P1[ind])*C12[ind])+\
-							  (log(1-P1[ind])*(C1-C12[ind]))
+				LL3[ind] = (log(P1[ind])*C12[ind])+(log(1-P1[ind])*(C1-C12[ind]))
 			except ValueError as E:
 				LL3[ind] = 0
+			except TypeError:
+				print(ind)
+				print((log(P1[ind])*C12[ind])+(log(1-P1[ind])*(C1-C12[ind])))
 
 		LL4 = self.log_space_L(C2-C12, N-C1, P2)
 
