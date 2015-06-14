@@ -243,8 +243,7 @@ class SemPipeline:
 			except ValueError as E:
 				LL3[ind] = 0
 			except TypeError:
-				print(ind)
-				print((log(P1[ind])*C12[ind])+(log(1-P1[ind])*(C1-C12[ind])))
+				print(LL3_inf)
 
 		LL4 = self.log_space_L(C2-C12, N-C1, P2)
 
