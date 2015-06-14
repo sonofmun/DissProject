@@ -235,7 +235,7 @@ class SemPipeline:
 		moving calculations into log space.
 		'''
 
-		LL3_inf = LL3[np.isinf(LL3)]
+		LL3_inf = np.where(abs(LL3)==np.inf)
 		#I need to figure out how to do this without indices
 		for ind in LL3_inf:
 			try:
@@ -251,7 +251,7 @@ class SemPipeline:
 		moving calculations into log space.
 		'''
 
-		LL4_inf = LL4[np.isinf(LL4)]
+		LL4_inf = np.where(abs(LL4)==np.inf)
 		for ind in LL4_inf:
 			try:
 				LL4[ind] = self.log_L((C2[ind]-C12[ind]), (N-C1), P2[ind])
