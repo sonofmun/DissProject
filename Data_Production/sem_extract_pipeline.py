@@ -258,6 +258,8 @@ class SemPipeline:
 					LL4[ind] = self.log_L((C2[ind]-C12[ind]), (N-C1), P2[ind])
 				except ValueError:
 					LL4[ind] = 0
+				except TypeError:
+					print(ind)
 
 		a = -2 * (LL1 + LL2 - LL3 - LL4)
 		a[np.abs(a) == np.inf] = 0
