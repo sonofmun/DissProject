@@ -260,8 +260,7 @@ class SemPipeline:
 					LL4[ind] = 0
 
 		a = -2 * (LL1 + LL2 - LL3 - LL4)
-		a[np.abs(a) == np.inf] = 0
-		a[a == np.nan] = 0
+		a[np.where(np.isfinite(a)==False)] = 0
 		return a
 
 
@@ -315,8 +314,7 @@ class SemPipeline:
 		P1 = C1/N
 		P12 = C12/N
 		a = np.log2(np.float32(np.divide(P12,P1*P2)))
-		a[np.abs(a) == np.inf] = 0
-		a[a == np.nan] = 0
+		a[np.where(np.isfinite(a)==False)] = 0
 		a[a < 0] = 0
 		return a
 
