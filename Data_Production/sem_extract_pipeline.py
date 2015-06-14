@@ -238,7 +238,7 @@ class SemPipeline:
 		LL3_inf = np.where(abs(LL3)==np.inf)
 		#I need to figure out how to do this without indices
 		if len(LL3_inf) > 0:
-			for ind in LL3_inf:
+			for ind in LL3_inf[0]:
 				try:
 					LL3[ind] = (log(P1[ind])*C12[ind])+(log(1-P1[ind])*(C1-C12[ind]))
 				except ValueError:
@@ -253,13 +253,11 @@ class SemPipeline:
 
 		LL4_inf = np.where(abs(LL4)==np.inf)
 		if len(LL4_inf) > 0:
-			for ind in LL4_inf:
+			for ind in LL4_inf[0]:
 				try:
 					LL4[ind] = self.log_L((C2[ind]-C12[ind]), (N-C1), P2[ind])
 				except ValueError:
 					LL4[ind] = 0
-				except TypeError:
-					print(ind)
 
 		a = -2 * (LL1 + LL2 - LL3 - LL4)
 		a[np.abs(a) == np.inf] = 0
