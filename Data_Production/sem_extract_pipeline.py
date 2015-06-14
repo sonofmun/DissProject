@@ -287,6 +287,7 @@ class SemPipeline:
 				print('{0}% done'.format((i/len(self.ind)*100)))
 				del self.LL_df
 				self.LL_df = np.memmap(dest_file, dtype='float32', mode='r+', shape=(len(self.ind), len(self.ind)))
+		self.LL_df[np.where(np.isfinite(self.LL_df)==False)] = 0
 		del self.LL_df
 		self.LL_df = np.memmap(dest_file, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
 
@@ -341,6 +342,7 @@ class SemPipeline:
 				print('{0}% done'.format((i/len(self.ind)*100)))
 				del self.PPMI_df
 				self.PPMI_df = np.memmap(dest_file, dtype='float32', mode='r+', shape=(len(self.ind), len(self.ind)))
+		self.PPMI_df[np.where(np.isfinite(self.PPMI_df)==False)] = 0
 		del self.PPMI_df
 		self.PPMI_df = np.memmap(dest_file, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
 
