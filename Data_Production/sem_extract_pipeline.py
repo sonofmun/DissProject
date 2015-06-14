@@ -366,6 +366,8 @@ class SemPipeline:
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
 										   'SVD_exp={0}.dat'.format(str(self.svd))]))
+		if os.path.isfile(dest_file):
+			return
 		if algorithm == 'PPMI':
 			self.stat_df = self.PPMI_df
 		elif algorithm == 'LL':
