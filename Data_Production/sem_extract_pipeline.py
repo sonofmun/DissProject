@@ -294,6 +294,7 @@ class SemPipeline:
 		a = np.log2(np.float32(np.divide(P12,P1*P2)))
 		a[np.abs(a) == np.inf] = 0
 		a[a == np.nan] = 0
+		a[a < 0] = 0
 		return a
 
 	def PPMI(self):
@@ -348,11 +349,13 @@ class SemPipeline:
 		else:
 			jobs = 1
 		self.CS_df = np.memmap(dest_file, dtype='float32', mode='w+', shape=(len(self.ind), len(self.ind)))
-		for i, w in enumerate(self.ind):
+		self.CS_df[:] = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=jobs)
+		'''for i, w in enumerate(self.ind):
 			self.CS_df[i] = 1-pairwise_distances(self.stat_df[i], self.stat_df, metric='cosine', n_jobs=jobs)
 			if i % 5000 == 0:
 				del self.CS_df
 				self.CS_df = np.memmap(dest_file, dtype='float32', mode='r+', shape=(len(self.ind), len(self.ind)))
+		'''
 		del self.CS_df
 		self.CS_df = np.memmap(dest_file, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
 		'''
