@@ -370,7 +370,7 @@ class SemPipeline:
 		elif algorithm == 'LL':
 			self.stat_df = self.LL_df
 		self.CS_df = np.memmap(dest_file, dtype='float32', mode='w+', shape=(len(self.ind), len(self.ind)))
-		self.CS_df[:] = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=jobs)
+		self.CS_df[:] = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=self.jobs)
 		'''for i, w in enumerate(self.ind):
 			self.CS_df[i] = 1-pairwise_distances(self.stat_df[i], self.stat_df, metric='cosine', n_jobs=jobs)
 			if i % 5000 == 0:
