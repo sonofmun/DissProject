@@ -133,6 +133,7 @@ class SemPipeline:
 			s = pd.Series(counts[w], index=self.ind, dtype=np.float32).fillna(0)
 			self.coll_df[i] = s.values
 			if i % 5000 == 0:
+				print('{0}% done'.format((i/len(self.ind)*100)))
 				del self.coll_df
 				self.coll_df = np.memmap(cooc_dest, dtype='float32', mode='r+', shape=(len(self.ind), len(self.ind)))
 		del self.coll_df
@@ -283,6 +284,7 @@ class SemPipeline:
 		for i, w in enumerate(self.ind):
 			self.LL_df[i] = self.log_like(i, c2, p, n)
 			if i % 5000 == 0:
+				print('{0}% done'.format((i/len(self.ind)*100)))
 				del self.LL_df
 				self.LL_df = np.memmap(dest_file, dtype='float32', mode='r+', shape=(len(self.ind), len(self.ind)))
 		del self.LL_df
@@ -337,6 +339,7 @@ class SemPipeline:
 		for i, w in enumerate(self.ind):
 			self.PPMI_df[i] = self.PMI_calc(i, p2, n)
 			if i % 5000 == 0:
+				print('{0}% done'.format((i/len(self.ind)*100)))
 				del self.PPMI_df
 				self.PPMI_df = np.memmap(dest_file, dtype='float32', mode='r+', shape=(len(self.ind), len(self.ind)))
 		del self.PPMI_df
