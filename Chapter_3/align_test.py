@@ -61,7 +61,7 @@ class align():
 			np.save('{0}_moses_array'.format(self.base_name), self.moses_arr)
 
 	def sim_calc(self, algorithm):
-		sim_df = pd.DataFrame(pairwise_distances(self.trans_arr, self.moses_arr, metric=algorithm))
+		sim_df = pd.DataFrame(pairwise_distances(self.trans_arr, self.moses_arr, metric=algorithm, n_jobs=8))
 		sim_df.to_hdf(self.dest_file, algorithm)
 		matches = 0
 		for x in sim_df.columns:

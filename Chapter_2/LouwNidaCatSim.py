@@ -781,9 +781,9 @@ class SynSimWin(CatSimWin):
 		mean, std = np.mean(self.df.values), np.std(self.df.values)
 		print('%s average: %s, std: %s' % (w, mean, std))
 		vals = []
-		for word in self.syn_df.index:
-			top_syns = list(self.syn_df[word].order(ascending=False)[1:self.num_syns+1].index)
-			for word2 in top_syns:
+		for word in self.top_syns.keys():
+			#top_syns = list(self.syn_df[word].order(ascending=False)[1:self.num_syns+1].index)
+			for word2 in self.top_syns[word]:
 				try:
 					vals.append(self.df.ix[word, word2])
 				except KeyError:
@@ -803,6 +803,11 @@ class SynSimWin(CatSimWin):
 				file.write('{0},{1},{2}\n'.format(w_size, self.averages[w_size][0], self.averages[w_size][1]))
 
 	def CatSimPipe(self):
+		#calculate the syn list once to speed up later processing
+		self.top_syns = {}
+		for word in self.syn_df.index:
+			self.top_syns[word] = list(self.syn_df[word].order(ascending=False)[1:self.num_syns+1].index)
+		del self.top_syns
 		for w in self.rng:
 			self.LoadDF(w)
 			self.SimCalc(w)
