@@ -1,4 +1,4 @@
-__author__ = 'matt'
+	__author__ = 'matt'
 
 import os
 import sys
@@ -21,7 +21,7 @@ from pickle import dump
 import os.path
 from re import sub
 
-def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10):
+def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10, stop_words=[]):
 	if lex_file == None:
 		try:
 			lex_file = tk_control("askopenfilename(title='Where is your Moses lex file?')")
@@ -40,7 +40,8 @@ def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10
 	for line in lines:
 		try:
 			e, g, s = line.split()
-			d[g][e] = s
+			if e not in stop_words:
+				d[g][e] = s
 		except ValueError:
 			continue
 	e_list = []
