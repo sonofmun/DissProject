@@ -88,15 +88,14 @@ class SemPipeline:
 		'''
 		#self.coll_df = pd.DataFrame()
 		cooc_dest = os.path.join(self.dest,
-								 '_'.join([self.corpus,
-										   'COOC',
+								 '_'.join(['COOC',
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
 										   self.corpus,
 										   'min_occ={0}'.format(self.min_count)]) + '.dat')
 		if os.path.isfile(cooc_dest):
 			self.ind = pd.read_pickle('{0}/{1}_IndexList_w={2}_lems={3}.pickle'.format(self.dest, self.corpus, self.w, self.lems))
-			self.coll_df = np.memmap(cooc_dest, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
+			self.coll_df = np.memmap(cooc_dest, mode='r', shape=(len(self.ind), len(self.ind)))
 			return
 		counts = Counter()
 		if self.occ_dict:
@@ -268,14 +267,13 @@ class SemPipeline:
 		"""This function guides the log-likelihood calculation process
 		"""
 		dest_file = os.path.join(self.dest,
-									 '_'.join([self.corpus,
-											   'LL',
+									 '_'.join(['LL',
 											   str(self.w),
 											   'lems={0}'.format(self.lems),
 											   self.corpus,
 											   'min_occ={0}'.format(self.min_count)]) + '.dat')
 		if os.path.isfile(dest_file):
-			self.LL_df = np.memmap(dest_file, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
+			self.LL_df = np.memmap(dest_file, mode='r', shape=(len(self.ind), len(self.ind)))
 			return
 		n = np.sum(self.coll_df)
 		c2 = np.sum(self.coll_df, axis=1)
@@ -323,14 +321,13 @@ class SemPipeline:
 		"""This function guides the PPMI calculation process
 		"""
 		dest_file = os.path.join(self.dest,
-									 '_'.join([self.corpus,
-											   'PPMI',
+									 '_'.join(['PPMI',
 											   str(self.w),
 											   'lems={0}'.format(self.lems),
 											   self.corpus,
 											   'min_occ={0}'.format(self.min_count)]) + '.dat')
 		if os.path.isfile(dest_file):
-			self.PPMI_df = np.memmap(dest_file, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
+			self.PPMI_df = np.memmap(dest_file, mode='r', shape=(len(self.ind), len(self.ind)))
 			return
 		n = np.sum(self.coll_df)
 		#values for C2
@@ -360,11 +357,11 @@ class SemPipeline:
 				   self.weighted,
 				  datetime.datetime.now().time().isoformat()))
 		dest_file = os.path.join(self.dest,
-								 '_'.join([self.corpus,
-										   algorithm,
+								 '_'.join([algorithm,
 										   'CS',
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
+										   self.corpus,
 										   'SVD_exp={0}.dat'.format(str(self.svd))]))
 		if os.path.isfile(dest_file):
 			return
