@@ -16,12 +16,12 @@ try:
 except ImportError:
 	print('TKinter is not available on this machine.\n Please specify your directories manually.')
 import scipy.sparse
-from numpy import save
+from numpy import where
 from pickle import dump
 import os.path
 from re import sub
 
-def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10):
+def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10, stop_words=[]):
 	if lex_file == None:
 		try:
 			lex_file = tk_control("askopenfilename(title='Where is your Moses lex file?')")
@@ -40,7 +40,8 @@ def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10
 	for line in lines:
 		try:
 			e, g, s = line.split()
-			d[g][e] = s
+			if e not in stop_words:
+				d[g][e] = s
 		except ValueError:
 			continue
 	e_list = []
@@ -78,8 +79,8 @@ def calc(lex_file=None, cs_dest=None, syn_dest=None, occs_file=None, min_occs=10
 	with open(syn_dest, mode='w') as f:
 		for w in CS.index:
 			if occs[w] >= 10:
-				f.write('{0}\t{1}\n'.format(w, sub(r' +', r'\t', CS.ix[w].order(ascending=False).head(10).to_string().replace('\n', '\n\t'))))
-
+				#f.write('{0}\t{1}\n'.format(w, sub(r' +', r'\t', CS.ix[w].order(ascending=False).head(10).to_string().replace('\n', '\n\t'))))
+				f.write('{0}\t{1}\n'.format(w, sub(r' +', r'\t', CS.ix[w, where(CS.ix[w]>.9)].order(ascending=False).to_string().replace('\n', '\n\t'))))
 if __name__ == '__main__':
 	print(sys.argv)
 	calc(lex_file=sys.argv[1], cs_dest=sys.argv[2], syn_dest=sys.argv[3], occs_file=sys.argv[4], min_occs=int(sys.argv[5]))
