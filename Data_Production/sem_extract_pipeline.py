@@ -136,7 +136,7 @@ class SemPipeline:
 				del self.coll_df
 				self.coll_df = np.memmap(cooc_dest, dtype='float32', mode='r+', shape=(len(self.ind), len(self.ind)))
 		del self.coll_df
-		self.coll_df = np.memmap(cooc_dest, mode='r', shape=(len(self.ind), len(self.ind)))
+		self.coll_df = np.memmap(cooc_dest, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
 		'''
 		for (ind, key), (ind2, key2) in combinations(enumerate(self.ind), 2):
 			count += 1
@@ -287,7 +287,7 @@ class SemPipeline:
 				self.LL_df = np.memmap(dest_file, dtype='float32', mode='r+', shape=(len(self.ind), len(self.ind)))
 		self.LL_df[np.where(np.isfinite(self.LL_df)==False)] = 0
 		del self.LL_df
-		self.LL_df = np.memmap(dest_file, mode='r', shape=(len(self.ind), len(self.ind)))
+		self.LL_df = np.memmap(dest_file, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
 
 		'''
 		self.stat_df = pd.DataFrame(0., index=self.coll_df.index,
@@ -341,7 +341,7 @@ class SemPipeline:
 				self.PPMI_df = np.memmap(dest_file, dtype='float32', mode='r+', shape=(len(self.ind), len(self.ind)))
 		self.PPMI_df[np.where(np.isfinite(self.PPMI_df)==False)] = 0
 		del self.PPMI_df
-		self.PPMI_df = np.memmap(dest_file, mode='r', shape=(len(self.ind), len(self.ind)))
+		self.PPMI_df = np.memmap(dest_file, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
 
 	def CS(self, algorithm):
 		"""This function calls the pairwise distance function from sklearn
