@@ -312,7 +312,7 @@ class SemPipeline:
 		C1 = np.sum(C12)
 		P1 = C1/N
 		P12 = C12/N
-		a = np.log2(np.float(np.divide(P12,P1*P2)))
+		a = np.log2(np.divide(P12,P1*P2))
 		a[np.where(np.isfinite(a)==False)] = 0
 		a[a < 0] = 0
 		return a
