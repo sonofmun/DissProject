@@ -777,6 +777,8 @@ class SynSimWin(CatSimWin):
 		except FileNotFoundError:
 			file = tk_control("askopenfilename(title='Where is your pickle file for window = {0}, svd exponent = {1}'.format(str(w), 'None'))")
 			self.df = pd.read_pickle(file)
+		except OSError:
+			file = '{3}/{0}/{1}_CS_{0}_{4}_lems={2}_min_occ={5}_SVD_exp=1.0.dat'.format(str(w), self.algo, self.lems, self.CS_dir, self.corpus[0], self.corpus[1])
 
 	def SimCalc(self, w):
 		mean, std = np.mean(self.df.values), np.std(self.df.values)

@@ -362,6 +362,7 @@ class SemPipeline:
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
 										   self.corpus,
+										   'min_occ={0}'.format(self.min_count),
 										   'SVD_exp={0}.dat'.format(str(self.svd))]))
 		if os.path.isfile(dest_file):
 			return
