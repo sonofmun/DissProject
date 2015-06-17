@@ -779,6 +779,8 @@ class SynSimWin(CatSimWin):
 			self.df = pd.read_pickle(file)
 		except OSError:
 			file = '{3}/{0}/{1}_CS_{0}_{4}_lems={2}_min_occ={5}_SVD_exp=1.0.dat'.format(str(w), self.algo, self.lems, self.CS_dir, self.corpus[0], self.corpus[1])
+			self.ind = pd.read_pickle('{0}/{1}_IndexList_w={2}_lems={3}.pickle'.format(self.dest, self.corpus, self.w, self.lems))
+			self.df = np.memmap(file, mode='r', shape=(len(self.ind), len(self.ind)))
 
 	def SimCalc(self, w):
 		mean, std = np.mean(self.df.values), np.std(self.df.values)
@@ -788,7 +790,11 @@ class SynSimWin(CatSimWin):
 			#top_syns = list(self.syn_df[word].order(ascending=False)[1:self.num_syns+1].index)
 			for word2 in self.top_syns[word]:
 				try:
-					vals.append(self.df.ix[word, word2])
+					if self.ind:
+						#this means we are using a memmap and not a DataFrame
+						vals.append(self.df[self.ind.index(word)][self.ind.index(word2)])
+					else:
+						vals.append(self.df.ix[word, word2])
 				except KeyError:
 					continue
 		syn_mean = np.mean(vals)
