@@ -341,7 +341,7 @@ class SemPipeline:
 				self.PPMI_df = np.memmap(dest_file, dtype='float32', mode='r+', shape=(len(self.ind), len(self.ind)))
 		self.PPMI_df[np.where(np.isfinite(self.PPMI_df)==False)] = 0
 		del self.PPMI_df
-		self.PPMI_df = np.memmap(dest_file, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
+		self.PPMI_df = np.memmap(dest_file, mode='r', shape=(len(self.ind), len(self.ind)))
 
 	def CS(self, algorithm):
 		"""This function calls the pairwise distance function from sklearn
