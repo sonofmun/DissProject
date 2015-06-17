@@ -783,7 +783,10 @@ class SynSimWin(CatSimWin):
 			self.df = np.memmap(file, mode='r', shape=(len(self.ind), len(self.ind)))
 
 	def SimCalc(self, w):
-		mean, std = np.mean(self.df.values), np.std(self.df.values)
+		if self.ind:
+			mean, std = np.mean(self.df), np.std(self.df)
+		else:
+			mean, std = np.mean(self.df.values), np.std(self.df.values)
 		print('%s average: %s, std: %s' % (w, mean, std))
 		vals = []
 		for word in self.top_syns.keys():
