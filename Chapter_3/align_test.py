@@ -65,10 +65,10 @@ class align():
 		sim_df.to_hdf(self.dest_file, algorithm)
 		matches = 0
 		for x in sim_df.columns:
-			if sim_df.ix[max(x-50, 0):min(x+50, len(sim_df.columns)), x].idxmin() == x:
-				matches += 1
-			#if sim_df.ix[:, x].idxmin() == x:
+			#if sim_df.ix[max(x-50, 0):min(x+50, len(sim_df.columns)), x].idxmin() == x:
 			#	matches += 1
+			if sim_df.ix[:, x].idxmin() == x:
+				matches += 1
 		return matches, sim_df.shape[0]
 
 	def pipe(self):

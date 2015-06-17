@@ -807,7 +807,7 @@ class SynSimWin(CatSimWin):
 		self.top_syns = {}
 		for word in self.syn_df.index:
 			self.top_syns[word] = list(self.syn_df[word].order(ascending=False)[1:self.num_syns+1].index)
-		del self.top_syns
+		del self.syn_df
 		for w in self.rng:
 			self.LoadDF(w)
 			self.SimCalc(w)
@@ -816,7 +816,7 @@ class SynSimWin(CatSimWin):
 
 class SynSimSVD(SynSimWin):
 
-	def __init__(self, algo, num_syns, rng, win, syn_file=None, lems=False):
+	def __init__(self, algo, num_syns, rng, win, CS_dir=None, syn_file=None, lems=False):
 		'''
 		This class calculates the SVD exponent that returns the best
 		average cosine similarity score based on synonym similarity data
@@ -837,9 +837,10 @@ class SynSimSVD(SynSimWin):
 		self.algo = algo
 		self.lems = lems
 		self.win = win
+		self.CS_dir = CS_dir
 
 	def LoadDF(self, w):
-		file = '/media/matt/Data/DissProject/Data/SBL_GNT_books/{0}/CS_{1}_{0}_SBL_GNT_books_lems={2}_min_occ=None_SVD_exp={3}.hd5'.format(self.win, self.algo, self.lems, str(w))
+		file = '{4}/{0}/CS_{1}_{0}_SBL_GNT_books_lems={2}_min_occ=None_SVD_exp={3}.hd5'.format(self.win, self.algo, self.lems, str(w), self.CS_dir)
 		try:
 			self.df = pd.read_hdf(file, 'df')
 		except FileNotFoundError:
