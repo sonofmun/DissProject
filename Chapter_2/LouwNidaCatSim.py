@@ -800,6 +800,8 @@ class SynSimWin(CatSimWin):
 						vals.append(self.df.ix[word, word2])
 				except KeyError:
 					continue
+				except ValueError:
+					continue
 		syn_mean = np.mean(vals)
 		syn_std = (np.mean(vals)-mean)/std
 		self.averages[w] = (syn_mean, syn_std)
