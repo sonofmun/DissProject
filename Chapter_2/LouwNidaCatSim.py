@@ -778,7 +778,7 @@ class SynSimWin(CatSimWin):
 			file = tk_control("askopenfilename(title='Where is your pickle file for window = {0}, svd exponent = {1}'.format(str(w), 'None'))")
 			self.df = pd.read_pickle(file)
 		except OSError:
-			file = '{3}/{0}/{1}_CS_{0}_{4}_lems={2}_min_occ={5}_SVD_exp=1.0.dat'.format(str(w), self.algo, self.lems, self.CS_dir, self.corpus[0], self.corpus[1])
+			file = '{3}/{0}/{1}_CS_{0}_lems={2}_{4}_min_occ={5}_SVD_exp=1.0.dat'.format(str(w), self.algo, self.lems, self.CS_dir, self.corpus[0], self.corpus[1])
 			self.ind = pd.read_pickle('{0}/{2}/{1}_IndexList_w={2}_lems={3}.pickle'.format(self.CS_dir, self.corpus[0], str(w), self.lems))
 			self.df = np.memmap(file, dtype='float32', mode='r', shape=(len(self.ind), len(self.ind)))
 
