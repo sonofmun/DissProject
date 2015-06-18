@@ -771,7 +771,7 @@ class SynSimWin(CatSimWin):
 
 	def LoadDF(self, w):
 		#need to implement support for the new .dat (memmap) files I am creating
-		file = '{3}/{0}/CS_{1}_{0}_{4}_lems={2}_min_occ={5}_SVD_exp=1.0.hd5'.format(str(w), self.algo, self.lems, self.CS_dir, self.corpus[0], self.corpus[1])
+		file = '{3}/{0}/CS_{1}_{0}_lems={2}_{4}_min_occ={5}_SVD_exp=1.0.hd5'.format(str(w), self.algo, self.lems, self.CS_dir, self.corpus[0], self.corpus[1])
 		try:
 			self.df = pd.read_hdf(file, 'df')
 		except FileNotFoundError:
