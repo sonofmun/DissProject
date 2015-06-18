@@ -819,7 +819,7 @@ class SynSimWin(CatSimWin):
 		self.top_syns = {}
 		for word in self.syn_df.index:
 			self.top_syns[word] = list(self.syn_df[word].order(ascending=False)[1:self.num_syns+1].index)
-		del self.top_syns
+		del self.syn_df
 		for w in self.rng:
 			self.LoadDF(w)
 			self.SimCalc(w)
