@@ -71,10 +71,10 @@ class SemPipeline:
 		'''
 		if self.lems:
 			return [re.sub(r'.+?lem="([^"]*).*', r'\1', line).lower()
-					 for line in self.t]
+					 for line in self.t if re.sub(r'.+?>([^<]*).*', r'\1', line).lower() != '']
 		else:
 			return [re.sub(r'.+?>([^<]*).*', r'\1', line).lower()
-					 for line in self.t]
+					 for line in self.t if re.sub(r'.+?>([^<]*).*', r'\1', line).lower() != '']
 
 
 	def cooc_counter(self):
@@ -95,12 +95,20 @@ class SemPipeline:
 										   'min_occ={0}'.format(self.min_count)]) + '.dat')
 		if os.path.isfile(cooc_dest):
 			self.ind = pd.read_pickle('{0}/{1}_IndexList_w={2}_lems={3}.pickle'.format(self.dest, self.corpus, self.w, self.lems))
-			self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
+			#the following line deals with the case when the cooc matrix is not square
+			if self.occ_dict:
+				occs = pd.read_pickle(self.occ_dict)
+				cols = len(occs.keys())
+			else:
+				cols = len(self.ind)
+			self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r', shape=(len(self.ind), cols))
 			return
 		counts = Counter()
 		if self.occ_dict:
 			occs = pd.read_pickle(self.occ_dict)
 			min_lems = set([w for w in occs if occs[w] < self.min_count])
+			#the following line deals with the case when the cooc matrix is not square
+			self.col_ind = list(occs.keys())
 			del occs
 		else:
 			min_lems = set()
@@ -124,19 +132,25 @@ class SemPipeline:
 						else:
 							counts[key] = r[key]
 		self.ind = list(counts.keys())
+		try:
+			assert(self.col_ind)
+		except AssertionError:
+			self.col_ind = self.ind
 		with open('{0}/{1}_IndexList_w={2}_lems={3}.pickle'.format(self.dest, self.corpus, self.w, self.lems), mode='wb') as f:
 			dump(self.ind, f)
+		with open('{0}/{1}_ColumnList_w={2}_lems={3}.pickle'.format(self.dest, self.corpus, self.w, self.lems), mode='wb') as f:
+			dump(self.col_ind, f)
 		print('Now writing cooccurrence file at {0}'.format(datetime.datetime.now().time().isoformat()))
-		self.coll_df = np.memmap(cooc_dest, dtype='float', mode='w+', shape=(len(self.ind), len(self.ind)))
+		self.coll_df = np.memmap(cooc_dest, dtype='float', mode='w+', shape=(len(self.ind), len(self.col_ind)))
 		for i, w in enumerate(self.ind):
-			s = pd.Series(counts[w], index=self.ind, dtype=np.float64).fillna(0)
+			s = pd.Series(counts[w], index=self.col_ind, dtype=np.float64).fillna(0)
 			self.coll_df[i] = s.values
 			if i % 5000 == 0:
 				print('{0}% done'.format((i/len(self.ind)*100)))
 				del self.coll_df
-				self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r+', shape=(len(self.ind), len(self.ind)))
+				self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r+', shape=(len(self.ind), len(self.col_ind)))
 		del self.coll_df
-		self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
+		self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r', shape=(len(self.ind), len(self.col_ind)))
 		'''
 		for (ind, key), (ind2, key2) in combinations(enumerate(self.ind), 2):
 			count += 1
@@ -273,21 +287,21 @@ class SemPipeline:
 											   self.corpus,
 											   'min_occ={0}'.format(self.min_count)]) + '.dat')
 		if os.path.isfile(dest_file):
-			self.LL_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
+			self.LL_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), len(self.col_ind)))
 			return
 		n = np.sum(self.coll_df)
 		c2 = np.sum(self.coll_df, axis=1)
 		p = c2/n
-		self.LL_df = np.memmap(dest_file, dtype='float', mode='w+', shape=(len(self.ind), len(self.ind)))
+		self.LL_df = np.memmap(dest_file, dtype='float', mode='w+', shape=(len(self.ind), len(self.col_ind)))
 		for i, w in enumerate(self.ind):
 			self.LL_df[i] = self.log_like(i, c2, p, n)
 			if i % 5000 == 0:
 				print('{0}% done'.format((i/len(self.ind)*100)))
 				del self.LL_df
-				self.LL_df = np.memmap(dest_file, dtype='float', mode='r+', shape=(len(self.ind), len(self.ind)))
+				self.LL_df = np.memmap(dest_file, dtype='float', mode='r+', shape=(len(self.ind), len(self.col_ind)))
 		self.LL_df[np.where(np.isfinite(self.LL_df)==False)] = 0
 		del self.LL_df
-		self.LL_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
+		self.LL_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), len(self.col_ind)))
 
 		'''
 		self.stat_df = pd.DataFrame(0., index=self.coll_df.index,
@@ -327,21 +341,21 @@ class SemPipeline:
 											   self.corpus,
 											   'min_occ={0}'.format(self.min_count)]) + '.dat')
 		if os.path.isfile(dest_file):
-			self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
+			self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), len(self.col_ind)))
 			return
 		n = np.sum(self.coll_df)
 		#values for C2
 		p2 = np.sum(self.coll_df, axis=1)/n
-		self.PPMI_df = np.memmap(dest_file, dtype='float', mode='w+', shape=(len(self.ind), len(self.ind)))
+		self.PPMI_df = np.memmap(dest_file, dtype='float', mode='w+', shape=(len(self.ind), len(self.col_ind)))
 		for i, w in enumerate(self.ind):
 			self.PPMI_df[i] = self.PMI_calc(i, p2, n)
 			if i % 5000 == 0:
 				print('{0}% done'.format((i/len(self.ind)*100)))
 				del self.PPMI_df
-				self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r+', shape=(len(self.ind), len(self.ind)))
+				self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r+', shape=(len(self.ind), len(self.col_ind)))
 		self.PPMI_df[np.where(np.isfinite(self.PPMI_df)==False)] = 0
 		del self.PPMI_df
-		self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
+		self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), len(self.col_ind)))
 
 	def CS(self, algorithm):
 		"""This function calls the pairwise distance function from sklearn
