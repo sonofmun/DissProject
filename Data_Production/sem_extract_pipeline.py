@@ -134,7 +134,7 @@ class SemPipeline:
 		self.ind = list(counts.keys())
 		try:
 			assert(self.col_ind)
-		except AssertionError:
+		except AttributeError:
 			self.col_ind = self.ind
 		with open('{0}/{1}_IndexList_w={2}_lems={3}.pickle'.format(self.dest, self.corpus, self.w, self.lems), mode='wb') as f:
 			dump(self.ind, f)
