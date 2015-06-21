@@ -759,7 +759,10 @@ class SynSimWin(CatSimWin):
 		'''
 		if syn_file == None:
 			syn_file = tk_control("askopenfilename(title='Where is your synonym DF?')")
-		self.syn_df = pd.read_hdf(syn_file, 'CS')
+		try:
+			self.syn_df = pd.read_hdf(syn_file, 'CS')
+		except:
+			self.syn_df = pd.read_pickle(syn_file)
 		self.averages = {}
 		self.rng = rng
 		self.num_syns = num_syns
@@ -818,10 +821,13 @@ class SynSimWin(CatSimWin):
 
 	def CatSimPipe(self):
 		#calculate the syn list once to speed up later processing
-		self.top_syns = {}
-		for word in self.syn_df.index:
-			self.top_syns[word] = list(self.syn_df[word].order(ascending=False)[1:self.num_syns+1].index)
-		del self.syn_df
+		if type(self.syn_df) == dict:
+			self.top_syns = self.syn_df
+		else:
+			self.top_syns = {}
+			for word in self.syn_df.index:
+				self.top_syns[word] = list(self.syn_df[word].order(ascending=False)[1:self.num_syns+1].index)
+			del self.syn_df
 		for w in self.rng:
 			self.LoadDF(w)
 			self.SimCalc(w)
