@@ -291,7 +291,7 @@ class SemPipeline:
 			self.LL_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), self.cols))
 			return
 		n = np.sum(self.coll_df)
-		c2 = np.sum(self.coll_df, axis=1)
+		c2 = np.sum(self.coll_df, axis=0)
 		p = c2/n
 		self.LL_df = np.memmap(dest_file, dtype='float', mode='w+', shape=(len(self.ind), self.cols))
 		for i, w in enumerate(self.ind):
