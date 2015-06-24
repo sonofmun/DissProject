@@ -782,7 +782,7 @@ class SynSimWin(CatSimWin):
 			self.df = pd.read_pickle(file)
 		except OSError:
 			file = '{3}/{0}/{1}_CS_{0}_lems={2}_{4}_min_occ={5}_SVD_exp=1.0.dat'.format(str(w), self.algo, self.lems, self.CS_dir, self.corpus[0], self.corpus[1])
-			self.ind = pd.read_pickle('{0}/{2}/{1}_IndexList_w={2}_lems={3}.pickle'.format(self.CS_dir, self.corpus[0], str(w), self.lems))
+			self.ind = pd.read_pickle('{0}/{2}/{1}_IndexList_w={2}_lems={3}_min_occs={4}.pickle'.format(self.CS_dir, self.corpus[0], str(w), self.lems, self.corpus[1]))
 			self.df = np.memmap(file, dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
 
 	def SimCalc(self, w):
@@ -810,7 +810,7 @@ class SynSimWin(CatSimWin):
 		self.averages[w] = (syn_mean, syn_std)
 
 	def WriteFiles(self):
-		with open('{4}/Syn_Window_Averages_{0}_num_syns={1}_lems={3}_rng={2}.csv'.format(self.algo, self.num_syns, self.rng, self.lems, self.dest_dir),
+		with open('{4}/Syn_Window_Averages_{0}_num_syns={1}_lems={3}_rng={2}_min_occs={5}.csv'.format(self.algo, self.num_syns, self.rng, self.lems, self.dest_dir, self.corpus[1]),
 				  mode='w',
 				  encoding='utf-8') as file:
 			file.write('Average Number of Standard Deviations above or below Average '
