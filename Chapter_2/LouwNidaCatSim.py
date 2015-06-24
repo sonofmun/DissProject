@@ -810,7 +810,7 @@ class SynSimWin(CatSimWin):
 		self.averages[w] = (syn_mean, syn_std)
 
 	def WriteFiles(self):
-		with open('{4}/Syn_Window_Averages_{0}_num_syns={1}_lems={3}_rng={2}.csv'.format(self.algo, self.num_syns, self.rng, self.lems, self.dest_dir),
+		with open('{4}/Syn_Window_Averages_{0}_num_syns={1}_lems={3}_rng={2}_min_occs={5}.csv'.format(self.algo, self.num_syns, self.rng, self.lems, self.dest_dir, self.corpus[1]),
 				  mode='w',
 				  encoding='utf-8') as file:
 			file.write('Average Number of Standard Deviations above or below Average '
