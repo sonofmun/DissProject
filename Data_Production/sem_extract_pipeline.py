@@ -34,7 +34,7 @@ from copy import deepcopy
 
 class SemPipeline:
 
-	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1.45, files=None, c=8, occ_dict=None, min_count=1, jobs=1):
+	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1, files=None, c=8, occ_dict=None, min_count=1, jobs=1):
 		"""
 		"""
 		self.w = win_size
@@ -96,10 +96,10 @@ class SemPipeline:
 		if os.path.isfile(cooc_dest):
 			self.ind = pd.read_pickle('{0}/{1}_IndexList_w={2}_lems={3}.pickle'.format(self.dest, self.corpus, self.w, self.lems))
 			#the following line deals with the case when the cooc matrix is not square
-			if self.occ_dict:
-				occs = pd.read_pickle(self.occ_dict)
-				self.cols = len(occs.keys())
-			else:
+			try:
+				occs = pd.read_pickle('{0}/{1}_ColumnList_w={2}_lems={3}.pickle'.format(self.dest, self.corpus, self.w, self.lems))
+				self.cols = len(occs)
+			except:
 				self.cols = len(self.ind)
 			self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r', shape=(len(self.ind), self.cols))
 			return
@@ -108,7 +108,7 @@ class SemPipeline:
 			occs = pd.read_pickle(self.occ_dict)
 			min_lems = set([w for w in occs if occs[w] < self.min_count])
 			#the following line deals with the case when the cooc matrix is not square
-			self.col_ind = list(occs.keys())
+			#self.col_ind = list(occs.keys())
 			del occs
 		else:
 			min_lems = set()
@@ -137,9 +137,9 @@ class SemPipeline:
 		except AttributeError:
 			self.col_ind = self.ind
 		self.cols = len(self.col_ind)
-		with open('{0}/{1}_IndexList_w={2}_lems={3}.pickle'.format(self.dest, self.corpus, self.w, self.lems), mode='wb') as f:
+		with open('{0}/{1}_IndexList_w={2}_lems={3}_min_occs={4}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count), mode='wb') as f:
 			dump(self.ind, f)
-		with open('{0}/{1}_ColumnList_w={2}_lems={3}.pickle'.format(self.dest, self.corpus, self.w, self.lems), mode='wb') as f:
+		with open('{0}/{1}_ColumnList_w={2}_lems={3}_min_occs={4}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count), mode='wb') as f:
 			dump(self.col_ind, f)
 		print('Now writing cooccurrence file at {0}'.format(datetime.datetime.now().time().isoformat()))
 		self.coll_df = np.memmap(cooc_dest, dtype='float', mode='w+', shape=(len(self.ind), len(self.col_ind)))
