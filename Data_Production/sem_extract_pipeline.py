@@ -94,10 +94,10 @@ class SemPipeline:
 										   self.corpus,
 										   'min_occ={0}'.format(self.min_count)]) + '.dat')
 		if os.path.isfile(cooc_dest):
-			self.ind = pd.read_pickle('{0}/{1}_IndexList_w={2}_lems={3}.pickle'.format(self.dest, self.corpus, self.w, self.lems))
+			self.ind = pd.read_pickle('{0}/{1}_IndexList_w={2}_lems={3}_min_occs={4}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count))
 			#the following line deals with the case when the cooc matrix is not square
 			try:
-				occs = pd.read_pickle('{0}/{1}_ColumnList_w={2}_lems={3}.pickle'.format(self.dest, self.corpus, self.w, self.lems))
+				occs = pd.read_pickle('{0}/{1}_ColumnList_w={2}_lems={3}_min_occs={4}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count))
 				self.cols = len(occs)
 			except:
 				self.cols = len(self.ind)
