@@ -5,6 +5,7 @@ from celery import Celery
 from collections import defaultdict, Counter
 from scipy import linalg
 import numpy as np
+import os.path
 
 app = Celery()
 app.config_from_object('celeryconfig')
@@ -53,9 +54,14 @@ def counter(weighted, w, words, limits):
 	return Counter(cooc_dict)
 
 @app.task(name='proj.tasks.svd_calc')
-def svd_calc(input, output, svd_exp, shape):
-	svd_df = np.memmap(output, dtype='float', mode='w+', shape=shape)
+def svd_calc(orig, output, svd_exp, shape):
+	if os.path.isfile(output):
+		return '{0} exists'.format(output)
+	print('Starting SVD calculations for svd={0}'.format(svd_exp))
+	input = np.memmap(orig, dtype='float', mode='r', shape=tuple(shape))
+	svd_df = np.memmap(output, dtype='float', mode='w+', shape=tuple(shape))
 	U, s, Vh = linalg.svd(input, check_finite=False)
 	S = np.diag(s)
 	svd_df[:] = np.dot(U, np.power(S, svd_exp))
 	del svd_df
+	return 'finished'

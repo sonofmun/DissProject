@@ -358,18 +358,19 @@ class SemPipeline:
 		del self.PPMI_df
 		self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), self.cols))
 
-	def CS(self, algorithm):
+	def CS(self, algorithm, e):
 		"""This function calls the pairwise distance function from sklearn
 		on every log-likelihood DataFrame in a certain directory and returns
 		the similarity score (i.e., 1-cosine distance) for every word, saving
 		the results then to a different directory.
 		"""
 		print('Starting CS calculations for %s for '
-				  'w=%s, lem=%s, weighted=%s at %s' %
+				  'w=%s, lem=%s, weighted=%s svd=%s at %s' %
 				  (self.corpus,
 				   str(self.w),
 				   self.lems,
 				   self.weighted,
+				   e,
 				  datetime.datetime.now().time().isoformat()))
 		dest_file = os.path.join(self.dest,
 								 '_'.join([algorithm,
@@ -378,13 +379,24 @@ class SemPipeline:
 										   'lems={0}'.format(self.lems),
 										   self.corpus,
 										   'min_occ={0}'.format(self.min_count),
-										   'SVD_exp={0}.dat'.format(str(self.svd))]))
+										   'SVD_exp={0}.dat'.format(str(e))]))
 		if os.path.isfile(dest_file):
 			return
-		if algorithm == 'PPMI':
-			self.stat_df = self.PPMI_df
-		elif algorithm == 'LL':
-			self.stat_df = self.LL_df
+		if e == 1:
+			if algorithm == 'PPMI':
+				self.stat_df = self.PPMI_df
+			elif algorithm == 'LL':
+				self.stat_df = self.LL_df
+		else:
+			orig = os.path.join(self.dest,
+										'_'.join([algorithm,
+												  'SVD',
+												  str(self.w),
+												  'lems={0}'.format(self.lems),
+												  self.corpus,
+												  'min_occ={0}'.format(self.min_count),
+												  'SVD_exp={0}.dat'.format(str(e))]))
+			self.stat_df = np.memmap(orig, dtype='float', mode='r', shape=(len(self.ind), self.cols))
 		self.CS_df = np.memmap(dest_file, dtype='float', mode='w+', shape=(len(self.ind), len(self.ind)))
 		self.CS_df[:] = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=self.jobs)
 		'''for i, w in enumerate(self.ind):
@@ -452,30 +464,59 @@ class SemPipeline:
 				   self.weighted,
 				  datetime.datetime.now().time().isoformat()))
 		from scipy import linalg
-		dest_file = os.path.join(self.dest,
-								 '_'.join([algorithm,
-										   'SVD',
-										   str(self.w),
-										   'lems={0}'.format(self.lems),
-										   self.corpus,
-										   'min_occ={0}'.format(self.min_count),
-										   'SVD_exp={0}.dat'.format(str(self.svd))]))
-		if os.path.isfile(dest_file):
-			self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), self.cols))
-			return
+		#dest_file = os.path.join(self.dest,
+		#						 '_'.join([algorithm,
+		#								   'SVD',
+		#								   str(self.w),
+		#								   'lems={0}'.format(self.lems),
+		#								   self.corpus,
+		#								   'min_occ={0}'.format(self.min_count),
+		#								   'SVD_exp={0}.dat'.format(str(self.svd))]))
+		#if os.path.isfile(dest_file):
+			#self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), self.cols))
+			#return
 		#svd_df = np.memmap(dest_file, dtype='float', mode='w+', shape=(len(self.ind), self.cols))
 		if algorithm == 'PPMI':
-			group(svd_calc.s(self.PPMI_df, dest_file, e, (len(self.ind), self.cols)) for e in self.svd)()
+			orig = os.path.join(self.dest,
+								'_'.join(['PPMI',
+										  str(self.w),
+										  'lems={0}'.format(self.lems),
+										  self.corpus,
+										  'min_occ={0}'.format(self.min_count)]) + '.dat')
+			pause = group(svd_calc.s(orig, os.path.join(self.dest,
+														'_'.join([algorithm,
+																  'SVD',
+																  str(self.w),
+																  'lems={0}'.format(self.lems),
+																  self.corpus,
+																  'min_occ={0}'.format(self.min_count),
+																  'SVD_exp={0}.dat'.format(str(e))])),
+									 e, (len(self.ind), self.cols)) for e in self.svd)().get()
 			#U, s, Vh = linalg.svd(self.PPMI_df, check_finite=False)
 			#S = np.diag(s)
 			#svd_df[:] = np.dot(U, np.power(S, self.svd))
 			#self.PPMI_df = svd_df
 		elif algorithm == 'LL':
-			group(svd_calc.s(self.LL_df, dest_file, e, (len(self.ind), self.cols)) for e in self.svd)()
+			orig = os.path.join(self.dest,
+								'_'.join(['LL',
+										  str(self.w),
+										  'lems={0}'.format(self.lems),
+										  self.corpus,
+										  'min_occ={0}'.format(self.min_count)]) + '.dat')
+			pause = group(svd_calc.s(orig, os.path.join(self.dest,
+														'_'.join([algorithm,
+																  'SVD',
+																  str(self.w),
+																  'lems={0}'.format(self.lems),
+																  self.corpus,
+																  'min_occ={0}'.format(self.min_count),
+																  'SVD_exp={0}.dat'.format(str(e))])),
+									 e, (len(self.ind), self.cols)) for e in self.svd)().get()
 			#U, s, Vh = linalg.svd(self.LL_df, check_finite=False)
 			#S = np.diag(s)
 			#svd_df[:] = np.dot(U, np.power(S, self.svd))
 			#self.PPMI_df = svd_df
+		print(pause)
 		print('Finished SVD calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
 				  (self.corpus,
@@ -509,13 +550,14 @@ class SemPipeline:
 				self.svd_calc('PPMI')
 			elif self.algo == 'LL':
 				self.svd_calc('LL')
-		if self.algo == 'both':
-			self.CS('PPMI')
-			self.CS('LL')
-		elif self.algo == 'PPMI':
-			self.CS('PPMI')
-		elif self.algo == 'LL':
-			self.CS('LL')
+		for exp in self.svd:
+			if self.algo == 'both':
+				self.CS('PPMI', exp)
+				self.CS('LL', exp)
+			elif self.algo == 'PPMI':
+				self.CS('PPMI', exp)
+			elif self.algo == 'LL':
+				self.CS('LL', exp)
 
 		print('Finished at %s' % (datetime.datetime.now().time().isoformat()))
 
