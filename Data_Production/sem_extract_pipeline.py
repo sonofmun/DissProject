@@ -453,15 +453,15 @@ class SemPipeline:
 				  datetime.datetime.now().time().isoformat()))
 		from scipy import linalg
 		if algorithm == 'PPMI':
-			U, s, Vh = linalg.svd(self.PPMI_df)
+			U, s, Vh = linalg.svd(self.PPMI_df, overwrite_a=True, check_finite=False)
 			S = np.diag(s)
-			self.PPMI_df = pd.DataFrame(np.dot(U, S**self.svd),
-						 index=self.PPMI_df.index)
+			self.PPMI_df = np.memmap(np.dot(U, np.power(S, self.svd)),
+						 dtype='float', mode='w', shape=(len(self.ind), self.cols))
 		elif algorithm == 'LL':
-			U, s, Vh = linalg.svd(self.LL_df)
+			U, s, Vh = linalg.svd(self.LL_df, overwrite_a=True, check_finite=False)
 			S = np.diag(s)
-			self.LL_df = pd.DataFrame(np.dot(U, S**self.svd),
-						 index=self.LL_df.index)
+			self.LL_df = np.memmap(np.dot(U, np.power(S, self.svd)),
+						 dtype='float', mode='w', shape=(len(self.ind), self.cols))
 		print('Finished SVD calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
 				  (self.corpus,
