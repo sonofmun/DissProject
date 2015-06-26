@@ -25,7 +25,7 @@ except ImportError:
 from sklearn.metrics.pairwise import pairwise_distances
 from glob import glob
 from celery import group
-from proj.tasks import counter
+from proj.tasks import counter, svd_calc
 from sklearn.cross_validation import KFold
 from pickle import dump
 from copy import deepcopy
@@ -452,16 +452,30 @@ class SemPipeline:
 				   self.weighted,
 				  datetime.datetime.now().time().isoformat()))
 		from scipy import linalg
+		dest_file = os.path.join(self.dest,
+								 '_'.join([algorithm,
+										   'SVD',
+										   str(self.w),
+										   'lems={0}'.format(self.lems),
+										   self.corpus,
+										   'min_occ={0}'.format(self.min_count),
+										   'SVD_exp={0}.dat'.format(str(self.svd))]))
+		if os.path.isfile(dest_file):
+			self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), self.cols))
+			return
+		#svd_df = np.memmap(dest_file, dtype='float', mode='w+', shape=(len(self.ind), self.cols))
 		if algorithm == 'PPMI':
-			U, s, Vh = linalg.svd(self.PPMI_df, overwrite_a=True, check_finite=False)
-			S = np.diag(s)
-			self.PPMI_df = np.memmap(np.dot(U, np.power(S, self.svd)),
-						 dtype='float', mode='w', shape=(len(self.ind), self.cols))
+			group(svd_calc.s(self.PPMI_df, dest_file, e, (len(self.ind), self.cols)) for e in self.svd)()
+			#U, s, Vh = linalg.svd(self.PPMI_df, check_finite=False)
+			#S = np.diag(s)
+			#svd_df[:] = np.dot(U, np.power(S, self.svd))
+			#self.PPMI_df = svd_df
 		elif algorithm == 'LL':
-			U, s, Vh = linalg.svd(self.LL_df, overwrite_a=True, check_finite=False)
-			S = np.diag(s)
-			self.LL_df = np.memmap(np.dot(U, np.power(S, self.svd)),
-						 dtype='float', mode='w', shape=(len(self.ind), self.cols))
+			group(svd_calc.s(self.LL_df, dest_file, e, (len(self.ind), self.cols)) for e in self.svd)()
+			#U, s, Vh = linalg.svd(self.LL_df, check_finite=False)
+			#S = np.diag(s)
+			#svd_df[:] = np.dot(U, np.power(S, self.svd))
+			#self.PPMI_df = svd_df
 		print('Finished SVD calculations for %s for '
 				  'w=%s, lem=%s, weighted=%s at %s' %
 				  (self.corpus,
