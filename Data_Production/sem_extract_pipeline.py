@@ -542,7 +542,9 @@ class SemPipeline:
 			   datetime.datetime.now().time().isoformat()))
 		self.cooc_counter()
 		self.stat_eval()
-		if self.svd != 1:
+		if type(self.svd) != list:
+			self.svd = [self.svd]
+		if self.svd != [1]:
 			if self.algo == 'both':
 				self.svd_calc('PPMI')
 				self.svd_calc('LL')
@@ -550,8 +552,6 @@ class SemPipeline:
 				self.svd_calc('PPMI')
 			elif self.algo == 'LL':
 				self.svd_calc('LL')
-		if type(self.svd) != list:
-			self.svd = [self.svd]
 		for exp in self.svd:
 			if self.algo == 'both':
 				self.CS('PPMI', exp)
