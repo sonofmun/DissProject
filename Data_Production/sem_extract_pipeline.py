@@ -550,6 +550,8 @@ class SemPipeline:
 				self.svd_calc('PPMI')
 			elif self.algo == 'LL':
 				self.svd_calc('LL')
+		if type(self.svd) != list:
+			self.svd = [self.svd]
 		for exp in self.svd:
 			if self.algo == 'both':
 				self.CS('PPMI', exp)
