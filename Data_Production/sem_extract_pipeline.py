@@ -543,7 +543,7 @@ class SemPipeline:
 		self.cooc_counter()
 		self.stat_eval()
 		if type(self.svd) != list:
-			self.svd = [self.svd]
+			self.svd = [float(self.svd)]
 		if self.svd != [1]:
 			if self.algo == 'both':
 				self.svd_calc('PPMI')
