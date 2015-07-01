@@ -93,7 +93,7 @@ class FromPers():
 	(http://nlp.perseus.tufts.edu/lexicon/greek/greekParallelText.tar.gz)
 	'''
 
-	def __init__(self, file='/media/matt/Data/DissProject/Data/Chapter_1/Gr_XML.xml'):
+	def __init__(self, file='Data/DissProject/Data/Chapter_1/Gr_XML.xml'):
 		self.file = file
 
 	def extract_lists(self):
