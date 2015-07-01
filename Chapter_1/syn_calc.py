@@ -134,7 +134,7 @@ class FromPers():
 		#sp_arr = sp_arr.tocsr()
 		#print('Calculating cosine similarity')
 		#self.CS = pd.DataFrame(1-pairwise_distances(sp_arr, metric='cosine'), index=self.g_words, columns=self.g_words)
-		df = pd.DataFrame(self.trans_dict).fillna(0)
+		df = pd.DataFrame(self.trans_dict).fillna(0).T
 		self.CS = pd.DataFrame(1-pairwise_distances(df, metric='cosine'), index=df.index, columns=df.index)
 
 	def pipeline(self):
