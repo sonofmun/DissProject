@@ -542,7 +542,9 @@ class SemPipeline:
 			   datetime.datetime.now().time().isoformat()))
 		self.cooc_counter()
 		self.stat_eval()
-		if self.svd != 1:
+		if type(self.svd) != list:
+			self.svd = [float(self.svd)]
+		if self.svd != [1]:
 			if self.algo == 'both':
 				self.svd_calc('PPMI')
 				self.svd_calc('LL')
