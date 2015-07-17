@@ -92,6 +92,7 @@ class SemPipeline:
 			word = re.sub(pattern, r'\1', line).lower()
 			if word != '' and word not in self.stops:
 				words.append(word)
+		return words
 
 
 	def cooc_counter(self):
