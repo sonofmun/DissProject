@@ -34,7 +34,7 @@ from copy import deepcopy
 
 class SemPipeline:
 
-	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1, files=None, c=8, occ_dict=None, min_count=1, jobs=1):
+	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1, files=None, c=8, occ_dict=None, min_count=1, jobs=1, stops=True):
 		"""
 		"""
 		self.w = win_size
@@ -55,6 +55,20 @@ class SemPipeline:
 		else:
 			self.min_count = min_count
 		self.jobs = jobs
+		if stops:
+			self.stops = ['μή', 'ἑαυτοῦ', 'ἄν', 'ἀλλ’', 'ἀλλά', 'ἄλλος', 'ἀπό',
+						  'ἄρα', 'αὐτός', 'δ’', 'δέ', 'δή', 'διά', 'δαί',
+						  'δαίς', 'ἔτι', 'ἐγώ', 'ἐκ', 'ἐμός', 'ἐν', 'ἐπί',
+						  'εἰ', 'εἰμί', 'εἴμι', 'εἰς', 'γάρ', 'γε', 'γα^', 'ἡ',
+						  'ἤ', 'καί', 'κατά', 'μέν', 'μετά', 'μή', 'ὁ', 'ὅδε',
+						  'ὅς', 'ὅστις', 'ὅτι', 'οὕτως', 'οὗτος', 'οὔτε', 'οὖν',
+						  'οὐδείς', 'οἱ', 'οὐ', 'οὐδέ', 'οὐκ', 'περί', 'πρός',
+						  'σύ', 'σύν', 'τά', 'τε', 'τήν', 'τῆς', 'τῇ', 'τι',
+						  'τί', 'τις', 'τίς', 'τό', 'τοί', 'τοιοῦτος', 'τόν',
+						  'τούς', 'τοῦ', 'τῶν', 'τῷ', 'ὑμός', 'ὑπέρ', 'ὑπό',
+						  'ὡς', 'ὦ', 'ὥστε', 'ἐάν', 'παρά', 'σός']
+		else:
+			self.stops = []
 
 
 	def file_chooser(self):
@@ -69,12 +83,15 @@ class SemPipeline:
 		Extracts all of the words/lemmata from the lines extracted from
 		the XML file
 		'''
+		words = []
 		if self.lems:
-			return [re.sub(r'.+?lem="([^"]*).*', r'\1', line).lower()
-					 for line in self.t if re.sub(r'.+?>([^<]*).*', r'\1', line).lower() != '']
+			pattern = re.compile(r'.+?lem="([^"]*).*')
 		else:
-			return [re.sub(r'.+?>([^<]*).*', r'\1', line).lower()
-					 for line in self.t if re.sub(r'.+?>([^<]*).*', r'\1', line).lower() != '']
+			pattern = re.compile(r'.+?>([^<]*).*')
+		for line in self.t:
+			word = re.sub(pattern, r'\1', line).lower()
+			if word != '' and word not in self.stops:
+				words.append(word)
 
 
 	def cooc_counter(self):
