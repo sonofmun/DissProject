@@ -8,7 +8,7 @@ gk_files = tk_control("askopenfilenames(title='Where are your Greek source file?
 #replace the list below with the forms of the word that you want to replace
 #putting a \b before and behind all words will make sure the regex matches only
 #complete words
-'''words = [r'\bἐκκλησ[ίί]αις\b',
+words = [r'\bἐκκλησ[ίί]αις\b',
 		 r'\bἐκκλησ[ίί]αι\b',
 		 r'\bἐκκλησ[ίί]αν\b',
 		 r'\bἐκκλησ[ίί]ας\b',
@@ -19,8 +19,7 @@ gk_files = tk_control("askopenfilenames(title='Where are your Greek source file?
 		 r'\bτἠκκλησ[ίί]ᾳ\b',
 		 r'\b[ἐκκλησ[ίί]ας]\b',
 		 r'\bἘκκλησ[ίί]αν\b']
-'''
-words = [r'\bγλῶσσαν\b',
+'''words = [r'\bγλῶσσαν\b',
 		 r'\bγλῶσσα\b',
 		 r'\bγλῶσσάν\b',
 		 r'\bγλῶσσαι\b',
@@ -42,8 +41,9 @@ words = [r'\bγλῶσσαν\b',
 		 r'\bγλωττῶν\b',
 		 r'\bγλωσσῶν\b',
 		 r'\bγλωσσέων\b']
+'''
 #substitute the dictionary form of your lemma below
-lemma = 'γλῶσσα'
+lemma = 'ἐκκλησία'
 for gk_file in gk_files:
 	with open(gk_file, mode='r', encoding='utf-8') as f:
 		s = f.read()
