@@ -150,8 +150,8 @@ class CatSim:
 					if cat[0] != 93:
 						self.words_no_93 += 1
 				else:
-					new_word = self.prob_word_replace[word]
 					try:
+						new_word = self.prob_word_replace[word]
 						if new_word != '':
 							words.append((new_word.lower(), d[word]))
 						self.tot_words += 1
