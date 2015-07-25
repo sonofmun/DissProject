@@ -167,7 +167,10 @@ class CatSim:
 				vals = []
 				for word2 in words:
 					if word1[0] != word2[0]:
-						vals.append(self.df[self.ind.index(word1[0])][self.ind.index(word2[0])])
+						try:
+							vals.append(self.df[self.ind.index(word1[0])][self.ind.index(word2[0])])
+						except ValueError:
+							continue
 				#scores[win][cat].ix[word1, 'Gloss'] = word1[1]
 				#try:
 				#	self.scores[w][cat].ix[word1, 'Mean'] = np.mean(vals)
