@@ -179,7 +179,7 @@ class CatSim:
 				self.scores[w][cat].drop_duplicates(inplace=True)
 				self.scores[w][cat].ix[word1, 'Mean'] = np.mean(vals)
 				self.scores[w][cat].ix[word1, 'STD +/-'] = (np.mean(vals)-mean)/std
-			print('Total words: {0}'.format(len(self.scores.index)))
+		print('Total words: {0}, cats: {1}'.format(len(self.scores), len(self.scores.values())))
 
 	def AveCalc(self, w):
 		total_std = 0
