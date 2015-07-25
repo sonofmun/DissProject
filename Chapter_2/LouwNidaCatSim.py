@@ -250,7 +250,7 @@ class CatSim:
 
 class CatSimWin(CatSim):
 
-	def __init__(self, algo, rng):
+	def __init__(self, algo, rng, lems=False, CS_dir=None, dest_dir=None, corpus=('SBL_GNT_books', None, 1.0)):
 		try:
 			self.ln = pd.read_pickle('Data/Chapter_2/LN_Cat_Dict.pickle')
 		except FileNotFoundError:
@@ -264,6 +264,10 @@ class CatSimWin(CatSim):
 		self.rng_type = 'win'
 		self.rng = rng
 		self.algo = algo
+		self.CS_dir = CS_dir
+		self.dest_dir = dest_dir
+		self.corpus = corpus
+		self.lems = lems
 		self.prob_word_replace = {'περιΐστημι': 'περιΐστημι',
 									'προΐστημι': 'προΐστημι',
 									'παρατεινω': 'παρατείνω',
@@ -367,6 +371,10 @@ class CatSimWin(CatSim):
 		except FileNotFoundError:
 			file = tk_control("askopenfilename(title='Where is your pickle file for window = {0}, svd exponent = {1}'.format(str(w), 'None'))")
 			self.df = pd.read_pickle(file)
+		except OSError:
+			file = '{3}/{0}/{1}_CS_{0}_lems={2}_{4}_min_occ={5}_SVD_exp={6}.dat'.format(str(w), self.algo, self.lems, self.CS_dir, self.corpus[0], self.corpus[1], self.corpus[2])
+			self.ind = pd.read_pickle('{0}/{2}/{1}_IndexList_w={2}_lems={3}_min_occs={4}.pickle'.format(self.CS_dir, self.corpus[0], str(w), self.lems, self.corpus[1]))
+			self.df = np.memmap(file, dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
 
 	def WriteFiles(self):
 		with open('Data/Chapter_2/per_book/LN_Word_Cat_Scores_{0}_rng={1}.pickle'.format(self.algo, self.rng), mode='wb') as file:

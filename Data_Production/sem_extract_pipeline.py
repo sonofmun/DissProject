@@ -34,7 +34,7 @@ from copy import deepcopy
 
 class SemPipeline:
 
-	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1, files=None, c=8, occ_dict=None, min_count=1, jobs=1):
+	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1, files=None, c=8, occ_dict=None, min_count=1, jobs=1, stops=False):
 		"""
 		"""
 		self.w = win_size
@@ -55,6 +55,20 @@ class SemPipeline:
 		else:
 			self.min_count = min_count
 		self.jobs = jobs
+		if stops == False:
+			self.stops = ['μή', 'ἑαυτοῦ', 'ἄν', 'ἀλλ’', 'ἀλλά', 'ἄλλος', 'ἀπό',
+						  'ἄρα', 'αὐτός', 'δ’', 'δέ', 'δή', 'διά', 'δαί',
+						  'δαίς', 'ἔτι', 'ἐγώ', 'ἐκ', 'ἐμός', 'ἐν', 'ἐπί',
+						  'εἰ', 'εἰμί', 'εἴμι', 'εἰς', 'γάρ', 'γε', 'γα^', 'ἡ',
+						  'ἤ', 'καί', 'κατά', 'μέν', 'μετά', 'μή', 'ὁ', 'ὅδε',
+						  'ὅς', 'ὅστις', 'ὅτι', 'οὕτως', 'οὗτος', 'οὔτε', 'οὖν',
+						  'οὐδείς', 'οἱ', 'οὐ', 'οὐδέ', 'οὐκ', 'περί', 'πρός',
+						  'σύ', 'σύν', 'τά', 'τε', 'τήν', 'τῆς', 'τῇ', 'τι',
+						  'τί', 'τις', 'τίς', 'τό', 'τοί', 'τοιοῦτος', 'τόν',
+						  'τούς', 'τοῦ', 'τῶν', 'τῷ', 'ὑμός', 'ὑπέρ', 'ὑπό',
+						  'ὡς', 'ὦ', 'ὥστε', 'ἐάν', 'παρά', 'σός']
+		else:
+			self.stops = []
 
 
 	def file_chooser(self):
@@ -69,12 +83,16 @@ class SemPipeline:
 		Extracts all of the words/lemmata from the lines extracted from
 		the XML file
 		'''
+		words = []
 		if self.lems:
-			return [re.sub(r'.+?lem="([^"]*).*', r'\1', line).lower()
-					 for line in self.t if re.sub(r'.+?>([^<]*).*', r'\1', line).lower() != '']
+			pattern = re.compile(r'.+?lem="([^"]*).*')
 		else:
-			return [re.sub(r'.+?>([^<]*).*', r'\1', line).lower()
-					 for line in self.t if re.sub(r'.+?>([^<]*).*', r'\1', line).lower() != '']
+			pattern = re.compile(r'.+?>([^<]*).*')
+		for line in self.t:
+			word = re.sub(pattern, r'\1', line).lower()
+			if word != '' and word not in self.stops:
+				words.append(word)
+		return words
 
 
 	def cooc_counter(self):
@@ -92,12 +110,13 @@ class SemPipeline:
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
 										   self.corpus,
-										   'min_occ={0}'.format(self.min_count)]) + '.dat')
+										   'min_occ={0}'.format(self.min_count),
+										   'no_stops={0}'.format(bool(self.stops))]) + '.dat')
 		if os.path.isfile(cooc_dest):
-			self.ind = pd.read_pickle('{0}/{1}_IndexList_w={2}_lems={3}_min_occs={4}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count))
+			self.ind = pd.read_pickle('{0}/{1}_IndexList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count, bool(self.stops)))
 			#the following line deals with the case when the cooc matrix is not square
 			try:
-				occs = pd.read_pickle('{0}/{1}_ColumnList_w={2}_lems={3}_min_occs={4}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count))
+				occs = pd.read_pickle('{0}/{1}_ColumnList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count, bool(self.stops)))
 				self.cols = len(occs)
 			except:
 				self.cols = len(self.ind)
@@ -137,9 +156,9 @@ class SemPipeline:
 		except AttributeError:
 			self.col_ind = self.ind
 		self.cols = len(self.col_ind)
-		with open('{0}/{1}_IndexList_w={2}_lems={3}_min_occs={4}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count), mode='wb') as f:
+		with open('{0}/{1}_IndexList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count, bool(self.stops)), mode='wb') as f:
 			dump(self.ind, f)
-		with open('{0}/{1}_ColumnList_w={2}_lems={3}_min_occs={4}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count), mode='wb') as f:
+		with open('{0}/{1}_ColumnList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count, bool(self.stops)), mode='wb') as f:
 			dump(self.col_ind, f)
 		print('Now writing cooccurrence file at {0}'.format(datetime.datetime.now().time().isoformat()))
 		self.coll_df = np.memmap(cooc_dest, dtype='float', mode='w+', shape=(len(self.ind), len(self.col_ind)))
@@ -286,7 +305,8 @@ class SemPipeline:
 											   str(self.w),
 											   'lems={0}'.format(self.lems),
 											   self.corpus,
-											   'min_occ={0}'.format(self.min_count)]) + '.dat')
+											   'min_occ={0}'.format(self.min_count),
+											   'no_stops={0}'.format(bool(self.stops))]) + '.dat')
 		if os.path.isfile(dest_file):
 			self.LL_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), self.cols))
 			return
@@ -340,7 +360,8 @@ class SemPipeline:
 											   str(self.w),
 											   'lems={0}'.format(self.lems),
 											   self.corpus,
-											   'min_occ={0}'.format(self.min_count)]) + '.dat')
+											   'min_occ={0}'.format(self.min_count),
+											   'no_stops={0}'.format(bool(self.stops))]) + '.dat')
 		if os.path.isfile(dest_file):
 			self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), self.cols))
 			return
@@ -379,7 +400,8 @@ class SemPipeline:
 										   'lems={0}'.format(self.lems),
 										   self.corpus,
 										   'min_occ={0}'.format(self.min_count),
-										   'SVD_exp={0}.dat'.format(str(e))]))
+										   'SVD_exp={0}'.format(str(e)),
+										   'no_stops={0}.dat'.format(bool(self.stops))]))
 		if os.path.isfile(dest_file):
 			return
 		if e == 1:
@@ -395,7 +417,8 @@ class SemPipeline:
 												  'lems={0}'.format(self.lems),
 												  self.corpus,
 												  'min_occ={0}'.format(self.min_count),
-												  'SVD_exp={0}.dat'.format(str(e))]))
+												  'SVD_exp={0}'.format(str(e)),
+												  'no_stops={0}.dat'.format(bool(self.stops))]))
 			self.stat_df = np.memmap(orig, dtype='float', mode='r', shape=(len(self.ind), self.cols))
 		self.CS_df = np.memmap(dest_file, dtype='float', mode='w+', shape=(len(self.ind), len(self.ind)))
 		self.CS_df[:] = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=self.jobs)
@@ -482,7 +505,8 @@ class SemPipeline:
 										  str(self.w),
 										  'lems={0}'.format(self.lems),
 										  self.corpus,
-										  'min_occ={0}'.format(self.min_count)]) + '.dat')
+										  'min_occ={0}'.format(self.min_count),
+										  'no_stops={0}'.format(bool(self.stops))]) + '.dat')
 			pause = group(svd_calc.s(orig, os.path.join(self.dest,
 														'_'.join([algorithm,
 																  'SVD',
@@ -490,7 +514,8 @@ class SemPipeline:
 																  'lems={0}'.format(self.lems),
 																  self.corpus,
 																  'min_occ={0}'.format(self.min_count),
-																  'SVD_exp={0}.dat'.format(str(e))])),
+																  'SVD_exp={0}'.format(str(e)),
+																  'no_stops={0}.dat'.format(bool(self.stops))])),
 									 e, (len(self.ind), self.cols)) for e in self.svd)().get()
 			#U, s, Vh = linalg.svd(self.PPMI_df, check_finite=False)
 			#S = np.diag(s)
@@ -502,7 +527,8 @@ class SemPipeline:
 										  str(self.w),
 										  'lems={0}'.format(self.lems),
 										  self.corpus,
-										  'min_occ={0}'.format(self.min_count)]) + '.dat')
+										  'min_occ={0}'.format(self.min_count),
+										  'no_stops={0}'.format(bool(self.stops))]) + '.dat')
 			pause = group(svd_calc.s(orig, os.path.join(self.dest,
 														'_'.join([algorithm,
 																  'SVD',
@@ -510,7 +536,8 @@ class SemPipeline:
 																  'lems={0}'.format(self.lems),
 																  self.corpus,
 																  'min_occ={0}'.format(self.min_count),
-																  'SVD_exp={0}.dat'.format(str(e))])),
+																  'SVD_exp={0}'.format(str(e)),
+																  'no_stops={0}.dat'.format(bool(self.stops))])),
 									 e, (len(self.ind), self.cols)) for e in self.svd)().get()
 			#U, s, Vh = linalg.svd(self.LL_df, check_finite=False)
 			#S = np.diag(s)
