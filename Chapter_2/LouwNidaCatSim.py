@@ -131,7 +131,10 @@ class CatSim:
 
 	def SimCalc(self, w):
 		self.scores[w] = {}
-		mean, std = np.mean(self.df.values), np.std(self.df.values)
+		try:
+			mean, std = np.mean(self.df.values), np.std(self.df.values)
+		except AttributeError:
+			mean, std = np.mean(self.df), np.std(self.df)
 		print('%s average: %s, std: %s' % (w, mean, std))
 		self.tot_words = 0
 		self.words_no_93 = 0
