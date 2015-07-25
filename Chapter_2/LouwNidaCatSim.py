@@ -143,7 +143,7 @@ class CatSim:
 			words = []
 			for d in self.ln[cat]['words']:
 				word = list(d.keys())[0]
-				if word.lower() in self.df.index:
+				if word.lower() in self.ind:
 					words.append((word.lower(), d[word]))
 					self.tot_words += 1
 					self.good_words.append(word)
@@ -164,7 +164,7 @@ class CatSim:
 				vals = []
 				for word2 in words:
 					if word1[0] != word2[0]:
-						vals.append(self.df.ix[word1[0], word2[0]])
+						vals.append(self.df[self.ind.index(word1[0])][self.ind.index(word2[0])])
 				#scores[win][cat].ix[word1, 'Gloss'] = word1[1]
 				#try:
 				#	self.scores[w][cat].ix[word1, 'Mean'] = np.mean(vals)
