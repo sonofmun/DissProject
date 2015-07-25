@@ -151,14 +151,17 @@ class CatSim:
 						self.words_no_93 += 1
 				else:
 					new_word = self.prob_word_replace[word]
-					if new_word != '':
-						words.append((new_word.lower(), d[word]))
-					self.tot_words += 1
-					self.good_words.append(w)
-					if cat[0] != 93:
-						self.words_no_93 += 1
-					self.prob_words.append(word)
-					self.not_words += 1
+					try:
+						if new_word != '':
+							words.append((new_word.lower(), d[word]))
+						self.tot_words += 1
+						self.good_words.append(w)
+						if cat[0] != 93:
+							self.words_no_93 += 1
+						self.prob_words.append(word)
+						self.not_words += 1
+					except KeyError:
+						print('{0} not in LN'.format(word))
 			self.scores[w][cat] = pd.DataFrame(index=words, columns=['Mean', 'STD +/-'])
 			for word1 in words:
 				vals = []
