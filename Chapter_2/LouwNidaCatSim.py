@@ -260,7 +260,7 @@ class CatSim:
 
 class CatSimWin(CatSim):
 
-	def __init__(self, algo, rng, lems=False, CS_dir=None, dest_dir=None, corpus=('SBL_GNT_books', None, 1.0)):
+	def __init__(self, algo, rng, lems=False, CS_dir=None, dest_dir=None, corpus=('SBL_GNT_books', None, 1.0), lem_file = None):
 		try:
 			self.ln = pd.read_pickle('Data/Chapter_2/LN_Cat_Dict.pickle')
 		except FileNotFoundError:
@@ -278,6 +278,7 @@ class CatSimWin(CatSim):
 		self.dest_dir = dest_dir
 		self.corpus = corpus
 		self.lems = lems
+		self.lem_file = lem_file
 		self.prob_word_replace = {'περιΐστημι': 'περιΐστημι',
 									'προΐστημι': 'προΐστημι',
 									'παρατεινω': 'παρατείνω',
@@ -389,7 +390,10 @@ class CatSimWin(CatSim):
 	def WriteFiles(self):
 		with open('Data/Chapter_2/LN_Word_Cat_Scores_{0}_rng={1}.pickle'.format(self.algo, self.rng), mode='wb') as file:
 			dump(self.scores, file)
-		lems = pd.read_pickle('Data/SBLGNT_lem_dict.pickle')
+		if self.lem_file:
+			lems = pd.read_pickle(self.lem_file)
+		else:
+			lems = {}
 		for w_size in self.scores.keys():
 			save_file = 'Data/Chapter_2/LN_Window={0}_Word_Cat_Scores_SVD_exp={1}_{2}.csv'.format(str(w_size), 'None', self.algo)
 			self.WriteLines(save_file, w_size, 'None', lems)
