@@ -161,7 +161,7 @@ class CatSim:
 						self.prob_words.append(word)
 						self.not_words += 1
 					except KeyError:
-						print('{0} not in corpus'.format(word))
+						continue
 			self.scores[w][cat] = pd.DataFrame(index=words, columns=['Mean', 'STD +/-'])
 			for word1 in words:
 				vals = []
