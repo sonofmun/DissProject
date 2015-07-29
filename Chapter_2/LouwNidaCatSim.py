@@ -131,7 +131,10 @@ class CatSim:
 
 	def SimCalc(self, w):
 		self.scores[w] = {}
-		mean, std = np.mean(self.df.values), np.std(self.df.values)
+		try:
+			mean, std = np.mean(self.df.values), np.std(self.df.values)
+		except AttributeError:
+			mean, std = np.mean(self.df), np.std(self.df)
 		print('%s average: %s, std: %s' % (w, mean, std))
 		self.tot_words = 0
 		self.words_no_93 = 0
@@ -140,28 +143,34 @@ class CatSim:
 			words = []
 			for d in self.ln[cat]['words']:
 				word = list(d.keys())[0]
-				if word.lower() in self.df.index:
+				if word.lower() in self.ind:
 					words.append((word.lower(), d[word]))
 					self.tot_words += 1
 					self.good_words.append(word)
 					if cat[0] != 93:
 						self.words_no_93 += 1
 				else:
-					new_word = self.prob_word_replace[word]
-					if new_word != '':
-						words.append((new_word.lower(), d[word]))
-					self.tot_words += 1
-					self.good_words.append(w)
-					if cat[0] != 93:
-						self.words_no_93 += 1
-					self.prob_words.append(word)
-					self.not_words += 1
+					try:
+						new_word = self.prob_word_replace[word]
+						if new_word != '':
+							words.append((new_word.lower(), d[word]))
+						self.tot_words += 1
+						self.good_words.append(w)
+						if cat[0] != 93:
+							self.words_no_93 += 1
+						self.prob_words.append(word)
+						self.not_words += 1
+					except KeyError:
+						print('{0} not in corpus'.format(word))
 			self.scores[w][cat] = pd.DataFrame(index=words, columns=['Mean', 'STD +/-'])
 			for word1 in words:
 				vals = []
 				for word2 in words:
 					if word1[0] != word2[0]:
-						vals.append(self.df.ix[word1[0], word2[0]])
+						try:
+							vals.append(self.df[self.ind.index(word1[0])][self.ind.index(word2[0])])
+						except ValueError:
+							continue
 				#scores[win][cat].ix[word1, 'Gloss'] = word1[1]
 				#try:
 				#	self.scores[w][cat].ix[word1, 'Mean'] = np.mean(vals)
@@ -170,6 +179,7 @@ class CatSim:
 				self.scores[w][cat].drop_duplicates(inplace=True)
 				self.scores[w][cat].ix[word1, 'Mean'] = np.mean(vals)
 				self.scores[w][cat].ix[word1, 'STD +/-'] = (np.mean(vals)-mean)/std
+		print('Total words: {0}'.format(self.words_no_93))
 
 	def AveCalc(self, w):
 		total_std = 0
@@ -202,7 +212,7 @@ class CatSim:
 			for cat in sorted(self.scores[key].keys()):
 				for w in self.scores[key][cat].index:
 					try:
-						cnt = lems[w[0]]['count']
+						cnt = lems[w]
 					except KeyError:
 						cnt = '?'
 					try:
@@ -250,7 +260,7 @@ class CatSim:
 
 class CatSimWin(CatSim):
 
-	def __init__(self, algo, rng):
+	def __init__(self, algo, rng, lems=False, CS_dir=None, dest_dir=None, corpus=('SBL_GNT_books', None, 1.0), lem_file = None):
 		try:
 			self.ln = pd.read_pickle('Data/Chapter_2/LN_Cat_Dict.pickle')
 		except FileNotFoundError:
@@ -264,6 +274,11 @@ class CatSimWin(CatSim):
 		self.rng_type = 'win'
 		self.rng = rng
 		self.algo = algo
+		self.CS_dir = CS_dir
+		self.dest_dir = dest_dir
+		self.corpus = corpus
+		self.lems = lems
+		self.lem_file = lem_file
 		self.prob_word_replace = {'περιΐστημι': 'περιΐστημι',
 									'προΐστημι': 'προΐστημι',
 									'παρατεινω': 'παρατείνω',
@@ -367,17 +382,24 @@ class CatSimWin(CatSim):
 		except FileNotFoundError:
 			file = tk_control("askopenfilename(title='Where is your pickle file for window = {0}, svd exponent = {1}'.format(str(w), 'None'))")
 			self.df = pd.read_pickle(file)
+		except OSError:
+			file = '{3}/{0}/{1}_CS_{0}_lems={2}_{4}_min_occ={5}_SVD_exp={6}.dat'.format(str(w), self.algo, self.lems, self.CS_dir, self.corpus[0], self.corpus[1], self.corpus[2])
+			self.ind = pd.read_pickle('{0}/{2}/{1}_IndexList_w={2}_lems={3}_min_occs={4}.pickle'.format(self.CS_dir, self.corpus[0], str(w), self.lems, self.corpus[1]))
+			self.df = np.memmap(file, dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
 
 	def WriteFiles(self):
-		with open('Data/Chapter_2/per_book/LN_Word_Cat_Scores_{0}_rng={1}.pickle'.format(self.algo, self.rng), mode='wb') as file:
+		with open('Data/Chapter_2/LN_Word_Cat_Scores_{0}_rng={1}.pickle'.format(self.algo, self.rng), mode='wb') as file:
 			dump(self.scores, file)
-		lems = pd.read_pickle('Data/SBLGNT_lem_dict.pickle')
+		if self.lem_file:
+			lems = pd.read_pickle(self.lem_file)
+		else:
+			lems = {}
 		for w_size in self.scores.keys():
-			save_file = 'Data/Chapter_2/per_book/LN_Window={0}_Word_Cat_Scores_SVD_exp={1}_{2}.csv'.format(str(w_size), 'None', self.algo)
+			save_file = 'Data/Chapter_2/LN_Window={0}_Word_Cat_Scores_SVD_exp={1}_{2}.csv'.format(str(w_size), 'None', self.algo)
 			self.WriteLines(save_file, w_size, 'None', lems)
-		with open('Data/Chapter_2/per_book/LN_Window_Averages_{0}_rng={1}.pickle'.format(self.algo, self.rng), mode='wb') as file:
+		with open('Data/Chapter_2/LN_Window_Averages_{0}_rng={1}.pickle'.format(self.algo, self.rng), mode='wb') as file:
 			dump(self.averages, file)
-		with open('Data/Chapter_2/per_book/LN_Window_Averages_{0}_rng={1}.csv'.format(self.algo, self.rng),
+		with open('Data/Chapter_2/LN_Window_Averages_{0}_rng={1}.csv'.format(self.algo, self.rng),
 				  mode='w',
 				  encoding='utf-8') as file:
 			file.write('Average Number of Standard Deviations above or below Average '
@@ -385,9 +407,9 @@ class CatSimWin(CatSim):
 			file.write('Window Size,Average,+/- Standard Deviations\n')
 			for w_size in sorted(self.averages.keys()):
 				file.write('{0},{1},{2}\n'.format(w_size, self.averages[w_size][0], self.averages[w_size][1]))
-		with open('Data/Chapter_2/per_book/LN_Window_Averages_no_93_SVD_{0}_rng={1}.pickle'.format(self.algo, self.rng), mode='wb') as file:
+		with open('Data/Chapter_2/LN_Window_Averages_no_93_SVD_{0}_rng={1}.pickle'.format(self.algo, self.rng), mode='wb') as file:
 			dump(self.ave_no_93, file)
-		with open('Data/Chapter_2/per_book/LN_Window_Averages_no_93_SVD_{0}_rng={1}.csv'.format(self.algo, self.rng),
+		with open('Data/Chapter_2/LN_Window_Averages_no_93_SVD_{0}_rng={1}.csv'.format(self.algo, self.rng),
 				  mode='w',
 				  encoding='utf-8') as file:
 			file.write('Average Number of Standard Deviations above or below Average '
