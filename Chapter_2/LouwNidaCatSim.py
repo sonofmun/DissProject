@@ -260,7 +260,7 @@ class CatSim:
 
 class CatSimWin(CatSim):
 
-	def __init__(self, algo, rng, lems=False, CS_dir=None, dest_dir=None, corpus=('SBL_GNT_books', None, 1.0), lem_file = None):
+	def __init__(self, algo, rng, lems=False, CS_dir=None, dest_dir=None, corpus=('SBL_GNT_books', 1, 1.0, True), lem_file = None):
 		try:
 			self.ln = pd.read_pickle('Data/Chapter_2/LN_Cat_Dict.pickle')
 		except FileNotFoundError:
@@ -383,8 +383,8 @@ class CatSimWin(CatSim):
 			file = tk_control("askopenfilename(title='Where is your pickle file for window = {0}, svd exponent = {1}'.format(str(w), 'None'))")
 			self.df = pd.read_pickle(file)
 		except OSError:
-			file = '{3}/{0}/{1}_CS_{0}_lems={2}_{4}_min_occ={5}_SVD_exp={6}.dat'.format(str(w), self.algo, self.lems, self.CS_dir, self.corpus[0], self.corpus[1], self.corpus[2])
-			self.ind = pd.read_pickle('{0}/{2}/{1}_IndexList_w={2}_lems={3}_min_occs={4}.pickle'.format(self.CS_dir, self.corpus[0], str(w), self.lems, self.corpus[1]))
+			file = '{3}/{0}/{1}_CS_{0}_lems={2}_{4}_min_occ={5}_SVD_exp={6}_no_stops={7}.dat'.format(str(w), self.algo, self.lems, self.CS_dir, self.corpus[0], self.corpus[1], self.corpus[2], self.corpus[3])
+			self.ind = pd.read_pickle('{0}/{2}/{1}_IndexList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(self.CS_dir, self.corpus[0], str(w), self.lems, self.corpus[1], self.corpus[3]))
 			self.df = np.memmap(file, dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
 
 	def WriteFiles(self):
