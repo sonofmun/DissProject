@@ -15,7 +15,7 @@ class OGLPGCreate:
 		dirs = os.listdir(self.orig)
 		ignore = '*.png\n*.uzn'
 		for d in dirs:
-			if os.path.isdir(d):
+			if os.path.isdir(os.path.join(self.orig, d)):
 				params = {'name': 'Vol. {}'.format(d), 'description': 'Raw OCR for PG Volume {}'.format(d)}
 				reply = requests.post(self.base, data=json.dumps(params), headers={'Authorization': self.auth})
 				if reply.status_code == 201:
