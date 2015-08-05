@@ -34,7 +34,7 @@ from copy import deepcopy
 
 class SemPipeline:
 
-	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1, files=None, c=8, occ_dict=None, min_count=1, jobs=1, stops=False):
+	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1, files=None, c=8, occ_dict=None, min_count=1, jobs=1, stops=True):
 		"""
 		"""
 		self.w = win_size
