@@ -25,7 +25,7 @@ class OGLPGCreate:
 						f.write(ignore)
 					os.system('git add -A')
 					os.system('git commit -m "initial commit"')
-					os.system('git remote add origin https://sonofmun:{0}@github.com:OGL-PatrologiaGraecaDev/Vol.-{1}.git'.format(self.auth.split()[1], d))
+					os.system('git remote add origin https://sonofmun:{0}@github.com/OGL-PatrologiaGraecaDev/Vol.-{1}.git'.format(self.auth.split()[1], d))
 					os.system('git push --set-upstream origin master')
 				else:
 					print('There was an error creating the repository Vol.-{}'.format(d))
