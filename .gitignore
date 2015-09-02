@@ -244,3 +244,4 @@ Tufts_Cluster/*
 proj/celery.py
 celeryconfig.py
 *.npy
+*.png
