@@ -33,7 +33,7 @@ class comparison:
 			self.ekk_rows[corp[0]] = pd.Series(r, index=rows)
 
 	def sim_calc(self):
-		cs_scores = pd.DataFrame(index=self.ekk_rows.keys(), columns=self.ekk_rows.keys())
+		self.cs_scores = pd.DataFrame(index=self.ekk_rows.keys(), columns=self.ekk_rows.keys())
 		for combo in combinations(self.ekk_rows.keys(), 2):
 			ekk_index = list(set(self.ekk_rows[combo[0]].index).intersection(set(self.ekk_rows[combo[1]].index)))
-			cs_scores.ix[combo[0], combo[1]] = cs_scores.ix[combo[1], combo[0]] = 1 - pairwise_distances(self.ekk_rows[combo[0]][ekk_index], self.ekk_rows[combo[1]][ekk_index], metric='cosine')
+			self.cs_scores.ix[combo[0], combo[1]] = self.cs_scores.ix[combo[1], combo[0]] = 1 - pairwise_distances(self.ekk_rows[combo[0]][ekk_index], self.ekk_rows[combo[1]][ekk_index], metric='cosine')
