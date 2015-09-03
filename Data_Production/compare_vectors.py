@@ -29,7 +29,7 @@ class comparison:
 		for corp in self.corpora:
 			rows = pd.read_pickle('{0}{1}/{4}/{2}/{4}_IndexList_w={2}_lems=False_min_occs={3}_no_stops=False.pickle'.format(self.base, corp[0], corp[1], corp[2], self.english))
 			i = rows.index(self.greek)
-			r = np.memmap('{0}{1}/{4}/{2}/{5}_{2}_lems=False_{4}_min_occ={3}_{6}no_stops=False.dat'.format(self.base, corp[0], corp[1], corp[2], self.english, self.prefix, self.svd), dtype='float', shape=(len(rows), len(rows)))[i]
+			r = np.memmap('{0}{1}/{4}/{2}/{5}_{2}_lems=False_{4}_min_occ={3}_{6}no_stops=False_NORMED.dat'.format(self.base, corp[0], corp[1], corp[2], self.english, self.prefix, self.svd), dtype='float', shape=(len(rows), len(rows)))[i]
 			self.ekk_rows[corp[0]] = pd.Series(r, index=rows)
 
 	def sim_calc(self):
