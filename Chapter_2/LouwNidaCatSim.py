@@ -388,18 +388,18 @@ class CatSimWin(CatSim):
 			self.df = np.memmap(file, dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
 
 	def WriteFiles(self):
-		with open('Data/Chapter_2/LN_Word_Cat_Scores_{0}_rng={1}.pickle'.format(self.algo, self.rng), mode='wb') as file:
+		with open('{2}/LN_Word_Cat_Scores_{0}_rng={1}_lems={3}.pickle'.format(self.algo, self.rng, self.dest_dir, self.lems), mode='wb') as file:
 			dump(self.scores, file)
 		if self.lem_file:
 			lems = pd.read_pickle(self.lem_file)
 		else:
 			lems = {}
 		for w_size in self.scores.keys():
-			save_file = 'Data/Chapter_2/LN_Window={0}_Word_Cat_Scores_SVD_exp={1}_{2}.csv'.format(str(w_size), 'None', self.algo)
+			save_file = '{3}/LN_Window={0}_Word_Cat_Scores_SVD_exp={1}_{2}_lems={4}.csv'.format(str(w_size), 'None', self.algo, self.dest_dir, self.lems)
 			self.WriteLines(save_file, w_size, 'None', lems)
-		with open('Data/Chapter_2/LN_Window_Averages_{0}_rng={1}.pickle'.format(self.algo, self.rng), mode='wb') as file:
+		with open('{2}/LN_Window_Averages_{0}_lems={3}_rng={1}.pickle'.format(self.algo, self.rng, self.dest_dir, self.lems), mode='wb') as file:
 			dump(self.averages, file)
-		with open('Data/Chapter_2/LN_Window_Averages_{0}_rng={1}.csv'.format(self.algo, self.rng),
+		with open('{2}/LN_Window_Averages_{0}_lems={3}_rng={1}.csv'.format(self.algo, self.rng, self.dest_dir, self.lems),
 				  mode='w',
 				  encoding='utf-8') as file:
 			file.write('Average Number of Standard Deviations above or below Average '
@@ -407,9 +407,9 @@ class CatSimWin(CatSim):
 			file.write('Window Size,Average,+/- Standard Deviations\n')
 			for w_size in sorted(self.averages.keys()):
 				file.write('{0},{1},{2}\n'.format(w_size, self.averages[w_size][0], self.averages[w_size][1]))
-		with open('Data/Chapter_2/LN_Window_Averages_no_93_SVD_{0}_rng={1}.pickle'.format(self.algo, self.rng), mode='wb') as file:
+		with open('{2}/LN_Window_Averages_no_93_SVD_{0}_lems={3}_rng={1}.pickle'.format(self.algo, self.rng, self.dest_dir, self.lems), mode='wb') as file:
 			dump(self.ave_no_93, file)
-		with open('Data/Chapter_2/LN_Window_Averages_no_93_SVD_{0}_rng={1}.csv'.format(self.algo, self.rng),
+		with open('{2}/LN_Window_Averages_no_93_SVD_{0}_lems={3}_rng={1}.csv'.format(self.algo, self.rng, self.dest_dir, self.lems),
 				  mode='w',
 				  encoding='utf-8') as file:
 			file.write('Average Number of Standard Deviations above or below Average '
