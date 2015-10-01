@@ -22,7 +22,7 @@ try:
 	from Data_Production.TK_files import tk_control
 except ImportError:
 	print('Tkinter cannot be used on this Python installation.\nPlease designate a list of files in the files variable.')
-from sklearn.metrics.pairwise import pairwise_distances
+from sklearn.metrics import pairwise_distances
 from glob import glob
 from celery import group
 from proj.tasks import counter, svd_calc
@@ -150,7 +150,8 @@ class SemPipeline:
 							counts[key].update(r[key])
 						else:
 							counts[key] = r[key]
-		self.ind = list(counts.keys())
+		self.coll_df = pd.SparseDataFrame.from_dict(counts, orient='index', dtype=np.float64).fillna(0)
+		'''self.ind = list(counts.keys())
 		try:
 			assert(self.col_ind)
 		except AttributeError:
@@ -171,6 +172,7 @@ class SemPipeline:
 				self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r+', shape=(len(self.ind), len(self.col_ind)))
 		del self.coll_df
 		self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r', shape=(len(self.ind), len(self.col_ind)))
+		'''
 		'''
 		for (ind, key), (ind2, key2) in combinations(enumerate(self.ind), 2):
 			count += 1

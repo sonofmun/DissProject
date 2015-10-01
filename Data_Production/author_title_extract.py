@@ -52,7 +52,10 @@ class get_local:
 				author = root.xpath('//{0}titleStmt/{0}author'.format(prefix), namespaces=namespace)[0].text.strip()
 			except IndexError:
 				author = 'No Author'
-			if 'New Testament' not in title:
-				new_lines.append('{0},{1},{2}'.format(author, title, line))
+			#if 'New Testament' not in title:
+			#	new_lines.append('{0},{1},{2}'.format(author, title, line))
+			new_lines.append('{0},{1},{2}'.format(author, title, line))
+			if 'Plutarch' in author:
+				print(p)
 		new_lines[0] = 'Author,Work,{}'.format(self.lines[0])
 		return new_lines

@@ -418,6 +418,163 @@ class CatSimWin(CatSim):
 			for w_size in sorted(self.ave_no_93.keys()):
 				file.write('{0},{1},{2}\n'.format(w_size, self.ave_no_93[w_size][0], self.ave_no_93[w_size][1]))
 
+class SemSimWin(CatSimWin):
+
+	def __init__(self, algo, rng, lems=False, CS_dir=None, dest_dir=None, corpus=('SBL_GNT_books', 1, 1.0, True), lem_file=None, groups_file=None):
+		self.sem_groups = pd.read_pickle('Data/Chapter_2/LN_Cat_Dict.pickle')
+		self.scores = {}
+		self.averages = {}
+		self.ave_no_93 = {}
+		self.good_words = []
+		self.prob_words = []
+		self.rng_type = 'win'
+		self.rng = rng
+		self.algo = algo
+		self.CS_dir = CS_dir
+		self.dest_dir = dest_dir
+		self.corpus = corpus
+		self.lems = lems
+		self.lem_file = lem_file
+		self.prob_word_replace = {'περιΐστημι': 'περιΐστημι',
+									'προΐστημι': 'προΐστημι',
+									'παρατεινω': 'παρατείνω',
+									'μήπως': '',
+									'ταβέρνη': 'Ταβέρνη',
+									'ἀναμάρτητος': '',
+									'προσεγγίζω': '',
+									'ηλι': 'ἠλί',
+									'δανειστής': 'δανιστής',
+									'κατακύπτω':  '',
+									'πρωΐ': 'πρωΐ',
+									'τυρβάζω': '',
+									'Θυάτιρα': 'Θυάτειρα',
+									'τετράπουν': 'τετράπους',
+									'ἰουδαΐζω': 'ἰουδαΐζω',
+									'Τρωγύλλιον': '',
+									'σεβαστός': 'Σεβαστός',
+									'σωτήριον': 'σωτήριος',
+									'κακοπάθεια': 'κακοπαθία',
+									'προσανατίθεμαι': 'προσανατίθημι',
+									'Χερούβ': 'Χεροῦβ',
+									'πρωΐα': 'πρωΐα',
+									'Σαλίμ': 'Σαλείμ',
+									'νόσημα': '',
+									'διΐστημι': 'διΐστημι',
+									'Νικολαΐτης': 'Νικολαΐτης',
+									'αὐτόφωρος': '',
+									'ὅμιλος': '',
+									'μαρανα': '',
+									'Ματθάτ': 'Ματθάν',
+									'ὀρεινή': 'ὀρεινός',
+									'δευτερόπρωτος': '',
+									'ἔξεστι': 'ἔξεστι(ν)',
+									'τομός': 'τομώτερος',
+									'πειραω': 'πειράω',
+									'ῥυπαίνομαι': 'ῥυπαρεύω',
+									'Λεββαιος': '',
+									'ελωι': 'ἐλωΐ',
+									'πραΰς': 'πραΰς',
+									'ὑπερβαίνω': '',
+									'ὅποτε': 'ὁπότε',
+									'ἐνεός': 'ἐνέος',
+									'τεσσαρακονταετής': 'τεσσερακονταετής',
+									'ἀγαθοποιΐα': 'ἀγαθοποιΐα',
+									'Σάπφειρα': 'Σάπφιρα',
+									'σαβαχθανι': 'σαβαχθάνι',
+									'στοιχεῖα': 'στοιχεῖον',
+									'συζήτησις': '',
+									'ἐκτίθεμαι': 'ἐκτίθημι',
+									'Κλῆμης': 'Κλήμης',
+									'τάραχή': 'τάραχος',
+									'Πάρθοι': 'Πάρθος',
+									'λεμα': 'λεμά',
+									'Λωΐς': 'Λωΐς',
+									'Βηθζαθά': 'Βηθεσδά',
+									'πίμπραμαι': 'πίμπρημι',
+									'Σεμεΐν': 'Σεμεΐν',
+									'Νεάπολις': '',
+									'Νύμφας': 'Νύμφα',
+									'πλείων': 'πολύς',
+									'Πτολεμαΐς': 'Πτολεμαΐς',
+									'Βηθαβαρα': '',
+									'Ῥωμαικος': '',
+									'ἐκλανθάνομαι': 'ἐκλανθάνω',
+									'Βενιαμείν': 'Βενιαμίν',
+									'Ἰουνιᾶς': 'Ἰουνία',
+									'πραΰτης': 'πραΰτης',
+									'ῥεδή': 'ῥέδη',
+									'καταβιβαζω': 'καταβαίνω',
+									'σπόριμα': 'σπόριμος',
+									'Ἀχαΐα': 'Ἀχαΐα',
+									'εὐποιΐα': 'εὐποιΐα',
+									'ἀνάτεμα': 'ἀνάθεμα',
+									'ὀσφῦς': 'ὀσφύς',
+									'κηριον': '',
+									'Ναΐν': 'Ναΐν',
+									'θα': 'θά',
+									'δήποτε': '',
+									'θρῆνος': '',
+									'Ἠσαΐας': 'Ἠσαΐας',
+									'καταγράφω': '',
+									'Καλοι Λιμένης': '',
+									'πραϋπάθεια': 'πραϋπαθία',
+									'τεσσαράκοντα': 'τεσσεράκοντα',
+									'μελισσιος': '',
+									'Γεργεσηνός': 'Γερασηνός',
+									'Ἑβραικός': '',
+									'ἅλς': '',
+									'Φάρες': 'Φαρές',
+									'λόγια': 'λογεία',
+									'ἀΐδιος': 'ἀΐδιος',
+									'ἀγραύλεω': 'ἀγραυλέω',
+									'νεομηνία': 'νουμηνία',
+									'Ἑβραΐς': 'Ἑβραΐς',
+									'Ἀβραάμ': 'Ἀβραάμ'.lower()}
+
+	def LoadDF(self, w):
+		file = '/media/matt/Data/DissProject/Data/SBL_GNT_books/{0}/CS_{1}_{0}_SBL_GNT_books_lems=True_min_occ=None_SVD_exp=1.hd5'.format(str(w), self.algo)
+		try:
+			self.df = pd.read_hdf(file, 'df')
+		except FileNotFoundError:
+			file = tk_control("askopenfilename(title='Where is your pickle file for window = {0}, svd exponent = {1}'.format(str(w), 'None'))")
+			self.df = pd.read_pickle(file)
+		except OSError:
+			file = '{3}/{0}/{1}_CS_{0}_lems={2}_{4}_min_occ={5}_SVD_exp={6}_no_stops={7}.dat'.format(str(w), self.algo, self.lems, self.CS_dir, self.corpus[0], self.corpus[1], self.corpus[2], self.corpus[3])
+			self.ind = pd.read_pickle('{0}/{2}/{1}_IndexList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(self.CS_dir, self.corpus[0], str(w), self.lems, self.corpus[1], self.corpus[3]))
+			self.df = np.memmap(file, dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
+
+	def WriteFiles(self):
+		with open('{2}/LN_Word_Cat_Scores_{0}_rng={1}_lems={3}.pickle'.format(self.algo, self.rng, self.dest_dir, self.lems), mode='wb') as file:
+			dump(self.scores, file)
+		if self.lem_file:
+			lems = pd.read_pickle(self.lem_file)
+		else:
+			lems = {}
+		for w_size in self.scores.keys():
+			save_file = '{3}/LN_Window={0}_Word_Cat_Scores_SVD_exp={1}_{2}_lems={4}.csv'.format(str(w_size), 'None', self.algo, self.dest_dir, self.lems)
+			self.WriteLines(save_file, w_size, 'None', lems)
+		with open('{2}/LN_Window_Averages_{0}_lems={3}_rng={1}.pickle'.format(self.algo, self.rng, self.dest_dir, self.lems), mode='wb') as file:
+			dump(self.averages, file)
+		with open('{2}/LN_Window_Averages_{0}_lems={3}_rng={1}.csv'.format(self.algo, self.rng, self.dest_dir, self.lems),
+				  mode='w',
+				  encoding='utf-8') as file:
+			file.write('Average Number of Standard Deviations above or below Average '
+					   'per window\n')
+			file.write('Window Size,Average,+/- Standard Deviations\n')
+			for w_size in sorted(self.averages.keys()):
+				file.write('{0},{1},{2}\n'.format(w_size, self.averages[w_size][0], self.averages[w_size][1]))
+		with open('{2}/LN_Window_Averages_no_93_SVD_{0}_lems={3}_rng={1}.pickle'.format(self.algo, self.rng, self.dest_dir, self.lems), mode='wb') as file:
+			dump(self.ave_no_93, file)
+		with open('{2}/LN_Window_Averages_no_93_SVD_{0}_lems={3}_rng={1}.csv'.format(self.algo, self.rng, self.dest_dir, self.lems),
+				  mode='w',
+				  encoding='utf-8') as file:
+			file.write('Average Number of Standard Deviations above or below Average '
+					   'per window excluding LN Category 93 (Names)\n')
+			file.write('Window Size,Average +/- Standard Deviations\n')
+			for w_size in sorted(self.ave_no_93.keys()):
+				file.write('{0},{1},{2}\n'.format(w_size, self.ave_no_93[w_size][0], self.ave_no_93[w_size][1]))
+
+
 class CatSimSVD(CatSim):
 
 	def __init__(self, rng, win, algo):
