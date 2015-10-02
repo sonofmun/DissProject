@@ -111,16 +111,16 @@ class SemPipeline:
 										   'lems={0}'.format(self.lems),
 										   self.corpus,
 										   'min_occ={0}'.format(self.min_count),
-										   'no_stops={0}'.format(bool(self.stops))]) + '.dat')
+										   'no_stops={0}'.format(bool(self.stops))]) + '.pickle')
 		if os.path.isfile(cooc_dest):
-			self.ind = pd.read_pickle('{0}/{1}_IndexList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count, bool(self.stops)))
+			#self.ind = pd.read_pickle('{0}/{1}_IndexList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count, bool(self.stops)))
 			#the following line deals with the case when the cooc matrix is not square
-			try:
-				occs = pd.read_pickle('{0}/{1}_ColumnList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count, bool(self.stops)))
-				self.cols = len(occs)
-			except:
-				self.cols = len(self.ind)
-			self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r', shape=(len(self.ind), self.cols))
+			#try:
+			#	occs = pd.read_pickle('{0}/{1}_ColumnList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count, bool(self.stops)))
+			#	self.cols = len(occs)
+			#except:
+			#	self.cols = len(self.ind)
+			self.coll_df = pd.read_pickle(cooc_dest)
 			return
 		counts = Counter()
 		if self.occ_dict:
@@ -151,6 +151,7 @@ class SemPipeline:
 						else:
 							counts[key] = r[key]
 		self.coll_df = pd.SparseDataFrame.from_dict(counts, orient='index', dtype=np.float64).fillna(0)
+		self.coll_df.to_pickle(cooc_dest)
 		'''self.ind = list(counts.keys())
 		try:
 			assert(self.col_ind)
@@ -210,7 +211,7 @@ class SemPipeline:
 		values for c12
 		this is the row in the coll_df that I am looking at
 		'''
-		C12 = self.coll_df[row]
+		C12 = self.coll_df[row].to_dense()
 		#value for C1 will be a scalar value used for all calculations on
 		#that row
 		C1 = np.sum(C12)
@@ -263,21 +264,21 @@ class SemPipeline:
 			except ValueError as E:
 				LL2.ix[ind] = 0
 		'''
-		LL3 = self.log_L(C12, C1, P1)
+		LL3 = self.log_space_L(C12, C1, P1)
 
 		'''
 		The following finds all inf and -inf values in LL3 by
 		moving calculations into log space.
 		'''
 
-		LL3_inf = np.where(abs(LL3)==np.inf)
+		#LL3_inf = np.where(abs(LL3)==np.inf)
 		#I need to figure out how to do this without indices
-		if len(LL3_inf) > 0:
-			for ind in LL3_inf[0]:
-				try:
-					LL3[ind] = (log(P1[ind])*C12[ind])+(log(1-P1[ind])*(C1-C12[ind]))
-				except ValueError:
-					LL3[ind] = 0
+		#if len(LL3_inf) > 0:
+		#	for ind in LL3_inf[0]:
+		#		try:
+		#			LL3[ind] = (log(P1[ind])*C12[ind])+(log(1-P1[ind])*(C1-C12[ind]))
+		#		except ValueError:
+		#			LL3[ind] = 0
 
 		LL4 = self.log_space_L(C2-C12, N-C1, P2)
 
@@ -286,17 +287,17 @@ class SemPipeline:
 		moving calculations into log space.
 		'''
 
-		LL4_inf = np.where(abs(LL4)==np.inf)
-		if len(LL4_inf) > 0:
-			for ind in LL4_inf[0]:
-				try:
-					LL4[ind] = self.log_L((C2[ind]-C12[ind]), (N-C1), P2[ind])
-				except ValueError:
-					LL4[ind] = 0
+		#LL4_inf = np.where(abs(LL4)==np.inf)
+		#if len(LL4_inf) > 0:
+		#	for ind in LL4_inf[0]:
+		#		try:
+		#			LL4[ind] = self.log_L((C2[ind]-C12[ind]), (N-C1), P2[ind])
+		#		except ValueError:
+		#			LL4[ind] = 0
 
 		a = -2 * (LL1 + LL2 - LL3 - LL4)
-		a[np.where(np.isfinite(a)==False)] = 0
-		return a
+		#a[np.where(np.isfinite(a)==False)] = 0
+		return pd.Series(a, index=self.coll_df.index)#.fillna(0).replace((np.inf, -np.inf), 0).to_sparse(fill_value=0)
 
 
 	def LL(self):
@@ -308,23 +309,24 @@ class SemPipeline:
 											   'lems={0}'.format(self.lems),
 											   self.corpus,
 											   'min_occ={0}'.format(self.min_count),
-											   'no_stops={0}'.format(bool(self.stops))]) + '.dat')
+											   'no_stops={0}'.format(bool(self.stops))]) + '.pickle')
 		if os.path.isfile(dest_file):
-			self.LL_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), self.cols))
+			self.LL_df = pd.read_pickle(dest_file)
 			return
-		n = np.sum(self.coll_df)
+		n = np.sum(self.coll_df.values)
 		c2 = np.sum(self.coll_df, axis=0)
 		p = c2/n
-		self.LL_df = np.memmap(dest_file, dtype='float', mode='w+', shape=(len(self.ind), self.cols))
-		for i, w in enumerate(self.ind):
-			self.LL_df[i] = self.log_like(i, c2, p, n)
-			if i % 5000 == 0:
-				print('{0}% done'.format((i/len(self.ind)*100)))
-				del self.LL_df
-				self.LL_df = np.memmap(dest_file, dtype='float', mode='r+', shape=(len(self.ind), self.cols))
-		self.LL_df[np.where(np.isfinite(self.LL_df)==False)] = 0
-		del self.LL_df
-		self.LL_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), self.cols))
+		self.LL_df = pd.SparseDataFrame(index=self.coll_df.index, columns=self.coll_df.columns, default_fill_value=0)
+		for i in self.LL_df.index:
+			self.LL_df[i] = self.log_like(i, c2, p, n).fillna(0).replace((np.inf, -np.inf), 0).to_sparse(fill_value=0)
+			#if i % 5000 == 0:
+			#	print('{0}% done'.format((i/len(self.ind)*100)))
+				#del self.LL_df
+				#self.LL_df = np.memmap(dest_file, dtype='float', mode='r+', shape=(len(self.ind), self.cols))
+		#self.LL_df[np.where(np.isfinite(self.LL_df)==False)] = 0
+		#del self.LL_df
+		#self.LL_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), self.cols))
+		self.LL_df.to_pickle(dest_file)
 
 		'''
 		self.stat_df = pd.DataFrame(0., index=self.coll_df.index,
@@ -403,7 +405,7 @@ class SemPipeline:
 										   self.corpus,
 										   'min_occ={0}'.format(self.min_count),
 										   'SVD_exp={0}'.format(str(e)),
-										   'no_stops={0}.dat'.format(bool(self.stops))]))
+										   'no_stops={0}.pickle'.format(bool(self.stops))]))
 		if os.path.isfile(dest_file):
 			return
 		if e == 1:
@@ -422,16 +424,17 @@ class SemPipeline:
 												  'SVD_exp={0}'.format(str(e)),
 												  'no_stops={0}.dat'.format(bool(self.stops))]))
 			self.stat_df = np.memmap(orig, dtype='float', mode='r', shape=(len(self.ind), self.cols))
-		self.CS_df = np.memmap(dest_file, dtype='float', mode='w+', shape=(len(self.ind), len(self.ind)))
-		self.CS_df[:] = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=self.jobs)
+		#self.CS_df = np.memmap(dest_file, dtype='float', mode='w+', shape=(len(self.ind), len(self.ind)))
+		self.CS_df = pd.DataFrame(1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=self.jobs), index=self.stat_df.index, columns=self.stat_df.columns).to_sparse(fill_value=0)
+		self.CS_df.to_pickle(dest_file)
 		'''for i, w in enumerate(self.ind):
 			self.CS_df[i] = 1-pairwise_distances(self.stat_df[i], self.stat_df, metric='cosine', n_jobs=jobs)
 			if i % 5000 == 0:
 				del self.CS_df
 				self.CS_df = np.memmap(dest_file, dtype='float', mode='r+', shape=(len(self.ind), len(self.ind)))
 		'''
-		del self.CS_df
-		self.CS_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
+		#del self.CS_df
+		#self.CS_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
 		'''
 		try:
 			self.df_to_hdf(self.CS_df, dest_file)

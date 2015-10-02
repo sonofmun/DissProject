@@ -143,7 +143,7 @@ class CatSim:
 			words = []
 			for d in self.ln[cat]['words']:
 				word = list(d.keys())[0]
-				if word.lower() in self.ind:
+				if word.lower() in self.df.index:
 					words.append((word.lower(), d[word]))
 					self.tot_words += 1
 					self.good_words.append(word)
@@ -168,8 +168,8 @@ class CatSim:
 				for word2 in words:
 					if word1[0] != word2[0]:
 						try:
-							vals.append(self.df[self.ind.index(word1[0])][self.ind.index(word2[0])])
-						except ValueError:
+							vals.append(self.df.ix[word1[0], word2[0]])
+						except KeyError:
 							continue
 				#scores[win][cat].ix[word1, 'Gloss'] = word1[1]
 				#try:
@@ -376,9 +376,9 @@ class CatSimWin(CatSim):
 									'Ἀβραάμ': 'Ἀβραάμ'.lower()}
 
 	def LoadDF(self, w):
-		file = '/media/matt/Data/DissProject/Data/SBL_GNT_books/{0}/CS_{1}_{0}_SBL_GNT_books_lems=True_min_occ=None_SVD_exp=1.hd5'.format(str(w), self.algo)
+		file = '/media/matt/Data/DissProject/Data/NT/{0}/{1}_CS_{0}_lems={2}_{4}_min_occ={5}_SVD_exp={6}_no_stops={7}.pickle'.format(str(w), self.algo, self.lems, self.CS_dir, self.corpus[0], self.corpus[1], self.corpus[2], self.corpus[3])
 		try:
-			self.df = pd.read_hdf(file, 'df')
+			self.df = pd.read_pickle(file)
 		except FileNotFoundError:
 			file = tk_control("askopenfilename(title='Where is your pickle file for window = {0}, svd exponent = {1}'.format(str(w), 'None'))")
 			self.df = pd.read_pickle(file)
