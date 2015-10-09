@@ -51,7 +51,7 @@ class matrix_comparison(comparison):
 			i_nt = []
 			i_c2 = []
 			rows = self.ekk_rows[corp[0]]
-			for i, word in self.ekk_rows['NT']:
+			for i, word in enumerate(self.ekk_rows['NT']):
 				if word in rows:
 					i_nt.append(i)
 					i_c2.append(self.ekk_rows[corp[0]].index(word))
