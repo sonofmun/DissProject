@@ -59,4 +59,4 @@ class matrix_comparison(comparison):
 			d_c2 = d_c2[:, i_c2]
 			d_nt = np.memmap('{0}{1}/{4}/{2}/{5}_{2}_lems=False_{4}_min_occ={3}_{6}no_stops=False_NORMED.dat'.format(self.base, nt[0], nt[1], nt[2], self.english, self.prefix, self.svd), dtype='float', shape=(len(self.ekk_rows['NT']), len(self.ekk_rows['NT'])))[i_nt]
 			d_nt = d_nt[:, i_nt]
-			self.scores['{0}_{1}'.format('NT', corp[0])] = np.average(np.diag(1 - pairwise_distances(d_nt, d_c2, metric='cosine')))
+			self.scores['{0}_{1}'.format('NT', corp[0])] = np.average(np.diag(1 - pairwise_distances(d_nt, d_c2, metric='cosine', n_jobs=12)))
