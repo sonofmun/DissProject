@@ -111,7 +111,8 @@ class SemPipeline:
 										   'lems={0}'.format(self.lems),
 										   self.corpus,
 										   'min_occ={0}'.format(self.min_count),
-										   'no_stops={0}'.format(bool(self.stops))]) + '.dat')
+										   'no_stops={0}'.format(bool(self.stops)),
+										   'weighted={}'.format(self.weighted)]) + '.dat')
 		if os.path.isfile(cooc_dest):
 			self.ind = pd.read_pickle('{0}/{1}_IndexList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count, bool(self.stops)))
 			#the following line deals with the case when the cooc matrix is not square
@@ -306,7 +307,8 @@ class SemPipeline:
 											   'lems={0}'.format(self.lems),
 											   self.corpus,
 											   'min_occ={0}'.format(self.min_count),
-											   'no_stops={0}'.format(bool(self.stops))]) + '.dat')
+											   'no_stops={0}'.format(bool(self.stops)),
+											   'weighted={}'.format(self.weighted)]) + '.dat')
 		if os.path.isfile(dest_file):
 			self.LL_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), self.cols))
 			return
@@ -361,7 +363,8 @@ class SemPipeline:
 											   'lems={0}'.format(self.lems),
 											   self.corpus,
 											   'min_occ={0}'.format(self.min_count),
-											   'no_stops={0}'.format(bool(self.stops))]) + '.dat')
+											   'no_stops={0}'.format(bool(self.stops)),
+											   'weighted={}'.format(self.weighted)]) + '.dat')
 		if os.path.isfile(dest_file):
 			self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r', shape=(len(self.ind), self.cols))
 			return
@@ -401,7 +404,8 @@ class SemPipeline:
 										   self.corpus,
 										   'min_occ={0}'.format(self.min_count),
 										   'SVD_exp={0}'.format(str(e)),
-										   'no_stops={0}.dat'.format(bool(self.stops))]))
+										   'no_stops={0}'.format(bool(self.stops)),
+										   'weighted={}.dat'.format(self.weighted)]))
 		if os.path.isfile(dest_file):
 			return
 		if e == 1:
@@ -418,7 +422,8 @@ class SemPipeline:
 												  self.corpus,
 												  'min_occ={0}'.format(self.min_count),
 												  'SVD_exp={0}'.format(str(e)),
-												  'no_stops={0}.dat'.format(bool(self.stops))]))
+												  'no_stops={0}'.format(bool(self.stops)),
+												  'weighted={}.dat'.format(self.weighted)]))
 			self.stat_df = np.memmap(orig, dtype='float', mode='r', shape=(len(self.ind), self.cols))
 		self.CS_df = np.memmap(dest_file, dtype='float', mode='w+', shape=(len(self.ind), len(self.ind)))
 		self.CS_df[:] = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=self.jobs)
@@ -506,7 +511,8 @@ class SemPipeline:
 										  'lems={0}'.format(self.lems),
 										  self.corpus,
 										  'min_occ={0}'.format(self.min_count),
-										  'no_stops={0}'.format(bool(self.stops))]) + '.dat')
+										  'no_stops={0}'.format(bool(self.stops)),
+										   'weighted={}'.format(self.weighted)]) + '.dat')
 			pause = group(svd_calc.s(orig, os.path.join(self.dest,
 														'_'.join([algorithm,
 																  'SVD',
@@ -515,7 +521,8 @@ class SemPipeline:
 																  self.corpus,
 																  'min_occ={0}'.format(self.min_count),
 																  'SVD_exp={0}'.format(str(e)),
-																  'no_stops={0}.dat'.format(bool(self.stops))])),
+																  'no_stops={0}'.format(bool(self.stops)),
+																  'weighted={}.dat'.format(self.weighted)])),
 									 e, (len(self.ind), self.cols)) for e in self.svd)().get()
 			#U, s, Vh = linalg.svd(self.PPMI_df, check_finite=False)
 			#S = np.diag(s)
@@ -528,7 +535,8 @@ class SemPipeline:
 										  'lems={0}'.format(self.lems),
 										  self.corpus,
 										  'min_occ={0}'.format(self.min_count),
-										  'no_stops={0}'.format(bool(self.stops))]) + '.dat')
+										  'no_stops={0}'.format(bool(self.stops)),
+										   'weighted={}'.format(self.weighted)]) + '.dat')
 			pause = group(svd_calc.s(orig, os.path.join(self.dest,
 														'_'.join([algorithm,
 																  'SVD',
@@ -537,7 +545,8 @@ class SemPipeline:
 																  self.corpus,
 																  'min_occ={0}'.format(self.min_count),
 																  'SVD_exp={0}'.format(str(e)),
-																  'no_stops={0}.dat'.format(bool(self.stops))])),
+																  'no_stops={0}'.format(bool(self.stops)),
+																  'weighted={}.dat'.format(self.weighted)])),
 									 e, (len(self.ind), self.cols)) for e in self.svd)().get()
 			#U, s, Vh = linalg.svd(self.LL_df, check_finite=False)
 			#S = np.diag(s)
