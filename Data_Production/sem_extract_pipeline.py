@@ -748,7 +748,7 @@ class ParamTester(SemPipeline):
 		for self.w in range(min_w, max_w+1, step):
 			self.coll_df = pd.DataFrame()
 			t_test = pd.DataFrame()
-			self.weighted = True
+			self.weighted = False
 			self.lems = True
 			ll_list = []
 			pmi_list = []
@@ -805,7 +805,7 @@ class ParamTester(SemPipeline):
 						  'lems=%s' % (self.lems),
 						  'weighted =%s' % (self.weighted))] = \
 							sum(pmi_list)/len(pmi_list)
-		dest_file = '{0}/{1}_{2}_perplexity.pickle'.format(orig, min_w, max_w)
+		dest_file = '{0}/{1}_{2}_weighted={3}_lems={4}_perplexity.pickle'.format(orig, min_w, max_w, self.weighted, self.lems)
 		with open(dest_file, mode='wb') as f:
 			dump(self.perplex_dict, f)
 
