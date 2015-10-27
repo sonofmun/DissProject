@@ -34,13 +34,19 @@ from copy import deepcopy
 
 class SemPipeline:
 
-	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', svd=1, files=None, c=8, occ_dict=None, min_count=1, jobs=1, stops=True):
+	def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI', sim_algo='cosine', svd=1, files=None, c=8, occ_dict=None, min_count=1, jobs=1, stops=True):
 		"""
 		"""
 		self.w = win_size
 		self.lems = lemmata
 		self.weighted = weighted
 		self.algo = algo
+		if sim_algo in ['cityblock', 'cosine', 'euclidean', 'l1', 'l2', 'manhattan']:
+			self.sim_algo = sim_algo
+		else:
+			print("The only accepted values for 'sim_algo' are 'cityblock', 'cosine', 'euclidean', 'l1', 'l2', or 'manhattan'")
+			print("Setting 'sim_algo' to 'cosine'")
+			self.sim_algo = 'cosine'
 		if self.algo not in ['PPMI', 'LL', 'both']:
 			print('The only accepted values for "algo" are "PPMI", "LL", or "both".')
 		self.svd = svd
@@ -388,17 +394,17 @@ class SemPipeline:
 		the similarity score (i.e., 1-cosine distance) for every word, saving
 		the results then to a different directory.
 		"""
-		print('Starting CS calculations for %s for '
-				  'w=%s, lem=%s, weighted=%s svd=%s at %s' %
-				  (self.corpus,
-				   str(self.w),
-				   self.lems,
-				   self.weighted,
-				   e,
-				  datetime.datetime.now().time().isoformat()))
+		print('Starting {} calculations for {} for '
+				  'w={}, lem={}, weighted={} svd={} at {}'.format(self.sim_algo,
+																  self.corpus,
+																  str(self.w),
+																  self.lems,
+																  self.weighted,
+																  e,
+																  datetime.datetime.now().time().isoformat()))
 		dest_file = os.path.join(self.dest,
 								 '_'.join([algorithm,
-										   'CS',
+										   self.sim_algo,
 										   str(self.w),
 										   'lems={0}'.format(self.lems),
 										   self.corpus,
@@ -426,7 +432,7 @@ class SemPipeline:
 												  'weighted={}.dat'.format(self.weighted)]))
 			self.stat_df = np.memmap(orig, dtype='float', mode='r', shape=(len(self.ind), self.cols))
 		self.CS_df = np.memmap(dest_file, dtype='float', mode='w+', shape=(len(self.ind), len(self.ind)))
-		self.CS_df[:] = 1-pairwise_distances(self.stat_df, metric='cosine', n_jobs=self.jobs)
+		self.CS_df[:] = pairwise_distances(self.stat_df, metric=self.sim_algo, n_jobs=self.jobs)
 		'''for i, w in enumerate(self.ind):
 			self.CS_df[i] = 1-pairwise_distances(self.stat_df[i], self.stat_df, metric='cosine', n_jobs=jobs)
 			if i % 5000 == 0:
@@ -442,13 +448,13 @@ class SemPipeline:
 		except AttributeError:
 			print('Not saving CS file')
 		'''
-		print('Finished with CS calculations for %s for '
-				  'w=%s, lem=%s, weighted=%s at %s' %
-				  (self.corpus,
-				   str(self.w),
-				   self.lems,
-				   self.weighted,
-				  datetime.datetime.now().time().isoformat()))
+		print('Finished with {} calculations for {} for '
+				  'w={}, lem={}, weighted={} at {}'.format(self.sim_algo,
+														   self.corpus,
+														   str(self.w),
+														   self.lems,
+														   self.weighted,
+														   datetime.datetime.now().time().isoformat()))
 
 	def stat_eval(self):
 		print('Starting %s calculations for %s for '
