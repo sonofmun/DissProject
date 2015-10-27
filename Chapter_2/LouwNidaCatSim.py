@@ -260,7 +260,7 @@ class CatSim:
 
 class CatSimWin(CatSim):
 
-	def __init__(self, algo, rng, lems=False, CS_dir=None, dest_dir=None, corpus=('SBL_GNT_books', 1, 1.0, True), lem_file = None):
+	def __init__(self, algo, rng, lems=False, CS_dir=None, dest_dir=None, sim_algo=None, corpus=('SBL_GNT_books', 1, 1.0, True), lem_file = None):
 		try:
 			self.ln = pd.read_pickle('Data/Chapter_2/LN_Cat_Dict.pickle')
 		except FileNotFoundError:
@@ -279,6 +279,7 @@ class CatSimWin(CatSim):
 		self.corpus = corpus
 		self.lems = lems
 		self.lem_file = lem_file
+		self.sim_algo = sim_algo
 		self.prob_word_replace = {'περιΐστημι': 'περιΐστημι',
 									'προΐστημι': 'προΐστημι',
 									'παρατεινω': 'παρατείνω',
@@ -383,8 +384,8 @@ class CatSimWin(CatSim):
 			file = tk_control("askopenfilename(title='Where is your pickle file for window = {0}, svd exponent = {1}'.format(str(w), 'None'))")
 			self.df = pd.read_pickle(file)
 		except OSError:
-			file = '{3}/{0}/{1}_CS_{0}_lems={2}_{4}_min_occ={5}_SVD_exp={6}_no_stops=False_weighted={7}.dat'.format(str(w), self.algo, self.lems, self.CS_dir, self.corpus[0], self.corpus[1], self.corpus[2], self.corpus[3])
-			self.ind = pd.read_pickle('{0}/{2}/{1}_IndexList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(self.CS_dir, self.corpus[0], str(w), self.lems, self.corpus[1], self.corpus[3]))
+			file = '{3}/{0}/{1}_{8}_{0}_lems={2}_{4}_min_occ={5}_SVD_exp={6}_no_stops=False_weighted={7}.dat'.format(str(w), self.algo, self.lems, self.CS_dir, self.corpus[0], self.corpus[1], self.corpus[2], self.corpus[3], self.sim_algo)
+			self.ind = pd.read_pickle('{0}/{2}/{1}_IndexList_w={2}_lems={3}_min_occs={4}_no_stops=False.pickle'.format(self.CS_dir, self.corpus[0], str(w), self.lems, self.corpus[1], self.corpus[3]))
 			self.df = np.memmap(file, dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
 
 	def WriteFiles(self):
@@ -395,11 +396,11 @@ class CatSimWin(CatSim):
 		else:
 			lems = {}
 		for w_size in self.scores.keys():
-			save_file = '{3}/{5}_LN_Window={0}_Word_Cat_Scores_SVD_exp={1}_{2}_lems={4}_weighted={6}.csv'.format(str(w_size), 'None', self.algo, self.dest_dir, self.lems, self.corpus[0], self.corpus[3])
+			save_file = '{3}/{5}_{7}_LN_Window={0}_Word_Cat_Scores_SVD_exp={1}_{2}_lems={4}_weighted={6}.csv'.format(str(w_size), 'None', self.algo, self.dest_dir, self.lems, self.corpus[0], self.corpus[3], self.sim_algo)
 			self.WriteLines(save_file, w_size, 'None', lems)
-		with open('{2}/{4}_LN_Window_Averages_{0}_lems={3}_rng={1}_weighted={5}.pickle'.format(self.algo, self.rng, self.dest_dir, self.lems, self.corpus[0], self.corpus[3]), mode='wb') as file:
+		with open('{2}/{4}_{6}_LN_Window_Averages_{0}_lems={3}_rng={1}_weighted={5}.pickle'.format(self.algo, self.rng, self.dest_dir, self.lems, self.corpus[0], self.corpus[3], self.sim_algo), mode='wb') as file:
 			dump(self.averages, file)
-		with open('{2}/{4}_LN_Window_Averages_{0}_lems={3}_rng={1}_weighted={5}.csv'.format(self.algo, self.rng, self.dest_dir, self.lems, self.corpus[0], self.corpus[3]),
+		with open('{2}/{4}_{6}_LN_Window_Averages_{0}_lems={3}_rng={1}_weighted={5}.csv'.format(self.algo, self.rng, self.dest_dir, self.lems, self.corpus[0], self.corpus[3], self.sim_algo),
 				  mode='w',
 				  encoding='utf-8') as file:
 			file.write('Average Number of Standard Deviations above or below Average '
@@ -407,9 +408,9 @@ class CatSimWin(CatSim):
 			file.write('Window Size,Average,+/- Standard Deviations\n')
 			for w_size in sorted(self.averages.keys()):
 				file.write('{0},{1},{2}\n'.format(w_size, self.averages[w_size][0], self.averages[w_size][1]))
-		with open('{2}/{4}_LN_Window_Averages_no_93_SVD_{0}_lems={3}_rng={1}_weighted={5}.pickle'.format(self.algo, self.rng, self.dest_dir, self.lems, self.corpus[0], self.corpus[3]), mode='wb') as file:
+		with open('{2}/{4}_{6}_LN_Window_Averages_no_93_SVD_{0}_lems={3}_rng={1}_weighted={5}.pickle'.format(self.algo, self.rng, self.dest_dir, self.lems, self.corpus[0], self.corpus[3], self.sim_algo), mode='wb') as file:
 			dump(self.ave_no_93, file)
-		with open('{2}/{4}_LN_Window_Averages_no_93_SVD_{0}_lems={3}_rng={1}_weighted={5}.csv'.format(self.algo, self.rng, self.dest_dir, self.lems, self.corpus[0], self.corpus[3]),
+		with open('{2}/{4}_{6}_LN_Window_Averages_no_93_SVD_{0}_lems={3}_rng={1}_weighted={5}.csv'.format(self.algo, self.rng, self.dest_dir, self.lems, self.corpus[0], self.corpus[3], self.sim_algo),
 				  mode='w',
 				  encoding='utf-8') as file:
 			file.write('Average Number of Standard Deviations above or below Average '
