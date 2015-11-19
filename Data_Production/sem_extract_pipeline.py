@@ -432,7 +432,10 @@ class SemPipeline:
 												  'weighted={}.dat'.format(self.weighted)]))
 			self.stat_df = np.memmap(orig, dtype='float', mode='r', shape=(len(self.ind), self.cols))
 		self.CS_df = np.memmap(dest_file, dtype='float', mode='w+', shape=(len(self.ind), len(self.ind)))
-		self.CS_df[:] = pairwise_distances(self.stat_df, metric=self.sim_algo, n_jobs=self.jobs)
+		if self.sim_algo == 'cosine':
+			self.CS_df[:] = 1-pairwise_distances(self.stat_df, metric=self.sim_algo, n_jobs=self.jobs)
+		else:
+			self.CS_df[:] = pairwise_distances(self.stat_df, metric=self.sim_algo, n_jobs=self.jobs)
 		'''for i, w in enumerate(self.ind):
 			self.CS_df[i] = 1-pairwise_distances(self.stat_df[i], self.stat_df, metric='cosine', n_jobs=jobs)
 			if i % 5000 == 0:
@@ -709,7 +712,7 @@ class ParamTester(SemPipeline):
 		"""
 		self.c = c
 
-	def cooc_counter(self, text):
+	def cooc_counter(self, texts):
 		'''
 		This function takes a token list, a windows size (default
 		is 4 left and 4 right), and a destination filename, runs through the
@@ -718,18 +721,58 @@ class ParamTester(SemPipeline):
 		cooc_dict dictionary.  Finally, it creates a coll_df DataFrame from
 		this dictionary and then pickles this DataFrame to dest
 		'''
-		coll_df = pd.DataFrame()
-		self.t = text
-		words = self.word_extract()
-		step = ceil(len(words)/self.c)
-		steps = []
-		for i in range(self.c):
-			steps.append((step*i, min(step*(i+1), len(words))))
-		res = group(counter.s(self.weighted, self.w, words, limits) for limits in steps)().get()
-		for r in res:
-			coll_df = coll_df.add(pd.DataFrame(r), fill_value=0)
-		coll_df = coll_df.fillna(0)
-		return coll_df
+		#self.coll_df = pd.DataFrame()
+		counts = Counter()
+		if self.occ_dict:
+			occs = pd.read_pickle(self.occ_dict)
+			min_lems = set([w for w in occs if occs[w] < self.min_count])
+			#the following line deals with the case when the cooc matrix is not square
+			#self.col_ind = list(occs.keys())
+			del occs
+		else:
+			min_lems = set()
+		for self.t in texts:
+			#print('Now analyzing {0}'.format(file))
+			words = self.word_extract()
+			step = ceil(len(words)/self.c)
+			steps = []
+			for i in range(self.c):
+				steps.append((step*i, min(step*(i+1), len(words))))
+			self.res = group(counter.s(self.weighted, self.w, words, limits) for limits in steps)().get()
+			#since the counter task returns Counter objects, the update method
+			#below adds instead of replacing the values
+			for r in self.res:
+				for key in r.keys():
+					if key not in min_lems:
+						if key in counts.keys():
+							counts[key].update(r[key])
+						else:
+							counts[key] = r[key]
+		col_ind = list(counts.keys())
+		cols = len(col_ind)
+		coll_df = np.memmap(cooc_dest, dtype='float', mode='w+', shape=(len(col_ind), len(self.col_ind)))
+		for i, w in enumerate(self.ind):
+			s = pd.Series(counts[w], index=self.col_ind, dtype=np.float64).fillna(0)
+			self.coll_df[i] = s.values
+			if i % 5000 == 0:
+				print('{0}% done'.format((i/len(self.ind)*100)))
+				del self.coll_df
+				self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r+', shape=(len(self.ind), len(self.col_ind)))
+		del self.coll_df
+		self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r', shape=(len(self.ind), len(self.col_ind)))
+		'''
+		for (ind, key), (ind2, key2) in combinations(enumerate(self.ind), 2):
+			count += 1
+			self.coll_df[ind, ind2] = counts[key][key2]
+			self.coll_df[ind2, ind] = counts[key2][key]
+			if count % 1000 == 0:
+				self.coll_df.flush()
+		'''
+		#self.coll_df = pd.DataFrame(counts, dtype=np.float).fillna(0)
+		#try:
+		#	self.df_to_hdf(self.coll_df, cooc_dest)
+		#except AttributeError:
+		#	print('Cooccurrence calculation finished')
 
 	def scaler(self, df):
 		"""Scales the values of the given DataFrame to a range between
@@ -737,13 +780,11 @@ class ParamTester(SemPipeline):
 
 		:param df:
 		"""
-		from sklearn.preprocessing import MinMaxScaler
+		from sklearn.preprocessing import StandardScaler
 		df1 = deepcopy(df)
-		scaled = pd.DataFrame(MinMaxScaler
-							  (feature_range=(.01,1)).fit_transform(df1),
+		scaled = pd.DataFrame(StandardScaler().fit_transform(df1),
 							  index = df.index,
-							  columns = df.columns,
-							  dtype=np.float128)
+							  columns = df.columns)
 		return scaled
 
 	def RunTests(self, min_w, max_w, step, orig=None):
