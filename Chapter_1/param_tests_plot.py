@@ -11,26 +11,42 @@ import numpy as np
 
 class mean_std_chart:
 
-	def __init__(self, d):
+	def __init__(self, d, s, m):
 		self.d = d
+		self.s = s
+		if m == 'CS':
+			self.i = 2
+			self.text = 'Cosine Similarity Scores for '
+			self.m = m
+			self.std = 1
+		elif m == 'LL':
+			self.i = 1
+			self.text = ''
+			self.m = m
+			self.std = 2
 
 	def extract_data(self):
-		files = sorted(glob('{}/*.dat'.format(self.d)))
-		self.x = list(range(10, (len(files)+1)*10, 10))
+		files = sorted(glob('{}/*.dat'.format(self.d)), key=lambda x: int(os.path.basename(x).split('_')[self.i]))
+		self.x = list(range(self.s, (len(files)+1)*self.s, self.s))
 		self.y = []
 		self.e = []
 		for f in files:
 			data = np.memmap(f, dtype='float', mode='r')
+			if self.m == 'CS':
+				data = 1-data
 			self.y.append(data.mean())
 			self.e.append(data.std())
 			del data
 
 	def build_chart(self):
 		plt.errorbar(self.x, self.y, self.e, linestyle='None', marker='^')
-		plt.xlim(0, (len(self.x)+1)*10)
+		plt.xlim(0, (len(self.x)+1)*self.s)
 		plt.xticks(self.x, ['Win={}'.format(w) for w in self.x], fontsize=12)
-		plt.title('New Testament\nCosine Similarity of Raw Log-Likelihood Scores\nBy Co-occurrence Window Size', fontsize=12)
-		plt.savefig('errorbar.png')
+		plt.title('New Testament\n{}Raw Log-Likelihood Scores\nMean, +1STD, -1STD'.format(self.text), fontsize=12)
+		plt.axhline(self.y[0], color='r', label='Mean of Win Size {}'.format(self.x[0]))
+		plt.axhline(self.y[0]+self.std*self.e[0], color='g', label='{} STDs above Mean of Win Size {}'.format(self.std, self.x[0]))
+		plt.legend(loc=0)
+		plt.savefig('errorbar_{}.png'.format(self.m))
 		print('finished')
 
 
