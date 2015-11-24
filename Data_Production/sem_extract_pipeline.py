@@ -707,12 +707,15 @@ class WithCelery(SemPipeline):
 
 class ParamTester(SemPipeline):
 
-	def __init__(self, c=8):
+	def __init__(self, c=8, jobs=1):
 		"""
 		"""
 		self.c = c
+		self.occ_dict = None
+		self.stops = []
+		self.jobs = jobs
 
-	def cooc_counter(self, texts):
+	def cooc_counter(self, files):
 		'''
 		This function takes a token list, a windows size (default
 		is 4 left and 4 right), and a destination filename, runs through the
@@ -731,7 +734,9 @@ class ParamTester(SemPipeline):
 			del occs
 		else:
 			min_lems = set()
-		for self.t in texts:
+		for file in files:
+			with open(file) as f:
+				self.t = f.read().split('\n')
 			#print('Now analyzing {0}'.format(file))
 			words = self.word_extract()
 			step = ceil(len(words)/self.c)
@@ -750,29 +755,121 @@ class ParamTester(SemPipeline):
 							counts[key] = r[key]
 		col_ind = list(counts.keys())
 		cols = len(col_ind)
-		coll_df = np.memmap(cooc_dest, dtype='float', mode='w+', shape=(len(col_ind), len(self.col_ind)))
-		for i, w in enumerate(self.ind):
-			s = pd.Series(counts[w], index=self.col_ind, dtype=np.float64).fillna(0)
-			self.coll_df[i] = s.values
-			if i % 5000 == 0:
-				print('{0}% done'.format((i/len(self.ind)*100)))
-				del self.coll_df
-				self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r+', shape=(len(self.ind), len(self.col_ind)))
-		del self.coll_df
-		self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r', shape=(len(self.ind), len(self.col_ind)))
+		return pd.SparseDataFrame.from_dict(counts, orient='index', dtype=np.float64).fillna(0)
+
+	def log_like(self, row, C2, P, N):
 		'''
-		for (ind, key), (ind2, key2) in combinations(enumerate(self.ind), 2):
-			count += 1
-			self.coll_df[ind, ind2] = counts[key][key2]
-			self.coll_df[ind2, ind] = counts[key2][key]
-			if count % 1000 == 0:
-				self.coll_df.flush()
+		values for c12
+		this is the row in the coll_df that I am looking at
 		'''
-		#self.coll_df = pd.DataFrame(counts, dtype=np.float).fillna(0)
-		#try:
-		#	self.df_to_hdf(self.coll_df, cooc_dest)
-		#except AttributeError:
-		#	print('Cooccurrence calculation finished')
+		C12 = self.coll_df[row].to_dense()
+		#value for C1 will be a scalar value used for all calculations on
+		#that row
+		C1 = np.sum(C12)
+		#The values for P1 and P2 will be the same for the whole row
+		#P1, P2 = p_calc(C1, C2, C12, N)
+		P1 = C12/C1
+		#values for p2
+		P2 = (C2-C12)/(N-C1)
+
+		'''
+		The following lines call alternately the log_L and the log_space_L
+		function.  The first will calculate most values correctly except where
+		they underrun the np.float128 object (10**-4950).  Those cases will be
+		dealt with by moving the calculations to log space, thus calculating
+		the natural log before the float128 can be underrun when taking a
+		very small P number to even a moderately large exponent.
+		I have only seen this occur in calculating LL3 and LL4, so I have
+		commented the calls to log_L for LL1 and LL2 out.  Uncomment and use
+		them if you experience np.float128 underrun on your data.
+		'''
+
+		LL1 = self.log_space_L(C12, C1, P)
+
+		'''
+		The following finds all inf and -inf values in LL1 by
+		moving calculations into log space.
+		'''
+		LL2 = self.log_space_L(C2-C12, N-C1, P)
+
+
+		'''
+		The following finds all inf and -inf values in LL2 by
+		moving calculations into log space.
+		'''
+		LL3 = self.log_L(C12, C1, P1)
+
+		'''
+		The following finds all inf and -inf values in LL3 by
+		moving calculations into log space.
+		'''
+
+		LL3_inf = np.where(abs(LL3)==np.inf)
+		#I need to figure out how to do this without indices
+		if len(LL3_inf) > 0:
+			for ind in LL3_inf[0]:
+				try:
+					LL3[ind] = (log(P1[ind])*C12[ind])+(log(1-P1[ind])*(C1-C12[ind]))
+				except ValueError:
+					LL3[ind] = 0
+
+		LL4 = self.log_space_L(C2-C12, N-C1, P2)
+
+		'''
+		The following finds all inf and -inf values in LL4 by
+		moving calculations into log space.
+		'''
+
+
+		LL4_inf = np.where(abs(LL4)==np.inf)
+		if len(LL4_inf) > 0:
+			for ind in LL4_inf[0]:
+				try:
+					LL4[ind] = self.log_L((C2[ind]-C12[ind]), (N-C1), P2[ind])
+				except ValueError:
+					LL4[ind] = 0
+
+		return -2 * (LL1 + LL2 - LL3 - LL4)
+
+	def LL(self):
+		"""This function guides the log-likelihood calculation process
+		"""
+		n = np.sum(self.coll_df.values)
+		c2 = np.sum(self.coll_df, axis=0)
+		p = c2/n
+		LL_df = pd.SparseDataFrame(index=self.coll_df.index, columns=self.coll_df.columns, default_fill_value=0)
+		for w in LL_df.index:
+			LL_df[w] = self.log_like(w, c2, p, n).fillna(0).replace((np.inf, -np.inf), 0).to_sparse(fill_value=0)
+			if list(LL_df.index).index(w) % 5000 == 0:
+				print(list(LL_df.index).index(w)/len(LL_df.index))
+		return LL_df
+
+	def PMI_calc(self, row, P2, N):
+		'''
+		values for c12
+		this is the row in the coll_df that I am looking at
+		'''
+		C12 = self.coll_df[row].to_dense()
+		#value for C1 will be a scalar value used for all calculations on
+		#that row
+		C1 = np.sum(C12)
+		P1 = C1/N
+		P12 = C12/N
+		a = np.log2(np.divide(P12,P1*P2))
+		a[a < 0] = 0
+		return a
+
+	def PPMI(self):
+		"""This function guides the PPMI calculation process
+		"""
+		n = np.sum(self.coll_df.values)
+		p2 = np.sum(self.coll_df, axis=0)/n
+		PPMI_df = pd.SparseDataFrame(index=self.coll_df.index, columns=self.coll_df.columns, default_fill_value=0)
+		for w in self.coll_df.index:
+			PPMI_df[w] = self.PMI_calc(w, p2, n).fillna(0).replace((np.inf, -np.inf), 0).to_sparse(fill_value=0)
+			if list(PPMI_df.index).index(w) % 5000 == 0:
+				print(list(PPMI_df.index).index(w)/len(self.coll_df.index))
+		return PPMI_df
 
 	def scaler(self, df):
 		"""Scales the values of the given DataFrame to a range between
@@ -785,85 +882,48 @@ class ParamTester(SemPipeline):
 		scaled = pd.DataFrame(StandardScaler().fit_transform(df1),
 							  index = df.index,
 							  columns = df.columns)
-		return scaled
+		return (scaled + 1)
 
-	def RunTests(self, min_w, max_w, step, orig=None):
+	def RunTests(self, min_w, max_w, step, orig=None, lem_file=None, w_tests=(True, False), l_tests=(True, False)):
 
-		self.perplex_dict = {}
+		from Chapter_2.LouwNidaCatSim import CatSimWin
+		self.param_dict = {}
 		files = glob('{0}/*.txt'.format(orig))
-		folds = defaultdict(list)
-		#calculate the fold indices for all of the individual text
-		for file in files:
-			with open(file, mode='r', encoding='utf-8') as f:
-				t = f.read().split('\n')
-			kf = KFold(len(t), n_folds=10)
-			for train, test in kf:
-				t_train = [t[i] for i in train]
-				t_test = [t[i] for i in test]
-				folds[file].append([t_train, t_test])
 		for self.w in range(min_w, max_w+1, step):
-			self.coll_df = pd.DataFrame()
-			t_test = pd.DataFrame()
-			self.weighted = False
-			self.lems = True
-			ll_list = []
-			pmi_list = []
-			counter = 1
-			#this loop goes through each of the 10 folds for each text
-			#it will keep track of the test and train cooccurrence statistics
-			#individually
-			for f_num in range(10):
-				print('Fold %s, weighted %s, lemmata %s, w=%s at %s' %
-					  (f_num,
-					   self.weighted,
-					   self.lems,
-					   self.w,
-					   datetime.datetime.now().time().isoformat()))
+			for self.weighted in w_tests:
+				for self.lems in l_tests:
+					prob_list = []
+					pmi_list = []
+					counter = 1
+					print('weighted %s, lemmata %s, w=%s at %s' %
+						  (self.weighted,
+						   self.lems,
+						   self.w,
+						   datetime.datetime.now().time().isoformat()))
 
-				for file in folds.keys():
-					self.coll_df = self.coll_df.add(self.cooc_counter(folds[file][f_num][0]), fill_value=0).fillna(0)
-					t_test = t_test.add(self.cooc_counter(folds[file][f_num][1]), fill_value=0).fillna(0)
-				#laplace smoothing
-				self.coll_df = self.coll_df + 1
-				t_test = t_test + 1
-				ind_int = set(self.coll_df.index).intersection(t_test.index)
-				exponent = 1/np.sum(t_test.values)
-				print('Starting LL calculations for '
-					  'window size %s at %s' %
-					  (str(self.w),
-					   datetime.datetime.now().time().isoformat()))
-				self.LL()
-				ll_list.append(pow
-							   (np.e,
-								np.sum
-								(np.log(1/np.multiply(self.scaler(self.stat_df).ix[ind_int,ind_int],
-													  t_test.ix[ind_int,ind_int]).values))
-								* exponent))
-				del self.stat_df
-				print('Starting PPMI calculations for '
-					  'window size %s at %s' %
-					  (str(self.w),
-					  datetime.datetime.now().time().isoformat()))
-				self.PPMI()
-				pmi_list.append(pow
-								(np.e, np.sum(np.log(1/np.multiply(self.scaler(self.stat_df).ix[ind_int,ind_int],
-									 t_test.ix[ind_int,ind_int]).values))
-								* exponent))
-				#del self.stat_df
-				counter += 1
-			self.perplex_dict[('LL',
-						  self.w,
-						  'lems=%s' % (self.lems),
-						  'weighted =%s' % (self.weighted))] = \
-							sum(ll_list)/len(ll_list)
-			self.perplex_dict[('PPMI',
-						  self.w,
-						  'lems=%s' % (self.lems),
-						  'weighted =%s' % (self.weighted))] = \
-							sum(pmi_list)/len(pmi_list)
+					self.coll_df = self.cooc_counter(files)
+					stat_df = self.LL()
+					pipe = CatSimWin('LL', self.w, lems=self.lems, CS_dir=orig, dest_dir='{}/Win_Size_Tests/LN'.format(orig), sim_algo='cosine', corpus=(orig.split('/')[-1], 1, 1.0, self.weighted), lem_file=lem_file)
+					pipe.df = 1-pairwise_distances(stat_df, metric='cosine', n_jobs=self.jobs)
+					pipe.ind = list(self.coll_df.index)
+					pipe.SimCalc(self.w)
+					pipe.AveCalc(self.w)
+					pipe.WriteFiles()
+					self.param_dict['LL_window={}_lems={}_weighted={}'.format(self.w, self.lems, self.weighted)] = pipe.ave_no_93[self.w]
+					del pipe
+					stat_df = self.PPMI()
+					pipe = CatSimWin('PPMI', self.w, lems=self.lems, CS_dir=orig, dest_dir='{}/Win_Size_Tests/LN'.format(orig), sim_algo='cosine', corpus=(orig.split('/')[-1], 1, 1.0, self.weighted), lem_file=lem_file)
+					pipe.df = 1-pairwise_distances(stat_df, metric='cosine', n_jobs=self.jobs)
+					pipe.ind = list(self.coll_df.index)
+					pipe.SimCalc(self.w)
+					pipe.AveCalc(self.w)
+					pipe.WriteFiles()
+					self.param_dict['PPMI_window={}_lems={}_weighted={}'.format(self.w, self.lems, self.weighted)] = pipe.ave_no_93[self.w]
+					del pipe
+			print(self.param_dict)
 		dest_file = '{0}/{1}_{2}_weighted={3}_lems={4}_perplexity.pickle'.format(orig, min_w, max_w, self.weighted, self.lems)
 		with open(dest_file, mode='wb') as f:
-			dump(self.perplex_dict, f)
+			dump(self.param_dict, f)
 
 
 if __name__ == '__main__':
