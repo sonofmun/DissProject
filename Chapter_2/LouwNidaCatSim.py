@@ -212,7 +212,7 @@ class CatSim:
 			for cat in sorted(self.scores[key].keys()):
 				for w in self.scores[key][cat].index:
 					try:
-						cnt = lems[w]
+						cnt = lems[w[0]]
 					except KeyError:
 						cnt = '?'
 					try:
