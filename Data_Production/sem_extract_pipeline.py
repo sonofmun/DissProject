@@ -906,10 +906,11 @@ class ParamTester(SemPipeline):
 					self.coll_df = self.cooc_counter(files)
 					store['LL'] = self.LL()
 					store['cooc'] = self.coll_df
+					ind = list(self.coll_df.index)
 					del self.coll_df
 					pipe = CatSimWin('LL', self.w, lems=self.lems, CS_dir=orig, dest_dir='{}/Win_Size_Tests/LN'.format(orig), sim_algo='cosine', corpus=(orig.split('/')[-1], 1, 1.0, self.weighted), lem_file=lem_file)
 					pipe.df = 1-pairwise_distances(store['LL'], metric='cosine', n_jobs=self.jobs)
-					pipe.ind = list(self.coll_df.index)
+					pipe.ind = ind
 					pipe.SimCalc(self.w)
 					pipe.AveCalc(self.w)
 					pipe.WriteFiles()
@@ -919,7 +920,7 @@ class ParamTester(SemPipeline):
 					store['PPMI'] = self.PPMI()
 					pipe = CatSimWin('PPMI', self.w, lems=self.lems, CS_dir=orig, dest_dir='{}/Win_Size_Tests/LN'.format(orig), sim_algo='cosine', corpus=(orig.split('/')[-1], 1, 1.0, self.weighted), lem_file=lem_file)
 					pipe.df = 1-pairwise_distances(store['PPMI'], metric='cosine', n_jobs=self.jobs)
-					pipe.ind = list(self.coll_df.index)
+					pipe.ind = ind
 					pipe.SimCalc(self.w)
 					pipe.AveCalc(self.w)
 					pipe.WriteFiles()
