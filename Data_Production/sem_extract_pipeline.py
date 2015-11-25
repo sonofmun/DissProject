@@ -716,6 +716,22 @@ class ParamTester(SemPipeline):
 		self.jobs = jobs
 		self.min_count = min_count
 
+	def word_extract(self):
+		'''
+		Extracts all of the words/lemmata from the lines extracted from
+		the XML file
+		'''
+		words = []
+		if self.lems:
+			pattern = re.compile(r'.+?lem="([^"]*).*')
+		else:
+			pattern = re.compile(r'.+?>([^<]*).*')
+		for line in self.t:
+			word = re.sub(pattern, r'\1', line).lower().replace('/', '')
+			if word != '' and word not in self.stops:
+				words.append(word)
+		return words
+
 	def cooc_counter(self, files):
 		'''
 		This function takes a token list, a windows size (default
