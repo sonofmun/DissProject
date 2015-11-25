@@ -707,13 +707,14 @@ class WithCelery(SemPipeline):
 
 class ParamTester(SemPipeline):
 
-	def __init__(self, c=8, jobs=1):
+	def __init__(self, c=8, jobs=1, min_count=1):
 		"""
 		"""
 		self.c = c
 		self.occ_dict = None
 		self.stops = []
 		self.jobs = jobs
+		self.min_count = min_count
 
 	def cooc_counter(self, files):
 		'''
@@ -889,6 +890,7 @@ class ParamTester(SemPipeline):
 		from Chapter_2.LouwNidaCatSim import CatSimWin
 		self.param_dict = {}
 		files = glob('{0}/*.txt'.format(orig))
+		store = pd.HDFStore('{}/store.h5'.format(orig))
 		for self.w in range(min_w, max_w+1, step):
 			for self.weighted in w_tests:
 				for self.lems in l_tests:
@@ -902,18 +904,21 @@ class ParamTester(SemPipeline):
 						   datetime.datetime.now().time().isoformat()))
 
 					self.coll_df = self.cooc_counter(files)
-					stat_df = self.LL()
+					store['LL'] = self.LL()
+					store['cooc'] = self.coll_df
+					del self.coll_df
 					pipe = CatSimWin('LL', self.w, lems=self.lems, CS_dir=orig, dest_dir='{}/Win_Size_Tests/LN'.format(orig), sim_algo='cosine', corpus=(orig.split('/')[-1], 1, 1.0, self.weighted), lem_file=lem_file)
-					pipe.df = 1-pairwise_distances(stat_df, metric='cosine', n_jobs=self.jobs)
+					pipe.df = 1-pairwise_distances(store['LL'], metric='cosine', n_jobs=self.jobs)
 					pipe.ind = list(self.coll_df.index)
 					pipe.SimCalc(self.w)
 					pipe.AveCalc(self.w)
 					pipe.WriteFiles()
 					self.param_dict['LL_window={}_lems={}_weighted={}'.format(self.w, self.lems, self.weighted)] = pipe.ave_no_93[self.w]
 					del pipe
-					stat_df = self.PPMI()
+					self.coll_df = pd.read_hdf('{}/store.h5'.format(orig), 'cooc')
+					store['PPMI'] = self.PPMI()
 					pipe = CatSimWin('PPMI', self.w, lems=self.lems, CS_dir=orig, dest_dir='{}/Win_Size_Tests/LN'.format(orig), sim_algo='cosine', corpus=(orig.split('/')[-1], 1, 1.0, self.weighted), lem_file=lem_file)
-					pipe.df = 1-pairwise_distances(stat_df, metric='cosine', n_jobs=self.jobs)
+					pipe.df = 1-pairwise_distances(store['PPMI'], metric='cosine', n_jobs=self.jobs)
 					pipe.ind = list(self.coll_df.index)
 					pipe.SimCalc(self.w)
 					pipe.AveCalc(self.w)
