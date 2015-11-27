@@ -930,9 +930,9 @@ class ParamTester(SemPipeline):
 						   datetime.datetime.now().time().isoformat()))
 
 					self.coll_df = self.cooc_counter(files)
+					self.ind = list(self.coll_df.index)
 					LL_df = self.LL()
 					self.coll_df.to_hdf('{}/coll_df.hd5'.format(self.orig), 'cooc')
-					self.ind = list(self.coll_df.index)
 					del self.coll_df
 					pipe = CatSimWin('LL', self.w, lems=self.lems, CS_dir=self.orig, dest_dir='{}/Win_Size_Tests/LN'.format(self.orig), sim_algo='cosine', corpus=(self.orig.split('/')[-1], 1, 1.0, self.weighted), lem_file=lem_file)
 					pipe.df = 1-pairwise_distances(LL_df, metric='cosine', n_jobs=self.jobs)
