@@ -707,7 +707,7 @@ class WithCelery(SemPipeline):
 
 class ParamTester(SemPipeline):
 
-	def __init__(self, c=8, jobs=1, min_count=1):
+	def __init__(self, c=8, jobs=1, min_count=1, orig=None):
 		"""
 		"""
 		self.c = c
@@ -715,6 +715,7 @@ class ParamTester(SemPipeline):
 		self.stops = []
 		self.jobs = jobs
 		self.min_count = min_count
+		self.orig = orig
 
 	def word_extract(self):
 		'''
@@ -854,11 +855,16 @@ class ParamTester(SemPipeline):
 		n = np.sum(self.coll_df.values)
 		c2 = np.sum(self.coll_df, axis=0)
 		p = c2/n
-		LL_df = pd.SparseDataFrame(index=self.coll_df.index, columns=self.coll_df.columns, default_fill_value=0)
-		for w in LL_df.index:
-			LL_df[w] = self.log_like(w, c2, p, n).fillna(0).replace((np.inf, -np.inf), 0).to_sparse(fill_value=0)
-			if list(LL_df.index).index(w) % 5000 == 0:
-				print(list(LL_df.index).index(w)/len(LL_df.index))
+		LL_df = np.memmap('{}/LL_memmap.dat'.format(self.orig), dtype='float', mode='w+', shape=(len(self.ind), len(self.ind)))
+		for i, w in enumerate(self.ind):
+			LL_df[i] = self.log_like(w, c2, p, n)
+			if i % 5000 == 0:
+				print('{0}% done'.format((i/len(self.ind)*100)))
+				del LL_df
+				LL_df = np.memmap('{}/LL_memmap.dat'.format(self.orig), dtype='float', mode='r+', shape=(len(self.ind), len(self.ind)))
+		LL_df[np.where(np.isfinite(LL_df)==False)] = 0
+		del LL_df
+		LL_df = np.memmap('{}/LL_memmap.dat'.format(self.orig), dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
 		return LL_df
 
 	def PMI_calc(self, row, P2, N):
@@ -881,11 +887,16 @@ class ParamTester(SemPipeline):
 		"""
 		n = np.sum(self.coll_df.values)
 		p2 = np.sum(self.coll_df, axis=0)/n
-		PPMI_df = pd.SparseDataFrame(index=self.coll_df.index, columns=self.coll_df.columns, default_fill_value=0)
-		for w in self.coll_df.index:
-			PPMI_df[w] = self.PMI_calc(w, p2, n).fillna(0).replace((np.inf, -np.inf), 0).to_sparse(fill_value=0)
-			if list(PPMI_df.index).index(w) % 5000 == 0:
-				print(list(PPMI_df.index).index(w)/len(self.coll_df.index))
+		PPMI_df = np.memmap('{}/PPMI_memmap.dat'.format(self.orig), dtype='float', mode='w+', shape=(len(self.ind), len(self.ind)))
+		for i, w in enumerate(self.ind):
+			PPMI_df[i] = self.PMI_calc(w, p2, n)
+			if i % 5000 == 0:
+				print('{0}% done'.format((i/len(self.ind)*100)))
+				del PPMI_df
+				PPMI = np.memmap('{}/PPMI_memmap.dat'.format(self.orig), dtype='float', mode='r+', shape=(len(self.ind), len(self.ind)))
+		PPMI_df[np.where(np.isfinite(PPMI_df)==False)] = 0
+		del PPMI_df
+		PPMI_df = np.memmap('{}/PPMI_memmap.dat'.format(self.orig), dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
 		return PPMI_df
 
 	def scaler(self, df):
@@ -901,12 +912,11 @@ class ParamTester(SemPipeline):
 							  columns = df.columns)
 		return (scaled + 1)
 
-	def RunTests(self, min_w, max_w, step, orig=None, lem_file=None, w_tests=(True, False), l_tests=(True, False)):
+	def RunTests(self, min_w, max_w, step, lem_file=None, w_tests=(True, False), l_tests=(True, False)):
 
 		from Chapter_2.LouwNidaCatSim import CatSimWin
 		self.param_dict = {}
-		files = glob('{0}/*.txt'.format(orig))
-		store = pd.HDFStore('{}/store.h5'.format(orig))
+		files = glob('{0}/*.txt'.format(self.orig))
 		for self.w in range(min_w, max_w+1, step):
 			for self.weighted in w_tests:
 				for self.lems in l_tests:
@@ -920,30 +930,33 @@ class ParamTester(SemPipeline):
 						   datetime.datetime.now().time().isoformat()))
 
 					self.coll_df = self.cooc_counter(files)
-					store['LL'] = self.LL()
-					store['cooc'] = self.coll_df
-					ind = list(self.coll_df.index)
+					LL_df = self.LL()
+					self.coll_df.to_hdf('{}/coll_df.hd5'.format(self.orig), 'cooc')
+					self.ind = list(self.coll_df.index)
 					del self.coll_df
-					pipe = CatSimWin('LL', self.w, lems=self.lems, CS_dir=orig, dest_dir='{}/Win_Size_Tests/LN'.format(orig), sim_algo='cosine', corpus=(orig.split('/')[-1], 1, 1.0, self.weighted), lem_file=lem_file)
-					pipe.df = 1-pairwise_distances(store['LL'], metric='cosine', n_jobs=self.jobs)
-					pipe.ind = ind
+					pipe = CatSimWin('LL', self.w, lems=self.lems, CS_dir=self.orig, dest_dir='{}/Win_Size_Tests/LN'.format(self.orig), sim_algo='cosine', corpus=(self.orig.split('/')[-1], 1, 1.0, self.weighted), lem_file=lem_file)
+					pipe.df = 1-pairwise_distances(LL_df, metric='cosine', n_jobs=self.jobs)
+					del LL_df
+					pipe.ind = self.ind
 					pipe.SimCalc(self.w)
 					pipe.AveCalc(self.w)
 					pipe.WriteFiles()
 					self.param_dict['LL_window={}_lems={}_weighted={}'.format(self.w, self.lems, self.weighted)] = pipe.ave_no_93[self.w]
 					del pipe
-					self.coll_df = pd.read_hdf('{}/store.h5'.format(orig), 'cooc')
-					store['PPMI'] = self.PPMI()
-					pipe = CatSimWin('PPMI', self.w, lems=self.lems, CS_dir=orig, dest_dir='{}/Win_Size_Tests/LN'.format(orig), sim_algo='cosine', corpus=(orig.split('/')[-1], 1, 1.0, self.weighted), lem_file=lem_file)
-					pipe.df = 1-pairwise_distances(store['PPMI'], metric='cosine', n_jobs=self.jobs)
-					pipe.ind = ind
+					self.coll_df = pd.read_hdf('{}/coll_df.hd5'.format(self.orig), 'cooc')
+					PPMI_df = self.PPMI()
+					del self.coll_df
+					pipe = CatSimWin('PPMI', self.w, lems=self.lems, CS_dir=self.orig, dest_dir='{}/Win_Size_Tests/LN'.format(self.orig), sim_algo='cosine', corpus=(self.orig.split('/')[-1], 1, 1.0, self.weighted), lem_file=lem_file)
+					pipe.df = 1-pairwise_distances(PPMI_df, metric='cosine', n_jobs=self.jobs)
+					del PPMI_df
+					pipe.ind = self.ind
 					pipe.SimCalc(self.w)
 					pipe.AveCalc(self.w)
 					pipe.WriteFiles()
 					self.param_dict['PPMI_window={}_lems={}_weighted={}'.format(self.w, self.lems, self.weighted)] = pipe.ave_no_93[self.w]
 					del pipe
 			print(self.param_dict)
-		dest_file = '{0}/{1}_{2}_weighted={3}_lems={4}_perplexity.pickle'.format(orig, min_w, max_w, self.weighted, self.lems)
+		dest_file = '{0}/Win_size_tests/{1}_{2}_weighted={3}_lems={4}_perplexity.pickle'.format(self.orig, min_w, max_w, self.weighted, self.lems)
 		with open(dest_file, mode='wb') as f:
 			dump(self.param_dict, f)
 
