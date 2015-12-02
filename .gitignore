@@ -241,7 +241,7 @@ docs/_build/
 # For this project
 Data/*
 Tufts_Cluster/*
-proj/celery.py
-celeryconfig.py
+#proj/celery.py
+#celeryconfig.py
 *.npy
 *.png
