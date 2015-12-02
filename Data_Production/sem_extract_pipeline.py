@@ -932,7 +932,7 @@ class ParamTester(SemPipeline):
 					self.coll_df = self.cooc_counter(files)
 					self.ind = list(self.coll_df.index)
 					LL_df = self.LL()
-					self.coll_df.to_hdf('{}/coll_df.hd5'.format(self.orig), 'cooc')
+					self.coll_df.to_pickle('{}/coll_df.pickle'.format(self.orig))
 					del self.coll_df
 					pipe = CatSimWin('LL', self.w, lems=self.lems, CS_dir=self.orig, dest_dir='{}/Win_size_tests/LN'.format(self.orig), sim_algo='cosine', corpus=(self.orig.split('/')[-1], 1, 1.0, self.weighted), lem_file=lem_file)
 					pipe.df = 1-pairwise_distances(LL_df, metric='cosine', n_jobs=self.jobs)
@@ -943,7 +943,7 @@ class ParamTester(SemPipeline):
 					pipe.WriteFiles()
 					self.param_dict['LL_window={}_lems={}_weighted={}'.format(self.w, self.lems, self.weighted)] = pipe.ave_no_93[self.w]
 					del pipe
-					self.coll_df = pd.read_hdf('{}/coll_df.hd5'.format(self.orig), 'cooc')
+					self.coll_df = pd.read_pickle('{}/coll_df.pickle'.format(self.orig))
 					PPMI_df = self.PPMI()
 					del self.coll_df
 					pipe = CatSimWin('PPMI', self.w, lems=self.lems, CS_dir=self.orig, dest_dir='{}/Win_size_tests/LN'.format(self.orig), sim_algo='cosine', corpus=(self.orig.split('/')[-1], 1, 1.0, self.weighted), lem_file=lem_file)
