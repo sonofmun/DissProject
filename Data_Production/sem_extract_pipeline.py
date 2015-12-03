@@ -893,7 +893,7 @@ class ParamTester(SemPipeline):
 			if i % 5000 == 0:
 				print('{0}% done'.format((i/len(self.ind)*100)))
 				del PPMI_df
-				PPMI = np.memmap('{}/PPMI_memmap.dat'.format(self.orig), dtype='float', mode='r+', shape=(len(self.ind), len(self.ind)))
+				PPMI_df = np.memmap('{}/PPMI_memmap.dat'.format(self.orig), dtype='float', mode='r+', shape=(len(self.ind), len(self.ind)))
 		PPMI_df[np.where(np.isfinite(PPMI_df)==False)] = 0
 		del PPMI_df
 		PPMI_df = np.memmap('{}/PPMI_memmap.dat'.format(self.orig), dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
