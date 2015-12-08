@@ -1,0 +1,57 @@
+for c in christou:
+    try:
+        if nt_tree.xpath('//token[@id="{}"]'.format(c.get('head-id')))[0].get('lemma') == "πίστις":
+            p_c.append(nt_tree.xpath('//token[@id="{}"]'.format(c.get('head-id')))[0].get('citation-part'))
+    except IndexError:
+        continue
+        
+for i in iesou:
+    try:
+        if nt_tree.xpath('//token[@id="{}"]'.format(i.get('head-id')))[0].get('lemma') == "πίστις":
+            p_i.append(nt_tree.xpath('//token[@id="{}"]'.format(i.get('head-id')))[0].get('citation-part'))
+    except IndexError:
+        continue
+        
+for k in kuriou:
+    try:
+        if nt_tree.xpath('//token[@id="{}"]'.format(k.get('head-id')))[0].get('lemma') == "πίστις":
+            p_k.append(nt_tree.xpath('//token[@id="{}"]'.format(k.get('head-id')))[0].get('citation-part'))
+    except IndexError:
+        continue
+        
+πιστεύω
+for c in christos:
+    try:
+        if nt_tree.xpath('//token[@id="{}"]'.format(c.get('head-id')))[0].get('lemma') == "πιστεύω":
+            p_c.append(nt_tree.xpath('//token[@id="{}"]'.format(c.get('head-id')))[0].get('citation-part'))
+    except IndexError:
+        continue
+        
+believers = []
+        for p in pisteuo:
+    h = p.get('id')
+    for s in nt_tree.xpath('//token[@head-id="{}"]'.format(h)):
+        while s.get('empty-token-sort') and s.get('antecedent-id'):
+            s = nt_tree.xpath('//token[@id="{}"]'.format(s.get('antecedent-id')))[0]try:
+        if s.get('relation') == 'sub':
+            believers.append([s.get('lemma'), s.get('part-of-speech'), s.get('citation-part')])
+        except TypeError:
+            print(etree.tostring(s))
+            continue
+            
+believed = []
+for p in pisteuo:
+    h = p.get('id')
+    for s in nt_tree.xpath('//token[@head-id="{}"]'.format(h)):
+        while s.get('empty-token-sort') and s.get('antecedent-id'):
+            s = nt_tree.xpath('//token[@id="{}"]'.format(s.get('antecedent-id')))[0]
+        try:
+            if 'ob' in s.get('relation'):
+                if s.get('part-of-speech') == 'R-':
+                    p_obj = [x.get('form') for x in nt_tree.xpath('//token[@head-id="{}"]'.format(s.get('id')))]
+                    believed.append(['{} {}'.format(s.get('lemma'), ' '.join(p_obj)), s.get('part-of-speech'), s.get('citation-part')])
+                else:
+                    believed.append([s.get('lemma'), s.get('part-of-speech'), s.get('citation-part')])
+        except TypeError:
+            print(etree.tostring(s))
+            continue
