@@ -956,9 +956,13 @@ class ParamTester(SemPipeline):
 					self.param_dict['PPMI_window={}_lems={}_weighted={}'.format(self.w, self.lems, self.weighted)] = pipe.ave_no_93[self.w]
 					del pipe
 			print(self.param_dict)
-		dest_file = '{0}/Win_size_tests/{1}_{2}_weighted={3}_lems={4}_perplexity.pickle'.format(self.orig, min_w, max_w, self.weighted, self.lems)
+		dest_file = '{0}/Win_size_tests/{5}_{1}_{2}_weighted={3}_lems={4}.pickle'.format(self.orig, os.path.basename(self.orig), min_w, max_w, w_tests, l_tests)
 		with open(dest_file, mode='wb') as f:
 			dump(self.param_dict, f)
+		with open(dest_file.replace('.pickle', '.csv'), mode='w') as f:
+			f.write('Test Details\tMean Category Score\tCategory Z-Score')
+			for k in sorted(self.param_dict.keys(), key=lambda x: int(x.split('_')[1].split('=')[1])):
+				f.write('\n{}\t{}\t{}'.format(k, self.param_dict[k][0], self.param_dict[k][1]))
 
 
 if __name__ == '__main__':
