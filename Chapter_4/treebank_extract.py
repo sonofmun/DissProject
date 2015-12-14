@@ -2,6 +2,7 @@ __author__ = 'matt'
 
 from lxml import etree
 from collections import defaultdict
+import re
 
 class extractDependencies:
 
@@ -80,8 +81,8 @@ class extractDependencies:
 				while s.get('empty-token-sort') and s.get('antecedent-id'):
 					s = self.treebank.xpath('//token[@id="{}"]'.format(s.get('antecedent-id')))[0]
 				try:
-					if s.get('relation') == 'sub':
-						self.dependents.append([occ.get('citation-part'), occ.get('form'), s.get('lemma'), s.get('part-of-speech'), s.get('citation-part')])
+					if self.relation in s.get('relation') and re.match(r'.{6}g.{3}', s.get('morphology')) and s.get('part-of-speech') != 'S-':
+						self.dependents.append([occ.get('citation-part'), occ.get('form'), s.get('form'), s.get('part-of-speech'), s.get('citation-part')])
 				except TypeError:
 					print(etree.tostring(s))
 					continue
