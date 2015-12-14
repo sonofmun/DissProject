@@ -28,11 +28,12 @@ for c in christos:
         continue
         
 believers = []
-        for p in pisteuo:
+for p in pisteuo:
     h = p.get('id')
     for s in nt_tree.xpath('//token[@head-id="{}"]'.format(h)):
         while s.get('empty-token-sort') and s.get('antecedent-id'):
-            s = nt_tree.xpath('//token[@id="{}"]'.format(s.get('antecedent-id')))[0]try:
+            s = nt_tree.xpath('//token[@id="{}"]'.format(s.get('antecedent-id')))[0]
+        try:
         if s.get('relation') == 'sub':
             believers.append([s.get('lemma'), s.get('part-of-speech'), s.get('citation-part')])
         except TypeError:

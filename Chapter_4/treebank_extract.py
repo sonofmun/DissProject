@@ -1,15 +1,18 @@
 __author__ = 'matt'
 
 from lxml import etree
+from collections import defaultdict
+import re
 
 class extractDependencies:
 
 	def __init__(self, target, orig, relation='sub', form='lemma'):
 		self.target = target
-		self.treebank = etree.parse(orig)
+		self.treebank = etree.parse(orig).getroot()
 		self.relation = relation
 		if form not in ['form', 'lemma']:
 			print('Only "form" and "lemma" are valid values for form.')
+			self.form = 'lemma'
 		else:
 			self.form = form
 
@@ -44,6 +47,42 @@ class extractDependencies:
 				try:
 					if s.get('relation') == 'sub':
 						self.dependents.append([occ.get('citation-part'), occ.get('form'), s.get('lemma'), s.get('part-of-speech'), s.get('citation-part')])
+				except TypeError:
+					print(etree.tostring(s))
+					continue
+
+	def get_Christos(self):
+		self.dependents = []
+		for occ in self.occs:
+			s = self.treebank.xpath('//token[@id="{}"]'.format(occ.get('head-id')))[0]
+			while s.get('empty-token-sort') and s.get('antecedent-id'):
+				s = self.treebank.xpath('//token[@id="{}"]'.format(s.get('antecedent-id')))[0]
+			while s.get('lemma') == "Ἰησοῦς" or s.get('lemma') == 'κύριος':
+				s = self.treebank.xpath('//token[@id="{}"]'.format(s.get('head-id')))[0]
+			try:
+				if 'N' in s.get('part-of-speech'):
+					self.dependents.append([occ.get('citation-part'), occ.get('form'), s.get('lemma'), s.get('part-of-speech'), s.get('citation-part')])
+			except TypeError:
+				print(etree.tostring(s))
+				continue
+		head_verses = defaultdict(list)
+		for x in self.dependents:
+			head_verses[x[2]].append(x[-1])
+		with open('/media/matt/Data/DissProject/Data/Chapter_4/christou_head_words_verses.csv', mode='w') as f:
+			f.write('Head word\tCount\tVerses\n')
+			for h in sorted(head_verses.keys(), key=lambda x: len(head_verses[x]), reverse=True):
+				f.write('{}\t{}\t{}\n'.format(h, len(head_verses[h]), head_verses[h]))
+
+	def get_genitive_deps(self):
+		self.dependents = []
+		for occ in self.occs:
+			h = occ.get('id')
+			for s in self.treebank.xpath('//token[@head-id="{}"]'.format(h)):
+				while s.get('empty-token-sort') and s.get('antecedent-id'):
+					s = self.treebank.xpath('//token[@id="{}"]'.format(s.get('antecedent-id')))[0]
+				try:
+					if self.relation in s.get('relation') and re.match(r'.{6}g.{3}', s.get('morphology')) and s.get('part-of-speech') != 'S-':
+						self.dependents.append([occ.get('citation-part'), occ.get('form'), s.get('form'), s.get('part-of-speech'), s.get('citation-part')])
 				except TypeError:
 					print(etree.tostring(s))
 					continue
