@@ -240,7 +240,6 @@ docs/_build/
 
 # For this project
 Data/*
-!Data/Chapter_2/LN_Cat_Dict.pickle
 Tufts_Cluster/*
 #proj/celery.py
 #celeryconfig.py
