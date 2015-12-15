@@ -1,0 +1,20 @@
+source ~/envs/munson/bin/activate
+cd ~/githubprojects/DissProject
+celery -A proj.tasks worker
+
+source ~/envs/munson/bin/activate
+cd ~/githubprojects/DissProject
+
+python Data_Production/sem_extract_pipeline.py SemPipeLine $win $lem $weighted $algo $svd $files $c $occ_dict $min_count
+
+python Data_Production/sem_extract_pipeline.py SemPipeLine 12 1 0 LL 1.0 /home/vagrant/githubprojects/DissProject/Workshop_Week/Matthew 4 None 1
+
+python
+
+import numpy as np
+import pandas as pd
+i = pd.read_pickle('/home/vagrant/githubprojects/DissProject/Workshop_Week/Matthew/12/Matthew_IndexList_w=12_lems=True_min_occs=1_no_stops=False.pickle')
+d = np.memmap('/home/vagrant/githubprojects/DissProject/Workshop_Week/Matthew/12/LL_cosine_12_lems=True_Matthew_min_occ=1_SVD_exp=1.0_no_stops=False_weighted=False.dat', dtype='float', shape=(len(i), len(i)))
+df = pd.DataFrame(d, index=i, columns=i)
+theos = df.ix['θεός'].order(ascending=False).head(50)
+theos.to_csv('/home/vagrant/githubprojects/DissProject/Workshop_Week/Matthew/12/theos_cs_top50.csv')
