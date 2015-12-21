@@ -914,6 +914,10 @@ class ParamTester(SemPipeline):
 
 	def RunTests(self, min_w, max_w, step, lem_file=None, w_tests=(True, False), l_tests=(True, False)):
 
+		if isinstance(w_tests, str):
+			w_tests = w_tests.split(',')
+		if isinstance(l_tests, str):
+			l_tests = l_tests.split(',')
 		from Chapter_2.LouwNidaCatSim import CatSimWin
 		self.param_dict = {}
 		files = glob('{0}/*.txt'.format(self.orig))
@@ -977,7 +981,9 @@ if __name__ == '__main__':
 				occ_dict=sys.argv[9],
 				min_count=int(sys.argv[10])).runPipeline()
 	if sys.argv[1] == "ParamTester":
-		ParamTester(c=int(sys.argv[2])).RunTests(min_w=int(sys.argv[3]),
-												 max_w=int(sys.argv[4]),
-												 step=int(sys.argv[5]),
-												 orig=sys.argv[6])
+		ParamTester(c=int(sys.argv[2]), orig=sys.argv[3]).RunTests(min_w=int(sys.argv[4]),
+												 max_w=int(sys.argv[5]),
+												 step=int(sys.argv[6]),
+												 lem_file=sys.argv[7],
+												 w_tests=sys.argv[8].split(','),
+												 l_tests=sys.argv[9].split(','))
