@@ -963,7 +963,7 @@ class ParamTester(SemPipeline):
 					os.remove('{}/{}_PPMI_memmap.dat'.format(self.orig, self.w))
 					os.remove('{}/{}_LL_memmap.dat'.format(self.orig, self.w))
 			print(self.param_dict)
-		dest_file = '{0}/Win_size_tests/{5}_{1}_{2}_weighted={3}_lems={4}.pickle'.format(self.orig, os.path.basename(self.orig), min_w, max_w, w_tests, l_tests)
+		dest_file = '{0}/Win_size_tests/{1}_{2}_{3}_weighted={4}_lems={5}.pickle'.format(self.orig, os.path.basename(self.orig), min_w, max_w, w_tests, l_tests)
 		with open(dest_file, mode='wb') as f:
 			dump(self.param_dict, f)
 		with open(dest_file.replace('.pickle', '.csv'), mode='w') as f:
