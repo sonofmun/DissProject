@@ -144,7 +144,7 @@ class CatSim:
 			for d in self.ln[cat]['words']:
 				word = list(d.keys())[0]
 				if word.lower() in self.ind:
-					words.append((word.lower(), d[word]))
+					words.append((word.lower(), str(d[word])))
 					self.tot_words += 1
 					self.good_words.append(word)
 					if cat[0] != 93:
@@ -153,7 +153,7 @@ class CatSim:
 					try:
 						new_word = self.prob_word_replace[word]
 						if new_word != '':
-							words.append((new_word.lower(), d[word]))
+							words.append((new_word.lower(), str(d[word])))
 						self.tot_words += 1
 						self.good_words.append(w)
 						if cat[0] != 93:
@@ -161,8 +161,15 @@ class CatSim:
 						self.prob_words.append(word)
 						self.not_words += 1
 					except KeyError:
+						print(d)
 						continue
+			try:
+				words = list(set(words))
+			except TypeError:
+				print(words)
+				print(type(words))
 			self.scores[w][cat] = pd.DataFrame(index=words, columns=['Mean', 'STD +/-'])
+			#print(self.scores[w][cat].index)
 			for word1 in words:
 				vals = []
 				for word2 in words:
@@ -176,8 +183,14 @@ class CatSim:
 				#	self.scores[w][cat].ix[word1, 'Mean'] = np.mean(vals)
 				#	self.scores[w][cat].ix[word1, 'STD +/-'] = (np.mean(vals)-mean)/std
 				#except ValueError:
-				self.scores[w][cat].drop_duplicates(inplace=True)
-				self.scores[w][cat].ix[word1, 'Mean'] = np.mean(vals)
+				#self.scores[w][cat].drop_duplicates(inplace=True)
+				try:
+					self.scores[w][cat].ix[word1, 'Mean'] = np.mean(vals)
+				except KeyError:
+					print(word1)
+					print(words)
+					print(self.scores[w][cat].index)
+					print(self.scores[w][cat])
 				self.scores[w][cat].ix[word1, 'STD +/-'] = (np.mean(vals)-mean)/std
 		print('Total words: {0}'.format(self.words_no_93))
 
