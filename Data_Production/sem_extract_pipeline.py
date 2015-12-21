@@ -855,16 +855,16 @@ class ParamTester(SemPipeline):
 		n = np.sum(self.coll_df.values)
 		c2 = np.sum(self.coll_df, axis=0)
 		p = c2/n
-		LL_df = np.memmap('{}/LL_memmap.dat'.format(self.orig), dtype='float', mode='w+', shape=(len(self.ind), len(self.ind)))
+		LL_df = np.memmap('{}/{}_LL_memmap.dat'.format(self.orig, self.w), dtype='float', mode='w+', shape=(len(self.ind), len(self.ind)))
 		for i, w in enumerate(self.ind):
 			LL_df[i] = self.log_like(w, c2, p, n)
 			if i % 5000 == 0:
 				print('{0}% done'.format((i/len(self.ind)*100)))
 				del LL_df
-				LL_df = np.memmap('{}/LL_memmap.dat'.format(self.orig), dtype='float', mode='r+', shape=(len(self.ind), len(self.ind)))
+				LL_df = np.memmap('{}/{}_LL_memmap.dat'.format(self.orig, self.w), dtype='float', mode='r+', shape=(len(self.ind), len(self.ind)))
 		LL_df[np.where(np.isfinite(LL_df)==False)] = 0
 		del LL_df
-		LL_df = np.memmap('{}/LL_memmap.dat'.format(self.orig), dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
+		LL_df = np.memmap('{}/{}_LL_memmap.dat'.format(self.orig, self.w), dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
 		return LL_df
 
 	def PMI_calc(self, row, P2, N):
@@ -887,16 +887,16 @@ class ParamTester(SemPipeline):
 		"""
 		n = np.sum(self.coll_df.values)
 		p2 = np.sum(self.coll_df, axis=0)/n
-		PPMI_df = np.memmap('{}/PPMI_memmap.dat'.format(self.orig), dtype='float', mode='w+', shape=(len(self.ind), len(self.ind)))
+		PPMI_df = np.memmap('{}/{}_PPMI_memmap.dat'.format(self.orig, self.w), dtype='float', mode='w+', shape=(len(self.ind), len(self.ind)))
 		for i, w in enumerate(self.ind):
 			PPMI_df[i] = self.PMI_calc(w, p2, n)
 			if i % 5000 == 0:
 				print('{0}% done'.format((i/len(self.ind)*100)))
 				del PPMI_df
-				PPMI_df = np.memmap('{}/PPMI_memmap.dat'.format(self.orig), dtype='float', mode='r+', shape=(len(self.ind), len(self.ind)))
+				PPMI_df = np.memmap('{}/{}_PPMI_memmap.dat'.format(self.orig, self.w), dtype='float', mode='r+', shape=(len(self.ind), len(self.ind)))
 		PPMI_df[np.where(np.isfinite(PPMI_df)==False)] = 0
 		del PPMI_df
-		PPMI_df = np.memmap('{}/PPMI_memmap.dat'.format(self.orig), dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
+		PPMI_df = np.memmap('{}/{}_PPMI_memmap.dat'.format(self.orig, self.w), dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
 		return PPMI_df
 
 	def scaler(self, df):
@@ -936,7 +936,7 @@ class ParamTester(SemPipeline):
 					self.coll_df = self.cooc_counter(files)
 					self.ind = list(self.coll_df.index)
 					LL_df = self.LL()
-					self.coll_df.to_pickle('{}/coll_df.pickle'.format(self.orig))
+					self.coll_df.to_pickle('{}/{}_coll_df.pickle'.format(self.orig, self.w))
 					del self.coll_df
 					pipe = CatSimWin('LL', self.w, lems=self.lems, CS_dir=self.orig, dest_dir='{}/Win_size_tests/LN'.format(self.orig), sim_algo='cosine', corpus=(self.orig.split('/')[-1], 1, 1.0, self.weighted), lem_file=lem_file)
 					pipe.df = 1-pairwise_distances(LL_df, metric='cosine', n_jobs=self.jobs)
@@ -959,6 +959,9 @@ class ParamTester(SemPipeline):
 					pipe.WriteFiles()
 					self.param_dict['PPMI_window={}_lems={}_weighted={}'.format(self.w, self.lems, self.weighted)] = pipe.ave_no_93[self.w]
 					del pipe
+					os.remove('{}/{}_coll_df.pickle'.format(self.orig, self.w))
+					os.remove('{}/{}_PPMI_memmap.dat'.format(self.orig, self.w))
+					os.remove('{}/{}_LL_memmap.dat'.format(self.orig, self.w))
 			print(self.param_dict)
 		dest_file = '{0}/Win_size_tests/{5}_{1}_{2}_weighted={3}_lems={4}.pickle'.format(self.orig, os.path.basename(self.orig), min_w, max_w, w_tests, l_tests)
 		with open(dest_file, mode='wb') as f:
