@@ -161,7 +161,6 @@ class CatSim:
 						self.prob_words.append(word)
 						self.not_words += 1
 					except KeyError:
-						print(d)
 						continue
 			try:
 				words = list(set(words))
