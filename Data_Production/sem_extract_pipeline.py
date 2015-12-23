@@ -916,8 +916,18 @@ class ParamTester(SemPipeline):
 
 		if isinstance(w_tests, str):
 			w_tests = w_tests.split(',')
+			for i, x in w_tests:
+				if x == 'True':
+					w_tests[i] = True
+				if x == 'False':
+					w_tests[i] = False
 		if isinstance(l_tests, str):
 			l_tests = l_tests.split(',')
+			for i, x in l_tests:
+				if x == 'True':
+					l_tests[i] = True
+				if x == 'False':
+					l_tests[i] = False
 		from Chapter_2.LouwNidaCatSim import CatSimWin
 		self.param_dict = {}
 		files = glob('{0}/*.txt'.format(self.orig))
