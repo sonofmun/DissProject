@@ -915,19 +915,21 @@ class ParamTester(SemPipeline):
 	def RunTests(self, min_w, max_w, step, lem_file=None, w_tests=(True, False), l_tests=(True, False)):
 
 		if isinstance(w_tests, str):
-			w_tests = w_tests.split(',')
-			for i, x in w_tests:
-				if x == 'True':
-					w_tests[i] = True
-				if x == 'False':
-					w_tests[i] = False
+			if w_tests == 'both':
+				w_tests = (True, False)
+			elif w_tests == 'True':
+				w_tests = [True]
+			elif w_tests == 'False':
+				w_tests = [False]
 		if isinstance(l_tests, str):
-			l_tests = l_tests.split(',')
-			for i, x in l_tests:
-				if x == 'True':
-					l_tests[i] = True
-				if x == 'False':
-					l_tests[i] = False
+			if l_tests == 'both':
+				l_tests = (True, False)
+			elif l_tests == 'True':
+				l_tests = [True]
+			elif l_tests == 'False':
+				l_tests = [False]
+		if lem_file == 'None':
+			lem_file = None
 		from Chapter_2.LouwNidaCatSim import CatSimWin
 		self.param_dict = {}
 		files = glob('{0}/*.txt'.format(self.orig))
@@ -998,5 +1000,5 @@ if __name__ == '__main__':
 												 max_w=int(sys.argv[5]),
 												 step=int(sys.argv[6]),
 												 lem_file=sys.argv[7],
-												 w_tests=sys.argv[8].split(','),
-												 l_tests=sys.argv[9].split(','))
+												 w_tests=sys.argv[8],
+												 l_tests=sys.argv[9])
