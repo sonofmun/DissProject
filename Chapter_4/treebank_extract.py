@@ -23,16 +23,17 @@ class extractDependencies:
 		self.dependents = []
 		for occ in self.occs:
 			h = occ.get('id')
-			for s in self.treebank.xpath('//token[@head-id="{}"]'.format(h)):
+			for s in self.treebank.xpath('/proiel/source/div/sentence/token[@head-id="{}"]'.format(h)):
+				#print(s.get('form'), s.get('relation'), s.get('citation-part'))
 				while s.get('empty-token-sort') and s.get('antecedent-id'):
-					s = self.treebank.xpath('//token[@id="{}"]'.format(s.get('antecedent-id')))[0]
+					s = self.treebank.xpath('/proiel/source/div/sentence/token[@id="{}"]'.format(s.get('antecedent-id')))[0]
 				try:
 					if self.relation in s.get('relation'):
 						if s.get('part-of-speech') == 'R-':
-							p_obj = [x.get('form') for x in self.treebank.xpath('//token[@head-id="{}"]'.format(s.get('id')))]
+							p_obj = [x.get('form') for x in self.treebank.xpath('/proiel/source/div/sentence/token[@head-id="{}"]'.format(s.get('id')))]
 							self.dependents.append([occ.get('citation-part'), occ.get('form'), '{} {}'.format(s.get('lemma'), ' '.join(p_obj)), s.get('part-of-speech'), s.get('citation-part')])
 						else:
-							self.dependents.append([occ.get('citation-part'), occ.get('form'), s.get('lemma'), s.get('part-of-speech'), s.get('citation-part')])
+							self.dependents.append([occ.get('citation-part'), occ.get('form'), s.get('form'), s.get('part-of-speech'), s.get('citation-part')])
 				except TypeError:
 					print(etree.tostring(s))
 					continue
@@ -81,8 +82,8 @@ class extractDependencies:
 				while s.get('empty-token-sort') and s.get('antecedent-id'):
 					s = self.treebank.xpath('//token[@id="{}"]'.format(s.get('antecedent-id')))[0]
 				try:
-					if self.relation in s.get('relation') and re.match(r'.{6}g.{3}', s.get('morphology')) and s.get('part-of-speech') != 'S-':
+					if self.relation == s.get('relation') and re.match(r'.{6}g.{3}', s.get('morphology')) and s.get('part-of-speech') != 'S-':
 						self.dependents.append([occ.get('citation-part'), occ.get('form'), s.get('form'), s.get('part-of-speech'), s.get('citation-part')])
-				except TypeError:
-					print(etree.tostring(s))
+				except TypeError as E:
+					print(E, etree.tostring(s))
 					continue
