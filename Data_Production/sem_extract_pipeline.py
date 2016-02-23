@@ -707,7 +707,7 @@ class WithCelery(SemPipeline):
 
 class ParamTester(SemPipeline):
 
-	def __init__(self, c=8, jobs=1, min_count=1, orig=None):
+	def __init__(self, c=8, jobs=1, min_count=3, orig=None):
 		"""
 		"""
 		self.c = c
