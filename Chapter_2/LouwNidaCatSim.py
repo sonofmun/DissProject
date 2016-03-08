@@ -866,7 +866,7 @@ class SynSimWin(CatSimWin):
 
 class SynSimSVD(SynSimWin):
 
-	def __init__(self, algo, num_syns, rng, win, syn_file=None, lems=False):
+	def __init__(self, algo, num_syns, rng, win, CS_dir=None, syn_file=None, lems=False):
 		'''
 		This class calculates the SVD exponent that returns the best
 		average cosine similarity score based on synonym similarity data
@@ -887,9 +887,10 @@ class SynSimSVD(SynSimWin):
 		self.algo = algo
 		self.lems = lems
 		self.win = win
+		self.CS_dir = CS_dir
 
 	def LoadDF(self, w):
-		file = '/media/matt/Data/DissProject/Data/SBL_GNT_books/{0}/CS_{1}_{0}_SBL_GNT_books_lems={2}_min_occ=None_SVD_exp={3}.hd5'.format(self.win, self.algo, self.lems, str(w))
+		file = '{4}/{0}/CS_{1}_{0}_SBL_GNT_books_lems={2}_min_occ=None_SVD_exp={3}.hd5'.format(self.win, self.algo, self.lems, str(w), self.CS_dir)
 		try:
 			self.df = pd.read_hdf(file, 'df')
 		except FileNotFoundError:
