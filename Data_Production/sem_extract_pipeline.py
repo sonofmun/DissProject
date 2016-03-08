@@ -996,7 +996,7 @@ if __name__ == '__main__':
 				occ_dict=sys.argv[9],
 				min_count=int(sys.argv[10])).runPipeline()
 	if sys.argv[1] == "ParamTester":
-		ParamTester(c=int(sys.argv[2]), orig=sys.argv[3], min_count=sys.argv[10]).RunTests(min_w=int(sys.argv[4]),
+		ParamTester(c=int(sys.argv[2]), orig=sys.argv[3], min_count=int(sys.argv[10])).RunTests(min_w=int(sys.argv[4]),
 												 max_w=int(sys.argv[5]),
 												 step=int(sys.argv[6]),
 												 lem_file=sys.argv[7],
