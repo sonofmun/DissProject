@@ -53,6 +53,7 @@ class comparison:
                 combo[1], combo[0]] = (1 - pairwise_distances(
                 self.ekk_rows[combo[0]][ekk_index],
                 self.ekk_rows[combo[1]][ekk_index], metric='cosine'))[0][0]
+            self.cs_scores = self.cs_scores.fillna(1)
 
     def graph_it(self):
         fig, ax = plt.subplots()
