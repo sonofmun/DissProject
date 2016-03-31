@@ -65,7 +65,7 @@ class comparison:
         mult = 0
 
         for corp in self.cs_scores:
-            rects = plt.bar(index + bar_width * mult, self.cs_scores.ix[corp], bar_width, color='.9', label=corp)
+            rects = plt.bar(index + bar_width * mult, self.cs_scores.ix[corp], bar_width, label=corp)
             rects.remove()
             for i, rect in enumerate(rects):
                 height = rect.get_height()
