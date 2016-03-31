@@ -8,9 +8,9 @@ from itertools import combinations
 
 class comparison:
     def __init__(self, base, english, greek, measure):
-        self.corpora = [('NT', '18', 1), ('LXX', '13', 1),
-                        ('pers_data', '23', 3), ('josephus', '47', 1),
-                        ('philo', '43', 1), ('plutarch', '65', 1)]
+        self.corpora = [('NT', '16', 1, True), ('LXX', '13', 1, True),
+                        ('philo', '26', 1, False), ('josephus', '35', 1, False)]#,
+                        #('pers_data', '23', 1, False), ('plutarch', '65', 1, False)]
         self.base = base
         self.ekk_rows = {}
         self.english = english
@@ -34,9 +34,9 @@ class comparison:
                     self.base, corp[0], corp[1], corp[2], self.english))
             i = rows.index(self.greek)
             r = np.memmap(
-                '{0}{1}/{4}/{2}/{5}_{2}_lems=False_{4}_min_occ={3}_{6}no_stops=False_NORMED.dat'.format(
+                '{0}{1}/{4}/{2}/{5}_{2}_lems=False_min_occ={3}_{6}no_stops=False_weighted={7}_NORMED.dat'.format(
                     self.base, corp[0], corp[1], corp[2], self.english,
-                    self.prefix, self.svd), dtype='float',
+                    self.prefix, self.svd, corp[3]), dtype='float',
                 shape=(len(rows), len(rows)))[i]
             self.ekk_rows[corp[0]] = pd.Series(r, index=rows)
 
