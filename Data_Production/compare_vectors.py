@@ -16,7 +16,7 @@ class comparison:
         self.english = english
         self.greek = greek
         if measure == 'CS':
-            self.prefix = 'LL_CS'
+            self.prefix = 'LL_cosine'
             self.svd = 'SVD_exp=1.0_'
         elif measure == 'LL':
             self.prefix = 'LL'
