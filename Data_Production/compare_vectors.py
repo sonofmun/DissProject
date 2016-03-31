@@ -69,14 +69,16 @@ class comparison:
             rects = plt.bar(index + bar_width * mult, self.cs_scores.ix[corp], bar_width, color='.9', label=corp)
             for i, rect in enumerate(rects):
                 height = rect.get_height()
-                ax.text(rect.get_x() + rect.get_width() / 2., height / 2, corp, size='small', rotation='vertical', ha='center', va='bottom')
+                ax.text(rect.get_x() + rect.get_width() / 2., height / 2, corp.title(), size='small', rotation='vertical', ha='center', va='bottom')
+                if height != 1:
+                    ax.text(rect.get_x() + rect.get_width() / 2., height + .1, round(height, 2), rotation=45, ha='center', va='bottom')
             mult += 1
 
-        plt.xlabel('Group')
-        plt.ylabel('Scores')
-        plt.title('Scores by group and gender')
+        plt.xlabel('Corpus')
+        plt.ylabel('CS Score')
+        plt.title('CS comparison of {} vectors'.format(self.greek))
         plt.xticks(index + 3 * bar_width, [x for x in self.cs_scores])
-        plt.savefig('cs_corps_test.png', dpi=500)
+        plt.savefig('{}/{}_CS_corps_compare.png'.format(self.base, self.english), dpi=500)
 
 
 class matrix_comparison(comparison):
