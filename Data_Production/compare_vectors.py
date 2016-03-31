@@ -71,12 +71,12 @@ class comparison:
                 height = rect.get_height()
                 ax.text(rect.get_x() + rect.get_width() / 2., height / 2, corp.title(), size='small', rotation='vertical', ha='center', va='bottom')
                 if height != 1:
-                    ax.text(rect.get_x() + rect.get_width() / 2., height + .1, round(height, 2), rotation=45, ha='center', va='bottom')
+                    ax.text(rect.get_x() + rect.get_width() / 2., height + .01, round(height, 2), rotation='vertical', ha='center', va='bottom')
             mult += 1
 
         plt.xlabel('Corpus')
         plt.ylabel('CS Score')
-        plt.title('CS comparison of {} vectors'.format(self.greek))
+        plt.title('CS comparison of word vectors')
         plt.xticks(index + 3 * bar_width, [x for x in self.cs_scores])
         plt.savefig('{}/{}_CS_corps_compare.png'.format(self.base, self.english), dpi=500)
 
