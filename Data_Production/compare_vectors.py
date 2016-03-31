@@ -34,7 +34,7 @@ class comparison:
                     self.base, corp[0], corp[1], corp[2], self.english))
             i = rows.index(self.greek)
             r = np.memmap(
-                '{0}{1}/{4}/{2}/{5}_{2}_lems=False_min_occ={3}_{6}no_stops=False_weighted={7}_NORMED.dat'.format(
+                '{0}{1}/{4}/{2}/{5}_{2}_lems=False_{4}_min_occ={3}_{6}no_stops=False_weighted={7}_NORMED.dat'.format(
                     self.base, corp[0], corp[1], corp[2], self.english,
                     self.prefix, self.svd, corp[3]), dtype='float',
                 shape=(len(rows), len(rows)))[i]
