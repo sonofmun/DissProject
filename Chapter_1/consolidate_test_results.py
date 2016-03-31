@@ -46,11 +46,11 @@ class win_tests:
          for x in nolems_max_coords]
         plt.legend(loc=0, fontsize='small')
         plt.xticks(self.df.index)
-        plt.xlim(self.df.index[0], self.df.index[-1]+1)
+        #plt.xlim(self.df.index[0], self.df.index[-1]+1)
         plt.xlabel('Window Size')
         plt.ylabel('Category Z-Score')
         plt.grid(True)
-        plt.tight_layout()
+        #plt.tight_layout()
         plt.savefig('{}/nolem_graph.png'.format(self.orig), dpi=500)
         plt.clf()
         if lems_max_coords:
@@ -62,10 +62,10 @@ class win_tests:
                           rotation=rotate.__next__()) for x in lems_max_coords]
             plt.legend(loc=0, fontsize='small')
             plt.xticks(self.df.index)
-            plt.xlim(self.df.index[0], self.df.index[-1]+1)
+            #plt.xlim(self.df.index[0], self.df.index[-1]+1)
             plt.xlabel('Window Size')
             plt.ylabel('Category Z-Score')
             plt.grid(True)
-            plt.tight_layout()
+            #plt.tight_layout()
             plt.savefig('{}/lem_graph.png'.format(self.orig), dpi=500)
             plt.clf()

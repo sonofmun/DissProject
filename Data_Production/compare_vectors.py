@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import pairwise_distances
 from itertools import combinations
+import matplotlib.pyplot as plt
 
 
 class comparison:
@@ -47,9 +48,33 @@ class comparison:
             ekk_index = list(set(self.ekk_rows[combo[0]].index).intersection(
                 set(self.ekk_rows[combo[1]].index)))
             self.cs_scores.ix[combo[0], combo[1]] = self.cs_scores.ix[
-                combo[1], combo[0]] = 1 - pairwise_distances(
+                combo[1], combo[0]] = (1 - pairwise_distances(
                 self.ekk_rows[combo[0]][ekk_index],
-                self.ekk_rows[combo[1]][ekk_index], metric='cosine')
+                self.ekk_rows[combo[1]][ekk_index], metric='cosine'))[0][0]
+
+    def graph_it(self):
+        fig, ax = plt.subplots()
+
+        index = np.arange(len(self.cs_scores))*1.2
+        bar_width = 0.15
+
+        opacity = 0.4
+        #error_config = {'ecolor': '0.3'}
+        mult = 0
+
+        for corp in self.cs_scores:
+            rects = plt.bar(index + bar_width * mult, self.cs_scores.ix[corp], bar_width, color='.9', label=corp)
+            rects.remove()
+            for i, rect in enumerate(rects):
+                height = rect.get_height()
+                ax.text(rect.get_x() + rect.get_width() / 2., height / 2, corp, size='small', rotation='vertical', ha='center', va='bottom')
+            mult += 1
+
+        plt.xlabel('Group')
+        plt.ylabel('Scores')
+        plt.title('Scores by group and gender')
+        plt.xticks(index + 3 * bar_width, [x for x in self.cs_scores])
+        plt.savefig('cs_corps_test.png', dpi=500)
 
 
 class matrix_comparison(comparison):
