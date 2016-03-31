@@ -4,6 +4,8 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import pairwise_distances
 from itertools import combinations
+import matplotlib as mpl
+mpl.use('Agg')
 import matplotlib.pyplot as plt
 
 
