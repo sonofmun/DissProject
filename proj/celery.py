@@ -5,8 +5,8 @@ from celery import Celery
 __author__ = 'matt'
 
 app = Celery('tasks',
-             broker='redis://127.0.0.1:6380',
-             backend='redis://127.0.0.1:6380')
+             broker='redis://127.0.0.1:6379',
+             backend='redis://127.0.0.1:6379')
 
 # Optional configuration, see the application user guide.
 app.conf.update(

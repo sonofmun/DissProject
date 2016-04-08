@@ -69,7 +69,11 @@ class comparison:
             rects = plt.bar(index + bar_width * mult, self.cs_scores.ix[corp], bar_width, color='.9', label=corp)
             for i, rect in enumerate(rects):
                 height = rect.get_height()
-                ax.text(rect.get_x() + rect.get_width() / 2., height / 2, corp.title(), size='small', rotation='vertical', ha='center', va='bottom')
+                if corp.islower():
+                    name = corp.title()
+                else:
+                    name = corp
+                ax.text(rect.get_x() + rect.get_width() / 2., height / 2, name, size='small', rotation='vertical', ha='center', va='bottom')
                 if height != 1:
                     ax.text(rect.get_x() + rect.get_width() / 2., height + .01, round(height, 2), rotation='vertical', ha='center', va='bottom')
             mult += 1
