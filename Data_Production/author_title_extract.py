@@ -135,4 +135,4 @@ class from_files:
         """
         with open(self.dest, mode='w') as f:
             f.write('Author\tWork\n')
-            [f.write('{}\t{}\t{}\t{}\n'.format(x[0], x[1], x[2], x[3])) for x in self.files]
+            [f.write('{}.{}\t{}\t{}\n'.format(x[0], x[1], x[2], x[3])) for x in self.files]
