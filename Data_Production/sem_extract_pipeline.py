@@ -26,10 +26,12 @@ except ImportError:
 from sklearn.metrics.pairwise import pairwise_distances
 from glob import glob
 from celery import group
-from proj.tasks import counter, svd_calc
+#from proj.tasks import counter, svd_calc
 from sklearn.cross_validation import KFold
 from pickle import dump
 from copy import deepcopy
+from multiprocessing import Pool
+from Data_Production.multi_tasks import counter
 
 
 class SemPipeline:
@@ -163,6 +165,34 @@ class SemPipeline:
             steps = []
             for i in range(self.c):
                 steps.append((step * i, min(step * (i + 1), len(words))))
+            '''self.res = group(
+                counter.s(self.weighted, self.w, words, limits) for limits in
+                steps)().get()
+            '''
+            self.res = []
+            pool = Pool()
+            for limits in steps:
+                res = pool.apply_async(counter, args=(self.weighted, self.w, words, limits))
+                res.wait()
+                self.res.append(res.get())
+            #since the counter task returns Counter objects, the update method
+            #below adds instead of replacing the values
+            for r in self.res:
+                for key in r.keys():
+                    if key not in min_lems:
+                        if key in counts.keys():
+                            counts[key].update(r[key])
+                        else:
+                            counts[key] = r[key]
+        '''for file in glob('{0}/*.txt'.format(self.dir)):
+            with open(file) as f:
+                self.t = f.read().split('\n')
+            #print('Now analyzing {0}'.format(file))
+            words = self.word_extract()
+            step = ceil(len(words) / self.c)
+            steps = []
+            for i in range(self.c):
+                steps.append((step * i, min(step * (i + 1), len(words))))
             self.res = group(
                 counter.s(self.weighted, self.w, words, limits) for limits in
                 steps)().get()
@@ -175,6 +205,7 @@ class SemPipeline:
                             counts[key].update(r[key])
                         else:
                             counts[key] = r[key]
+        '''
         self.ind = list(counts.keys())
         try:
             assert (self.col_ind)
@@ -834,7 +865,35 @@ class ParamTester(SemPipeline):
             del occs
         else:
             min_lems = set()
-        for file in files:
+        for file in glob('{0}/*.txt'.format(self.dir)):
+            with open(file) as f:
+                self.t = f.read().split('\n')
+            #print('Now analyzing {0}'.format(file))
+            words = self.word_extract()
+            step = ceil(len(words) / self.c)
+            steps = []
+            for i in range(self.c):
+                steps.append((step * i, min(step * (i + 1), len(words))))
+            '''self.res = group(
+                counter.s(self.weighted, self.w, words, limits) for limits in
+                steps)().get()
+            '''
+            self.res = []
+            pool = Pool()
+            for limits in steps:
+                res = pool.apply_async(counter, args=(self.weighted, self.w, words, limits))
+                res.wait()
+                self.res.append(res.get())
+            #since the counter task returns Counter objects, the update method
+            #below adds instead of replacing the values
+            for r in self.res:
+                for key in r.keys():
+                    if key not in min_lems:
+                        if key in counts.keys():
+                            counts[key].update(r[key])
+                        else:
+                            counts[key] = r[key]
+        '''for file in files:
             with open(file) as f:
                 self.t = f.read().split('\n')
             #print('Now analyzing {0}'.format(file))
@@ -855,6 +914,7 @@ class ParamTester(SemPipeline):
                             counts[key].update(r[key])
                         else:
                             counts[key] = r[key]
+        '''
         col_ind = list(counts.keys())
         cols = len(col_ind)
         return pd.SparseDataFrame.from_dict(counts, orient='index',
