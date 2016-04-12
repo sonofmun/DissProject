@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 class comparison:
     def __init__(self, base, english, greek, measure):
         self.corpora = [('NT', '16', 1, True), ('LXX', '13', 1, True),
-                        ('philo', '26', 1, False), ('josephus', '35', 1, False)]#,
-                        #('pers_data', '23', 1, False), ('plutarch', '65', 1, False)]
+                        ('philo', '26', 1, False), ('josephus', '35', 1, False),
+                        ('plutarch', '49', 1, False)]#, ('pers_data', '23', 1, False)]
         self.base = base
         self.ekk_rows = {}
         self.english = english

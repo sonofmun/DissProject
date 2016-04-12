@@ -26,12 +26,12 @@ except ImportError:
 from sklearn.metrics.pairwise import pairwise_distances
 from glob import glob
 from celery import group
-#from proj.tasks import counter, svd_calc
+from proj.tasks import counter, svd_calc
 from sklearn.cross_validation import KFold
 from pickle import dump
 from copy import deepcopy
-from multiprocessing import Pool
-from Data_Production.multi_tasks import counter
+#from multiprocessing import Pool
+#from Data_Production.multi_tasks import counter
 
 
 class SemPipeline:
@@ -39,7 +39,34 @@ class SemPipeline:
                  sim_algo='cosine', svd=1, files=None, c=8, occ_dict=None,
                  min_count=1, jobs=1, stops=True):
         """
-		"""
+
+        :param win_size: context window size
+        :type win_size: int
+        :param lemmata: whether to use word lemmata
+        :type lemmata: bool
+        :param weighted: whether to use a weighted window type
+        :type weighted: bool
+        :param algo: the significance algorithm to use. 'LL' and 'PPMI' are implemented
+        :type algo: str
+        :param sim_algo: the similarity algorithm to use. 'CS' is implemented
+        :type sim_algo: str
+        :param svd: the SVD exponent to use (will be removed in the future)
+        :type svd: float
+        :param files: the directory in which the individual .txt files are held
+        :type files: str
+        :param c: the number of cores to use in self.cooc_counter (will be removed in the future)
+        :type c: int
+        :param occ_dict: the path and filename for the occurrence dictionary pickle
+        :type occ_dict: str
+        :param min_count: the minimum occurrence count below which words will not be counted
+        :type min_count: int
+        :param jobs: number of jobs to use during the cosine similarity calculations
+        :type jobs: int
+        :param stops: whether to include stop words or not (True means to include them)
+        :type stops: bool
+        :return:
+        :rtype:
+        """
         self.w = win_size
         self.lems = lemmata
         self.weighted = weighted
@@ -83,20 +110,21 @@ class SemPipeline:
         else:
             self.stops = []
 
-
     def file_chooser(self):
+        """
+        uses tkinter.filedialog to fill self.dir if files=None
+        :return:
+        :rtype:
+        """
         if self.dir == None:
-            self.dir = tk_control(
-                "askdirectory(title='In which directory are the XML file(s) would you like to analyze?')")
-
-    def df_to_hdf(self, df, dest):
-        df.to_hdf(dest, 'df', mode='w', complevel=9, complib='blosc')
+            self.dir = tk_control("askdirectory(title='In which directory are the XML file(s) would you like to analyze?')")
 
     def word_extract(self):
-        '''
-		Extracts all of the words/lemmata from the lines extracted from
-		the XML file
-		'''
+        """
+        extracts a list of words from self.t
+        :return: list of words
+        :rtype: list
+        """
         words = []
         if self.lems:
             pattern = re.compile(r'.+?lem="([^"]*).*')
@@ -108,17 +136,12 @@ class SemPipeline:
                 words.append(word)
         return words
 
-
     def cooc_counter(self):
-        '''
-		This function takes a token list, a windows size (default
-		is 4 left and 4 right), and a destination filename, runs through the
-		token list, reading every word to the window left and window right of
-		the target word, and then keeps track of these co-occurrences in a
-		cooc_dict dictionary.  Finally, it creates a coll_df DataFrame from
-		this dictionary and then pickles this DataFrame to dest
-		'''
-        # self.coll_df = pd.DataFrame()
+        """
+        counts the number of times each word co-occurs with each other word
+        :return: self.coll_df
+        :rtype: Numpy memmap
+        """
         cooc_dest = os.path.join(self.dest,
                                  '_'.join(['COOC',
                                            str(self.w),
@@ -135,7 +158,6 @@ class SemPipeline:
                 '{0}/{1}_IndexList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(
                     self.dest, self.corpus, self.w, self.lems, self.min_count,
                     bool(self.stops)))
-            #the following line deals with the case when the cooc matrix is not square
             try:
                 occs = pd.read_pickle(
                     '{0}/{1}_ColumnList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(
@@ -151,43 +173,12 @@ class SemPipeline:
         if self.occ_dict:
             occs = pd.read_pickle(self.occ_dict)
             min_lems = set([w for w in occs if occs[w] < self.min_count])
-            #the following line deals with the case when the cooc matrix is not square
-            #self.col_ind = list(occs.keys())
             del occs
         else:
             min_lems = set()
         for file in glob('{0}/*.txt'.format(self.dir)):
             with open(file) as f:
                 self.t = f.read().split('\n')
-            #print('Now analyzing {0}'.format(file))
-            words = self.word_extract()
-            step = ceil(len(words) / self.c)
-            steps = []
-            for i in range(self.c):
-                steps.append((step * i, min(step * (i + 1), len(words))))
-            '''self.res = group(
-                counter.s(self.weighted, self.w, words, limits) for limits in
-                steps)().get()
-            '''
-            self.res = []
-            pool = Pool()
-            for limits in steps:
-                res = pool.apply_async(counter, args=(self.weighted, self.w, words, limits))
-                res.wait()
-                self.res.append(res.get())
-            #since the counter task returns Counter objects, the update method
-            #below adds instead of replacing the values
-            for r in self.res:
-                for key in r.keys():
-                    if key not in min_lems:
-                        if key in counts.keys():
-                            counts[key].update(r[key])
-                        else:
-                            counts[key] = r[key]
-        '''for file in glob('{0}/*.txt'.format(self.dir)):
-            with open(file) as f:
-                self.t = f.read().split('\n')
-            #print('Now analyzing {0}'.format(file))
             words = self.word_extract()
             step = ceil(len(words) / self.c)
             steps = []
@@ -205,7 +196,6 @@ class SemPipeline:
                             counts[key].update(r[key])
                         else:
                             counts[key] = r[key]
-        '''
         self.ind = list(counts.keys())
         try:
             assert (self.col_ind)
@@ -239,105 +229,70 @@ class SemPipeline:
         del self.coll_df
         self.coll_df = np.memmap(cooc_dest, dtype='float32', mode='r',
                                  shape=(len(self.ind), len(self.col_ind)))
-        '''
-		for (ind, key), (ind2, key2) in combinations(enumerate(self.ind), 2):
-			count += 1
-			self.coll_df[ind, ind2] = counts[key][key2]
-			self.coll_df[ind2, ind] = counts[key2][key]
-			if count % 1000 == 0:
-				self.coll_df.flush()
-		'''
-
-    # self.coll_df = pd.DataFrame(counts, dtype=np.float).fillna(0)
-    #try:
-    #	self.df_to_hdf(self.coll_df, cooc_dest)
-    #except AttributeError:
-    #	print('Cooccurrence calculation finished')
 
     def log_L(self, k, n, x):
-        '''
-		This function applies the correct values from the DataFrame to the
-		binomial distribution function L(k,n,x) = (x**k)*(1-x)**(n-k).
-		'''
+        """
+        calculates the values for the individual elements of the Log-likelihood equation using the
+        binomial distribution function L(k,n,x) = (x**k)*(1-x)**(n-k).
+        :param k:
+        :type k: Pandas Series
+        :param n:
+        :type n: Numpy ndarray
+        :param x:
+        :type x: Numpy ndarray
+        :return: Log-likelihood values
+        :rtype: Numpy ndarray
+        """
         return np.log(np.power(np.float64(x), k)
                       * np.power(np.float64(1 - x), n - k))
 
     def log_space_L(self, k, n, x):
-        '''
-		This function finds all the inf and -inf values in the Series s and
-		corrects the NaN and inf values by moving the whole equation to the log
-		space, so that ln((x**k)*(1-x)**(n-k)) = (ln(x)*k) + (ln(1-x)*(n-k))
-		I use math.log here instead of np.log because all the values are
-		scalars instead of Series and math.log is 10x faster than np.log
-		'''
+        """
+        calculates the values for the individual elements of the Log-likelihood equation using the
+        binomial distribution function L(k,n,x) = (x**k)*(1-x)**(n-k).
+        Moves the calculations to log-space to deal with floats that are too small for float64.
+        :param k:
+        :type k: Pandas Series
+        :param n: total number of co-occurrences in the table
+        :type n: float
+        :param x:
+        :type x: Numpy ndarray
+        :return: Log-likelihood values
+        :rtype: Numpy ndarray
+        """
         return np.log(x) * (k) + (np.log(1 - x) * (n - k))
 
     def log_like(self, row, C2, P, N):
-        '''
-		values for c12
-		this is the row in the coll_df that I am looking at
-		'''
+        """
+        guides the process of Log-likelihood calculations for a single row
+        :param row: the index of the row in the table to be calculated
+        :type row: int
+        :param C2: number of co-occurrences for each row of the table
+        :type C2: Numpy ndarray
+        :param P: ratio of co-occurrences per row to total co-occurrences in the table
+        :type P: Numpy ndarray
+        :param N: total number of co-occurrences in the table
+        :type N: float
+        :return: Log-likelihood values for a single row in the table
+        :rtype: Numpy ndarray
+        """
         C12 = self.coll_df[row]
-        #value for C1 will be a scalar value used for all calculations on
-        #that row
+        # C1 will be a scalar value used for all calculations on that row
         C1 = np.sum(C12)
-        #The values for P1 and P2 will be the same for the whole row
-        #P1, P2 = p_calc(C1, C2, C12, N)
+        # P1 is ratio of single co-occurrence values to the total co-occurrences for that row
         P1 = C12 / C1
-        #values for p2
+        # P2 ratio of total co-occurrences for a word minus the co-occurrences
+        # with the word in question to the total number of co-occurrences in
+        # the table minus the total co-occurrences for the row.
         P2 = (C2 - C12) / (N - C1)
 
-        '''
-		The following lines call alternately the log_L and the log_space_L
-		function.  The first will calculate most values correctly except where
-		they underrun the np.float128 object (10**-4950).  Those cases will be
-		dealt with by moving the calculations to log space, thus calculating
-		the natural log before the float128 can be underrun when taking a
-		very small P number to even a moderately large exponent.
-		I have only seen this occur in calculating LL3 and LL4, so I have
-		commented the calls to log_L for LL1 and LL2 out.  Uncomment and use
-		them if you experience np.float128 underrun on your data.
-		'''
-
         LL1 = self.log_space_L(C12, C1, P)
-
-        '''
-		The following finds all inf and -inf values in LL1 by
-		moving calculations into log space.
-		'''
-        '''
-		LL1_inf = LL1[np.isinf(LL1)]
-		for ind in LL1_inf.index:
-			try:
-				LL1.ix[ind] = (log(P[ind])*C12[ind])+\
-							  (log(1-P[ind])*(C1-C12[ind]))
-			except ValueError as E:
-				LL1.ix[ind] = 0
-		'''
         LL2 = self.log_space_L(C2 - C12, N - C1, P)
-
-        '''
-		The following finds all inf and -inf values in LL2 by
-		moving calculations into log space.
-		'''
-        '''
-		LL2_inf = LL2[np.isinf(LL2)]
-		for ind in LL2_inf.index:
-			try:
-				LL2.ix[ind] = (log(P[ind])*(C2[ind]-C12[ind]))+\
-							  (log(1-P[ind])*((N-C1)-(C2[ind]-C12[ind])))
-			except ValueError as E:
-				LL2.ix[ind] = 0
-		'''
         LL3 = self.log_L(C12, C1, P1)
 
-        '''
-		The following finds all inf and -inf values in LL3 by
-		moving calculations into log space.
-		'''
+        # The following finds all inf and -inf values in LL3 by moving calculations into log space.
 
         LL3_inf = np.where(abs(LL3) == np.inf)
-        #I need to figure out how to do this without indices
         if len(LL3_inf) > 0:
             for ind in LL3_inf[0]:
                 try:
@@ -348,10 +303,7 @@ class SemPipeline:
 
         LL4 = self.log_space_L(C2 - C12, N - C1, P2)
 
-        '''
-		The following finds all inf and -inf values in LL4 by
-		moving calculations into log space.
-		'''
+        # The following finds all inf and -inf values in LL4 by moving calculations into log space.
 
         LL4_inf = np.where(abs(LL4) == np.inf)
         if len(LL4_inf) > 0:
@@ -366,10 +318,12 @@ class SemPipeline:
         a[np.where(np.isfinite(a) == False)] = 0
         return a
 
-
     def LL(self):
-        """This function guides the log-likelihood calculation process
-		"""
+        """
+        guides the Log-likelihood calculations for the whole matrix
+        :return: self.LL_df
+        :rtype: Numpy memmap
+        """
         dest_file = os.path.join(self.dest,
                                  '_'.join(['LL',
                                            str(self.w),
@@ -402,28 +356,24 @@ class SemPipeline:
         self.LL_df = np.memmap(dest_file, dtype='float32', mode='r',
                                shape=(len(self.ind), self.cols))
 
-        '''
-		self.stat_df = pd.DataFrame(0., index=self.coll_df.index,
-							 columns=self.coll_df.index, dtype=np.float)
-		for row in self.coll_df.index:
-			self.LL_df.ix[row] = self.log_like(row, c2, p, n)
-		self.LL_df = self.LL_df.fillna(0)
-		try:
-			self.df_to_hdf(self.LL_df, dest_file)
-		except AttributeError:
-			print('LL calc finished')
-		'''
-
     def PMI_calc(self, row, P2, N):
-        '''
-		values for c12
-		this is the row in the coll_df that I am looking at
-		'''
+        """
+        calculates PPMI values for one table row
+        :param row: index for the word's row in the table
+        :type row: int
+        :param P2: ratio of co-occurrences per row to total co-occurrences in the table
+        :type P2: Numpy ndarray
+        :param N: total co-occurrences in the table
+        :type N: float
+        :return: PPMI values for a row in the table
+        :rtype: Numpy ndarray
+        """
         C12 = self.coll_df[row]
-        #value for C1 will be a scalar value used for all calculations on
-        #that row
+        # C1 is the total co-occurrences in the row
         C1 = np.sum(C12)
+        # P1 is the probability that the word co-occurs
         P1 = C1 / N
+        # P12 is a vector of the probabilities that the word occurs with any other word
         P12 = C12 / N
         a = np.log2(np.divide(P12, P1 * P2))
         a[np.where(np.isfinite(a) == False)] = 0
@@ -431,8 +381,11 @@ class SemPipeline:
         return a
 
     def PPMI(self):
-        """This function guides the PPMI calculation process
-		"""
+        """
+        guides the PPMI calculation process for the whole table
+        :return: matrix of PPMI values
+        :rtype: Numpy memmap
+        """
         dest_file = os.path.join(self.dest,
                                  '_'.join(['PPMI',
                                            str(self.w),
@@ -466,11 +419,15 @@ class SemPipeline:
                                  shape=(len(self.ind), self.cols))
 
     def CS(self, algorithm, e):
-        """This function calls the pairwise distance function from sklearn
-		on every log-likelihood DataFrame in a certain directory and returns
-		the similarity score (i.e., 1-cosine distance) for every word, saving
-		the results then to a different directory.
-		"""
+        """
+        calculates the cosine similarity of every matrix row with every other row
+        :param algorithm: which algorithm (PPMI or LL) is being tested
+        :type algorithm: str
+        :param e: SVD exponent
+        :type e: float
+        :return: matrix of cosine similarity values
+        :rtype: Numpy memmap
+        """
         print('Starting {} calculations for {} for '
               'w={}, lem={}, weighted={} svd={} at {}'.format(self.sim_algo,
                                                               self.corpus,
@@ -524,22 +481,9 @@ class SemPipeline:
             self.CS_df[:] = pairwise_distances(self.stat_df,
                                                metric=self.sim_algo,
                                                n_jobs=self.jobs)
-        '''for i, w in enumerate(self.ind):
-			self.CS_df[i] = 1-pairwise_distances(self.stat_df[i], self.stat_df, metric='cosine', n_jobs=jobs)
-			if i % 5000 == 0:
-				del self.CS_df
-				self.CS_df = np.memmap(dest_file, dtype='float32', mode='r+', shape=(len(self.ind), len(self.ind)))
-		'''
         del self.CS_df
         self.CS_df = np.memmap(dest_file, dtype='float32', mode='r',
                                shape=(len(self.ind), len(self.ind)))
-        '''
-		try:
-			self.df_to_hdf(self.CS_df, dest_file)
-			del self.stat_df
-		except AttributeError:
-			print('Not saving CS file')
-		'''
         print('Finished with {} calculations for {} for '
               'w={}, lem={}, weighted={} at {}'.format(self.sim_algo,
                                                        self.corpus,
@@ -549,6 +493,11 @@ class SemPipeline:
                                                        datetime.datetime.now().time().isoformat()))
 
     def stat_eval(self):
+        """
+        guides the statistical significance calculations required by the parameters given in self.__init__
+        :return:
+        :rtype:
+        """
         print('Starting %s calculations for %s for '
               'w=%s, lem=%s, weighted=%s at %s' %
               (self.algo,
@@ -577,11 +526,14 @@ class SemPipeline:
                datetime.datetime.now().time().isoformat()))
 
     def svd_calc(self, algorithm):
-        """Calculates the truncated singular value decomposition of df
-		using the first n principal components
-
-		:param df:
-		"""
+        """
+        calculates the SVD using Caron's exponent
+        This function will be removed in future versions.
+        :param algorithm: which significance matrix to use (PPMI or LL)
+        :type algorithm: str
+        :return:
+        :rtype:
+        """
         print('Starting SVD calculations for %s for '
               'w=%s, lem=%s, weighted=%s at %s' %
               (self.corpus,
@@ -589,19 +541,6 @@ class SemPipeline:
                self.lems,
                self.weighted,
                datetime.datetime.now().time().isoformat()))
-        from scipy import linalg
-        #dest_file = os.path.join(self.dest,
-        #						 '_'.join([algorithm,
-        #								   'SVD',
-        #								   str(self.w),
-        #								   'lems={0}'.format(self.lems),
-        #								   self.corpus,
-        #								   'min_occ={0}'.format(self.min_count),
-        #								   'SVD_exp={0}.dat'.format(str(self.svd))]))
-        #if os.path.isfile(dest_file):
-        #self.PPMI_df = np.memmap(dest_file, dtype='float32', mode='r', shape=(len(self.ind), self.cols))
-        #return
-        #svd_df = np.memmap(dest_file, dtype='float32', mode='w+', shape=(len(self.ind), self.cols))
         if algorithm == 'PPMI':
             orig = os.path.join(self.dest,
                                 '_'.join(['PPMI',
@@ -631,10 +570,6 @@ class SemPipeline:
                                                                       self.weighted)])),
                                      e, (len(self.ind), self.cols)) for e in
                           self.svd)().get()
-        #U, s, Vh = linalg.svd(self.PPMI_df, check_finite=False)
-        #S = np.diag(s)
-        #svd_df[:] = np.dot(U, np.power(S, self.svd))
-        #self.PPMI_df = svd_df
         elif algorithm == 'LL':
             orig = os.path.join(self.dest,
                                 '_'.join(['LL',
@@ -664,10 +599,6 @@ class SemPipeline:
                                                                       self.weighted)])),
                                      e, (len(self.ind), self.cols)) for e in
                           self.svd)().get()
-        #U, s, Vh = linalg.svd(self.LL_df, check_finite=False)
-        #S = np.diag(s)
-        #svd_df[:] = np.dot(U, np.power(S, self.svd))
-        #self.PPMI_df = svd_df
         print(pause)
         print('Finished SVD calculations for %s for '
               'w=%s, lem=%s, weighted=%s at %s' %
@@ -678,6 +609,13 @@ class SemPipeline:
                datetime.datetime.now().time().isoformat()))
 
     def makeFileNames(self):
+        """
+        constructs the name of the destination directory and creates the directory if needed
+        :return: self.dest
+        :rtype: str
+        :return: self.corpus
+        :rtype: str
+        """
         self.dest = os.path.join(self.dir, str(self.w))
         try:
             os.mkdir(self.dest)
@@ -686,6 +624,11 @@ class SemPipeline:
         self.corpus = self.dir.split('/')[-1]
 
     def runPipeline(self):
+        """
+        Guides the whole Pipeline process using the params given in self.__init__
+        :return:
+        :rtype:
+        """
         if self.dir == None:
             self.file_chooser()
         self.makeFileNames()
@@ -716,113 +659,23 @@ class SemPipeline:
         print('Finished at %s' % (datetime.datetime.now().time().isoformat()))
 
 
-class PseudoLem(SemPipeline):
-    def __init__(self, win_size=350, lemmata=False, weighted=True, algo='PPMI',
-                 svd=1.45, files=None, forms=[], lemma=''):
-        """
-		"""
-        self.w = win_size
-        self.lems = lemmata
-        self.weighted = weighted
-        self.algo = algo
-        self.svd = svd
-        self.dir = files
-        self.forms = forms
-        self.lemma = lemma
-
-    def makeFileNames(self):
-        filename = '_'.join(self.dir.split('_')[:-1])
-        self.dest = os.path.join(self.dir, str(self.w), self.lemma)
-        try:
-            os.mkdir(self.dest)
-        except:
-            pass
-        self.corpus = filename.split('_')[-3:-1]
-
-    def cooc_counter(self):
-        '''
-		This function takes a token list, a windows size (default
-		is 4 left and 4 right), and a destination filename, runs through the
-		token list, reading every word to the window left and window right of
-		the target word, and then keeps track of these co-occurrences in a
-		cooc_dict dictionary.  Finally, it creates a coll_df DataFrame from
-		this dictionary and then pickles this DataFrame to dest
-		'''
-        self.dest = os.path.join(self.dest, self.lemma)
-        words = self.word_extract()
-        for i, word in enumerate(words):
-            if word in self.forms:
-                words[i] = self.lemma
-        cooc_dict = defaultdict(dict)
-        for i, t in enumerate(words):
-            c_list = []
-            if self.weighted:
-                for pos in range(max(i - self.w, 0),
-                                 min(i + self.w + 1, len(words))):
-                    if pos != i:
-                        for x in range(self.w + 1 - abs(i - pos)):
-                            c_list.append(words[pos])
-            else:
-                [c_list.append(c) for c in
-                 words[max(i - self.w, 0):min(i + self.w + 1, len(words))]]
-                c_list.remove(t)
-            for c in c_list:
-                try:
-                    cooc_dict[t][c] += 1
-                except KeyError:
-                    cooc_dict[t][c] = 1
-            if i % 100000 == 0:
-                print('Processing token %s of %s at %s' % (i, len(words),
-                                                           datetime.datetime.now().time().isoformat()))
-        self.coll_df = pd.DataFrame(cooc_dict).fillna(0)
-        dest_file = os.path.join(self.dest,
-                                 '_'.join(['COOC',
-                                           str(self.w),
-                                           'lems={0}'.format(self.lems),
-                                           self.corpus[0],
-                                           self.corpus[1]]) + '.hd5')
-        self.coll_df.to_hdf(dest_file, 'df', mode='w', complevel=9,
-                            complib='blosc')
-
-
-class WithCelery(SemPipeline):
-    def cooc_counter(self):
-        '''
-		This function takes a token list, a windows size (default
-		is 4 left and 4 right), and a destination filename, runs through the
-		token list, reading every word to the window left and window right of
-		the target word, and then keeps track of these co-occurrences in a
-		cooc_dict dictionary.  Finally, it creates a coll_df DataFrame from
-		this dictionary and then pickles this DataFrame to dest
-		'''
-        words = self.word_extract()
-        vocab = list(set(words))
-        self.coll_df = pd.DataFrame(index=vocab, columns=vocab)
-        c = 8
-        step = ceil(len(words) / c)
-        steps = []
-        for i in range(c):
-            steps.append((step * i, min(step * (i + 1), len(words))))
-        res = group(
-            counter.s(self.weighted, self.w, words, limits) for limits in
-            steps)().get()
-        for r in res:
-            self.coll_df = self.coll_df.add(pd.DataFrame(r), fill_value=0)
-        self.coll_df.fillna(0)
-        dest_file = os.path.join(self.dest, 'test',
-                                 '_'.join(['COOC',
-                                           str(self.w),
-                                           'lems={0}'.format(self.lems),
-                                           self.corpus[0],
-                                           self.corpus[1]]) + '.hd5')
-        self.coll_df.to_hdf(dest_file, 'df', mode='w', complevel=9,
-                            complib='blosc')
-
-
 class ParamTester(SemPipeline):
+
     def __init__(self, c=8, jobs=1, min_count=1, orig=None):
         """
-		"""
+        runs parameter testing for the corpus in question
+        the testing parameters are specified in the self.RunTests function
+        :param c: the number of cores to use in the co-occurrence calculations (will be removed in future versions)
+        :type c: int
+        :param jobs: the number of jobs to use in the cosine similarity calcuations
+        :type jobs: int
+        :param min_count: the minimum occurrence count. Words below this count will not be counted
+        :type min_count: int
+        :param orig: the directory path for the .txt files that make up the corpus
+        :type orig: str
+        :return:
+        :rtype:
+        """
         self.c = c
         self.occ_dict = None
         self.stops = []
@@ -830,73 +683,22 @@ class ParamTester(SemPipeline):
         self.min_count = min_count
         self.orig = orig
 
-    def word_extract(self):
-        '''
-		Extracts all of the words/lemmata from the lines extracted from
-		the XML file
-		'''
-        words = []
-        if self.lems:
-            pattern = re.compile(r'.+?lem="([^"]*).*')
-        else:
-            pattern = re.compile(r'.+?>([^<]*).*')
-        for line in self.t:
-            word = re.sub(pattern, r'\1', line).lower().replace('/', '')
-            if word != '' and word not in self.stops:
-                words.append(word)
-        return words
-
     def cooc_counter(self, files):
-        '''
-		This function takes a token list, a windows size (default
-		is 4 left and 4 right), and a destination filename, runs through the
-		token list, reading every word to the window left and window right of
-		the target word, and then keeps track of these co-occurrences in a
-		cooc_dict dictionary.  Finally, it creates a coll_df DataFrame from
-		this dictionary and then pickles this DataFrame to dest
-		'''
-        # self.coll_df = pd.DataFrame()
+        """
+        counts the number of times each word co-occurs with each other word
+        :return: self.coll_df
+        :rtype: Pandas sparse DataFrame
+        """
         counts = Counter()
         if self.occ_dict:
             occs = pd.read_pickle(self.occ_dict)
             min_lems = set([w for w in occs if occs[w] < self.min_count])
-            #the following line deals with the case when the cooc matrix is not square
-            #self.col_ind = list(occs.keys())
             del occs
         else:
             min_lems = set()
         for file in files:
             with open(file) as f:
                 self.t = f.read().split('\n')
-            #print('Now analyzing {0}'.format(file))
-            words = self.word_extract()
-            step = ceil(len(words) / self.c)
-            steps = []
-            for i in range(self.c):
-                steps.append((step * i, min(step * (i + 1), len(words))))
-            '''self.res = group(
-                counter.s(self.weighted, self.w, words, limits) for limits in
-                steps)().get()
-            '''
-            self.res = []
-            pool = Pool()
-            for limits in steps:
-                res = pool.apply_async(counter, args=(self.weighted, self.w, words, limits))
-                res.wait()
-                self.res.append(res.get())
-            #since the counter task returns Counter objects, the update method
-            #below adds instead of replacing the values
-            for r in self.res:
-                for key in r.keys():
-                    if key not in min_lems:
-                        if key in counts.keys():
-                            counts[key].update(r[key])
-                        else:
-                            counts[key] = r[key]
-        '''for file in files:
-            with open(file) as f:
-                self.t = f.read().split('\n')
-            #print('Now analyzing {0}'.format(file))
             words = self.word_extract()
             step = ceil(len(words) / self.c)
             steps = []
@@ -914,17 +716,25 @@ class ParamTester(SemPipeline):
                             counts[key].update(r[key])
                         else:
                             counts[key] = r[key]
-        '''
         col_ind = list(counts.keys())
         cols = len(col_ind)
         return pd.SparseDataFrame.from_dict(counts, orient='index',
                                             dtype=np.float64).fillna(0)
 
     def log_like(self, row, C2, P, N):
-        '''
-		values for c12
-		this is the row in the coll_df that I am looking at
-		'''
+        """
+        guides the process of Log-likelihood calculations for a single row
+        :param row: the index of the row in the table to be calculated
+        :type row: int
+        :param C2: number of co-occurrences for each row of the table
+        :type C2: Numpy ndarray
+        :param P: ratio of co-occurrences per row to total co-occurrences in the table
+        :type P: Numpy ndarray
+        :param N: total number of co-occurrences in the table
+        :type N: float
+        :return: Log-likelihood values for a single row in the table
+        :rtype: Numpy ndarray
+        """
         C12 = self.coll_df[row].to_dense()
         # value for C1 will be a scalar value used for all calculations on
         #that row
@@ -935,39 +745,15 @@ class ParamTester(SemPipeline):
         #values for p2
         P2 = (C2 - C12) / (N - C1)
 
-        '''
-		The following lines call alternately the log_L and the log_space_L
-		function.  The first will calculate most values correctly except where
-		they underrun the np.float128 object (10**-4950).  Those cases will be
-		dealt with by moving the calculations to log space, thus calculating
-		the natural log before the float128 can be underrun when taking a
-		very small P number to even a moderately large exponent.
-		I have only seen this occur in calculating LL3 and LL4, so I have
-		commented the calls to log_L for LL1 and LL2 out.  Uncomment and use
-		them if you experience np.float128 underrun on your data.
-		'''
-
         LL1 = self.log_space_L(C12, C1, P)
 
-        '''
-		The following finds all inf and -inf values in LL1 by
-		moving calculations into log space.
-		'''
         LL2 = self.log_space_L(C2 - C12, N - C1, P)
 
-        '''
-		The following finds all inf and -inf values in LL2 by
-		moving calculations into log space.
-		'''
         LL3 = self.log_L(C12, C1, P1)
 
-        '''
-		The following finds all inf and -inf values in LL3 by
-		moving calculations into log space.
-		'''
+        #The following finds all inf and -inf values in LL3 by moving calculations into log space.
 
         LL3_inf = np.where(abs(LL3) == np.inf)
-        #I need to figure out how to do this without indices
         if len(LL3_inf) > 0:
             for ind in LL3_inf[0]:
                 try:
@@ -978,10 +764,7 @@ class ParamTester(SemPipeline):
 
         LL4 = self.log_space_L(C2 - C12, N - C1, P2)
 
-        '''
-		The following finds all inf and -inf values in LL4 by
-		moving calculations into log space.
-		'''
+        #The following finds all inf and -inf values in LL4 by moving calculations into log space.
 
         LL4_inf = np.where(abs(LL4) == np.inf)
         if len(LL4_inf) > 0:
@@ -995,8 +778,11 @@ class ParamTester(SemPipeline):
         return -2 * (LL1 + LL2 - LL3 - LL4)
 
     def LL(self):
-        """This function guides the log-likelihood calculation process
-		"""
+        """
+        guides the Log-likelihood calculations for the whole matrix
+        :return: self.LL_df
+        :rtype: Numpy memmap
+        """
         n = np.sum(self.coll_df.values)
         c2 = np.sum(self.coll_df, axis=0)
         p = c2 / n
@@ -1020,10 +806,17 @@ class ParamTester(SemPipeline):
         return LL_df
 
     def PMI_calc(self, row, P2, N):
-        '''
-		values for c12
-		this is the row in the coll_df that I am looking at
-		'''
+        """
+        calculates PPMI values for one table row
+        :param row: index for the word's row in the table
+        :type row: int
+        :param P2: ratio of co-occurrences per row to total co-occurrences in the table
+        :type P2: Numpy ndarray
+        :param N: total co-occurrences in the table
+        :type N: float
+        :return: PPMI values for a row in the table
+        :rtype: Numpy ndarray
+        """
         C12 = self.coll_df[row].to_dense()
         # value for C1 will be a scalar value used for all calculations on
         #that row
@@ -1035,8 +828,11 @@ class ParamTester(SemPipeline):
         return a
 
     def PPMI(self):
-        """This function guides the PPMI calculation process
-		"""
+        """
+        guides the PPMI calculation process for the whole table
+        :return: matrix of PPMI values
+        :rtype: Numpy memmap
+        """
         n = np.sum(self.coll_df.values)
         p2 = np.sum(self.coll_df, axis=0) / n
         PPMI_df = np.memmap('{}/{}_PPMI_memmap.dat'.format(self.orig, self.w),
@@ -1058,23 +854,25 @@ class ParamTester(SemPipeline):
                             shape=(len(self.ind), len(self.ind)))
         return PPMI_df
 
-    def scaler(self, df):
-        """Scales the values of the given DataFrame to a range between
-		0 and 1
-
-		:param df:
-		"""
-        from sklearn.preprocessing import StandardScaler
-
-        df1 = deepcopy(df)
-        scaled = pd.DataFrame(StandardScaler().fit_transform(df1),
-                              index=df.index,
-                              columns=df.columns)
-        return (scaled + 1)
-
     def RunTests(self, min_w, max_w, step, lem_file=None,
-                 w_tests=(True, False), l_tests=(True, False)):
-
+                 w_tests='both', l_tests='both'):
+        """
+        guides the parameter testing process
+        :param min_w: the minimum context window size to use
+        :type min_w: int
+        :param max_w: the maximum context window size to use
+        :type max_w: int
+        :param step: the size of the steps between min_w and max_w
+        :type step: int
+        :param lem_file: the path and filename for the word occurrence dictionary pickle
+        :type lem_file: str
+        :param w_tests: whether to use weighted ("True") or unweighted ("False") window types or "both"
+        :type w_tests: str
+        :param l_tests: whether to use word lemmas ("True") or inflected forms ("False") or "both"
+        :type l_tests: str
+        :return:
+        :rtype:
+        """
         if isinstance(w_tests, str):
             if w_tests == 'both':
                 w_tests = (True, False)
@@ -1186,10 +984,9 @@ if __name__ == '__main__':
                     min_count=int(sys.argv[10])).runPipeline()
     if sys.argv[1] == "ParamTester":
         ParamTester(c=int(sys.argv[2]), orig=sys.argv[3],
-                    min_count=int(sys.argv[10])).RunTests(
-            min_w=int(sys.argv[4]),
-            max_w=int(sys.argv[5]),
-            step=int(sys.argv[6]),
-            lem_file=sys.argv[7],
-            w_tests=sys.argv[8],
-            l_tests=sys.argv[9])
+                    min_count=int(sys.argv[10])).RunTests(min_w=int(sys.argv[4]),
+                                                          max_w=int(sys.argv[5]),
+                                                          step=int(sys.argv[6]),
+                                                          lem_file=sys.argv[7],
+                                                          w_tests=sys.argv[8],
+                                                          l_tests=sys.argv[9])
