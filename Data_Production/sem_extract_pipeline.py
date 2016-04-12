@@ -865,7 +865,7 @@ class ParamTester(SemPipeline):
             del occs
         else:
             min_lems = set()
-        for file in glob('{0}/*.txt'.format(self.dir)):
+        for file in files:
             with open(file) as f:
                 self.t = f.read().split('\n')
             #print('Now analyzing {0}'.format(file))
