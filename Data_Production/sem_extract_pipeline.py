@@ -166,7 +166,7 @@ class SemPipeline:
                 self.cols = len(occs)
             except:
                 self.cols = len(self.ind)
-            self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r',
+            self.coll_df = np.memmap(cooc_dest, dtype='float32', mode='r',
                                      shape=(len(self.ind), self.cols))
             return
         counts = Counter()
@@ -214,7 +214,7 @@ class SemPipeline:
             dump(self.col_ind, f)
         print('Now writing cooccurrence file at {0}'.format(
             datetime.datetime.now().time().isoformat()))
-        self.coll_df = np.memmap(cooc_dest, dtype='float', mode='w+',
+        self.coll_df = np.memmap(cooc_dest, dtype='float32', mode='w+',
                                  shape=(len(self.ind), len(self.col_ind)))
         for i, w in enumerate(self.ind):
             s = pd.Series(counts[w], index=self.col_ind,
@@ -223,11 +223,11 @@ class SemPipeline:
             if i % 5000 == 0:
                 print('{0}% done'.format((i / len(self.ind) * 100)))
                 del self.coll_df
-                self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r+',
+                self.coll_df = np.memmap(cooc_dest, dtype='float32', mode='r+',
                                          shape=(
                                              len(self.ind), len(self.col_ind)))
         del self.coll_df
-        self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r',
+        self.coll_df = np.memmap(cooc_dest, dtype='float32', mode='r',
                                  shape=(len(self.ind), len(self.col_ind)))
 
     def log_L(self, k, n, x):
@@ -336,24 +336,24 @@ class SemPipeline:
                                            'weighted={}'.format(
                                                self.weighted)]) + '.dat')
         if os.path.isfile(dest_file):
-            self.LL_df = np.memmap(dest_file, dtype='float', mode='r',
+            self.LL_df = np.memmap(dest_file, dtype='float32', mode='r',
                                    shape=(len(self.ind), self.cols))
             return
         n = np.sum(self.coll_df)
         c2 = np.sum(self.coll_df, axis=0)
         p = c2 / n
-        self.LL_df = np.memmap(dest_file, dtype='float', mode='w+',
+        self.LL_df = np.memmap(dest_file, dtype='float32', mode='w+',
                                shape=(len(self.ind), self.cols))
         for i, w in enumerate(self.ind):
             self.LL_df[i] = self.log_like(i, c2, p, n)
             if i % 5000 == 0:
                 print('{0}% done'.format((i / len(self.ind) * 100)))
                 del self.LL_df
-                self.LL_df = np.memmap(dest_file, dtype='float', mode='r+',
+                self.LL_df = np.memmap(dest_file, dtype='float32', mode='r+',
                                        shape=(len(self.ind), self.cols))
         self.LL_df[np.where(np.isfinite(self.LL_df) == False)] = 0
         del self.LL_df
-        self.LL_df = np.memmap(dest_file, dtype='float', mode='r',
+        self.LL_df = np.memmap(dest_file, dtype='float32', mode='r',
                                shape=(len(self.ind), self.cols))
 
     def PMI_calc(self, row, P2, N):
@@ -398,24 +398,24 @@ class SemPipeline:
                                            'weighted={}'.format(
                                                self.weighted)]) + '.dat')
         if os.path.isfile(dest_file):
-            self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r',
+            self.PPMI_df = np.memmap(dest_file, dtype='float32', mode='r',
                                      shape=(len(self.ind), self.cols))
             return
         n = np.sum(self.coll_df)
         #values for C2
         p2 = np.sum(self.coll_df, axis=0) / n
-        self.PPMI_df = np.memmap(dest_file, dtype='float', mode='w+',
+        self.PPMI_df = np.memmap(dest_file, dtype='float32', mode='w+',
                                  shape=(len(self.ind), self.cols))
         for i, w in enumerate(self.ind):
             self.PPMI_df[i] = self.PMI_calc(i, p2, n)
             if i % 5000 == 0:
                 print('{0}% done'.format((i / len(self.ind) * 100)))
                 del self.PPMI_df
-                self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r+',
+                self.PPMI_df = np.memmap(dest_file, dtype='float32', mode='r+',
                                          shape=(len(self.ind), self.cols))
         self.PPMI_df[np.where(np.isfinite(self.PPMI_df) == False)] = 0
         del self.PPMI_df
-        self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r',
+        self.PPMI_df = np.memmap(dest_file, dtype='float32', mode='r',
                                  shape=(len(self.ind), self.cols))
 
     def CS(self, algorithm, e):
@@ -469,9 +469,9 @@ class SemPipeline:
                                               bool(self.stops)),
                                           'weighted={}.dat'.format(
                                               self.weighted)]))
-            self.stat_df = np.memmap(orig, dtype='float', mode='r',
+            self.stat_df = np.memmap(orig, dtype='float32', mode='r',
                                      shape=(len(self.ind), self.cols))
-        self.CS_df = np.memmap(dest_file, dtype='float', mode='w+',
+        self.CS_df = np.memmap(dest_file, dtype='float32', mode='w+',
                                shape=(len(self.ind), len(self.ind)))
         if self.sim_algo == 'cosine':
             self.CS_df[:] = 1 - pairwise_distances(self.stat_df,
@@ -482,7 +482,7 @@ class SemPipeline:
                                                metric=self.sim_algo,
                                                n_jobs=self.jobs)
         del self.CS_df
-        self.CS_df = np.memmap(dest_file, dtype='float', mode='r',
+        self.CS_df = np.memmap(dest_file, dtype='float32', mode='r',
                                shape=(len(self.ind), len(self.ind)))
         print('Finished with {} calculations for {} for '
               'w={}, lem={}, weighted={} at {}'.format(self.sim_algo,

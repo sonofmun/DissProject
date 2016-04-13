@@ -39,7 +39,7 @@ class comparison:
             r = np.memmap(
                 '{0}{1}/{4}/{2}/{5}_{2}_lems=False_{4}_min_occ={3}_{6}no_stops=False_weighted={7}_NORMED.dat'.format(
                     self.base, corp[0], corp[1], corp[2], self.english,
-                    self.prefix, self.svd, corp[3]), dtype='float',
+                    self.prefix, self.svd, corp[3]), dtype='float32',
                 shape=(len(rows), len(rows)))[i]
             self.ekk_rows[corp[0]] = pd.Series(r, index=rows)
 
@@ -106,13 +106,13 @@ class matrix_comparison(comparison):
             d_c2 = np.memmap(
                 '{0}{1}/{4}/{2}/{5}_{2}_lems=False_{4}_min_occ={3}_{6}no_stops=False_NORMED.dat'.format(
                     self.base, corp[0], corp[1], corp[2], self.english,
-                    self.prefix, self.svd), dtype='float',
+                    self.prefix, self.svd), dtype='float32',
                 shape=(len(rows), len(rows)))[i_c2]
             d_c2 = d_c2[:, i_c2]
             d_nt = np.memmap(
                 '{0}{1}/{4}/{2}/{5}_{2}_lems=False_{4}_min_occ={3}_{6}no_stops=False_NORMED.dat'.format(
                     self.base, nt[0], nt[1], nt[2], self.english, self.prefix,
-                    self.svd), dtype='float',
+                    self.svd), dtype='float32',
                 shape=(len(self.ekk_rows['NT']), len(self.ekk_rows['NT'])))[
                 i_nt]
             d_nt = d_nt[:, i_nt]
