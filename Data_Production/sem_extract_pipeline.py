@@ -930,7 +930,7 @@ class ParamTester(SemPipeline):
                                                                   self.weighted)] = \
                         pipe.ave_no_93[self.w]
                     del pipe
-                    '''self.coll_df = pd.read_pickle(
+                    self.coll_df = pd.read_pickle(
                         '{}/{}_coll_df.pickle'.format(self.orig, self.w))
                     PPMI_df = self.PPMI()
                     del self.coll_df
@@ -953,9 +953,8 @@ class ParamTester(SemPipeline):
                                                                     self.weighted)] = \
                         pipe.ave_no_93[self.w]
                     del pipe
-                    '''
                     os.remove('{}/{}_coll_df.pickle'.format(self.orig, self.w))
-                    #os.remove('{}/{}_PPMI_memmap.dat'.format(self.orig, self.w))
+                    os.remove('{}/{}_PPMI_memmap.dat'.format(self.orig, self.w))
                     os.remove('{}/{}_LL_memmap.dat'.format(self.orig, self.w))
             print(self.param_dict)
         dest_file = '{0}/Win_size_tests/{1}_{2}_{3}_weighted={4}_lems={5}.pickle'.format(
