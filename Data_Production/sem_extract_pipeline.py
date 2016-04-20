@@ -454,8 +454,30 @@ class SemPipeline:
         if e == 1:
             if algorithm == 'PPMI':
                 self.stat_df = self.PPMI_df
+                self.stat_file = os.path.join(self.dest,
+                                 '_'.join(['PPMI',
+                                           str(self.w),
+                                           'lems={0}'.format(self.lems),
+                                           self.corpus,
+                                           'min_occ={0}'.format(
+                                               self.min_count),
+                                           'no_stops={0}'.format(
+                                               bool(self.stops)),
+                                           'weighted={}'.format(
+                                               self.weighted)]) + '.dat')
             elif algorithm == 'LL':
                 self.stat_df = self.LL_df
+                self.stat_file = os.path.join(self.dest,
+                                 '_'.join(['LL',
+                                           str(self.w),
+                                           'lems={0}'.format(self.lems),
+                                           self.corpus,
+                                           'min_occ={0}'.format(
+                                               self.min_count),
+                                           'no_stops={0}'.format(
+                                               bool(self.stops)),
+                                           'weighted={}'.format(
+                                               self.weighted)]) + '.dat')
         else:
             orig = os.path.join(self.dest,
                                 '_'.join([algorithm,
@@ -512,8 +534,11 @@ class SemPipeline:
         steps.append(ind)
         for list_ind, df_ind in enumerate(steps):
             self.CS_df[steps[list_ind - 1]:df_ind] = 1 - pairwise_distances(self.stat_df[steps[list_ind - 1]:df_ind], self.stat_df, metric='cosine')
+            print('{0}% done'.format((df_ind / len(self.ind) * 100)))
             del self.CS_df
+            del self.stat_df
             self.CS_df = np.memmap(dest_file, dtype='float', mode='r+', shape=(ind, ind))
+            self.stat_df = np.memmap(self.stat_file, dtype='float', mode='r', shape=(ind, ind))
 
     def stat_eval(self):
         """
