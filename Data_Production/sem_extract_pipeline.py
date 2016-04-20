@@ -26,7 +26,7 @@ except ImportError:
 from sklearn.metrics.pairwise import pairwise_distances
 from glob import glob
 from celery import group
-from proj.tasks import counter, svd_calc, cs_loop
+from proj.tasks import counter, svd_calc  # , cs_loop
 from sklearn.cross_validation import KFold
 from pickle import dump
 from copy import deepcopy
@@ -473,7 +473,7 @@ class SemPipeline:
                                      shape=(len(self.ind), self.cols))
         self.CS_df = np.memmap(dest_file, dtype='float', mode='w+',
                                shape=(len(self.ind), len(self.ind)))
-        if self.sim_algo == 'cosine':
+        '''if self.sim_algo == 'cosine':
             self.CS_df[:] = 1 - pairwise_distances(self.stat_df,
                                                    metric=self.sim_algo,
                                                    n_jobs=self.jobs)
@@ -482,6 +482,8 @@ class SemPipeline:
                                                metric=self.sim_algo,
                                                n_jobs=self.jobs)
         del self.CS_df
+        '''
+        self.cs_loop(dest_file)
         self.CS_df = np.memmap(dest_file, dtype='float', mode='r',
                                shape=(len(self.ind), len(self.ind)))
         print('Finished with {} calculations for {} for '
@@ -491,6 +493,27 @@ class SemPipeline:
                                                        self.lems,
                                                        self.weighted,
                                                        datetime.datetime.now().time().isoformat()))
+
+    def cs_loop(self, dest_file):
+        """
+            runs the loops over the rows in self.stat_df
+            :return:
+            :rtype:
+            """
+        #df = np.memmap(dest_file, dtype='float', mode='w+', shape=(ind, ind))
+        #stat_df = np.memmap(stat_file, dtype='float', mode='w+',
+        #                    shape=(ind, ind))
+        ind = len(self.ind)
+        steps = []
+        x = 0
+        while x < ind:
+            steps.append(x)
+            x += 5000
+        steps.append(ind)
+        for list_ind, df_ind in enumerate(steps):
+            self.CS_df[steps[list_ind - 1]:df_ind] = 1 - pairwise_distances(self.stat_df[steps[list_ind - 1]:df_ind], self.stat_df, metric='cosine')
+            del self.CS_df
+            self.CS_df = np.memmap(dest_file, dtype='float', mode='r+', shape=(ind, ind))
 
     def stat_eval(self):
         """
