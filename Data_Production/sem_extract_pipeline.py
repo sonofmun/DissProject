@@ -525,20 +525,25 @@ class SemPipeline:
         #df = np.memmap(dest_file, dtype='float', mode='w+', shape=(ind, ind))
         #stat_df = np.memmap(stat_file, dtype='float', mode='w+',
         #                    shape=(ind, ind))
+        step = 5000
         ind = len(self.ind)
         steps = []
+        steps2 = []
         x = 0
         while x < ind:
             steps.append(x)
-            x += 5000
+            steps2.append(x)
+            x += step
         steps.append(ind)
-        for list_ind, df_ind in enumerate(steps):
-            self.CS_df[steps[list_ind - 1]:df_ind] = 1 - pairwise_distances(self.stat_df[steps[list_ind - 1]:df_ind], self.stat_df, metric='cosine')
+        steps2.append(ind)
+        for df_ind in steps:
+            part1 = self.stat_df[df_ind:min(df_ind + step, ind)]
+            for df_ind2 in steps2:
+                part2 = self.stat_df[df_ind2:min(df_ind2 + step, ind)]
+                self.CS_df[df_ind:min(df_ind + step, ind), df_ind2:min(df_ind2 + step, ind)] = 1- pairwise_distances(part1, part2, metric='cosine')
             print('{0}% done'.format((df_ind / len(self.ind) * 100)))
             del self.CS_df
-            del self.stat_df
             self.CS_df = np.memmap(dest_file, dtype='float', mode='r+', shape=(ind, ind))
-            self.stat_df = np.memmap(self.stat_file, dtype='float', mode='r', shape=(ind, ind))
 
     def stat_eval(self):
         """
