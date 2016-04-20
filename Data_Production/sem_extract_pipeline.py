@@ -26,7 +26,7 @@ except ImportError:
 from sklearn.metrics.pairwise import pairwise_distances
 from glob import glob
 from celery import group
-from proj.tasks import counter, svd_calc
+from proj.tasks import counter, svd_calc, cs_loop
 from sklearn.cross_validation import KFold
 from pickle import dump
 from copy import deepcopy
