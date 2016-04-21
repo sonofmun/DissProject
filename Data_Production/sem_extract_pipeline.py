@@ -772,9 +772,9 @@ class ParamTester(SemPipeline):
         self.ind = list(counts.keys())
         cooc_dest = '{}/{}_coll_df.dat'.format(self.orig, self.w)
         self.coll_df = np.memmap(cooc_dest, dtype='float', mode='w+',
-                                 shape=(len(self.ind), len(self.col_ind)))
+                                 shape=(len(self.ind), len(self.ind)))
         for i, w in enumerate(self.ind):
-            s = pd.Series(counts[w], index=self.col_ind,
+            s = pd.Series(counts[w], index=self.ind,
                           dtype=np.float64).fillna(0)
             self.coll_df[i] = s.values
             if i % 5000 == 0:
@@ -782,10 +782,10 @@ class ParamTester(SemPipeline):
                 del self.coll_df
                 self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r+',
                                          shape=(
-                                             len(self.ind), len(self.col_ind)))
+                                             len(self.ind), len(self.ind)))
         del self.coll_df
         self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r',
-                                 shape=(len(self.ind), len(self.col_ind)))
+                                 shape=(len(self.ind), len(self.ind)))
         #return pd.SparseDataFrame.from_dict(counts, orient='index',
         #                                   dtype=np.float64).fillna(0)
 
@@ -1075,7 +1075,7 @@ class ParamTester(SemPipeline):
                                                                   self.weighted)] = \
                         pipe.ave_no_93[self.w]
                     del pipe
-                    self.coll_df = np.memmap('{}/{}_coll_df.dat'.format(self.orig, self.w), dtype='float', mode='r', shape=(len(self.ind), len(self.col_ind)))
+                    self.coll_df = np.memmap('{}/{}_coll_df.dat'.format(self.orig, self.w), dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
                     self.PPMI_df = self.PPMI()
                     del self.coll_df
                     pipe = CatSimWin('PPMI', self.w, lems=self.lems,
