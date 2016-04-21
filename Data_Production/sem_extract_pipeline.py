@@ -803,7 +803,7 @@ class ParamTester(SemPipeline):
         :return: Log-likelihood values for a single row in the table
         :rtype: Numpy ndarray
         """
-        C12 = self.coll_df[row].to_dense()
+        C12 = self.coll_df[row]
         # value for C1 will be a scalar value used for all calculations on
         #that row
         C1 = np.sum(C12)
@@ -858,7 +858,7 @@ class ParamTester(SemPipeline):
                           dtype='float', mode='w+',
                           shape=(len(self.ind), len(self.ind)))
         for i, w in enumerate(self.ind):
-            LL_df[i] = self.log_like(w, c2, p, n)
+            LL_df[i] = self.log_like(i, c2, p, n)
             if i % 5000 == 0:
                 print('{0}% done'.format((i / len(self.ind) * 100)))
                 del LL_df
@@ -885,7 +885,7 @@ class ParamTester(SemPipeline):
         :return: PPMI values for a row in the table
         :rtype: Numpy ndarray
         """
-        C12 = self.coll_df[row].to_dense()
+        C12 = self.coll_df[row]
         # value for C1 will be a scalar value used for all calculations on
         #that row
         C1 = np.sum(C12)
@@ -907,7 +907,7 @@ class ParamTester(SemPipeline):
                             dtype='float', mode='w+',
                             shape=(len(self.ind), len(self.ind)))
         for i, w in enumerate(self.ind):
-            PPMI_df[i] = self.PMI_calc(w, p2, n)
+            PPMI_df[i] = self.PMI_calc(i, p2, n)
             if i % 5000 == 0:
                 print('{0}% done'.format((i / len(self.ind) * 100)))
                 del PPMI_df
