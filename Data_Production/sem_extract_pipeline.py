@@ -933,17 +933,14 @@ class ParamTester(SemPipeline):
         :return: matrix of cosine similarity values
         :rtype: Numpy memmap
         """
-        print('Starting {} calculations for {} for '
+        print('Starting {} calculations for '
               'w={}, lem={}, weighted={} svd={} at {}'.format(self.sim_algo,
-                                                              self.corpus,
                                                               str(self.w),
                                                               self.lems,
                                                               self.weighted,
                                                               e,
                                                               datetime.datetime.now().time().isoformat()))
         dest_file = '{}/{}_CS_memmap.dat'.format(self.orig, self.w)
-        if os.path.isfile(dest_file):
-            return
         if e == 1:
             if algorithm == 'PPMI':
                 self.stat_df = self.PPMI_df
