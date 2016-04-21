@@ -503,8 +503,8 @@ class SemPipeline:
             self.CS_df[:] = pairwise_distances(self.stat_df,
                                                metric=self.sim_algo,
                                                n_jobs=self.jobs)
-        del self.CS_df
         '''
+        del self.CS_df
         self.cs_loop(dest_file)
         self.CS_df = np.memmap(dest_file, dtype='float', mode='r',
                                shape=(len(self.ind), len(self.ind)))
@@ -962,7 +962,7 @@ class ParamTester(SemPipeline):
                                      shape=(len(self.ind), self.cols))
         self.CS_df = np.memmap(dest_file, dtype='float32', mode='w+',
                                shape=(len(self.ind), len(self.ind)))
-        if self.sim_algo == 'cosine':
+        '''if self.sim_algo == 'cosine':
             self.CS_df[:] = 1 - pairwise_distances(self.stat_df,
                                                    metric=self.sim_algo,
                                                    n_jobs=self.jobs)
@@ -970,6 +970,8 @@ class ParamTester(SemPipeline):
             self.CS_df[:] = pairwise_distances(self.stat_df,
                                                metric=self.sim_algo,
                                                n_jobs=self.jobs)
+        self.cs_loop(dest_file)
+        '''
         del self.CS_df
         self.CS_df = np.memmap(dest_file, dtype='float32', mode='r',
                                shape=(len(self.ind), len(self.ind)))
