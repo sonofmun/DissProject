@@ -851,7 +851,7 @@ class ParamTester(SemPipeline):
         :return: self.LL_df
         :rtype: Numpy memmap
         """
-        n = np.sum(self.coll_df.values)
+        n = np.sum(self.coll_df)
         c2 = np.sum(self.coll_df, axis=0)
         p = c2 / n
         LL_df = np.memmap('{}/{}_LL_memmap.dat'.format(self.orig, self.w),
@@ -901,7 +901,7 @@ class ParamTester(SemPipeline):
         :return: matrix of PPMI values
         :rtype: Numpy memmap
         """
-        n = np.sum(self.coll_df.values)
+        n = np.sum(self.coll_df)
         p2 = np.sum(self.coll_df, axis=0) / n
         PPMI_df = np.memmap('{}/{}_PPMI_memmap.dat'.format(self.orig, self.w),
                             dtype='float', mode='w+',
