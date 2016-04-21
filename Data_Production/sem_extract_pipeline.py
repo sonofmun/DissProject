@@ -971,8 +971,8 @@ class ParamTester(SemPipeline):
             self.CS_df[:] = pairwise_distances(self.stat_df,
                                                metric=self.sim_algo,
                                                n_jobs=self.jobs)
-        self.cs_loop(dest_file)
         '''
+        self.cs_loop(dest_file)
         del self.CS_df
         self.CS_df = np.memmap(dest_file, dtype='float', mode='r',
                                shape=(len(self.ind), len(self.ind)))
