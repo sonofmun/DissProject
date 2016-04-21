@@ -735,6 +735,7 @@ class ParamTester(SemPipeline):
         self.jobs = jobs
         self.min_count = min_count
         self.orig = orig
+        self.sim_algo = 'CS'
 
     def cooc_counter(self, files):
         """
@@ -940,19 +941,7 @@ class ParamTester(SemPipeline):
                                                               self.weighted,
                                                               e,
                                                               datetime.datetime.now().time().isoformat()))
-        dest_file = os.path.join(self.dest,
-                                 '_'.join([algorithm,
-                                           self.sim_algo,
-                                           str(self.w),
-                                           'lems={0}'.format(self.lems),
-                                           self.corpus,
-                                           'min_occ={0}'.format(
-                                               self.min_count),
-                                           'SVD_exp={0}'.format(str(e)),
-                                           'no_stops={0}'.format(
-                                               bool(self.stops)),
-                                           'weighted={}.dat'.format(
-                                               self.weighted)]))
+        dest_file = '{}/{}_CS_memmap.dat'.format(self.orig, self.w)
         if os.path.isfile(dest_file):
             return
         if e == 1:
@@ -1063,7 +1052,8 @@ class ParamTester(SemPipeline):
                                      corpus=(self.orig.split('/')[-1], 1, 1.0,
                                              self.weighted), lem_file=lem_file)
                     self.CS('LL', 1)
-                    #pipe.df = 1 - pairwise_distances(LL_df, metric='cosine', n_jobs=self.jobs)
+                    pipe.df = self.CS_df
+                    del self.CS_df
                     del self.LL_df
                     pipe.ind = self.ind
                     pipe.SimCalc(self.w)
@@ -1085,8 +1075,9 @@ class ParamTester(SemPipeline):
                                      corpus=(self.orig.split('/')[-1], 1, 1.0,
                                              self.weighted), lem_file=lem_file)
                     self.CS('PPMI', 1)
-                    #pipe.df = 1 - pairwise_distances(PPMI_df, metric='cosine', n_jobs=self.jobs)
+                    pipe.df = self.CS_df
                     del self.PPMI_df
+                    del self.CS_df
                     pipe.ind = self.ind
                     pipe.SimCalc(self.w)
                     pipe.AveCalc(self.w)
@@ -1100,6 +1091,7 @@ class ParamTester(SemPipeline):
                     os.remove('{}/{}_coll_df.dat'.format(self.orig, self.w))
                     os.remove('{}/{}_PPMI_memmap.dat'.format(self.orig, self.w))
                     os.remove('{}/{}_LL_memmap.dat'.format(self.orig, self.w))
+                    os.remove('{}/{}_CS_memmap.dat'.format(self.orig, self.w))
             print(self.param_dict)
         dest_file = '{0}/Win_size_tests/{1}_{2}_{3}_weighted={4}_lems={5}.pickle'.format(
             self.orig, os.path.basename(self.orig), min_w, max_w, w_tests,
