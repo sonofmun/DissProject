@@ -771,7 +771,7 @@ class ParamTester(SemPipeline):
                         else:
                             counts[key] = r[key]
         self.ind = list(counts.keys())
-        cooc_dest = '{}/{}_coll_df.dat'.format(self.orig, self.w)
+        cooc_dest = '{}/{}_{}_{}_coll_df.dat'.format(self.orig, self.w, self.weighted, self.lems)
         self.coll_df = np.memmap(cooc_dest, dtype='float', mode='w+',
                                  shape=(len(self.ind), len(self.ind)))
         for i, w in enumerate(self.ind):
@@ -855,7 +855,7 @@ class ParamTester(SemPipeline):
         n = np.sum(self.coll_df)
         c2 = np.sum(self.coll_df, axis=0)
         p = c2 / n
-        LL_df = np.memmap('{}/{}_LL_memmap.dat'.format(self.orig, self.w),
+        LL_df = np.memmap('{}/{}_{}_{}_LL_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),
                           dtype='float', mode='w+',
                           shape=(len(self.ind), len(self.ind)))
         for i, w in enumerate(self.ind):
@@ -864,12 +864,12 @@ class ParamTester(SemPipeline):
                 print('{0}% done'.format((i / len(self.ind) * 100)))
                 del LL_df
                 LL_df = np.memmap(
-                    '{}/{}_LL_memmap.dat'.format(self.orig, self.w),
+                    '{}/{}_{}_{}_LL_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),
                     dtype='float', mode='r+',
                     shape=(len(self.ind), len(self.ind)))
         LL_df[np.where(np.isfinite(LL_df) == False)] = 0
         del LL_df
-        LL_df = np.memmap('{}/{}_LL_memmap.dat'.format(self.orig, self.w),
+        LL_df = np.memmap('{}/{}_{}_{}_LL_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),
                           dtype='float', mode='r',
                           shape=(len(self.ind), len(self.ind)))
         return LL_df
@@ -904,7 +904,7 @@ class ParamTester(SemPipeline):
         """
         n = np.sum(self.coll_df)
         p2 = np.sum(self.coll_df, axis=0) / n
-        PPMI_df = np.memmap('{}/{}_PPMI_memmap.dat'.format(self.orig, self.w),
+        PPMI_df = np.memmap('{}/{}_{}_{}_PPMI_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),
                             dtype='float', mode='w+',
                             shape=(len(self.ind), len(self.ind)))
         for i, w in enumerate(self.ind):
@@ -913,12 +913,12 @@ class ParamTester(SemPipeline):
                 print('{0}% done'.format((i / len(self.ind) * 100)))
                 del PPMI_df
                 PPMI_df = np.memmap(
-                    '{}/{}_PPMI_memmap.dat'.format(self.orig, self.w),
+                    '{}/{}_{}_{}_PPMI_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),
                     dtype='float', mode='r+',
                     shape=(len(self.ind), len(self.ind)))
         PPMI_df[np.where(np.isfinite(PPMI_df) == False)] = 0
         del PPMI_df
-        PPMI_df = np.memmap('{}/{}_PPMI_memmap.dat'.format(self.orig, self.w),
+        PPMI_df = np.memmap('{}/{}_{}_{}_PPMI_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),
                             dtype='float', mode='r',
                             shape=(len(self.ind), len(self.ind)))
         return PPMI_df
@@ -940,7 +940,7 @@ class ParamTester(SemPipeline):
                                                               self.weighted,
                                                               e,
                                                               datetime.datetime.now().time().isoformat()))
-        dest_file = '{}/{}_CS_memmap.dat'.format(self.orig, self.w)
+        dest_file = '{}/{}_{}_{}_CS_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems)
         if e == 1:
             if algorithm == 'PPMI':
                 self.stat_df = self.PPMI_df
@@ -1061,7 +1061,7 @@ class ParamTester(SemPipeline):
                                                                   self.weighted)] = \
                         pipe.ave_no_93[self.w]
                     del pipe
-                    self.coll_df = np.memmap('{}/{}_coll_df.dat'.format(self.orig, self.w), dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
+                    self.coll_df = np.memmap('{}/{}_{}_{}_coll_df.dat'.format(self.orig, self.w, self.weighted, self.lems), dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
                     self.PPMI_df = self.PPMI()
                     del self.coll_df
                     pipe = CatSimWin('PPMI', self.w, lems=self.lems,
@@ -1084,10 +1084,10 @@ class ParamTester(SemPipeline):
                                                                     self.weighted)] = \
                         pipe.ave_no_93[self.w]
                     del pipe
-                    os.remove('{}/{}_coll_df.dat'.format(self.orig, self.w))
-                    os.remove('{}/{}_PPMI_memmap.dat'.format(self.orig, self.w))
-                    os.remove('{}/{}_LL_memmap.dat'.format(self.orig, self.w))
-                    os.remove('{}/{}_CS_memmap.dat'.format(self.orig, self.w))
+                    os.remove('{}/{}_{}_{}_coll_df.dat'.format(self.orig, self.w, self.weighted, self.lems))
+                    os.remove('{}/{}_{}_{}_PPMI_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems))
+                    os.remove('{}/{}_{}_{}_LL_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems))
+                    os.remove('{}/{}_{}_{}_CS_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems))
             print(self.param_dict)
         dest_file = '{0}/Win_size_tests/{1}_{2}_{3}_weighted={4}_lems={5}.pickle'.format(
             self.orig, os.path.basename(self.orig), min_w, max_w, w_tests,
