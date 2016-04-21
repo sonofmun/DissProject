@@ -976,9 +976,8 @@ class ParamTester(SemPipeline):
         del self.CS_df
         self.CS_df = np.memmap(dest_file, dtype='float', mode='r',
                                shape=(len(self.ind), len(self.ind)))
-        print('Finished with {} calculations for {} for '
+        print('Finished with {} calculations for '
               'w={}, lem={}, weighted={} at {}'.format(self.sim_algo,
-                                                       self.corpus,
                                                        str(self.w),
                                                        self.lems,
                                                        self.weighted,
