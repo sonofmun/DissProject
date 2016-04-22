@@ -27,7 +27,7 @@ from sklearn.metrics.pairwise import pairwise_distances
 from glob import glob
 from celery import group
 from proj.tasks import counter, svd_calc
-from itertools import combinations
+from itertools import combinations_with_replacement
 from sklearn.cross_validation import KFold
 from pickle import dump
 from copy import deepcopy
@@ -506,8 +506,8 @@ class SemPipeline:
                                                metric=self.sim_algo,
                                                n_jobs=self.jobs)
         '''
-        del self.CS_df
         self.cs_loop(dest_file)
+        del self.CS_df
         self.CS_df = np.memmap(dest_file, dtype='float', mode='r',
                                shape=(len(self.ind), len(self.ind)))
         print('Finished with {} calculations for {} for '
@@ -537,16 +537,19 @@ class SemPipeline:
             steps.append((x - 5000, x))
             # steps2.append(x)
             x += step
-        steps.append(ind)
+        steps.append((steps[-1][-1], ind))
         # steps2.append(ind)
-        count = 1
-        for i1, i2 in combinations(steps, 2):
+        last_ind = steps[0]
+        for i1, i2 in combinations_with_replacement(steps, 2):
             part1 = self.stat_df[i1[0]:i1[1]]
             part2 = self.stat_df[i2[0]:i2[1]]
-            self.CS_df[i1[0]:i1[1], i2[0]:i2[1]] = self.CS_df[i2[0]:i2[1], i1[0]:i1[1]] = 1- pairwise_distances(part1, part2, metric='cosine')
-            print('{0}% done'.format((count / len(combinations(steps, 2)) * 100)))
-            del self.CS_df
-            self.CS_df = np.memmap(dest_file, dtype='float', mode='r+', shape=(ind, ind))
+            self.CS_df[i1[0]:i1[1], i2[0]:i2[1]] = 1- pairwise_distances(part1, part2, metric='cosine')
+            self.CS_df[i2[0]:i2[1], i1[0]:i1[1]] = self.CS_df[i1[0]:i1[1], i2[0]:i2[1]].T
+            if last_ind != i1:
+                print('{0}% done'.format((i1[0] / ind) * 100))
+                del self.CS_df
+                self.CS_df = np.memmap(dest_file, dtype='float', mode='r+', shape=(ind, ind))
+            last_ind = i1
         '''for df_ind in steps:
             part1 = self.stat_df[df_ind:min(df_ind + step, ind)]
             for df_ind2 in steps2:
