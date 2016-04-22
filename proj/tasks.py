@@ -31,6 +31,19 @@ def xsum(numbers):
 
 @app.task(name='proj.tasks.counter')
 def counter(weighted, w, words, limits):
+    """
+    counts the co-occurrences for the words in a certain portion of one file in the corpus
+    :param weighted: whether to use a weighted or unweighted window
+    :type weighted: bool
+    :param w: the context-window size
+    :type w: int
+    :param words: the list of words in the text
+    :type words: list
+    :param limits: the beginning and ending indices included in this portion of the file
+    :type limits: tuple of ints
+    :return: co-occurrence counts for each word that occurs in this portion of the file
+    :rtype: collections.Counter
+    """
     b, e = limits
     cooc_dict = defaultdict(Counter)
     for i in range(b, e):

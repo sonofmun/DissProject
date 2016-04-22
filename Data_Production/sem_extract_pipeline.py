@@ -11,9 +11,9 @@ SCRIPT_DIR = os.path.dirname(
 sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
 
 import re
-from collections import defaultdict, Counter
+from collections import Counter
 import datetime
-from math import log, ceil, pow
+from math import log, ceil
 
 import pandas as pd
 import numpy as np
@@ -28,11 +28,7 @@ from glob import glob
 from celery import group
 from proj.tasks import counter, svd_calc
 from itertools import combinations_with_replacement
-from sklearn.cross_validation import KFold
 from pickle import dump
-from copy import deepcopy
-#from multiprocessing import Pool
-#from Data_Production.multi_tasks import counter
 
 
 class SemPipeline:
