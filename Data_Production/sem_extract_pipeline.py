@@ -26,9 +26,11 @@ except ImportError:
 from sklearn.metrics.pairwise import pairwise_distances
 from glob import glob
 from celery import group
-from proj.tasks import counter, svd_calc
+#from proj.tasks import counter, svd_calc
 from itertools import combinations_with_replacement
 from pickle import dump
+from multiprocessing import Pool
+from Data_Production.multi_tasks import counter
 
 
 class SemPipeline:
@@ -183,9 +185,15 @@ class SemPipeline:
             steps = []
             for i in range(self.c):
                 steps.append((step * i, min(step * (i + 1), len(words))))
-            self.res = group(
+            '''self.res = group(
                 counter.s(self.weighted, self.w, words, limits) for limits in
                 steps)().get()
+            '''
+            self.res = []
+            with Pool(processes=self.c) as pool:
+                for limits in steps:
+                    res = pool.apply_async(counter, args=(self.weighted, self.w, words, limits))
+                    self.res.append(res.get())
             #since the counter task returns Counter objects, the update method
             #below adds instead of replacing the values
             for r in self.res:
