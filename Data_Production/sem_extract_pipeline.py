@@ -532,9 +532,9 @@ class SemPipeline:
         ind = len(self.ind)
         steps = []
         # steps2 = []
-        x = 5000  # 0
+        x = step  # 0
         while x < ind:
-            steps.append((x - 5000, x))
+            steps.append((x - step, x))
             # steps2.append(x)
             x += step
         steps.append((steps[-1][-1], ind))
