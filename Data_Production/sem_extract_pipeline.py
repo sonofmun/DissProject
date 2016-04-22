@@ -26,7 +26,8 @@ except ImportError:
 from sklearn.metrics.pairwise import pairwise_distances
 from glob import glob
 from celery import group
-from proj.tasks import counter, svd_calc  # , cs_loop
+from proj.tasks import counter, svd_calc
+from itertools import combinations
 from sklearn.cross_validation import KFold
 from pickle import dump
 from copy import deepcopy
@@ -39,7 +40,7 @@ class SemPipeline:
                  sim_algo='cosine', svd=1, files=None, c=8, occ_dict=None,
                  min_count=1, jobs=1, stops=True):
         """
-
+        This class produces matrices representing cooccurrence counts, statistical significance, and similarity data for a corpus
         :param win_size: context window size
         :type win_size: int
         :param lemmata: whether to use word lemmata
@@ -139,6 +140,8 @@ class SemPipeline:
     def cooc_counter(self):
         """
         counts the number of times each word co-occurs with each other word
+        :return: self.ind - the words that represent the ordered indices of all matrices produced in later calculation
+        :rtype: list
         :return: self.coll_df
         :rtype: Numpy memmap
         """
@@ -252,8 +255,8 @@ class SemPipeline:
         binomial distribution function L(k,n,x) = (x**k)*(1-x)**(n-k).
         Moves the calculations to log-space to deal with floats that are too small for float64.
         :param k:
-        :type k: Pandas Series
-        :param n: total number of co-occurrences in the table
+        :type k: Numpy ndarray
+        :param n:
         :type n: float
         :param x:
         :type x: Numpy ndarray
@@ -277,7 +280,6 @@ class SemPipeline:
         :rtype: Numpy ndarray
         """
         C12 = self.coll_df[row]
-        # C1 will be a scalar value used for all calculations on that row
         C1 = np.sum(C12)
         # P1 is ratio of single co-occurrence values to the total co-occurrences for that row
         P1 = C12 / C1
@@ -518,25 +520,34 @@ class SemPipeline:
 
     def cs_loop(self, dest_file):
         """
-            runs the loops over the rows in self.stat_df
-            :return:
-            :rtype:
-            """
-        #df = np.memmap(dest_file, dtype='float', mode='w+', shape=(ind, ind))
-        #stat_df = np.memmap(stat_file, dtype='float', mode='w+',
-        #                    shape=(ind, ind))
+        divides self.stat_df into chunks more easily handled in memory
+        (the number of rows use at a time is determined in the step variable)
+        and then loops through all chunk combinations
+        :param dest_file: the file name to which to save the CS data
+        :type dest_file: str
+        :return: cosine similarity matrix
+        :rtype: np.memmap
+        """
         step = 5000
         ind = len(self.ind)
         steps = []
-        steps2 = []
-        x = 0
+        # steps2 = []
+        x = 5000  # 0
         while x < ind:
-            steps.append(x)
-            steps2.append(x)
+            steps.append((x - 5000, x))
+            # steps2.append(x)
             x += step
         steps.append(ind)
-        steps2.append(ind)
-        for df_ind in steps:
+        # steps2.append(ind)
+        count = 1
+        for i1, i2 in combinations(steps, 2):
+            part1 = self.stat_df[i1[0]:i1[1]]
+            part2 = self.stat_df[i2[0]:i2[1]]
+            self.CS_df[i1[0]:i1[1], i2[0]:i2[1]] = self.CS_df[i2[0]:i2[1], i1[0]:i1[1]] = 1- pairwise_distances(part1, part2, metric='cosine')
+            print('{0}% done'.format((count / len(combinations(steps, 2)) * 100)))
+            del self.CS_df
+            self.CS_df = np.memmap(dest_file, dtype='float', mode='r+', shape=(ind, ind))
+        '''for df_ind in steps:
             part1 = self.stat_df[df_ind:min(df_ind + step, ind)]
             for df_ind2 in steps2:
                 part2 = self.stat_df[df_ind2:min(df_ind2 + step, ind)]
@@ -544,12 +555,13 @@ class SemPipeline:
             print('{0}% done'.format((df_ind / len(self.ind) * 100)))
             del self.CS_df
             self.CS_df = np.memmap(dest_file, dtype='float', mode='r+', shape=(ind, ind))
+        '''
 
     def stat_eval(self):
         """
         guides the statistical significance calculations required by the parameters given in self.__init__
-        :return:
-        :rtype:
+        :return: None
+        :rtype: None
         """
         print('Starting %s calculations for %s for '
               'w=%s, lem=%s, weighted=%s at %s' %
@@ -584,8 +596,8 @@ class SemPipeline:
         This function will be removed in future versions.
         :param algorithm: which significance matrix to use (PPMI or LL)
         :type algorithm: str
-        :return:
-        :rtype:
+        :return: matrix transformed with SVD according to Caron's exponent
+        :rtype: np.memmap
         """
         print('Starting SVD calculations for %s for '
               'w=%s, lem=%s, weighted=%s at %s' %
@@ -679,8 +691,8 @@ class SemPipeline:
     def runPipeline(self):
         """
         Guides the whole Pipeline process using the params given in self.__init__
-        :return:
-        :rtype:
+        :return: None
+        :rtype: None
         """
         if self.dir == None:
             self.file_chooser()
@@ -718,11 +730,12 @@ class ParamTester(SemPipeline):
         """
         runs parameter testing for the corpus in question
         the testing parameters are specified in the self.RunTests function
-        :param c: the number of cores to use in the co-occurrence calculations (will be removed in future versions)
+        :param c: the number of cores to use in the co-occurrence calculations
         :type c: int
-        :param jobs: the number of jobs to use in the cosine similarity calcuations
+        :param jobs: the number of cores to use in the cosine similarity calculations
         :type jobs: int
-        :param min_count: the minimum occurrence count. Words below this count will not be counted
+        :param min_count: the minimum occurrence count. Words below this count will not be counted.
+            The purpose here is for memory management. My tests have shown that using all words produces better results.
         :type min_count: int
         :param orig: the directory path for the .txt files that make up the corpus
         :type orig: str
@@ -740,8 +753,10 @@ class ParamTester(SemPipeline):
     def cooc_counter(self, files):
         """
         counts the number of times each word co-occurs with each other word
+        :return: self.ind - the words that represent the ordered indices of all matrices produced in later calculation
+        :rtype: list
         :return: self.coll_df
-        :rtype: Pandas sparse DataFrame
+        :rtype: np.memmap
         """
         counts = Counter()
         if self.occ_dict:
@@ -795,9 +810,9 @@ class ParamTester(SemPipeline):
         guides the process of Log-likelihood calculations for a single row
         :param row: the index of the row in the table to be calculated
         :type row: int
-        :param C2: number of co-occurrences for each row of the table
+        :param C2: number of co-occurrences for each row of the table (1-D array)
         :type C2: Numpy ndarray
-        :param P: ratio of co-occurrences per row to total co-occurrences in the table
+        :param P: ratio of co-occurrences per row to total co-occurrences in the table (1-D array)
         :type P: Numpy ndarray
         :param N: total number of co-occurrences in the table
         :type N: float
@@ -805,13 +820,12 @@ class ParamTester(SemPipeline):
         :rtype: Numpy ndarray
         """
         C12 = self.coll_df[row]
-        # value for C1 will be a scalar value used for all calculations on
-        #that row
         C1 = np.sum(C12)
-        #The values for P1 and P2 will be the same for the whole row
-        #P1, P2 = p_calc(C1, C2, C12, N)
+        # P1 is the ratio of single co-occurrence values to the total co-occurrences for that row
         P1 = C12 / C1
-        #values for p2
+        # P2 is the ratio of total co-occurrences for a word minus the co-occurrences
+        # with the word in question to the total number of co-occurrences in
+        # the table minus the total co-occurrences for the row.
         P2 = (C2 - C12) / (N - C1)
 
         LL1 = self.log_space_L(C12, C1, P)
@@ -862,6 +876,7 @@ class ParamTester(SemPipeline):
             LL_df[i] = self.log_like(i, c2, p, n)
             if i % 5000 == 0:
                 print('{0}% done'.format((i / len(self.ind) * 100)))
+                # deleting LL_df periodically clears the memory of rows that have already been calculated
                 del LL_df
                 LL_df = np.memmap(
                     '{}/{}_{}_{}_LL_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),
@@ -883,12 +898,10 @@ class ParamTester(SemPipeline):
         :type P2: Numpy ndarray
         :param N: total co-occurrences in the table
         :type N: float
-        :return: PPMI values for a row in the table
+        :return: PPMI values for a row in the table (1-D array)
         :rtype: Numpy ndarray
         """
         C12 = self.coll_df[row]
-        # value for C1 will be a scalar value used for all calculations on
-        #that row
         C1 = np.sum(C12)
         P1 = C1 / N
         P12 = C12 / N

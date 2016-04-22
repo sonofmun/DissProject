@@ -18,6 +18,13 @@ sys.setrecursionlimit(50000)
 
 class CatSim:
     def __init__(self):
+        """
+        Calculates similarity of words within Louw-Nida semantic subdomains
+        based on pre-calculated matrices of similarity results. See sub-classes
+        for more information
+        :return:
+        :rtype:
+        """
         try:
             self.ln = pd.read_pickle('Data/Chapter_2/LN_Cat_Dict.pickle')
         except FileNotFoundError:
@@ -132,6 +139,17 @@ class CatSim:
                                   'CatSimSVD).')
 
     def SimCalc(self, w):
+        """
+        loops through each Louw-Nida sub-domain and calculates the individual
+        similarity of each word with the other words.
+        :param w: the window size being calculated
+        :type w: int
+        :return: self.scores - a dictionary with keys for each window size,
+            sub-keys for each Louw-Nida sub-domain, and values as Pandas
+            DataFrames with the scores for the words in each sub-domain with
+            each other
+        :rtype: dict
+        """
         self.scores[w] = {}
         try:
             mean, std = np.mean(self.df.values), np.std(self.df.values)
@@ -188,6 +206,16 @@ class CatSim:
         print('Total words: {0}'.format(self.words_no_93))
 
     def AveCalc(self, w):
+        """
+        calculates the average cosine-similarity score and the z-score of this
+        score for each window size, returning a single score for each window
+        :param w: the window size under investigation
+        :type w: int
+        :return: self.averages - the average for all words for each window size
+        :rtype: dict
+        :return: self.ave_no_93 - the average for all words not in domain 93 (proper names)
+        :rtype: dict
+        """
         total_std = 0
         total_mean = 0
         total_no_93_std = 0
@@ -211,6 +239,19 @@ class CatSim:
                                   'CatSimSVD).')
 
     def WriteLines(self, save_file, w_size, svd_exp, lems):
+        """
+        writes the lines of the output csv files
+        :param save_file: the file path and name for the output file
+        :type save_file: str
+        :param w_size: the window size under investigation
+        :type w_size: int
+        :param svd_exp: Caron's exponent under investigation (1.0 for none)
+        :type svd_exp: float
+        :param lems: whether the data is based on a lemmatized corpus or not
+        :type lems: bool
+        :return: a file with the scores for every words in its categories
+        :rtype: tab-delimited csv file
+        """
         with open(save_file, mode='w', encoding='utf-8') as file:
             file.write(
                 'Scores for Window Size {0}, SVD Exponent {1}\n'.format(w_size,
@@ -260,6 +301,11 @@ class CatSim:
                         )
 
     def CatSimPipe(self):
+        """
+        convenience function to guide the calculation and output process for all window sizes
+        :return: None
+        :rtype: None
+        """
         for w in self.rng:
             self.LoadDF(w)
             self.SimCalc(w)
@@ -273,9 +319,48 @@ class CatSim:
 
 
 class CatSimWin(CatSim):
+
     def __init__(self, algo, rng, lems=False, CS_dir=None, dest_dir=None,
                  sim_algo=None, corpus=('SBL_GNT_books', 1, 1.0, True),
                  lem_file=None):
+        """
+        calculates the average similarity and the z-score of this similarity
+        for all words that share the same semantic sub-domains in the Louw-Nida
+        lexicon
+        :param algo: the significance algorithm used to produce the cosine-similarity matrices used
+        :type algo: str
+        :param rng: the individual window sizes used for the discrete calculations
+        :type rng: list
+        :param lems: whether the input matrices were calculated with lemmatized texts or not
+        :type lems: bool
+        :param CS_dir: the directory path where the cosine-similarity matrices are located
+        :type CS_dir: str
+        :param dest_dir: the diretory path to save the results
+        :type dest_dir: str
+        :param sim_algo: which similarity algorithm was used in the calculations
+        :type sim_algo: str
+        :param corpus: tuple with the name of the corpus (str), the minimum number
+            of occurrences used (int), Caron's svd exponent (float - 1.0 if none was used),
+            and whether stop words were included (bool)
+        :type corpus: tuple
+        :param lem_file: the file path and filename of the occurrence dictionary
+            pickle that shows the number of time each word occurs in the corpus
+        :type lem_file: str
+        :return: LN_Word_Cat_Scores pickle - the individual CS and z-score for every word in every category in which it is listed
+        :rtype: pickled dictionary of pandas DataFrames
+        :return: LN_Word_Cat_Scores CSV - the individual CS and z-score for every word in every category in which it is listed
+        :rtype: csv file
+        :return: LN_Window_Averages pickle - dictionary of mean CS score and z-score for each window size tested
+        :rtype: pickled dictionary
+        :return: LN_Window_Averages csv - mean CS score and z-score for each window size tested
+        :rtype: csv file
+        :return: LN_Window_Averages_no_93 pickle - dictionary of mean CS score and z-score for each window size tested
+            excluding Louw-Nida category 93 (proper names)
+        :rtype: pickled dictionary
+        :return: LN_Window_Averages_no_93 csv - mean CS score and z-score for each window size tested
+            excluding Louw-Nida category 93 (proper names)
+        :rtype: csv file
+        """
         try:
             self.ln = pd.read_pickle('Data/Chapter_2/LN_Cat_Dict.pickle')
         except FileNotFoundError:
@@ -296,6 +381,9 @@ class CatSimWin(CatSim):
         self.lems = lems
         self.lem_file = lem_file
         self.sim_algo = sim_algo
+        # self.prob_word_replace are the words that have different unicode representations
+        # in the Louw-Nida data and the corpus data. The key is the word as it is in
+        # Louw-Nida, the value as it is in the corpus.
         self.prob_word_replace = {'περιΐστημι': 'περιΐστημι',
                                   'προΐστημι': 'προΐστημι',
                                   'παρατεινω': 'παρατείνω',
@@ -393,6 +481,15 @@ class CatSimWin(CatSim):
                                   'Ἀβραάμ': 'Ἀβραάμ'.lower()}
 
     def LoadDF(self, w):
+        """
+        loads the appropriate cosine-similarity matrix for the window size being calculated
+        :param w: window size under investigation
+        :type w: int
+        :return: self.ind - the list of words in the corpus
+        :rtype: list
+        :return: self.df - the cosine-similarity matrix
+        :rtype: Pandas DataFrame or np.memmap (DataFrames will be phased out in future versions)
+        """
         file = '/media/matt/Data/DissProject/Data/SBL_GNT_books/{0}/CS_{1}_{0}_SBL_GNT_books_lems=True_min_occ=None_SVD_exp=1.hd5'.format(
             str(w), self.algo)
         try:
@@ -413,6 +510,23 @@ class CatSimWin(CatSim):
                                 shape=(len(self.ind), len(self.ind)))
 
     def WriteFiles(self):
+        """
+        writes the results of the similarity calculations to 6 individual files
+        :return: LN_Word_Cat_Scores pickle - the individual CS and z-score for every word in every category in which it is listed
+        :rtype: pickled dictionary of pandas DataFrames
+        :return: LN_Word_Cat_Scores CSV - the individual CS and z-score for every word in every category in which it is listed
+        :rtype: csv file
+        :return: LN_Window_Averages pickle - dictionary of mean CS score and z-score for each window size tested
+        :rtype: pickled dictionary
+        :return: LN_Window_Averages csv - mean CS score and z-score for each window size tested
+        :rtype: csv file
+        :return: LN_Window_Averages_no_93 pickle - dictionary of mean CS score and z-score for each window size tested
+            excluding Louw-Nida category 93 (proper names)
+        :rtype: pickled dictionary
+        :return: LN_Window_Averages_no_93 csv - mean CS score and z-score for each window size tested
+            excluding Louw-Nida category 93 (proper names)
+        :rtype: csv file
+        """
         with open(
                 '{2}/{4}_LN_Word_Cat_Scores_{0}_rng={1}_lems={3}_weighted={5}.pickle'.format(
                         self.algo, self.rng, self.dest_dir, self.lems,
