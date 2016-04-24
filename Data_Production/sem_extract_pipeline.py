@@ -780,9 +780,15 @@ class ParamTester(SemPipeline):
             steps = []
             for i in range(self.c):
                 steps.append((step * i, min(step * (i + 1), len(words))))
-            self.res = group(
+            '''self.res = group(
                 counter.s(self.weighted, self.w, words, limits) for limits in
                 steps)().get()
+            '''
+            self.res = []
+            with Pool(processes=self.c) as pool:
+                for limits in steps:
+                    res = pool.apply_async(counter, args=(self.weighted, self.w, words, limits))
+                    self.res.append(res.get())
             #since the counter task returns Counter objects, the update method
             #below adds instead of replacing the values
             for r in self.res:
