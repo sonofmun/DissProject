@@ -21,24 +21,24 @@ import numpy as np
 try:
     from Data_Production.TK_files import tk_control
 except ImportError:
-    print(
-        'Tkinter cannot be used on this Python installation.\nPlease designate a list of files in the files variable.')
+    print('Tkinter cannot be used on this Python installation.\nPlease designate a list of files in the files variable.')
 from sklearn.metrics.pairwise import pairwise_distances
 from glob import glob
-from celery import group
-#from proj.tasks import counter, svd_calc
+# from celery import group
+# from proj.tasks import counter, svd_calc
 from itertools import combinations_with_replacement
 from pickle import dump
 from multiprocessing import Pool
 from Data_Production.multi_tasks import counter
+import argparse
 
 
 class SemPipeline:
     def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI',
-                 sim_algo='cosine', svd=1, files=None, c=8, occ_dict=None,
+                 sim_algo='cosine', files=None, c=8, occ_dict=None,
                  min_count=1, jobs=1, stops=True):
-        """
-        This class produces matrices representing cooccurrence counts, statistical significance, and similarity data for a corpus
+        """ This class produces matrices representing cooccurrence counts, statistical significance, and similarity data for a corpus
+
         :param win_size: context window size
         :type win_size: int
         :param lemmata: whether to use word lemmata
@@ -49,8 +49,6 @@ class SemPipeline:
         :type algo: str
         :param sim_algo: the similarity algorithm to use. 'CS' is implemented
         :type sim_algo: str
-        :param svd: the SVD exponent to use (will be removed in the future)
-        :type svd: float
         :param files: the directory in which the individual .txt files are held
         :type files: str
         :param c: the number of cores to use in self.cooc_counter (will be removed in the future)
@@ -63,8 +61,47 @@ class SemPipeline:
         :type jobs: int
         :param stops: whether to include stop words or not (True means to include them)
         :type stops: bool
-        :return:
-        :rtype:
+
+        :ivar w: the context window size
+        :type w: int
+        :ivar lems: whether a lemmatized or unlemmatized text will be used
+        :type lems: bool
+        :ivar weighted: whether a weighted or unweighted context window will be used (True == weighted)
+        :type weighted: bool
+        :ivar algo: which significance algorithm will be used (PPMI or LL)
+        :type algo: str
+        :ivar sim_algo: the similarity algorithm to be used
+        :type sim_algo: str
+        :ivar dir: the directory path in which the texts are located
+        :type dir: str
+        :ivar c: the number of cores to use during co-occurrence counting
+        :type c: int
+        :ivar occ_dict: the location for the dictionary representing word counts for every word
+        :type occ_dict: str
+        :ivar min_count: the minimum threshold of occurrences for the words to be calculated
+        :type min_count: int
+        :ivar jobs: the value to be used for n_jobs in the cosine similarity calculations
+        :type jobs: int
+        :ivar stops: a list of stop-words to ignore during the calculations
+        :type stops: (str)
+        :ivar ind: the indices for the rows and columns of the matrix (i.e., the words) - filled in self.cooc_counter
+        :type ind: [str]
+        :ivar cols: the length of self.ind - filled in self.cooc_counter
+        :ivar cols: int
+        :ivar coll_df: transformed into numpy.memmap and filled in self.cooc_counter
+        :type coll_df: tuple
+        :ivar LL_df: transformed into numpy.memmap and filled in self.LL
+        :type LL_df: tuple
+        :ivar PPMI_df: transformed into numpy.memmap and filled in self.PPMI
+        :type PPMI_df: tuple
+        :ivar CS_df: transformed into numpy.memmap and filled in self.CS
+        :type CS_df: tuple
+        :ivar stat_df: filled with either self.PPMI_df or self.LL_df in self.CS
+        :type stat_df: tuple
+        :ivar dest: the destination directory for all files - filled in self.makeFileNames
+        :type dest: str
+        :ivar corpus: the name of the corpus under investigation - filled in self.makeFileNames
+        :type corpus: str
         """
         self.w = win_size
         self.lems = lemmata
@@ -81,7 +118,6 @@ class SemPipeline:
         if self.algo not in ['PPMI', 'LL', 'both']:
             print(
                 'The only accepted values for "algo" are "PPMI", "LL", or "both".')
-        self.svd = svd
         self.dir = files
         self.c = c
         if occ_dict == 'None':
@@ -93,8 +129,8 @@ class SemPipeline:
         else:
             self.min_count = min_count
         self.jobs = jobs
-        if stops == False:
-            self.stops = ['μή', 'ἑαυτοῦ', 'ἄν', 'ἀλλ’', 'ἀλλά', 'ἄλλος', 'ἀπό',
+        if not stops:
+            self.stops = ('μή', 'ἑαυτοῦ', 'ἄν', 'ἀλλ’', 'ἀλλά', 'ἄλλος', 'ἀπό',
                           'ἄρα', 'αὐτός', 'δ’', 'δέ', 'δή', 'διά', 'δαί',
                           'δαίς', 'ἔτι', 'ἐγώ', 'ἐκ', 'ἐμός', 'ἐν', 'ἐπί',
                           'εἰ', 'εἰμί', 'εἴμι', 'εἰς', 'γάρ', 'γε', 'γα^', 'ἡ',
@@ -105,43 +141,47 @@ class SemPipeline:
                           'σύ', 'σύν', 'τά', 'τε', 'τήν', 'τῆς', 'τῇ', 'τι',
                           'τί', 'τις', 'τίς', 'τό', 'τοί', 'τοιοῦτος', 'τόν',
                           'τούς', 'τοῦ', 'τῶν', 'τῷ', 'ὑμός', 'ὑπέρ', 'ὑπό',
-                          'ὡς', 'ὦ', 'ὥστε', 'ἐάν', 'παρά', 'σός']
+                          'ὡς', 'ὦ', 'ὥστε', 'ἐάν', 'παρά', 'σός')
         else:
-            self.stops = []
+            self.stops = ()
+
+        # the following ivars are filled later in the class
+        self.ind = []
+        self.cols = 0
+        self.coll_df = ()
+        self.LL_df = ()
+        self.PPMI_df = ()
+        self.CS_df = ()
+        self.stat_df = ()
+        self.dest = ''
+        self.corpus = ''
 
     def file_chooser(self):
-        """
-        uses tkinter.filedialog to fill self.dir if files=None
-        :return:
-        :rtype:
-        """
-        if self.dir == None:
-            self.dir = tk_control("askdirectory(title='In which directory are the XML file(s) would you like to analyze?')")
+        """ Uses tkinter.filedialog, as implemented in the tk_control class to fill self.dir if files=None
 
-    def word_extract(self):
         """
-        extracts a list of words from self.t
+        self.dir = tk_control("askdirectory(title='In which directory are the XML file(s) would you like to analyze?')")
+
+    def word_extract(self, text, pattern, stops=()):
+        """ Extracts a list of words from self.t
+
         :return: list of words
         :rtype: list
         """
         words = []
-        if self.lems:
-            pattern = re.compile(r'.+?lem="([^"]*).*')
-        else:
-            pattern = re.compile(r'.+?>([^<]*).*')
-        for line in self.t:
-            word = re.sub(pattern, r'\1', line).lower()
-            if word != '' and word not in self.stops:
+        for line in text:
+            word = re.sub(pattern, r'\1', line)
+            if word != '' and word not in stops:
                 words.append(word)
         return words
 
     def cooc_counter(self):
-        """
-        counts the number of times each word co-occurs with each other word
-        :return: self.ind - the words that represent the ordered indices of all matrices produced in later calculation
-        :rtype: list
-        :return: self.coll_df
-        :rtype: Numpy memmap
+        """ Counts the number of times each word co-occurs with each other word
+
+        :ivar ind: the words that represent the ordered indices of all matrices produced in later calculation
+        :type ind: [int]
+        :ivar coll_df: self.coll_df
+        :type coll_df: numpy.memmap
         """
         cooc_dest = os.path.join(self.dest,
                                  '_'.join(['COOC',
@@ -154,6 +194,7 @@ class SemPipeline:
                                                bool(self.stops)),
                                            'weighted={}'.format(
                                                self.weighted)]) + '.dat')
+        # Check to see if a cooccurrence file already exists, if so, exit the method
         if os.path.isfile(cooc_dest):
             self.ind = pd.read_pickle(
                 '{0}/{1}_IndexList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(
@@ -170,17 +211,24 @@ class SemPipeline:
             self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r',
                                      shape=(len(self.ind), self.cols))
             return
+
+        # Initialize local variables
         counts = Counter()
+        if self.lems:
+            pattern = re.compile(r'.+?lem="([^"]*).*')
+        else:
+            pattern = re.compile(r'.+?>([^<]*).*')
         if self.occ_dict:
             occs = pd.read_pickle(self.occ_dict)
             min_lems = set([w for w in occs if occs[w] < self.min_count])
             del occs
         else:
             min_lems = set()
+
+        # Compute co-occurrence counts for each file in self.dir
         for file in glob('{0}/*.txt'.format(self.dir)):
             with open(file) as f:
-                self.t = f.read().split('\n')
-            words = self.word_extract()
+                words = self.word_extract(f.read().lower().split('\n'), pattern, self.stops)
             step = ceil(len(words) / self.c)
             steps = []
             for i in range(self.c):
@@ -189,99 +237,94 @@ class SemPipeline:
                 counter.s(self.weighted, self.w, words, limits) for limits in
                 steps)().get()
             '''
-            self.res = []
+            res = []
             with Pool(processes=self.c) as pool:
                 for limits in steps:
-                    res = pool.apply_async(counter, args=(self.weighted, self.w, words, limits))
-                    self.res.append(res.get())
+                    results = pool.apply_async(counter, args=(self.weighted, self.w, words, limits))
+                    res.append(results.get())
             #since the counter task returns Counter objects, the update method
             #below adds instead of replacing the values
-            for r in self.res:
+            for r in res:
                 for key in r.keys():
                     if key not in min_lems:
                         if key in counts.keys():
                             counts[key].update(r[key])
                         else:
                             counts[key] = r[key]
+
+        # Fill the ivars that come from the co-occurrence counts
         self.ind = list(counts.keys())
-        try:
-            assert (self.col_ind)
-        except AttributeError:
-            self.col_ind = self.ind
-        self.cols = len(self.col_ind)
-        with open(
-                '{0}/{1}_IndexList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(
-                        self.dest, self.corpus, self.w, self.lems,
-                        self.min_count, bool(self.stops)), mode='wb') as f:
-            dump(self.ind, f)
-        with open(
-                '{0}/{1}_ColumnList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(
-                        self.dest, self.corpus, self.w, self.lems,
-                        self.min_count, bool(self.stops)), mode='wb') as f:
-            dump(self.col_ind, f)
-        print('Now writing cooccurrence file at {0}'.format(
-            datetime.datetime.now().time().isoformat()))
-        self.coll_df = np.memmap(cooc_dest, dtype='float', mode='w+',
-                                 shape=(len(self.ind), len(self.col_ind)))
+        self.cols = len(self.ind)
+
+        # Write the counts dictionary to a numpy.memmap file
+        print('Now writing cooccurrence file at {0}'.format(datetime.datetime.now().time().isoformat()))
+        self.coll_df = np.memmap(cooc_dest, dtype='float', mode='w+', shape=(self.cols, self.cols))
         for i, w in enumerate(self.ind):
-            s = pd.Series(counts[w], index=self.col_ind,
+            s = pd.Series(counts[w], index=self.ind,
                           dtype=np.float64).fillna(0)
             self.coll_df[i] = s.values
             if i % 5000 == 0:
-                print('{0}% done'.format((i / len(self.ind) * 100)))
+                print('{0}% done'.format((i / self.cols * 100)))
                 del self.coll_df
                 self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r+',
                                          shape=(
-                                             len(self.ind), len(self.col_ind)))
+                                             self.cols, self.cols))
+
+        # Re-open self.coll_df as read-only
         del self.coll_df
-        self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r',
-                                 shape=(len(self.ind), len(self.col_ind)))
+        self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r', shape=(self.cols, self.cols))
+
+        # Save the index list and the column list
+        with open('{0}/{1}_IndexList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count, bool(self.stops)), mode='wb') as f:
+            dump(self.ind, f)
+        with open('{0}/{1}_ColumnList_w={2}_lems={3}_min_occs={4}_no_stops={5}.pickle'.format(self.dest, self.corpus, self.w, self.lems, self.min_count, bool(self.stops)), mode='wb') as f:
+            dump(self.ind, f)
 
     def log_L(self, k, n, x):
-        """
-        calculates the values for the individual elements of the Log-likelihood equation using the
+        """ Calculates the values for the individual elements of the Log-likelihood equation using the
         binomial distribution function L(k,n,x) = (x**k)*(1-x)**(n-k).
+
         :param k:
-        :type k: Pandas Series
+        :type k: pandas.Series
         :param n:
-        :type n: Numpy ndarray
+        :type n: numpy.ndarray
         :param x:
-        :type x: Numpy ndarray
+        :type x: numpy.ndarray
         :return: Log-likelihood values
-        :rtype: Numpy ndarray
+        :rtype: numpy.ndarray
         """
         return np.log(np.power(np.float64(x), k)
                       * np.power(np.float64(1 - x), n - k))
 
     def log_space_L(self, k, n, x):
-        """
-        calculates the values for the individual elements of the Log-likelihood equation using the
+        """ Calculates the values for the individual elements of the Log-likelihood equation using the
         binomial distribution function L(k,n,x) = (x**k)*(1-x)**(n-k).
         Moves the calculations to log-space to deal with floats that are too small for float64.
+
         :param k:
-        :type k: Numpy ndarray
+        :type k: numpy.ndarray
         :param n:
         :type n: float
         :param x:
-        :type x: Numpy ndarray
+        :type x: numpy.ndarray
         :return: Log-likelihood values
-        :rtype: Numpy ndarray
+        :rtype: numpy.ndarray
         """
         return np.log(x) * (k) + (np.log(1 - x) * (n - k))
 
     def log_like(self, row, C2, P, N):
-        """
-        guides the process of Log-likelihood calculations for a single row
+        """ Guides the process of Log-likelihood calculations for a single row
+
         :param row: the index of the row in the table to be calculated
         :type row: int
         :param C2: number of co-occurrences for each row of the table
-        :type C2: Numpy ndarray
+        :type C2: numpy.ndarray
         :param P: ratio of co-occurrences per row to total co-occurrences in the table
-        :type P: Numpy ndarray
+        :type P: numpy.ndarray
         :param N: total number of co-occurrences in the table
         :type N: float
         :return: Log-likelihood values for a single row in the table
-        :rtype: Numpy ndarray
+        :rtype: numpy.ndarray
         """
         C12 = self.coll_df[row]
         C1 = np.sum(C12)
@@ -325,10 +368,10 @@ class SemPipeline:
         return a
 
     def LL(self):
-        """
-        guides the Log-likelihood calculations for the whole matrix
-        :return: self.LL_df
-        :rtype: Numpy memmap
+        """ Guides the Log-likelihood calculations for the whole matrix
+
+        :ivar LL_df: matrix of log-likelihood values
+        :type LL_df: numpy.memmap
         """
         dest_file = os.path.join(self.dest,
                                  '_'.join(['LL',
@@ -341,30 +384,40 @@ class SemPipeline:
                                                bool(self.stops)),
                                            'weighted={}'.format(
                                                self.weighted)]) + '.dat')
+
+        # If a log-likelihood file exists already for these parameters, exit the method
         if os.path.isfile(dest_file):
             self.LL_df = np.memmap(dest_file, dtype='float', mode='r',
-                                   shape=(len(self.ind), self.cols))
+                                   shape=(self.cols, self.cols))
             return
+
+        # Initialize local variables
         n = np.sum(self.coll_df)
         c2 = np.sum(self.coll_df, axis=0)
         p = c2 / n
+
+        # Fill self.LL_df with log-likelihood values
         self.LL_df = np.memmap(dest_file, dtype='float', mode='w+',
-                               shape=(len(self.ind), self.cols))
+                               shape=(self.cols, self.cols))
         for i, w in enumerate(self.ind):
             self.LL_df[i] = self.log_like(i, c2, p, n)
             if i % 5000 == 0:
-                print('{0}% done'.format((i / len(self.ind) * 100)))
+                print('{0}% done'.format((i / self.cols * 100)))
                 del self.LL_df
                 self.LL_df = np.memmap(dest_file, dtype='float', mode='r+',
-                                       shape=(len(self.ind), self.cols))
+                                       shape=(self.cols, self.cols))
+
+        # Change all numpy.nan and numpy.inf values to 0
+        # This is necessary for later calculations that will raise errors for non-finite values
         self.LL_df[np.where(np.isfinite(self.LL_df) == False)] = 0
+
+        # Dump memory and reload self.LL_df as read-only
         del self.LL_df
-        self.LL_df = np.memmap(dest_file, dtype='float', mode='r',
-                               shape=(len(self.ind), self.cols))
+        self.LL_df = np.memmap(dest_file, dtype='float', mode='r', shape=(self.cols, self.cols))
 
     def PMI_calc(self, row, P2, N):
-        """
-        calculates PPMI values for one table row
+        """ Calculates PPMI values for one table row
+
         :param row: index for the word's row in the table
         :type row: int
         :param P2: ratio of co-occurrences per row to total co-occurrences in the table
@@ -387,10 +440,10 @@ class SemPipeline:
         return a
 
     def PPMI(self):
-        """
-        guides the PPMI calculation process for the whole table
-        :return: matrix of PPMI values
-        :rtype: Numpy memmap
+        """ Guides the PPMI calculation process for the whole table
+
+        :ivar PPMI_df: matrix of PPMI values
+        :type PPMI_df: numpy.memmap
         """
         dest_file = os.path.join(self.dest,
                                  '_'.join(['PPMI',
@@ -403,45 +456,54 @@ class SemPipeline:
                                                bool(self.stops)),
                                            'weighted={}'.format(
                                                self.weighted)]) + '.dat')
+
+        # If a PPMI file already exists, exit the method
         if os.path.isfile(dest_file):
             self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r',
-                                     shape=(len(self.ind), self.cols))
+                                     shape=(self.cols, self.cols))
             return
+
+        # Initialize local variables
         n = np.sum(self.coll_df)
         #values for C2
         p2 = np.sum(self.coll_df, axis=0) / n
-        self.PPMI_df = np.memmap(dest_file, dtype='float', mode='w+',
-                                 shape=(len(self.ind), self.cols))
+
+        # Fill self.PPMI_df with values
+        self.PPMI_df = np.memmap(dest_file, dtype='float', mode='w+', shape=(self.cols, self.cols))
         for i, w in enumerate(self.ind):
             self.PPMI_df[i] = self.PMI_calc(i, p2, n)
             if i % 5000 == 0:
-                print('{0}% done'.format((i / len(self.ind) * 100)))
+                print('{0}% done'.format((i / self.cols * 100)))
                 del self.PPMI_df
                 self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r+',
-                                         shape=(len(self.ind), self.cols))
+                                         shape=(self.cols, self.cols))
+
+        # Change all numpy.nan and numpy.inf values to 0
+        # This is necessary for later calculations that will raise errors for non-finite values
         self.PPMI_df[np.where(np.isfinite(self.PPMI_df) == False)] = 0
+
+        # Dump memory and reload self.PPMI_df as read-only
         del self.PPMI_df
         self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r',
-                                 shape=(len(self.ind), self.cols))
+                                 shape=(self.cols, self.cols))
 
-    def CS(self, algorithm, e):
-        """
-        calculates the cosine similarity of every matrix row with every other row
+    def CS(self, algorithm):
+        """ Calculates the cosine similarity of every matrix row with every other row
+
         :param algorithm: which algorithm (PPMI or LL) is being tested
         :type algorithm: str
         :param e: SVD exponent
         :type e: float
-        :return: matrix of cosine similarity values
-        :rtype: Numpy memmap
+        :ivar CS_df: matrix of cosine similarity values
+        :type CS_df: numpy.memmap
         """
         print('Starting {} calculations for {} for '
-              'w={}, lem={}, weighted={} svd={} at {}'.format(self.sim_algo,
-                                                              self.corpus,
-                                                              str(self.w),
-                                                              self.lems,
-                                                              self.weighted,
-                                                              e,
-                                                              datetime.datetime.now().time().isoformat()))
+              'w={}, lem={}, weighted={} at {}'.format(self.sim_algo,
+                                                       self.corpus,
+                                                       str(self.w),
+                                                       self.lems,
+                                                       self.weighted,
+                                                       datetime.datetime.now().time().isoformat()))
         dest_file = os.path.join(self.dest,
                                  '_'.join([algorithm,
                                            self.sim_algo,
@@ -450,58 +512,41 @@ class SemPipeline:
                                            self.corpus,
                                            'min_occ={0}'.format(
                                                self.min_count),
-                                           'SVD_exp={0}'.format(str(e)),
                                            'no_stops={0}'.format(
                                                bool(self.stops)),
                                            'weighted={}.dat'.format(
                                                self.weighted)]))
         if os.path.isfile(dest_file):
             return
-        if e == 1:
-            if algorithm == 'PPMI':
-                self.stat_df = self.PPMI_df
-                self.stat_file = os.path.join(self.dest,
-                                 '_'.join(['PPMI',
-                                           str(self.w),
-                                           'lems={0}'.format(self.lems),
-                                           self.corpus,
-                                           'min_occ={0}'.format(
-                                               self.min_count),
-                                           'no_stops={0}'.format(
-                                               bool(self.stops)),
-                                           'weighted={}'.format(
-                                               self.weighted)]) + '.dat')
-            elif algorithm == 'LL':
-                self.stat_df = self.LL_df
-                self.stat_file = os.path.join(self.dest,
-                                 '_'.join(['LL',
-                                           str(self.w),
-                                           'lems={0}'.format(self.lems),
-                                           self.corpus,
-                                           'min_occ={0}'.format(
-                                               self.min_count),
-                                           'no_stops={0}'.format(
-                                               bool(self.stops)),
-                                           'weighted={}'.format(
-                                               self.weighted)]) + '.dat')
-        else:
-            orig = os.path.join(self.dest,
-                                '_'.join([algorithm,
-                                          'SVD',
-                                          str(self.w),
-                                          'lems={0}'.format(self.lems),
-                                          self.corpus,
-                                          'min_occ={0}'.format(self.min_count),
-                                          'SVD_exp={0}'.format(str(e)),
-                                          'no_stops={0}'.format(
-                                              bool(self.stops)),
-                                          'weighted={}.dat'.format(
-                                              self.weighted)]))
-            self.stat_df = np.memmap(orig, dtype='float', mode='r',
-                                     shape=(len(self.ind), self.cols))
+        if algorithm == 'PPMI':
+            self.stat_df = self.PPMI_df
+            self.stat_file = os.path.join(self.dest,
+                                          '_'.join(
+                                              ['PPMI',
+                                               str(self.w),
+                                               'lems={0}'.format(self.lems),
+                                               self.corpus,
+                                               'min_occ={0}'.format(self.min_count),
+                                               'no_stops={0}'.format(bool(self.stops)),
+                                               'weighted={}'.format(self.weighted)]
+                                          ) + '.dat')
+        elif algorithm == 'LL':
+            self.stat_df = self.LL_df
+            self.stat_file = os.path.join(self.dest,
+                                          '_'.join(
+                                              ['LL',
+                                               str(self.w),
+                                               'lems={0}'.format(self.lems),
+                                               self.corpus,
+                                               'min_occ={0}'.format(self.min_count),
+                                               'no_stops={0}'.format(bool(self.stops)),
+                                               'weighted={}'.format(self.weighted)]
+                                          ) + '.dat')
+
         self.CS_df = np.memmap(dest_file, dtype='float', mode='w+',
-                               shape=(len(self.ind), len(self.ind)))
-        '''if self.sim_algo == 'cosine':
+                               shape=(self.cols, self.cols))
+        '''
+        if self.sim_algo == 'cosine':
             self.CS_df[:] = 1 - pairwise_distances(self.stat_df,
                                                    metric=self.sim_algo,
                                                    n_jobs=self.jobs)
@@ -512,8 +557,7 @@ class SemPipeline:
         '''
         self.cs_loop(dest_file)
         del self.CS_df
-        self.CS_df = np.memmap(dest_file, dtype='float', mode='r',
-                               shape=(len(self.ind), len(self.ind)))
+        self.CS_df = np.memmap(dest_file, dtype='float', mode='r', shape=(self.cols, self.cols))
         print('Finished with {} calculations for {} for '
               'w={}, lem={}, weighted={} at {}'.format(self.sim_algo,
                                                        self.corpus,
@@ -523,27 +567,23 @@ class SemPipeline:
                                                        datetime.datetime.now().time().isoformat()))
 
     def cs_loop(self, dest_file):
-        """
-        divides self.stat_df into chunks more easily handled in memory
+        """ Divides self.stat_df into chunks more easily handled in memory
         (the number of rows use at a time is determined in the step variable)
         and then loops through all chunk combinations
+
         :param dest_file: the file name to which to save the CS data
         :type dest_file: str
-        :return: cosine similarity matrix
-        :rtype: np.memmap
         """
         step = 5000
-        ind = len(self.ind)
+        ind = self.cols
         steps = []
-        # steps2 = []
-        x = step  # 0
+        x = step
         while x < ind:
             steps.append((x - step, x))
-            # steps2.append(x)
             x += step
         steps.append((steps[-1][-1], ind))
-        # steps2.append(ind)
         last_ind = steps[0]
+
         for i1, i2 in combinations_with_replacement(steps, 2):
             part1 = self.stat_df[i1[0]:i1[1]]
             part2 = self.stat_df[i2[0]:i2[1]]
@@ -559,16 +599,14 @@ class SemPipeline:
             for df_ind2 in steps2:
                 part2 = self.stat_df[df_ind2:min(df_ind2 + step, ind)]
                 self.CS_df[df_ind:min(df_ind + step, ind), df_ind2:min(df_ind2 + step, ind)] = 1- pairwise_distances(part1, part2, metric='cosine')
-            print('{0}% done'.format((df_ind / len(self.ind) * 100)))
+            print('{0}% done'.format((df_ind / self.cols * 100)))
             del self.CS_df
             self.CS_df = np.memmap(dest_file, dtype='float', mode='r+', shape=(ind, ind))
         '''
 
     def stat_eval(self):
-        """
-        guides the statistical significance calculations required by the parameters given in self.__init__
-        :return: None
-        :rtype: None
+        """ Guides the statistical significance calculations required by the parameters given in self.__init__
+
         """
         print('Starting %s calculations for %s for '
               'w=%s, lem=%s, weighted=%s at %s' %
@@ -597,96 +635,13 @@ class SemPipeline:
                self.weighted,
                datetime.datetime.now().time().isoformat()))
 
-    def svd_calc(self, algorithm):
-        """
-        calculates the SVD using Caron's exponent
-        This function will be removed in future versions.
-        :param algorithm: which significance matrix to use (PPMI or LL)
-        :type algorithm: str
-        :return: matrix transformed with SVD according to Caron's exponent
-        :rtype: np.memmap
-        """
-        print('Starting SVD calculations for %s for '
-              'w=%s, lem=%s, weighted=%s at %s' %
-              (self.corpus,
-               str(self.w),
-               self.lems,
-               self.weighted,
-               datetime.datetime.now().time().isoformat()))
-        if algorithm == 'PPMI':
-            orig = os.path.join(self.dest,
-                                '_'.join(['PPMI',
-                                          str(self.w),
-                                          'lems={0}'.format(self.lems),
-                                          self.corpus,
-                                          'min_occ={0}'.format(self.min_count),
-                                          'no_stops={0}'.format(
-                                              bool(self.stops)),
-                                          'weighted={}'.format(
-                                              self.weighted)]) + '.dat')
-            pause = group(svd_calc.s(orig, os.path.join(self.dest,
-                                                        '_'.join([algorithm,
-                                                                  'SVD',
-                                                                  str(self.w),
-                                                                  'lems={0}'.format(
-                                                                      self.lems),
-                                                                  self.corpus,
-                                                                  'min_occ={0}'.format(
-                                                                      self.min_count),
-                                                                  'SVD_exp={0}'.format(
-                                                                      str(e)),
-                                                                  'no_stops={0}'.format(
-                                                                      bool(
-                                                                          self.stops)),
-                                                                  'weighted={}.dat'.format(
-                                                                      self.weighted)])),
-                                     e, (len(self.ind), self.cols)) for e in
-                          self.svd)().get()
-        elif algorithm == 'LL':
-            orig = os.path.join(self.dest,
-                                '_'.join(['LL',
-                                          str(self.w),
-                                          'lems={0}'.format(self.lems),
-                                          self.corpus,
-                                          'min_occ={0}'.format(self.min_count),
-                                          'no_stops={0}'.format(
-                                              bool(self.stops)),
-                                          'weighted={}'.format(
-                                              self.weighted)]) + '.dat')
-            pause = group(svd_calc.s(orig, os.path.join(self.dest,
-                                                        '_'.join([algorithm,
-                                                                  'SVD',
-                                                                  str(self.w),
-                                                                  'lems={0}'.format(
-                                                                      self.lems),
-                                                                  self.corpus,
-                                                                  'min_occ={0}'.format(
-                                                                      self.min_count),
-                                                                  'SVD_exp={0}'.format(
-                                                                      str(e)),
-                                                                  'no_stops={0}'.format(
-                                                                      bool(
-                                                                          self.stops)),
-                                                                  'weighted={}.dat'.format(
-                                                                      self.weighted)])),
-                                     e, (len(self.ind), self.cols)) for e in
-                          self.svd)().get()
-        print(pause)
-        print('Finished SVD calculations for %s for '
-              'w=%s, lem=%s, weighted=%s at %s' %
-              (self.corpus,
-               str(self.w),
-               self.lems,
-               self.weighted,
-               datetime.datetime.now().time().isoformat()))
-
     def makeFileNames(self):
-        """
-        constructs the name of the destination directory and creates the directory if needed
-        :return: self.dest
-        :rtype: str
-        :return: self.corpus
-        :rtype: str
+        """ Constructs the name of the destination directory and creates the directory if needed
+
+        :ivar dest: the directory path into which the results will be saved
+        :type dest: str
+        :ivar corpus: the name of the corpus being analyzed
+        :type corpus: str
         """
         self.dest = os.path.join(self.dir, str(self.w))
         try:
@@ -696,12 +651,10 @@ class SemPipeline:
         self.corpus = self.dir.split('/')[-1]
 
     def runPipeline(self):
+        """ Guides the whole Pipeline process using the params given in self.__init__
+
         """
-        Guides the whole Pipeline process using the params given in self.__init__
-        :return: None
-        :rtype: None
-        """
-        if self.dir == None:
+        if not self.dir:
             self.file_chooser()
         self.makeFileNames()
         print('Started analyzing %s at %s' %
@@ -709,34 +662,23 @@ class SemPipeline:
                datetime.datetime.now().time().isoformat()))
         self.cooc_counter()
         self.stat_eval()
-        if type(self.svd) != list:
-            self.svd = [float(self.svd)]
-        if self.svd != [1]:
-            if self.algo == 'both':
-                self.svd_calc('PPMI')
-                self.svd_calc('LL')
-            elif self.algo == 'PPMI':
-                self.svd_calc('PPMI')
-            elif self.algo == 'LL':
-                self.svd_calc('LL')
-        for exp in self.svd:
-            if self.algo == 'both':
-                self.CS('PPMI', exp)
-                self.CS('LL', exp)
-            elif self.algo == 'PPMI':
-                self.CS('PPMI', exp)
-            elif self.algo == 'LL':
-                self.CS('LL', exp)
+        if self.algo == 'both':
+            self.CS('PPMI')
+            self.CS('LL')
+        elif self.algo == 'PPMI':
+            self.CS('PPMI')
+        elif self.algo == 'LL':
+            self.CS('LL')
 
         print('Finished at %s' % (datetime.datetime.now().time().isoformat()))
 
 
 class ParamTester(SemPipeline):
 
-    def __init__(self, c=8, jobs=1, min_count=1, orig=None):
-        """
-        runs parameter testing for the corpus in question
+    def __init__(self, c=8, jobs=1, min_count=1, orig=None, stops=tuple()):
+        """ Runs parameter testing for the corpus in question
         the testing parameters are specified in the self.RunTests function
+
         :param c: the number of cores to use in the co-occurrence calculations
         :type c: int
         :param jobs: the number of cores to use in the cosine similarity calculations
@@ -746,36 +688,70 @@ class ParamTester(SemPipeline):
         :type min_count: int
         :param orig: the directory path for the .txt files that make up the corpus
         :type orig: str
-        :return:
-        :rtype:
+        :param stops: the stops words to be ignored in the calculations
+        :type stops: str]
+
+        :ivar c: the number of cores to use in the co-occurrence calculations
+        :type c: int
+        :ivar stops: list of stop words to ignore during the calculations
+        :type stops: (str)
+        :ivar min_count: the minimum number of occurrences for a word to be used in the calculations
+        :type min_count: int
+        :ivar orig: the directory path for the .txt files that make up the corpus
+        :type orig: str
+        :ivar sim_algo: the similarity algorithm to use in the calculations
+        :type sim_algo: str
+        :ivar ind: the indices for the rows and columns of the matrix (i.e., the words) - filled in self.cooc_counter
+        :type ind: [str]
+        :ivar cols: the length of self.ind - filled in self.cooc_counter
+        :ivar cols: int
+        :ivar coll_df: transformed into numpy.memmap and filled in self.cooc_counter
+        :type coll_df: tuple
+        :ivar LL_df: transformed into numpy.memmap and filled in self.LL
+        :type LL_df: tuple
+        :ivar PPMI_df: transformed into numpy.memmap and filled in self.PPMI
+        :type PPMI_df: tuple
+        :ivar CS_df: transformed into numpy.memmap and filled in self.CS
+        :type CS_df: tuple
+        :ivar stat_df: filled with either self.PPMI_df or self.LL_df in self.CS
+        :type stat_df: tuple
+        :ivar param_dict: filled with the scores for each set of parameters in self.RunTests
+        :type param_dict: dict
         """
         self.c = c
-        self.occ_dict = None
-        self.stops = []
+        self.stops = stops
         self.jobs = jobs
         self.min_count = min_count
         self.orig = orig
         self.sim_algo = 'CS'
 
+        # the following ivars are filled later in the class
+        self.ind = []
+        self.cols = 0
+        self.coll_df = ()
+        self.LL_df = ()
+        self.PPMI_df = ()
+        self.CS_df = ()
+        self.stat_df = ()
+        self.param_dict = {}
+
     def cooc_counter(self, files):
-        """
-        counts the number of times each word co-occurs with each other word
+        """ Counts the number of times each word co-occurs with each other word
+
         :return: self.ind - the words that represent the ordered indices of all matrices produced in later calculation
         :rtype: list
-        :return: self.coll_df
-        :rtype: np.memmap
+        :ivar coll_df: the matrix of cooccurrence counts
+        :type coll_df: numpy.memmap
         """
         counts = Counter()
-        if self.occ_dict:
-            occs = pd.read_pickle(self.occ_dict)
-            min_lems = set([w for w in occs if occs[w] < self.min_count])
-            del occs
+        min_lems = set()
+        if self.lems:
+            pattern = re.compile(r'.+?lem="([^"]*).*')
         else:
-            min_lems = set()
+            pattern = re.compile(r'.+?>([^<]*).*')
         for file in files:
             with open(file) as f:
-                self.t = f.read().split('\n')
-            words = self.word_extract()
+                words = self.word_extract(f.read().lower().split('\n'), pattern)
             step = ceil(len(words) / self.c)
             steps = []
             for i in range(self.c):
@@ -784,14 +760,14 @@ class ParamTester(SemPipeline):
                 counter.s(self.weighted, self.w, words, limits) for limits in
                 steps)().get()
             '''
-            self.res = []
+            res = []
             with Pool(processes=self.c) as pool:
                 for limits in steps:
-                    res = pool.apply_async(counter, args=(self.weighted, self.w, words, limits))
-                    self.res.append(res.get())
-            #since the counter task returns Counter objects, the update method
-            #below adds instead of replacing the values
-            for r in self.res:
+                    results = pool.apply_async(counter, args=(self.weighted, self.w, words, limits))
+                    res.append(results.get())
+            # since the counter task returns Counter objects, the update method
+            # below adds instead of replacing the values
+            for r in res:
                 for key in r.keys():
                     if key not in min_lems:
                         if key in counts.keys():
@@ -799,38 +775,37 @@ class ParamTester(SemPipeline):
                         else:
                             counts[key] = r[key]
         self.ind = list(counts.keys())
+        self.cols = len(self.ind)
         cooc_dest = '{}/{}_{}_{}_coll_df.dat'.format(self.orig, self.w, self.weighted, self.lems)
         self.coll_df = np.memmap(cooc_dest, dtype='float', mode='w+',
-                                 shape=(len(self.ind), len(self.ind)))
+                                 shape=(self.cols, self.cols))
         for i, w in enumerate(self.ind):
             s = pd.Series(counts[w], index=self.ind,
                           dtype=np.float64).fillna(0)
             self.coll_df[i] = s.values
             if i % 5000 == 0:
-                print('{0}% done'.format((i / len(self.ind) * 100)))
+                print('{0}% done'.format((i / self.cols * 100)))
                 del self.coll_df
                 self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r+',
                                          shape=(
-                                             len(self.ind), len(self.ind)))
+                                             self.cols, self.cols))
         del self.coll_df
         self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r',
-                                 shape=(len(self.ind), len(self.ind)))
-        #return pd.SparseDataFrame.from_dict(counts, orient='index',
-        #                                   dtype=np.float64).fillna(0)
+                                 shape=(self.cols, self.cols))
 
     def log_like(self, row, C2, P, N):
-        """
-        guides the process of Log-likelihood calculations for a single row
+        """ Guides the process of Log-likelihood calculations for a single row
+
         :param row: the index of the row in the table to be calculated
         :type row: int
         :param C2: number of co-occurrences for each row of the table (1-D array)
-        :type C2: Numpy ndarray
+        :type C2: numpy.ndarray
         :param P: ratio of co-occurrences per row to total co-occurrences in the table (1-D array)
-        :type P: Numpy ndarray
+        :type P: numpy.ndarray
         :param N: total number of co-occurrences in the table
         :type N: float
         :return: Log-likelihood values for a single row in the table
-        :rtype: Numpy ndarray
+        :rtype: numpy.ndarray
         """
         C12 = self.coll_df[row]
         C1 = np.sum(C12)
@@ -874,45 +849,45 @@ class ParamTester(SemPipeline):
         return -2 * (LL1 + LL2 - LL3 - LL4)
 
     def LL(self):
-        """
-        guides the Log-likelihood calculations for the whole matrix
+        """ Guides the Log-likelihood calculations for the whole matrix
+
         :return: self.LL_df
-        :rtype: Numpy memmap
+        :rtype: numpy.memmap
         """
         n = np.sum(self.coll_df)
         c2 = np.sum(self.coll_df, axis=0)
         p = c2 / n
         LL_df = np.memmap('{}/{}_{}_{}_LL_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),
                           dtype='float', mode='w+',
-                          shape=(len(self.ind), len(self.ind)))
+                          shape=(self.cols, self.cols))
         for i, w in enumerate(self.ind):
             LL_df[i] = self.log_like(i, c2, p, n)
             if i % 5000 == 0:
-                print('{0}% done'.format((i / len(self.ind) * 100)))
+                print('{0}% done'.format((i / self.cols * 100)))
                 # deleting LL_df periodically clears the memory of rows that have already been calculated
                 del LL_df
                 LL_df = np.memmap(
                     '{}/{}_{}_{}_LL_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),
                     dtype='float', mode='r+',
-                    shape=(len(self.ind), len(self.ind)))
+                    shape=(self.cols, self.cols))
         LL_df[np.where(np.isfinite(LL_df) == False)] = 0
         del LL_df
         LL_df = np.memmap('{}/{}_{}_{}_LL_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),
                           dtype='float', mode='r',
-                          shape=(len(self.ind), len(self.ind)))
+                          shape=(self.cols, self.cols))
         return LL_df
 
     def PMI_calc(self, row, P2, N):
-        """
-        calculates PPMI values for one table row
+        """ Calculates PPMI values for one table row
+
         :param row: index for the word's row in the table
         :type row: int
         :param P2: ratio of co-occurrences per row to total co-occurrences in the table
-        :type P2: Numpy ndarray
+        :type P2: numpy.ndarray
         :param N: total co-occurrences in the table
         :type N: float
         :return: PPMI values for a row in the table (1-D array)
-        :rtype: Numpy ndarray
+        :rtype: numpy.ndarray
         """
         C12 = self.coll_df[row]
         C1 = np.sum(C12)
@@ -923,73 +898,59 @@ class ParamTester(SemPipeline):
         return a
 
     def PPMI(self):
-        """
-        guides the PPMI calculation process for the whole table
+        """ Guides the PPMI calculation process for the whole table
+
         :return: matrix of PPMI values
-        :rtype: Numpy memmap
+        :rtype: numpy.memmap
         """
         n = np.sum(self.coll_df)
         p2 = np.sum(self.coll_df, axis=0) / n
         PPMI_df = np.memmap('{}/{}_{}_{}_PPMI_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),
                             dtype='float', mode='w+',
-                            shape=(len(self.ind), len(self.ind)))
+                            shape=(self.cols, self.cols))
         for i, w in enumerate(self.ind):
             PPMI_df[i] = self.PMI_calc(i, p2, n)
             if i % 5000 == 0:
-                print('{0}% done'.format((i / len(self.ind) * 100)))
+                print('{0}% done'.format((i / self.cols * 100)))
                 del PPMI_df
                 PPMI_df = np.memmap(
                     '{}/{}_{}_{}_PPMI_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),
                     dtype='float', mode='r+',
-                    shape=(len(self.ind), len(self.ind)))
+                    shape=(self.cols, self.cols))
         PPMI_df[np.where(np.isfinite(PPMI_df) == False)] = 0
         del PPMI_df
         PPMI_df = np.memmap('{}/{}_{}_{}_PPMI_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),
                             dtype='float', mode='r',
-                            shape=(len(self.ind), len(self.ind)))
+                            shape=(self.cols, self.cols))
         return PPMI_df
 
-    def CS(self, algorithm, e):
-        """
-        calculates the cosine similarity of every matrix row with every other row
+    def CS(self, algorithm):
+        """ Calculates the cosine similarity of every matrix row with every other row
+
         :param algorithm: which algorithm (PPMI or LL) is being tested
         :type algorithm: str
         :param e: SVD exponent
         :type e: float
-        :return: matrix of cosine similarity values
-        :rtype: Numpy memmap
+        :ivar CS_df: matrix of cosine similarity values
+        :type CS_df: numpy.memmap
         """
         print('Starting {} calculations for '
-              'w={}, lem={}, weighted={} svd={} at {}'.format(self.sim_algo,
+              'w={}, lem={}, weighted={} at {}'.format(self.sim_algo,
                                                               str(self.w),
                                                               self.lems,
                                                               self.weighted,
-                                                              e,
                                                               datetime.datetime.now().time().isoformat()))
         dest_file = '{}/{}_{}_{}_CS_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems)
-        if e == 1:
-            if algorithm == 'PPMI':
-                self.stat_df = self.PPMI_df
-            elif algorithm == 'LL':
-                self.stat_df = self.LL_df
-        else:
-            orig = os.path.join(self.dest,
-                                '_'.join([algorithm,
-                                          'SVD',
-                                          str(self.w),
-                                          'lems={0}'.format(self.lems),
-                                          self.corpus,
-                                          'min_occ={0}'.format(self.min_count),
-                                          'SVD_exp={0}'.format(str(e)),
-                                          'no_stops={0}'.format(
-                                              bool(self.stops)),
-                                          'weighted={}.dat'.format(
-                                              self.weighted)]))
-            self.stat_df = np.memmap(orig, dtype='float', mode='r',
-                                     shape=(len(self.ind), self.cols))
+
+        if algorithm == 'PPMI':
+            self.stat_df = self.PPMI_df
+        elif algorithm == 'LL':
+            self.stat_df = self.LL_df
+
         self.CS_df = np.memmap(dest_file, dtype='float', mode='w+',
-                               shape=(len(self.ind), len(self.ind)))
-        '''if self.sim_algo == 'cosine':
+                               shape=(self.cols, self.cols))
+        '''
+        if self.sim_algo == 'cosine':
             self.CS_df[:] = 1 - pairwise_distances(self.stat_df,
                                                    metric=self.sim_algo,
                                                    n_jobs=self.jobs)
@@ -1001,7 +962,7 @@ class ParamTester(SemPipeline):
         self.cs_loop(dest_file)
         del self.CS_df
         self.CS_df = np.memmap(dest_file, dtype='float', mode='r',
-                               shape=(len(self.ind), len(self.ind)))
+                               shape=(self.cols, self.cols))
         print('Finished with {} calculations for '
               'w={}, lem={}, weighted={} at {}'.format(self.sim_algo,
                                                        str(self.w),
@@ -1011,8 +972,8 @@ class ParamTester(SemPipeline):
 
     def RunTests(self, min_w, max_w, step, lem_file=None,
                  w_tests='both', l_tests='both'):
-        """
-        guides the parameter testing process
+        """ Guides the parameter testing process
+
         :param min_w: the minimum context window size to use
         :type min_w: int
         :param max_w: the maximum context window size to use
@@ -1046,34 +1007,26 @@ class ParamTester(SemPipeline):
             lem_file = None
         from Chapter_2.LouwNidaCatSim import CatSimWin
 
-        self.param_dict = {}
         files = glob('{0}/*.txt'.format(self.orig))
         for self.w in range(min_w, max_w + 1, step):
             for self.weighted in w_tests:
                 for self.lems in l_tests:
-                    prob_list = []
-                    pmi_list = []
-                    counter = 1
                     print('weighted %s, lemmata %s, w=%s at %s' %
                           (self.weighted,
                            self.lems,
                            self.w,
                            datetime.datetime.now().time().isoformat()))
 
-                    #self.coll_df = self.cooc_counter(files)
                     self.cooc_counter(files)
-                    #self.ind = list(self.coll_df.index)
                     self.LL_df = self.LL()
-                    #self.coll_df.to_pickle(
-                    #    '{}/{}_coll_df.pickle'.format(self.orig, self.w))
                     del self.coll_df
-                    pipe = CatSimWin('LL', self.w, lems=self.lems,
+                    pipe = CatSimWin('LL', [self.w], lems=self.lems,
                                      CS_dir=self.orig,
                                      dest_dir='{}/Win_size_tests/LN'.format(
                                          self.orig), sim_algo='cosine',
                                      corpus=(self.orig.split('/')[-1], 1, 1.0,
                                              self.weighted), lem_file=lem_file)
-                    self.CS('LL', 1)
+                    self.CS('LL')
                     pipe.df = self.CS_df
                     del self.CS_df
                     del self.LL_df
@@ -1087,16 +1040,16 @@ class ParamTester(SemPipeline):
                                                                   self.weighted)] = \
                         pipe.ave_no_93[self.w]
                     del pipe
-                    self.coll_df = np.memmap('{}/{}_{}_{}_coll_df.dat'.format(self.orig, self.w, self.weighted, self.lems), dtype='float', mode='r', shape=(len(self.ind), len(self.ind)))
+                    self.coll_df = np.memmap('{}/{}_{}_{}_coll_df.dat'.format(self.orig, self.w, self.weighted, self.lems), dtype='float', mode='r', shape=(self.cols, self.cols))
                     self.PPMI_df = self.PPMI()
                     del self.coll_df
-                    pipe = CatSimWin('PPMI', self.w, lems=self.lems,
+                    pipe = CatSimWin('PPMI', [self.w], lems=self.lems,
                                      CS_dir=self.orig,
                                      dest_dir='{}/Win_size_tests/LN'.format(
                                          self.orig), sim_algo='cosine',
                                      corpus=(self.orig.split('/')[-1], 1, 1.0,
                                              self.weighted), lem_file=lem_file)
-                    self.CS('PPMI', 1)
+                    self.CS('PPMI')
                     pipe.df = self.CS_df
                     del self.PPMI_df
                     del self.CS_df
@@ -1128,13 +1081,28 @@ class ParamTester(SemPipeline):
                                               self.param_dict[k][1]))
 
 
+def cmd():
+    parser = argparse.ArgumentParser(description='Pipeline for automatic extraction of semantic data.')
+    subparsers = parser.add_subparsers()
+    parser_pipeline = subparsers.add_parser('SemPipeline')
+    parser_pipeline.add_argument('--win_size', type=int, default=10, help='The size of the contexts window')
+    parser_pipeline.add_argument('--lemmata', type=bool, default=False, help='Whether to use a lemmatized corpus or not')
+    parser_pipeline.add_argument('--weighted', type=bool, default=False, help='Whether to use a weighted or unweighted window. "True" == weighted')
+    parser_pipeline.add_argument('--algo', type=str, default='LL', choices=['LL', 'PPMI'], help='The significance algorithm to use')
+    parser_pipeline.add_argument('--files', type=str, help='The directory path in which the .txt files for your corpus are located.')
+    parser_pipeline.add_argument('--c', type=int, default=1, help='The number of cores to use during co-occurrence calculations')
+    parser_pipeline.add_argument('--occ_dict', type=str, help='The filepath to the file that contains the dictionary of word occurrences')
+    parser_pipeline.add_argument('--min_count', type=int, default=1, help='The minimum number of occurrences for words to be considered in the calculations')
+
 if __name__ == '__main__':
+    cmd()
+
+'''if __name__ == '__main__':
     if sys.argv[1] == "SemPipeLine":
         SemPipeline(win_size=int(sys.argv[2]),
                     lemmata=bool(int(sys.argv[3])),
                     weighted=bool(int(sys.argv[4])),
                     algo=sys.argv[5],
-                    svd=float(sys.argv[6]),
                     files=sys.argv[7],
                     c=int(sys.argv[8]),
                     occ_dict=sys.argv[9],
@@ -1147,3 +1115,4 @@ if __name__ == '__main__':
                                                           lem_file=sys.argv[7],
                                                           w_tests=sys.argv[8],
                                                           l_tests=sys.argv[9])
+'''
