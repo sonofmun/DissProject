@@ -36,7 +36,7 @@ import argparse
 class SemPipeline:
     def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI',
                  sim_algo='cosine', files=None, c=8, occ_dict=None,
-                 min_count=1, jobs=1, stops=True):
+                 min_count=1, jobs=1, stops=True, **kwargs):
         """ This class produces matrices representing cooccurrence counts, statistical significance, and similarity data for a corpus
 
         :param win_size: context window size
@@ -675,7 +675,8 @@ class SemPipeline:
 
 class ParamTester(SemPipeline):
 
-    def __init__(self, c=8, jobs=1, min_count=1, orig=None, stops=tuple()):
+    def __init__(self, min_w, max_w, step, c=8, jobs=1, min_count=1, files=None, stops=tuple(), lem_file=None,
+                 w_tests='both', l_tests='both', steps='all', **kwargs):
         """ Runs parameter testing for the corpus in question
         the testing parameters are specified in the self.RunTests function
 
@@ -697,8 +698,8 @@ class ParamTester(SemPipeline):
         :type stops: (str)
         :ivar min_count: the minimum number of occurrences for a word to be used in the calculations
         :type min_count: int
-        :ivar orig: the directory path for the .txt files that make up the corpus
-        :type orig: str
+        :ivar files: the directory path for the .txt files that make up the corpus
+        :type files: str
         :ivar sim_algo: the similarity algorithm to use in the calculations
         :type sim_algo: str
         :ivar ind: the indices for the rows and columns of the matrix (i.e., the words) - filled in self.cooc_counter
@@ -722,8 +723,62 @@ class ParamTester(SemPipeline):
         self.stops = stops
         self.jobs = jobs
         self.min_count = min_count
-        self.orig = orig
+        self.orig = files
         self.sim_algo = 'CS'
+        self.min_w = min_w
+        self.max_w = max_w
+        self.step = step
+        if isinstance(w_tests, str):
+            if w_tests == 'both':
+                self.w_tests = (True, False)
+            elif w_tests == 'True':
+                self.w_tests = [True]
+            elif w_tests == 'False':
+                self.w_tests = [False]
+        else:
+            self.w_tests = w_tests
+        if isinstance(l_tests, str):
+            if l_tests == 'both':
+                self.l_tests = (True, False)
+            elif l_tests == 'True':
+                self.l_tests = [True]
+            elif l_tests == 'False':
+                self.l_tests = [False]
+        else:
+            self.l_tests = l_tests
+        if lem_file == 'None':
+            self.lem_file = None
+        else:
+            self.lem_file = lem_file
+        self.do_coocs = False
+        self.do_LL = False
+        self.do_PPMI = False
+        self.do_LL_CS = False
+        self.do_PPMI_CS = False
+        self.do_all = False
+        if steps == 'all':
+            self.do_coocs = True
+            self.do_LL = True
+            self.do_PPMI = True
+            self.do_LL_CS = True
+            self.do_PPMI_CS = True
+            self.do_all = True
+            self.stat_algos = 'Both'
+            self.remove = True
+        elif steps == 'coocs':
+            self.do_coocs = True
+        elif steps == 'LL':
+            self.do_LL = True
+        elif steps == 'PPMI':
+            self.do_PPMI = True
+        elif steps == 'LL_CS':
+            self.do_LL_CS = True
+            self.stat_algos = 'LL'
+        elif steps == 'PPMI_CS':
+            self.do_PPMI_CS = True
+            self.stat_algos = 'PPMI'
+        elif steps == 'remove':
+            self.remove = True
 
         # the following ivars are filled later in the class
         self.ind = []
@@ -775,7 +830,9 @@ class ParamTester(SemPipeline):
                         else:
                             counts[key] = r[key]
         self.ind = list(counts.keys())
-        self.cols = len(self.ind)
+        self.cols = len(self.ind)  # Need to pickle self.cols for later use
+        with open('{}/{}_{}_{}_index.pickle'.format(self.orig, self.w, self.weighted, self.lems), mode='wb') as f:
+            dump(self.ind, f)
         cooc_dest = '{}/{}_{}_{}_coll_df.dat'.format(self.orig, self.w, self.weighted, self.lems)
         self.coll_df = np.memmap(cooc_dest, dtype='float', mode='w+',
                                  shape=(self.cols, self.cols))
@@ -938,9 +995,9 @@ class ParamTester(SemPipeline):
               'w={}, lem={}, weighted={} at {}'.format(self.sim_algo,
                                                               str(self.w),
                                                               self.lems,
-                                                              self.weighted,
+                                                                 self.weighted,
                                                               datetime.datetime.now().time().isoformat()))
-        dest_file = '{}/{}_{}_{}_CS_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems)
+        dest_file = '{}/{}_{}_{}_{}_CS_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems, algorithm)
 
         if algorithm == 'PPMI':
             self.stat_df = self.PPMI_df
@@ -949,7 +1006,6 @@ class ParamTester(SemPipeline):
 
         self.CS_df = np.memmap(dest_file, dtype='float', mode='w+',
                                shape=(self.cols, self.cols))
-        '''
         if self.sim_algo == 'cosine':
             self.CS_df[:] = 1 - pairwise_distances(self.stat_df,
                                                    metric=self.sim_algo,
@@ -958,8 +1014,7 @@ class ParamTester(SemPipeline):
             self.CS_df[:] = pairwise_distances(self.stat_df,
                                                metric=self.sim_algo,
                                                n_jobs=self.jobs)
-        '''
-        self.cs_loop(dest_file)
+        # self.cs_loop(dest_file)
         del self.CS_df
         self.CS_df = np.memmap(dest_file, dtype='float', mode='r',
                                shape=(self.cols, self.cols))
@@ -970,8 +1025,7 @@ class ParamTester(SemPipeline):
                                                        self.weighted,
                                                        datetime.datetime.now().time().isoformat()))
 
-    def RunTests(self, min_w, max_w, step, lem_file=None,
-                 w_tests='both', l_tests='both'):
+    def RunTests(self):
         """ Guides the parameter testing process
 
         :param min_w: the minimum context window size to use
@@ -989,110 +1043,123 @@ class ParamTester(SemPipeline):
         :return:
         :rtype:
         """
-        if isinstance(w_tests, str):
-            if w_tests == 'both':
-                w_tests = (True, False)
-            elif w_tests == 'True':
-                w_tests = [True]
-            elif w_tests == 'False':
-                w_tests = [False]
-        if isinstance(l_tests, str):
-            if l_tests == 'both':
-                l_tests = (True, False)
-            elif l_tests == 'True':
-                l_tests = [True]
-            elif l_tests == 'False':
-                l_tests = [False]
-        if lem_file == 'None':
-            lem_file = None
         from Chapter_2.LouwNidaCatSim import CatSimWin
 
         files = glob('{0}/*.txt'.format(self.orig))
-        for self.w in range(min_w, max_w + 1, step):
-            for self.weighted in w_tests:
-                for self.lems in l_tests:
+        for self.w in range(self.min_w, self.max_w + 1, self.step):
+            for self.weighted in self.w_tests:
+                for self.lems in self.l_tests:
                     print('weighted %s, lemmata %s, w=%s at %s' %
                           (self.weighted,
                            self.lems,
                            self.w,
                            datetime.datetime.now().time().isoformat()))
 
-                    self.cooc_counter(files)
-                    self.LL_df = self.LL()
-                    del self.coll_df
-                    pipe = CatSimWin('LL', [self.w], lems=self.lems,
-                                     CS_dir=self.orig,
-                                     dest_dir='{}/Win_size_tests/LN'.format(
-                                         self.orig), sim_algo='cosine',
-                                     corpus=(self.orig.split('/')[-1], 1, 1.0,
-                                             self.weighted), lem_file=lem_file)
-                    self.CS('LL')
-                    pipe.df = self.CS_df
-                    del self.CS_df
-                    del self.LL_df
-                    pipe.ind = self.ind
-                    pipe.SimCalc(self.w)
-                    pipe.AveCalc(self.w)
-                    pipe.WriteFiles()
-                    self.param_dict[
-                        'LL_window={}_lems={}_weighted={}'.format(self.w,
-                                                                  self.lems,
-                                                                  self.weighted)] = \
-                        pipe.ave_no_93[self.w]
-                    del pipe
+                    if self.do_coocs:
+                        self.cooc_counter(files)
+                    if not self.ind:
+                        self.ind = pd.read_pickle('{}/{}_{}_{}_index.pickle'.format(self.orig, self.w, self.weighted, self.lems))
+                        self.cols = len(self.ind)
                     self.coll_df = np.memmap('{}/{}_{}_{}_coll_df.dat'.format(self.orig, self.w, self.weighted, self.lems), dtype='float', mode='r', shape=(self.cols, self.cols))
-                    self.PPMI_df = self.PPMI()
+                    if self.do_LL:
+                        self.LL_df = self.LL()
                     del self.coll_df
-                    pipe = CatSimWin('PPMI', [self.w], lems=self.lems,
-                                     CS_dir=self.orig,
-                                     dest_dir='{}/Win_size_tests/LN'.format(
-                                         self.orig), sim_algo='cosine',
-                                     corpus=(self.orig.split('/')[-1], 1, 1.0,
-                                             self.weighted), lem_file=lem_file)
-                    self.CS('PPMI')
-                    pipe.df = self.CS_df
-                    del self.PPMI_df
-                    del self.CS_df
-                    pipe.ind = self.ind
-                    pipe.SimCalc(self.w)
-                    pipe.AveCalc(self.w)
-                    pipe.WriteFiles()
-                    self.param_dict[
-                        'PPMI_window={}_lems={}_weighted={}'.format(self.w,
-                                                                    self.lems,
-                                                                    self.weighted)] = \
-                        pipe.ave_no_93[self.w]
-                    del pipe
-                    os.remove('{}/{}_{}_{}_coll_df.dat'.format(self.orig, self.w, self.weighted, self.lems))
-                    os.remove('{}/{}_{}_{}_PPMI_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems))
-                    os.remove('{}/{}_{}_{}_LL_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems))
-                    os.remove('{}/{}_{}_{}_CS_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems))
+                    if self.do_LL_CS:
+                        if not self.LL_df:
+                            self.LL_df = np.memmap('{}/{}_{}_{}_LL_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems), dtype='float', mode='r', shape=(self.cols, self.cols))
+                        pipe = CatSimWin('LL', [self.w],
+                                         lems=self.lems,
+                                         CS_dir=self.orig,
+                                         dest_dir='{}/Win_size_tests/LN'.format(self.orig),
+                                         sim_algo='cosine',
+                                         corpus=(self.orig.split('/')[-1], 1, 1.0, self.weighted),
+                                         lem_file=self.lem_file)
+                        self.CS('LL')
+                        pipe.df = self.CS_df
+                        del self.CS_df
+                        del self.LL_df
+                        pipe.ind = self.ind
+                        pipe.SimCalc(self.w)
+                        pipe.AveCalc(self.w)
+                        pipe.WriteFiles()
+                        self.param_dict['LL_window={}_lems={}_weighted={}'.format(self.w, self.lems, self.weighted)] = pipe.ave_no_93[self.w]
+                        del pipe
+                    self.coll_df = np.memmap('{}/{}_{}_{}_coll_df.dat'.format(self.orig, self.w, self.weighted, self.lems), dtype='float', mode='r', shape=(self.cols, self.cols))
+                    if self.do_PPMI:
+                        self.PPMI_df = self.PPMI()
+                    del self.coll_df
+                    if self.do_PPMI_CS:
+                        if not self.PPMI_df:
+                            self.PPMI_df = np.memmap('{}/{}_{}_{}_PPMI_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems), dtype='float', mode='r', shape=(self.cols, self.cols))
+                        pipe = CatSimWin('PPMI', [self.w],
+                                         lems=self.lems,
+                                         CS_dir=self.orig,
+                                         dest_dir='{}/Win_size_tests/LN'.format(self.orig),
+                                         sim_algo='cosine',
+                                         corpus=(self.orig.split('/')[-1], 1, 1.0, self.weighted),
+                                         lem_file=self.lem_file)
+                        self.CS('PPMI')
+                        pipe.df = self.CS_df
+                        del self.PPMI_df
+                        del self.CS_df
+                        pipe.ind = self.ind
+                        pipe.SimCalc(self.w)
+                        pipe.AveCalc(self.w)
+                        pipe.WriteFiles()
+                        self.param_dict['PPMI_window={}_lems={}_weighted={}'.format(self.w, self.lems, self.weighted)] = pipe.ave_no_93[self.w]
+                        del pipe
+                    if self.remove:
+                        os.remove('{}/{}_{}_{}_coll_df.dat'.format(self.orig, self.w, self.weighted, self.lems))
+                        os.remove('{}/{}_{}_{}_PPMI_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems))
+                        os.remove('{}/{}_{}_{}_LL_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems))
+                        os.remove('{}/{}_{}_{}_PPMI_CS_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems))
+                        os.remove('{}/{}_{}_{}_LL_CS_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems))
+                        os.remove('{}/{}_{}_{}_index.pickle'.format(self.orig, self.w, self.weighted, self.lems))
             print(self.param_dict)
-        dest_file = '{0}/Win_size_tests/{1}_{2}_{3}_weighted={4}_lems={5}.pickle'.format(
-            self.orig, os.path.basename(self.orig), min_w, max_w, w_tests,
-            l_tests)
-        with open(dest_file, mode='wb') as f:
-            dump(self.param_dict, f)
-        with open(dest_file.replace('.pickle', '.csv'), mode='w') as f:
-            f.write('Test Details\tMean Category Score\tCategory Z-Score')
-            for k in sorted(self.param_dict.keys(),
-                            key=lambda x: int(x.split('_')[1].split('=')[1])):
-                f.write('\n{}\t{}\t{}'.format(k, self.param_dict[k][0],
-                                              self.param_dict[k][1]))
+        if self.do_LL_CS or self.do_PPMI_CS:
+            dest_file = '{0}/Win_size_tests/{1}_{2}_{3}_weighted={4}_lems={5}_algos={6}.pickle'.format(
+                self.orig, os.path.basename(self.orig), self.min_w, self.max_w, self.w_tests,
+                self.l_tests, self.stat_algos)
+            with open(dest_file, mode='wb') as f:
+                dump(self.param_dict, f)
+            with open(dest_file.replace('.pickle', '.csv'), mode='w') as f:
+                f.write('Test Details\tMean Category Score\tCategory Z-Score')
+                for k in sorted(self.param_dict.keys(),
+                                key=lambda x: int(x.split('_')[1].split('=')[1])):
+                    f.write('\n{}\t{}\t{}'.format(k, self.param_dict[k][0],
+                                                  self.param_dict[k][1]))
 
 
 def cmd():
     parser = argparse.ArgumentParser(description='Pipeline for automatic extraction of semantic data.')
-    subparsers = parser.add_subparsers()
+    parser.add_argument('--win_size', type=int, default=10, help='The size of the contexts window')
+    parser.add_argument('--lemmata', type=bool, default=False, help='Whether to use a lemmatized corpus or not')
+    parser.add_argument('--weighted', type=bool, default=False, help='Whether to use a weighted or unweighted window. "True" == weighted')
+    parser.add_argument('--algo', type=str, default='LL', choices=['LL', 'PPMI'], help='The significance algorithm to use')
+    parser.add_argument('--files', type=str, help='The directory path in which the .txt files for your corpus are located.')
+    parser.add_argument('--c', type=int, default=1, help='The number of cores to use during co-occurrence calculations')
+    parser.add_argument('--occ_dict', type=str, help='The filepath to the file that contains the dictionary of word occurrences')
+    parser.add_argument('--min_count', type=int, default=1, help='The minimum number of occurrences for words to be considered in the calculations')
+    parser.add_argument('--jobs', type=int, default=1, help='The value for n_jobs in sklearn.metrics.pairwise_distances for cosine similarity calculations')
+    parser.add_argument('--stops', type=bool, default=True, help='Whether to include stopwords in the calcuations')
+
+    # Add subparsers for the whole process or for different steps
+    subparsers = parser.add_subparsers(dest='subparser_name')
     parser_pipeline = subparsers.add_parser('SemPipeline')
-    parser_pipeline.add_argument('--win_size', type=int, default=10, help='The size of the contexts window')
-    parser_pipeline.add_argument('--lemmata', type=bool, default=False, help='Whether to use a lemmatized corpus or not')
-    parser_pipeline.add_argument('--weighted', type=bool, default=False, help='Whether to use a weighted or unweighted window. "True" == weighted')
-    parser_pipeline.add_argument('--algo', type=str, default='LL', choices=['LL', 'PPMI'], help='The significance algorithm to use')
-    parser_pipeline.add_argument('--files', type=str, help='The directory path in which the .txt files for your corpus are located.')
-    parser_pipeline.add_argument('--c', type=int, default=1, help='The number of cores to use during co-occurrence calculations')
-    parser_pipeline.add_argument('--occ_dict', type=str, help='The filepath to the file that contains the dictionary of word occurrences')
-    parser_pipeline.add_argument('--min_count', type=int, default=1, help='The minimum number of occurrences for words to be considered in the calculations')
+    parser_pipeline.set_defaults(func=SemPipeline)
+    parser_params = subparsers.add_parser('ParamTester')
+    parser_params.add_argument('--min_w', type=int, help='The minimum context window size to be tested')
+    parser_params.add_argument('--max_w', type=int, help='The maximum context window size to be tested')
+    parser_params.add_argument('--step', type=int, help='The size of the steps to test between min_w and max_w')
+    parser_params.add_argument('--w_tests', type=str, choices=['True', 'False', 'both'], help='Whether to test only the weighted window (True), the unweighted (False), or both (both)')
+    parser_params.add_argument('--l_tests', type=str, choices=['True', 'False', 'both'], help='Whether to test only the lemmatized text (True), the unlemmatized text (False), or both (both)')
+    parser_params.add_argument('--steps', type=str, default='all', choices=['all', 'coocs', 'LL', 'PPMI', 'LL_CS', 'PPMI_CS', 'remove'], help='The ParamTester functions to run')
+    parser_params.set_defaults(func=ParamTester)
+    args = parser.parse_args()
+    if args.subparser_name == 'SemPipeline':
+        args.func(**vars(args)).runPipeline()
+    elif args.subparser_name == 'ParamTester':
+        args.func(**vars(args)).RunTests()
 
 if __name__ == '__main__':
     cmd()
