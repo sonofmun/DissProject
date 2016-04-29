@@ -245,3 +245,6 @@ Tufts_Cluster/*
 #celeryconfig.py
 *.npy
 *.png
+_build
+_static
+_templates

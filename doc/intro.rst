@@ -10,6 +10,7 @@ The Chapters:
 .. toctree::
    :maxdepth: 3
    
+   installation
    chapter1
    chapter2
    chapter3

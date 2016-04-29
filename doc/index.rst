@@ -9,9 +9,10 @@ Welcome to Munson_Dissertation's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    
    intro
+   installation
    chapter1
    chapter2
    chapter3

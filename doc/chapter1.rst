@@ -1,20 +1,20 @@
 Chapter 1 - Finding the Best Parameters for the Corpus
-======================================================
+######################################################
 
 The code for this chapter builds the foundation for the whole study in that it calculates the parameters that are used to produce the data for the rest of the dissertation. The central class in this chapter's code is the ParamTester class. First, the basic documentation for this class followed by a brief explanation of the input parameters.
 
 The ParamTester Class
----------------------
+=====================
 
 .. autoclass:: Data_Production.sem_extract_pipeline.ParamTester
 
 As you can see, there are a lot of input parameters for this class. I will focus here on the less technical ones that are important for testing your corpus correctly. 
 
 Formatting Your Corpus
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
 files (str)
-"""""""""""
+^^^^^^^^^^^
 
 At the same time the parameter that is the most important, easiest to understand, and requires the most explanation is the most explanation. ``files`` is a string that represents the directory path to the ``.txt`` files that make up your corpus, e.g., ``/home/matt/corpus``. I would recommend that your corpus be represented by one file for each work. Otherwise the co-occurrence context window (explained more below) will span from one work to another.
 
@@ -43,10 +43,21 @@ If you plan on always using only the inflected words in your corpus, then this m
 The \@lem attribute on each \<w\> tag contains the word lemma information for each word. Note that having the value of each \@lem attribute surrounded by double quotes, i.e., ``"``, instead of single quotes, i.e., ``'`` is quite important if you want to be able to use this lemma information. If your texts are in this format, then you will be able to perform your calculations on either the lemmatized or the inflected text. 
 
 l_tests (str)
-"""""""""""""
+^^^^^^^^^^^^^
 
 The mention of lemmatized or inflected texts brings us to the next parameter, ``l_tests``. This is a string value representing whether the lemmas in the text should be used for calculation, the inflected words, or whether both tests should be run. A value of ``True`` will test only the lemmatized text, ``False`` will test only the inflected words, and ``both`` will run both tests.
 
 The Parameters that ParamTester Tests
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 
+The following sections give a brief introduction of the parameters that ``ParamTester`` tests. For more information on these parameters, see the dissertation itself.
+
+min_w (int), max_w (int), and step (int)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+These three related parameters give the range for the context-window sizes that will be tested. ``min_w`` gives the minimum window size to be tested, ``max_w`` the maximum, and ``step`` the size of the step to be taken in between ``min_w`` and ``max_w``. So, for instance, if you wanted to test the window sizes 5, 10, 15, 20...90, 95, 100, you would set ``min_w=5``, ``max_w=100``, and ``step=5``.
+
+w_tests (str)
+^^^^^^^^^^^^^
+
+``w_tests`` takes the same format and the same arguments as ``l_tests``, i.e., ``True``, ``False``, and ``both``. This parameter determines whether to use a weighted context window, an unweighted context window, or to test both types. 
