@@ -893,6 +893,7 @@ class ParamTester(SemPipeline):
         self.do_LL_CS = False
         self.do_PPMI_CS = False
         self.do_all = False
+        self.remove = False
         if steps == 'all':
             self.do_coocs = True
             self.do_LL = True
