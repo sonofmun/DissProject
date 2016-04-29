@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Chapter 1 - Finding the Best Parameters for the Corpus &mdash; Munson_Dissertation 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Munson_Dissertation 0.1 documentation" href="index.html" />
+    <link rel="up" title="Introduction - Tools for the Automatic Extraction of Semantic Information" href="intro.html" />
+    <link rel="next" title="Chapter 2 - Comparison with Existing Semantic-Domain Lexica" href="chapter2.html" />
+    <link rel="prev" title="Introduction - Tools for the Automatic Extraction of Semantic Information" href="intro.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="chapter-1-finding-the-best-parameters-for-the-corpus">
+<h1>Chapter 1 - Finding the Best Parameters for the Corpus<a class="headerlink" href="#chapter-1-finding-the-best-parameters-for-the-corpus" title="Permalink to this headline">¶</a></h1>
+<p>The code for this chapter builds the foundation for the whole study in that it calculates the parameters that are used to produce the data for the rest of the dissertation. The central class in this chapter&#8217;s code is the ParamTester class. First, the basic documentation for this class followed by a brief explanation of the input parameters.</p>
+<div class="section" id="the-paramtester-class">
+<h2>The ParamTester Class<a class="headerlink" href="#the-paramtester-class" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Data_Production.sem_extract_pipeline.ParamTester">
+<em class="property">class </em><code class="descclassname">Data_Production.sem_extract_pipeline.</code><code class="descname">ParamTester</code><span class="sig-paren">(</span><em>min_w</em>, <em>max_w</em>, <em>step</em>, <em>c=8</em>, <em>jobs=1</em>, <em>min_count=1</em>, <em>files=None</em>, <em>stops=()</em>, <em>lem_file=None</em>, <em>w_tests='both'</em>, <em>l_tests='both'</em>, <em>steps='all'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Data_Production/sem_extract_pipeline.html#ParamTester"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Data_Production.sem_extract_pipeline.ParamTester" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs parameter testing for the corpus in question
+the testing parameters are specified in the self.RunTests function</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>c</strong> (<em>int</em>) &#8211; the number of cores to use in the co-occurrence calculations</li>
+<li><strong>jobs</strong> (<em>int</em>) &#8211; the number of cores to use in the cosine similarity calculations</li>
+<li><strong>min_count</strong> (<em>int</em>) &#8211; the minimum occurrence count. Words below this count will not be counted.
+The purpose here is for memory management. My tests have shown that using all words produces better results.</li>
+<li><strong>files</strong> (<em>str</em>) &#8211; the directory path for the .txt files that make up the corpus</li>
+<li><strong>stops</strong> (<em>(str)</em>) &#8211; the stops words to be ignored in the calculations</li>
+<li><strong>min_w</strong> (<em>int</em>) &#8211; the minimum context window size to use</li>
+<li><strong>max_w</strong> (<em>int</em>) &#8211; the maximum context window size to use</li>
+<li><strong>step</strong> (<em>int</em>) &#8211; the size of the steps between min_w and max_w</li>
+<li><strong>lem_file</strong> (<em>str</em>) &#8211; the path and filename for the word occurrence dictionary pickle</li>
+<li><strong>w_tests</strong> (<em>str</em>) &#8211; whether to use weighted (&#8220;True&#8221;) or unweighted (&#8220;False&#8221;) window types or &#8220;both&#8221;</li>
+<li><strong>l_tests</strong> (<em>str</em>) &#8211; whether to use word lemmas (&#8220;True&#8221;) or inflected forms (&#8220;False&#8221;) or &#8220;both&#8221;</li>
+<li><strong>steps</strong> (<em>str</em>) &#8211; the steps in the calculation process to perform. Allowed: &#8216;all&#8217;, &#8216;coocs&#8217;, &#8216;LL&#8217;, &#8216;PPMI&#8217;, &#8216;LL_CS&#8217; (cosine similarity based on an existing Log-likelihood matrix), or &#8216;PPMI_CS&#8217;.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>c</strong> &#8211; the number of cores to use in the co-occurrence calculations</li>
+<li><strong>stops</strong> &#8211; list of stop words to ignore during the calculations</li>
+<li><strong>min_count</strong> &#8211; the minimum number of occurrences for a word to be used in the calculations</li>
+<li><strong>files</strong> &#8211; the directory path for the .txt files that make up the corpus</li>
+<li><strong>sim_algo</strong> &#8211; the similarity algorithm to use in the calculations</li>
+<li><strong>ind</strong> &#8211; the indices for the rows and columns of the matrix (i.e., the words) - filled in self.cooc_counter</li>
+<li><strong>cols</strong> &#8211; the length of self.ind - filled in self.cooc_counter</li>
+<li><strong>cols</strong> &#8211; int</li>
+<li><strong>coll_df</strong> &#8211; transformed into numpy.memmap and filled in self.cooc_counter</li>
+<li><strong>LL_df</strong> &#8211; transformed into numpy.memmap and filled in self.LL</li>
+<li><strong>PPMI_df</strong> &#8211; transformed into numpy.memmap and filled in self.PPMI</li>
+<li><strong>CS_df</strong> &#8211; transformed into numpy.memmap and filled in self.CS</li>
+<li><strong>stat_df</strong> &#8211; filled with either self.PPMI_df or self.LL_df in self.CS</li>
+<li><strong>param_dict</strong> &#8211; filled with the scores for each set of parameters in self.RunTests</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p>As you can see, there are a lot of input parameters for this class. I will focus here on the less technical ones that are important for testing your corpus correctly.</p>
+<div class="section" id="formatting-your-corpus">
+<h3>Formatting Your Corpus<a class="headerlink" href="#formatting-your-corpus" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="files-str">
+<h4>files (str)<a class="headerlink" href="#files-str" title="Permalink to this headline">¶</a></h4>
+<p>At the same time the parameter that is the most important, easiest to understand, and requires the most explanation is the most explanation. <code class="docutils literal"><span class="pre">files</span></code> is a string that represents the directory path to the <code class="docutils literal"><span class="pre">.txt</span></code> files that make up your corpus, e.g., <code class="docutils literal"><span class="pre">/home/matt/corpus</span></code>. I would recommend that your corpus be represented by one file for each work. Otherwise the co-occurrence context window (explained more below) will span from one work to another.</p>
+<p>So far, so good. But the format of these files is also very important. The formatting is based on TEI markup, though the files need not be valid TEI to be used. Basically what this means is that <code class="docutils literal"><span class="pre">ParamTester</span></code> expects each individual word in each file to be on its own line and to be enclosed in a &lt;w&gt; tag. For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">w</span><span class="o">&gt;</span><span class="n">Βίβλος</span><span class="o">&lt;/</span><span class="n">w</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">w</span><span class="o">&gt;</span><span class="n">γενέσεως</span><span class="o">&lt;/</span><span class="n">w</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">w</span><span class="o">&gt;</span><span class="n">Ἰησοῦ</span><span class="o">&lt;/</span><span class="n">w</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">w</span><span class="o">&gt;</span><span class="n">χριστοῦ</span><span class="o">&lt;/</span><span class="n">w</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">w</span><span class="o">&gt;</span><span class="n">υἱοῦ</span><span class="o">&lt;/</span><span class="n">w</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">w</span><span class="o">&gt;</span><span class="n">Δαυὶδ</span><span class="o">&lt;/</span><span class="n">w</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">w</span><span class="o">&gt;</span><span class="n">υἱοῦ</span><span class="o">&lt;/</span><span class="n">w</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">w</span><span class="o">&gt;</span><span class="n">Ἀβραάμ</span><span class="o">&lt;/</span><span class="n">w</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>If you plan on always using only the inflected words in your corpus, then this markup is enough. If, however, you want to be able to use lemmatized versions of the text, there is a special way to format each of these tags, once again in accordance with TEI markup principles without requiring complete TEI compliance. An example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">w</span> <span class="n">lem</span><span class="o">=</span><span class="s2">&quot;βίβλος&quot;</span><span class="o">&gt;</span><span class="n">Βίβλος</span><span class="o">&lt;/</span><span class="n">w</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">w</span> <span class="n">lem</span><span class="o">=</span><span class="s2">&quot;γένεσις&quot;</span><span class="o">&gt;</span><span class="n">γενέσεως</span><span class="o">&lt;/</span><span class="n">w</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">w</span> <span class="n">lem</span><span class="o">=</span><span class="s2">&quot;Ἰησοῦς&quot;</span><span class="o">&gt;</span><span class="n">Ἰησοῦ</span><span class="o">&lt;/</span><span class="n">w</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">w</span> <span class="n">lem</span><span class="o">=</span><span class="s2">&quot;Χριστός&quot;</span><span class="o">&gt;</span><span class="n">χριστοῦ</span><span class="o">&lt;/</span><span class="n">w</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">w</span> <span class="n">lem</span><span class="o">=</span><span class="s2">&quot;υἱός&quot;</span><span class="o">&gt;</span><span class="n">υἱοῦ</span><span class="o">&lt;/</span><span class="n">w</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">w</span> <span class="n">lem</span><span class="o">=</span><span class="s2">&quot;Δαυίδ&quot;</span><span class="o">&gt;</span><span class="n">Δαυὶδ</span><span class="o">&lt;/</span><span class="n">w</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">w</span> <span class="n">lem</span><span class="o">=</span><span class="s2">&quot;υἱός&quot;</span><span class="o">&gt;</span><span class="n">υἱοῦ</span><span class="o">&lt;/</span><span class="n">w</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">w</span> <span class="n">lem</span><span class="o">=</span><span class="s2">&quot;Ἀβραάμ&quot;</span><span class="o">&gt;</span><span class="n">Ἀβραάμ</span><span class="o">&lt;/</span><span class="n">w</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The &#64;lem attribute on each &lt;w&gt; tag contains the word lemma information for each word. Note that having the value of each &#64;lem attribute surrounded by double quotes, i.e., <code class="docutils literal"><span class="pre">&quot;</span></code>, instead of single quotes, i.e., <code class="docutils literal"><span class="pre">'</span></code> is quite important if you want to be able to use this lemma information. If your texts are in this format, then you will be able to perform your calculations on either the lemmatized or the inflected text.</p>
+</div>
+<div class="section" id="l-tests-str">
+<h4>l_tests (str)<a class="headerlink" href="#l-tests-str" title="Permalink to this headline">¶</a></h4>
+<p>The mention of lemmatized or inflected texts brings us to the next parameter, <code class="docutils literal"><span class="pre">l_tests</span></code>. This is a string value representing whether the lemmas in the text should be used for calculation, the inflected words, or whether both tests should be run. A value of <code class="docutils literal"><span class="pre">True</span></code> will test only the lemmatized text, <code class="docutils literal"><span class="pre">False</span></code> will test only the inflected words, and <code class="docutils literal"><span class="pre">both</span></code> will run both tests.</p>
+</div>
+</div>
+<div class="section" id="the-parameters-that-paramtester-tests">
+<h3>The Parameters that ParamTester Tests<a class="headerlink" href="#the-parameters-that-paramtester-tests" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Chapter 1 - Finding the Best Parameters for the Corpus</a><ul>
+<li><a class="reference internal" href="#the-paramtester-class">The ParamTester Class</a><ul>
+<li><a class="reference internal" href="#formatting-your-corpus">Formatting Your Corpus</a><ul>
+<li><a class="reference internal" href="#files-str">files (str)</a></li>
+<li><a class="reference internal" href="#l-tests-str">l_tests (str)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-parameters-that-paramtester-tests">The Parameters that ParamTester Tests</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="intro.html">Introduction - Tools for the Automatic Extraction of Semantic Information</a><ul>
+      <li>Previous: <a href="intro.html" title="previous chapter">Introduction - Tools for the Automatic Extraction of Semantic Information</a></li>
+      <li>Next: <a href="chapter2.html" title="next chapter">Chapter 2 - Comparison with Existing Semantic-Domain Lexica</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/chapter1.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Matthew Munson.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="_sources/chapter1.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

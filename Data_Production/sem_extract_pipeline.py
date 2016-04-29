@@ -34,6 +34,73 @@ import argparse
 
 
 class SemPipeline:
+    """ This class produces matrices representing cooccurrence counts, statistical significance, and similarity data for a corpus
+
+    :param win_size: context window size
+    :type win_size: int
+    :param lemmata: whether to use word lemmata
+    :type lemmata: bool
+    :param weighted: whether to use a weighted window type
+    :type weighted: bool
+    :param algo: the significance algorithm to use. 'LL' and 'PPMI' are implemented
+    :type algo: str
+    :param sim_algo: the similarity algorithm to use. 'CS' is implemented
+    :type sim_algo: str
+    :param files: the directory in which the individual .txt files are held
+    :type files: str
+    :param c: the number of cores to use in self.cooc_counter (will be removed in the future)
+    :type c: int
+    :param occ_dict: the path and filename for the occurrence dictionary pickle
+    :type occ_dict: str
+    :param min_count: the minimum occurrence count below which words will not be counted
+    :type min_count: int
+    :param jobs: number of jobs to use during the cosine similarity calculations
+    :type jobs: int
+    :param stops: whether to include stop words or not (True means to include them)
+    :type stops: bool
+
+    :ivar w: the context window size
+    :type w: int
+    :ivar lems: whether a lemmatized or unlemmatized text will be used
+    :type lems: bool
+    :ivar weighted: whether a weighted or unweighted context window will be used (True == weighted)
+    :type weighted: bool
+    :ivar algo: which significance algorithm will be used (PPMI or LL)
+    :type algo: str
+    :ivar sim_algo: the similarity algorithm to be used
+    :type sim_algo: str
+    :ivar dir: the directory path in which the texts are located
+    :type dir: str
+    :ivar c: the number of cores to use during co-occurrence counting
+    :type c: int
+    :ivar occ_dict: the location for the dictionary representing word counts for every word
+    :type occ_dict: str
+    :ivar min_count: the minimum threshold of occurrences for the words to be calculated
+    :type min_count: int
+    :ivar jobs: the value to be used for n_jobs in the cosine similarity calculations
+    :type jobs: int
+    :ivar stops: a list of stop-words to ignore during the calculations
+    :type stops: (str)
+    :ivar ind: the indices for the rows and columns of the matrix (i.e., the words) - filled in self.cooc_counter
+    :type ind: [str]
+    :ivar cols: the length of self.ind - filled in self.cooc_counter
+    :ivar cols: int
+    :ivar coll_df: transformed into numpy.memmap and filled in self.cooc_counter
+    :type coll_df: tuple
+    :ivar LL_df: transformed into numpy.memmap and filled in self.LL
+    :type LL_df: tuple
+    :ivar PPMI_df: transformed into numpy.memmap and filled in self.PPMI
+    :type PPMI_df: tuple
+    :ivar CS_df: transformed into numpy.memmap and filled in self.CS
+    :type CS_df: tuple
+    :ivar stat_df: filled with either self.PPMI_df or self.LL_df in self.CS
+    :type stat_df: tuple
+    :ivar dest: the destination directory for all files - filled in self.makeFileNames
+    :type dest: str
+    :ivar corpus: the name of the corpus under investigation - filled in self.makeFileNames
+    :type corpus: str
+    """
+
     def __init__(self, win_size=350, lemmata=True, weighted=True, algo='PPMI',
                  sim_algo='cosine', files=None, c=8, occ_dict=None,
                  min_count=1, jobs=1, stops=True, **kwargs):
@@ -237,14 +304,14 @@ class SemPipeline:
                 counter.s(self.weighted, self.w, words, limits) for limits in
                 steps)().get()
             '''
-            res = []
+            #res = []
             with Pool(processes=self.c) as pool:
-                for limits in steps:
-                    results = pool.apply_async(counter, args=(self.weighted, self.w, words, limits))
-                    res.append(results.get())
+                #for limits in steps:
+                results = pool.starmap(counter, [(self.weighted, self.w, words, limits) for limits in steps])
+                    #res.append(results.get())
             #since the counter task returns Counter objects, the update method
             #below adds instead of replacing the values
-            for r in res:
+            for r in results:
                 for key in r.keys():
                     if key not in min_lems:
                         if key in counts.keys():
@@ -590,7 +657,7 @@ class SemPipeline:
             self.CS_df[i1[0]:i1[1], i2[0]:i2[1]] = 1- pairwise_distances(part1, part2, metric='cosine')
             self.CS_df[i2[0]:i2[1], i1[0]:i1[1]] = self.CS_df[i1[0]:i1[1], i2[0]:i2[1]].T
             if last_ind != i1:
-                print('{0}% done'.format((i1[0] / ind) * 100))
+                os.system('echo CS {0}% done'.format((i1[0] / ind) * 100))
                 del self.CS_df
                 self.CS_df = np.memmap(dest_file, dtype='float', mode='r+', shape=(ind, ind))
             last_ind = i1
@@ -674,6 +741,62 @@ class SemPipeline:
 
 
 class ParamTester(SemPipeline):
+    """ Runs parameter testing for the corpus in question
+    the testing parameters are specified in the self.RunTests function
+
+    :param c: the number of cores to use in the co-occurrence calculations
+    :type c: int
+    :param jobs: the number of cores to use in the cosine similarity calculations
+    :type jobs: int
+    :param min_count: the minimum occurrence count. Words below this count will not be counted.
+        The purpose here is for memory management. My tests have shown that using all words produces better results.
+    :type min_count: int
+    :param files: the directory path for the .txt files that make up the corpus
+    :type files: str
+    :param stops: the stops words to be ignored in the calculations
+    :type stops: (str)
+    :param min_w: the minimum context window size to use
+    :type min_w: int
+    :param max_w: the maximum context window size to use
+    :type max_w: int
+    :param step: the size of the steps between min_w and max_w
+    :type step: int
+    :param lem_file: the path and filename for the word occurrence dictionary pickle
+    :type lem_file: str
+    :param w_tests: whether to use weighted ("True") or unweighted ("False") window types or "both"
+    :type w_tests: str
+    :param l_tests: whether to use word lemmas ("True") or inflected forms ("False") or "both"
+    :type l_tests: str
+    :param steps: the steps in the calculation process to perform. Allowed: 'all', 'coocs', 'LL', 'PPMI', 'LL_CS' (cosine similarity based on an existing Log-likelihood matrix), or 'PPMI_CS'.
+    :type steps: str
+
+    :ivar c: the number of cores to use in the co-occurrence calculations
+    :type c: int
+    :ivar stops: list of stop words to ignore during the calculations
+    :type stops: (str)
+    :ivar min_count: the minimum number of occurrences for a word to be used in the calculations
+    :type min_count: int
+    :ivar files: the directory path for the .txt files that make up the corpus
+    :type files: str
+    :ivar sim_algo: the similarity algorithm to use in the calculations
+    :type sim_algo: str
+    :ivar ind: the indices for the rows and columns of the matrix (i.e., the words) - filled in self.cooc_counter
+    :type ind: [str]
+    :ivar cols: the length of self.ind - filled in self.cooc_counter
+    :ivar cols: int
+    :ivar coll_df: transformed into numpy.memmap and filled in self.cooc_counter
+    :type coll_df: tuple
+    :ivar LL_df: transformed into numpy.memmap and filled in self.LL
+    :type LL_df: tuple
+    :ivar PPMI_df: transformed into numpy.memmap and filled in self.PPMI
+    :type PPMI_df: tuple
+    :ivar CS_df: transformed into numpy.memmap and filled in self.CS
+    :type CS_df: tuple
+    :ivar stat_df: filled with either self.PPMI_df or self.LL_df in self.CS
+    :type stat_df: tuple
+    :ivar param_dict: filled with the scores for each set of parameters in self.RunTests
+    :type param_dict: dict
+    """
 
     def __init__(self, min_w, max_w, step, c=8, jobs=1, min_count=1, files=None, stops=tuple(), lem_file=None,
                  w_tests='both', l_tests='both', steps='all', **kwargs):
@@ -687,10 +810,24 @@ class ParamTester(SemPipeline):
         :param min_count: the minimum occurrence count. Words below this count will not be counted.
             The purpose here is for memory management. My tests have shown that using all words produces better results.
         :type min_count: int
-        :param orig: the directory path for the .txt files that make up the corpus
-        :type orig: str
+        :param files: the directory path for the .txt files that make up the corpus
+        :type files: str
         :param stops: the stops words to be ignored in the calculations
-        :type stops: str]
+        :type stops: (str)
+        :param min_w: the minimum context window size to use
+        :type min_w: int
+        :param max_w: the maximum context window size to use
+        :type max_w: int
+        :param step: the size of the steps between min_w and max_w
+        :type step: int
+        :param lem_file: the path and filename for the word occurrence dictionary pickle
+        :type lem_file: str
+        :param w_tests: whether to use weighted ("True") or unweighted ("False") window types or "both"
+        :type w_tests: str
+        :param l_tests: whether to use word lemmas ("True") or inflected forms ("False") or "both"
+        :type l_tests: str
+        :param steps: the steps in the calculation process to perform. Allowed: 'all', 'coocs', 'LL', 'PPMI', 'LL_CS' (cosine similarity based on an existing Log-likelihood matrix), or 'PPMI_CS'.
+        :type steps: str
 
         :ivar c: the number of cores to use in the co-occurrence calculations
         :type c: int
@@ -815,14 +952,14 @@ class ParamTester(SemPipeline):
                 counter.s(self.weighted, self.w, words, limits) for limits in
                 steps)().get()
             '''
-            res = []
+            #res = []
             with Pool(processes=self.c) as pool:
-                for limits in steps:
-                    results = pool.apply_async(counter, args=(self.weighted, self.w, words, limits))
-                    res.append(results.get())
+                #for limits in steps:
+                results = pool.starmap(counter, [(self.weighted, self.w, words, limits) for limits in steps])
+                    #res.append(results.get())
             # since the counter task returns Counter objects, the update method
             # below adds instead of replacing the values
-            for r in res:
+            for r in results:
                 for key in r.keys():
                     if key not in min_lems:
                         if key in counts.keys():
@@ -1027,21 +1164,6 @@ class ParamTester(SemPipeline):
 
     def RunTests(self):
         """ Guides the parameter testing process
-
-        :param min_w: the minimum context window size to use
-        :type min_w: int
-        :param max_w: the maximum context window size to use
-        :type max_w: int
-        :param step: the size of the steps between min_w and max_w
-        :type step: int
-        :param lem_file: the path and filename for the word occurrence dictionary pickle
-        :type lem_file: str
-        :param w_tests: whether to use weighted ("True") or unweighted ("False") window types or "both"
-        :type w_tests: str
-        :param l_tests: whether to use word lemmas ("True") or inflected forms ("False") or "both"
-        :type l_tests: str
-        :return:
-        :rtype:
         """
         from Chapter_2.LouwNidaCatSim import CatSimWin
 
