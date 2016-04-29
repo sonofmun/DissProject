@@ -331,7 +331,7 @@ class SemPipeline:
                           dtype=np.float64).fillna(0)
             self.coll_df[i] = s.values
             if i % 5000 == 0:
-                print('{0}% done'.format((i / self.cols * 100)))
+                os.system('echo COOC {0}% done'.format((i / self.cols * 100)))
                 del self.coll_df
                 self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r+',
                                          shape=(
@@ -469,7 +469,7 @@ class SemPipeline:
         for i, w in enumerate(self.ind):
             self.LL_df[i] = self.log_like(i, c2, p, n)
             if i % 5000 == 0:
-                print('{0}% done'.format((i / self.cols * 100)))
+                os.system('echo LL {0}% done'.format((i / self.cols * 100)))
                 del self.LL_df
                 self.LL_df = np.memmap(dest_file, dtype='float', mode='r+',
                                        shape=(self.cols, self.cols))
@@ -540,7 +540,7 @@ class SemPipeline:
         for i, w in enumerate(self.ind):
             self.PPMI_df[i] = self.PMI_calc(i, p2, n)
             if i % 5000 == 0:
-                print('{0}% done'.format((i / self.cols * 100)))
+                os.system('echo PPMI {0}% done'.format((i / self.cols * 100)))
                 del self.PPMI_df
                 self.PPMI_df = np.memmap(dest_file, dtype='float', mode='r+',
                                          shape=(self.cols, self.cols))
@@ -978,7 +978,7 @@ class ParamTester(SemPipeline):
                           dtype=np.float64).fillna(0)
             self.coll_df[i] = s.values
             if i % 5000 == 0:
-                print('{0}% done'.format((i / self.cols * 100)))
+                os.system('echo COOC {0}% done'.format((i / self.cols * 100)))
                 del self.coll_df
                 self.coll_df = np.memmap(cooc_dest, dtype='float', mode='r+',
                                          shape=(
@@ -1057,7 +1057,7 @@ class ParamTester(SemPipeline):
         for i, w in enumerate(self.ind):
             LL_df[i] = self.log_like(i, c2, p, n)
             if i % 5000 == 0:
-                print('{0}% done'.format((i / self.cols * 100)))
+                os.system('echo LL {0}% done'.format((i / self.cols * 100)))
                 # deleting LL_df periodically clears the memory of rows that have already been calculated
                 del LL_df
                 LL_df = np.memmap(
@@ -1105,7 +1105,7 @@ class ParamTester(SemPipeline):
         for i, w in enumerate(self.ind):
             PPMI_df[i] = self.PMI_calc(i, p2, n)
             if i % 5000 == 0:
-                print('{0}% done'.format((i / self.cols * 100)))
+                os.system('echo PPMI {0}% done'.format((i / self.cols * 100)))
                 del PPMI_df
                 PPMI_df = np.memmap(
                     '{}/{}_{}_{}_PPMI_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),

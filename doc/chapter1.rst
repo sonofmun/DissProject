@@ -55,9 +55,12 @@ The following sections give a brief introduction of the parameters that ``ParamT
 min_w (int), max_w (int), and step (int)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-These three related parameters give the range for the context-window sizes that will be tested. ``min_w`` gives the minimum window size to be tested, ``max_w`` the maximum, and ``step`` the size of the step to be taken in between ``min_w`` and ``max_w``. So, for instance, if you wanted to test the window sizes 5, 10, 15, 20...90, 95, 100, you would set ``min_w=5``, ``max_w=100``, and ``step=5``.
+These three related parameters give the range for the context-window sizes that will be tested. ``min_w`` gives the minimum window size to be tested, ``max_w`` the maximum, and ``step`` the size of the step to be taken in between ``min_w`` and ``max_w``. So, for instance, if you wanted to test the window sizes 5, 10, 15, 20, 25, 30, you would set ``min_w=5``, ``max_w=30``, and ``step=5``.
 
 w_tests (str)
 ^^^^^^^^^^^^^
 
-``w_tests`` takes the same format and the same arguments as ``l_tests``, i.e., ``True``, ``False``, and ``both``. This parameter determines whether to use a weighted context window, an unweighted context window, or to test both types. 
+``w_tests`` takes the same format and the same arguments as ``l_tests``, i.e., ``True``, ``False``, and ``both``. This parameter determines whether to use a weighted context window, an unweighted context window, or to test both types. An unweighted context window counts every word in the context window only one time, no matter its distance from the target word. A weighted context window, on the other hand, counts the words that are closer to the target word more times than the ones that are farther away. For instance, if you were using a 4-word context window, a weighted context window would count the words right before and after the target word 4 times, the words 2 words before and after 3 times, the words 3 words before and after 2 times, and the words 4 words away only once.
+
+My own experience with Greek shows that for some corpora the weighted window is best, while for others the unweighted window is best. So I would certainly suggest testing both of these for all parameters.
+
