@@ -4,6 +4,7 @@ from collections import defaultdict, Counter
 import datetime
 import numpy as np
 from sklearn.metrics.pairwise import pairwise_distances
+import os
 
 
 def counter(weighted, w, words, limits):
@@ -41,8 +42,8 @@ def counter(weighted, w, words, limits):
         #	except KeyError:
         #		cooc_dict[t][c] = 1
         if i % 100000 == 0:
-            print(
-                'Processing token {0} of {1} for window size {2} at {3}'.format(
+            os.system(
+                'echo Processing token {0} of {1} for window size {2} at {3}'.format(
                     i, len(words), w,
                     datetime.datetime.now().time().isoformat()))
     return Counter(cooc_dict)
