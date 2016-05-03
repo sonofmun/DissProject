@@ -1065,7 +1065,7 @@ class ParamTester(SemPipeline):
                     '{}/{}_{}_{}_LL_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),
                     dtype='float', mode='r+',
                     shape=(self.cols, self.cols))
-        LL_df[np.where(np.isfinite(LL_df) == False)] = 0
+        #LL_df[np.where(np.isfinite(LL_df) == False)] = 0
         del LL_df
         '''LL_df = np.memmap('{}/{}_{}_{}_LL_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),
                           dtype='float', mode='r',
@@ -1113,7 +1113,7 @@ class ParamTester(SemPipeline):
                     '{}/{}_{}_{}_PPMI_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),
                     dtype='float', mode='r+',
                     shape=(self.cols, self.cols))
-        PPMI_df[np.where(np.isfinite(PPMI_df) == False)] = 0
+        #PPMI_df[np.where(np.isfinite(PPMI_df) == False)] = 0
         del PPMI_df
         '''PPMI_df = np.memmap('{}/{}_{}_{}_PPMI_memmap.dat'.format(self.orig, self.w, self.weighted, self.lems),
                             dtype='float', mode='r',
