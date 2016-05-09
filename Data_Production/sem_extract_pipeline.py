@@ -861,7 +861,7 @@ class ParamTester(SemPipeline):
         self.jobs = jobs
         self.min_count = min_count
         self.orig = files
-        self.sim_algo = 'CS'
+        self.sim_algo = 'cosine'
         self.min_w = min_w
         self.max_w = max_w
         self.step = step
