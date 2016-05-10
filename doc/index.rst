@@ -1,9 +1,9 @@
-.. Munson_Dissertation documentation master file, created by
+.. SemRetrieve documentation master file, created by
    sphinx-quickstart on Fri Apr 29 09:39:23 2016.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Munson_Dissertation's documentation!
+Welcome to SemRetrieve's documentation!
 ===============================================
 
 Contents:

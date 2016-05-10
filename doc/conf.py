@@ -210,7 +210,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Munson_Dissertationdoc'
+htmlhelp_basename = 'SemRetrievedoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -232,7 +232,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Munson_Dissertation.tex', 'Munson\\_Dissertation Documentation',
+    (master_doc, 'SemRetrieve.tex', 'SemRetrieve Documentation',
      'Matthew Munson', 'manual'),
 ]
 
@@ -262,7 +262,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'munson_dissertation', 'Munson_Dissertation Documentation',
+    (master_doc, 'SemRetrieve', 'SemRetrieve Documentation',
      [author], 1)
 ]
 
@@ -276,8 +276,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Munson_Dissertation', 'Munson_Dissertation Documentation',
-     author, 'Munson_Dissertation', 'One line description of project.',
+    (master_doc, 'SemRetrieve', 'SemRetrieve Documentation',
+     author, 'SemRetrieve', 'One line description of project.',
      'Miscellaneous'),
 ]
 
