@@ -319,48 +319,35 @@ class CatSim:
 
 
 class CatSimWin(CatSim):
+    """ Calculates the average similarity and the z-score of this similarity
+    for all words that share the same semantic sub-domains in the Louw-Nida
+    lexicon
+    
+    :param algo: the significance algorithm used to produce the cosine-similarity matrices used
+    :type algo: str
+    :param rng: the individual window sizes used for the discrete calculations
+    :type rng: list
+    :param lems: whether the input matrices were calculated with lemmatized texts or not
+    :type lems: bool
+    :param CS_dir: the directory path where the cosine-similarity matrices are located
+    :type CS_dir: str
+    :param dest_dir: the diretory path to save the results
+    :type dest_dir: str
+    :param sim_algo: which similarity algorithm was used in the calculations
+    :type sim_algo: str
+    :param corpus: tuple with the name of the corpus (str), the minimum number
+        of occurrences used (int), Caron's svd exponent (float - 1.0 if none was used),
+        and whether stop words were included (bool)
+    :type corpus: tuple
+    :param lem_file: the file path and filename of the occurrence dictionary
+        pickle that shows the number of time each word occurs in the corpus
+    :type lem_file: str
+    """
 
     def __init__(self, algo, rng, lems=False, CS_dir=None, dest_dir=None,
                  sim_algo=None, corpus=('SBL_GNT_books', 1, 1.0, True),
                  lem_file=None):
-        """
-        calculates the average similarity and the z-score of this similarity
-        for all words that share the same semantic sub-domains in the Louw-Nida
-        lexicon
-        :param algo: the significance algorithm used to produce the cosine-similarity matrices used
-        :type algo: str
-        :param rng: the individual window sizes used for the discrete calculations
-        :type rng: list
-        :param lems: whether the input matrices were calculated with lemmatized texts or not
-        :type lems: bool
-        :param CS_dir: the directory path where the cosine-similarity matrices are located
-        :type CS_dir: str
-        :param dest_dir: the diretory path to save the results
-        :type dest_dir: str
-        :param sim_algo: which similarity algorithm was used in the calculations
-        :type sim_algo: str
-        :param corpus: tuple with the name of the corpus (str), the minimum number
-            of occurrences used (int), Caron's svd exponent (float - 1.0 if none was used),
-            and whether stop words were included (bool)
-        :type corpus: tuple
-        :param lem_file: the file path and filename of the occurrence dictionary
-            pickle that shows the number of time each word occurs in the corpus
-        :type lem_file: str
-        :return: LN_Word_Cat_Scores pickle - the individual CS and z-score for every word in every category in which it is listed
-        :rtype: pickled dictionary of pandas DataFrames
-        :return: LN_Word_Cat_Scores CSV - the individual CS and z-score for every word in every category in which it is listed
-        :rtype: csv file
-        :return: LN_Window_Averages pickle - dictionary of mean CS score and z-score for each window size tested
-        :rtype: pickled dictionary
-        :return: LN_Window_Averages csv - mean CS score and z-score for each window size tested
-        :rtype: csv file
-        :return: LN_Window_Averages_no_93 pickle - dictionary of mean CS score and z-score for each window size tested
-            excluding Louw-Nida category 93 (proper names)
-        :rtype: pickled dictionary
-        :return: LN_Window_Averages_no_93 csv - mean CS score and z-score for each window size tested
-            excluding Louw-Nida category 93 (proper names)
-        :rtype: csv file
-        """
+
         try:
             self.ln = pd.read_pickle('Data/Chapter_2/LN_Cat_Dict.pickle')
         except FileNotFoundError:

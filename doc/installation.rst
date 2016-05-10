@@ -9,3 +9,12 @@ Once you have Python set up (and your virtual environment active, if you are usi
     $ pip install -r requirements2.txt
     
 This should start the installation for all of the required Python packages. If any errors occur during the installation, see the documentation for that package for possible solutions.  Once both of these commands have completed successfully, you are ready to get started.
+
+The Chapters:
+
+* :doc:`Chapter 1 <chapter1>`
+* :doc:`Chapter 2 <chapter2>`
+* :doc:`Chapter 3 <chapter3>`
+* :doc:`Chapter 4 <chapter4>`
+   
+Return to the :doc:`Index <index>`

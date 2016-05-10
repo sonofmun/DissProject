@@ -53,7 +53,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Munson_Dissertation'
+project = 'SemRetrieve'
 copyright = '2016, Matthew Munson'
 author = 'Matthew Munson'
 

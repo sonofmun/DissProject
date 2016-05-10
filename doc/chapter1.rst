@@ -64,3 +64,28 @@ w_tests (str)
 
 My own experience with Greek shows that for some corpora the weighted window is best, while for others the unweighted window is best. So I would certainly suggest testing both of these for all parameters.
 
+stops (*(str)*)
+^^^^^^^^^^^^^^^
+
+``stops`` is a tuple that contains the words that you want to designate as stop words for your corpus. The default value is an empty tuple since my own tests with Greek have shown that results are improved by retaining the stop words during the calculations but then ignoring them, if desired, when interpreting the results. Only one set of stop words can be tested at a time. If you wish to test the results of several different stop word lists, you will need to designate and run tests on each of them individually.
+
+sim_algo
+^^^^^^^^
+
+The only class instance variable that I will mention here is ``sim_algo``. ``ParamTester`` is not set up to take this as a parameter, instead defaulting to Cosine Similarity. If, however, you want to change the similarity algorithm used to compute the similarity of the distributional vectors, ``sim_algo`` accepts any *str* that is a valid ``metric`` for the ``sklearn.metrics.pairwise.pairwise_distances`` (`documentation <http://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.pairwise_distances.html#sklearn.metrics.pairwise.pairwise_distances>`_) function.
+
+The CatSimWin Class
+===================
+
+.. autoclass:: Chapter_2.LouwNidaCatSim.CatSimWin
+
+Test text.
+
+Go To:
+
+* :doc:`Index <index>`
+* :doc:`Chapter 2 <chapter2>`
+* :doc:`Chapter 3 <chapter3>`
+* :doc:`Chapter 4 <chapter4>`
+   
+Return to the 

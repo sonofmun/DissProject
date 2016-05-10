@@ -7,11 +7,9 @@ This documentation is broken down just as the dissertation itself was broken dow
 
 The Chapters:
 
-.. toctree::
-   :maxdepth: 3
+* :doc:`Chapter 1 <chapter1>`
+* :doc:`Chapter 2 <chapter2>`
+* :doc:`Chapter 3 <chapter3>`
+* :doc:`Chapter 4 <chapter4>`
    
-   installation
-   chapter1
-   chapter2
-   chapter3
-   chapter4
+Return to the :doc:`Index <index>`
