@@ -79,7 +79,44 @@ The CatSimWin Class
 
 .. autoclass:: Chapter_2.LouwNidaCatSim.CatSimWin
 
-Test text.
+``CatSimWin`` is called from inside the ParamTester class and its parameters are set automatically there. Since it is an integral part of how the data produced using the different parameters is compared, it deserves some attention here.
+
+The module ``LouwNidaCatSim`` calculates how closely a set of data mirrors the semantic sub-domains present in the Louw-Nida Lexicon of the New Testament. A Python dictionary object with all of the semantic sub-domains and the words that belong to them is required to perform these calculations. Such a *pickled* file is included in the repository in the **Chapter_2** folder. [#f1]_ 
+
+The ``CatSimWin`` class is actually capable of testing multiple window sizes in the same run but ``ParamTester`` only sends a single window size to it at once. ``CatSimWin`` then calculates the mean and the Z-score for all of the other different parameters for that single window size and returns the results to ``ParamTester``, which then writes them out to a tab-delimited CSV file that can be checked later. Calculating the Z-score allows the results from different parameter runs to be compared to each other, with the results that have the highest Z-score showing the largest separation between the average similarity among all words and the similarity of those words that belong to the same semantic sub-domains and, thus, being the best at mirroring the semantics represented in the Louw-Nida lexicon.
+
+In order to run all the tests for a certain set of parameters, you can run the ``RunTests`` method on ``ParamTester`` to automatically run all of the selected tests for all of the selected parameters. You can also run this from the command line, replacing the ALL_CAPS words below with the correct parameter value for that parameter::
+
+    $ python Data_Production/sem_extract_pipeline.py \
+        --files FILES \
+        --c C \
+        ParamTester \
+        --min_w MIN_W \
+        --max_w MAX_W \
+        --step STEP \
+        --w_tests W_TESTS \
+        --l_tests L_TESTS \
+        --steps all
+
+Graphing the Results
+====================
+
+.. autoclass:: Chapter_1.consolidate_test_results.win_tests
+
+Once you have run ``ParamTester`` on your corpus, you can automatically graph the results using the ``win_tests`` class. The function ``build_df`` consolidates the results into a single ``pandas.DataFrame`` object and saves this object as a CSV file in the ``orig`` folder. Then, running the ``graph_it`` function will produce a simple graphical representation of the data with the maximum value for each set of parameters labelled, which it will also save in the ``orig`` folder.
+
+The SemPipeline Class
+=====================
+
+.. autoclass:: Data_Production.sem_extract_pipeline.SemPipeline
+
+Once you have determined the best parameters for your corpus, you then use the ``SemPipeline`` class to actually produce the data that you can then use for whatever task you wish. The parameters for this class are the same as those for ``ParamTester`` described above. The only significant differences between ``SemPipeline`` and ``ParamTester`` are that ``SemPipeline`` only accepts a single set of parameters at a time and it saves all the data from every step, including the list of words in the corpus, the co-occurrence counts for every word with every other word, the significance scores for all the words with each other, and the similarity scores for every word's significance vector with every other word's. These results are not saved in ``ParamTester`` because these individual results files can be as large as tens or even hundreds of gigabytes. So they are only saved during the ``SemPipeline`` process in order to not take up disk space with results that will not be used.
+
+Chapters 2 through 4 will discuss particular use cases for the data that is produced with the classes described here.
+
+.. rubric:: Footnotes
+
+.. [#f1] You can also create your own such dictionary from the data at http://www.laparola.net/greco/louwnida.php using the ``Chapter_2.LouwNidaExtract.extractLouwNida`` class. 
 
 Go To:
 
@@ -87,5 +124,3 @@ Go To:
 * :doc:`Chapter 2 <chapter2>`
 * :doc:`Chapter 3 <chapter3>`
 * :doc:`Chapter 4 <chapter4>`
-   
-Return to the 

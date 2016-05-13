@@ -9,6 +9,16 @@ from itertools import cycle
 
 
 class win_tests:
+    """ Collects and graphs the results of multiple runs of Data_Production.sem_extract_pipeline.ParamTester
+
+    :param orig: the folder in which the .csv files containing the results are located
+    :type orig: str
+    :param corpus: the corpus that is being analyzed. This should be the same string used in the file names to designate the corpus (e.g., NT)
+    :type corpus: str
+    :param file_pattern: the file extension of the files containing the results
+    :type file_pattern: str
+    """
+    
     def __init__(self, orig, corpus, file_pattern='*.csv'):
         self.files = glob('{}/{}{}'.format(orig, corpus, file_pattern))
         self.corpus = corpus

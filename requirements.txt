@@ -1,6 +1,8 @@
 alabaster==0.7.8
 Babel==2.3.4
 backports.shutil-get-terminal-size==1.0.0
+beautifulsoup4==4.4.1
+bs4==0.0.1
 cycler==0.10.0
 decorator==4.0.9
 docutils==0.12

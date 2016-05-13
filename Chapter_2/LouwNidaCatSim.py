@@ -322,7 +322,7 @@ class CatSimWin(CatSim):
     """ Calculates the average similarity and the z-score of this similarity
     for all words that share the same semantic sub-domains in the Louw-Nida
     lexicon
-    
+
     :param algo: the significance algorithm used to produce the cosine-similarity matrices used
     :type algo: str
     :param rng: the individual window sizes used for the discrete calculations
@@ -349,7 +349,7 @@ class CatSimWin(CatSim):
                  lem_file=None):
 
         try:
-            self.ln = pd.read_pickle('Data/Chapter_2/LN_Cat_Dict.pickle')
+            self.ln = pd.read_pickle('Chapter_2/LN_Cat_Dict.pickle')
         except FileNotFoundError:
             ln_file = tk_control(
                 "askopenfilename(title='Where is your Louw-Nida dictionary pickle?')")
