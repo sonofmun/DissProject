@@ -11,6 +11,18 @@ import matplotlib.pyplot as plt
 
 class comparison:
     def __init__(self, base, english, greek, measure):
+        """ Compares the vectors of a single word across the data from several different corpora.
+        Note that the data from the different corpora must be normalized, preferably using sklearn.preprocessing.scale.
+
+        :param base: the directory containing the sub-directories that contain the data for the different corpora
+        :type base: str
+        :param english: the english transcription of the word being analyzed (used only in file naming)
+        :type english: str
+        :param greek: the word in the alphabet of the target language. It must be written exactly as it is present in the corpora!
+        :type greek: str
+        :param measure: the type of data to use in the comparison, cosine similarity (CS), log-likelihood (LL), or raw co-occurrence counts (cooc)
+        :type measure: str
+        """
         self.corpora = [('NT', '16', 1, True), ('LXX', '13', 1, True),
                         ('philo', '26', 1, False), ('josephus', '35', 1, False),
                         ('plutarch', '49', 1, False)]#, ('pers_data', '23', 1, False)]
@@ -105,9 +117,8 @@ class matrix_comparison(comparison):
                     i_c2.append(self.ekk_rows[corp[0]].index(word))
             d_c2 = np.memmap(
                 '{0}{1}/{4}/{2}/{5}_{2}_lems=False_{4}_min_occ={3}_{6}no_stops=False_NORMED.dat'.format(
-                    self.base, corp[0], corp[1], corp[2], self.english,
-                    self.prefix, self.svd), dtype='float32',
-                shape=(len(rows), len(rows)))[i_c2]
+                    self.base, corp[0], corp[1], corp[2], self.english, self.prefix, self.svd),
+                dtype='float32', shape=(len(rows), len(rows)))[i_c2]
             d_c2 = d_c2[:, i_c2]
             d_nt = np.memmap(
                 '{0}{1}/{4}/{2}/{5}_{2}_lems=False_{4}_min_occ={3}_{6}no_stops=False_NORMED.dat'.format(

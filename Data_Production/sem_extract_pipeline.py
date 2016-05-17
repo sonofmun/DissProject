@@ -612,7 +612,6 @@ class SemPipeline:
 
         self.CS_df = np.memmap(dest_file, dtype='float', mode='w+',
                                shape=(self.cols, self.cols))
-        '''
         if self.sim_algo == 'cosine':
             self.CS_df[:] = 1 - pairwise_distances(self.stat_df,
                                                    metric=self.sim_algo,
@@ -621,8 +620,7 @@ class SemPipeline:
             self.CS_df[:] = pairwise_distances(self.stat_df,
                                                metric=self.sim_algo,
                                                n_jobs=self.jobs)
-        '''
-        self.cs_loop(dest_file)
+        # self.cs_loop(dest_file)
         del self.CS_df
         self.CS_df = np.memmap(dest_file, dtype='float', mode='r', shape=(self.cols, self.cols))
         print('Finished with {} calculations for {} for '

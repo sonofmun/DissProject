@@ -18,7 +18,7 @@ class win_tests:
     :param file_pattern: the file extension of the files containing the results
     :type file_pattern: str
     """
-    
+
     def __init__(self, orig, corpus, file_pattern='*.csv'):
         self.files = glob('{}/{}{}'.format(orig, corpus, file_pattern))
         self.corpus = corpus
