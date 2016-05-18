@@ -476,7 +476,7 @@ class SemPipeline:
 
         # Change all numpy.nan and numpy.inf values to 0
         # This is necessary for later calculations that will raise errors for non-finite values
-        self.LL_df[np.where(np.isfinite(self.LL_df) == False)] = 0
+        #self.LL_df[np.where(np.isfinite(self.LL_df) == False)] = 0
 
         # Dump memory and reload self.LL_df as read-only
         del self.LL_df
@@ -547,7 +547,7 @@ class SemPipeline:
 
         # Change all numpy.nan and numpy.inf values to 0
         # This is necessary for later calculations that will raise errors for non-finite values
-        self.PPMI_df[np.where(np.isfinite(self.PPMI_df) == False)] = 0
+        #self.PPMI_df[np.where(np.isfinite(self.PPMI_df) == False)] = 0
 
         # Dump memory and reload self.PPMI_df as read-only
         del self.PPMI_df

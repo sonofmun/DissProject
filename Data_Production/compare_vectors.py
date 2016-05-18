@@ -10,22 +10,42 @@ import matplotlib.pyplot as plt
 
 
 class comparison:
-    def __init__(self, base, english, greek, measure):
-        """ Compares the vectors of a single word across the data from several different corpora.
-        Note that the data from the different corpora must be normalized, preferably using sklearn.preprocessing.scale.
 
-        :param base: the directory containing the sub-directories that contain the data for the different corpora
-        :type base: str
-        :param english: the english transcription of the word being analyzed (used only in file naming)
-        :type english: str
-        :param greek: the word in the alphabet of the target language. It must be written exactly as it is present in the corpora!
-        :type greek: str
-        :param measure: the type of data to use in the comparison, cosine similarity (CS), log-likelihood (LL), or raw co-occurrence counts (cooc)
-        :type measure: str
-        """
+    """ Compares the vectors of a single word across the data from several different corpora.
+    Note that the data from the different corpora must be normalized, preferably using sklearn.preprocessing.scale.
+
+    :param base: the directory containing the sub-directories that contain the data for the different corpora
+    :type base: str
+    :param english: the english transcription of the word being analyzed (used only in file naming)
+    :type english: str
+    :param greek: the word in the alphabet of the target language. It must be written exactly as it is present in the corpora!
+    :type greek: str
+    :param measure: the type of data to use in the comparison, cosine similarity (CS), log-likelihood (LL), positive pointwise mutual information (PPMI), or raw co-occurrence counts (cooc)
+    :type measure: str
+
+    :ivar corpora: the parameter information for each corpus to be used. Each corpus is represented by a tuple that contains the following information:
+        **Corpus Name** *(str)*: should match the name of the parent folder in which the text files for the corpus are kept,
+        **Best window size** *(str)*: the size of the context window as determined by ParamTester,
+        **Minimum occurrences** *(int)*: the minimum number of times a word had to occur in your corpus before being used to produce data in SemPipeline,
+        **Weighted or Unweighted window type** *(bool)*: whether the data for that corpus was produced using a weighted (True) or unweighted (False) context window type
+    :type corpora: [(str, str, int, bool)]
+    :ivar base: passed on from the ``base`` parameter
+    :type base: str
+    :ivar ekk_rows: an empty dictionary that will contain the vectors for each corpus
+    :type ekk_rows: dict
+    :ivar english: passed on from the ``english`` parameter
+    :type english: str
+    :ivar greek: passed on from the ``greek`` parameter
+    :ivar prefix: part of the naming convention for the files from which the vectors will be extracted. Determined by the ``measure`` parameter
+    :type prefix: str
+    :ivar svd: part of the naming convention for the files from which the vectors will be extracted. Determined by the ``measure`` parameter
+    :type svd: str
+    """
+
+    def __init__(self, base, english, greek, measure):
         self.corpora = [('NT', '16', 1, True), ('LXX', '13', 1, True),
                         ('philo', '26', 1, False), ('josephus', '35', 1, False),
-                        ('plutarch', '49', 1, False)]#, ('pers_data', '23', 1, False)]
+                        ('plutarch', '49', 1, False)]#, ('pers_data', '51', 1, False)]
         self.base = base
         self.ekk_rows = {}
         self.english = english
@@ -39,10 +59,16 @@ class comparison:
         elif measure == 'cooc':
             self.prefix = 'COOC'
             self.svd = ''
+        elif measure == 'PPMI':
+            self.prefix = 'PPMI'
+            self.svd = ''
         else:
-            print('"measure" must be "CS", "LL", or "cooc"')
+            print('"measure" must be "CS", "LL", "PPMI", or "cooc"')
 
     def load_vectors(self):
+        """ Loads the appropriate word vector from each corpus in self.corpora
+
+        """
         for corp in self.corpora:
             rows = pd.read_pickle(
                 '{0}{1}/{4}/{2}/{4}_IndexList_w={2}_lems=False_min_occs={3}_no_stops=False.pickle'.format(
@@ -56,6 +82,9 @@ class comparison:
             self.ekk_rows[corp[0]] = pd.Series(r, index=rows)
 
     def sim_calc(self):
+        """ Calculates the similarity for each vector with the others based on the words that the corpora share
+
+        """
         self.cs_scores = pd.DataFrame(index=self.ekk_rows.keys(),
                                       columns=self.ekk_rows.keys())
         for combo in combinations(self.ekk_rows.keys(), 2):
@@ -68,6 +97,9 @@ class comparison:
             self.cs_scores = self.cs_scores.fillna(1)
 
     def graph_it(self):
+        """ Graphs the results on a bar graph
+
+        """
         fig, ax = plt.subplots()
 
         index = np.arange(len(self.cs_scores))*1.2
@@ -98,6 +130,7 @@ class comparison:
 
 
 class matrix_comparison(comparison):
+
     def load_vectors(self):
         for corp in self.corpora:
             self.ekk_rows[corp[0]] = pd.read_pickle(
