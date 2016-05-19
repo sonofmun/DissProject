@@ -3,10 +3,13 @@ __author__ = 'matt'
 import numpy as np
 import pandas as pd
 from sklearn.metrics import pairwise_distances
+from sklearn.preprocessing import scale
 from itertools import combinations
 import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
+import argparse
+import os
 
 
 class comparison:
@@ -22,6 +25,8 @@ class comparison:
     :type greek: str
     :param measure: the type of data to use in the comparison, cosine similarity (CS), log-likelihood (LL), positive pointwise mutual information (PPMI), or raw co-occurrence counts (cooc)
     :type measure: str
+    :param norm: whether the data needs to be normalized
+    :type norm: bool
 
     :ivar corpora: the parameter information for each corpus to be used. Each corpus is represented by a tuple that contains the following information:
         **Corpus Name** *(str)*: should match the name of the parent folder in which the text files for the corpus are kept,
@@ -40,9 +45,11 @@ class comparison:
     :type prefix: str
     :ivar svd: part of the naming convention for the files from which the vectors will be extracted. Determined by the ``measure`` parameter
     :type svd: str
+    :ivar norm: passed on from the ``norm`` parameter
+    :type norm: bool
     """
 
-    def __init__(self, base, english, greek, measure):
+    def __init__(self, base, english, greek, measure, norm=False):
         self.corpora = [('NT', '16', 1, True), ('LXX', '13', 1, True),
                         ('philo', '26', 1, False), ('josephus', '35', 1, False),
                         ('plutarch', '49', 1, False)]#, ('pers_data', '51', 1, False)]
@@ -64,6 +71,7 @@ class comparison:
             self.svd = ''
         else:
             print('"measure" must be "CS", "LL", "PPMI", or "cooc"')
+        self.norm = norm
 
     def load_vectors(self):
         """ Loads the appropriate word vector from each corpus in self.corpora
@@ -74,7 +82,22 @@ class comparison:
                 '{0}{1}/{4}/{2}/{4}_IndexList_w={2}_lems=False_min_occs={3}_no_stops=False.pickle'.format(
                     self.base, corp[0], corp[1], corp[2], self.english))
             i = rows.index(self.greek)
-            r = np.memmap(
+            if self.norm:
+                os.system('echo Now normalizing {}'.format(corp[0]))
+                orig = np.memmap(
+                    '{0}{1}/{4}/{2}/{5}_{2}_lems=False_{4}_min_occ={3}_{6}no_stops=False_weighted={7}.dat'.format(
+                    self.base, corp[0], corp[1], corp[2], self.english, self.prefix, self.svd, corp[3]),
+                    dtype='float32', shape=(len(rows), len(rows)))
+                normed = np.memmap(
+                    '{0}{1}/{4}/{2}/{5}_{2}_lems=False_{4}_min_occ={3}_{6}no_stops=False_weighted={7}_NORMED.dat'.format(
+                    self.base, corp[0], corp[1], corp[2], self.english, self.prefix, self.svd, corp[3]),
+                    dtype='float32', shape=(len(rows), len(rows)))
+                normed[:] = scale(orig)
+                r = normed[i]
+                del normed
+                del orig
+            else:
+                r = np.memmap(
                 '{0}{1}/{4}/{2}/{5}_{2}_lems=False_{4}_min_occ={3}_{6}no_stops=False_weighted={7}_NORMED.dat'.format(
                     self.base, corp[0], corp[1], corp[2], self.english,
                     self.prefix, self.svd, corp[3]), dtype='float32',
@@ -94,7 +117,7 @@ class comparison:
                 combo[1], combo[0]] = (1 - pairwise_distances(
                 self.ekk_rows[combo[0]][ekk_index],
                 self.ekk_rows[combo[1]][ekk_index], metric='cosine'))[0][0]
-            self.cs_scores = self.cs_scores.fillna(1)
+        self.cs_scores = self.cs_scores.fillna(1)
 
     def graph_it(self):
         """ Graphs the results on a bar graph
@@ -163,3 +186,20 @@ class matrix_comparison(comparison):
             self.scores['{0}_{1}'.format('NT', corp[0])] = np.average(np.diag(
                 1 - pairwise_distances(d_nt, d_c2, metric='cosine',
                                        n_jobs=12)))
+
+def cmd():
+    # base, english, greek, measure, norm=False
+    parser = argparse.ArgumentParser(description='Compares distributional data across corpora.')
+    parser.add_argument('--base', type=str, default='./', help='The file path for the parent folder in which all the corpora sub-folders are located')
+    parser.add_argument('--english', type=str, help='The transliteration into Latin characters for the word under investigation')
+    parser.add_argument('--greek', type=str, help='The word under investigation in its native alphabet')
+    parser.add_argument('--measure', type=str, default='CS', choices=['CS', 'LL', 'PPMI', 'cooc'], help='The type of data to be used for the comparison')
+    parser.add_argument('--norm', type=bool, default=False, help='Whether to run data normalization on the input matrices (should be True if the data has not yet been normalized')
+    args = parser.parse_args()
+    pipe = args.comparison(**vars(args))
+    pipe.load_vectors()
+    pipe.sim_calc()
+    pipe.graph_it()
+
+if __name__ == '__main__':
+    cmd()
