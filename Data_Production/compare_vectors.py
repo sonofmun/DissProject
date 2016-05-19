@@ -49,7 +49,7 @@ class comparison:
     :type norm: bool
     """
 
-    def __init__(self, base, english, greek, measure, norm=False):
+    def __init__(self, base, english, greek, measure, norm=False, **kwargs):
         self.corpora = [('NT', '16', 1, True), ('LXX', '13', 1, True),
                         ('philo', '26', 1, False), ('josephus', '35', 1, False),
                         ('plutarch', '49', 1, False)]#, ('pers_data', '51', 1, False)]
