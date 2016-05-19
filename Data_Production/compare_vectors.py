@@ -195,6 +195,7 @@ def cmd():
     parser.add_argument('--greek', type=str, help='The word under investigation in its native alphabet')
     parser.add_argument('--measure', type=str, default='CS', choices=['CS', 'LL', 'PPMI', 'cooc'], help='The type of data to be used for the comparison')
     parser.add_argument('--norm', type=bool, default=False, help='Whether to run data normalization on the input matrices (should be True if the data has not yet been normalized')
+    parser.set_defaults(func=comparison)
     args = parser.parse_args()
     pipe = args.comparison(**vars(args))
     pipe.load_vectors()
