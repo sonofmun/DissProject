@@ -1256,15 +1256,19 @@ class ParamTester(SemPipeline):
 def cmd():
     parser = argparse.ArgumentParser(description='Pipeline for automatic extraction of semantic data.')
     parser.add_argument('--win_size', type=int, default=10, help='The size of the contexts window')
-    parser.add_argument('--lemmata', type=bool, default=False, help='Whether to use a lemmatized corpus or not')
-    parser.add_argument('--weighted', type=bool, default=False, help='Whether to use a weighted or unweighted window. "True" == weighted')
+    parser.add_argument('--no_lems', dest='lemmata', action='store_false', help='Use a non-lemmatized corpus')
+    parser.add_argument('--lems', dest='lemmata', action='store_true', help='Use a lemmatized corpus')
+    parser.add_argument('--no_weight', dest='weighted', action='store_false', help='Use a non-weighted window type')
+    parser.add_argument('--weight', dest='weighted', action='store_true', help='Use a weighted window type')
     parser.add_argument('--algo', type=str, default='LL', choices=['LL', 'PPMI'], help='The significance algorithm to use')
     parser.add_argument('--files', type=str, help='The directory path in which the .txt files for your corpus are located.')
     parser.add_argument('--c', type=int, default=1, help='The number of cores to use during co-occurrence calculations')
     parser.add_argument('--occ_dict', type=str, help='The filepath to the file that contains the dictionary of word occurrences')
     parser.add_argument('--min_count', type=int, default=1, help='The minimum number of occurrences for words to be considered in the calculations')
     parser.add_argument('--jobs', type=int, default=1, help='The value for n_jobs in sklearn.metrics.pairwise_distances for cosine similarity calculations')
-    parser.add_argument('--stops', type=bool, default=True, help='Whether to include stopwords in the calcuations')
+    parser.add_argument('--no_stops', dest='stops', action='store_false', help='Ignore stop words')
+    parser.add_argument('--stops', dest='stops', action='store_true', help='Use stop words')
+    parser.set_defaults(lemmata=False, weighted=False, stops=True)
 
     # Add subparsers for the whole process or for different steps
     subparsers = parser.add_subparsers(dest='subparser_name')
@@ -1279,6 +1283,7 @@ def cmd():
     parser_params.add_argument('--steps', type=str, default='all', choices=['all', 'coocs', 'LL', 'PPMI', 'LL_CS', 'PPMI_CS', 'remove'], help='The ParamTester functions to run')
     parser_params.set_defaults(func=ParamTester)
     args = parser.parse_args()
+    os.system('echo lems={} weighted={}'.format(args.lemmata, args.weighted))
     if args.subparser_name == 'SemPipeline':
         args.func(**vars(args)).runPipeline()
     elif args.subparser_name == 'ParamTester':
