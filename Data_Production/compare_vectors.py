@@ -119,7 +119,7 @@ class comparison:
                 self.ekk_rows[combo[0]][ekk_index],
                 self.ekk_rows[combo[1]][ekk_index], metric='cosine'))[0][0]
             top_100 = abs(self.ekk_rows[combo[0]][self.ekk_rows[combo[0]] > self.zscore] - self.ekk_rows[combo[1]][self.ekk_rows[combo[1]] > self.zscore]).order().head(100)
-            top_100.to_csv('{}/{}_{}_zscore={}_top_100_words.txt'.format(self.base, combo[0], combo[1], self.zscore))
+            top_100.to_csv('{}/{}_{}_zscore={}_top_100_words.txt'.format(self.base, combo[0], combo[1], self.zscore), sep='\t')
         self.cs_scores = self.cs_scores.fillna(1)
 
     def graph_it(self):
