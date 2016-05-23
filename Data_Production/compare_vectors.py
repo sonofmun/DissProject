@@ -59,7 +59,7 @@ class comparison:
         self.greek = greek
         if measure == 'CS':
             self.prefix = 'LL_cosine'
-            self.svd = 'SVD_exp=1.0_'
+            self.svd = ''
         elif measure == 'LL':
             self.prefix = 'LL'
             self.svd = ''
