@@ -145,7 +145,7 @@ class comparison:
                     name = corp
                 ax.text(rect.get_x() + rect.get_width() / 2., height / 2, name, size='small', rotation='vertical', ha='center', va='bottom')
                 if height != 1:
-                    ax.text(rect.get_x() + rect.get_width() / 2., height + .01, round(height, 2), rotation='vertical', ha='center', va='bottom')
+                    ax.text(rect.get_x() + rect.get_width() / 2., height + .01, round(height, 2), size='small', rotation='vertical', ha='center', va='bottom')
             mult += 1
 
         plt.xlabel('Corpus')
