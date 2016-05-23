@@ -49,7 +49,7 @@ class comparison:
     :type norm: bool
     """
 
-    def __init__(self, base, english, greek, measure, norm=False, **kwargs):
+    def __init__(self, base, english, greek, measure, norm=False, zscore=1.0, **kwargs):
         self.corpora = [('NT', '16', 1, True), ('LXX', '13', 1, True),
                         ('philo', '26', 1, False), ('josephus', '35', 1, False),
                         ('plutarch', '49', 1, False), ('pers_data', '51', 1, False)]
@@ -72,6 +72,7 @@ class comparison:
         else:
             print('"measure" must be "CS", "LL", "PPMI", or "cooc"')
         self.norm = norm
+        self.zscore = zscore
 
     def load_vectors(self):
         """ Loads the appropriate word vector from each corpus in self.corpora
@@ -117,8 +118,8 @@ class comparison:
                 combo[1], combo[0]] = (1 - pairwise_distances(
                 self.ekk_rows[combo[0]][ekk_index],
                 self.ekk_rows[combo[1]][ekk_index], metric='cosine'))[0][0]
-            top_100 = abs(self.ekk_rows[combo[0]][self.ekk_rows[combo[0]] > 1] - self.ekk_rows[combo[1]][self.ekk_rows[combo[1]] > 1]).order().head(100)
-            top_100.to_csv('{}/{}_{}_top_100_words.txt'.format(self.base, combo[0], combo[1]))
+            top_100 = abs(self.ekk_rows[combo[0]][self.ekk_rows[combo[0]] > self.zscore] - self.ekk_rows[combo[1]][self.ekk_rows[combo[1]] > self.zscore]).order().head(100)
+            top_100.to_csv('{}/{}_{}_zscore={}_top_100_words.txt'.format(self.base, combo[0], combo[1], self.zscore))
         self.cs_scores = self.cs_scores.fillna(1)
 
     def graph_it(self):
@@ -197,6 +198,7 @@ def cmd():
     parser.add_argument('--greek', type=str, help='The word under investigation in its native alphabet')
     parser.add_argument('--measure', type=str, default='CS', choices=['CS', 'LL', 'PPMI', 'cooc'], help='The type of data to be used for the comparison')
     parser.add_argument('--norm', dest='norm', action='store_true', help='Whether to run data normalization on the input matrices (should be True if the data has not yet been normalized')
+    parser.add_argument('--zscore', type=float, help='The minimum Z-score for words represented in the resulting top-100 lists ')
     parser.set_defaults(func=comparison, norm=False)
     args = parser.parse_args()
     pipe = args.func(**vars(args))
