@@ -52,7 +52,7 @@ class comparison:
     def __init__(self, base, english, greek, measure, norm=False, **kwargs):
         self.corpora = [('NT', '16', 1, True), ('LXX', '13', 1, True),
                         ('philo', '26', 1, False), ('josephus', '35', 1, False),
-                        ('plutarch', '49', 1, False)]#, ('pers_data', '51', 1, False)]
+                        ('plutarch', '49', 1, False), ('pers_data', '51', 1, False)]
         self.base = base
         self.ekk_rows = {}
         self.english = english
@@ -196,8 +196,8 @@ def cmd():
     parser.add_argument('--english', type=str, help='The transliteration into Latin characters for the word under investigation')
     parser.add_argument('--greek', type=str, help='The word under investigation in its native alphabet')
     parser.add_argument('--measure', type=str, default='CS', choices=['CS', 'LL', 'PPMI', 'cooc'], help='The type of data to be used for the comparison')
-    parser.add_argument('--norm', type=bool, default=False, help='Whether to run data normalization on the input matrices (should be True if the data has not yet been normalized')
-    parser.set_defaults(func=comparison)
+    parser.add_argument('--norm', type='norm', action='store_true', help='Whether to run data normalization on the input matrices (should be True if the data has not yet been normalized')
+    parser.set_defaults(func=comparison, norm=False)
     args = parser.parse_args()
     pipe = args.func(**vars(args))
     pipe.load_vectors()
