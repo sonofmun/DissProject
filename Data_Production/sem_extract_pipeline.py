@@ -798,62 +798,6 @@ class ParamTester(SemPipeline):
 
     def __init__(self, min_w, max_w, step, c=8, jobs=1, min_count=1, files=None, stops=tuple(), lem_file=None,
                  w_tests='both', l_tests='both', steps='all', **kwargs):
-        """ Runs parameter testing for the corpus in question
-        the testing parameters are specified in the self.RunTests function
-
-        :param c: the number of cores to use in the co-occurrence calculations
-        :type c: int
-        :param jobs: the number of cores to use in the cosine similarity calculations
-        :type jobs: int
-        :param min_count: the minimum occurrence count. Words below this count will not be counted.
-            The purpose here is for memory management. My tests have shown that using all words produces better results.
-        :type min_count: int
-        :param files: the directory path for the .txt files that make up the corpus
-        :type files: str
-        :param stops: the stops words to be ignored in the calculations
-        :type stops: (str)
-        :param min_w: the minimum context window size to use
-        :type min_w: int
-        :param max_w: the maximum context window size to use
-        :type max_w: int
-        :param step: the size of the steps between min_w and max_w
-        :type step: int
-        :param lem_file: the path and filename for the word occurrence dictionary pickle
-        :type lem_file: str
-        :param w_tests: whether to use weighted ("True") or unweighted ("False") window types or "both"
-        :type w_tests: str
-        :param l_tests: whether to use word lemmas ("True") or inflected forms ("False") or "both"
-        :type l_tests: str
-        :param steps: the steps in the calculation process to perform. Allowed: 'all', 'coocs', 'LL', 'PPMI', 'LL_CS' (cosine similarity based on an existing Log-likelihood matrix), or 'PPMI_CS'.
-        :type steps: str
-
-        :ivar c: the number of cores to use in the co-occurrence calculations
-        :type c: int
-        :ivar stops: list of stop words to ignore during the calculations
-        :type stops: (str)
-        :ivar min_count: the minimum number of occurrences for a word to be used in the calculations
-        :type min_count: int
-        :ivar files: the directory path for the .txt files that make up the corpus
-        :type files: str
-        :ivar sim_algo: the similarity algorithm to use in the calculations
-        :type sim_algo: str
-        :ivar ind: the indices for the rows and columns of the matrix (i.e., the words) - filled in self.cooc_counter
-        :type ind: [str]
-        :ivar cols: the length of self.ind - filled in self.cooc_counter
-        :ivar cols: int
-        :ivar coll_df: transformed into numpy.memmap and filled in self.cooc_counter
-        :type coll_df: tuple
-        :ivar LL_df: transformed into numpy.memmap and filled in self.LL
-        :type LL_df: tuple
-        :ivar PPMI_df: transformed into numpy.memmap and filled in self.PPMI
-        :type PPMI_df: tuple
-        :ivar CS_df: transformed into numpy.memmap and filled in self.CS
-        :type CS_df: tuple
-        :ivar stat_df: filled with either self.PPMI_df or self.LL_df in self.CS
-        :type stat_df: tuple
-        :ivar param_dict: filled with the scores for each set of parameters in self.RunTests
-        :type param_dict: dict
-        """
         self.c = c
         self.stops = stops
         self.jobs = jobs
@@ -1291,23 +1235,3 @@ def cmd():
 
 if __name__ == '__main__':
     cmd()
-
-'''if __name__ == '__main__':
-    if sys.argv[1] == "SemPipeLine":
-        SemPipeline(win_size=int(sys.argv[2]),
-                    lemmata=bool(int(sys.argv[3])),
-                    weighted=bool(int(sys.argv[4])),
-                    algo=sys.argv[5],
-                    files=sys.argv[7],
-                    c=int(sys.argv[8]),
-                    occ_dict=sys.argv[9],
-                    min_count=int(sys.argv[10])).runPipeline()
-    if sys.argv[1] == "ParamTester":
-        ParamTester(c=int(sys.argv[2]), orig=sys.argv[3],
-                    min_count=int(sys.argv[10])).RunTests(min_w=int(sys.argv[4]),
-                                                          max_w=int(sys.argv[5]),
-                                                          step=int(sys.argv[6]),
-                                                          lem_file=sys.argv[7],
-                                                          w_tests=sys.argv[8],
-                                                          l_tests=sys.argv[9])
-'''
