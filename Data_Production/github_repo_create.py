@@ -50,3 +50,40 @@ class Organization(CreateRepo):
                         'There was an error creating the repository Vol.-{}'.format(
                             d))
                     print(reply.text)
+
+class Issue(CreateRepo):
+    def __init__(self, org, repo, token, orig, uname, ignore):
+        """
+
+        :param org:
+        :type org:
+        :param repo:
+        :type repo:
+        :param token: Github OAuth token (in the form, e.g., 97cc6b...1102ba)
+        :type token:
+        :param orig:
+        :type orig:
+        :param uname:
+        :type uname:
+        :param ignore:
+        :type ignore:
+        """
+
+        # self.org = org
+        self.base = 'https://api.github.com/repos/{}/{}/issues'.format(org, repo)
+        self.auth = 'token {0}'.format(token)
+        self.orig = orig
+        self.uname = uname
+        self.ignore = ignore
+        self.problems = []
+
+    def createissues(self):
+        with open(self.orig) as f:
+            issues = [x for x in f.read().split('\n')]
+        for i in issues:
+            issue = i.split('\t')
+            params = {'title': issue[0], 'body': issue[1]}
+            reply = requests.post(self.base, data=json.dumps(params),
+                                  headers={'Authorization': self.auth})
+            if reply.status_code != 201:
+                self.problems.append('{} {}: {}'.format(issue[0], issue[1], reply.text))
