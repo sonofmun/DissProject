@@ -248,3 +248,4 @@ Tufts_Cluster/*
 _build
 _static
 _templates
+*.html
