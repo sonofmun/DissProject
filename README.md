@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/14774973.svg)](https://zenodo.org/badge/latestdoi/14774973)
+
 # DissProject
 These are my Python scripts for my dissertation project on semantic drift in the biblical corpus.
 
